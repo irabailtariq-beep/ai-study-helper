@@ -1,0 +1,19 @@
+# Railway deploy config for the web app (which also serves the mobile API).
+# Usage:
+#   1. Install Railway CLI: `brew install railway`
+#   2. `railway login` then `railway link` inside this repo
+#   3. `railway up` to deploy
+# Set env vars in the Railway dashboard:
+#   GEMINI_API_KEY, NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY,
+#   SUPABASE_SERVICE_ROLE_KEY (needed for account deletion).
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "corepack enable && pnpm install --frozen-lockfile && pnpm --filter @ash/web build"
+
+[deploy]
+startCommand = "pnpm --filter @ash/web start -- -p $PORT"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3
+healthcheckPath = "/"
+healthcheckTimeout = 30

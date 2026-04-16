@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm -v)",
+      "Bash(npm -v)",
+      "Bash(git --version)",
+      "Bash(npm install:*)",
+      "Bash(pnpm install:*)",
+      "Bash(node -e \"const g=require\\('@google/genai'\\); console.log\\(Object.keys\\(g\\).filter\\(k=>k.startsWith\\('Harm'\\)||k==='GoogleGenAI'\\)\\)\")",
+      "Bash(npm view:*)",
+      "Bash(node -e \"const g=require\\('@google/genai'\\); console.log\\(Object.keys\\(g\\).filter\\(k=>/^\\(Harm|Google\\)/.test\\(k\\)\\)\\)\")",
+      "Bash(node --input-type=module -e \"import\\('@google/genai'\\).then\\(g=>console.log\\(Object.keys\\(g\\).filter\\(k=>/Harm|GoogleGenAI/.test\\(k\\)\\)\\)\\)\")",
+      "Bash(pnpm typecheck:*)",
+      "Bash(timeout 25 pnpm dev)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} on /\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} on /onboarding\\\\n\" http://localhost:3000/onboarding)",
+      "Bash(wait)",
+      "Bash(pnpm dev:*)",
+      "Bash(echo \"started pid $!\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /tmp/home.html -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(head -c 400 /tmp/home.html)",
+      "Bash(node -e ':*)",
+      "Bash(mkdir -p apps/mobile/assets)",
+      "Bash(pnpm --filter @ash/web typecheck)",
+      "Bash(pnpm --filter @ash/mobile typecheck)",
+      "Bash(pnpm --filter @ash/web build)"
+    ]
+  }
+}
