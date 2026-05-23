@@ -1,7 +1,8 @@
-// 100+ blog articles, hand-written for SEO + human voice.
-// Originals are below; further articles are appended from posts-batch-2 etc.
+// 120+ blog articles, hand-written for SEO + human voice.
+// Originals are below; further articles are appended from posts-batch-2, posts-batch-3, etc.
 
 import { POSTS_BATCH_2 } from "./posts-batch-2";
+import { POSTS_BATCH_3 } from "./posts-batch-3";
 
 export type Post = {
   slug: string;
@@ -2725,8 +2726,8 @@ Open [Calculators](/calculator) and pick the Percentage tab. All three formulas,
   },
 ];
 
-// Append batch-2 (50 more articles) to the original 65 above.
-POSTS.push(...POSTS_BATCH_2);
+// Append batch-2 (50 more articles) and batch-3 (12 more) to the original 65 above.
+POSTS.push(...POSTS_BATCH_2, ...POSTS_BATCH_3);
 
 export function findPost(slug: string) {
   return POSTS.find((p) => p.slug === slug);
