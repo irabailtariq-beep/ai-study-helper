@@ -3,52 +3,64 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useProfile } from "@/lib/profileStore";
 import { fileToBase64, checkFile } from "@/lib/upload";
+import { sm2 } from "@/lib/sm2";
 
-type Card = { id: string; front: string; back: string; deck: string; due_at: string; reps: number };
+type Card = {
+  id: string;
+  front: string;
+  back: string;
+  deck?: string;
+  interval_days: number;
+  ease: number;
+  reps: number;
+  due_at: string;     // YYYY-MM-DD
+  created_at: string;
+};
+
+const STORAGE_KEY = "ash-flashcards-v1";
+
+function loadCards(): Card[] {
+  if (typeof window === "undefined") return [];
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]"); }
+  catch { return []; }
+}
+function saveCards(cards: Card[]) {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(cards));
+}
 
 export default function FlashcardsPage() {
   const profile = useProfile((s) => s.profile);
   const [cards, setCards] = useState<Card[]>([]);
-  const [due, setDue] = useState<Card[]>([]);
   const [current, setCurrent] = useState<Card | null>(null);
   const [flipped, setFlipped] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [source, setSource] = useState("");
   const [file, setFile] = useState<File | null>(null);
+  const [count, setCount] = useState(10);
   const [busy, setBusy] = useState(false);
 
-  async function load() {
-    const r = await fetch("/api/flashcards");
-    if (!r.ok) {
-      setError("Flashcards need sign-in. Go to /signin.");
-      return;
-    }
-    const d = await r.json();
-    setCards(d.cards ?? []);
-    setDue(d.due ?? []);
-    setCurrent((d.due ?? [])[0] ?? null);
-    setFlipped(false);
-  }
-  useEffect(() => { load(); }, []);
+  // Load on mount
+  useEffect(() => {
+    const all = loadCards();
+    setCards(all);
+    const today = new Date().toISOString().slice(0, 10);
+    const due = all.filter((c) => c.due_at <= today);
+    setCurrent(due[0] ?? all[0] ?? null);
+  }, []);
 
-  async function review(quality: number) {
-    if (!current) return;
-    await fetch("/api/flashcards", {
-      method: "POST", headers: { "content-type": "application/json" },
-      body: JSON.stringify({ action: "review", id: current.id, quality }),
-    });
-    setFlipped(false);
-    const next = due.slice(1);
-    setDue(next);
-    setCurrent(next[0] ?? null);
+  function persist(next: Card[]) {
+    saveCards(next);
+    setCards(next);
   }
 
   async function generate() {
-    if (!profile) return;
-    if (!source && !file) return;
+    if (!profile) return setError("Please complete onboarding first.");
+    if (!source.trim() && !file) return setError("Paste a topic or upload a file first.");
     setBusy(true); setError(null);
     try {
-      const body: any = { action: "generate", profile, sourceText: source || undefined, count: 10 };
+      const body: any = { action: "generate", profile, count };
+      if (source.trim()) body.sourceText = source.trim();
       if (file) {
         const msg = checkFile(file); if (msg) throw new Error(msg);
         const b64 = await fileToBase64(file);
@@ -59,8 +71,15 @@ export default function FlashcardsPage() {
         body: JSON.stringify(body),
       });
       const d = await r.json();
-      if (!r.ok) throw new Error(d.error ?? "Failed");
-      await load();
+      if (!r.ok) throw new Error(d.error ?? "Generation failed");
+      const newCards: Card[] = d.cards ?? [];
+      if (newCards.length === 0) throw new Error("AI returned no cards. Try a different topic or longer source.");
+      const merged = [...newCards, ...cards];
+      persist(merged);
+      setCurrent(newCards[0] ?? null);
+      setFlipped(false);
+      setSource("");
+      setFile(null);
     } catch (e: any) {
       setError(e.message);
     } finally {
@@ -68,17 +87,67 @@ export default function FlashcardsPage() {
     }
   }
 
+  function review(quality: number) {
+    if (!current) return;
+    const next = sm2(current, quality);
+    const updated: Card = { ...current, interval_days: next.interval_days, ease: next.ease, reps: next.reps, due_at: next.nextDue };
+    const allCards = cards.map((c) => (c.id === current.id ? updated : c));
+    persist(allCards);
+    setFlipped(false);
+    // Move to next due card
+    const today = new Date().toISOString().slice(0, 10);
+    const due = allCards.filter((c) => c.due_at <= today && c.id !== current.id);
+    setCurrent(due[0] ?? null);
+  }
+
+  function deleteCurrent() {
+    if (!current) return;
+    if (!confirm("Delete this card?")) return;
+    const next = cards.filter((c) => c.id !== current.id);
+    persist(next);
+    const today = new Date().toISOString().slice(0, 10);
+    const due = next.filter((c) => c.due_at <= today);
+    setCurrent(due[0] ?? next[0] ?? null);
+  }
+
+  function wipeAll() {
+    if (!confirm("Delete ALL flashcards on this device?")) return;
+    persist([]);
+    setCurrent(null);
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const dueCount = cards.filter((c) => c.due_at <= today).length;
+
+  if (!profile) {
+    return (
+      <main className="px-6 py-10 max-w-2xl mx-auto">
+        <h1 className="text-3xl font-extrabold tracking-tight">Flashcards</h1>
+        <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>
+          Spaced-repetition flashcards. Auto-generate from any material.
+        </p>
+        <p className="mt-6 text-sm">
+          Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first.
+        </p>
+      </main>
+    );
+  }
+
   return (
-    <main className="min-h-screen p-6 max-w-2xl mx-auto">
-      <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
-      <h1 className="text-2xl font-bold my-4">Flashcards</h1>
+    <main className="px-6 py-10 max-w-2xl mx-auto">
+      <Link href="/tools" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All tools</Link>
+      <h1 className="text-3xl font-extrabold tracking-tight my-4">Flashcards</h1>
+      <p className="text-sm mb-6" style={{ color: "var(--ash-muted)" }}>
+        Auto-generated from any material. Spaced repetition. Stored on this device — no sign-in needed.
+      </p>
 
-      {error && <div className="bg-ash-surface p-4 rounded-ash text-sm mb-4">{error}</div>}
+      {error && <div className="glass-panel p-4 rounded-2xl text-red-600 text-sm mb-4">{error}</div>}
 
+      {/* Review card */}
       {current ? (
-        <div
+        <section
           onClick={() => setFlipped((f) => !f)}
-          className="bg-ash-surface p-8 rounded-ash shadow-sm text-center cursor-pointer min-h-[180px] flex items-center justify-center"
+          className="glass-panel p-8 rounded-2xl text-center cursor-pointer min-h-[200px] flex items-center justify-center"
         >
           <div>
             <p className="text-xs mb-2" style={{ color: "var(--ash-muted)" }}>
@@ -86,13 +155,14 @@ export default function FlashcardsPage() {
             </p>
             <p className="text-xl">{flipped ? current.back : current.front}</p>
           </div>
-        </div>
+        </section>
       ) : (
-        <div className="bg-ash-surface p-6 rounded-ash text-center" style={{ color: "var(--ash-muted)" }}>
-          {cards.length === 0 ? "No cards yet. Generate from any material below." : "Nothing due right now. Come back tomorrow!"}
-        </div>
+        <section className="glass-panel p-6 rounded-2xl text-center" style={{ color: "var(--ash-muted)" }}>
+          {cards.length === 0 ? "No cards yet. Generate some below ↓" : "Nothing due right now. Come back tomorrow!"}
+        </section>
       )}
 
+      {/* Grade buttons */}
       {current && flipped && (
         <div className="grid grid-cols-4 gap-2 mt-4">
           {[
@@ -101,7 +171,7 @@ export default function FlashcardsPage() {
             { q: 4, label: "Good", color: "#16a34a" },
             { q: 5, label: "Easy", color: "#2563eb" },
           ].map((b) => (
-            <button key={b.q} onClick={() => review(b.q)} className="py-3 rounded-ash text-white"
+            <button key={b.q} onClick={() => review(b.q)} className="py-3 rounded-2xl text-white text-sm font-semibold"
               style={{ background: b.color }}>
               {b.label}
             </button>
@@ -109,20 +179,46 @@ export default function FlashcardsPage() {
         </div>
       )}
 
-      <section className="mt-8 bg-ash-surface p-6 rounded-ash shadow-sm">
-        <h2 className="font-semibold mb-2">Generate cards from material</h2>
+      {current && (
+        <div className="text-right mt-2">
+          <button onClick={deleteCurrent} className="text-xs underline" style={{ color: "var(--ash-muted)" }}>Delete this card</button>
+        </div>
+      )}
+
+      {/* Generate */}
+      <section className="mt-8 glass-panel p-6 rounded-2xl">
+        <h2 className="font-semibold mb-2">Generate new cards</h2>
+        <p className="text-sm mb-3" style={{ color: "var(--ash-muted)" }}>
+          Type a topic, paste a lesson, or upload a file. We turn it into flashcards.
+        </p>
         <textarea value={source} onChange={(e) => setSource(e.target.value)}
-          className="w-full p-2 border rounded-ash min-h-[80px]"
-          placeholder="Paste a lesson, or upload a file below…" />
-        <input type="file" accept="image/*,application/pdf" onChange={(e) => setFile(e.target.files?.[0] ?? null)} className="mt-2" />
-        <button onClick={generate} disabled={busy} className="mt-3 px-4 py-2 rounded-ash text-white disabled:opacity-40"
-          style={{ background: "var(--ash-primary)" }}>
-          {busy ? "Generating…" : "Generate 10 cards"}
+          className="w-full p-3 rounded-2xl border min-h-[100px]"
+          placeholder="e.g. probability rules · or paste a lesson · or leave blank if uploading a file" />
+        <input type="file" accept="image/*,application/pdf"
+          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+          className="mt-2 block text-sm" />
+        <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>
+          Tip: photo / PDF quality must be clear and well-lit — blurry or dark pictures can't be read by the AI.
+        </p>
+        {file && <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>📎 {file.name}</p>}
+        <div className="mt-3 flex items-center gap-3">
+          <label className="text-sm" style={{ color: "var(--ash-muted)" }}>
+            How many? <b>{count}</b>
+          </label>
+          <input type="range" min={5} max={20} value={count} onChange={(e) => setCount(Number(e.target.value))} className="flex-1" />
+        </div>
+        <button onClick={generate} disabled={busy}
+          className="mt-4 px-6 py-3 rounded-full text-white font-semibold disabled:opacity-40"
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          {busy ? "Generating…" : `Generate ${count} cards`}
         </button>
       </section>
 
       <p className="text-xs mt-6" style={{ color: "var(--ash-muted)" }}>
-        {due.length} due today · {cards.length} total
+        {dueCount} due today · {cards.length} total cards on this device.
+        {cards.length > 0 && (
+          <> · <button onClick={wipeAll} className="underline">Wipe all</button></>
+        )}
       </p>
     </main>
   );

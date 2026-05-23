@@ -120,6 +120,40 @@ alter table public.activity enable row level security;
 create policy "activity_owner" on public.activity for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
 --------------------------------------------------------------------------
+-- syllabi: extracted digital outlines of official syllabi
+--------------------------------------------------------------------------
+create table if not exists public.syllabi (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  subject text not null,
+  curriculum text not null,
+  grade text not null,
+  year int,
+  units jsonb not null,
+  source text,
+  created_at timestamptz default now()
+);
+create index if not exists syllabi_user_idx on public.syllabi(user_id, created_at desc);
+alter table public.syllabi enable row level security;
+create policy "syllabi_owner" on public.syllabi for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+--------------------------------------------------------------------------
+-- classroom_links: OAuth tokens for Google Classroom / MS Teams
+--------------------------------------------------------------------------
+create table if not exists public.classroom_links (
+  user_id uuid not null references auth.users(id) on delete cascade,
+  provider text not null check (provider in ('google','microsoft')),
+  access_token text,
+  refresh_token text,
+  expires_at timestamptz,
+  scope text,
+  created_at timestamptz default now(),
+  primary key (user_id, provider)
+);
+alter table public.classroom_links enable row level security;
+create policy "classroom_links_owner" on public.classroom_links for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+--------------------------------------------------------------------------
 -- Storage: bucket for uploads (photos/PDFs). Created via Supabase UI or CLI.
 --   insert into storage.buckets (id, name, public) values ('uploads','uploads', false);
 -- RLS policy: users can only access their own path prefix `user_id/*`.

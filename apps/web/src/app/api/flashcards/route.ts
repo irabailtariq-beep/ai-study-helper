@@ -28,12 +28,58 @@ export async function GET(req: NextRequest) {
 //  { action: "generate", profile, sourceText?, pdfBase64?, imageBase64?, count? }
 //  { action: "delete", id }
 export async function POST(req: NextRequest) {
+  const body = await req.json();
+
+  // ─── GENERATE works for everyone, signed in or not ───
+  // If signed in we'll also save to Supabase. Otherwise we just return the cards
+  // and the client stores them in localStorage.
+  if (body.action === "generate") {
+    try {
+      const quiz = await generateQuiz({
+        profile: body.profile,
+        sourceText: body.sourceText,
+        imageBase64: body.imageBase64,
+        pdfBase64: body.pdfBase64,
+        types: ["short"],
+        count: body.count ?? 10,
+      });
+      const cards = quiz.items
+        .filter((it: any) => it.type === "short")
+        .map((it: any, i: number) => ({
+          id: `local-${Date.now()}-${i}`,
+          front: it.q,
+          back: it.answer,
+          deck: "generated",
+          interval_days: 0,
+          ease: 2.5,
+          reps: 0,
+          due_at: new Date().toISOString().slice(0, 10),
+          created_at: new Date().toISOString(),
+        }));
+
+      // Optionally save to Supabase if signed in
+      const sb = await supabaseServer();
+      if (sb) {
+        const { data: { user } } = await sb.auth.getUser();
+        if (user) {
+          const rows = cards.map((c) => ({ user_id: user.id, front: c.front, back: c.back, deck: "generated" }));
+          await sb.from("flashcards").insert(rows);
+        }
+      }
+
+      return NextResponse.json({ cards, created: cards.length });
+    } catch (e: any) {
+      console.error("/api/flashcards generate", e);
+      return NextResponse.json({ error: e?.message ?? "Generation failed" }, { status: 500 });
+    }
+  }
+
+  // ─── Everything else (create / review / delete) still needs sign-in ───
   const sb = await supabaseServer();
-  if (!sb) return NextResponse.json({ error: "Auth not configured" }, { status: 400 });
+  if (!sb) return NextResponse.json({ error: "Sign in (needs Supabase) to save cards across devices." }, { status: 400 });
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return NextResponse.json({ error: "Not signed in" }, { status: 401 });
 
-  const body = await req.json();
   if (body.action === "create") {
     const { front, back, deck } = body;
     const { data, error } = await sb.from("flashcards")
@@ -54,25 +100,6 @@ export async function POST(req: NextRequest) {
     if (error) return NextResponse.json({ error: error.message }, { status: 500 });
     recordActivity(user.id, "cards_reviewed").catch(() => {});
     return NextResponse.json(upd);
-  }
-
-  if (body.action === "generate") {
-    // Use quiz generator to produce short-answer pairs, convert to cards
-    const quiz = await generateQuiz({
-      profile: body.profile,
-      sourceText: body.sourceText,
-      imageBase64: body.imageBase64,
-      pdfBase64: body.pdfBase64,
-      types: ["short"],
-      count: body.count ?? 10,
-    });
-    const rows = quiz.items
-      .filter((it: any) => it.type === "short")
-      .map((it: any) => ({ user_id: user.id, front: it.q, back: it.answer, deck: "generated" }));
-    if (!rows.length) return NextResponse.json({ created: 0 });
-    const { error } = await sb.from("flashcards").insert(rows);
-    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-    return NextResponse.json({ created: rows.length });
   }
 
   if (body.action === "delete") {

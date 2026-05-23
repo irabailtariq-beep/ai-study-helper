@@ -34,7 +34,14 @@ export async function POST(req: NextRequest) {
       if (sess?.summary) memory = sess.summary;
     }
 
-    const reply = await chat({ profile: body.profile, history: body.history, memory, answerLength });
+    const reply = await chat({
+      profile: body.profile,
+      history: body.history,
+      memory,
+      answerLength,
+      formatOverride: body.formatOverride,
+      toneOverride: body.toneOverride,
+    });
 
     // Persist messages if user is authenticated
     if (sb && user) {

@@ -5,7 +5,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { recordActivity } from "@/lib/activity";
 
 export const runtime = "nodejs";
-export const maxDuration = 90;
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   const rl = checkRateLimit(`quiz:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));

@@ -44,7 +44,7 @@ export default function SettingsPage() {
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Settings</h1>
 
-      <section className="bg-ash-surface p-6 rounded-ash shadow-sm mb-4">
+      <section className="glass-panel p-6 rounded-ash mb-4">
         <h2 className="font-semibold mb-2">Profile</h2>
         {profile ? (
           <div className="text-sm">
@@ -57,7 +57,7 @@ export default function SettingsPage() {
         ) : <p>No profile yet. <Link href="/onboarding" className="underline">Set up</Link></p>}
       </section>
 
-      <section className="bg-ash-surface p-6 rounded-ash shadow-sm mb-4 space-y-2">
+      <section className="glass-panel p-6 rounded-ash mb-4 space-y-2">
         <h2 className="font-semibold">Your data</h2>
         <div className="flex flex-wrap gap-2">
           <a href="/api/account/export" className="px-4 py-2 rounded-ash border">Download my data (JSON)</a>

@@ -1,0 +1,15 @@
+/apps/mobile
+/supabase
+/RESEARCH.md
+/PLAN.md
+/DEPLOY.md
+/deploy.sh
+/Dockerfile
+/railway.toml
+.env
+.env.local
+**/.env
+**/.env.local
+**/node_modules
+**/.next
+**/.expo

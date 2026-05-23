@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { useProfile } from "@/lib/profileStore";
 import type { ChatTurn } from "@ash/core";
 import Link from "next/link";
+import { VoiceInput, SpeakButton } from "@/components/VoiceInput";
+import { RichOutput } from "@/components/RichOutput";
 
 const MEMORY_KEY = "ash-chat-history";
 
@@ -66,7 +68,7 @@ export default function ChatPage() {
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Chat tutor</h1>
 
-      <div className="bg-ash-surface p-4 rounded-ash shadow-sm flex-1 overflow-y-auto min-h-[400px] max-h-[60vh] space-y-3">
+      <div className="glass-panel p-4 rounded-ash flex-1 overflow-y-auto min-h-[400px] max-h-[60vh] space-y-3">
         {history.length === 0 && (
           <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
             Ask me anything about your studies. I'll adapt to your age and class.
@@ -75,14 +77,17 @@ export default function ChatPage() {
         {history.map((t, i) => (
           <div key={i} className={t.role === "user" ? "text-right" : "text-left"}>
             <div
-              className="inline-block p-3 rounded-ash max-w-[80%] whitespace-pre-wrap"
+              className="inline-block p-3 rounded-ash max-w-[90%] text-left"
               style={{
                 background: t.role === "user" ? "var(--ash-primary)" : "var(--ash-bg)",
                 color: t.role === "user" ? "white" : "var(--ash-text)",
               }}
             >
-              {t.content}
+              {t.role === "user"
+                ? <span className="whitespace-pre-wrap">{t.content}</span>
+                : <RichOutput>{t.content}</RichOutput>}
             </div>
+            {t.role === "assistant" && <div className="mt-1"><SpeakButton text={t.content} /></div>}
           </div>
         ))}
         {loading && <div className="text-sm" style={{ color: "var(--ash-muted)" }}>Thinking…</div>}
@@ -124,9 +129,10 @@ export default function ChatPage() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && send()}
-          placeholder="Type your question…"
+          placeholder="Type or speak your question…"
           className="flex-1 p-3 rounded-ash border"
         />
+        <VoiceInput onText={(t) => setInput(t)} />
         <button
           onClick={send}
           disabled={loading || !input.trim()}

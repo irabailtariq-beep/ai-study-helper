@@ -56,7 +56,7 @@ export default function PersonalExplainPage() {
 
       <h1 className="text-2xl font-bold my-4">Personal Explain</h1>
 
-      <div className="bg-ash-surface p-6 rounded-ash shadow-sm space-y-4">
+      <div className="glass-panel p-6 rounded-ash space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-[1fr_220px] gap-4 items-start">
           <textarea
             value={topic}
@@ -130,7 +130,7 @@ export default function PersonalExplainPage() {
       </div>
 
       {result && (
-        <section className="bg-ash-surface p-6 rounded-ash shadow-sm mt-6 space-y-4">
+        <section className="glass-panel p-6 rounded-ash mt-6 space-y-4">
           <div>
             <h2 className="font-semibold mb-2">Explanation</h2>
             <p className="whitespace-pre-wrap">{result.explanation}</p>

@@ -1,118 +1,157 @@
-# Deployment Guide
+# Deployment Runbook
 
-This guide walks you step-by-step from "it works on my Mac" to "installed on the App Store, Play Store, and live on the web."
+Goal: go from this repo → live web app + App Store + Play Store.
+
+Everything that **doesn't** need you personally (code, configs, CLI installs, builds) is automated by `deploy.sh`. Everything that **does** need you (accounts, fees, browser logins, store review) is listed below as one-liners you run yourself.
 
 ---
 
-## 1) Backend database (Supabase)
+## 0. What you need once (accounts)
 
-1. Create a free account at https://supabase.com and create a new project.
-2. In the Supabase dashboard → **SQL editor**, paste the contents of [`supabase/schema.sql`](supabase/schema.sql) and run it.
-3. Storage → create a bucket named `uploads` (private).
-4. Settings → API → copy:
-   - `Project URL` → `NEXT_PUBLIC_SUPABASE_URL`
-   - `anon` public key → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `service_role` secret key → `SUPABASE_SERVICE_ROLE_KEY` (keep secret; only used server-side for account deletion)
+| Service | Why | Free? |
+|---|---|---|
+| [Gemini API](https://aistudio.google.com/apikey) | Vision + PDF understanding | ✅ free tier |
+| [Groq](https://console.groq.com/keys) | Fast text-only Llama 3.3 70B (optional) | ✅ free |
+| [Supabase](https://supabase.com) | Database + auth + storage | ✅ free tier |
+| [Railway](https://railway.app) | Hosts the web backend | ✅ free tier ($5/mo of usage) |
+| [Expo](https://expo.dev) | Builds iOS + Android | ✅ free tier |
+| [Apple Developer](https://developer.apple.com/programs/) | App Store | 💵 $99/yr |
+| [Google Play Console](https://play.google.com/console/) | Play Store | 💵 $25 one-time |
 
-Put these in `apps/web/.env.local` for local dev.
+For **just web + local mobile testing**, only the free ones matter. The $99 and $25 only apply if you want to ship to the stores.
 
-## 2) Web app on Railway
+---
 
-1. Create a free account at https://railway.app and install the CLI: `brew install railway`
-2. From the repo root:
-   ```bash
-   railway login
-   railway init       # or: railway link to an existing project
-   railway up
-   ```
-3. In the Railway dashboard → **Variables**, add:
-   ```
-   GEMINI_API_KEY=...
-   NEXT_PUBLIC_SUPABASE_URL=...
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=...
-   SUPABASE_SERVICE_ROLE_KEY=...
-   ```
-4. Railway auto-detects [`railway.toml`](railway.toml), builds, and gives you a URL like `https://your-app.up.railway.app`. Note it — the mobile app points at it.
+## 1. Supabase (5 minutes)
 
-### Using Docker instead
-If you prefer a custom host (Fly.io, Render, your own VPS), a [Dockerfile](Dockerfile) is provided:
+1. Create a project at supabase.com.
+2. Open **SQL editor**, paste [`supabase/schema.sql`](supabase/schema.sql), run it.
+3. **Storage → new bucket** → name `uploads`, private.
+4. **Settings → API**, copy:
+   - Project URL → `NEXT_PUBLIC_SUPABASE_URL`
+   - `anon` → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `service_role` → `SUPABASE_SERVICE_ROLE_KEY`
+5. Paste these + your `GEMINI_API_KEY` into `apps/web/.env.local` (copied from `.env.example`).
+
+## 2. Run it locally
+
 ```bash
-docker build -t ai-study-helper .
-docker run -p 3000:3000 --env-file .env ai-study-helper
+pnpm dev:web            # http://localhost:3000
+```
+Mobile in a second terminal:
+```bash
+pnpm dev:mobile         # press i / a / w
 ```
 
-## 3) Mobile builds (Expo EAS)
+## 3. Deploy the web backend to Railway
 
-Prerequisites: free Expo account at https://expo.dev, then:
+One command:
+
 ```bash
-npm i -g eas-cli
-eas login
+bash deploy.sh web
+```
+
+What it does:
+- Installs Railway CLI if missing.
+- Runs the production build.
+- Prompts you once to `railway login` (opens browser).
+- Creates/links a Railway project.
+- Pushes every key from `apps/web/.env.local` as a Railway env var.
+- Triggers `railway up`.
+
+When Railway gives you the URL (e.g. `https://ai-study-helper.up.railway.app`), update the mobile app's API base:
+
+```bash
+# apps/mobile/eas.json → production.env.EXPO_PUBLIC_API_BASE
+```
+
+## 4. OAuth redirect URIs (for Classroom / Teams)
+
+Once you have your Railway URL, set:
+
+- **Google Cloud Console → OAuth client** → Authorized redirect URIs:
+  ```
+  http://localhost:3000/api/classroom/callback
+  https://<your-railway>.up.railway.app/api/classroom/callback
+  https://<your-railway>.up.railway.app/api/auth/callback    ← for Supabase Google sign-in
+  ```
+- **Azure portal → app registration → Redirect URIs**:
+  ```
+  http://localhost:3000/api/teams/callback
+  https://<your-railway>.up.railway.app/api/teams/callback
+  ```
+
+## 5. Mobile builds + store submission
+
+```bash
+bash deploy.sh mobile
+```
+
+Under the hood:
+- Installs EAS CLI if missing.
+- Prompts `eas login`.
+- Triggers preview builds for iOS and Android.
+
+Watch progress at https://expo.dev or:
+```bash
+eas build:list
+```
+
+### First-time iOS specifics (need Apple Developer account)
+```bash
 cd apps/mobile
+eas build:configure
+eas build --platform ios --profile production
+eas submit --platform ios
 ```
+EAS will manage Apple signing certificates for you — say **yes** when it asks.
 
-Edit `eas.json` and replace `https://your-app.up.railway.app` with your actual Railway URL.
+### First-time Android specifics (need Play Console account)
+```bash
+cd apps/mobile
+eas build --platform android --profile production
+eas submit --platform android
+```
+First submission needs you to manually create the app shell on Play Console, add metadata, and set an age rating (13+ for MVP).
 
-### iOS (App Store)
+## 6. Store listing answers (copy-paste ready)
 
-1. You need a paid **Apple Developer account** ($99/year) — this is Apple's requirement, not ours.
-2. ```bash
-   eas build --platform ios --profile production
-   ```
-   EAS prompts you to let it manage your Apple credentials — answer yes for the easiest path.
-3. When the build completes, submit to TestFlight:
-   ```bash
-   eas submit --platform ios
-   ```
-4. Go to https://appstoreconnect.apple.com to:
-   - Add app metadata (description, keywords, screenshots).
-   - Invite yourself/testers to TestFlight.
-   - When ready, submit for App Review.
-5. Apple will ask about "content users generate." Answer honestly: users upload photos/PDFs of study material, and the app uses AI to produce educational explanations.
+**Short description (~80 chars)**
+> Your free AI study tutor. Explain, quiz, and remember — fits your age and class.
 
-### Android (Google Play)
+**Full description** — use the intro from [README.md](README.md), then bullet-list the features:
+- Upload a photo or PDF to get an age-adapted explanation
+- Generate quizzes, past-papers and flashcards from any material
+- Digital syllabus + concept map view
+- Google Classroom, Microsoft Teams, Canvas & Moodle sync
+- Diagnostic quiz → personalised 7-day plan
+- Parent dashboard with weekly recap
+- Voice input and read-aloud
 
-1. Create a **Google Play Developer** account (one-time $25).
-2. ```bash
-   eas build --platform android --profile production
-   eas submit --platform android
-   ```
-3. In the Play Console add metadata, screenshots, and promote to production when ready.
+**Age rating**: 13+ (MVP). Raise to 4+ only after shipping strict kids mode.
 
-## 4) Screenshots & metadata (both stores)
+**Privacy policy URL**: `https://<your-railway>.up.railway.app/privacy`
 
-Both stores need:
-- App icon (already generated at `apps/mobile/assets/icon.png`)
-- Screenshots at specific sizes: use the iOS simulator / Android emulator and take them with the device bezel frames from `https://previewed.app/` or similar.
-- Short description (~80 chars): *"Your free AI study tutor. Explain, quiz, and remember — fits your age and class."*
-- Full description: copy/expand the intro from the [README](README.md).
-- Age rating: **Educational**, **12+** for MVP (because of user-generated content). Do NOT rate it as 4+ until you ship the strict kids mode in v2.
-- Privacy policy URL: `https://your-app.up.railway.app/privacy`
-- Support URL: your contact email.
+**Data collected & linked to user**
+- Email (sign-in only, optional)
+- Uploaded content → sent to Gemini for processing
+- Usage counts (for streaks)
 
-## 5) Required Apple/Google answers
+**Used for tracking**: No.
+**Third-party ads**: No.
 
-| Question | Answer for this app |
-|---|---|
-| Data types collected | Email (optional), content you upload (sent to Google Gemini) |
-| Data linked to user | Yes (when signed in) |
-| Used for tracking | **No** |
-| Third-party analytics | None |
-| Third-party ads | None |
-| Uses AI | Yes — Google Gemini for explanations / quizzes |
-| Target audience | 13+ (MVP). Update to family-friendly in v2 after strict kids mode. |
+## 7. Rollback
 
-## 6) Post-launch
-
-- Monitor free-tier usage on Supabase + Railway + Gemini.
-- Set up error alerting (Sentry free tier has a Next.js SDK).
-- Keep `GEMINI_API_KEY` rotated every few months.
-- Respond to user reports in the store reviews within 7 days (Apple expects this).
-
-## Rollback
-
-If Railway ships a broken deploy:
+Web:
 ```bash
 railway rollback
 ```
 
-If an EAS build has a regression, set your users back to the previous production track in App Store Connect / Play Console. Never skip review queues — Apple will reject apps that push unreviewed native code changes.
+Mobile: in App Store Connect / Play Console, revert the active build to the previous track. Do not force-ship native code changes that skipped review.
+
+## 8. Post-launch checklist
+
+- Set up free Sentry project, add `SENTRY_DSN` env var for crash reports.
+- Monitor free-tier usage: Supabase (500 MB DB), Railway ($5 usage), Gemini (1500 req/day), Groq (14k req/day on free tier).
+- Respond to store reviews within 7 days (Apple penalty if slow).
+- Rotate `GEMINI_API_KEY`, `GROQ_API_KEY`, `SUPABASE_SERVICE_ROLE_KEY` every 3 months.

@@ -22,7 +22,7 @@ export default function ProgressPage() {
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Your progress</h1>
       {!data ? <p>Loading…</p> : !data.signedIn ? (
-        <div className="bg-ash-surface p-6 rounded-ash shadow-sm">
+        <div className="glass-panel p-6 rounded-ash">
           <p className="mb-3">Sign in to track streaks, review history, and sync across devices.</p>
           <Link href="/signin" className="inline-block px-4 py-2 rounded-ash text-white" style={{ background: "var(--ash-primary)" }}>
             Sign in
@@ -39,7 +39,7 @@ export default function ProgressPage() {
             <Card label="Quizzes made" value={`${data.quizCount ?? 0}`} />
             <Card label="Flashcards" value={`${data.cardCount ?? 0}`} />
           </div>
-          <div className="bg-ash-surface p-4 rounded-ash shadow-sm">
+          <div className="glass-panel p-4 rounded-ash">
             <h2 className="font-semibold mb-3">Last 14 days</h2>
             <div className="flex gap-1 items-end h-24">
               {(data.last14 ?? []).map((d, i) => {
@@ -64,7 +64,7 @@ export default function ProgressPage() {
 
 function Card({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-ash-surface p-4 rounded-ash shadow-sm">
+    <div className="glass-panel p-4 rounded-ash">
       <div className="text-xs" style={{ color: "var(--ash-muted)" }}>{label}</div>
       <div className="text-2xl font-bold mt-1">{value}</div>
     </div>

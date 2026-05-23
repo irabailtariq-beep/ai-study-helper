@@ -13,7 +13,7 @@ export default function SignInPage() {
       <main className="min-h-screen p-6 max-w-md mx-auto">
         <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
         <h1 className="text-2xl font-bold my-4">Sign in</h1>
-        <p className="bg-ash-surface p-4 rounded-ash text-sm" style={{ color: "var(--ash-muted)" }}>
+        <p className="glass-panel p-4 rounded-ash text-sm" style={{ color: "var(--ash-muted)" }}>
           Sign-in needs Supabase to be configured. Add
           <code className="mx-1 px-1 bg-gray-100 rounded">NEXT_PUBLIC_SUPABASE_URL</code>
           and
@@ -50,7 +50,7 @@ export default function SignInPage() {
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Sign in</h1>
 
-      <div className="bg-ash-surface p-6 rounded-ash shadow-sm space-y-4">
+      <div className="glass-panel p-6 rounded-ash space-y-4">
         <button
           onClick={withGoogle}
           className="w-full px-4 py-3 rounded-ash border font-medium"

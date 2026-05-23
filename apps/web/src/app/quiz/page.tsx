@@ -18,9 +18,11 @@ export default function QuizPage() {
 
   if (!profile) {
     return (
-      <main className="min-h-screen p-6 max-w-2xl mx-auto">
-        <p>Please complete <Link href="/onboarding" className="underline">onboarding</Link> first.</p>
-      </main>
+      <main className="px-6 py-10 max-w-3xl mx-auto">
+      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Quiz me — auto practice</h1>
+      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Generate quizzes from any material: MCQ, short answer, true/false, fill-in-the-blank — auto-graded with explanations.</p>
+      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
+    </main>
     );
   }
 
@@ -59,7 +61,7 @@ export default function QuizPage() {
       <h1 className="text-2xl font-bold my-4">Quiz me</h1>
 
       {!quiz && (
-        <div className="bg-ash-surface p-6 rounded-ash shadow-sm space-y-4">
+        <div className="glass-panel p-6 rounded-ash space-y-4">
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -71,6 +73,9 @@ export default function QuizPage() {
             accept="image/*,application/pdf"
             onChange={(e) => setFile(e.target.files?.[0] ?? null)}
           />
+          <p className="text-xs" style={{ color: "var(--ash-muted)" }}>
+            Tip: photo / PDF quality must be clear and well-lit — blurry or dark pictures can't be read by the AI.
+          </p>
           <div>
             <label className="text-sm" style={{ color: "var(--ash-muted)" }}>
               Number of questions: <b>{count}</b>
@@ -97,7 +102,7 @@ export default function QuizPage() {
       )}
 
       {quiz && (
-        <section className="bg-ash-surface p-6 rounded-ash shadow-sm space-y-6">
+        <section className="glass-panel p-6 rounded-ash space-y-6">
           <h2 className="font-semibold text-xl">{quiz.title}</h2>
           {quiz.items.map((item, i) => (
             <div key={i} className="border-t pt-4">
@@ -173,11 +178,16 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
   if (item.type === "short" || item.type === "fill") {
     return (
       <div>
-        <input
+        <label className="block text-xs mb-1" style={{ color: "var(--ash-muted)" }}>
+          Type your answer below {item.type === "fill" ? "(fill in the blank)" : "(short answer)"}
+        </label>
+        <textarea
           value={answers[index] ?? ""}
           onChange={(e) => set(e.target.value)}
-          placeholder="Your answer"
-          className="w-full p-2 rounded border"
+          placeholder="Type your answer here…"
+          rows={item.type === "fill" ? 1 : 2}
+          className="w-full p-3 rounded-2xl border"
+          style={{ borderColor: "var(--ash-border)", background: "white", fontSize: "15px" }}
         />
         {revealed && (
           <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
