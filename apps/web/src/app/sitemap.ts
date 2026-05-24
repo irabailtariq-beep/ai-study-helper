@@ -8,7 +8,7 @@ const STATIC_PATHS = [
   // Onboarding & core tools
   "/onboarding", "/explain", "/transform", "/quiz", "/chat",
   "/syllabus", "/flashcards", "/progress", "/diagnostic",
-  "/grade", "/concept-map", "/parent", "/classroom", "/teams", "/lms",
+  "/grade", "/concept-map", "/parent", "/classroom",
   "/math-solver", "/formula-sheet",
   // New tools
   "/essay-coach", "/vocab", "/translate", "/whiteboard",

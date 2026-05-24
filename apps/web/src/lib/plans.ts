@@ -1,7 +1,8 @@
-// Single source of truth for subscription tiers and feature gates.
-// Wire to Stripe later — for MVP every user is "free" and ads serve.
+// Single tier — Help in Study is 100% free, no paid plans.
+// This file is kept (instead of deleted) so any future call sites don't break,
+// and so we have one place to bump rate limits or feature flags later.
 
-export type PlanId = "free" | "pro" | "family";
+export type PlanId = "free";
 
 export const PLANS: Record<PlanId, {
   id: PlanId;
@@ -9,23 +10,20 @@ export const PLANS: Record<PlanId, {
   priceMonthly: number;
   priceYearly: number;
   currency: string;
-  popular?: boolean;
   features: string[];
-  // What the plan removes / adds
-  showsAds: boolean;
+  // Daily limits (anti-abuse only, not paywalls)
   dailyExplains: number;
   dailyChats: number;
   dailyQuizzes: number;
   dailyUploads: number;
   uploadMaxMB: number;
   pdfMaxPages: number;
+  // All features enabled for everyone
   voiceMode: boolean;
   conceptMap: boolean;
   pastPaperGrading: boolean;
   classroomSync: boolean;
   parentDashboard: boolean;
-  prioritySpeed: boolean;
-  familySeats: number;
 }> = {
   free: {
     id: "free",
@@ -34,84 +32,24 @@ export const PLANS: Record<PlanId, {
     priceYearly: 0,
     currency: "USD",
     features: [
-      "AI explanations (text, photo, PDF up to 5 MB)",
-      "10 explanations + 50 chat messages per day",
-      "Quiz generator (basic)",
-      "Past paper practice (limited)",
-      "Adaptive UI by age",
-      "Guest mode + sign-in",
-      "Ads supported",
+      "AI explanations (text, photo, PDF)",
+      "Chat tutor with cross-session memory",
+      "Quiz generator (MCQ, short, T/F, fill)",
+      "Math solver with step-by-step working",
+      "Flashcards with spaced repetition",
+      "Past-paper synthesis + mark-scheme grading",
+      "Concept map builder",
+      "Diagnostic + 7-day study plan",
+      "Voice input + output",
+      "Google Classroom + MS Teams + Canvas + Moodle",
+      "Parent weekly recap",
+      "129+ study-tip articles",
+      "80+ curricula supported",
     ],
-    showsAds: true,
-    dailyExplains: 10,
-    dailyChats: 50,
-    dailyQuizzes: 10,
-    dailyUploads: 5,
-    uploadMaxMB: 5,
-    pdfMaxPages: 20,
-    voiceMode: true,
-    conceptMap: false,
-    pastPaperGrading: false,
-    classroomSync: false,
-    parentDashboard: false,
-    prioritySpeed: false,
-    familySeats: 1,
-  },
-  pro: {
-    id: "pro",
-    name: "Pro",
-    priceMonthly: 4.99,
-    priceYearly: 39,
-    currency: "USD",
-    popular: true,
-    features: [
-      "Everything in Free",
-      "No ads, ever",
-      "Unlimited explanations + chats",
-      "PDF up to 20 MB / 50 pages",
-      "Concept map view",
-      "AI essay coaching with feedback",
-      "Diagnostic quiz + 7-day study plan",
-      "Voice tutor (high-quality TTS)",
-      "Priority response speed",
-      "Cross-device sync",
-    ],
-    showsAds: false,
-    dailyExplains: 200,
-    dailyChats: 1000,
-    dailyQuizzes: 50,
-    dailyUploads: 30,
-    uploadMaxMB: 20,
-    pdfMaxPages: 50,
-    voiceMode: true,
-    conceptMap: true,
-    pastPaperGrading: true,
-    classroomSync: true,
-    parentDashboard: false,
-    prioritySpeed: true,
-    familySeats: 1,
-  },
-  family: {
-    id: "family",
-    name: "Family",
-    priceMonthly: 9.99,
-    priceYearly: 79,
-    currency: "USD",
-    features: [
-      "Everything in Pro",
-      "Up to 5 student profiles",
-      "Parent dashboard with weekly recap",
-      "Per-child progress tracking",
-      "Per-child age + curriculum settings",
-      "Google Classroom + Microsoft Teams sync per child",
-      "Shareable study plans",
-      "Parent-only safety controls",
-    ],
-    showsAds: false,
-    dailyExplains: 500,
-    dailyChats: 2000,
-    dailyQuizzes: 100,
-    dailyUploads: 100,
+    dailyExplains: 50,
+    dailyChats: 200,
+    dailyQuizzes: 30,
+    dailyUploads: 10,
     uploadMaxMB: 20,
     pdfMaxPages: 50,
     voiceMode: true,
@@ -119,12 +57,9 @@ export const PLANS: Record<PlanId, {
     pastPaperGrading: true,
     classroomSync: true,
     parentDashboard: true,
-    prioritySpeed: true,
-    familySeats: 5,
   },
 };
 
-export function planById(id?: string): typeof PLANS[PlanId] {
-  if (id === "pro" || id === "family") return PLANS[id];
+export function planById(_id?: string): typeof PLANS[PlanId] {
   return PLANS.free;
 }

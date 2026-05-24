@@ -50,8 +50,6 @@ const FOOTER_GROUPS = [
       { href: "/contact", label: "Contact" },
       { href: "/parent", label: "For parents" },
       { href: "/classroom", label: "Google Classroom" },
-      { href: "/teams", label: "Microsoft Teams" },
-      { href: "/lms", label: "Canvas / Moodle" },
     ],
   },
   {
