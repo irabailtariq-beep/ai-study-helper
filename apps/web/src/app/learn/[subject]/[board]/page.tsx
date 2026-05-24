@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CURRICULA, COUNTRIES } from "@ash/core";
-import { SITE, faqJsonLd, courseJsonLd } from "@/lib/seo";
+import { SITE, courseJsonLd } from "@/lib/seo";
+import { findLearnCombo, LEARN_COMBOS } from "@/content/learnPages";
 
 const SUBJECT_LABELS: Record<string, string> = {
   "math": "Mathematics",
@@ -21,14 +22,20 @@ const SUBJECT_LABELS: Record<string, string> = {
 
 type Props = { params: Promise<{ subject: string; board: string }> };
 
+// Pre-generate only the curated combos.
+export async function generateStaticParams() {
+  return LEARN_COMBOS.map(({ subject, board }) => ({ subject, board }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject, board } = await params;
+  const combo = findLearnCombo(subject, board);
+  if (!combo) return {};
   const subj = SUBJECT_LABELS[subject];
   const cur = CURRICULA.find((c) => c.id === board);
   if (!subj || !cur) return {};
-  const country = COUNTRIES.find((c) => c.code === cur.country)?.name ?? "International";
-  const title = `Free ${subj} help for ${cur.name} students (${country})`;
-  const description = `AI tutor for ${cur.name} ${subj}. Step-by-step explanations, quizzes, and flashcards aligned to your board. Free, no credit card.`;
+  const title = combo.metaTitle ?? `${subj} help for ${cur.name} students · Help in Study`;
+  const description = combo.metaDescription ?? combo.intro.slice(0, 155);
   return {
     title,
     description,
@@ -39,35 +46,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function LearnPage({ params }: Props) {
   const { subject, board } = await params;
+  const combo = findLearnCombo(subject, board);
+  if (!combo) notFound();
+
   const subj = SUBJECT_LABELS[subject];
   const cur = CURRICULA.find((c) => c.id === board);
   if (!subj || !cur) notFound();
 
   const country = COUNTRIES.find((c) => c.code === cur.country)?.name ?? "International";
 
-  const faqs = [
-    {
-      question: `Is the AI tutor for ${cur.name} ${subj} really free?`,
-      answer: `Yes. The free tier includes 10 explanations and 50 chat messages per day, plus quiz generation and flashcards. No credit card. Pro removes limits and ads.`,
-    },
-    {
-      question: `Does it match the official ${cur.name} syllabus?`,
-      answer: `The AI is told you're a ${cur.name} ${subj} student before every reply, so terminology, units and exam style match your board. You can also upload your official syllabus to lock answers to it.`,
-    },
-    {
-      question: `Can it solve exam-style questions?`,
-      answer: `Yes. Snap a photo of any question from your textbook or notes. The AI shows step-by-step working in the style your board's mark scheme expects.`,
-    },
-    {
-      question: `Will it help with my homework or just explain theory?`,
-      answer: `Both. Use Explain for concepts, Math Solver for step-by-step working, and Mark My Answer when you need feedback on a written answer.`,
-    },
-  ];
-
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({ name: `${cur.name} ${subj}`, description: `AI-tutored ${subj} for ${cur.name} students.` })) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(courseJsonLd({
+            name: `${cur.name} ${subj} — Help in Study`,
+            description: combo.intro,
+          })),
+        }}
+      />
 
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
 
@@ -75,17 +73,18 @@ export default async function LearnPage({ params }: Props) {
         <p className="uppercase tracking-widest text-xs font-semibold" style={{ color: "var(--ash-primary)", letterSpacing: "0.25em" }}>
           {country} · {cur.name}
         </p>
-        <h1 className="font-extrabold tracking-tight mt-2"
-            style={{
-              fontSize: "clamp(32px, 5vw, 48px)",
-              backgroundImage: "linear-gradient(120deg, #4F46E5, #7c3aed, #06b6d4)",
-              WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent",
-            }}>
-          Free AI tutor for {cur.name} {subj}
+        <h1
+          className="font-extrabold tracking-tight mt-2"
+          style={{
+            fontSize: "clamp(32px, 5vw, 48px)",
+            backgroundImage: "linear-gradient(120deg, #4F46E5, #7c3aed, #06b6d4)",
+            WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent",
+          }}
+        >
+          {cur.name} {subj} help — done properly
         </h1>
-        <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>
-          Built for {cur.name} students. Snap a textbook page, paste a question, or upload a worksheet —
-          your tutor explains it in your board's style, generates practice quizzes, and remembers what you've covered.
+        <p className="mt-4 text-base leading-relaxed" style={{ color: "var(--ash-text)" }}>
+          {combo.intro}
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <Link href="/onboarding" className="px-6 py-3 rounded-ash text-white font-semibold"
@@ -99,59 +98,113 @@ export default async function LearnPage({ params }: Props) {
         </div>
       </header>
 
-      <section className="grid sm:grid-cols-2 gap-4 mb-8">
-        <div className="glass-panel p-5 rounded-ash">
-          <div className="text-2xl mb-1">🧮</div>
-          <h2 className="font-semibold">Step-by-step {subj}</h2>
-          <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Every line of working shown — no more "I get the answer but not how".</p>
-          <Link href="/math-solver" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Try the math solver →</Link>
-        </div>
-        <div className="glass-panel p-5 rounded-ash">
-          <div className="text-2xl mb-1">🧠</div>
-          <h2 className="font-semibold">{cur.name}-style quizzes</h2>
-          <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Auto-generated MCQs, short answer, and true/false from your notes or any topic.</p>
-          <Link href="/quiz" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Generate a quiz →</Link>
-        </div>
-        <div className="glass-panel p-5 rounded-ash">
-          <div className="text-2xl mb-1">✨</div>
-          <h2 className="font-semibold">Learn through your interests</h2>
-          <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Reframe any topic through cricket, cooking, gaming, K-pop — whatever you love.</p>
-          <Link href="/transform" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Make it about you →</Link>
-        </div>
-        <div className="glass-panel p-5 rounded-ash">
-          <div className="text-2xl mb-1">🔥</div>
-          <h2 className="font-semibold">Daily streaks + study plan</h2>
-          <p className="text-sm" style={{ color: "var(--ash-muted)" }}>10-question diagnostic builds your personal 7-day plan.</p>
-          <Link href="/diagnostic" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Take the diagnostic →</Link>
-        </div>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Exam format you'll actually sit</h2>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--ash-text)" }}>{combo.examFormat}</p>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-bold mb-3">How it helps {cur.name} {subj} students</h2>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Highest-yield topics (the ones that show up year after year)</h2>
         <ul className="list-disc pl-5 space-y-2 text-sm">
-          <li><b>Curriculum-locked answers.</b> Once you tell us your grade and {cur.name} board, every reply uses the right terminology, formulas, and units.</li>
-          <li><b>Auto-generated practice.</b> Upload notes or a chapter — get fresh quizzes and flashcards at the right difficulty.</li>
-          <li><b>Mark-scheme grading.</b> Type your answer, AI marks it like a {cur.name} examiner would, with feedback.</li>
-          <li><b>Photo math.</b> Snap a problem from your textbook or notebook — get step-by-step working.</li>
-          <li><b>Adaptive difficulty.</b> If a topic is too easy or too hard, the next question adjusts.</li>
+          {combo.highYieldTopics.map((t, i) => (
+            <li key={i}>{t}</li>
+          ))}
+        </ul>
+        <p className="text-xs mt-3" style={{ color: "var(--ash-muted)" }}>
+          Drill these first. If you can't do every one of these cold, work through them with{" "}
+          <Link href="/explain" className="underline" style={{ color: "var(--ash-primary)" }}>/explain</Link>{" "}
+          or{" "}
+          <Link href="/problem-variants" className="underline" style={{ color: "var(--ash-primary)" }}>/problem-variants</Link>.
+        </p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Common mistakes that quietly cost marks</h2>
+        <ul className="list-disc pl-5 space-y-2 text-sm">
+          {combo.commonPitfalls.map((p, i) => (
+            <li key={i}>{p}</li>
+          ))}
+        </ul>
+        <p className="text-xs mt-3" style={{ color: "var(--ash-muted)" }}>
+          When you mark your past papers, tag each lost mark to one of these. The pattern reveals where to focus.
+        </p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Where to get real past papers</h2>
+        <ul className="list-disc pl-5 space-y-2 text-sm">
+          {combo.pastPaperSources.map((src, i) => (
+            <li key={i}>{src}</li>
+          ))}
         </ul>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-bold mb-3">FAQs</h2>
-        <div className="space-y-2">
-          {faqs.map((f, i) => (
-            <details key={i} className="glass-panel rounded-ash p-4">
-              <summary className="font-semibold cursor-pointer">{f.question}</summary>
-              <p className="mt-2 text-sm">{f.answer}</p>
-            </details>
-          ))}
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">Realistic study plan</h2>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--ash-text)" }}>{combo.studyPlan}</p>
+      </section>
+
+      {combo.resources && combo.resources.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-xl font-bold mb-3">Recommended resources</h2>
+          <ul className="list-disc pl-5 space-y-2 text-sm">
+            {combo.resources.map((r, i) => (
+              <li key={i}>{r}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {combo.extraNotes && (
+        <section className="mb-10 glass-panel p-5 rounded-ash">
+          <h2 className="text-base font-semibold mb-2">Worth knowing</h2>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--ash-text)" }}>{combo.extraNotes}</p>
+        </section>
+      )}
+
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">How Help in Study fits into your prep</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="glass-panel p-5 rounded-ash">
+            <div className="text-2xl mb-1">🧮</div>
+            <h3 className="font-semibold">Step-by-step working</h3>
+            <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+              Snap any textbook problem — the AI works through every step in {cur.name} style with full justification.
+            </p>
+            <Link href="/math-solver" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Try math solver →</Link>
+          </div>
+          <div className="glass-panel p-5 rounded-ash">
+            <div className="text-2xl mb-1">🧠</div>
+            <h3 className="font-semibold">Board-style practice quizzes</h3>
+            <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+              MCQs, short-answer, and true/false generated from any topic above — auto-graded with explanations.
+            </p>
+            <Link href="/quiz" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Generate a quiz →</Link>
+          </div>
+          <div className="glass-panel p-5 rounded-ash">
+            <div className="text-2xl mb-1">✍️</div>
+            <h3 className="font-semibold">Have your answer marked</h3>
+            <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+              Paste an answer to a past-paper question — get feedback like a {cur.name} examiner would give.
+            </p>
+            <Link href="/grade" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Mark my answer →</Link>
+          </div>
+          <div className="glass-panel p-5 rounded-ash">
+            <div className="text-2xl mb-1">🔥</div>
+            <h3 className="font-semibold">Personalised study plan</h3>
+            <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+              10-question diagnostic → AI builds a 7-day plan focused on your weakest topics from the list above.
+            </p>
+            <Link href="/diagnostic" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Take diagnostic →</Link>
+          </div>
         </div>
       </section>
 
       <section className="glass-panel rounded-ash p-6 text-center">
-        <h2 className="text-xl font-bold mb-2">Ready when you are</h2>
-        <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>Free forever for the basics. Upgrade later if you want to.</p>
+        <h2 className="text-xl font-bold mb-2">Ready to start?</h2>
+        <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>
+          Set up your profile once — every reply from then on is tuned to your {cur.name} {subj} syllabus.
+        </p>
         <Link href="/onboarding" className="inline-block px-6 py-3 rounded-ash text-white font-semibold"
               style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
           Get started — it's free

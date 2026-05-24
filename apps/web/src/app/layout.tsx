@@ -14,27 +14,8 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   applicationName: SITE.name,
-  keywords: [
-    // Brand + primary
-    "Help in Study", "helpinstudy", "AI study helper", "AI study help", "study help AI",
-    "AI homework helper", "free AI tutor", "AI study buddy", "study helper online",
-    // Subject-keyword sweet spot (matches user's voice search patterns)
-    "help in study math", "AI study helper math", "math help AI",
-    "help in study English", "help in study calculus", "help in study physics",
-    "help in study chemistry", "help in study biology", "help in study history",
-    "help in study programming", "help in study coding", "help in study accounting",
-    "AI math solver", "AI calculus help", "AI English helper",
-    "step by step math", "photo math solver", "PDF homework helper",
-    // Curricula
-    "GCSE", "A Level", "IGCSE", "CBSE", "ICSE", "Matric", "FSc", "NEET", "JEE",
-    "AP", "SAT", "IB", "WAEC", "NCEA", "ENEM", "STAAR",
-    // Use cases
-    "explain my homework", "homework help AI", "past paper practice", "exam prep AI",
-    "flashcards spaced repetition", "study plan AI",
-    // Audience
-    "kids learning app", "study app for students", "AI tutor for kids", "AI tutor for teens",
-    "free study app", "no ads study app",
-  ],
+  // Note: <meta name="keywords"> is ignored by Google since 2009. Removed to keep
+  // the head clean and avoid looking spammy. Per-page metadata carries SEO weight.
   authors: [{ name: SITE.founder }],
   creator: SITE.founder,
   publisher: SITE.founder,

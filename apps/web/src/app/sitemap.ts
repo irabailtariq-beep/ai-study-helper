@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/seo";
-import { CURRICULA } from "@ash/core";
 import { POSTS } from "@/content/posts";
+import { LEARN_COMBOS } from "@/content/learnPages";
 
 const STATIC_PATHS = [
   "",
@@ -19,23 +19,16 @@ const STATIC_PATHS = [
   "/pricing", "/blog", "/about", "/contact",
   // Legal / compliance
   "/privacy", "/terms", "/refund-policy",
-  // Account
-  "/signin", "/settings",
+  // Account (signin only — /settings is robots-disallowed and shouldn't be in sitemap)
+  "/signin",
 ];
 
-// Subject-targeted SEO landing pages (matches user search patterns:
-//   "help in study math", "help in study calculus", "help in study English", …)
+// Subject-targeted SEO landing pages. Each page has hand-written, subject-specific
+// long-form content — NOT a programmatic template — so they're worth indexing.
 const HELP_IN_STUDY_SUBJECTS = [
   "math", "english", "calculus", "physics", "chemistry", "biology",
   "history", "geography", "computer-science", "programming",
   "accounting", "economics",
-];
-
-// Programmatic /learn/<subject>/<board> matrix.
-const LEARN_SUBJECTS = [
-  "math", "physics", "chemistry", "biology", "english",
-  "history", "geography", "economics", "computer-science",
-  "accounting", "psychology", "general-science",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -48,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: p === "" ? 1.0 : 0.7,
   }));
 
-  // Subject-targeted /help-in-study/<subject> SEO pages (high-priority because they match user voice queries)
+  // Subject-targeted /help-in-study/<subject> pages (high-priority — unique content per subject)
   for (const subject of HELP_IN_STUDY_SUBJECTS) {
     out.push({
       url: `${base}/help-in-study/${subject}`,
@@ -58,19 +51,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Programmatic /learn/<subject>/<board> matrix
-  for (const subject of LEARN_SUBJECTS) {
-    for (const c of CURRICULA) {
-      out.push({
-        url: `${base}/learn/${subject}/${c.id}`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.6,
-      });
-    }
+  // /learn/<subject>/<board> — only the curated combos we've written unique content for.
+  // Previous version emitted 1,548 near-duplicate URLs; Google would mark most as
+  // "Crawled — currently not indexed". The trimmed list reflects only combos with
+  // hand-written, board-specific content in apps/web/src/content/learnPages.ts.
+  for (const combo of LEARN_COMBOS) {
+    out.push({
+      url: `${base}/learn/${combo.subject}/${combo.board}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    });
   }
 
-  // Blog articles (60+)
+  // Blog articles
   for (const p of POSTS) {
     out.push({
       url: `${base}/blog/${p.slug}`,

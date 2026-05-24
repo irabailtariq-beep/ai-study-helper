@@ -90,7 +90,17 @@
       "Bash(curl -sI https://helpinstudy.com/past-papers)",
       "Bash(curl -sI https://helpinstudy.com/)",
       "Bash(curl -sI https://helpinstudy.com/explain)",
-      "Bash(curl -sI https://helpinstudy.com/quiz)"
+      "Bash(curl -sI https://helpinstudy.com/quiz)",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://helpinstudy.com&strategy=mobile&category=seo&category=performance&category=accessibility&category=best-practices\")",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://helpinstudy.com&strategy=mobile\")",
+      "Bash(curl -s https://helpinstudy.com/)",
+      "Bash(curl -sI http://helpinstudy.com/)",
+      "Bash(curl -sI https://www.helpinstudy.com/)",
+      "Bash(curl -s https://helpinstudy.com/blog/2026-board-exam-survival-kit)",
+      "Bash(curl -s https://helpinstudy.com/learn/math/pk-federal)",
+      "Bash(curl -s https://helpinstudy.com/help-in-study/math)",
+      "Bash(curl -s https://helpinstudy.com/sitemap.xml)",
+      "Bash(awk -F/ '{print $4}')"
     ]
   }
 }
