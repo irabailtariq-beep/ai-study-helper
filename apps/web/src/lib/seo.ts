@@ -100,3 +100,26 @@ export function courseJsonLd(args: { name: string; description: string; provider
     provider: { "@type": "Organization", name: args.provider ?? SITE.name },
   };
 }
+
+/**
+ * BreadcrumbList JSON-LD — gives Google the breadcrumb path so it can render
+ * breadcrumb rich snippets in search results instead of the bare URL.
+ * Pass an array of { name, path } in left-to-right order (excluding the home item;
+ * we add it automatically).
+ */
+export function breadcrumbJsonLd(crumbs: { name: string; path: string }[]) {
+  const items = [
+    { name: "Home", path: "/" },
+    ...crumbs,
+  ];
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: `${SITE.url}${c.path}`,
+    })),
+  };
+}

@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CURRICULA, COUNTRIES } from "@ash/core";
-import { SITE, courseJsonLd } from "@/lib/seo";
+import { SITE, courseJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { findLearnCombo, LEARN_COMBOS } from "@/content/learnPages";
 
 const SUBJECT_LABELS: Record<string, string> = {
@@ -64,6 +64,15 @@ export default async function LearnPage({ params }: Props) {
             name: `${cur.name} ${subj} — Help in Study`,
             description: combo.intro,
           })),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd([
+            { name: subj, path: `/help-in-study/${subject}` },
+            { name: cur.name, path: `/learn/${subject}/${board}` },
+          ])),
         }}
       />
 

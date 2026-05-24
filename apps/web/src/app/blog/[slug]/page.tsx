@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { findPost, POSTS } from "@/content/posts";
-import { SITE, articleJsonLd } from "@/lib/seo";
+import { SITE, articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -43,6 +43,10 @@ export default async function BlogPost({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({
         title: p.title, description: p.description, slug: p.slug, published: p.publishedAt, updated: p.updatedAt,
       })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([
+        { name: "Blog", path: "/blog" },
+        { name: p.title, path: `/blog/${p.slug}` },
+      ])) }} />
 
       <Link href="/blog" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All posts</Link>
 

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SITE } from "@/lib/seo";
+import { SITE, breadcrumbJsonLd } from "@/lib/seo";
 import { HELP_IN_STUDY_PAGES, HELP_IN_STUDY_MAP } from "@/content/helpInStudyPages";
 
 type Props = { params: Promise<{ subject: string }> };
@@ -38,6 +38,15 @@ export default async function SubjectPage({ params }: Props) {
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd([
+            { name: s.label, path: `/help-in-study/${subject}` },
+          ])),
+        }}
+      />
+
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
 
       <header className="mt-4 mb-8">
