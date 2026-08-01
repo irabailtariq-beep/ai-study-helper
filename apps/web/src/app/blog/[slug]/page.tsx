@@ -43,6 +43,9 @@ export default async function BlogPost({ params }: Props) {
   }
 
   const html = renderMarkdown(p.body);
+  const related = POSTS
+    .filter((q) => q.slug !== p.slug && q.tags.some((t) => p.tags.includes(t)))
+    .slice(0, 3);
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
@@ -66,6 +69,21 @@ export default async function BlogPost({ params }: Props) {
         </header>
 
         <div className="prose-content" dangerouslySetInnerHTML={{ __html: html }} />
+
+        {related.length > 0 && (
+          <nav className="mt-10" aria-label="Related guides">
+            <h2 className="text-lg font-bold mb-3">Related guides</h2>
+            <ul className="space-y-2">
+              {related.map((q) => (
+                <li key={q.slug}>
+                  <Link href={`/blog/${q.slug}`} className="underline" style={{ color: "var(--ash-primary)" }}>
+                    {q.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         <footer className="mt-10 glass-panel rounded-ash p-5 text-center">
           <p className="font-semibold mb-2">Try the free AI tutor</p>

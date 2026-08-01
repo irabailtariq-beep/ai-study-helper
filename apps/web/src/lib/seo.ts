@@ -85,7 +85,7 @@ export function articleJsonLd(args: { title: string; description: string; slug: 
     image: args.image ?? `${SITE.url}/icons/icon-512.png`,
     datePublished: args.published,
     dateModified: args.updated ?? args.published,
-    author: { "@type": "Organization", name: SITE.name },
+    author: { "@type": "Person", name: "Rabail", url: `${SITE.url}/about`, description: "Student and founder of Help in Study" },
     publisher: { "@type": "Organization", name: SITE.name, logo: { "@type": "ImageObject", url: `${SITE.url}${SITE.logo}` } },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.url}/blog/${args.slug}` },
   };

@@ -46,16 +46,21 @@ export default function AboutPage() {
 
         <h2 className="text-2xl font-bold mt-8">Who's behind Help in Study</h2>
         <p className="text-base leading-relaxed">
-          Hi — I'm <b>Rabail</b>. I'm a student, and I built Help in Study for other students. I spent years
-          struggling through math and science the hard way — re-reading textbooks that didn't make sense, with no
-          tutor I could afford. What finally worked was getting things explained in plain language, in my own exam's
-          style. So I built the study help I wish I'd had, and made it free for everyone.
+          Hi — I'm <b>Rabail</b>, and I'm a student myself (working through IGCSE and A-Levels). History is my
+          favourite subject and English is my strongest — but I know exactly how it feels to be stuck in a topic
+          with no tutor you can afford and no time to spare. What finally worked for me was getting things explained
+          in plain language, in my own exam's style. So I built the study help I wish I'd had — for students who are
+          struggling and just need a real hand, not a lecture.
         </p>
         <p className="text-base leading-relaxed">
           One thing matters to me a lot: I didn't build this so you could copy answers and switch your brain off.
           I built it so you'd <b>actually get it</b>. Every tool shows you the method, the working, and the <i>why</i> —
           so you do the real work, understand it properly, and walk into the exam able to do it on your own.
           Learning it beats cheating it, every single time.
+        </p>
+        <p className="text-base leading-relaxed">
+          And it's <b>genuinely free</b> — no "free" that asks for your card three screens in. Plenty of study
+          sites say free and quietly aren't. Help in Study actually is, and it stays that way.
         </p>
         <p className="text-base leading-relaxed">
           Everything here is written and checked by a real person — me — not spun up and left to rot. If something's
