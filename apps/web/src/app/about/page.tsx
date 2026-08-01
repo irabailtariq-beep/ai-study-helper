@@ -52,6 +52,12 @@ export default function AboutPage() {
           style. So I built the study help I wish I'd had, and made it free for everyone.
         </p>
         <p className="text-base leading-relaxed">
+          One thing matters to me a lot: I didn't build this so you could copy answers and switch your brain off.
+          I built it so you'd <b>actually get it</b>. Every tool shows you the method, the working, and the <i>why</i> —
+          so you do the real work, understand it properly, and walk into the exam able to do it on your own.
+          Learning it beats cheating it, every single time.
+        </p>
+        <p className="text-base leading-relaxed">
           Everything here is written and checked by a real person — me — not spun up and left to rot. If something's
           wrong or could be clearer, <Link href="/contact" className="underline" style={{ color: "var(--ash-primary)" }}>tell me</Link>; I read every message.
         </p>
