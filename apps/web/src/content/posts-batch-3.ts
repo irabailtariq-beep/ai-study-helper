@@ -1055,4 +1055,93 @@ The students who get 5s are not smarter. They are more precise with language. Th
 `,
   },
 
+  {
+    slug: "gcse-evaluate-questions",
+    title: "How to Answer 'Evaluate' Questions in GCSE (Where the Marks Actually Hide)",
+    description: "Evaluate questions carry the most marks in GCSE — and are where most students lose them. Here's the exact structure examiners want (PEEL + judgement), with a worked example.",
+    publishedAt: "2026-08-02", readTime: "8 min",
+    tags: ["GCSE", "evaluate questions", "exam technique", "AQA", "GCSE revision"],
+    body: `
+If you've ever written a full page for a GCSE "evaluate" question and still walked away with 5 out of 12, you're not alone — I did exactly that in Year 10. The annoying part is that it's almost never because you didn't *know* enough. It's because "evaluate" is a specific kind of question with a specific kind of answer, and most of us are never actually taught its shape. We just write everything we know and hope.
+
+This is the guide I wish someone had handed me: what "evaluate" really asks for, where the marks are hiding, and a structure you can reuse in every subject that uses these questions — Business, Geography, History, PE, Religious Studies, Economics.
+
+## What "evaluate" actually means
+
+Every GCSE answer is controlled by its **command word** — the verb that tells you what kind of thinking to show. "Describe" wants facts. "Explain" wants reasons. But **"evaluate" wants a judgement** — you weigh things up and come down on a side, backed by evidence.
+
+That word *judgement* is the whole game. An "evaluate" question is not "tell me everything about X." It is "here are two or more options, factors or views — decide which matters more, and prove why."
+
+If your answer has no clear judgement, you have capped yourself at roughly half marks before the examiner has even finished reading. That is the single most common reason strong students lose marks here.
+
+## Why these questions are worth caring about
+
+On most GCSE papers — AQA, Edexcel and OCR all do this — the "evaluate" questions are the **big ones: 8, 9 or 12 marks**, and they use a **levels-based mark scheme**. That matters, because levels marking does not add up a point per fact. The examiner reads your whole answer, decides which *level* it belongs in based on the quality of your reasoning and judgement, then picks a mark inside that level.
+
+So two students can write the same facts and land in completely different levels — one because they evaluated throughout, one because they only listed. A big chunk of the marks on the whole paper live in these few questions. Fix the technique once and it pays off across every subject.
+
+## The structure examiners actually want: PEEL + J
+
+The reliable shape for an evaluate answer is **PEEL, plus a real judgement**:
+
+- **P — Point.** State one factor or argument clearly.
+- **E — Evidence.** Back it with a specific fact, figure, case study or source detail. "Specific" is doing the heavy lifting — a named example beats a vague sentence every time.
+- **E — Explain.** Say *why* that evidence supports the point. This is the reasoning chain, not one sentence.
+- **L — Link.** Connect it straight back to the question.
+- **J — Judgement.** Here is where the marks hide: say how *important* this point is, in context, compared with the other side.
+
+Then do a second PEEL for the other side, and finish with a short conclusion that genuinely decides: "The most important factor is X, because..."
+
+## The bit almost everyone skips: judgement *in context*
+
+Examiner reports say the same thing every single year — the top marks go to a judgement made **in context**, not a generic one.
+
+- Generic (stuck mid-level): "In conclusion, both factors are important."
+- In context (top level): "For a small business with limited cash, keeping costs down matters more than expanding quickly — because running out of cash kills the business before growth can ever help."
+
+The second one is tied to the specific situation in the question (a small business, limited cash) and gives a *reason* for the ranking. You are not just weighing — you are weighing *for this case*. That is the sentence that lifts you into the top level.
+
+## Timing: don't over-write
+
+More words does not mean more marks on levels-based questions — over-writing just burns time you need elsewhere. A rough guide:
+
+- **9-mark evaluate:** one strong, fully-explained point per side plus a clear judgement — around 10 to 12 minutes, not 25.
+- **12-mark evaluate:** two developed points per side and a decisive conclusion.
+
+For a 9-marker, examiners would far rather see one reason explained brilliantly and judged in context than four reasons listed and left hanging. Depth beats breadth.
+
+## A worked mini-example (Business, 9 marks)
+
+*Question: "Evaluate whether a new coffee shop should spend its limited budget on advertising rather than on better ingredients."*
+
+Here is a top-level answer, with the technique labelled:
+
+Advertising could bring in new customers who do not yet know the shop exists — vital for a brand-new business with no reputation **(point + link)**. A local social-media campaign, for instance, is cheap and reaches the exact streets the shop serves **(evidence and explain)**. However, for a coffee shop, repeat custom depends on the product itself: if the coffee is only average, advertising just brings people in once **(the other side)**. **On balance, for a brand-new shop with a limited budget, I would spend on ingredients first — word-of-mouth from a genuinely good product is free advertising that lasts, whereas paid ads stop working the moment the money runs out (judgement, in context).**
+
+That is the whole answer in four sentences, and it sits near the top of the level — because it weighs both sides and decides for this specific case.
+
+## Mistakes that quietly cost marks
+
+- **No judgement at all.** Writing a brilliant "explain" answer to an "evaluate" question. Caps you mid-level.
+- **Judgement bolted on at the end.** A one-sided answer, then "in conclusion, X is better." You need to weigh as you go.
+- **Vague evidence.** "Lots of people think..." earns nothing. Name it, number it, cite it.
+- **Fence-sitting.** "Both are important" with no decision. Evaluate means *decide*.
+- **Ignoring the context.** Answering in general when the question handed you a specific business, place or period. The context is exactly where the top marks are.
+
+## How to actually get good at this
+
+Reading about technique is one thing — the marks come from *doing it and being told precisely where you dropped a level*. That is the part a textbook cannot do for you.
+
+- Write a real evaluate answer, then paste it into [Mark my answer](/grade). It marks it the way your board's examiner would and tells you *which* part cost you the level — usually the missing or generic judgement. That feedback loop is the fastest fix I know.
+- Get the underlying content solid first with [Explain anything](/explain), so your "evidence" is actually accurate.
+- Then drill it under time pressure with a [Mock exam](/mock-exam), until PEEL and judgement become automatic.
+
+Do five evaluate questions this way and mark them honestly, and you will feel the switch flip — you stop writing everything you know, and start writing the handful of sentences that actually score.
+
+For how this fits into a sane revision plan, see the [GCSE revision guide](/blog/gcse-revision-guide).
+
+**The one thing to remember:** "evaluate" means weigh both sides, then *decide — in context — and say why*. That decision sentence is where the marks hide. Go and take them.
+`,
+  },
+
 ];
