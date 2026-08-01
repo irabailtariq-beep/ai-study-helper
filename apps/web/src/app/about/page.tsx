@@ -44,27 +44,24 @@ export default function AboutPage() {
           <li><b>Privacy-first for kids.</b> Privacy-friendly, anonymized analytics only — no ad trackers, and we never sell student data. One-click data export and delete.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-8">Who's behind Help in Study</h2>
+        <h2 className="text-2xl font-bold mt-8">Who writes Help in Study</h2>
         <p className="text-base leading-relaxed">
-          Hi — I'm <b>Rabail</b>, and I'm a student myself (working through IGCSE and A-Levels). History is my
-          favourite subject and English is my strongest — but I know exactly how it feels to be stuck in a topic
-          with no tutor you can afford and no time to spare. What finally worked for me was getting things explained
-          in plain language, in my own exam's style. So I built the study help I wish I'd had — for students who are
-          struggling and just need a real hand, not a lecture.
+          Hi — I'm <b>Rabail</b>, the founder of Help in Study, and I write and check every study guide on it
+          myself. I'm a current student, working through my own IGCSE and A-Level exams — so this comes from
+          someone actually sitting these papers, not a faceless content team. English is my strongest subject,
+          history is my favourite, and I focus on plain-English explanations and exam technique for students
+          across CBSE, GCSE, AP, Cambridge and WAEC.
         </p>
         <p className="text-base leading-relaxed">
-          One thing matters to me a lot: I didn't build this so you could copy answers and switch your brain off.
-          I built it so you'd <b>actually get it</b>. Every tool shows you the method, the working, and the <i>why</i> —
-          so you do the real work, understand it properly, and walk into the exam able to do it on your own.
-          Learning it beats cheating it, every single time.
+          I built this for the students I recognised in myself: the ones who are struggling, can't afford a tutor,
+          and don't have hours to spare — but still want to <b>actually understand</b> their work, not copy it.
+          Every tool shows the method and the working, so you learn it instead of cheating it. Learning it beats
+          cheating it, every single time.
         </p>
         <p className="text-base leading-relaxed">
-          And it's <b>genuinely free</b> — no "free" that asks for your card three screens in. Plenty of study
-          sites say free and quietly aren't. Help in Study actually is, and it stays that way.
-        </p>
-        <p className="text-base leading-relaxed">
-          Everything here is written and checked by a real person — me — not spun up and left to rot. If something's
-          wrong or could be clearer, <Link href="/contact" className="underline" style={{ color: "var(--ash-primary)" }}>tell me</Link>; I read every message.
+          And it's <b>genuinely free</b> — no "free" that quietly asks for your card three screens in, unlike a lot
+          of study sites. Everything here is written and checked by a real person — me — not spun up and left to rot.
+          Spot something wrong or unclear? <Link href="/contact" className="underline" style={{ color: "var(--ash-primary)" }}>Tell me</Link> — I read every message.
         </p>
 
         <h2 className="text-2xl font-bold mt-8">What we use under the hood</h2>
