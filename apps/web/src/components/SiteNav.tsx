@@ -50,6 +50,9 @@ export function SiteNav() {
               {l.label}
             </Link>
           ))}
+          <Link href="/signin" className="hover:text-[color:var(--ash-primary)] font-medium">
+            Log in
+          </Link>
           {profile ? (
             <Link
               href="/settings"

@@ -36,29 +36,15 @@ export default function SignInPage() {
     else setStatus("sent");
   }
 
-  async function withGoogle() {
-    const sb = supabaseBrowser();
-    if (!sb) return;
-    await sb.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/api/auth/callback?next=/` },
-    });
-  }
-
   return (
     <main className="min-h-screen p-6 max-w-md mx-auto">
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Sign in</h1>
 
       <div className="glass-panel p-6 rounded-ash space-y-4">
-        <button
-          onClick={withGoogle}
-          className="w-full px-4 py-3 rounded-ash border font-medium"
-        >
-          Continue with Google
-        </button>
-
-        <div className="text-center text-xs" style={{ color: "var(--ash-muted)" }}>or</div>
+        <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+          Enter your email and we'll send you a one-tap sign-in link — no password needed.
+        </p>
 
         <input
           value={email}
