@@ -83,7 +83,7 @@ export default function ExplainPage() {
                 onClick={() => setAnswerLength("short")}
                 className="flex-1 py-2 text-sm font-semibold"
                 style={{
-                  background: answerLength === "short" ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+                  background: answerLength === "short" ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
                   color: answerLength === "short" ? "white" : "var(--ash-text)",
                 }}
               >
@@ -94,7 +94,7 @@ export default function ExplainPage() {
                 onClick={() => setAnswerLength("long")}
                 className="flex-1 py-2 text-sm font-semibold"
                 style={{
-                  background: answerLength === "long" ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+                  background: answerLength === "long" ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
                   color: answerLength === "long" ? "white" : "var(--ash-text)",
                 }}
               >
@@ -169,7 +169,7 @@ export default function ExplainPage() {
           disabled={loading || (!text && !file)}
           onClick={submit}
           className="px-6 py-3 rounded-ash text-white font-semibold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}
         >
           {loading ? "Thinking…" : "Explain it"}
         </button>

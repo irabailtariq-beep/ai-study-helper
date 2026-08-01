@@ -57,7 +57,7 @@ Only on right-angled triangles. For non-right triangles, use the **sine rule** o
 - Sine rule: a / sin A = b / sin B = c / sin C
 - Cosine rule: c² = a² + b² - 2ab cos C
 
-You'll use these in IGCSE Year 11, A Level, IB, AP, and any first-year engineering course.
+You'll use these in IGCSE Year 11, A Level, AP, and any first-year engineering course.
 
 [Try a worked example →](/math-solver)
 `,
@@ -348,7 +348,7 @@ Use the AC method: multiply 2 × 3 = 6. Find two numbers that multiply to 6 and 
 a³ + b³ = (a + b)(a² - ab + b²)
 a³ - b³ = (a - b)(a² + ab + b²)
 
-Less common, but appears in A Level and IB.
+Less common, but appears in A Level and AP.
 
 ## When factoring fails
 
@@ -503,7 +503,7 @@ A⁻¹ = (1 / det(A)) × [[d, -b], [-c, a]]
 ## Where you'll meet matrices
 
 - A Level Further Maths
-- IB Math AA HL
+- CBSE Class 12 Maths
 - AP Calculus BC (rare)
 - First-year university CS, engineering, economics
 

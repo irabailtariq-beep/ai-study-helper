@@ -49,7 +49,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Board-aware terminology",
-        body: "If you've set your board to FBISE Federal, CBSE, IGCSE, A Level, AP, or IB during onboarding, the AI uses the terminology and notation that board uses. CBSE writes (a, b) for ordered pairs; FBISE writes {a, b} for sets. Cambridge writes f⁻¹(x) for inverse functions; AQA writes f⁻¹(x) too but the question phrasing differs. Small things — but they're the things you get marked on."
+        body: "If you've set your board to CBSE, IGCSE, A Level, AP, or GCSE during onboarding, the AI uses the terminology and notation that board uses. CBSE is strict about (a, b) for ordered pairs versus {a, b} for sets; Cambridge writes f⁻¹(x) for inverse functions, and AQA writes it the same way but phrases the question differently. Small things — but they're the things you get marked on."
       },
     ],
     whyHard: "Math compounds. If you don't fully get fractions in Year 6, algebra in Year 9 hurts, and calculus in Year 12 feels impossible. The right move when stuck isn't 'try harder' — it's 'go back two steps and rebuild'. Our AI is built to do exactly that without making you feel bad about needing it.",
@@ -135,7 +135,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Series and convergence (BC / A2 / HL)",
-        body: "For Calc BC, A2 Pure, or IB HL: the series tests (ratio, root, integral, comparison, alternating) are infamous for tripping up students. We can walk through which test to apply and why — and the algorithmic checklist that prevents you from picking the wrong one."
+        body: "For AP Calculus BC or A2 Pure Maths: the series tests (ratio, root, integral, comparison, alternating) are infamous for tripping up students. We can walk through which test to apply and why — and the algorithmic checklist that prevents you from picking the wrong one."
       },
     ],
     whyHard: "Calculus stacks abstraction on abstraction. Limits feel philosophical until you've done 50 of them. Derivatives are mechanical once the rules click. Integration requires creativity. Most students hit different walls at different stages — and that's normal.",
@@ -168,7 +168,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
         body: "If you can't draw it, you can't solve it. We teach students to draw every force (gravity, normal, applied, friction, tension), label its direction with an arrow, and resolve along/perpendicular before writing any equation. This alone moves most students up a grade boundary."
       },
       {
-        heading: "Eight problem archetypes for JEE/AP/A-level",
+        heading: "Eight problem archetypes for AP & A-level",
         body: "There are essentially eight physics problem types you'll see: kinematics word problem, incline + pulley, energy conservation, momentum collision, circular motion + gravitation, SHM, EM induction, photoelectric/modern. Each has a standard solution shape. Master one per week and you're 80% there."
       },
       {
@@ -177,14 +177,14 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Lab and practical questions",
-        body: "If you're on IGCSE, A Level, IB, or AP, expect a practical-style question every paper. Required-practical methods need to be memorised verbatim (especially for AQA GCSE Science). The AI can drill you on each one and quiz you on the variables involved."
+        body: "If you're on IGCSE, A Level, or AP, expect a practical-style question every paper. Required-practical methods need to be memorised verbatim (especially for AQA GCSE Science). The AI can drill you on each one and quiz you on the variables involved."
       },
     ],
     whyHard: "Physics combines math, physical intuition, and unit discipline. Weakness in any of the three blocks progress. Most students who struggle have the intuition but lack the algebraic fluency to manipulate equations under timed conditions.",
     howWeHelp: [
       "Step-by-step problem solving with FBD drawing",
       "Identify which equation to use (and why)",
-      "Practice quiz generation per topic, JEE/AP-style",
+      "Practice quiz generation per topic, AP & A-level style",
       "Required-practical method drilling for IGCSE/A-Level",
       "Visualise waves, fields, projectiles via graph plotter",
       "Unit-conversion explanations"
@@ -261,7 +261,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Ecology and case studies",
-        body: "If you're on IGCSE / GCSE / A Level / IB Biology, ecology is where case studies live. Memorise 2-3 named case studies (predator-prey relationship, deforestation impact, invasive species) — you'll re-use them across many exam questions."
+        body: "If you're on IGCSE / GCSE / A Level Biology, ecology is where case studies live. Memorise 2-3 named case studies (predator-prey relationship, deforestation impact, invasive species) — you'll re-use them across many exam questions."
       },
     ],
     whyHard: "Biology feels like memorisation, but it's actually layered understanding plus precise phrasing. Most students underestimate the volume of content (NCERT alone is 60+ chapters) and overestimate how well they know it.",
@@ -269,13 +269,13 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       "Diagram-by-diagram practice with labels",
       "Mark-scheme phrasing for every topic",
       "Punnett square + Hardy-Weinberg solvers",
-      "Topic-tagged practice quizzes for NEET / A-Level / IB",
+      "Topic-tagged practice quizzes for GCSE / A-Level",
       "Spaced repetition flashcards for terminology",
       "Concept maps tying systems together"
     ],
     ctaLinks: [
       { label: "Flashcards", href: "/flashcards", why: "SM-2 spaced repetition for terms" },
-      { label: "Quiz generator", href: "/quiz", why: "NEET/A-Level style MCQs" },
+      { label: "Quiz generator", href: "/quiz", why: "GCSE & A-Level style MCQs" },
       { label: "Concept map", href: "/concept-map", why: "How systems interconnect" },
     ],
   },
@@ -291,7 +291,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     sections: [
       {
         heading: "Sources: OPVL framework",
-        body: "Every IB / A-Level / GCSE source question rewards the same framework: Origin (who wrote it, when, where?), Purpose (why was it written?), Value (what does it tell us?), Limitations (what does it leave out, or distort?). Memorise the framework and apply it mechanically. Most students just summarise the source — that earns nothing."
+        body: "Every GCSE / A-Level source question rewards the same framework: Origin (who wrote it, when, where?), Purpose (why was it written?), Value (what does it tell us?), Limitations (what does it leave out, or distort?). Memorise the framework and apply it mechanically. Most students just summarise the source — that earns nothing."
       },
       {
         heading: "The 'how far do you agree' essay",
@@ -341,7 +341,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Statistical and data-handling skills",
-        body: "GCSE / A Level / IB Geography exams include statistical questions (Spearman's rank, chi-squared, simple correlation). These give predictable marks if you've drilled them. Most students leave them blank because they panic at math — but the calculations are basic algebra."
+        body: "GCSE / A Level Geography exams include statistical questions (Spearman's rank, chi-squared, simple correlation). These give predictable marks if you've drilled them. Most students leave them blank because they panic at math — but the calculations are basic algebra."
       },
       {
         heading: "Linking physical + human geography",
@@ -421,7 +421,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Pseudocode vs real code",
-        body: "GCSE / A Level / IB Computer Science exams ask for pseudocode (not actual Python or Java). Each board has slightly different pseudocode conventions — AQA's is different from OCR's is different from IB's. We use the right one based on your board."
+        body: "GCSE / A Level Computer Science exams ask for pseudocode (not actual Python or Java). Each board has slightly different pseudocode conventions — AQA's is different from OCR's. We use the right one based on your board."
       },
       {
         heading: "Recursion is uncomfortable; here's the fix",
@@ -471,7 +471,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       },
       {
         heading: "Partnership accounts (Pakistani/Indian boards)",
-        body: "Admission, retirement, and dissolution of a partner each have specific treatments for goodwill, revaluation reserve, and capital adjustment. CBSE Class 12 and FBISE ICom Part 2 both lean heavily on these. Pattern-match relentlessly."
+        body: "Admission, retirement, and dissolution of a partner each have specific treatments for goodwill, revaluation reserve, and capital adjustment. CBSE Class 12 Accountancy leans heavily on these. Pattern-match relentlessly."
       },
     ],
     whyHard: "Accounting feels like math but it's really a notation system. The arithmetic is easy; the discipline of consistently applying debits and credits is hard. Most students who struggle have either not memorised the basic rules or rush the bookkeeping.",

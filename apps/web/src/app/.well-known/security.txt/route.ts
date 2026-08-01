@@ -7,11 +7,11 @@ export const dynamic = "force-static";
 export function GET() {
   const expires = new Date();
   expires.setFullYear(expires.getFullYear() + 1);
-  const body = `Contact: mailto:security@ai-study-helper.app
+  const body = `Contact: mailto:security@helpinstudy.com
 Expires: ${expires.toISOString()}
 Preferred-Languages: en
-Canonical: https://ai-study-helper-khaki.vercel.app/.well-known/security.txt
-Policy: https://ai-study-helper-khaki.vercel.app/privacy
+Canonical: https://helpinstudy.com/.well-known/security.txt
+Policy: https://helpinstudy.com/privacy
 `;
   return new Response(body, {
     headers: { "content-type": "text/plain; charset=utf-8" },

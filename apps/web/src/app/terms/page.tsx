@@ -22,7 +22,7 @@ export default function TermsPage() {
         <p>We may update these terms. Continued use of the service means you accept the updated terms.</p>
 
         <h2 className="text-xl font-semibold">Contact</h2>
-        <p>Questions? <a href="mailto:support@ai-study-helper.app" className="underline">support@ai-study-helper.app</a></p>
+        <p>Questions? <a href="mailto:support@helpinstudy.com" className="underline">support@helpinstudy.com</a></p>
       </section>
     </main>
   );

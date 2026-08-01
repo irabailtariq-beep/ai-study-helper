@@ -10,6 +10,7 @@ import {
   systemPromptTopicPaper,
   systemPromptDiagnostic,
   systemPromptGrade,
+  systemPromptGrammar,
   systemPromptConceptMap,
   systemPromptParentRecap,
   DISCLAIMER,
@@ -24,6 +25,7 @@ import {
   type Syllabus,
   type StudyPlan,
   type GradeResult,
+  type GrammarResult,
   type ConceptMap,
   systemPromptMathSolver,
   systemPromptFormulaSheet,
@@ -79,31 +81,9 @@ export async function explain(req: ExplainRequest): Promise<ExplainResponse> {
     req.toneOverride,
     req.wantDiagrams,
   );
-  const isTextOnly = !req.imageBase64 && !req.pdfBase64;
-
-  // For math / chemistry / physics queries we MUST use Gemini — open-source LLMs
-  // routinely break JSON-string LaTeX backslash escaping (\dfrac, \text, etc.),
-  // which makes formulas render as garbage. Gemini's responseMimeType: application/json
-  // mode handles the escaping reliably.
-  const looksMathy = /(?:formula|equation|\bka\b|\bkb\b|kc|kp|ph|pka|pkb|integ|deriv|differen|trig|sin\(|cos\(|tan\(|log\(|sqrt|\^[0-9]|x\^|y\^|=\s*\d|matrix|vector|theorem|proof|stoichio|mole|molar|reaction|enzyme|cell|atom|electron|wavelength|frequency|velocity|accel|force|momentum|energy|joule|newton|pascal|kelvin|celsius|fahrenheit|gravit|kinetic|potential|circuit|voltage|current|resist|ohm|watt|capacitan)/i.test(req.text || "");
-
-  // Text-only NON-math requests can route to a free open-source LLM (Llama via Groq / OpenRouter).
-  // Vision/PDF and math requests stay on Gemini.
-  if (isTextOnly && !looksMathy && hasFreeTextProvider()) {
-    try {
-      const text = await callText({
-        systemInstruction: system,
-        userText: req.text || "Please explain the concept the student is studying.",
-        temperature: 0.4,
-        responseJson: true,
-      });
-      const parsed = extractJSON<Omit<ExplainResponse, "disclaimer">>(text);
-      return { ...parsed, disclaimer: DISCLAIMER };
-    } catch (e: any) {
-      if (e.message !== "GEMINI_FALLBACK") console.warn("[explain] free provider failed:", e.message);
-    }
-  }
-
+  // All explain calls go through Gemini's JSON mode. The free open-source LLM path
+  // was removed here because it routinely corrupts JSON-string LaTeX backslashes
+  // (\frac -> \f, \times -> \t, \sqrt makes JSON.parse throw), which broke formulas.
   const ai = getClient();
   const resp = await ai.models.generateContent({
     model: MODEL,
@@ -343,15 +323,8 @@ export async function gradeAnswer(opts: {
   const system = systemPromptGrade(opts.profile, { rubric: opts.rubric, marks: opts.marks });
   const payload = `QUESTION:\n${opts.question}\n\nSTUDENT ANSWER:\n${opts.studentAnswer}`;
 
-  if (hasFreeTextProvider()) {
-    try {
-      const text = await callText({ systemInstruction: system, userText: payload, temperature: 0.2, responseJson: true });
-      return extractJSON<GradeResult>(text);
-    } catch (e: any) {
-      if (e.message !== "GEMINI_FALLBACK") console.warn("[grade] free provider failed:", e.message);
-    }
-  }
-
+  // Grade goes through Gemini's JSON mode; the free LLM path was removed because it
+  // corrupts LaTeX backslashes inside JSON (same reason as explain()).
   const ai = getClient();
   const resp = await ai.models.generateContent({
     model: MODEL,
@@ -364,6 +337,18 @@ export async function gradeAnswer(opts: {
     },
   });
   return extractJSON<GradeResult>(resp.text ?? "");
+}
+
+export async function checkGrammar(opts: { profile: UserProfile; text: string }): Promise<GrammarResult> {
+  const system = systemPromptGrammar(opts.profile);
+  // Gemini JSON mode (free path skipped — same JSON-escaping reliability reason as explain/grade).
+  const ai = getClient();
+  const resp = await ai.models.generateContent({
+    model: MODEL,
+    contents: [{ role: "user", parts: [{ text: opts.text }] }],
+    config: { systemInstruction: system, safetySettings: SAFETY, responseMimeType: "application/json", temperature: 0.2 },
+  });
+  return extractJSON<GrammarResult>(resp.text ?? "");
 }
 
 export async function buildConceptMap(opts: {

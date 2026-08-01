@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [{ rel: "mask-icon", url: "/icons/icon.svg", color: "#4F46E5" }],
+    other: [{ rel: "mask-icon", url: "/icons/icon.svg", color: "#0a6357" }],
   },
   other: {
-    "msapplication-TileColor": "#4F46E5",
+    "msapplication-TileColor": "#0a6357",
     "msapplication-config": "/browserconfig.xml",
   },
   openGraph: {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#4F46E5",
+  themeColor: "#0a6357",
   width: "device-width",
   initialScale: 1,
 };

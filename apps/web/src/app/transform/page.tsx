@@ -107,7 +107,7 @@ export default function TransformPage() {
           className="font-extrabold leading-tight tracking-tight mt-2"
           style={{
             fontSize: "clamp(32px, 5vw, 48px)",
-            backgroundImage: "linear-gradient(120deg, #4F46E5 0%, #7c3aed 50%, #06b6d4 100%)",
+            backgroundImage: "linear-gradient(120deg, #0a6357 0%, #0e9f8e 50%, #14b8a6 100%)",
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             color: "transparent",
@@ -133,7 +133,7 @@ export default function TransformPage() {
                 onClick={() => { setInterest(p.id); setCustomInterest(""); }}
                 className="px-3 py-2 rounded-full text-sm transition"
                 style={{
-                  background: active ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.65)",
+                  background: active ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.65)",
                   color: active ? "white" : "var(--ash-text)",
                   border: "1px solid var(--ash-border)",
                 }}
@@ -174,7 +174,7 @@ export default function TransformPage() {
                 onClick={() => setIntensity(v)}
                 className="p-3 rounded-ash text-center text-sm transition"
                 style={{
-                  background: active ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.65)",
+                  background: active ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.65)",
                   color: active ? "white" : "var(--ash-text)",
                   border: "1px solid var(--ash-border)",
                 }}
@@ -219,7 +219,7 @@ export default function TransformPage() {
           disabled={loading || (!text && !file)}
           onClick={submit}
           className="w-full sm:w-auto px-7 py-3 rounded-ash text-white font-semibold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}
         >
           {loading ? "Transforming…" : `Explain it through ${finalInterest.toLowerCase()}`}
         </button>

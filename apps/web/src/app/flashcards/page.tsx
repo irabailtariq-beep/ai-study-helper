@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useProfile } from "@/lib/profileStore";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import { sm2 } from "@/lib/sm2";
+import { InlineRich } from "@/components/RichOutput";
 
 type Card = {
   id: string;
@@ -153,7 +154,7 @@ export default function FlashcardsPage() {
             <p className="text-xs mb-2" style={{ color: "var(--ash-muted)" }}>
               {flipped ? "Answer" : "Question"} · tap to flip
             </p>
-            <p className="text-xl">{flipped ? current.back : current.front}</p>
+            <p className="text-xl"><InlineRich>{flipped ? current.back : current.front}</InlineRich></p>
           </div>
         </section>
       ) : (
@@ -209,7 +210,7 @@ export default function FlashcardsPage() {
         </div>
         <button onClick={generate} disabled={busy}
           className="mt-4 px-6 py-3 rounded-full text-white font-semibold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           {busy ? "Generating…" : `Generate ${count} cards`}
         </button>
       </section>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useProfile } from "@/lib/profileStore";
 import type { Quiz, QuizItem } from "@ash/core";
+import { InlineRich } from "@/components/RichOutput";
 
 export default function MockExamPage() {
   const profile = useProfile((s) => s.profile);
@@ -88,7 +89,7 @@ export default function MockExamPage() {
           </div>
           <button disabled={busy} onClick={start}
             className="px-6 py-3 rounded-full text-white font-semibold disabled:opacity-40"
-            style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+            style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
             {busy ? "Generating exam…" : "Start exam"}
           </button>
           {err && <p className="text-red-600 text-sm">{err}</p>}
@@ -104,7 +105,7 @@ export default function MockExamPage() {
           <section className="glass-panel p-5 rounded-2xl space-y-5">
             {quiz.items.map((item, i) => <QuizQ key={i} item={item} index={i} answers={answers} setAnswers={setAnswers} />)}
             <button onClick={() => setSubmitted(true)} className="px-6 py-3 rounded-full text-white font-semibold"
-              style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+              style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
               Submit exam
             </button>
           </section>
@@ -127,12 +128,12 @@ function QuizQ({ item, index, answers, setAnswers }: any) {
   const set = (v: any) => setAnswers((a: any) => ({ ...a, [index]: v }));
   return (
     <div className="border-t pt-4" style={{ borderColor: "var(--ash-border)" }}>
-      <div className="font-medium mb-2">{index + 1}. {item.q}</div>
+      <div className="font-medium mb-2">{index + 1}. <InlineRich>{item.q}</InlineRich></div>
       {item.type === "mcq" && item.options.map((opt: string, j: number) => (
         <label key={j} className="block p-2 rounded border cursor-pointer mb-1"
           style={{ borderColor: answers[index] === j ? "var(--ash-primary)" : "#e5e7eb" }}>
           <input type="radio" name={`q${index}`} checked={answers[index] === j} onChange={() => set(j)} className="mr-2" />
-          {opt}
+          <InlineRich>{opt}</InlineRich>
         </label>
       ))}
       {item.type === "tf" && [true, false].map((v) => (
@@ -169,13 +170,13 @@ function ReviewQ({ item, answers, index }: any) {
   return (
     <details className="border-t pt-3 mt-3" style={{ borderColor: "var(--ash-border)" }}>
       <summary className="cursor-pointer">
-        <span style={{ color: ok ? "#16a34a" : "#dc2626" }}>{ok ? "✓" : "✗"}</span> {index + 1}. {item.q}
+        <span style={{ color: ok ? "#16a34a" : "#dc2626" }}>{ok ? "✓" : "✗"}</span> {index + 1}. <InlineRich>{item.q}</InlineRich>
       </summary>
       <div className="mt-2 text-sm space-y-1">
-        <div>Your answer: <b>{mine}</b></div>
-        <div>Correct: <b>{correct}</b></div>
-        {item.why && <div style={{ color: "var(--ash-muted)" }}>{item.why}</div>}
-        {item.rubric && <div style={{ color: "var(--ash-muted)" }}>Rubric: {item.rubric}</div>}
+        <div>Your answer: <b><InlineRich>{mine}</InlineRich></b></div>
+        <div>Correct: <b><InlineRich>{correct}</InlineRich></b></div>
+        {item.why && <div style={{ color: "var(--ash-muted)" }}><InlineRich>{item.why}</InlineRich></div>}
+        {item.rubric && <div style={{ color: "var(--ash-muted)" }}>Rubric: <InlineRich>{item.rubric}</InlineRich></div>}
       </div>
     </details>
   );

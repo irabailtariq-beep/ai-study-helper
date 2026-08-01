@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useProfile } from "@/lib/profileStore";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import { explainWith } from "@/lib/tools/clientHelpers";
+import { RichOutput } from "@/components/RichOutput";
 
 export default function LectureSummaryPage() {
   const profile = useProfile((s) => s.profile);
@@ -37,7 +38,7 @@ export default function LectureSummaryPage() {
       }
       if (!text && !file) throw new Error("Paste a transcript or upload a file.");
       const data = await explainWith(payload);
-      setOut([data.explanation, ...(data.keyPoints?.map(k => `• ${k}`) ?? [])].join("\n\n"));
+      setOut([data.explanation, ...(data.keyPoints?.map(k => `- ${k}`) ?? [])].join("\n\n"));
     } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   }
 
@@ -64,7 +65,7 @@ export default function LectureSummaryPage() {
         </div>
         <button disabled={busy || (!text.trim() && !file)} onClick={run}
           className="px-6 py-3 rounded-full text-white font-semibold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           {busy ? "Summarising…" : "Summarise"}
         </button>
         {err && <p className="text-red-600 text-sm">{err}</p>}
@@ -73,7 +74,7 @@ export default function LectureSummaryPage() {
       {out && (
         <section className="glass-panel p-6 rounded-2xl mt-6">
           <h2 className="font-semibold mb-3">Summary</h2>
-          <p className="whitespace-pre-wrap text-[15px] leading-relaxed">{out}</p>
+          <div className="text-[15px] leading-relaxed"><RichOutput>{out}</RichOutput></div>
         </section>
       )}
     </main>

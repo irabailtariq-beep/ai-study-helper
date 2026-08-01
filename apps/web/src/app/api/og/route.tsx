@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
           display: "flex",
           flexDirection: "column",
           padding: "80px",
-          background: "linear-gradient(135deg, #0b0f19 0%, #1a1530 60%, #0a1a2a 100%)",
+          background: "linear-gradient(135deg, #0b1512 0%, #0a2a24 60%, #0b1a17 100%)",
           color: "white",
           fontFamily: "system-ui, -apple-system, sans-serif",
         }}
@@ -33,7 +33,7 @@ export async function GET(req: NextRequest) {
               width: 72,
               height: 72,
               borderRadius: 18,
-              background: "linear-gradient(135deg, #4F46E5, #7c3aed, #06b6d4)",
+              background: "linear-gradient(135deg, #0a6357, #0e9f8e, #14b8a6)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -56,7 +56,7 @@ export async function GET(req: NextRequest) {
             {/* spine */}
             <div style={{
               position: "absolute", left: 35, top: 30, width: 2, height: 26,
-              background: "rgba(79,70,229,0.6)",
+              background: "rgba(14,159,142,0.6)",
             }}/>
             {/* sparkle big */}
             <div style={{
@@ -79,13 +79,13 @@ export async function GET(req: NextRequest) {
             alignSelf: "flex-start",
             padding: "10px 20px",
             borderRadius: 999,
-            background: "rgba(124,58,237,0.30)",
-            border: "1px solid rgba(167,139,250,0.55)",
+            background: "rgba(14,159,142,0.30)",
+            border: "1px solid rgba(20,184,166,0.55)",
             fontSize: 18,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             fontWeight: 700,
-            color: "#c7d2fe",
+            color: "#a7e8de",
           }}
         >
           {tag}
@@ -131,8 +131,8 @@ export async function GET(req: NextRequest) {
             color: "rgba(255,255,255,0.6)",
           }}
         >
-          <div style={{ display: "flex" }}>Free forever &nbsp;-&nbsp; 80+ curricula &nbsp;-&nbsp; No tracking</div>
-          <div style={{ display: "flex" }}>ai-study-helper</div>
+          <div style={{ display: "flex" }}>Free forever &nbsp;-&nbsp; 5 exam boards &nbsp;-&nbsp; No ads</div>
+          <div style={{ display: "flex" }}>helpinstudy.com</div>
         </div>
       </div>
     ),

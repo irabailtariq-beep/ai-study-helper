@@ -124,6 +124,69 @@ export function profileBlurb(p: UserProfile): string {
 - Personal goal: ${goal}`;
 }
 
+// ─── Board-specific exam technique ─────────────────────────────────────────
+// The biggest lever on answer quality: match how THIS board's examiner marks,
+// not just "a correct answer". Keyed off the student's curriculum id.
+type BoardFamily = "cbse" | "gcse" | "ap" | "cambridge" | "waec" | "other";
+
+function boardFamily(curriculumId: string): BoardFamily {
+  const id = curriculumId ?? "";
+  if (id === "in-cbse") return "cbse";
+  if (id.startsWith("uk-gcse") || id.startsWith("uk-alevel")) return "gcse";
+  if (id === "us-ap" || id === "intl-ap-international") return "ap";
+  if (id.startsWith("intl-cambridge")) return "cambridge";
+  if (id === "ng-waec") return "waec";
+  return "other";
+}
+
+/**
+ * A concise, board-aware "how to earn the marks" guide.
+ * Injected into every answer-shaped prompt so replies read like a strong
+ * exam answer for the student's actual board, not a generic explanation.
+ */
+export function boardStyleGuide(p: UserProfile): string {
+  const common = `Write like the answer THIS student's examiner would give full marks — match the mark scheme, not just "technically correct".`;
+  switch (boardFamily(p.curriculum)) {
+    case "cbse":
+      return `${common}
+CBSE (India) exam style:
+- Respect the command word: "Define/State" → a crisp NCERT-style definition; "Explain/Describe" → the mechanism in clear steps; "Derive" → the full derivation; "Distinguish between" → a two-column comparison.
+- CBSE is point-marked: a 3-mark question wants ~3 distinct scoring points — write them as short numbered points, not one dense paragraph.
+- Use standard NCERT terminology and definitions.
+- For numericals use the "Given → To find → Formula → Solution → Answer (with unit)" layout.
+- Note well-labelled diagrams where they earn marks (Biology, Physics, Chemistry).`;
+    case "gcse":
+      return `${common}
+UK GCSE / A-Level (AQA, Edexcel, OCR) exam style:
+- The command word decides the answer: "State/Give/Name" → one short fact, no explanation; "Describe" → what happens; "Explain" → why/how as a linked cause→effect chain ("… which means … which causes …"); "Compare" → both things in one breath; "Evaluate/Discuss" → both sides then a justified conclusion; "Calculate" → show every step, then the answer with correct unit and sensible significant figures.
+- Answers are point-marked: each distinct linked idea = one mark, so make the marking points obvious.
+- In 6-mark extended answers use linked reasoning, correct technical terms, and quote any data given in the question.`;
+    case "ap":
+      return `${common}
+AP (USA — College Board) exam style:
+- Free-response is rubric-point-based: answer directly and label each part (a), (b), (c). Don't restate the question or add a fluffy intro.
+- Match the task verb: "Identify/State" → name it; "Describe" → a characteristic; "Explain/Justify" → reasoning tied explicitly to a course concept; "Calculate" → show the setup and work with units.
+- Use precise AP course terminology. For essay FRQs (History/English/Bio), lead with a defensible thesis, then evidence + reasoning.`;
+    case "cambridge":
+      return `${common}
+Cambridge IGCSE / O Level / A Level (CIE) exam style:
+- Follow the Cambridge command words exactly: "State" → a fact, no working; "Describe" → what happens/what you observe; "Explain" → reasons or mechanism; "Suggest" → a sensible applied answer; "Show that" → full working leading to the given result; "Calculate" → working + answer to the right significant figures with units; "Evaluate" → weigh both sides then conclude.
+- Mark schemes reward specific key terms — use precise scientific/technical vocabulary, never an everyday paraphrase.
+- Point-marked: keep each scoring point separable.`;
+    case "waec":
+      return `${common}
+WAEC / WASSCE (West Africa) exam style:
+- Theory answers are point-marked: state each point, then explain it in a sentence. Number your points.
+- Be specific and use the correct syllabus terminology.
+- For diagrams (Biology, Geography) describe a large, clearly labelled diagram.
+- Keep answers complete and factual, in the direct WAEC marking-scheme style.`;
+    default:
+      return `${common}
+- Identify the command word (define / describe / explain / compare / evaluate / calculate) and answer in exactly that mode.
+- Assume the question is point-marked: make each scoring idea separable, show full working for calculations, and always give units.`;
+  }
+}
+
 export function systemPromptExplain(
   p: UserProfile,
   interestContext?: string,
@@ -171,6 +234,8 @@ ${toneRule(tone)}
 ${lengthRules}
 ${interestRule}
 
+${boardStyleGuide(p)}
+
 ${MATH_FORMAT_RULES}
 ${wantDiagrams ? `
 DIAGRAM-FIRST MODE — the student asked for a visual answer:
@@ -204,6 +269,17 @@ export function systemPromptQuiz(p: UserProfile, types: string[], count: number)
 Generate exactly ${count} questions covering the supplied material.
 Use these question types, roughly evenly: ${types.join(", ")}.
 
+${boardStyleGuide(p)}
+
+Quality bar:
+- Phrase questions the way THIS board phrases them (command words, mark-style wording).
+- Test real understanding, not trivia. Spread across the material, not all on one line.
+- MCQ distractors must be plausible common mistakes — never obviously wrong or joke options.
+- Every "why" must actually explain why the answer is right (and, for MCQ, why the trap is tempting) in one clear sentence.
+- Math/science: wrap any formula in $...$ so it renders (see rules below).
+
+${MATH_FORMAT_RULES}
+
 Return strict JSON:
 {
   "title": "<short quiz title>",
@@ -233,6 +309,8 @@ ${profileBlurb(p)}
 ${formatRule(format)}
 ${toneRule(tone)}
 Length preference: ${answerLength === "short" ? "SHORT (2-4 sentences, at most one quick example)" : "MEDIUM-LONG (a short paragraph + a few bullets or a worked example)."}
+
+${boardStyleGuide(p)}
 
 ${MATH_FORMAT_RULES}
 ${DIAGRAM_RULES}
@@ -350,6 +428,8 @@ export function systemPromptGrade(p: UserProfile, opts: { rubric?: string; marks
 
 ${profileBlurb(p)}
 
+${boardStyleGuide(p)}
+
 ${MATH_FORMAT_RULES}
 
 You receive: the question, the student's answer, and optional rubric / max marks (${opts.marks ?? "use a sensible max for this question"}).
@@ -364,6 +444,26 @@ Return STRICT JSON:
   "strengths": ["<short markdown bullets, math wrapped in $...$>"],
   "improvements": ["<short markdown bullets>"],
   "markScheme": "<model answer, 4-8 sentences in markdown — math in $$...$$ where needed>"
+}`;
+}
+
+export function systemPromptGrammar(p: UserProfile): string {
+  const { country, curriculum } = profileContext(p);
+  return `You are a supportive writing tutor for a ${country} ${curriculum} (${p.grade}) student. Improve their WRITING without changing their meaning or their voice.
+
+${profileBlurb(p)}
+
+You receive a piece of the student's writing. Do all of this:
+- Fix grammar, spelling and punctuation.
+- Improve clarity and flow where a sentence is clunky, wordy or unclear — but keep the student's own voice and argument.
+- Do NOT rewrite it into something they didn't say, and do NOT add new facts or claims.
+
+Return STRICT JSON (nothing outside the JSON):
+{
+  "correctedText": "<the full corrected text, in markdown, ready to copy>",
+  "issues": [ { "type": "grammar|spelling|punctuation|clarity|style", "original": "<the exact phrase from their text>", "suggestion": "<the fix>", "why": "<one short reason>" } ],
+  "clarityNotes": ["<short bullet suggestions to make the writing stronger>"],
+  "summary": "<2-3 sentence kind, honest overview>"
 }`;
 }
 
@@ -392,6 +492,8 @@ export function systemPromptMathSolver(p: UserProfile): string {
 ${profileBlurb(p)}
 
 ${toneRule(tone)}
+
+${boardStyleGuide(p)}
 
 ${MATH_FORMAT_RULES}
 

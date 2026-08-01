@@ -1,7 +1,8 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { findPost, POSTS } from "@/content/posts";
+import { findPost, POSTS, BLOG_REDIRECTS } from "@/content/posts";
+import { Byline } from "@/components/Byline";
 import { SITE, articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -34,7 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params;
   const p = findPost(slug);
-  if (!p) notFound();
+  if (!p) {
+    // Cut / merged posts 301 to their mapped target; anything else is a real 404.
+    const to = BLOG_REDIRECTS[slug];
+    if (to) permanentRedirect(to);
+    notFound();
+  }
 
   const html = renderMarkdown(p.body);
 
@@ -56,6 +62,7 @@ export default async function BlogPost({ params }: Props) {
           <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
             {new Date(p.publishedAt).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" })} · {p.readTime} · {p.tags.join(" · ")}
           </p>
+          <Byline />
         </header>
 
         <div className="prose-content" dangerouslySetInnerHTML={{ __html: html }} />
@@ -63,7 +70,7 @@ export default async function BlogPost({ params }: Props) {
         <footer className="mt-10 glass-panel rounded-ash p-5 text-center">
           <p className="font-semibold mb-2">Try the free AI tutor</p>
           <Link href="/onboarding" className="inline-block px-5 py-2 rounded-ash text-white font-semibold"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
             Start free
           </Link>
         </footer>

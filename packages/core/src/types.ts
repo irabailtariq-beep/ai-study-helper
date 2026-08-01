@@ -24,6 +24,20 @@ export type ToneStyle = "neutral" | "kid-friendly" | "playful" | "professional" 
 
 export type AnswerLength = "short" | "long";
 
+// Writing coach — grammar & clarity check result.
+export type GrammarIssue = {
+  type: "grammar" | "spelling" | "punctuation" | "clarity" | "style";
+  original: string;
+  suggestion: string;
+  why: string;
+};
+export type GrammarResult = {
+  correctedText: string;
+  issues: GrammarIssue[];
+  clarityNotes: string[];
+  summary: string;
+};
+
 // How aggressively to rewrite the explanation through the student's interest lens.
 // "off"   → ignore interest, plain explanation
 // "light" → use 1-2 examples from the interest, otherwise neutral

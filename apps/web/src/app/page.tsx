@@ -7,70 +7,58 @@ export default function Home() {
 
   return (
     <main>
-      {/* ─────── HERO — simpler, AI-forward, scannable ─────── */}
-      <section className="relative px-6 pt-12 pb-12 sm:pt-20 sm:pb-16 max-w-5xl mx-auto text-center">
-        <div
-          aria-hidden
-          className="absolute inset-0 -z-10 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(60% 50% at 50% 30%, rgba(124,58,237,0.18), transparent 70%), radial-gradient(50% 40% at 70% 60%, rgba(34,211,238,0.14), transparent 70%)",
-          }}
-        />
-
-        {/* Eyebrow with the AI keyword */}
-        <p className="uppercase tracking-widest text-[11px] sm:text-xs font-semibold mb-4"
-           style={{ color: "var(--ash-primary)", letterSpacing: "0.3em" }}>
-          AI study helper · Free · Any subject · Any age
+      {/* ─────── HERO — cream + teal, trust-forward ─────── */}
+      <section className="relative px-6 pt-14 pb-12 sm:pt-20 sm:pb-16 max-w-4xl mx-auto text-center">
+        {/* Eyebrow with the keyword */}
+        <p className="uppercase text-[11px] sm:text-xs font-bold mb-4"
+           style={{ color: "var(--ash-primary)", letterSpacing: "0.26em" }}>
+          Free AI study help · any subject · any grade
         </p>
 
-        {/* Big easy headline */}
+        {/* Headline — ink with a readable deep-teal accent */}
         <h1
-          className="font-extrabold leading-[1.02] tracking-tight"
-          style={{
-            fontSize: "clamp(48px, 9vw, 100px)",
-            backgroundImage: "linear-gradient(120deg, #4F46E5 0%, #7c3aed 45%, #06b6d4 100%)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-            letterSpacing: "-0.02em",
-          }}
+          className="font-extrabold leading-[1.04] tracking-tight mx-auto"
+          style={{ fontSize: "clamp(38px, 7vw, 68px)", letterSpacing: "-0.025em", color: "var(--ash-text)", maxWidth: "16ch" }}
         >
-          Your free AI<br /> study helper
+          Stuck? Get it explained until it <span style={{ color: "var(--ash-primary)" }}>clicks.</span>
         </h1>
 
-        {/* Sub-line states *what it does* in plain words */}
-        <p className="mt-6 text-xl sm:text-2xl font-medium max-w-2xl mx-auto" style={{ color: "var(--ash-text)" }}>
-          Help with math, English, science — any subject, any class.
-        </p>
-        <p className="mt-3 text-base sm:text-lg max-w-xl mx-auto" style={{ color: "var(--ash-muted)" }}>
-          Snap a photo, drop a PDF, or just ask. Our AI explains it in plain words —
-          and rewrites the whole thing through what you love (cricket, cooking, gaming, K-pop…).
+        {/* Sub-line — what it does, in plain words */}
+        <p className="mt-6 text-lg sm:text-xl max-w-2xl mx-auto" style={{ color: "var(--ash-muted)" }}>
+          Snap a photo, drop a PDF, or just ask. We explain it in plain words — in your board's style —
+          then make quizzes and flashcards so it actually sticks.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href={profile ? "/transform" : "/onboarding"}
             className="px-7 py-3.5 rounded-full text-white font-semibold text-base"
-            style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)", boxShadow: "var(--ash-shadow)" }}
+            style={{ background: "var(--ash-primary)", boxShadow: "var(--ash-shadow)" }}
           >
-            {profile ? "Open my study helper →" : "Start free — no card needed"}
+            {profile ? "Open my study helper →" : "Start free — no card"}
           </Link>
           <Link
             href="/tools"
             className="px-7 py-3.5 rounded-full border font-semibold text-base"
-            style={{ borderColor: "var(--ash-border)", background: "rgba(255,255,255,0.65)" }}
+            style={{ borderColor: "var(--ash-border)", background: "rgba(255,255,255,0.7)", color: "var(--ash-text)" }}
           >
             See all tools
           </Link>
         </div>
 
-        {/* trust strip */}
-        <div className="mt-10 flex flex-wrap gap-2 justify-center text-xs" style={{ color: "var(--ash-muted)" }}>
-          <span className="glass-panel px-3 py-1.5 rounded-full">🤖 Powered by AI</span>
-          <span className="glass-panel px-3 py-1.5 rounded-full">🌍 80+ curricula</span>
+        {/* Author trust line — E-E-A-T signal Google rewards */}
+        <div className="mt-7 flex justify-center">
+          <Link href="/about" className="inline-flex items-center gap-2 text-xs sm:text-sm px-4 py-2 rounded-full glass-panel" style={{ color: "var(--ash-muted)" }}>
+            <span className="inline-flex items-center justify-center rounded-full text-white font-bold" style={{ width: 22, height: 22, fontSize: 11, background: "var(--ash-primary)" }}>R</span>
+            Written &amp; checked by Rabail, a real student — not a content farm.
+          </Link>
+        </div>
+
+        {/* trust strip — the five boards, honest chips */}
+        <div className="mt-6 flex flex-wrap gap-2 justify-center text-xs" style={{ color: "var(--ash-muted)" }}>
+          <span className="glass-panel px-3 py-1.5 rounded-full">CBSE · GCSE · AP · Cambridge · WAEC</span>
           <span className="glass-panel px-3 py-1.5 rounded-full">🎓 Ages 6 to 25</span>
-          <span className="glass-panel px-3 py-1.5 rounded-full">🔒 No tracking</span>
+          <span className="glass-panel px-3 py-1.5 rounded-full">🚫 No ads</span>
           <span className="glass-panel px-3 py-1.5 rounded-full">💸 Free forever</span>
         </div>
       </section>
@@ -81,7 +69,7 @@ export default function Home() {
           href={profile ? "/transform" : "/onboarding"}
           className="block rounded-3xl p-7 sm:p-10 relative overflow-hidden hover:-translate-y-0.5 transition"
           style={{
-            background: "linear-gradient(135deg, #4F46E5 0%, #7c3aed 50%, #06b6d4 100%)",
+            background: "linear-gradient(135deg, #0a6357 0%, #0e9f8e 100%)",
             color: "white",
             boxShadow: "var(--ash-shadow)",
           }}
@@ -117,42 +105,38 @@ export default function Home() {
           <ToolTile href="/math-solver"  emoji="🧮" title="Step-by-step math"  body="Every line of working. Every formula named." />
           <ToolTile href="/quiz"         emoji="🧠" title="Quiz me"            body="Auto-generated practice from any material." />
           <ToolTile href="/flashcards"   emoji="🃏" title="Flashcards"         body="Spaced repetition. Built to actually stick." />
-          <ToolTile href="/concept-map"  emoji="🗺️" title="Concept map"        body="Turn any topic into a visual map of ideas." />
-          <ToolTile href="/diagnostic"   emoji="🎯" title="Diagnostic + plan"  body="10 questions → personalised 7-day plan." />
+          <ToolTile href="/mock-exam"    emoji="⏱️" title="Mock exam"          body="Timed, in your board's style. Auto-graded." />
+          <ToolTile href="/grade"        emoji="✍️" title="Mark my answer"     body="Graded like your board's examiner." />
         </div>
         <div className="text-center mt-6">
           <Link href="/tools" className="text-sm font-semibold underline" style={{ color: "var(--ash-primary)" }}>
-            See all 25+ tools (with what's coming next) →
+            See all tools →
           </Link>
         </div>
       </section>
 
-      {/* ─────── HELP IN STUDY [SUBJECT] LINKS — SEO + UX ─────── */}
-      <section className="px-6 mt-20 max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-3">Help in study, by subject</h2>
-        <p className="text-center text-sm max-w-xl mx-auto mb-8" style={{ color: "var(--ash-muted)" }}>
-          Our AI study helper covers every school subject. Pick yours to start.
+      {/* ─────── SUBJECTS BY CURRICULUM ─────── */}
+      <section id="subjects" className="px-6 mt-20 max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-3">Every subject, in your board's exact style</h2>
+        <p className="text-center text-sm max-w-2xl mx-auto mb-9" style={{ color: "var(--ash-muted)" }}>
+          We go deep on five curricula — and help with the subjects students actually take in each.
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-          {[
-            ["math", "Math", "🧮"],
-            ["english", "English", "📚"],
-            ["calculus", "Calculus", "∫"],
-            ["physics", "Physics", "🪐"],
-            ["chemistry", "Chemistry", "⚗️"],
-            ["biology", "Biology", "🧬"],
-            ["history", "History", "📜"],
-            ["geography", "Geography", "🌍"],
-            ["computer-science", "Computer science", "💻"],
-            ["programming", "Programming", "{ }"],
-            ["accounting", "Accounting", "💼"],
-            ["economics", "Economics", "📈"],
-          ].map(([slug, label, ic]) => (
-            <Link key={slug} href={`/help-in-study/${slug}`}
-              className="glass-panel rounded-xl px-4 py-3 flex items-center gap-3 text-sm font-medium">
-              <span className="text-lg">{ic}</span>
-              Help in study {label.toLowerCase()}
-            </Link>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {CURRICULA_SUBJECTS.map((c) => (
+            <div key={c.name} className="glass-panel rounded-2xl p-6">
+              <div className="flex items-baseline justify-between gap-2 mb-4">
+                <h3 className="text-xl font-extrabold" style={{ color: "var(--ash-primary)" }}>{c.name}</h3>
+                <span className="text-[11px] text-right" style={{ color: "var(--ash-muted)" }}>{c.tagline}</span>
+              </div>
+              <div className="space-y-2.5">
+                {c.groups.map(([cat, subs]) => (
+                  <div key={cat}>
+                    <div className="uppercase text-[10px] font-bold mb-0.5" style={{ color: "var(--ash-muted)", letterSpacing: "0.08em" }}>{cat}</div>
+                    <div className="text-sm leading-snug" style={{ color: "var(--ash-text)" }}>{subs}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -167,41 +151,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────── BUILT FOR YOUR BOARD ─────── */}
+      {/* ─────── THE FIVE CURRICULA WE FOCUS ON ─────── */}
       <section className="px-6 mt-20 max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-3">Works with your curriculum</h2>
+        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-3">Built for five major exam systems</h2>
         <p className="text-center text-sm max-w-xl mx-auto" style={{ color: "var(--ash-muted)" }}>
-          Every reply uses your board's terminology, units and exam style. Switch curriculum any time.
+          We focus on five curricula and go deep on each — so every reply uses your board's exact terminology, units and exam style.
         </p>
-        <div className="mt-8 flex flex-wrap gap-2 justify-center">
+        <div className="mt-8 flex flex-wrap gap-3 justify-center">
           {[
-            "CBSE","ICSE","Cambridge IGCSE","Cambridge A Level","Edexcel","AQA","OCR","WJEC",
-            "AP","SAT","Common Core","IB Diploma","IB MYP","IB PYP",
-            "FBISE","Punjab Board","Sindh Board","KPK","AKU-EB",
-            "VCE","HSC","NCEA","ENEM","WAEC","NECO","SQA Higher","Maharashtra","Tamil Nadu",
-            "JEE","NEET",
-          ].map((b) => (
-            <span key={b} className="glass-panel rounded-full px-3 py-1.5 text-xs">{b}</span>
+            ["CBSE", "India"],
+            ["GCSE", "United Kingdom"],
+            ["AP", "United States"],
+            ["Cambridge", "IGCSE & A-Level"],
+            ["WAEC", "West Africa"],
+          ].map(([b, region]) => (
+            <span key={b} className="glass-panel rounded-2xl px-5 py-3 text-sm font-bold flex flex-col items-center min-w-[130px]">
+              {b}
+              <span className="text-[11px] font-normal mt-0.5" style={{ color: "var(--ash-muted)" }}>{region}</span>
+            </span>
           ))}
-          <span className="glass-panel rounded-full px-3 py-1.5 text-xs" style={{ color: "var(--ash-primary)" }}>+ 50 more</span>
         </div>
       </section>
 
-      {/* ─────── PRICING TEASE ─────── */}
+      {/* ─────── 100% FREE ─────── */}
       <section className="px-6 mt-20 max-w-5xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-center mb-3">Free forever. Pro if you want more.</h2>
-        <p className="text-center text-sm max-w-xl mx-auto mb-8" style={{ color: "var(--ash-muted)" }}>
-          The free plan is genuinely free — no card, no time limit.
-        </p>
-        <div className="grid sm:grid-cols-3 gap-4">
-          <PricingTease name="Free" price="$0" sub="forever" features={["AI explanations","Quiz + flashcards","Math solver","Diagnostic + plan","No card required"]} />
-          <PricingTease name="Pro" price="$4.99" sub="per month" highlight features={["Everything in Free","No ads","Unlimited usage","Concept maps","Essay coach","Priority speed"]} />
-          <PricingTease name="Family" price="$9.99" sub="per month" features={["Everything in Pro","5 student profiles","Parent dashboard","Per-child progress"]} />
-        </div>
-        <div className="text-center mt-6">
-          <Link href="/pricing" className="text-sm font-semibold underline" style={{ color: "var(--ash-primary)" }}>
-            Compare every feature →
-          </Link>
+        <div className="rounded-3xl p-8 sm:p-10 text-center glass-panel">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">100% free. Every tool. Forever.</h2>
+          <p className="text-sm max-w-xl mx-auto" style={{ color: "var(--ash-muted)" }}>
+            No card, no trial, no paid plans, no upgrade prompts. Everything on Help in Study is free for every student —
+            because good help shouldn't sit behind a paywall.
+          </p>
         </div>
       </section>
 
@@ -221,14 +200,14 @@ export default function Home() {
       {/* ─────── FINAL CTA ─────── */}
       <section className="px-6 mt-20 mb-16 max-w-3xl mx-auto">
         <div className="rounded-3xl p-8 sm:p-12 text-center" style={{
-          background: "linear-gradient(135deg, #4F46E5, #7c3aed, #06b6d4)",
+          background: "linear-gradient(135deg, #0a6357, #0e9f8e)",
           color: "white",
           boxShadow: "var(--ash-shadow)",
         }}>
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight">Ready when you are.</h2>
-          <p className="mt-3 opacity-95">Start free in 30 seconds. No card. No tracking.</p>
+          <p className="mt-3 opacity-95">Start free in 30 seconds. No card. No ads.</p>
           <Link href="/onboarding" className="mt-6 inline-block px-7 py-3.5 rounded-full font-semibold"
-            style={{ background: "white", color: "#4F46E5" }}>
+            style={{ background: "white", color: "var(--ash-primary)" }}>
             Open my AI study helper →
           </Link>
         </div>
@@ -253,39 +232,77 @@ function Step({ n, title, body }: { n: number; title: string; body: string }) {
   return (
     <div className="glass-panel rounded-2xl p-5">
       <div className="inline-flex items-center justify-center w-9 h-9 rounded-full font-bold text-white text-sm mb-3"
-           style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>{n}</div>
+           style={{ background: "linear-gradient(135deg, var(--ash-primary), var(--ash-brand))" }}>{n}</div>
       <div className="font-semibold">{title}</div>
       <div className="text-sm mt-1" style={{ color: "var(--ash-muted)" }}>{body}</div>
     </div>
   );
 }
 
-function PricingTease({ name, price, sub, highlight, features }: { name: string; price: string; sub: string; highlight?: boolean; features: string[] }) {
-  return (
-    <div className="rounded-2xl p-6"
-      style={{
-        background: highlight ? "linear-gradient(135deg, #4F46E5 0%, #7c3aed 50%, #06b6d4 100%)" : "var(--ash-surface)",
-        color: highlight ? "white" : "var(--ash-text)",
-        border: highlight ? "none" : "1px solid var(--ash-border)",
-        boxShadow: highlight ? "var(--ash-shadow)" : "var(--ash-shadow-soft)",
-      }}>
-      <div className="font-semibold">{name}</div>
-      <div className="mt-2">
-        <span className="text-3xl font-extrabold">{price}</span>
-        <span className="text-sm opacity-80 ml-1">{sub}</span>
-      </div>
-      <ul className="mt-4 text-sm space-y-1.5">
-        {features.map((f, i) => <li key={i}>✓ {f}</li>)}
-      </ul>
-    </div>
-  );
-}
+// The five curricula and the subjects their students actually take (researched per board).
+const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, string][] }[] = [
+  {
+    name: "CBSE", tagline: "India · Class 9–12",
+    groups: [
+      ["Maths", "Mathematics · Applied Mathematics"],
+      ["Sciences", "Physics · Chemistry · Biology · Science"],
+      ["English & Languages", "English · Hindi · Sanskrit"],
+      ["Humanities", "Social Science · History · Political Science · Geography · Psychology"],
+      ["Commerce", "Accountancy · Business Studies · Economics"],
+      ["Computing", "Computer Science · Informatics Practices · AI"],
+    ],
+  },
+  {
+    name: "GCSE", tagline: "United Kingdom · Year 10–11",
+    groups: [
+      ["Maths", "Mathematics · Statistics"],
+      ["Sciences", "Combined Science · Biology · Chemistry · Physics"],
+      ["English & Languages", "English Language · English Literature · French · Spanish · German"],
+      ["Humanities", "History · Geography · Religious Studies · Psychology · Sociology"],
+      ["Business", "Business · Economics"],
+      ["Computing", "Computer Science"],
+    ],
+  },
+  {
+    name: "AP", tagline: "United States · College Board",
+    groups: [
+      ["Maths", "Precalculus · Calculus AB · Calculus BC · Statistics"],
+      ["Sciences", "Biology · Chemistry · Physics 1 · Environmental Science"],
+      ["English & Languages", "English Language · English Literature · Spanish"],
+      ["Humanities", "US History · World History · US Government · Psychology · Human Geography"],
+      ["Economics", "Macroeconomics · Microeconomics"],
+      ["Computing", "Computer Science Principles · Computer Science A"],
+    ],
+  },
+  {
+    name: "Cambridge", tagline: "International · IGCSE & A-Level",
+    groups: [
+      ["Maths", "Mathematics · Additional Mathematics · Further Mathematics"],
+      ["Sciences", "Biology · Chemistry · Physics · Combined Science"],
+      ["English & Languages", "English (First Language) · Literature in English · French"],
+      ["Humanities", "History · Geography · Sociology · Psychology · Global Perspectives"],
+      ["Commerce", "Business Studies · Accounting · Economics"],
+      ["Computing", "Computer Science · ICT"],
+    ],
+  },
+  {
+    name: "WAEC", tagline: "West Africa · SS1–SS3",
+    groups: [
+      ["Maths", "Mathematics · Further Mathematics"],
+      ["Sciences", "Physics · Chemistry · Biology · Agricultural Science"],
+      ["English & Languages", "English Language · Literature-in-English · French"],
+      ["Humanities", "Government · Geography · History · Christian/Islamic Studies"],
+      ["Commerce", "Economics · Financial Accounting · Commerce"],
+      ["Computing", "Computer Studies · Data Processing"],
+    ],
+  },
+];
 
 const FAQ = [
-  { q: "What is Help in Study?", a: "Help in Study is a free AI study helper. You upload a photo, PDF, or just ask a question — our AI explains it in plain words at your level. It works for any subject (math, English, science, history…) and any school curriculum (CBSE, IGCSE, IB, AP, GCSE, A-Level, and 80+ more)." },
-  { q: "Is the AI study helper really free?", a: "Yes. The free plan has no card, no time limit, no hidden trial. You can use it forever. Pro ($4.99/mo) removes ads and limits; Family ($9.99/mo) adds parent dashboard + 5 student profiles. We earn from optional ads on free and from subscriptions." },
-  { q: "How is this different from ChatGPT?", a: "ChatGPT doesn't know your country, your board, or your grade — so its terminology and exam style are often wrong. Help in Study builds those four signals into every AI reply. Plus we generate quizzes, flashcards, study plans, concept maps and parent recaps from any material — ChatGPT doesn't." },
+  { q: "What is Help in Study?", a: "Help in Study is a free AI study helper. You upload a photo, PDF, or just ask a question — our AI explains it in plain words at your level. It's built for five major exam systems: CBSE (India), GCSE (UK), AP (USA), Cambridge IGCSE & A-Level, and WAEC (West Africa)." },
+  { q: "Is the AI study helper really free?", a: "Yes — completely. No card, no time limit, no hidden trial, and no paid plans. Every tool is free for every student, forever." },
+  { q: "How is this different from ChatGPT?", a: "ChatGPT doesn't know your country, your board, or your grade — so its terminology and exam style are often wrong. Help in Study builds those four signals into every AI reply. Plus we generate quizzes, flashcards, mock exams, and examiner-style marking from any material — ChatGPT doesn't." },
   { q: "Will it help with math homework?", a: "Yes. The Math Solver shows every line of working, names the method (\"using the quadratic formula\"), flags common pitfalls, and gives you a way to check your answer. It works on photos, PDFs, or text." },
-  { q: "Which subjects can I get help in study with?", a: "Every school subject — math, English, calculus, physics, chemistry, biology, history, geography, economics, accounting, computer science, programming, psychology, and more. Pick yours on the homepage to start." },
-  { q: "Is my child's data safe?", a: "We collect only what's needed: profile, content you upload, usage counts. No third-party trackers. One-click data export and account delete from Settings. We never sell student data." },
+  { q: "Which subjects can I get help in study with?", a: "Every school subject — math, English, physics, chemistry, biology, economics, accounting, computer science, and more. Pick yours on the homepage to start." },
+  { q: "Is my child's data safe?", a: "We collect only what's needed: profile, content you upload, usage counts. We use privacy-friendly, anonymized analytics, show no ads, and never sell student data. One-click data export and account delete from Settings." },
 ];

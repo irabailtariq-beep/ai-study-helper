@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CURRICULA, COUNTRIES } from "@ash/core";
@@ -47,7 +47,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LearnPage({ params }: Props) {
   const { subject, board } = await params;
   const combo = findLearnCombo(subject, board);
-  if (!combo) notFound();
+  // Non-five-board combos are no longer served — 301 to the subject hub.
+  if (!combo) permanentRedirect(`/help-in-study/${subject}`);
 
   const subj = SUBJECT_LABELS[subject];
   const cur = CURRICULA.find((c) => c.id === board);
@@ -86,7 +87,7 @@ export default async function LearnPage({ params }: Props) {
           className="font-extrabold tracking-tight mt-2"
           style={{
             fontSize: "clamp(32px, 5vw, 48px)",
-            backgroundImage: "linear-gradient(120deg, #4F46E5, #7c3aed, #06b6d4)",
+            backgroundImage: "linear-gradient(120deg, #0a6357, #0e9f8e, #14b8a6)",
             WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent",
           }}
         >
@@ -97,12 +98,8 @@ export default async function LearnPage({ params }: Props) {
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <Link href="/onboarding" className="px-6 py-3 rounded-ash text-white font-semibold"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
             Start free →
-          </Link>
-          <Link href="/pricing" className="px-6 py-3 rounded-ash border font-semibold"
-                style={{ borderColor: "var(--ash-border)" }}>
-            See plans
           </Link>
         </div>
       </header>
@@ -123,7 +120,7 @@ export default async function LearnPage({ params }: Props) {
           Drill these first. If you can't do every one of these cold, work through them with{" "}
           <Link href="/explain" className="underline" style={{ color: "var(--ash-primary)" }}>/explain</Link>{" "}
           or{" "}
-          <Link href="/problem-variants" className="underline" style={{ color: "var(--ash-primary)" }}>/problem-variants</Link>.
+          <Link href="/quiz" className="underline" style={{ color: "var(--ash-primary)" }}>/quiz</Link>.
         </p>
       </section>
 
@@ -200,11 +197,11 @@ export default async function LearnPage({ params }: Props) {
           </div>
           <div className="glass-panel p-5 rounded-ash">
             <div className="text-2xl mb-1">🔥</div>
-            <h3 className="font-semibold">Personalised study plan</h3>
+            <h3 className="font-semibold">Practise your weak topics</h3>
             <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
-              10-question diagnostic → AI builds a 7-day plan focused on your weakest topics from the list above.
+              Auto-generate practice questions on the topics above and drill the ones you keep getting wrong.
             </p>
-            <Link href="/diagnostic" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Take diagnostic →</Link>
+            <Link href="/quiz" className="text-sm mt-2 inline-block underline" style={{ color: "var(--ash-primary)" }}>Quiz me →</Link>
           </div>
         </div>
       </section>
@@ -215,7 +212,7 @@ export default async function LearnPage({ params }: Props) {
           Set up your profile once — every reply from then on is tuned to your {cur.name} {subj} syllabus.
         </p>
         <Link href="/onboarding" className="inline-block px-6 py-3 rounded-ash text-white font-semibold"
-              style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+              style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           Get started — it's free
         </Link>
       </section>

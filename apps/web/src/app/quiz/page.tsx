@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useProfile } from "@/lib/profileStore";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import type { Quiz, QuizItem } from "@ash/core";
+import { InlineRich } from "@/components/RichOutput";
 
 export default function QuizPage() {
   const profile = useProfile((s) => s.profile);
@@ -93,7 +94,7 @@ export default function QuizPage() {
             disabled={loading || (!text && !file)}
             onClick={generate}
             className="px-6 py-3 rounded-ash text-white font-semibold disabled:opacity-40"
-            style={{ background: "linear-gradient(135deg, var(--ash-primary), #6d28d9)" }}
+            style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}
           >
             {loading ? "Generating…" : "Generate quiz"}
           </button>
@@ -106,7 +107,7 @@ export default function QuizPage() {
           <h2 className="font-semibold text-xl">{quiz.title}</h2>
           {quiz.items.map((item, i) => (
             <div key={i} className="border-t pt-4">
-              <div className="font-medium mb-2">{i + 1}. {item.q}</div>
+              <div className="font-medium mb-2">{i + 1}. <InlineRich>{item.q}</InlineRich></div>
               <QuizItemUI item={item} index={i} answers={answers} setAnswers={setAnswers} revealed={revealed} />
             </div>
           ))}
@@ -151,10 +152,10 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
               onChange={() => set(j)}
               className="mr-2"
             />
-            {opt}
+            <InlineRich>{opt}</InlineRich>
           </label>
         ))}
-        {revealed && <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}><b>Why:</b> {item.why}</p>}
+        {revealed && <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}><b>Why:</b> <InlineRich>{item.why}</InlineRich></p>}
       </div>
     );
   }
@@ -169,7 +170,7 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
         ))}
         {revealed && (
           <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
-            <b>Answer:</b> {item.answer ? "True" : "False"} — {item.why}
+            <b>Answer:</b> {item.answer ? "True" : "False"} — <InlineRich>{item.why}</InlineRich>
           </p>
         )}
       </div>
@@ -191,7 +192,7 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
         />
         {revealed && (
           <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
-            <b>Answer:</b> {item.answer}{item.type === "short" && item.rubric ? ` — Rubric: ${item.rubric}` : item.type === "fill" && item.why ? ` — ${item.why}` : ""}
+            <b>Answer:</b> <InlineRich>{`${item.answer}${item.type === "short" && item.rubric ? ` — Rubric: ${item.rubric}` : item.type === "fill" && item.why ? ` — ${item.why}` : ""}`}</InlineRich>
           </p>
         )}
       </div>

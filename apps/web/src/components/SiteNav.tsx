@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useProfile } from "@/lib/profileStore";
+import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
   { href: "/tools", label: "Tools" },
-  { href: "/help-in-study/math", label: "Subjects" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/#subjects", label: "Subjects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ];
@@ -40,8 +40,7 @@ export function SiteNav() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)} aria-label="Help in Study — home">
-          <img src="/icons/icon-192.png" alt="" width={36} height={36} className="rounded-xl" style={{ display: "block" }} />
-          <span className="font-bold tracking-tight">Help in Study</span>
+          <Logo size={34} />
         </Link>
 
         {/* Desktop nav */}
@@ -61,7 +60,7 @@ export function SiteNav() {
               <span
                 aria-hidden
                 className="inline-flex items-center justify-center w-7 h-7 rounded-full text-white text-xs font-bold"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), var(--ash-brand))" }}
               >
                 {(profile.displayName ?? profile.grade ?? "U").slice(0, 1).toUpperCase()}
               </span>
@@ -73,7 +72,7 @@ export function SiteNav() {
             <Link
               href="/onboarding"
               className="px-4 py-1.5 rounded-full text-white font-semibold"
-              style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+              style={{ background: "linear-gradient(135deg, var(--ash-primary), var(--ash-brand))" }}
             >
               Get started free
             </Link>
@@ -140,7 +139,7 @@ export function SiteNav() {
                 href={profile ? "/transform" : "/onboarding"}
                 onClick={() => setOpen(false)}
                 className="mt-3 px-4 py-3 rounded-full text-white font-semibold text-center"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), var(--ash-brand))" }}
               >
                 {profile ? "Open my study helper" : "Get started free"}
               </Link>

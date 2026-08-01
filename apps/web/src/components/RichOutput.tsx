@@ -83,6 +83,10 @@ function normalizeMarkdown(src: string): string {
   s = s.replace(/(```[a-zA-Z]*\n[\s\S]*?)(?<!\n)(\s*)(```)(?!\n)/g, "$1\n$3\n");
   // Also: if a fence opens but the body is on the same line, push body to next line
   s = s.replace(/(```[a-zA-Z]+) +([^\n].*?)(```)/g, "$1\n$2\n$3");
+  // Normalize alternate LaTeX delimiters the model sometimes emits despite the prompt:
+  //   \[ … \] -> $$ … $$  (display — do first)   and   \( … \) -> $ … $  (inline)
+  s = s.replace(/\\\[([\s\S]*?)\\\]/g, (_m, inner) => `\n\n$$${inner}$$\n\n`);
+  s = s.replace(/\\\(([\s\S]*?)\\\)/g, (_m, inner) => `$${inner}$`);
   return s;
 }
 
@@ -142,19 +146,19 @@ export function RichOutput({ children, className = "" }: { children: string; cla
         .rich-li { margin: 0.35em 0; }
         .rich-li > p { margin: 0.2em 0; }
         .rich-link { color: var(--ash-primary); text-decoration: underline; }
-        .rich-quote { margin: 0.9em 0; padding: 0.6em 1em; border-left: 4px solid var(--ash-primary); background: rgba(124,58,237,0.06); border-radius: 6px; color: var(--ash-text); }
+        .rich-quote { margin: 0.9em 0; padding: 0.6em 1em; border-left: 4px solid var(--ash-primary); background: rgba(14,159,142,0.06); border-radius: 6px; color: var(--ash-text); }
         .rich-inline-code { background: rgba(15,23,42,0.07); padding: 1px 6px; border-radius: 4px; font-size: 0.92em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
         .rich-code-block { background: rgba(15,23,42,0.05); padding: 12px 14px; border-radius: 10px; overflow-x: auto; margin: 0.8em 0; font-size: 0.92em; }
         .rich-code-block code { background: transparent; padding: 0; }
         .rich-table-wrap { overflow-x: auto; margin: 0.9em 0; }
         .rich-table { border-collapse: collapse; width: 100%; }
         .rich-table th, .rich-table td { border: 1px solid var(--ash-border); padding: 6px 10px; text-align: left; font-size: 0.95em; }
-        .rich-table th { background: rgba(124,58,237,0.06); font-weight: 600; }
+        .rich-table th { background: rgba(14,159,142,0.06); font-weight: 600; }
         /* Make KaTeX a touch larger and inline-aligned */
         .katex { font-size: 1.05em; }
         .katex-display { margin: 0.7em 0; padding: 0.4em 0; overflow-x: auto; overflow-y: hidden; }
         .rich-mermaid { display: flex; justify-content: center; padding: 12px; background: rgba(255,255,255,0.7); border-radius: 12px; border: 1px solid var(--ash-border); margin: 0.9em 0; }
-        .rich-chem-block { background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(34,211,238,0.05)); border: 1px solid var(--ash-border); border-radius: 12px; padding: 14px 18px; margin: 0.9em 0; font-size: 1.15em; font-weight: 600; letter-spacing: 0.02em; line-height: 1.7; text-align: center; color: var(--ash-text); }
+        .rich-chem-block { background: linear-gradient(135deg, rgba(14,159,142,0.06), rgba(20,184,166,0.05)); border: 1px solid var(--ash-border); border-radius: 12px; padding: 14px 18px; margin: 0.9em 0; font-size: 1.15em; font-weight: 600; letter-spacing: 0.02em; line-height: 1.7; text-align: center; color: var(--ash-text); }
         .rich-chem-block > div { padding: 2px 0; }
         .rich-chem { font-weight: 600; }
         .rich-inline { display: inline; }

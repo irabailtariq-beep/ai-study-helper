@@ -10,30 +10,28 @@ export function GET() {
 
 > ${SITE.description}
 
-AI Study Helper is a free, multimodal AI tutor for students aged 6–25.
-It supports 80+ curricula worldwide (CBSE, IGCSE, IB, AP, GCSE, A-Level, NCEA, ENEM, WAEC, …).
-The product reframes any explanation through the student's chosen interest (cricket, cooking, gaming, etc.)
-and produces age-appropriate explanations, step-by-step math, quizzes, flashcards, and study plans.
+Help in Study is a free, multimodal AI tutor for students aged 6–25.
+It focuses on five exam systems: CBSE (India), GCSE (UK), AP (USA), Cambridge IGCSE & A-Level, and WAEC (West Africa).
+Every answer is written in the student's own board's mark-scheme style, and can be reframed
+through the student's chosen interest (cricket, cooking, gaming, etc.). It produces age-appropriate
+explanations, step-by-step math, quizzes, mock exams, flashcards and writing help.
 
-## Primary tools (each is a route on the site)
+## Tools (each is a route on the site)
 
-- [Explain anything](${base}/explain): Photo / PDF / text → age-adapted explanation.
-- [Make it about my interests](${base}/transform): Reframe any topic through cricket, cooking, gaming, K-pop…
-- [Math solver](${base}/math-solver): Step-by-step working, named method, common pitfalls.
-- [Formula sheet](${base}/formula-sheet): Board-aware list of formulas with examples.
-- [Quiz me](${base}/quiz): MCQ + Short + True/False + Fill-in-the-blank, auto-generated.
-- [Diagnostic + study plan](${base}/diagnostic): 10-question diagnostic → personalised 7-day plan.
-- [Mark my answer](${base}/grade): AI marks an exam answer in your board's style.
-- [Concept map](${base}/concept-map): Visualise a syllabus as a topic graph.
-- [Digital syllabus](${base}/syllabus): Extract official syllabi to a clean outline.
-- [Flashcards](${base}/flashcards): SM-2 spaced repetition, auto-generated from any material.
-- [Chat tutor](${base}/chat): Conversational tutor with memory + voice mode.
-- [Parent dashboard](${base}/parent): Weekly recap for parents/guardians.
-- [Google Classroom](${base}/classroom), [Microsoft Teams](${base}/teams), [Canvas / Moodle](${base}/lms): assignment sync + AI coaching.
+- [Explain anything](${base}/explain): Photo / PDF / text → an explanation at your level, in your board's style.
+- [AI chat tutor](${base}/chat): Conversational tutor that knows your board and grade.
+- [Learn through what you love](${base}/transform): Reframe any topic through cricket, cooking, gaming, K-pop…
+- [Step-by-step math solver](${base}/math-solver): Every line of working, method named, pitfalls flagged.
+- [Quiz me](${base}/quiz): MCQ + Short + True/False + Fill-in-the-blank, auto-generated from any material.
+- [Mock exam](${base}/mock-exam): Timed, exam-room conditions in your board's style, auto-graded.
+- [Mark my answer](${base}/grade): AI marks an exam answer in your board's mark-scheme style.
+- [Flashcards](${base}/flashcards): Spaced-repetition cards, auto-generated, stored on your device.
+- [Summarise anything](${base}/lecture-summary): Lecture / notes / PDF → summary, key points and likely exam questions.
+- [Writing coach](${base}/essay-coach): Essay feedback, grammar & clarity check, and APA/MLA/Chicago/Harvard citations.
 
-## Plans
+## Pricing
 
-- [Pricing](${base}/pricing): Free forever, Pro ($4.99/mo), Family ($9.99/mo).
+Everything on Help in Study is 100% free — every tool, forever. No paid plans, no ads.
 
 ## Site policies
 
@@ -45,7 +43,7 @@ and produces age-appropriate explanations, step-by-step math, quizzes, flashcard
 - The student's profile (country, age, grade, curriculum) is injected into every system prompt.
 - Optional uploads (photos, PDFs) are sent to Google Gemini for vision/PDF understanding.
 - Text-only requests can route to Groq Llama 3.3 70B or OpenRouter when configured.
-- AI Study Helper does not share student data with third parties for advertising or training.
+- Help in Study does not share student data with third parties for advertising or training.
 
 ## Optional
 

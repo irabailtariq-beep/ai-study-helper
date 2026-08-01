@@ -3,14 +3,23 @@ import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import {
   COUNTRIES,
-  curriculaForCountry,
-  searchCurricula,
+  CURRICULA,
   themeForAge,
   type CountryCode,
   type OutputFormat,
   type ToneStyle,
 } from "@ash/core";
 import { useProfile } from "@/lib/profileStore";
+
+// We support FIVE exam systems only. The onboarding picker offers just these
+// (with their sub-boards) — never any other curriculum.
+const FIVE_CURRICULUM_IDS = [
+  "in-cbse",                                                                        // CBSE (India)
+  "uk-gcse-aqa", "uk-gcse-edexcel", "uk-gcse-ocr",                                  // GCSE (UK)
+  "us-ap",                                                                          // AP (USA)
+  "intl-cambridge-igcse", "intl-cambridge-alevel",                                  // Cambridge
+  "ng-waec", "gh-wassce",                                                           // WAEC / WASSCE (West Africa)
+];
 
 const COMMON_SUBJECTS = [
   "Mathematics", "English", "Physics", "Chemistry", "Biology", "Computer Science",
@@ -81,13 +90,17 @@ export default function OnboardingPage() {
     return COUNTRIES.filter((c) => c.name.toLowerCase().includes(q));
   }, [countryQuery]);
 
-  const curricula = useMemo(
-    () => (country ? searchCurricula(country, curriculumQuery) : []),
-    [country, curriculumQuery]
-  );
-  const currentCurriculum = country
-    ? curriculaForCountry(country).find((c) => c.id === curriculum)
-    : undefined;
+  const curricula = useMemo(() => {
+    const five = CURRICULA.filter((c) => FIVE_CURRICULUM_IDS.includes(c.id));
+    const q = curriculumQuery.trim().toLowerCase();
+    if (!q) return five;
+    return five.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        (c.aliases ?? []).some((a) => a.toLowerCase().includes(q))
+    );
+  }, [curriculumQuery]);
+  const currentCurriculum = CURRICULA.find((c) => c.id === curriculum);
 
   const preview = themeForAge(age);
 
@@ -131,14 +144,14 @@ export default function OnboardingPage() {
       <main className="px-6 py-20 max-w-2xl mx-auto text-center">
         <div
           className="inline-flex items-center justify-center w-24 h-24 rounded-full text-5xl mb-6"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)", color: "white" }}
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)", color: "white" }}
         >
           ✓
         </div>
         <h1 className="font-extrabold tracking-tight"
           style={{
             fontSize: "clamp(40px, 8vw, 80px)",
-            backgroundImage: "linear-gradient(120deg, #4F46E5, #7c3aed, #06b6d4)",
+            backgroundImage: "linear-gradient(120deg, #0a6357, #0e9f8e, #14b8a6)",
             WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent",
             letterSpacing: "-0.02em",
           }}>
@@ -159,7 +172,7 @@ export default function OnboardingPage() {
           <button
             onClick={() => { window.location.href = "/"; }}
             className="px-7 py-3.5 rounded-full text-white font-semibold"
-            style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}
+            style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}
           >
             Open my study helper →
           </button>
@@ -204,7 +217,7 @@ export default function OnboardingPage() {
                   className="p-3 rounded-2xl border text-left text-sm"
                   style={{
                     borderColor: country === c.code ? "var(--ash-primary)" : "#e5e7eb",
-                    background: country === c.code ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+                    background: country === c.code ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
                     color: country === c.code ? "white" : "var(--ash-text)",
                   }}>
                   <span className="mr-2">{c.flag}</span>{c.name}
@@ -237,7 +250,7 @@ export default function OnboardingPage() {
         {step === 2 && (
           <>
             <h2 className="text-lg font-semibold mb-2">Which curriculum?</h2>
-            <p className="text-sm mb-2" style={{ color: "var(--ash-muted)" }}>Type "CBSE", "IGCSE", "Matric", "AP" — whatever you call it.</p>
+            <p className="text-sm mb-2" style={{ color: "var(--ash-muted)" }}>Type "CBSE", "GCSE", "AP", "Cambridge", or "WAEC".</p>
             <input value={curriculumQuery} onChange={(e) => setCurriculumQuery(e.target.value)}
               placeholder="Search curriculum / board…" className="w-full p-3 rounded-2xl border mb-3" />
             <div className="space-y-2 max-h-[420px] overflow-y-auto">
@@ -246,7 +259,7 @@ export default function OnboardingPage() {
                   className="w-full p-3 rounded-2xl border text-left"
                   style={{
                     borderColor: curriculum === c.id ? "var(--ash-primary)" : "#e5e7eb",
-                    background: curriculum === c.id ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+                    background: curriculum === c.id ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
                     color: curriculum === c.id ? "white" : "var(--ash-text)",
                   }}>
                   <div className="font-medium">{c.name}</div>
@@ -267,7 +280,7 @@ export default function OnboardingPage() {
                   className="p-2 rounded-2xl border text-sm"
                   style={{
                     borderColor: grade === g ? "var(--ash-primary)" : "#e5e7eb",
-                    background: grade === g ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+                    background: grade === g ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
                     color: grade === g ? "white" : "var(--ash-text)",
                   }}>
                   {g}
@@ -288,7 +301,7 @@ export default function OnboardingPage() {
                   <button key={s} onClick={() => setSubjects(toggle(subjects, s))}
                     className="px-3 py-1.5 rounded-full text-sm"
                     style={{
-                      background: active ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.7)",
+                      background: active ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.7)",
                       color: active ? "white" : "var(--ash-text)",
                       border: "1px solid var(--ash-border)",
                     }}>
@@ -345,7 +358,7 @@ export default function OnboardingPage() {
                   <button key={it.label} onClick={() => setInterests(toggle(interests, it.label))}
                     className="px-3 py-1.5 rounded-full text-sm"
                     style={{
-                      background: active ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.7)",
+                      background: active ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.7)",
                       color: active ? "white" : "var(--ash-text)",
                       border: "1px solid var(--ash-border)",
                     }}>
@@ -377,7 +390,7 @@ export default function OnboardingPage() {
                 <button key={o.id} onClick={() => setFormatPref(o.id)}
                   className="p-3 rounded-2xl text-left text-sm"
                   style={{
-                    background: formatPref === o.id ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.7)",
+                    background: formatPref === o.id ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.7)",
                     color: formatPref === o.id ? "white" : "var(--ash-text)",
                     border: "1px solid var(--ash-border)",
                   }}>
@@ -393,7 +406,7 @@ export default function OnboardingPage() {
                 <button key={o.id} onClick={() => setTonePref(o.id)}
                   className="p-3 rounded-2xl text-left text-sm"
                   style={{
-                    background: tonePref === o.id ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "rgba(255,255,255,0.7)",
+                    background: tonePref === o.id ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "rgba(255,255,255,0.7)",
                     color: tonePref === o.id ? "white" : "var(--ash-text)",
                     border: "1px solid var(--ash-border)",
                   }}>
@@ -425,11 +438,11 @@ export default function OnboardingPage() {
             {step < 7 ? (
               <button disabled={!canAdvance()} onClick={() => setStep((s) => s + 1)}
                 className="px-5 py-2 rounded-2xl text-white font-semibold disabled:opacity-40"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>Next</button>
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>Next</button>
             ) : (
               <button disabled={finishing} onClick={finish}
                 className="px-5 py-2 rounded-2xl text-white font-semibold disabled:opacity-40"
-                style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+                style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
                 {finishing ? "Saving…" : "Finish"}
               </button>
             )}

@@ -38,11 +38,23 @@ export default function AboutPage() {
 
         <h2 className="text-2xl font-bold mt-8">What we believe</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li><b>Free should mean free.</b> No card. No trial. No ads inside premium features.</li>
+          <li><b>Free should mean free.</b> No card, no trial, no paid plans, no ads — every tool, free.</li>
           <li><b>AI should help students learn — not cheat.</b> Every reply shows the method, not just the answer.</li>
-          <li><b>Curriculum-fit beats generic intelligence.</b> CBSE, IGCSE, IB, AP — different boards reward different things. Our AI knows.</li>
-          <li><b>Privacy-first for kids.</b> No third-party trackers. One-click data export and delete.</li>
+          <li><b>Curriculum-fit beats generic intelligence.</b> CBSE, GCSE, AP, Cambridge, WAEC — different boards reward different things, and we go deep on all five.</li>
+          <li><b>Privacy-first for kids.</b> Privacy-friendly, anonymized analytics only — no ad trackers, and we never sell student data. One-click data export and delete.</li>
         </ul>
+
+        <h2 className="text-2xl font-bold mt-8">Who's behind Help in Study</h2>
+        <p className="text-base leading-relaxed">
+          Hi — I'm <b>Rabail</b>. I'm a student, and I built Help in Study for other students. I spent years
+          struggling through math and science the hard way — re-reading textbooks that didn't make sense, with no
+          tutor I could afford. What finally worked was getting things explained in plain language, in my own exam's
+          style. So I built the study help I wish I'd had, and made it free for everyone.
+        </p>
+        <p className="text-base leading-relaxed">
+          Everything here is written and checked by a real person — me — not spun up and left to rot. If something's
+          wrong or could be clearer, <Link href="/contact" className="underline" style={{ color: "var(--ash-primary)" }}>tell me</Link>; I read every message.
+        </p>
 
         <h2 className="text-2xl font-bold mt-8">What we use under the hood</h2>
         <p className="text-base leading-relaxed">

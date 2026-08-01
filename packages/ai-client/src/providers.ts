@@ -72,8 +72,8 @@ async function openRouterChat(opts: TextCallOpts): Promise<string> {
     headers: {
       "content-type": "application/json",
       authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-      "HTTP-Referer": "https://ai-study-helper.app",
-      "X-Title": "AI Study Helper",
+      "HTTP-Referer": "https://helpinstudy.com",
+      "X-Title": "Help in Study",
     },
     body: JSON.stringify({
       // Free-tier, open-source model. OpenRouter rotates these; fall back chain.

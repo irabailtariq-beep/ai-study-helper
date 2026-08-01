@@ -1,31 +1,28 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 
 const FOOTER_GROUPS = [
   {
     title: "Tools",
     links: [
       { href: "/explain", label: "Explain anything" },
-      { href: "/transform", label: "Make it about my interest" },
+      { href: "/chat", label: "AI chat tutor" },
+      { href: "/transform", label: "Learn through what you love" },
       { href: "/math-solver", label: "Math solver" },
-      { href: "/formula-sheet", label: "Formula sheet" },
       { href: "/quiz", label: "Quiz me" },
-      { href: "/flashcards", label: "Flashcards" },
       { href: "/tools", label: "All tools" },
     ],
   },
   {
-    title: "More",
+    title: "More tools",
     links: [
-      { href: "/diagnostic", label: "Diagnostic + plan" },
+      { href: "/mock-exam", label: "Mock exam" },
       { href: "/grade", label: "Mark my answer" },
-      { href: "/concept-map", label: "Concept map" },
-      { href: "/syllabus", label: "Digital syllabus" },
-      { href: "/essay-coach", label: "Essay coach" },
-      { href: "/vocab", label: "Vocabulary builder" },
-      { href: "/translate", label: "Translation mode" },
-      { href: "/calculator", label: "Calculators" },
+      { href: "/flashcards", label: "Flashcards" },
+      { href: "/lecture-summary", label: "Summarise anything" },
+      { href: "/essay-coach", label: "Writing coach" },
     ],
   },
   {
@@ -45,11 +42,8 @@ const FOOTER_GROUPS = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
-      { href: "/pricing", label: "Pricing" },
       { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
-      { href: "/parent", label: "For parents" },
-      { href: "/classroom", label: "Google Classroom" },
     ],
   },
   {
@@ -57,7 +51,6 @@ const FOOTER_GROUPS = [
     links: [
       { href: "/privacy", label: "Privacy" },
       { href: "/terms", label: "Terms" },
-      { href: "/refund-policy", label: "Refunds" },
       { href: "/signin", label: "Sign in" },
       { href: "/settings", label: "Settings" },
     ],
@@ -78,8 +71,7 @@ export function SiteFooter() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
           <div>
             <Link href="/" className="flex items-center gap-2" aria-label="Help in Study — home">
-              <img src="/icons/icon-192.png" alt="" width={36} height={36} className="rounded-xl" style={{ display: "block" }} />
-              <span className="font-bold tracking-tight">Help in Study</span>
+              <Logo size={36} />
             </Link>
             <p className="mt-3 text-sm max-w-md" style={{ color: "var(--ash-muted)" }}>
               A free AI study helper for any subject and any age. Snap a photo, paste a question,

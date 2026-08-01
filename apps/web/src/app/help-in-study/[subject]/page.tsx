@@ -57,7 +57,7 @@ export default async function SubjectPage({ params }: Props) {
           className="font-extrabold tracking-tight mt-3"
           style={{
             fontSize: "clamp(36px, 6vw, 56px)",
-            backgroundImage: "linear-gradient(120deg, #4F46E5, #7c3aed, #06b6d4)",
+            backgroundImage: "linear-gradient(120deg, #0a6357, #0e9f8e, #14b8a6)",
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             color: "transparent",
@@ -71,7 +71,7 @@ export default async function SubjectPage({ params }: Props) {
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
           <Link href="/onboarding" className="px-6 py-3 rounded-full text-white font-semibold"
-            style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+            style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
             Start free →
           </Link>
           <Link href="/transform" className="px-6 py-3 rounded-full border font-semibold"
@@ -87,7 +87,7 @@ export default async function SubjectPage({ params }: Props) {
         </div>
         <p className="font-mono text-sm mb-4">{s.sample}</p>
         <Link href="/onboarding" className="inline-block px-5 py-2.5 rounded-full text-white font-semibold text-sm"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           Try it with your own question →
         </Link>
       </section>
@@ -138,7 +138,7 @@ export default async function SubjectPage({ params }: Props) {
         <h2 className="text-xl font-bold mb-2">Get help in study {s.label.toLowerCase()} now</h2>
         <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>Free forever for the basics. No card.</p>
         <Link href="/onboarding" className="inline-block px-6 py-3 rounded-full text-white font-semibold"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           Open my AI study helper →
         </Link>
       </section>

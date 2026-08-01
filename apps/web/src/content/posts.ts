@@ -17,12 +17,12 @@ export type Post = {
 
 const today = "2026-05-08";
 
-export const POSTS: Post[] = [
+const POSTS_ALL: Post[] = [
   // ─────────────── PILLAR / EVERGREEN ───────────────
   {
     slug: "best-free-ai-study-helper-2026",
     title: "The Best Free AI Study Helper in 2026 (Tested with Real Homework)",
-    description: "We tested every popular free AI study helper with real GCSE, CBSE, AP, IB and FSc homework. Here is what works for math, essays, past papers, and revision.",
+    description: "We tested every popular free AI study helper with real GCSE, CBSE, AP, Cambridge and WAEC homework. Here is what works for math, essays, past papers, and revision.",
     publishedAt: today, readTime: "9 min",
     tags: ["AI study helper", "free AI tutor", "study help AI", "best AI tutor"],
     body: `
@@ -33,14 +33,14 @@ We tried every popular free AI helper this term with four real student tasks:
 1. A GCSE biology essay on enzymes
 2. A CBSE class 9 word problem on simple interest
 3. An AP US History DBQ
-4. An FSc physics derivation on capacitors
+4. A Cambridge A-Level physics derivation on capacitors
 
 The pattern was the same every time. Generic AI gets close. A tutor that knows your context gets the answer in your board's voice.
 
 ## What we measured
 
 - **Accuracy.** Did the answer match what the mark scheme would accept?
-- **Curriculum fit.** Did it use AQA / CBSE / IB phrasing rather than American defaults?
+- **Curriculum fit.** Did it use AQA / CBSE / Cambridge phrasing rather than American defaults?
 - **Step quality.** For math, did it skip steps?
 - **Adaptability.** Did the tone match the student's age?
 
@@ -137,7 +137,7 @@ There is a right way. You use AI as a coach, not a ghostwriter.
 
 ## What examiners actually reward
 
-UK boards (AQA, Edexcel, OCR) use command words: *describe* gets fewer marks than *evaluate*. AP US History rewards historical thinking, not opinions. IB rewards specific evidence. CBSE rewards clear structure and neat handwriting.
+UK boards (AQA, Edexcel, OCR) use command words: *describe* gets fewer marks than *evaluate*. AP US History rewards historical thinking, not opinions. Cambridge rewards specific evidence. CBSE rewards clear structure and neat handwriting.
 
 A generic AI does not know any of this. A tool with your curriculum baked in does. That is why the [Mark My Answer](/grade) tool grades in your board's style.
 
@@ -219,7 +219,7 @@ When you read a question, ask in this order:
 5. Is light or sound involved? → waves
 6. Is heat involved? → thermal physics
 
-Most A-Level / IB / FSc / IGCSE questions sit cleanly in one of these.
+Most A-Level / IGCSE / CBSE / WAEC questions sit cleanly in one of these.
 
 ## Build a one-page identity card per topic
 
@@ -234,7 +234,7 @@ For each topic write:
 
 ## Past papers, every weekend
 
-Past papers are not about memorising answers. They are about pattern recognition for the question filter above. Use [Past Papers](/past-papers) every weekend. After ten weekends you have seen almost every type of question your board uses.
+Past papers are not about memorising answers. They are about pattern recognition for the question filter above. Use [Past Papers](/mock-exam) every weekend. After ten weekends you have seen almost every type of question your board uses.
 
 ## Common pitfalls
 
@@ -278,7 +278,7 @@ Once you know what each group *wants*, you can predict almost any reaction witho
 
 - [Concept Map](/concept-map) for organising a chapter into a graph
 - [Math Solver](/math-solver) for stoichiometry calculations
-- [Past Papers](/past-papers) for pattern drills
+- [Past Papers](/mock-exam) for pattern drills
 - [Flashcards](/flashcards) for functional groups (perfect spaced repetition material)
 
 ## The mole trap
@@ -319,7 +319,7 @@ Use [Whiteboard to Notes](/whiteboard) to convert any textbook diagram into clea
 
 ## The exam-day mistake
 
-Writing too much. Most biology exam answers want a tight, technical sentence. A vague paragraph loses you marks. Look at the [past paper mark scheme](/past-papers) language and copy that style.
+Writing too much. Most biology exam answers want a tight, technical sentence. A vague paragraph loses you marks. Look at the [past paper mark scheme](/mock-exam) language and copy that style.
 `,
   },
   {
@@ -345,15 +345,15 @@ Most B-grade essays skip Explanation and Link. The marks live there.
 - Five dates per topic, max
 - Three causes per event
 - Two consequences per event
-- One historian's argument per topic (for A Level / IB)
+- One historian's argument per topic (for A Level / AP)
 
 That is enough to write any essay your board can throw at you.
 
 ## How AI helps
 
 - [Essay Coach](/essay-coach) gives you outline + thesis options before you start writing
-- [Mark My Answer](/grade) grades in your board's style (AQA / Edexcel / IB / AP)
-- [Past Papers](/past-papers) gets you used to your board's question phrasing
+- [Mark My Answer](/grade) grades in your board's style (AQA / Edexcel / Cambridge / AP)
+- [Past Papers](/mock-exam) gets you used to your board's question phrasing
 
 ## The exam-day checklist
 
@@ -395,7 +395,7 @@ Trying to learn five case studies for one topic is the trap. One sharp case stud
 ## Tools
 
 - [Flashcards](/flashcards) for the five-bullet case study format
-- [Past Papers](/past-papers) for question style
+- [Past Papers](/mock-exam) for question style
 - [Mark My Answer](/grade) to check you are using the case study correctly
 
 ## The map skill question
@@ -774,7 +774,7 @@ You will have days where nothing works. That is part of having ADHD, not a perso
   // ─────────────── EXAM-SPECIFIC ───────────────
   {
     slug: "gcse-revision-guide",
-    title: "GCSE Revision Without Burning Out (UK Boards: AQA, Edexcel, OCR, WJEC, CCEA)",
+    title: "GCSE Revision Without Burning Out (UK Boards: AQA, Edexcel, OCR)",
     description: "GCSE revision plan that respects your other subjects, your sleep, and your weekends. Tested with real GCSE students.",
     publishedAt: today, readTime: "8 min",
     tags: ["GCSE revision", "AQA", "Edexcel", "OCR", "GCSE"],
@@ -784,13 +784,13 @@ GCSE revision tends to fall into two camps. Camp one starts at Christmas. Camp t
 ## The October-to-May plan
 
 - **Oct–Dec.** Twenty minutes a day per subject. Active recall on what you cover in lessons that week.
-- **Jan–Feb.** One past paper a week. Use [Past Papers](/past-papers) to generate fresh ones in your board's style.
+- **Jan–Feb.** One past paper a week. Use [Past Papers](/mock-exam) to generate fresh ones in your board's style.
 - **Mar–Apr.** Two past papers a week. Mock exams under time. Drill weak topics.
 - **May.** Light review only. No new material. Sleep nine hours.
 
 ## What to use
 
-- [Mark My Answer](/grade) — grades in AQA / Edexcel / OCR / WJEC style
+- [Mark My Answer](/grade) — grades in AQA / Edexcel / OCR style
 - [Math Solver](/math-solver) — for the maths and physics calculation papers
 - [Flashcards](/flashcards) — for English literature quotes, biology vocab, history dates
 - [Mock Exam](/mock-exam) — once a week from January
@@ -827,7 +827,7 @@ A Level rewards depth. The grade boundary between A and A* is usually one mark. 
 
 1. **Read the examiner's reports.** Each exam board publishes them after every series. They tell you exactly where students lost marks. Worth more than any study guide.
 2. **One subject per study block.** Two subjects in a row at A Level fries your brain.
-3. **Write in the mark scheme's language.** Use [Mark My Answer](/grade) to grade your essay in AQA / OCR / Edexcel / WJEC / CCEA style.
+3. **Write in the mark scheme's language.** Use [Mark My Answer](/grade) to grade your essay in AQA / OCR / Edexcel style.
 4. **Synoptic flashcards.** Cards that link two topics from different parts of the spec. The hardest questions live there.
 5. **Past papers from at least two specs.** A papers from a different board often expose gaps you didn't know you had.
 
@@ -875,7 +875,7 @@ The IB is harder than most curricula because the assessment is spread over two y
 
 - [Mark My Answer](/grade) — gives feedback in IB criterion language
 - [Concept Map](/concept-map) — for HL biology and HL history especially
-- [Past Papers](/past-papers) — IB papers are scarce; generate similar-style practice
+- [Past Papers](/mock-exam) — IB papers are scarce; generate similar-style practice
 - [Diagnostic + plan](/diagnostic) — useful before mock exams
 
 ## The TOK secret
@@ -888,7 +888,7 @@ TOK essays score on knowledge questions, not on philosophy showmanship. Pick a c
     title: "CBSE Class 10 Boards: A Two-Month Plan That Actually Works",
     description: "How to prep for CBSE Class 10 boards in two months. Subject-by-subject priorities, common pitfalls, and AI tools to help.",
     publishedAt: today, readTime: "7 min",
-    tags: ["CBSE class 10", "CBSE board exam", "CBSE", "matric exam"],
+    tags: ["CBSE class 10", "CBSE board exam", "CBSE", "class 10 revision"],
     body: `
 The CBSE Class 10 board is your first big public exam. The good news: the pattern is consistent, the syllabus is fixed, and the past papers are abundant. With the right two-month plan, 90+ is realistic.
 
@@ -901,7 +901,7 @@ The CBSE Class 10 board is your first big public exam. The good news: the patter
 
 ## Month 2 — practice
 
-- Three full past papers a week. Use [Past Papers](/past-papers) for fresh practice.
+- Three full past papers a week. Use [Past Papers](/mock-exam) for fresh practice.
 - Time yourself.
 - Mark your own work using the official marking scheme phrasing — use [Mark My Answer](/grade).
 - Drill the topics where you lost the most marks.
@@ -940,7 +940,7 @@ Matric and FSc papers in Pakistan reward two things: textbook fluency and tidy, 
 
 1. **Read the Punjab Textbook Board / FBISE textbook chapter once carefully.**
 2. **Answer every chapter-end question in your own words.**
-3. **Use past papers from your specific board** — Federal, Punjab, Sindh, KPK, Balochistan, Aga Khan, AKU-EB. Each has its own style. [Past Papers](/past-papers) generates fresh practice in your board's style.
+3. **Use past papers from your specific board** — Federal, Punjab, Sindh, KPK, Balochistan, Aga Khan, AKU-EB. Each has its own style. [Past Papers](/mock-exam) generates fresh practice in your board's style.
 4. **Practice neat handwriting.** Pakistani boards mark for presentation visibly.
 
 ## Subject-specific priorities
@@ -963,7 +963,7 @@ Federal Board (FBISE) tends to ask straighter questions. Punjab Board favours lo
 - [Help in Study Math →](/help-in-study/math)
 - [Help in Study Physics →](/help-in-study/physics)
 - [Mark My Answer](/grade) (set curriculum to your board)
-- [Past Papers](/past-papers)
+- [Past Papers](/mock-exam)
 `,
   },
   {
@@ -1309,7 +1309,7 @@ That progression is the cheat code.
 ## Where to get fresh past papers
 
 - Official past papers from your board's website (limited supply)
-- [Past Papers](/past-papers) — generates fresh ones in your board's style by topic and decade
+- [Past Papers](/mock-exam) — generates fresh ones in your board's style by topic and decade
 
 The generated ones are not real past papers, but they're synthesized in the same structure and difficulty, so they're great for drilling extra reps once you've used the official set.
 
@@ -1364,11 +1364,11 @@ That's why you still hand in the rewrite to your teacher.
 
 ## Best for
 
-- IB and A Level essays
+- Cambridge and A Level essays
 - AP DBQs
 - GCSE language essays
 - CBSE long-answer questions
-- IELTS / TOEFL writing
+- WAEC English essays
 `,
   },
   {
@@ -1668,7 +1668,7 @@ You don't need to take all of them. Take the SAT or ACT once or twice. Take AP e
 ## How AI tutors fit
 
 - **Daily class help:** [Explain](/explain) and [Math Solver](/math-solver) for homework
-- **AP prep:** [Past Papers](/past-papers) and [Mock Exam](/mock-exam) — the AP-style synthesis is good practice
+- **AP prep:** [Past Papers](/mock-exam) and [Mock Exam](/mock-exam) — the AP-style synthesis is good practice
 - **SAT prep:** [Mock Exam](/mock-exam) for timed practice; [Vocab Builder](/vocab) for the reading section
 - **Essay writing:** [Essay Coach](/essay-coach) for any AP essay or college application essay
 
@@ -2319,9 +2319,9 @@ That's 10 minutes total. Beats most one-hour study sessions.
   {
     slug: "help-in-study-psychology",
     title: "Help in Study: Psychology — Memorising Studies Without Drowning",
-    description: "AP Psychology, IB Psychology, and A Level Psychology all rely on named studies. Here is how to learn them so they stick.",
+    description: "AP Psychology, GCSE Psychology, and A Level Psychology all rely on named studies. Here is how to learn them so they stick.",
     publishedAt: today, readTime: "5 min",
-    tags: ["help in study psychology", "AP psychology", "IB psychology"],
+    tags: ["help in study psychology", "AP psychology", "GCSE psychology"],
     body: `
 Psychology exams reward two things: clean definitions and named studies. Most students underprepare on the studies. The way to memorise studies is the same way actors memorise scripts — chunk them.
 
@@ -2353,7 +2353,7 @@ Memorise these in the four-card format and you can answer most named-study quest
 
 ## Use AI for the critique angle
 
-A levels and IB reward critical evaluation. Use [Mark My Answer](/grade) on a sample answer to see how the AI critiques your evaluation paragraph.
+A levels and AP reward critical evaluation. Use [Mark My Answer](/grade) on a sample answer to see how the AI critiques your evaluation paragraph.
 
 ## What examiners actually want
 
@@ -2505,7 +2505,7 @@ Casio fx-991 and similar can plot a table of values for any function. Useful in 
 
 ## 4. SOLVE and EQN
 
-Some scientific calculators can solve equations directly. Check whether yours allows this in your exam (most A Level / SAT exams do).
+Some scientific calculators can solve equations directly. Check whether yours allows this in your exam (most A Level / AP exams do).
 
 ## 5. Standard form / scientific notation
 
@@ -2619,7 +2619,7 @@ Two tutor sessions a month + AI = the same outcome as four tutor sessions a mont
 
 - You're a year behind and need to catch up
 - The teacher's classroom style doesn't fit you
-- Specific high-stakes test prep (SAT, MCAT, LSAT)
+- Specific high-stakes test prep (AP exams, final board exams)
 - You need someone to say "you can do this" once a week
 
 ## When AI is enough
@@ -2727,7 +2727,55 @@ Open [Calculators](/calculator) and pick the Percentage tab. All three formulas,
 ];
 
 // Append batch-2 (50 more articles) and batch-3 (12 more) to the original 65 above.
-POSTS.push(...POSTS_BATCH_2, ...POSTS_BATCH_3);
+POSTS_ALL.push(...POSTS_BATCH_2, ...POSTS_BATCH_3);
+
+// ─── Focus-to-five blog cleanup ───
+// Posts removed from the LIVE blog — off-topic for our five exam systems,
+// dead-feature ads, IB (not one of the five), or merged duplicates. Kept in
+// source for reference; each 301-redirects to the mapped target below.
+export const BLOG_REDIRECTS: Record<string, string> = {
+  // off-topic foreign-language posts → English hub
+  "ai-arabic-tutor": "/help-in-study/english",
+  "ai-tutor-arabic-dialects": "/help-in-study/english",
+  "ai-french-tutor": "/help-in-study/english",
+  "ai-spanish-tutor": "/help-in-study/english",
+  "spanish-ser-vs-estar": "/help-in-study/english",
+  "mandarin-tones-for-beginners": "/help-in-study/english",
+  "japanese-hiragana-memorisation": "/help-in-study/english",
+  "german-cases-simplified": "/help-in-study/english",
+  "ielts-writing-band-9-tips": "/help-in-study/english",
+  // non-five exams (civil service, Pakistan boards) → study-skills / seasonal pillar
+  "upsc-prep-beginner-guide": "/blog/how-to-study-for-exams",
+  "css-pakistan-exam-prep": "/blog/how-to-study-for-exams",
+  "nts-test-prep-pakistan": "/blog/how-to-study-for-exams",
+  "matric-fsc-pakistan-exam-prep": "/blog/2026-board-exam-survival-kit",
+  // dead-feature ads
+  "microsoft-teams-ai-tutor": "/blog/best-free-ai-study-helper-2026",
+  "google-classroom-ai-integration": "/blog/best-free-ai-study-helper-2026",
+  "diagnostic-quiz-study-plan": "/blog/how-to-study-for-exams",
+  "weekly-recap-parent": "/blog/parents-help-with-homework",
+  // merged duplicates → canonical
+  "five-minute-revision-trick": "/blog/active-recall-vs-rereading",
+  "how-to-use-ai-flashcards": "/blog/spaced-repetition-explained",
+  "study-plan-for-exams": "/blog/ai-revision-timetable-30-days",
+  "step-by-step-math-solver": "/blog/ai-study-helper-math",
+  "forces-and-motion-physics": "/blog/newtons-laws-explained",
+  "concept-map-study-method": "/blog/mind-maps-for-revision",
+  "study-music-vs-silence": "/blog/study-music-vs-silence-myth",
+  // IB — not one of the five boards
+  "ib-diploma-prep": "/blog",
+  "cbse-vs-igcse-vs-ib": "/blog",
+  // Non-five entrance/admission exams (JEE/NEET = India, SAT/ACT = US) → subject hubs
+  "jee-mains-prep": "/help-in-study/math",
+  "jee-mains-physics-problem-types": "/help-in-study/physics",
+  "neet-biology-strategy": "/help-in-study/biology",
+  "neet-biology-diagram-memorisation": "/help-in-study/biology",
+  "sat-math-timing-strategy": "/help-in-study/math",
+  "act-science-section-tips": "/blog/how-to-study-for-exams",
+  "us-curricula-ap-sat-common-core": "/blog",
+};
+
+export const POSTS: Post[] = POSTS_ALL.filter((p) => !BLOG_REDIRECTS[p.slug]);
 
 export function findPost(slug: string) {
   return POSTS.find((p) => p.slug === slug);

@@ -5,7 +5,7 @@
 export const dynamic = "force-static";
 
 export function GET() {
-  const body = `# AI training & data collection preferences for AI Study Helper
+  const body = `# AI training & data collection preferences for Help in Study
 # This file is parsed by AI training pipelines that respect Spawning's ai.txt spec.
 
 User-Agent: *
@@ -16,7 +16,7 @@ Disallow: /
 # without an explicit licensing agreement. Educational use, reading, indexing
 # for search, and sharing for student benefit is unrestricted (see robots.txt).
 #
-# To request a licensing arrangement, contact: legal@${(typeof process !== "undefined" && (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/^https?:\/\//, "")) || "ai-study-helper.app"}
+# To request a licensing arrangement, contact: legal@${(typeof process !== "undefined" && (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/^https?:\/\//, "")) || "helpinstudy.com"}
 `;
   return new Response(body, {
     headers: { "content-type": "text/plain; charset=utf-8" },

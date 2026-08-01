@@ -1,56 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Help in Study logo">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4F46E5"/>
-      <stop offset="55%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-    <linearGradient id="page" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#e5e7ff"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.45)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Background — rounded square with brand gradient -->
-  <rect width="512" height="512" rx="118" fill="url(#bg)"/>
-  <!-- soft top highlight -->
-  <rect width="512" height="512" rx="118" fill="url(#glow)"/>
-
-  <!-- Open book — two pages forming a slight V -->
-  <g>
-    <!-- Soft shadow under the book -->
-    <ellipse cx="256" cy="402" rx="170" ry="14" fill="rgba(0,0,0,0.18)"/>
-
-    <!-- Left page -->
-    <path d="M 90 188 L 256 220 L 256 396 L 100 372 Q 90 370 90 360 Z" fill="url(#page)"/>
-    <!-- Right page -->
-    <path d="M 422 188 L 256 220 L 256 396 L 412 372 Q 422 370 422 360 Z" fill="#ffffff"/>
-
-    <!-- Book spine — subtle shadow line down the middle -->
-    <rect x="252" y="220" width="8" height="176" rx="4" fill="rgba(79,70,229,0.35)"/>
-
-    <!-- Three short horizontal lines on each page suggesting text -->
-    <g fill="rgba(79,70,229,0.32)">
-      <rect x="120" y="252" width="116" height="8" rx="4"/>
-      <rect x="120" y="282" width="100" height="8" rx="4"/>
-      <rect x="120" y="312" width="116" height="8" rx="4"/>
-      <rect x="276" y="252" width="116" height="8" rx="4"/>
-      <rect x="276" y="282" width="100" height="8" rx="4"/>
-      <rect x="276" y="312" width="116" height="8" rx="4"/>
-    </g>
-  </g>
-
-  <!-- AI sparkle constellation above the book -->
-  <g fill="#ffffff">
-    <!-- big star (centered, above book spine) -->
-    <path d="M 256 76 L 270 124 L 318 138 L 270 152 L 256 200 L 242 152 L 194 138 L 242 124 Z"/>
-    <!-- small star top-left -->
-    <path d="M 130 110 L 136 126 L 152 132 L 136 138 L 130 154 L 124 138 L 108 132 L 124 126 Z" opacity="0.8"/>
-    <!-- small star top-right -->
-    <path d="M 384 116 L 388 128 L 400 132 L 388 136 L 384 148 L 380 136 L 368 132 L 380 128 Z" opacity="0.7"/>
-  </g>
+  <!-- Full-bleed teal background (maskable-safe; OS applies its own corner mask) -->
+  <rect width="512" height="512" fill="#0b7d6f"/>
+  <!-- Help bubble (subtle, within safe zone) -->
+  <path d="M120 250c0-70 62-110 136-110s136 40 136 110-62 110-136 110c-16 0-31-2-46-5l-74 27 16-58c-30-22-32-45-32-74z" fill="#ffffff" opacity="0.16"/>
+  <!-- Spark -->
+  <path d="M256 168l30 62 68 9-49 48 12 68-61-32-61 32 12-68-49-48 68-9z" fill="#ffffff"/>
 </svg>

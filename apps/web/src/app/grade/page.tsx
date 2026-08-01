@@ -60,7 +60,7 @@ export default function GradePage() {
         <input type="range" min={1} max={20} value={marks} onChange={(e) => setMarks(Number(e.target.value))} className="w-full" />
 
         <button disabled={busy || !question || !studentAnswer} onClick={grade} className="px-6 py-3 rounded-ash text-white font-semibold disabled:opacity-40"
-          style={{ background: "linear-gradient(135deg, var(--ash-primary), #7c3aed)" }}>
+          style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           {busy ? "Marking…" : "Mark it"}
         </button>
         {err && <p className="text-red-600 text-sm">{err}</p>}

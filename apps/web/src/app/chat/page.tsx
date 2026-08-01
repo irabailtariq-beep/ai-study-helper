@@ -104,7 +104,7 @@ export default function ChatPage() {
             onClick={() => setAnswerLength("short")}
             className="flex-1 py-2 text-sm font-semibold"
             style={{
-              background: answerLength === "short" ? "linear-gradient(135deg, var(--ash-accent), #7c3aed)" : "transparent",
+              background: answerLength === "short" ? "linear-gradient(135deg, var(--ash-accent), #0e9f8e)" : "transparent",
               color: answerLength === "short" ? "white" : "var(--ash-text)",
             }}
           >
@@ -115,7 +115,7 @@ export default function ChatPage() {
             onClick={() => setAnswerLength("long")}
             className="flex-1 py-2 text-sm font-semibold"
             style={{
-              background: answerLength === "long" ? "linear-gradient(135deg, var(--ash-primary), #7c3aed)" : "transparent",
+              background: answerLength === "long" ? "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" : "transparent",
               color: answerLength === "long" ? "white" : "var(--ash-text)",
             }}
           >

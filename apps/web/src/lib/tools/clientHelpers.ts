@@ -1,5 +1,5 @@
 // Shared helpers for the simpler tool pages so each is short and consistent.
-import type { UserProfile } from "@ash/core";
+import type { UserProfile, GrammarResult } from "@ash/core";
 
 export async function explainWith(payload: {
   profile: UserProfile;
@@ -18,6 +18,17 @@ export async function explainWith(payload: {
   const data = await res.json();
   if (!res.ok) throw new Error(data.error ?? "Request failed");
   return data as { explanation: string; keyPoints: string[]; followUps: string[]; disclaimer: string };
+}
+
+export async function grammarWith(profile: UserProfile, text: string): Promise<GrammarResult> {
+  const res = await fetch("/api/grammar", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ profile, text }),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error ?? "Request failed");
+  return data as GrammarResult;
 }
 
 export function ifNoProfileMessage(profile: any): string | null {

@@ -5,20 +5,16 @@ import { LEARN_COMBOS } from "@/content/learnPages";
 
 const STATIC_PATHS = [
   "",
-  // Onboarding & core tools
-  "/onboarding", "/explain", "/transform", "/quiz", "/chat",
-  "/syllabus", "/flashcards", "/progress", "/diagnostic",
-  "/grade", "/concept-map", "/parent", "/classroom",
-  "/math-solver", "/formula-sheet",
-  // New tools
-  "/essay-coach", "/vocab", "/translate", "/whiteboard",
-  "/mock-exam", "/lecture-summary", "/problem-variants",
-  "/calculator", "/graph-plotter",
+  "/onboarding", "/progress",
+  // The 10 tools
+  "/explain", "/transform", "/chat",
+  "/math-solver", "/quiz", "/mock-exam", "/grade",
+  "/flashcards", "/lecture-summary", "/essay-coach",
   "/tools",
   // Marketing
-  "/pricing", "/blog", "/about", "/contact",
+  "/blog", "/about", "/contact",
   // Legal / compliance
-  "/privacy", "/terms", "/refund-policy",
+  "/privacy", "/terms",
   // Account (signin only — /settings is robots-disallowed and shouldn't be in sitemap)
   "/signin",
 ];

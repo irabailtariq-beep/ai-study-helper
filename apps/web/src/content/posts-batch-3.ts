@@ -9,7 +9,7 @@ export const POSTS_BATCH_3: Post[] = [
   {
     slug: "2026-board-exam-survival-kit",
     title: "2026 Board Exam Survival Kit: What Actually Saves Your Grade in the Last 8 Weeks",
-    description: "The realistic 8-week plan for CBSE, ICSE, GCSE, IGCSE, Matric and FSc students. What to drop, what to drill, and how to use AI without becoming dependent.",
+    description: "The realistic 8-week plan for CBSE, GCSE, AP, Cambridge and WAEC students. What to drop, what to drill, and how to use AI without becoming dependent.",
     publishedAt: today, readTime: "8 min",
     tags: ["board exam prep", "CBSE 2026", "IGCSE revision", "exam survival", "AI study helper"],
     body: `

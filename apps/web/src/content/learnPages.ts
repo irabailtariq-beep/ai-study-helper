@@ -32,7 +32,7 @@ export type LearnCombo = {
   extraNotes?: string;
 };
 
-export const LEARN_COMBOS: LearnCombo[] = [
+const ALL_LEARN_COMBOS: LearnCombo[] = [
 
   // ──────────────────────────── PAKISTAN ────────────────────────────
 
@@ -316,7 +316,7 @@ export const LEARN_COMBOS: LearnCombo[] = [
       "NCERT Exemplar problems (much harder than the textbook — predictive for Section D)",
     ],
     studyPlan: "Eight weeks: cover all NCERT exercises, two chapters per week. Six weeks out: NCERT Exemplar problems. Four weeks: 5 years of PYQs by topic. Two weeks: full-length papers under exam conditions. Final week: only revision, no new content.",
-    extraNotes: "Class 12 students prepping for JEE Main alongside boards: NCERT solves your boards but you still need to do JEE-specific problem sets. The two exams reward different skills.",
+    extraNotes: "Class 12 board Maths rewards clean, complete working — write every step, because method marks are awarded even when the final answer slips. Keep a running list of the formulas you forget most and revise them weekly.",
   },
 
   {
@@ -355,7 +355,7 @@ export const LEARN_COMBOS: LearnCombo[] = [
     subject: "biology",
     board: "in-cbse",
     metaTitle: "CBSE Biology — Class 10 & 12 board help (NCERT)",
-    metaDescription: "Free AI biology tutor for CBSE Class 10 and Class 12 boards. NCERT chapter notes, diagram practice, NEET-aligned content, mark-scheme answers.",
+    metaDescription: "Free AI biology tutor for CBSE Class 10 and Class 12 boards. NCERT chapter notes, diagram practice, exam-style questions, mark-scheme answers.",
     intro: "CBSE Biology Class 12 is mostly NCERT, line-by-line. The marking is so strict that paraphrasing too much loses marks. Our AI knows the exact NCERT phrasing and can show you which sentences are 'mark-bearing' — i.e. you must include them verbatim.",
     examFormat: "Class 12 Biology: 70-mark theory + 30-mark practical. Theory is 3 hours, 5 sections (A: 16 × 1-mark MCQs; B: 8 × 2-mark; C: 5 × 3-mark; D: 3 × 5-mark Long; E: 4-mark case studies). Class 10 Biology is part of the integrated Science paper.",
     highYieldTopics: [
@@ -378,15 +378,15 @@ export const LEARN_COMBOS: LearnCombo[] = [
     pastPaperSources: [
       "cbse.gov.in → Sample Papers (official)",
       "Oswaal CBSE Question Bank (Biology Class 12) — the most-used PYQ compilation",
-      "Disha Publishers Chapter-wise PYQ for NEET dual-purpose prep",
+      "Disha Publishers Chapter-wise Previous-Year Questions (CBSE)",
     ],
-    studyPlan: "Read each NCERT chapter twice — first for understanding, second to highlight mark-bearing sentences. Then practice diagram drawing daily. Last 3 weeks: full PYP papers. NEET candidates: layer in 30 min of MCQs daily from week 8.",
+    studyPlan: "Read each NCERT chapter twice — first for understanding, second to highlight mark-bearing sentences. Then practice diagram drawing daily. Last 3 weeks: full previous-year papers. From week 8, add 30 min of daily MCQs to sharpen recall.",
   },
 
   {
     subject: "chemistry",
     board: "in-cbse",
-    metaTitle: "CBSE Chemistry — Class 11, 12 board + JEE/NEET help",
+    metaTitle: "CBSE Chemistry — Class 11 & 12 board help (NCERT)",
     metaDescription: "Free AI chemistry tutor for CBSE Class 11 and 12. Physical, organic, inorganic chemistry NCERT-aligned. Mechanisms, calculations, mark-scheme answers.",
     intro: "CBSE Chemistry is three subjects in one: Physical Chemistry rewards math, Organic Chemistry rewards mechanism memorisation, and Inorganic Chemistry rewards recall. Most students drop marks in Inorganic because they don't realise how much memorisation it needs.",
     examFormat: "Class 12 Chemistry: 70-mark theory + 30-mark practical. Theory in 3 hours, similar 5-section structure to Biology. Class 11 is the foundation but isn't directly examined in CBSE board (only at school level).",
@@ -418,8 +418,8 @@ export const LEARN_COMBOS: LearnCombo[] = [
   {
     subject: "physics",
     board: "in-cbse",
-    metaTitle: "CBSE Physics — Class 11 & 12 board + JEE/NEET aligned",
-    metaDescription: "Free AI physics tutor for CBSE Class 11 and 12. NCERT-aligned derivations, numerical practice, JEE/NEET-style problems.",
+    metaTitle: "CBSE Physics — Class 11 & 12 board help (NCERT)",
+    metaDescription: "Free AI physics tutor for CBSE Class 11 and 12. NCERT-aligned derivations, numerical practice, exam-style problems.",
     intro: "CBSE Physics looks scary but has the cleanest pattern of any subject. Every paper has: one derivation per section (electromagnetism, optics, modern), one numerical per section, and a few short-answer questions. Memorise 20 derivations and you've covered ~30 marks.",
     examFormat: "Class 12 Physics: 70-mark theory + 30-mark practical. Theory 3 hours, 5 sections. Class 11 not directly board-examined.",
     highYieldTopics: [
@@ -443,7 +443,7 @@ export const LEARN_COMBOS: LearnCombo[] = [
       "cbse.gov.in sample papers",
       "Oswaal CBSE Physics Question Bank",
       "H.C. Verma Concepts of Physics — for conceptual depth",
-      "DC Pandey for JEE-aligned practice",
+      "DC Pandey Understanding Physics — for extra numerical practice",
     ],
     studyPlan: "Derivations first — print or write out all 20 standard ones. Drill them weekly. Then numericals by chapter. Final month: PYPs only.",
   },
@@ -640,7 +640,7 @@ export const LEARN_COMBOS: LearnCombo[] = [
       "physicsandmathstutor.com — topic-by-topic PYQ collections",
       "Corbettmaths + MathsGenie — free worksheets and past-paper grouping by topic",
     ],
-    studyPlan: "Eight weeks before exams: one topic per week, Corbettmaths worksheet + AQA PYQ. From week 4 onwards: one full PYP under timed conditions per week. Mark with the actual AQA scheme.",
+    studyPlan: "Eight weeks before exams: one topic per week, Corbettmaths worksheet + AQA past-paper questions. From week 4 onwards: one full past paper under timed conditions per week. Mark with the actual AQA scheme.",
     extraNotes: "If you're on Higher and struggling with grade 4 questions on Paper 1, you should consider Foundation — the cap of grade 5 still gets you a pass with much less stress.",
   },
 
@@ -1311,6 +1311,19 @@ export const LEARN_COMBOS: LearnCombo[] = [
     studyPlan: "Master uncertainties early (Topic 1) — it's in every paper. IA in Year 2. Past papers from January Year 2.",
   },
 ];
+
+// We focus on FIVE exam systems only. Combos for any other board stay in the
+// source above for future reference, but are never generated, linked, or indexed.
+const FIVE_BOARDS = new Set([
+  "in-cbse",               // CBSE (India)
+  "uk-gcse-aqa",           // GCSE (UK)
+  "uk-gcse-edexcel",       // GCSE (UK)
+  "us-ap",                 // AP (USA)
+  "intl-cambridge-igcse",  // Cambridge IGCSE
+  "intl-cambridge-alevel", // Cambridge International A-Level
+]);
+
+export const LEARN_COMBOS: LearnCombo[] = ALL_LEARN_COMBOS.filter((c) => FIVE_BOARDS.has(c.board));
 
 /**
  * Quick lookup map keyed by `${subject}/${board}`.
