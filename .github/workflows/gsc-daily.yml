@@ -1,0 +1,37 @@
+name: Daily Search Console check
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # 09:00 UTC = 2:00 PM Pakistan (PKT). Cron can drift ~5-30 min.
+  workflow_dispatch: {}    # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write          # so it can commit the updated snapshot back
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        working-directory: tools/gsc
+        run: npm install --no-audit --no-fund
+
+      - name: Pull Search Console
+        working-directory: tools/gsc
+        env:
+          GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
+        run: node gsc-daily.mjs
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "gsc-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/gsc/history.json
+          git commit -m "chore: daily Search Console snapshot [skip ci]" || echo "no changes to commit"
+          git push

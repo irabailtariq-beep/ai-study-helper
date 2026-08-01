@@ -1,0 +1,9 @@
+{
+  "name": "gsc-monitor",
+  "private": true,
+  "type": "module",
+  "description": "Daily Google Search Console snapshot for helpinstudy.com (runs in GitHub Actions).",
+  "dependencies": {
+    "googleapis": "^173.0.0"
+  }
+}
