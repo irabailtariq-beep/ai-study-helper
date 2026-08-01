@@ -50,10 +50,37 @@ hist.push(snap);
 hist.sort((a, b) => (a.ranOn < b.ranOn ? -1 : 1));
 fs.writeFileSync(HIST, JSON.stringify(hist, null, 2) + "\n");
 
-const pct = snap.prev7Clicks ? Math.round((100 * (snap.last7Clicks - snap.prev7Clicks)) / snap.prev7Clicks) : 0;
-const drop = snap.prev7Clicks >= 5 && pct <= -25;
-console.log(`✅ Snapshot ${snap.ranOn} (${snap.window})`);
-console.log(`   last 7d: ${snap.last7Clicks} clicks / ${snap.last7Impressions} impressions`);
-console.log(`   prev 7d: ${snap.prev7Clicks} clicks / ${snap.prev7Impressions} impressions`);
-console.log(`   week-over-week clicks: ${pct >= 0 ? "+" : ""}${pct}%${drop ? "  ⚠️ DROP" : ""}`);
-console.log(`   history entries: ${hist.length}`);
+const prevRead = hist.length >= 2 ? hist[hist.length - 2] : null;
+const wowClicks = snap.prev7Clicks ? Math.round((100 * (snap.last7Clicks - snap.prev7Clicks)) / snap.prev7Clicks) : 0;
+const wowImpr = snap.prev7Impressions ? Math.round((100 * (snap.last7Impressions - snap.prev7Impressions)) / snap.prev7Impressions) : 0;
+
+let verdict;
+if (snap.last7Impressions === 0) {
+  verdict = "🌱 Nothing yet — Google isn't showing the site in search results. Totally normal for a brand-new site; it takes weeks.";
+} else if (snap.last7Clicks === 0) {
+  verdict = `👀 Google is showing you (${snap.last7Impressions} impressions in 7 days) but 0 clicks — you're ranking too low to get clicks yet. Normal early on; the job now is to climb the rankings.`;
+} else if (!prevRead) {
+  verdict = `📊 First clicks tracked — ${snap.last7Clicks} in the last 7 days. Baseline set; we'll compare from here.`;
+} else if (wowClicks > 5) {
+  verdict = `📈 GROWING — clicks up ${wowClicks}% vs the week before. Whatever you're doing, keep going.`;
+} else if (wowClicks < -25 && snap.prev7Clicks >= 5) {
+  verdict = `📉 DOWN — clicks fell ${Math.abs(wowClicks)}% vs the week before. Worth a look.`;
+} else {
+  verdict = `➡️ Steady — about the same as last week (clicks ${wowClicks >= 0 ? "+" : ""}${wowClicks}%).`;
+}
+
+const summary = `## 📊 Search Console — ${snap.ranOn}
+
+**${verdict}**
+
+|  | Clicks | Impressions |
+|---|---|---|
+| Last 7 days | ${snap.last7Clicks} | ${snap.last7Impressions} |
+| Week before | ${snap.prev7Clicks} | ${snap.prev7Impressions} |
+| Change | ${wowClicks >= 0 ? "+" : ""}${wowClicks}% | ${wowImpr >= 0 ? "+" : ""}${wowImpr}% |
+
+@irabailtariq-beep — for the deep *"why is this happening & what should we fix,"* tell Claude **"check Search Console."**
+`;
+fs.writeFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), "summary.md"), summary);
+console.log(summary);
+console.log(`(history entries: ${hist.length})`);

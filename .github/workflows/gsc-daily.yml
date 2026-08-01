@@ -6,7 +6,8 @@ on:
   workflow_dispatch: {}    # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write          # so it can commit the updated snapshot back
+  contents: write          # commit the updated snapshot back
+  issues: write            # post the daily verdict as an issue comment (emails you)
 
 jobs:
   snapshot:
@@ -16,7 +17,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Install deps
         working-directory: tools/gsc
@@ -27,6 +28,18 @@ jobs:
         env:
           GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
         run: node gsc-daily.mjs
+
+      - name: Email the daily verdict (GitHub issue -> your inbox)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="Daily Search Console report"
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$NUM" ]; then
+            gh issue create --title "📊 $TITLE" --body-file tools/gsc/summary.md
+          else
+            gh issue comment "$NUM" --body-file tools/gsc/summary.md
+          fi
 
       - name: Commit snapshot
         run: |
