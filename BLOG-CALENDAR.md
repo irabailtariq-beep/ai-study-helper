@@ -10,7 +10,7 @@ Status key: ⬜ queued · ✅ published
 | # | Title | Primary keyword | Board · Subject | Links to | Status |
 |---|-------|-----------------|-----------------|----------|--------|
 | 1 | How to Answer "Evaluate" Questions in GCSE (Where the Marks Hide) | gcse evaluate questions | GCSE · exam technique | /grade | ✅ 2026-08-02 · /blog/gcse-evaluate-questions |
-| 2 | "Show That" Questions in A-Level Maths: The Full-Marks Method | show that questions a level maths | Cambridge A-Level · Maths | /math-solver | ⬜ |
+| 2 | "Show That" Questions in Maths (GCSE + A-Level): The Full-Marks Method | show that questions maths | GCSE + A-Level · Maths | /math-solver | ✅ 2026-08-02 · /blog/show-that-questions-maths |
 | 3 | AQA GCSE Required Practicals: The Ones You Must Memorise | aqa gcse required practicals | GCSE · Science | /explain | ⬜ |
 | 4 | CBSE Class 12 Answer Writing: Hitting the "Mark-Bearing" Sentences | cbse class 12 answer writing | CBSE · all | /grade | ⬜ |
 | 5 | Cambridge IGCSE Biology Paper 6: The Alternative-to-Practical Guide | igcse biology paper 6 | Cambridge IGCSE · Biology | /explain | ⬜ |

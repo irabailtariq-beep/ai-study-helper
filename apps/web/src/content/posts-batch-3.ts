@@ -1144,4 +1144,93 @@ For how this fits into a sane revision plan, see the [GCSE revision guide](/blog
 `,
   },
 
+  {
+    slug: "show-that-questions-maths",
+    title: "'Show That' Questions in Maths: How to Get the Full Marks (GCSE & A-Level)",
+    description: "'Show that' questions hand you the answer — so the marks are all in the working. Here's the method examiners want, with worked GCSE and A-Level examples.",
+    publishedAt: "2026-08-02", readTime: "7 min",
+    tags: ["GCSE maths", "A-Level maths", "show that", "exam technique", "maths proof"],
+    body: `
+**Quick answer:** A "show that" question gives you the answer and asks you to *prove* it. Every mark is for the working, not the result — so show each step, work *forwards* from what you're given (never backwards from the answer), and finish by clearly reaching the stated result. No working means no marks, even with the right answer on the page.
+
+Here's a situation every maths student knows, and one that used to drive me up the wall: the question says *"Show that the answer is 4(n + 1),"* you write "= 4(n + 1)" underneath, and you get 1 mark out of 3. Infuriating — because you were *right*. But "show that" isn't testing whether you know the answer. It literally told you the answer. It's testing whether you can *get there*, step by step, so an examiner can follow every move.
+
+Once you see what these questions are actually for, they turn into some of the easiest marks on the paper. It works the same way in GCSE (AQA, Edexcel, OCR) and A-Level maths.
+
+## Why "show that" hands you the answer
+
+Two reasons, and both are good news:
+
+1. **It rescues the next part.** "Show that" is usually part (a) of a bigger question. If you can't fully prove the result, you can *still* use the given answer in part (b) and collect those marks. So a tricky "show that" never sinks the whole question.
+2. **It tells you when to stop.** You know exactly what you're aiming at, so you know the moment your working is done.
+
+The catch: because the answer is handed to you, the examiner gives **zero marks for writing it down**. Every mark is for the journey.
+
+## The one rule that catches everyone: work forwards, not backwards
+
+The most common mistake is starting from the answer and trying to work *back* to the question. Examiners spot it instantly, and it usually scores nothing — you cannot use the thing you're trying to prove as a step in the proof.
+
+Start from **what you're given** (or a general starting point like "let the number be n") and work **towards** the stated result. Your last line should *arrive* at the answer, not begin with it.
+
+## The method, step by step
+
+1. **Write down what you're starting with** — the general form, the expression, or the given information. For number proofs, define your terms: "Let the integer be n."
+2. **One clear step per line.** Don't merge three moves into one. Method marks are given line by line, and the examiner can only reward a step they can actually see.
+3. **Keep going until your expression matches the target** exactly.
+4. **State that you've reached it** — a short "which is the required result" or "as required" closes the proof cleanly.
+
+Rough timing: about **one minute per mark**. A 3-mark "show that" should take around three minutes — enough for three clean lines.
+
+## Worked example 1 — GCSE (algebraic proof)
+
+*Show that the sum of two consecutive odd numbers is always a multiple of 4.*
+
+- Let the two consecutive odd numbers be 2n + 1 and 2n + 3. **(define your terms)**
+- Their sum is (2n + 1) + (2n + 3) = 4n + 4. **(one step)**
+- Factorise: 4n + 4 = 4(n + 1). **(one step)**
+- 4(n + 1) is 4 times an integer, so it is a multiple of 4 — as required. **(state the result)**
+
+Four short lines, full marks. Notice we started from a *general* odd number (2n + 1), not from a couple of examples — examples are never a proof.
+
+## Worked example 2 — A-Level (calculus)
+
+*Show that the curve y = x^3 - 3x has a stationary point at x = 1.*
+
+- Differentiate: dy/dx = 3x^2 - 3. **(method)**
+- Stationary points occur where dy/dx = 0, so 3x^2 - 3 = 0. **(set up the condition)**
+- Solve: x^2 = 1, so x = 1 (or x = -1). **(one step)**
+- Since x = 1 satisfies dy/dx = 0, there is a stationary point at x = 1 — as required.
+
+Again, we didn't assume x = 1 and check it (that's working backwards, and it earns fewer marks). We *derived* it.
+
+## Test yourself
+
+Try these, then mark your *working*, not just the answer:
+
+1. **GCSE:** Show that the sum of three consecutive integers is always a multiple of 3.
+2. **GCSE:** Show that (n + 3)^2 - (n - 3)^2 = 12n.
+3. **A-Level:** Show that the curve y = x^2 - 4x + 7 has a minimum point at x = 2.
+
+*Quick answers: (1) n + (n + 1) + (n + 2) = 3n + 3 = 3(n + 1). (2) Expand both brackets: (n^2 + 6n + 9) - (n^2 - 6n + 9) = 12n. (3) dy/dx = 2x - 4 = 0 gives x = 2; the second derivative is 2, which is positive, so it's a minimum.*
+
+Want it marked properly, line by line, in your board's style? Paste your working into [Math solver](/math-solver) to check each step, or [Mark my answer](/grade) to see exactly where you'd drop a method mark. Do a handful and the pattern sticks for good.
+
+## FAQ
+
+**What's the difference between "show that" and "prove"?**
+They're close. "Prove" usually wants a fully rigorous, general argument (more common at A-Level). "Show that" is a little gentler — reach a specific stated result with clear working. Both need every step shown, and both forbid working backwards from the answer.
+
+**Can I use the given answer in my working?**
+Not to prove the result itself — that's circular. But you *can* use the given answer in a *later* part of the question. That's the whole reason it's handed to you.
+
+**How many marks do I lose for the right answer with no working?**
+On a "show that," usually almost all of them. The answer was given, so it's worth nothing on its own — the marks live entirely in the steps.
+
+**Is "verify" the same thing?**
+No. "Verify" lets you substitute a value in and check it works. "Show that" wants you to *derive* the result. Always read the command word.
+
+**In short:** "show that" means prove the given answer, forwards, one clear step per line, then write "as required." The answer is free; the marks are in the working. Show it all, and these become some of the safest marks on the whole paper.
+`,
+  },
+
 ];
