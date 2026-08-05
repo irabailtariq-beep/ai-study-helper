@@ -1,0 +1,31 @@
+name: Daily blog auto-publish
+
+on:
+  schedule:
+    - cron: "30 9 * * *"   # 09:30 UTC = 2:30 PM Pakistan (PKT). Cron can drift ~5-30 min.
+  workflow_dispatch: {}    # lets you publish the next one manually too
+
+permissions:
+  contents: write          # commit the newly published post + updated queue
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Publish next queued post
+        run: node tools/blog-queue/publish-next.mjs
+
+      - name: Commit + deploy (no skip-ci, so Vercel rebuilds and the post goes live)
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet; then echo "No changes (queue empty) — nothing to publish."; exit 0; fi
+          git add apps/web/src/content/posts-batch-3.ts tools/blog-queue/queue.json
+          git commit -m "Blog: auto-publish next queued post"
+          git push
