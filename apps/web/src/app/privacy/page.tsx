@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         </ul>
 
         <h2 className="text-xl font-semibold">Contact</h2>
-        <p>For privacy requests or questions, email <a href="mailto:privacy@helpinstudy.com" className="underline">privacy@helpinstudy.com</a>.</p>
+        <p>For privacy requests or questions, email <a href="mailto:raistudyhelper@gmail.com" className="underline">raistudyhelper@gmail.com</a>.</p>
       </section>
     </main>
   );

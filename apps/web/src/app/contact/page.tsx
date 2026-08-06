@@ -22,12 +22,10 @@ export default function ContactPage() {
       </header>
 
       <section className="space-y-4">
-        <Card title="Support / bug reports" email="support@helpinstudy.com" />
-        <Card title="Privacy & data requests" email="privacy@helpinstudy.com" />
-        <Card title="Security" email="security@helpinstudy.com" sub="Or use security.txt" />
-        <Card title="Schools & partnerships" email="partners@helpinstudy.com" />
-        <Card title="Press / media" email="press@helpinstudy.com" />
-        <Card title="Anything else" email="hello@helpinstudy.com" />
+        <Card title="Email us — support, feedback, partnerships, press" email="raistudyhelper@gmail.com" />
+        <p className="text-sm" style={{ color: "var(--ash-muted)" }}>
+          One inbox for everything — a real person (Rabail) reads it and replies.
+        </p>
       </section>
 
       <p className="text-xs mt-10" style={{ color: "var(--ash-muted)" }}>
