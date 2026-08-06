@@ -21,6 +21,18 @@ jobs:
       - name: Publish next queued post
         run: node tools/blog-queue/publish-next.mjs
 
+      - name: Ping IndexNow (Bing / Yandex / Naver / Seznam)
+        run: |
+          F=tools/blog-queue/published-urls.json
+          if [ -s "$F" ] && [ "$(cat "$F")" != "[]" ]; then
+            curl -s -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d "{\"host\":\"helpinstudy.com\",\"key\":\"a7c4e1f92b8d6035c4a9e2f71d8b0463\",\"keyLocation\":\"https://helpinstudy.com/a7c4e1f92b8d6035c4a9e2f71d8b0463.txt\",\"urlList\":$(cat "$F")}" \
+              && echo "IndexNow pinged: $(cat "$F")" || echo "IndexNow ping failed (non-fatal)"
+          else
+            echo "No new URLs to ping."
+          fi
+
       - name: Commit + deploy (no skip-ci, so Vercel rebuilds and the post goes live)
         run: |
           git config user.name "blog-bot"

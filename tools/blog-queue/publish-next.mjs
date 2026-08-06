@@ -47,4 +47,9 @@ ${MARKER}`;
 
 fs.writeFileSync(POSTS, src);
 fs.writeFileSync(QUEUE, JSON.stringify(queue, null, 1) + "\n");
+
+// URLs published this run — read by the IndexNow ping step (not committed).
+const urls = published.map((s) => `https://helpinstudy.com/blog/${s}`);
+fs.writeFileSync("tools/blog-queue/published-urls.json", JSON.stringify(urls));
+
 console.log(`Published ${published.length}: ${published.join(", ")}. ${queue.length} left in queue.`);

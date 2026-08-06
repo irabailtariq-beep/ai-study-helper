@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { findPost, POSTS, BLOG_REDIRECTS } from "@/content/posts";
 import { Byline } from "@/components/Byline";
-import { SITE, articleJsonLd, breadcrumbJsonLd } from "@/lib/seo";
+import { SITE, articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -46,6 +46,7 @@ export default async function BlogPost({ params }: Props) {
   const related = POSTS
     .filter((q) => q.slug !== p.slug && q.tags.some((t) => p.tags.includes(t)))
     .slice(0, 3);
+  const faqs = extractFaqs(p.body);
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
@@ -56,6 +57,9 @@ export default async function BlogPost({ params }: Props) {
         { name: "Blog", path: "/blog" },
         { name: p.title, path: `/blog/${p.slug}` },
       ])) }} />
+      {faqs.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }} />
+      )}
 
       <Link href="/blog" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All posts</Link>
 
@@ -107,6 +111,29 @@ export default async function BlogPost({ params }: Props) {
       `}</style>
     </main>
   );
+}
+
+// ─────────── pull Q&A pairs out of a post's "## FAQ" section for FAQPage schema
+function extractFaqs(body: string): { question: string; answer: string }[] {
+  const lines = body.split("\n");
+  const start = lines.findIndex((l) => /^##\s+FAQ\b/i.test(l.trim()));
+  if (start === -1) return [];
+  const strip = (s: string) =>
+    s.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1").replace(/\*([^*]+)\*/g, "$1").trim();
+  const out: { question: string; answer: string }[] = [];
+  let q: string | null = null;
+  let a: string[] = [];
+  const flush = () => { if (q && a.length) out.push({ question: q, answer: strip(a.join(" ")) }); q = null; a = []; };
+  for (let i = start + 1; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^##\s+/.test(t) || /^\*\*In short:/i.test(t)) break;   // next section / closing line ends the FAQ
+    let m = t.match(/^###\s+(.+)$/);                             // "### question"
+    if (!m) m = t.match(/^\*\*(.+?\?)\*\*\s*$/);                 // "**question?**" on its own line
+    if (m) { flush(); q = strip(m[1]); continue; }
+    if (q && t) a.push(t);
+  }
+  flush();
+  return out;
 }
 
 // ─────────── tiny markdown renderer (no runtime dep)
