@@ -1426,5 +1426,229 @@ Get the content solid first with [Explain anything](/explain), turn the exact te
 **In short:** CBSE Class 12 rewards precise, point-wise answers that hit the NCERT keywords and labelled diagrams — so write for the value-point scheme, not for the length of the page.
 `,
   },
+
+  {
+    slug: "igcse-biology-paper-6",
+    title: "Cambridge IGCSE Biology Paper 6: The Alternative-to-Practical Guide",
+    description: "IGCSE Biology Paper 6 (0610) made simple: how to score on the Alternative to Practical - variables, tables, graphs, drawings, food tests and osmosis.",
+    publishedAt: "2026-08-06", readTime: "7 min",
+    tags: ["IGCSE Biology Paper 6","Alternative to Practical","Cambridge IGCSE 0610","IGCSE biology practical","exam technique"],
+    body: `
+**Quick answer:** Cambridge IGCSE Biology Paper 6 (0610, the Alternative to Practical) is a 1-hour, 40-mark paper that tests whether you can *do* science on paper: reading apparatus, recording results in tables, plotting graphs, drawing specimens, and describing and evaluating data. You score highest by nailing the mechanical rules (a unit in every table heading, scales that fill the grid, single-line drawings) far more than by knowing extra biology.
+
+When I sat my first Paper 6 mock I lost marks I did not even know existed. My actual biology was fine, but I bled marks on things like "no unit in the table heading" and "line of best fit not drawn." None of it was hard. It was just rules I had never been told.
+
+The good news: Paper 6 is the most learnable paper in IGCSE Biology. It barely tests knowledge; it tests whether you know the examiner's rulebook. Learn the rulebook and you can jump a grade without revising a single new topic.
+
+## What Paper 6 actually tests
+
+The Alternative to Practical checks four experimental skills, not recall. Examiners group them as:
+
+- **Using apparatus** — reading a measuring cylinder, thermometer or ruler correctly, to the right precision.
+- **Planning** — identifying variables, writing a method, spotting what makes it a fair test.
+- **Recording** — building tables and graphs that follow the rules exactly.
+- **Interpreting and evaluating** — describing trends with data, spotting anomalies, suggesting improvements and sources of error.
+
+Notice that "know the biology" is not on that list. That is the whole point.
+
+## Variables: get this right before anything else
+
+Almost every long question starts here, and it is free marks if you are precise.
+
+- **Independent variable** — the one thing you deliberately change (for example, sucrose concentration).
+- **Dependent variable** — the thing you measure as a result (for example, change in mass).
+- **Controlled variables** — everything you keep the same to make it a fair test (temperature, time, volume of solution, type of potato).
+
+One trap catches everyone: a *controlled variable* is not the same as a *control*. Controlled variables are the things kept constant. A control is a separate comparison tube, such as a boiled (denatured) enzyme, that proves the effect was caused by your variable and nothing else.
+
+## The table rules that quietly cost marks
+
+Recording marks are the easiest in the paper and the most commonly dropped. The rules:
+
+- Put the independent variable in the first column.
+- Every column heading needs a quantity *and* a unit, written like "Mass / g" or "Temperature / degrees C".
+- Never write units in the body of the table. If the heading says "Time / s", the cells just say 30, 60, 90.
+- Keep the same number of decimal places all the way down a column (3.0, 3.1, 3.2, not 3, 3.10, 3.2).
+
+The classic error is writing "20 degrees C" inside the table. That single habit can cost you the whole recording mark.
+
+## Drawing and measuring
+
+For specimen drawings, examiners reward technique, not artistry:
+
+- Draw large, using at least half the space given.
+- Use single, clean, continuous pencil lines. No sketchy or overlapping lines.
+- No shading and no colouring, ever.
+- Label lines must be ruled, horizontal, and actually touch the structure. No arrowheads.
+
+For magnification, learn one formula: magnification = image size / actual size. Rearranged, actual size = image size / magnification. Watch your units and convert carefully, remembering 1 mm = 1000 micrometres.
+
+## Graphs: where easy marks vanish fastest
+
+A graph is usually worth four marks, broken down like this:
+
+- **Scales** — chosen so the points fill more than half the grid in both directions, going up in sensible steps like 1, 2, 5 or 10.
+- **Labels** — both axes labelled with the quantity and unit.
+- **Plotting** — neat, small crosses or encircled dots, accurate to half a small square.
+- **Line** — a single smooth best-fit line, or ruled straight lines point to point if that is what the data shows. If one point is clearly an anomaly, circle it and ignore it when drawing the line.
+
+When you describe the graph afterwards, always quote data. Do not write "the mass went down." Write "as concentration increased from 0.0 to 0.6 mol/dm3, the change in mass fell from +10 percent to -10 percent." That data quote is what earns the interpreting mark. If a trend confuses you, paste the numbers into [/explain](/explain) and ask it to walk you through what is happening and why.
+
+## The experiments that come up again and again
+
+You do not need to memorise every practical, but these appear constantly, so know their expected results:
+
+- **Food tests.** Reducing sugar: add Benedict's solution and heat; blue turns brick-red or orange if present. Starch: add iodine solution; orange-brown turns blue-black. Protein: add Biuret solution; blue turns purple. Fat: the ethanol emulsion test gives a cloudy white layer.
+- **Osmosis.** Potato cylinders in different sucrose concentrations; you calculate percentage change in mass.
+- **Enzymes.** Amylase breaking down starch, or catalase on hydrogen peroxide; usually testing the effect of temperature or pH.
+
+## Worked example: osmosis, step by step
+
+A student puts potato cylinders in sucrose solutions for 30 minutes and records the mass before and after.
+
+1. **Identify the variables.** Independent = sucrose concentration (mol/dm3). Dependent = change in mass. Controlled = potato type, solution volume, temperature, time, blotting method.
+2. **Record the raw data.** In distilled water (0.0 mol/dm3): initial mass 3.00 g, final mass 3.30 g. In 0.6 mol/dm3: initial 3.00 g, final 2.70 g.
+3. **Find the change in mass.** 3.30 - 3.00 = +0.30 g. And 2.70 - 3.00 = -0.30 g.
+4. **Convert to percentage change.** Use (change / initial mass) x 100. For water: (0.30 / 3.00) x 100 = +10.0 percent. For 0.6 mol/dm3: (-0.30 / 3.00) x 100 = -10.0 percent. Percentage is used because the cylinders never start at exactly the same mass, so it makes the comparison fair.
+5. **Plot and draw.** Percentage change on the y-axis, concentration on the x-axis, then a best-fit line.
+6. **Read the answer.** Where the line crosses zero (no mass change), the outside solution equals the concentration inside the potato cells. That crossing point is what examiners want.
+
+## Test yourself
+
+1. A student heads a column "Time / minutes" and writes "2 minutes, 4 minutes" in the cells below. What is wrong?
+2. A potato cylinder starts at 2.50 g and ends at 2.20 g. Calculate the percentage change in mass.
+3. You add Benedict's solution to a sample and heat it, and it stays blue. What does this tell you?
+
+Answers: (1) Units belong only in the heading; the cells should read just 2, 4. Repeating the unit in the body loses the table mark. (2) (2.20 - 2.50) / 2.50 x 100 = -12.0 percent, a decrease. (3) No reducing sugar is present; a positive result would turn orange or brick-red.
+
+Want more of these? Generate a set of Paper 6 style questions with [/quiz](/quiz), and turn the food-test colours into a deck with [/flashcards](/flashcards).
+
+## FAQ
+
+**How long is Paper 6 and how many marks?** It is 1 hour long and worth 40 marks, usually about 10 percent of your final IGCSE Biology grade.
+
+**Is Paper 6 easier than the practical?** Not easier, just different. Paper 5 rewards lab handling; Paper 6 rewards knowing the rules of recording, graphing and describing, which many students find the more predictable of the two.
+
+**Do I have to memorise every experiment?** No. But knowing the standard ones (food tests, osmosis, enzymes) lets you predict results and answer "suggest why" questions quickly instead of guessing.
+
+**What is the difference between a control variable and a control?** Control variables are factors you keep constant. A control is a whole separate comparison, like a boiled enzyme or a tube with water instead of solution, to prove your independent variable caused the result. If that distinction still feels blurry, ask [/explain](/explain) for a worked example with your exact experiment.
+
+**In short:** Paper 6 is a rules test dressed up as a science paper, so master the table, graph, drawing and variable conventions and you will out-score people who know far more biology than you.
+`,
+  },
+
+  {
+    slug: "wassce-maths-core-topics",
+    title: "WAEC WASSCE Maths: The Core Topics That Come Up Every Year",
+    description: "WASSCE mathematics topics that come up every year: number bases, quadratics, mensuration, trig and stats, plus how to prioritise your revision.",
+    publishedAt: "2026-08-06", readTime: "7 min",
+    tags: ["WASSCE maths","WAEC","General Mathematics","exam revision","number bases"],
+    body: `
+**Quick answer:** WASSCE Core (General) Mathematics has two papers: Paper 1, a 50-question objective test, and Paper 2, a theory paper with a compulsory short-answer section plus a choose-five longer section. The topics that appear almost every year are number bases, indices and surds, simultaneous and quadratic equations, sets and Venn diagrams, mensuration, trigonometry (including bearings), variation, and statistics. Drill those and you cover the bulk of both papers.
+
+I don't sit WASSCE myself — I'm doing IGCSE and A-Levels right now — but I spent a whole term going through General Mathematics past papers with a friend who was prepping for WAEC, and the thing that stunned me was how predictable it is. The same topics, dressed in slightly different numbers, come back year after year after year.
+
+So this isn't a "revise everything" post. It's the opposite. Here is what actually recurs, what each paper rewards, and where the cheap marks hide.
+
+## The two papers, and what each one rewards
+
+Paper 1 (Objective): 50 multiple-choice questions, five options each (A to E), 1 hour 30 minutes, 50 marks. No working is marked — only the answer you shade. So speed and accuracy decide everything, and there is no partial credit. That is roughly 1.8 minutes per question. If one is dragging, make your best guess and move on; a blank scores the same as a wrong answer (zero), so never leave one empty.
+
+Paper 2 (Theory): 2 hours 30 minutes, 100 marks, in two sections. Section A has ten compulsory short questions worth 40 marks. Section B has longer, harder questions from which you answer five, worth 60 marks. Here working is everything — WAEC awards method marks. You can get the final answer wrong and still pick up most of the marks if your method is laid out clearly. So show every line.
+
+The short version: Paper 1 rewards fast recall, Paper 2 rewards clean working.
+
+## The topics that come up every single year
+
+Across both papers, this cluster reappears with almost boring reliability:
+
+- Number bases — conversion and arithmetic in different bases (the WAEC signature topic)
+- Indices, surds and logarithms — the laws, plus standard form
+- Fractions, ratio, percentages and variation (direct, inverse, joint, partial)
+- Sets and Venn diagrams (two and three sets)
+- Simultaneous equations and quadratic equations
+- Mensuration — area, volume, surface area, sectors, cones, spheres
+- Geometry and circle theorems
+- Trigonometry — SOHCAHTOA, sine and cosine rules, elevation and depression, bearings
+- Statistics — mean, median, mode, frequency tables, cumulative frequency curves, pie charts
+- Probability, coordinate geometry, sequences (AP and GP), and 2 by 2 matrices
+
+If you are solid on the first nine, you have covered most of both papers. Want to find your weak ones fast? Run a mixed set on [/quiz](/quiz) and see which topics you keep missing.
+
+## Worked example: number bases (the WAEC signature)
+
+Almost no other board tests number bases the way WAEC does, and it shows up nearly every year. Here is the two-way skill examiners want.
+
+Problem: Convert 234 in base five to base ten, then convert your answer back to base five to check.
+
+Step 1 — write the place values. In base five the columns from the right are 5^0, 5^1, 5^2, so 1, 5, 25.
+
+Step 2 — multiply each digit by its place value: (2 × 25) + (3 × 5) + (4 × 1).
+
+Step 3 — evaluate: 50 + 15 + 4 = 69. So 234 in base five equals 69 in base ten.
+
+Step 4 — convert 69 back by repeated division by 5, writing the remainder each time:
+
+- 69 ÷ 5 = 13 remainder 4
+- 13 ÷ 5 = 2 remainder 3
+- 2 ÷ 5 = 0 remainder 2
+
+Step 5 — read the remainders from the bottom up: 2, 3, 4, which gives 234 in base five. It matches, so we are right.
+
+One extra trick they love is base equations. "Find x if 121 in base x equals 100 in base ten." Notice that 121 in base x means x^2 + 2x + 1, which factorises to (x + 1)^2. So (x + 1)^2 = 100, x + 1 = 10, x = 9. Spotting that square saves you a messy trial-and-error.
+
+## The algebra half: quadratics and simultaneous equations
+
+Quadratics turn up in both papers. Factorising is fastest when it works. For 2x^2 - 5x - 3 = 0, split the middle term using two numbers that multiply to (2 × -3) = -6 and add to -5: those are -6 and +1. So 2x^2 - 6x + x - 3 = 0, then 2x(x - 3) + 1(x - 3) = 0, giving (2x + 1)(x - 3) = 0, so x = -1/2 or x = 3. If an expression will not factorise, fall back on the formula x = (-b ± sqrt(b^2 - 4ac)) / 2a.
+
+Simultaneous equations in Section A are usually two linear equations (use elimination), but Section B sometimes gives one linear and one quadratic — substitute the linear one into the quadratic. Practise both, because mixing them up is a classic trap. If you want the steps shown line by line, [/math-solver](/math-solver) walks through either method.
+
+## Where the cheap marks hide: mensuration, trig, statistics
+
+Mensuration is pure formula recall, so it is the easiest place to bank marks. WAEC uses pi = 22/7 unless a question says otherwise. The total surface area of a closed cylinder with r = 7 cm and h = 10 cm is 2 × pi × r × (r + h) = 2 × 22/7 × 7 × 17 = 748 cm^2. Always write the unit — cm^2 for area, cm^3 for volume — because dropping it can cost a mark.
+
+For trigonometry, the rule of thumb is simple: a right-angled triangle means SOHCAHTOA; any other triangle means the sine rule if you have a matching side-and-angle pair, or the cosine rule if you have two sides and the included angle. Bearings are measured clockwise from north as three digits, so due east is 090 degrees — and measuring from the wrong line is the single most common trig mistake I saw.
+
+Statistics almost always includes a frequency table (find the mean using the sum of fx divided by the sum of f) and, in Section B, a cumulative frequency curve for the median and quartiles. These are procedural marks — learn the routine once and they are yours every year.
+
+## How to prioritise your revision
+
+1. Pull the last five years of General Mathematics past papers and tally which topics appear. You will watch the cluster above dominate.
+2. Drill the high-frequency topics first — number bases, indices, quadratics, mensuration, trigonometry, statistics.
+3. For Paper 1, practise against the clock; for Paper 2, practise writing full working.
+4. Turn the formulas you keep forgetting into [flashcards](/flashcards) and review them daily.
+5. Every few days, test the mix rather than one topic, on [/quiz](/quiz) — real papers never serve one topic at a time.
+
+## Test yourself
+
+1. Convert 1101 in base two to base ten.
+2. Solve x^2 - 7x + 12 = 0 by factorising.
+3. A sector of a circle has radius 7 cm and an angle of 90 degrees. Find its area (take pi = 22/7).
+
+Answers:
+
+1. (1 × 8) + (1 × 4) + (0 × 2) + (1 × 1) = 13.
+2. (x - 3)(x - 4) = 0, so x = 3 or x = 4.
+3. Area = (90/360) × 22/7 × 7^2 = (1/4) × 22/7 × 49 = 38.5 cm^2.
+
+Get more questions like these, marked instantly, on [/quiz](/quiz).
+
+## FAQ
+
+**How is WASSCE Core Mathematics scored across the two papers?**
+Paper 1 (objective) is worth 50 marks and Paper 2 (theory) is worth 100 marks, and WAEC combines them into your final grade. Because Paper 2 carries more marks and gives method marks, that is where careful working pays off most.
+
+**Am I allowed a calculator?**
+WAEC permits a non-programmable, silent calculator, and mathematical tables are also provided. Learn to read the tables anyway, so a flat battery or a barred calculator on the day never turns into a disaster.
+
+**Which topic is most worth mastering first?**
+Number bases and mensuration. Both are high-frequency, self-contained, and quick to get reliable at, so they give you the best marks-per-hour early in revision.
+
+**Do I have to answer every question in Paper 2?**
+No. Section A's ten questions are all compulsory, but in Section B you choose five of the longer questions. Read every Section B question first, then pick the five you can score highest on — do not just start at the top.
+
+**In short:** WASSCE Core Maths rewards the student who drills the same recurring cluster — number bases, algebra, mensuration, trig and statistics — under real paper conditions, not the one who tries to learn everything.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
