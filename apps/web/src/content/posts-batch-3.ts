@@ -1650,5 +1650,218 @@ No. Section A's ten questions are all compulsory, but in Section B you choose fi
 **In short:** WASSCE Core Maths rewards the student who drills the same recurring cluster — number bases, algebra, mensuration, trig and statistics — under real paper conditions, not the one who tries to learn everything.
 `,
   },
+
+  {
+    slug: "ap-calculus-bc-series-tests",
+    title: "AP Calculus BC Series Tests: Which Convergence Test to Use (Decision Guide)",
+    description: "AP Calculus BC series tests, decoded: a decision flow for picking the right convergence test fast — and the FRQ justification trap that quietly costs marks.",
+    publishedAt: "2026-08-07", readTime: "8 min",
+    tags: ["AP Calculus BC","series convergence tests","ratio test","College Board AP","AP exam FRQ"],
+    body: `
+**Quick answer:** For AP Calculus BC, always start with the nth-term test (if the terms don't go to 0, the series diverges), then match the series to a shape: geometric (a times r^n), p-series (1/n^p), factorials or n-th powers (ratio test), alternating signs (alternating series test), or a messy rational expression (limit comparison test). The real exam trap isn't picking the right test — it's forgetting to name it and check its conditions, which is where most of the marks actually live.
+
+When I first hit the series unit, it felt like a magic trick everyone else knew the secret to. Eight tests, all looking similar, and the answer to "which one do I use?" was always an infuriating "it depends." What finally clicked for me: you don't choose a test by trial and error — you read the *shape* of the terms, and the test more or less picks itself.
+
+This is the decision flow I actually use, plus the one thing that quietly costs BC students the most marks: the justification.
+
+## Step 0: always run the nth-term test first
+
+The nth-term test (also called the test for divergence) is your free first move. Look at the general term a_n and take its limit:
+
+- If lim (n to infinity) a_n is not 0 → the series **diverges**. Done, stop here.
+- If lim a_n = 0 → the test is **inconclusive**. You've learned nothing; move on.
+
+The trap that catches everyone at least once: a_n going to 0 does NOT prove convergence. The harmonic series sum 1/n has terms going to 0 and still diverges. So the nth-term test can only ever *kill* a series, never save it. Use it to catch the easy divergences, then reach for the real tools.
+
+## Read the shape, then pick the test
+
+Here's the actual flow. Scan the general term for these patterns, roughly in this order:
+
+- **A constant ratio between terms, a times r^n:** geometric series. Converges if and only if |r| < 1, and then it sums to a/(1 - r). This is the only common test that also hands you the exact sum.
+- **1/n^p (a power of n on the bottom):** p-series. Converges if and only if p > 1. So 1/n^2 converges, 1/n (the harmonic series) diverges, and 1/sqrt(n) = 1/n^(1/2) diverges because p = 1/2.
+- **Factorials (n!) or something raised to the n-th power (2^n, 3^n, n^n):** ratio test. Factorials cancel beautifully inside a ratio, so this is almost always the move when you see one.
+- **An alternating sign, (-1)^n or (-1)^(n+1):** alternating series test. Then separately ask whether it converges absolutely (test the series of |a_n|) or only conditionally.
+- **A rational or algebraic mess (polynomial over polynomial, roots, and so on):** limit comparison test against the p-series you get by keeping only the highest powers. Use direct comparison instead if the inequality is clean and obvious.
+- **a_n = f(n) where f is positive, continuous, decreasing and easy to integrate (like 1/(n ln n)):** integral test.
+
+The shape-to-test mapping is worth drilling until it's automatic — I turned mine into [Flashcards](/flashcards) and tested myself until I could name the right test in under two seconds.
+
+### The tests students misuse
+
+Two honest warnings from my own revision. First, direct comparison is fiddly because the inequality has to point the right way: a larger convergent series proves convergence, a smaller divergent one proves divergence, and the other two combinations tell you nothing. When in doubt, limit comparison is far more forgiving.
+
+Second, and this surprises people: **the root test is not on the AP Calculus BC exam.** It's in plenty of textbooks and it's handy for terms like (something)^n, but it isn't in the College Board course framework, so anything it could do on the exam, the ratio test does too. Don't burn revision time on a test they aren't allowed to ask you about.
+
+## The mark BC students throw away: justification
+
+Here's what nobody tells you until you've already lost the points. On the free-response section, "it converges" is usually worth just *one* point. The rest are for the justification, and you only earn them if you:
+
+1. **Name the test.** "By the ratio test..." or "By limit comparison with the series 1/n^2..."
+2. **Verify its conditions.** Alternating series test: state that the terms are decreasing AND that their limit is 0. Integral test: state that f is positive, continuous, and decreasing. Comparison: state that the terms are positive.
+3. **Show the computation** — the limit, the integral, whatever the test needs.
+4. **State the conclusion in words**, tied back to the test you named.
+
+Skipping step 2 is the classic BC error: a flawless ratio calculation with no named test and no conditions can score less than half. Treat every convergence question like a short proof, not a yes/no answer.
+
+## Worked example: the ratio test, step by step
+
+Determine whether the sum from n = 1 to infinity of 3^n / n! converges.
+
+- **Step 1 — read the shape.** There's a 3^n (something to the n-th power) and an n! (a factorial). Both scream ratio test.
+- **Step 2 — write the terms.** a_n = 3^n / n! and a_(n+1) = 3^(n+1) / (n+1)!.
+- **Step 3 — set up the ratio.** L = lim (n to infinity) of | a_(n+1) / a_n | = lim of [ 3^(n+1) / (n+1)! ] times [ n! / 3^n ].
+- **Step 4 — simplify.** 3^(n+1) / 3^n = 3, and n! / (n+1)! = 1/(n+1). So the whole thing collapses to 3/(n+1).
+- **Step 5 — take the limit.** lim (n to infinity) of 3/(n+1) = 0, so L = 0.
+- **Step 6 — apply the rule and conclude.** Since L = 0 < 1, by the ratio test the series converges (in fact, absolutely).
+
+Steps 1 and 6 are the ones examiners actually pay for. To check your own working on a nastier one, drop the series into the [Math solver](/math-solver) and read *how* it justifies each line, not just the final verdict.
+
+## A BC bonus: the alternating series error bound
+
+If an alternating series passes the alternating series test, the error from stopping at the n-th partial sum is no bigger than the first term you left out, |a_(n+1)|. It's a recurring FRQ favourite ("how many terms guarantee an error under 0.01?") and basically free marks once you know it.
+
+## Test yourself
+
+1. Does the sum from n = 1 to infinity of n / (2n + 1) converge or diverge?
+2. Does the sum from n = 1 to infinity of 1 / n^(3/2) converge or diverge, and by which test?
+3. Does the sum from n = 1 to infinity of (-1)^n / n converge? Absolutely or conditionally?
+
+Answers:
+
+1. **Diverges** by the nth-term test: lim n/(2n+1) = 1/2, which is not 0.
+2. **Converges** by the p-series test, since p = 3/2 > 1.
+3. **Converges conditionally.** It passes the alternating series test (the terms decrease to 0), but the absolute version, sum 1/n, is the harmonic series and diverges — so the convergence is conditional, not absolute.
+
+Want a full set marked with the justification checked line by line? Generate practice in the [Quiz maker](/quiz), or paste your working into the [Math solver](/math-solver) for step-by-step feedback.
+
+## FAQ
+
+**Which convergence test should I try first?**
+Always the nth-term test — it's fast and can end the question on the spot. If the terms don't go to 0, the series diverges; if they do, it's inconclusive and you move to shape-matching.
+
+**When do I use the ratio test versus the comparison test?**
+Ratio test for factorials and n-th powers (2^n, n^n), because they cancel cleanly inside a ratio. Comparison — usually limit comparison — for rational or algebraic terms where you can spot a p-series with the same growth rate.
+
+**Is the root test on the AP Calculus BC exam?**
+No. It's a valid test and appears in many textbooks, but it isn't in the College Board course framework, so the ratio test covers everything you'll be asked. Spend your time on the eight tests that are actually on the exam.
+
+**Why did I lose marks when my answer was correct?**
+Almost always because you didn't name the test or verify its conditions. On FRQs the conclusion is one point and the rest are justification, so build the habit of writing "By the [test], since [conditions hold]..." every single time.
+
+**In short:** Don't hunt for the right convergence test — read the shape of the terms, run the nth-term test first, and always name your test and check its conditions, because on BC that justification is where most of the marks quietly live.
+`,
+  },
+
+  {
+    slug: "sine-and-cosine-rule",
+    title: "The Sine and Cosine Rule: When Right-Angle Trig Isn't Enough",
+    description: "Sine and cosine rule made simple: when to use each on non-right-angled triangles, plus the area rule, the ambiguous case and worked GCSE/IGCSE examples.",
+    publishedAt: "2026-08-07", readTime: "8 min",
+    tags: ["sine rule","cosine rule","GCSE maths","IGCSE trigonometry","exam technique"],
+    body: `
+**Quick answer:** Use the sine rule when you have a matching pair — a side and the angle directly opposite it. Use the cosine rule when you have either all three sides (to find an angle) or two sides and the angle between them (to find the third side). SOHCAHTOA only works on right-angled triangles, so the moment a triangle has no right angle, one of these two rules is your tool.
+
+When I first hit non-right-angled triangles in IGCSE, my instinct was to force SOHCAHTOA onto everything, get an impossible answer, and blame my calculator. The real problem was simpler: SOH CAH TOA needs a right angle. No right angle, no SOHCAHTOA — that is literally why the sine and cosine rules exist.
+
+Here is the part that made me relax about them: on Cambridge IGCSE and the current GCSE papers (AQA, Edexcel and OCR), all three formulae are printed for you on the formula sheet. The exam is not testing whether you memorised them. It is testing whether you can choose the right one and substitute into it correctly. Get the choice right and these become some of the most dependable marks on the whole Higher paper.
+
+## First: label the triangle properly
+
+Both rules depend on one convention, and skipping it is where most wrong answers begin. Side a is opposite angle A, side b is opposite angle B, side c is opposite angle C. Lowercase letters for sides, capitals for angles, and every side sits directly across the triangle from its matching angle — never next to it. Ten seconds spent labelling first saves you from the classic disaster of pairing a side with the angle it touches instead of the angle it faces.
+
+## The sine rule: when you have a matching pair
+
+Reach for the sine rule when you have (or want) a matching pair — a side and the angle opposite it — plus one more known value.
+
+- To find a side: a / sin A = b / sin B = c / sin C
+- To find an angle: sin A / a = sin B / b = sin C / c
+
+They are the same equation flipped upside down. Put what you are looking for on top: sides on top for a side, sines on top for an angle. You only ever use two of the three fractions at once — the pair you have and the pair you want.
+
+## The cosine rule: when there is no matching pair
+
+If you do not have a matching pair, the sine rule cannot even start, and you switch to the cosine rule. Two situations trigger it:
+
+- Two sides and the included angle (the angle between them), and you want the third side: a^2 = b^2 + c^2 - 2bc cos A
+- All three sides, and you want an angle: cos A = (b^2 + c^2 - a^2) / (2bc)
+
+The word that matters is included. For the "find a side" version, the known angle must sit between the two known sides. If it does not, you are back to the sine rule.
+
+## The whole decision in three questions
+
+1. Is it right-angled? Use SOHCAHTOA (or Pythagoras for a missing side).
+2. Not right-angled — do you have a matching pair (a side and its opposite angle)? Use the sine rule.
+3. No matching pair (three sides, or two sides and the angle between them)? Use the cosine rule.
+
+Run those three questions in order and you will never pick the wrong tool. If choosing is the bit that trips you up, throw a triangle at the [Math solver](/math-solver) and watch which rule it picks and why.
+
+## Don't forget the area rule
+
+There is a third formula that lives with these two, and it is free marks when it turns up: the area of any triangle is (1/2) ab sin C — two sides and the included angle between them. Same "included angle" idea as the cosine rule. If a question hands you two sides and the angle wedged between them and asks for area, this is the one.
+
+## Worked example: cosine rule, then sine rule
+
+Triangle ABC. Angle A = 62°, side b = 7 cm and side c = 9 cm. Find side a, then find angle B.
+
+Step 1 — choose the rule. I have two sides (b and c) and the angle between them (A). That is two sides and the included angle, so it is the cosine rule.
+
+Step 2 — substitute into a^2 = b^2 + c^2 - 2bc cos A:
+a^2 = 7^2 + 9^2 - 2 × 7 × 9 × cos 62°.
+
+Step 3 — work it out (calculator in degree mode):
+a^2 = 49 + 81 - 126 × cos 62° = 130 - 126 × 0.4695 = 130 - 59.15 = 70.85.
+
+Step 4 — square root: a = 8.42 cm (3 s.f.). Notice I kept the full value in the calculator and only rounded at the very end.
+
+Step 5 — now find angle B. I have a matching pair (side a with angle A), so I switch to the sine rule with sines on top:
+sin B / b = sin A / a, so sin B = 7 × sin 62° / 8.417 = 6.181 / 8.417 = 0.7343.
+
+Step 6 — B = arcsin(0.7343) = 47.2° (3 s.f.). Because side b is shorter than side a, angle B must be acute, so there is no ambiguity here. If I wanted angle C, I would just do 180° - 62° - 47.2° = 70.8°.
+
+## The ambiguous case: the trap that costs the most
+
+Here is the one that catches people out. When you use the sine rule to find an angle, your calculator only ever gives you the acute answer — but sometimes an obtuse angle fits the triangle just as well. This happens when you are given two sides and an angle that is not between them (the SSA case).
+
+Mini-example: angle A = 30°, side a = 5, side b = 8. Find angle B.
+sin B = b sin A / a = 8 × sin 30° / 5 = 8 × 0.5 / 5 = 0.8.
+Your calculator says B = 53.1°. But B = 180° - 53.1° = 126.9° also has a sine of 0.8. Check both: 30 + 53.1 = 83.1° and 30 + 126.9 = 156.9°, both under 180°, so both make a real triangle. There are genuinely two answers.
+
+The rule: after any sine-rule angle, ask whether the obtuse partner (180° minus your answer) also fits. If the angles still add to less than 180°, both are valid and a full-mark answer gives both. If the obtuse version would push the total over 180°, discard it. The cosine rule never has this problem — its cos value comes out negative for an obtuse angle, so it hands you the correct angle directly.
+
+## Common mistakes that quietly lose marks
+
+- **Calculator in radian mode.** If your answers look wild, check the little R or D at the top of the screen. It must say D for degrees.
+- **Rounding too early.** Keep full accuracy through the working and round only the final answer, usually to 3 significant figures. Rounding mid-way drifts the answer and can cost the accuracy mark.
+- **Skipping the substitution line.** The method mark is for the correctly substituted formula. Write it out even if the arithmetic then goes wrong — you still bank that mark.
+- **Using the sine rule with no matching pair.** Two sides and the angle between them cannot start the sine rule. That is a cosine-rule setup.
+- **Forgetting the second angle.** On SSA problems, always test the obtuse case before you move on.
+
+## Test yourself
+
+1. In triangle PQR, angle P = 40°, side q = 10 cm and side r = 6 cm. Find side p.
+2. A triangle has sides 5 cm, 7 cm and 9 cm. Find the largest angle.
+3. In triangle ABC, angle A = 35°, side a = 6 and side b = 9. Find the two possible sizes of angle B.
+
+Quick answers: (1) Cosine rule: p^2 = 100 + 36 - 120 × cos 40° = 136 - 91.93 = 44.07, so p = 6.64 cm. (2) The largest angle faces the longest side (9). cos = (25 + 49 - 81) / (2 × 5 × 7) = -7 / 70 = -0.1, so the angle = 95.7°. (3) sin B = 9 × sin 35° / 6 = 0.8604, so B = 59.4° or B = 120.6° — both fit, since 35 + 120.6 = 155.6° is still under 180°.
+
+Check your working line by line with the [Math solver](/math-solver), and if the whole topic still feels shaky, ask [Explain anything](/explain) to walk you through it, then lock it in with a quick [Quiz](/quiz).
+
+## FAQ
+
+**When do I use the sine rule versus the cosine rule?**
+Sine rule when you have a matching pair (a side and its opposite angle). Cosine rule when you do not — that is, three sides, or two sides with the angle between them. If a matching pair exists, the sine rule is usually the quicker route.
+
+**Do I have to memorise the formulae for the exam?**
+On Cambridge IGCSE and current GCSE papers they are given on the formula sheet, so no. But you must know when to use each and how to substitute — that is what earns the marks. AP and A-Level students should still be able to recall and rearrange them from memory.
+
+**Can I use the cosine rule to dodge the ambiguous case?**
+Often, yes. If you find an unknown side first and then use the cosine rule to get an angle, you sidestep the two-answer problem entirely, because the cosine rule returns obtuse angles correctly on its own.
+
+**Why does my answer come out as an error or nonsense?**
+Nine times out of ten it is degree/radian mode, or a mislabelled triangle where a side has been paired with the angle it touches rather than the angle opposite it. Check both before anything else.
+
+**In short:** no right angle means no SOHCAHTOA — use the sine rule when you have a matching pair, the cosine rule when you do not, and always check the ambiguous case whenever the sine rule hands you an angle.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
