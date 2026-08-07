@@ -27,12 +27,20 @@ const HELP_IN_STUDY_SUBJECTS = [
   "accounting", "economics",
 ];
 
+// Stable last-modified dates for pages whose content does NOT change on every
+// deploy. Using `new Date()` here was actively harmful: the blog robot deploys
+// twice a day, so every one of these URLs claimed "modified today" on every
+// crawl. Google treats a sitemap whose lastmod is always "now" as untrustworthy
+// and stops relying on it. Bump these by hand when the content really changes.
+const STATIC_UPDATED = new Date("2026-08-07"); // tool/marketing/legal pages
+const HUBS_UPDATED = new Date("2026-08-07");   // /help-in-study/* subject hubs
+const LEARN_UPDATED = new Date("2026-08-07");  // /learn/* board combos
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const base = SITE.url.replace(/\/$/, "");
   const out: MetadataRoute.Sitemap = STATIC_PATHS.map((p) => ({
     url: `${base}${p || "/"}`,
-    lastModified: now,
+    lastModified: STATIC_UPDATED,
     changeFrequency: "weekly",
     priority: p === "" ? 1.0 : 0.7,
   }));
@@ -41,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const subject of HELP_IN_STUDY_SUBJECTS) {
     out.push({
       url: `${base}/help-in-study/${subject}`,
-      lastModified: now,
+      lastModified: HUBS_UPDATED,
       changeFrequency: "weekly",
       priority: 0.85,
     });
@@ -54,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const combo of LEARN_COMBOS) {
     out.push({
       url: `${base}/learn/${combo.subject}/${combo.board}`,
-      lastModified: now,
+      lastModified: LEARN_UPDATED,
       changeFrequency: "monthly",
       priority: 0.75,
     });
