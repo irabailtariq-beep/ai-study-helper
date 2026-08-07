@@ -46,5 +46,12 @@ jobs:
           git config user.name "gsc-bot"
           git config user.email "actions@users.noreply.github.com"
           git add tools/gsc/history.json
-          git commit -m "chore: daily Search Console snapshot [skip ci]" || echo "no changes to commit"
-          git push
+          if git diff --cached --quiet; then echo "no changes to commit"; exit 0; fi
+          git commit -m "chore: daily Search Console snapshot [skip ci]"
+          # Rebase-and-retry so a concurrent blog-bot / owner push can't drop this snapshot.
+          for attempt in 1 2 3 4 5; do
+            if git push; then echo "Pushed on attempt $attempt."; exit 0; fi
+            echo "Push rejected (attempt $attempt) — rebasing on latest origin/main and retrying."
+            git pull --rebase origin main || { echo "Rebase failed."; exit 1; }
+          done
+          echo "ERROR: could not push after 5 attempts."; exit 1

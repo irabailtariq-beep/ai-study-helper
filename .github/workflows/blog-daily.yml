@@ -40,4 +40,12 @@ jobs:
           if git diff --quiet; then echo "No changes (queue empty) — nothing to publish."; exit 0; fi
           git add apps/web/src/content/posts-batch-3.ts tools/blog-queue/queue.json
           git commit -m "Blog: auto-publish next queued post"
-          git push
+          # Rebase-and-retry: the GSC bot (and the owner) also push to main, and cron
+          # drift can overlap the two. A plain push would be rejected and the day's
+          # posts silently lost. Retry on top of the latest main so nothing is dropped.
+          for attempt in 1 2 3 4 5; do
+            if git push; then echo "Pushed on attempt $attempt."; exit 0; fi
+            echo "Push rejected (attempt $attempt) — rebasing on latest origin/main and retrying."
+            git pull --rebase origin main || { echo "Rebase failed."; exit 1; }
+          done
+          echo "ERROR: could not push after 5 attempts."; exit 1
