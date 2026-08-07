@@ -136,7 +136,7 @@ export default async function SubjectPage({ params }: Props) {
 
       <section className="glass-panel rounded-2xl p-6 text-center">
         <h2 className="text-xl font-bold mb-2">Get help in study {s.label.toLowerCase()} now</h2>
-        <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>Free forever for the basics. No card.</p>
+        <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>Free forever. Every tool. No card.</p>
         <Link href="/onboarding" className="inline-block px-6 py-3 rounded-full text-white font-semibold"
           style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>
           Open my AI study helper →

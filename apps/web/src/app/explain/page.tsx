@@ -147,7 +147,7 @@ export default function ExplainPage() {
 
         <div>
           <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>
-            Or upload a photo / PDF (max 20 MB)
+            Or upload a photo / PDF (photos are resized automatically; PDFs max 3 MB)
           </label>
           <input
             type="file"
