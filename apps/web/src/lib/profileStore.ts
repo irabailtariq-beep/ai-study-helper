@@ -34,6 +34,10 @@ export const GUEST_PROFILE: UserProfile = {
   age: 16,
   grade: "Year 11",
   curriculum: "uk-gcse-aqa",
+  // Marks these as placeholders. The prompts read this and deliberately avoid
+  // asserting a country/board, so a CBSE or WAEC visitor who hasn't onboarded
+  // doesn't get answers written in UK GCSE conventions.
+  guest: true,
 };
 
 /** The student's real profile once onboarded, otherwise the guest defaults. */

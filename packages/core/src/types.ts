@@ -6,6 +6,14 @@ export type UserProfile = {
   curriculum: string; // curriculum id from curricula.ts
   createdAt?: string;
 
+  /**
+   * True for the placeholder profile used before a visitor completes onboarding.
+   * The country/grade/curriculum fields are only defaults to keep the tools
+   * usable — they are NOT what this student actually studies, so prompts must
+   * not assert them as fact or apply one board's exam conventions.
+   */
+  guest?: boolean;
+
   // ─── Extended profile (collected during onboarding, used to shape every AI reply) ───
   displayName?: string;          // optional first name for personalised greetings
   subjects?: string[];           // subjects they are studying this year

@@ -2,9 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { sm2 } from "@/lib/sm2";
 import { generateQuiz } from "@ash/ai-client";
+import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
 import { recordActivity } from "@/lib/activity";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 export async function GET(req: NextRequest) {
   const sb = await supabaseServer();
@@ -34,6 +36,13 @@ export async function POST(req: NextRequest) {
   // If signed in we'll also save to Supabase. Otherwise we just return the cards
   // and the client stores them in localStorage.
   if (body.action === "generate") {
+    // This branch calls Gemini, so it needs the same guard as every other AI
+    // route — without it anyone could loop it and drain the API quota, which
+    // would take all ten tools down.
+    const rl = checkRateLimit(`flashcards:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
+    if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
+    if (!body?.profile) return NextResponse.json({ error: "Missing profile" }, { status: 400 });
+
     try {
       const quiz = await generateQuiz({
         profile: body.profile,
@@ -41,7 +50,8 @@ export async function POST(req: NextRequest) {
         imageBase64: body.imageBase64,
         pdfBase64: body.pdfBase64,
         types: ["short"],
-        count: body.count ?? 10,
+        // Clamp so a crafted request can't ask for thousands of cards.
+        count: Math.min(Math.max(Number(body.count) || 10, 1), 20),
       });
       const cards = quiz.items
         .filter((it: any) => it.type === "short")

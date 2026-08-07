@@ -91,7 +91,8 @@ export function toneRule(tone: ToneStyle = "neutral"): string {
 - Example tone: "okay so acids and bases — lowkey the most common chem topic on every paper. acids donate H⁺, bases grab them. that's it. that's the tweet. ✋"`;
     case "gen-alpha":
       return `Tone: Gen-Alpha friendly (ages 9-13 in 2026). High energy, very online, brain-rotted in a good way.
-- Words that fit: "skibidi" (sparingly), "rizz", "gyatt", "fanum tax", "Ohio" (as adjective for weird), "sigma", "alpha", "based", "L" / "W", "bet", "no shot", "actually crazy".
+- Words that fit: "skibidi" (sparingly), "rizz", "Ohio" (as adjective for weird), "sigma", "based", "L" / "W", "bet", "no shot", "actually crazy".
+- NEVER use sexualised or body-related slang (this tone is aimed at 9-13 year olds). Keep it school-safe.
 - Short bursts. Emoji punctuation: ✨🔥💯⚡🤓.
 - Treat them as smart but easily distracted. Hook in the first 4 words.
 - Still teach the actual content. Slang is the frame, not the painting.
@@ -112,6 +113,15 @@ export function effectiveFormatTone(p: UserProfile, formatOverride?: OutputForma
 
 /** Profile snapshot the AI should use to personalise. */
 export function profileBlurb(p: UserProfile): string {
+  // Guest = hasn't onboarded. Never claim to know their country/board/age: much
+  // of our search traffic is CBSE or WAEC, and asserting "16-year-old UK Year 11"
+  // would make every answer subtly wrong for them.
+  if (p.guest) {
+    return `Student profile: NOT YET KNOWN — this visitor has not set their country, year group or exam board.
+- Write at a general secondary-school level (roughly ages 14-18).
+- Use plain international English. Do not assume a country, currency or exam board.
+- If the board genuinely changes the answer (mark-scheme wording, notation, syllabus scope), give the general method first and add one short line noting how it differs by board, then invite them to set their board for exact exam-style answers.`;
+  }
   const subjects = (p.subjects ?? []).join(", ") || "(not specified)";
   const struggling = (p.struggling ?? []).join(", ") || "(none flagged)";
   const interests = (p.interests ?? []).join(", ") || "(none)";
@@ -135,7 +145,7 @@ function boardFamily(curriculumId: string): BoardFamily {
   if (id.startsWith("uk-gcse") || id.startsWith("uk-alevel")) return "gcse";
   if (id === "us-ap" || id === "intl-ap-international") return "ap";
   if (id.startsWith("intl-cambridge")) return "cambridge";
-  if (id === "ng-waec") return "waec";
+  if (id === "ng-waec" || id === "gh-wassce") return "waec";
   return "other";
 }
 
@@ -146,6 +156,17 @@ function boardFamily(curriculumId: string): BoardFamily {
  */
 export function boardStyleGuide(p: UserProfile): string {
   const common = `Write like the answer THIS student's examiner would give full marks — match the mark scheme, not just "technically correct".`;
+  // A guest's curriculum is a placeholder, not their real board — applying one
+  // board's conventions would actively mislead the many CBSE/WAEC visitors who
+  // land here from search before onboarding.
+  if (p.guest) {
+    return `${common}
+The student's exam board is NOT known yet, so:
+- Teach the general method clearly and correctly, using widely-accepted terminology.
+- Show full working and name the method — that scores marks on every board.
+- Where boards genuinely differ (notation, command words, required units, syllabus scope), say so in one short line rather than guessing.
+- Do not invent board-specific mark-scheme wording or paper structure.`;
+  }
   switch (boardFamily(p.curriculum)) {
     case "cbse":
       return `${common}
