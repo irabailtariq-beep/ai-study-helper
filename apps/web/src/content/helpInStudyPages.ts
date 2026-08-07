@@ -64,9 +64,9 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Snap any textbook problem" },
-      { label: "Formula sheet", href: "/formula-sheet", why: "Board-aware, focused" },
-      { label: "Calculator", href: "/calculator", why: "Basic + scientific + graphing" },
-      { label: "Graph plotter", href: "/graph-plotter", why: "Visualise any function" },
+      { label: "Flashcards", href: "/flashcards", why: "Drill formulas with spaced repetition" },
+      { label: "Practice quiz", href: "/quiz", why: "Test yourself on any topic" },
+      { label: "Explain anything", href: "/explain", why: "Any concept, at your level" },
     ],
   },
 
@@ -108,7 +108,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ctaLinks: [
       { label: "Essay coach", href: "/essay-coach", why: "Draft, get feedback, redraft" },
       { label: "Grade my answer", href: "/grade", why: "Paste any answer, get band feedback" },
-      { label: "Vocabulary", href: "/vocab", why: "Build word lists by context" },
+      { label: "Flashcards", href: "/flashcards", why: "Build vocab lists that stick" },
     ],
   },
 
@@ -149,8 +149,8 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Calculus-aware step solver" },
-      { label: "Graph plotter", href: "/graph-plotter", why: "Visualise functions + their derivatives" },
-      { label: "Formula sheet", href: "/formula-sheet", why: "Standard derivatives + integrals table" },
+      { label: "Explain anything", href: "/explain", why: "See why each rule works" },
+      { label: "Flashcards", href: "/flashcards", why: "Standard derivatives + integrals, drilled" },
     ],
   },
 
@@ -191,8 +191,8 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Numerical physics step-through" },
-      { label: "Graph plotter", href: "/graph-plotter", why: "Visualise motion + waves" },
-      { label: "Concept map", href: "/concept-map", why: "See how kinematics → dynamics → energy connect" },
+      { label: "Explain anything", href: "/explain", why: "Motion and waves, made visual" },
+      { label: "Mock exam", href: "/mock-exam", why: "Full paper practice under time" },
     ],
   },
 
@@ -233,8 +233,8 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Mole + stoichiometry calculations" },
-      { label: "Concept map", href: "/concept-map", why: "Bonding → reactions → applications" },
-      { label: "Formula sheet", href: "/formula-sheet", why: "Constants, equations, periodic data" },
+      { label: "Mock exam", href: "/mock-exam", why: "Board-style paper practice" },
+      { label: "Flashcards", href: "/flashcards", why: "Constants and equations, drilled" },
     ],
   },
 
@@ -276,7 +276,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ctaLinks: [
       { label: "Flashcards", href: "/flashcards", why: "SM-2 spaced repetition for terms" },
       { label: "Quiz generator", href: "/quiz", why: "GCSE & A-Level style MCQs" },
-      { label: "Concept map", href: "/concept-map", why: "How systems interconnect" },
+      { label: "Explain anything", href: "/explain", why: "How the systems interconnect" },
     ],
   },
 
@@ -358,7 +358,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
       "Mark-scheme feedback on essay answers"
     ],
     ctaLinks: [
-      { label: "Concept map", href: "/concept-map", why: "Map any topic's branches" },
+      { label: "Explain anything", href: "/explain", why: "Break any topic into its branches" },
       { label: "Flashcards", href: "/flashcards", why: "Case study stats memorisation" },
       { label: "Grade my answer", href: "/grade", why: "Essay/long-answer feedback" },
     ],
@@ -401,7 +401,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Boolean simplification + truth tables" },
-      { label: "Whiteboard", href: "/whiteboard", why: "Sketch network diagrams, ER diagrams" },
+      { label: "Explain anything", href: "/explain", why: "Networks and ER diagrams, explained" },
       { label: "Quiz generator", href: "/quiz", why: "MCQs on networks / algorithms / databases" },
     ],
   },
@@ -443,8 +443,8 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ],
     ctaLinks: [
       { label: "Code chat", href: "/chat", why: "Paste code, get explanations" },
-      { label: "Concept map", href: "/concept-map", why: "How OOP concepts fit together" },
-      { label: "Whiteboard", href: "/whiteboard", why: "Diagram class hierarchies" },
+      { label: "Explain anything", href: "/explain", why: "How OOP concepts fit together" },
+      { label: "Practice quiz", href: "/quiz", why: "Test your understanding of classes" },
     ],
   },
 
@@ -486,7 +486,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ctaLinks: [
       { label: "Math solver", href: "/math-solver", why: "Quick arithmetic for adjustments" },
       { label: "Quiz generator", href: "/quiz", why: "Drill journal entries + concepts" },
-      { label: "Formula sheet", href: "/formula-sheet", why: "All ratio formulas in one place" },
+      { label: "Flashcards", href: "/flashcards", why: "All ratio formulas, drilled" },
     ],
   },
 
@@ -528,7 +528,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
     ctaLinks: [
       { label: "Essay coach", href: "/essay-coach", why: "Plan + draft + critique essays" },
       { label: "Grade my answer", href: "/grade", why: "Mark-scheme feedback" },
-      { label: "Concept map", href: "/concept-map", why: "Link macro indicators visually" },
+      { label: "Explain anything", href: "/explain", why: "How macro indicators link up" },
     ],
   },
 

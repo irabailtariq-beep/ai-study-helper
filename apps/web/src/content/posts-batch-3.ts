@@ -48,7 +48,7 @@ Most students never get to step 5. That is why they revise the same way every ye
 
 ## Week 5-6: targeted drilling
 
-Now you know exactly which topics keep losing you marks. Drill *those* with [/problem-variants](/problem-variants) — the AI generates similar questions in the same board style — until you stop losing marks on them.
+Now you know exactly which topics keep losing you marks. Drill *those* with [the quiz generator](/quiz) — the AI generates similar questions in the same board style — until you stop losing marks on them.
 
 For memorisation-heavy subjects (biology, history, chemistry equations), make flashcards from the exact wording mark schemes accept. Not your wording. The mark scheme's wording. Then run them through [/flashcards](/flashcards) with SM-2 spaced repetition.
 
@@ -64,13 +64,13 @@ The last week is for sleep, rehearsing the morning of the exam, and one light pa
 
 - **Explainer for confusing topics** — [/explain](/explain) with your board picked
 - **Marker for free-response questions** — [/grade](/grade) gives you AI-graded feedback with the mark scheme guess
-- **Practice variants** — [/problem-variants](/problem-variants) gives you fresh questions in the same shape
+- **Practice variants** — [the quiz generator](/quiz) gives you fresh questions in the same shape
 - **Mock exams** — [/mock-exam](/mock-exam) generates a paper from your syllabus
-- **Concept maps** — [/concept-map](/concept-map) shows you which topics link to which
+- **Concept maps** — [Explain anything](/explain) shows you which topics link to which
 
 What NOT to use AI for: replacing real past papers, replacing real sleep, and replacing the act of actually sitting and writing answers by hand. AI is a tutor, not a substitute for your nervous system learning to write under pressure.
 
-[Start your 8-week plan with a free diagnostic →](/diagnostic)
+[Start your 8-week plan with a free practice quiz →](/quiz)
 `,
   },
 
@@ -107,9 +107,9 @@ That last 10 minutes is doing 80% of the work. If you can't write a one-paragrap
 
 ## Principle 4: AI takes the planning load off you
 
-This is where it changes. You do not have to design the 30-day map yourself. Run your syllabus through [/diagnostic](/diagnostic). It generates a personalised plan with focus topics, daily tasks, and an estimated time. You can override anything. The point is you start with structure instead of a blank page.
+This is where it changes. You do not have to design the 30-day map yourself. Run your syllabus through [the quiz generator](/quiz). It generates a personalised plan with focus topics, daily tasks, and an estimated time. You can override anything. The point is you start with structure instead of a blank page.
 
-Then use [/syllabus](/syllabus) to upload your official board syllabus and have it broken into a clean digital outline. Every day's block links straight to the right unit.
+Then use [the mock exam tool](/mock-exam) to upload your official board syllabus and have it broken into a clean digital outline. Every day's block links straight to the right unit.
 
 ## A real 30-day timetable
 
@@ -151,7 +151,7 @@ You will. Every student does. The trick is what you do on day 12 when you've alr
 
 Set a fixed start time, not a fixed total. "I will start at 4pm" survives. "I will study for 4 hours" doesn't. The hardest moment in any study session is the first 90 seconds, where your brain is fighting to do anything else. Make that moment a habit.
 
-[Generate your 30-day plan in one click →](/diagnostic)
+[Find out where you stand with a quick quiz →](/quiz)
 `,
   },
 
@@ -239,9 +239,9 @@ The mole was the bridge between mass and mass.
 
 Run through 15 mole questions in a row. Don't stop to "understand" them — just churn. After 15, the decision tree will feel automatic. Then go back and look at any you got wrong — the only thing wrong was almost certainly which formula you picked, not the math.
 
-Generate 15 variant questions at your exact board level with [/problem-variants](/problem-variants). For stoichiometry visualised, drop your reaction into [/concept-map](/concept-map) and see the chain laid out. For photo questions from your textbook, use [/math-solver](/math-solver) — it handles balanced equations cleanly.
+Generate 15 variant questions at your exact board level with [the quiz generator](/quiz). For stoichiometry visualised, drop your reaction into [Explain anything](/explain) and see the chain laid out. For photo questions from your textbook, use [/math-solver](/math-solver) — it handles balanced equations cleanly.
 
-[Practice mole questions in your board's style →](/problem-variants)
+[Practice mole questions in your board's style →](/quiz)
 `,
   },
 
@@ -264,7 +264,7 @@ The exam is split into two papers. Paper 3 (multiple choice, 45 min) and Paper 4
 
 That looks balanced. It is not — for *you*. You almost certainly have one weak strand among the three. Identify it now and weight your revision time accordingly.
 
-Run a [/diagnostic](/diagnostic) across all three before you plan anything.
+Run a [the quiz generator](/quiz) across all three before you plan anything.
 
 ## What changed in the 2025 syllabus
 
@@ -274,7 +274,7 @@ If you're sitting it in 2026 onwards, you're on the updated 0654 syllabus. The h
 - More explicit practical-skills weighting in Paper 4
 - A few topics moved (energy stores phrasing, ecosystem definitions)
 
-Pull your latest syllabus PDF into [/syllabus](/syllabus) so you're revising the right version.
+Pull your latest syllabus PDF into [the mock exam tool](/mock-exam) so you're revising the right version.
 
 ## The 60/30/10 rule
 
@@ -410,7 +410,7 @@ Pull out the topics that have appeared in the last 5 board papers. They will abs
 - Area of segment/sector
 - Volume of a frustum (cone cut)
 
-For each, do at least 5 questions. Use [/problem-variants](/problem-variants) to generate fresh versions in CBSE board style.
+For each, do at least 5 questions. Use [the quiz generator](/quiz) to generate fresh versions in CBSE board style.
 
 ## Day 12: arrange formulas
 
@@ -608,7 +608,7 @@ JEE Mains has 25 physics questions, 60 minutes for the section if you're pacing 
 4. Track your accuracy per archetype
 5. The archetype with the lowest accuracy is your weakest — that's where you drill
 
-Run any specific archetype through [/problem-variants](/problem-variants) — set subject to physics and topic to the archetype name, and you'll get fresh JEE-style questions in seconds.
+Run any specific archetype through [the quiz generator](/quiz) — set subject to physics and topic to the archetype name, and you'll get fresh JEE-style questions in seconds.
 
 ## Pacing trick
 
@@ -783,7 +783,7 @@ You will see a clear winner for *you*. Pretty much everyone underestimates how m
 - **Writing essays** → silence or wordless ambient
 - **Math drilling** → whatever keeps you in the chair
 
-[Build your study habit with a 30-day plan →](/diagnostic)
+[Build your study habit with daily practice →](/quiz)
 `,
   },
 
@@ -897,7 +897,7 @@ The fix is not "trust them more." That is asking parents to do something they ca
 
 ## What shared visibility looks like
 
-Help in Study has a [/parent](/parent) feature designed for exactly this. The student studies. The system tracks (with permission) what topics they touched, what quizzes they took, what they got stuck on. Once a week, the parent gets a single recap:
+Help in Study has a [the guide for parents](/blog/parents-help-with-homework) feature designed for exactly this. The student studies. The system tracks (with permission) what topics they touched, what quizzes they took, what they got stuck on. Once a week, the parent gets a single recap:
 
 - "This week your child practised algebra and trigonometry. They struggled with quadratic word problems. They completed 4 mock quizzes with scores 65, 78, 81, 85. Their study time was 4.2 hours."
 
@@ -947,7 +947,7 @@ Try this script:
 
 Most teens say yes. The framing of "I'm tired of nagging you too" lands much better than "we need to check on your study."
 
-[Set up the family parent recap →](/parent)
+[Read the guide for parents →](/blog/parents-help-with-homework)
 `,
   },
 
@@ -978,7 +978,7 @@ Almost every "explain your reasoning" question on the exam expects you to use th
 
 The CLT is the engine that makes everything else work. It says:
 
-> For a large enough sample size, the sampling distribution of the sample mean is approximately Normal, with mean = population mean, and standard deviation = σ / √n.
+**The Central Limit Theorem:** for a large enough sample size, the sampling distribution of the sample mean is approximately Normal, with mean = population mean, and standard deviation = sigma / sqrt(n).
 
 That second sentence is the magic. It tells you:
 1. You can use Normal-distribution tools (z-scores, p-values) even if the population isn't Normal, as long as n is big enough (rule of thumb: n ≥ 30).
@@ -1039,7 +1039,7 @@ Memorise the templates. Use them every time. They are essentially free marks.
 - **Concept walkthroughs**: [/explain](/explain) with subject=Statistics, board=AP. Ask "explain the difference between sample distribution and sampling distribution with a worked example."
 - **Past FRQs**: paste a free-response question into [/grade](/grade) along with your answer. Get specific feedback on language and missing conditions.
 - **Mock exams**: [/mock-exam](/mock-exam) generates AP-style multiple choice + FRQs.
-- **Targeted drilling**: [/problem-variants](/problem-variants) for confidence intervals or hypothesis tests until you can do them in your sleep.
+- **Targeted drilling**: [the quiz generator](/quiz) for confidence intervals or hypothesis tests until you can do them in your sleep.
 
 ## Final week routine
 
