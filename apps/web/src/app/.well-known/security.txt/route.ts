@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export function GET() {
   const expires = new Date();
   expires.setFullYear(expires.getFullYear() + 1);
-  const body = `Contact: mailto:security@helpinstudy.com
+  const body = `Contact: mailto:raistudyhelper@gmail.com
 Expires: ${expires.toISOString()}
 Preferred-Languages: en
 Canonical: https://helpinstudy.com/.well-known/security.txt

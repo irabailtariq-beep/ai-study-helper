@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+const title = "Terms of Use";
+const description = "The terms for using Help in Study — a free AI study tool. What you may use it for, the limits of AI accuracy, and how to get in touch.";
+
+export const metadata: Metadata = {
+  title, description,
+  alternates: { canonical: "/terms" },
+  openGraph: { title, description, url: "https://helpinstudy.com/terms" },
+};
 
 export default function TermsPage() {
   return (

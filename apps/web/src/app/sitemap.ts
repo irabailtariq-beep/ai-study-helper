@@ -5,7 +5,9 @@ import { LEARN_COMBOS } from "@/content/learnPages";
 
 const STATIC_PATHS = [
   "",
-  "/onboarding", "/progress",
+  // NOTE: /onboarding, /progress and /signin are deliberately NOT here. They are
+  // app UI with no search intent, they are noindex, and listing them only spent
+  // crawl budget and produced "duplicate, Google chose a different canonical".
   // The 10 tools
   "/explain", "/transform", "/chat",
   "/math-solver", "/quiz", "/mock-exam", "/grade",
@@ -15,8 +17,6 @@ const STATIC_PATHS = [
   "/blog", "/about", "/contact",
   // Legal / compliance
   "/privacy", "/terms",
-  // Account (signin only — /settings is robots-disallowed and shouldn't be in sitemap)
-  "/signin",
 ];
 
 // Subject-targeted SEO landing pages. Each page has hand-written, subject-specific

@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+const title = "Privacy Policy";
+const description = "How Help in Study handles your data: what we collect, how AI processing works, cookies and analytics, your rights, and how to export or delete everything.";
+
+export const metadata: Metadata = {
+  title, description,
+  alternates: { canonical: "/privacy" },
+  openGraph: { title, description, url: "https://helpinstudy.com/privacy" },
+};
 
 export default function PrivacyPage() {
   return (
