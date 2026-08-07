@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import type { ChatTurn } from "@ash/core";
 import Link from "next/link";
 import { VoiceInput, SpeakButton } from "@/components/VoiceInput";
@@ -9,7 +10,7 @@ import { RichOutput } from "@/components/RichOutput";
 const MEMORY_KEY = "ash-chat-history";
 
 export default function ChatPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [history, setHistory] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
   const [answerLength, setAnswerLength] = useState<"short" | "long">("long");
@@ -28,13 +29,6 @@ export default function ChatPage() {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [history]);
 
-  if (!profile) {
-    return (
-      <main className="min-h-screen p-6 max-w-2xl mx-auto">
-        <p>Please complete <Link href="/onboarding" className="underline">onboarding</Link> first.</p>
-      </main>
-    );
-  }
 
   async function send() {
     if (!input.trim() || loading) return;
@@ -65,6 +59,7 @@ export default function ChatPage() {
 
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto flex flex-col">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Chat tutor</h1>
 

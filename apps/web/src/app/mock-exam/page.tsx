@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import type { Quiz, QuizItem } from "@ash/core";
 import { InlineRich } from "@/components/RichOutput";
 
 export default function MockExamPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [topic, setTopic] = useState("");
   const [count, setCount] = useState(10);
   const [minutes, setMinutes] = useState(20);
@@ -24,11 +25,6 @@ export default function MockExamPage() {
     return () => clearInterval(id);
   }, [quiz, submitted, secondsLeft]);
 
-  if (!profile) return <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Mock exam simulator</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Pick a topic and a time. We generate a fresh exam, time you, and auto-grade your work.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>;
 
   async function start() {
     setBusy(true); setErr(null); setSubmitted(false); setQuiz(null); setAnswers({});
@@ -65,6 +61,7 @@ export default function MockExamPage() {
 
   return (
     <main className="px-6 py-10 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/tools" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All tools</Link>
       <header className="mt-3 mb-6">
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Mock exam simulator</h1>

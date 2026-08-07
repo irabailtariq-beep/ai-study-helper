@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import type { ExplainResponse, TransformIntensity } from "@ash/core";
 import { SpeakButton, VoiceInput } from "@/components/VoiceInput";
@@ -38,7 +39,7 @@ const INTENSITY_LABELS: Record<TransformIntensity, { name: string; sub: string }
 };
 
 export default function TransformPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
 
   const [interest, setInterest] = useState<string>("cooking");
   const [customInterest, setCustomInterest] = useState("");
@@ -49,15 +50,6 @@ export default function TransformPage() {
   const [result, setResult] = useState<ExplainResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  if (!profile) {
-    return (
-      <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Make any topic about your interests</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Pick an interest. Drop in a topic. Our AI rewrites the explanation through that lens — cricket, cooking, gaming, K-pop, anything.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>
-    );
-  }
 
   const finalInterest = customInterest.trim() || INTEREST_PRESETS.find((p) => p.id === interest)?.label || interest;
 
@@ -97,6 +89,7 @@ export default function TransformPage() {
 
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
 
       <header className="mt-3 mb-6">

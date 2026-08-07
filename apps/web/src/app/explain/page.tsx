@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import type { ExplainResponse, OutputFormat, ToneStyle } from "@ash/core";
 import Link from "next/link";
 import { RichOutput, InlineRich } from "@/components/RichOutput";
 
 export default function ExplainPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [interestContext, setInterestContext] = useState<string>("");
@@ -18,15 +19,6 @@ export default function ExplainPage() {
   const [result, setResult] = useState<ExplainResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  if (!profile) {
-    return (
-      <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Explain anything</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Free AI tutor. Upload a photo or PDF, paste a question, get an age-adapted explanation in your board's style.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>
-    );
-  }
 
   async function submit() {
     setError(null);
@@ -61,6 +53,7 @@ export default function ExplainPage() {
 
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Explain something</h1>
 

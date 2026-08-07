@@ -170,7 +170,14 @@ export default function OnboardingPage() {
         </div>
         <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
           <button
-            onClick={() => { window.location.href = "/"; }}
+            onClick={() => {
+              // Tools link here as /onboarding?next=/math-solver, so send the
+              // student back to what they were actually trying to do.
+              // Read at click time to avoid a useSearchParams prerender bailout.
+              const next = new URLSearchParams(window.location.search).get("next");
+              const safe = next && next.startsWith("/") && !next.startsWith("//") ? next : "/tools";
+              window.location.href = safe;
+            }}
             className="px-7 py-3.5 rounded-full text-white font-semibold"
             style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}
           >

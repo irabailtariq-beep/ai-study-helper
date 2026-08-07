@@ -1,25 +1,21 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import type { MathSolution } from "@ash/core";
 import { VoiceInput, SpeakButton } from "@/components/VoiceInput";
 import { RichOutput, InlineRich } from "@/components/RichOutput";
 
 export default function MathSolverPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [sol, setSol] = useState<MathSolution | null>(null);
 
-  if (!profile) return <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Step-by-step Math Solver</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Snap a math problem or paste it. Get every line of working, the named method, and common pitfalls flagged.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>;
 
   async function solve() {
     setBusy(true); setErr(null); setSol(null);
@@ -42,6 +38,7 @@ export default function MathSolverPage() {
 
   return (
     <main className="min-h-screen px-6 py-8 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <header className="mt-3 mb-6">
         <p className="uppercase tracking-widest text-xs font-semibold" style={{ color: "var(--ash-primary)", letterSpacing: "0.25em" }}>Step-by-step math</p>

@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import type { Quiz, QuizItem } from "@ash/core";
 import { InlineRich } from "@/components/RichOutput";
 
 export default function QuizPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [count, setCount] = useState(8);
@@ -17,15 +18,6 @@ export default function QuizPage() {
   const [revealed, setRevealed] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  if (!profile) {
-    return (
-      <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Quiz me — auto practice</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Generate quizzes from any material: MCQ, short answer, true/false, fill-in-the-blank — auto-graded with explanations.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>
-    );
-  }
 
   async function generate() {
     setError(null);
@@ -58,6 +50,7 @@ export default function QuizPage() {
 
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Quiz me</h1>
 

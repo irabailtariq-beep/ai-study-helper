@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { explainWith, grammarWith } from "@/lib/tools/clientHelpers";
 import { RichOutput, InlineRich } from "@/components/RichOutput";
 import { formatCitation, CITE_STYLES, type CiteStyle } from "@/lib/citation";
@@ -17,17 +18,13 @@ const FEEDBACK_PROMPTS = {
 type Tab = "feedback" | "grammar" | "cite";
 
 export default function WritingCoachPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [tab, setTab] = useState<Tab>("feedback");
 
-  if (!profile) return <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Writing coach</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Essay feedback, a grammar &amp; clarity check, and a citation generator — all in one place.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>;
 
   return (
     <main className="px-6 py-10 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/tools" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All tools</Link>
       <header className="mt-3 mb-6">
         <p className="uppercase tracking-widest text-xs font-semibold" style={{ color: "var(--ash-primary)", letterSpacing: "0.3em" }}>Writing coach</p>

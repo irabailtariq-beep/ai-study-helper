@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import { fileToBase64, checkFile } from "@/lib/upload";
 import { sm2 } from "@/lib/sm2";
 import { InlineRich } from "@/components/RichOutput";
@@ -31,7 +32,7 @@ function saveCards(cards: Card[]) {
 }
 
 export default function FlashcardsPage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [cards, setCards] = useState<Card[]>([]);
   const [current, setCurrent] = useState<Card | null>(null);
   const [flipped, setFlipped] = useState(false);
@@ -56,7 +57,6 @@ export default function FlashcardsPage() {
   }
 
   async function generate() {
-    if (!profile) return setError("Please complete onboarding first.");
     if (!source.trim() && !file) return setError("Paste a topic or upload a file first.");
     setBusy(true); setError(null);
     try {
@@ -120,22 +120,10 @@ export default function FlashcardsPage() {
   const today = new Date().toISOString().slice(0, 10);
   const dueCount = cards.filter((c) => c.due_at <= today).length;
 
-  if (!profile) {
-    return (
-      <main className="px-6 py-10 max-w-2xl mx-auto">
-        <h1 className="text-3xl font-extrabold tracking-tight">Flashcards</h1>
-        <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>
-          Spaced-repetition flashcards. Auto-generate from any material.
-        </p>
-        <p className="mt-6 text-sm">
-          Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first.
-        </p>
-      </main>
-    );
-  }
 
   return (
     <main className="px-6 py-10 max-w-2xl mx-auto">
+      <ProfileNudge />
       <Link href="/tools" className="text-sm" style={{ color: "var(--ash-primary)" }}>← All tools</Link>
       <h1 className="text-3xl font-extrabold tracking-tight my-4">Flashcards</h1>
       <p className="text-sm mb-6" style={{ color: "var(--ash-muted)" }}>

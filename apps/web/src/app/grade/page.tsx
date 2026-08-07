@@ -1,13 +1,14 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useProfile } from "@/lib/profileStore";
+import { useEffectiveProfile } from "@/lib/profileStore";
+import { ProfileNudge } from "@/components/ProfileNudge";
 import type { GradeResult } from "@ash/core";
 import { VoiceInput } from "@/components/VoiceInput";
 import { RichOutput, InlineRich } from "@/components/RichOutput";
 
 export default function GradePage() {
-  const profile = useProfile((s) => s.profile);
+  const profile = useEffectiveProfile();
   const [question, setQuestion] = useState("");
   const [studentAnswer, setStudentAnswer] = useState("");
   const [rubric, setRubric] = useState("");
@@ -16,11 +17,6 @@ export default function GradePage() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
-  if (!profile) return <main className="px-6 py-10 max-w-3xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Mark my answer</h1>
-      <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>Paste an exam question and your answer. AI marks it in your board's style — score, band, strengths, improvements, model answer.</p>
-      <p className="mt-6 text-sm">Complete <Link href="/onboarding" className="underline" style={{ color: "var(--ash-primary)" }}>onboarding</Link> first to use this tool — takes 30 seconds.</p>
-    </main>;
 
   async function grade() {
     setBusy(true); setErr(null); setResult(null);
@@ -37,6 +33,7 @@ export default function GradePage() {
 
   return (
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
+      <ProfileNudge />
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-2xl font-bold my-4">Mark my answer</h1>
       <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>
