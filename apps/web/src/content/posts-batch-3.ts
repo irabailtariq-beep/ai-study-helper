@@ -8,516 +8,669 @@ const today = "2026-05-23";
 export const POSTS_BATCH_3: Post[] = [
   {
     slug: "2026-board-exam-survival-kit",
-    title: "2026 Board Exam Survival Kit: What Actually Saves Your Grade in the Last 8 Weeks",
-    description: "The realistic 8-week plan for CBSE, GCSE, AP, Cambridge and WAEC students. What to drop, what to drill, and how to use AI without becoming dependent.",
-    publishedAt: today, readTime: "8 min",
-    tags: ["board exam prep", "CBSE 2026", "IGCSE revision", "exam survival", "AI study helper"],
+    title: "8-Week Board Exam Revision Plan: What Actually Lifts Your Grade",
+    description: "An 8-week board exam revision plan for CBSE, GCSE, AP, Cambridge and WAEC students: rank topics by marks per hour, drill timed past papers, then taper right.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["board exam revision plan","8 week study plan","exam technique","past paper practice","mark scheme wording"],
     body: `
-Eight weeks out, every student starts panicking about the same wrong thing: covering everything. The students who get the highest grades do the opposite. They cut hard.
+**Quick answer:** With eight weeks left, stop trying to cover everything. Use week 1 to rank topics by how many marks an hour of revision can realistically win back, weeks 2 to 6 for timed past-paper questions plus a written error log, week 7 for full-length mocks, and the final week for tapering with sleep protected.
 
-Here is what works, written from the perspective of what actually moves a grade in eight weeks.
+I got this wrong the first time. Before my first IGCSE mock season I built a colour-coded timetable, then spent nine hours re-reading history notes because history is my favourite subject and re-reading felt calm. I scored almost exactly what I had before. What finally moved my grades was boring: sit a paper, mark it honestly, write the reason next to every mark I lost. Here is the eight-week version of that, for CBSE, GCSE (AQA, Edexcel, OCR), AP, Cambridge and WAEC/WASSCE students.
 
-## Week 1: triage
+## Week 1: rank topics by marks per hour, not by fear
 
-Do not start revising. Open the syllabus, the last three years of past papers, and a blank sheet. For every topic, write one of three letters next to it.
+Week 1 is not for revising. It is for deciding what you will deliberately ignore. Most students revise the topic that scares them most, which is usually the hardest one worth the fewest marks: the worst trade available.
 
-- **K** — I already know this cold
-- **M** — I half know it
-- **U** — I have no idea
+For each topic get two numbers: how many marks it is typically worth (count it across your last three past papers and divide by three), and where four focused hours could realistically move your score.
 
-Burn the Ks. Don't revise them. They are done. They earn the same marks whether you spend 5 hours on them or zero.
+My real comparison from Cambridge IGCSE chemistry:
 
-Spend Weeks 2-6 on the Ms. That is where grade jumps live. A topic at 60% becomes a topic at 90% in a few focused hours. A topic at 10% takes weeks to become 50% — bad return on time.
+- Electrolysis averaged about 11 marks a paper. I was scoring roughly 4. Four hours got me to 9. Gain = 5 marks over 4 hours = 1.25 marks per hour.
+- Organic naming averaged about 6 marks. I was already scoring 5. Four hours might get me to 6. Gain = 1 mark over 4 hours = 0.25 marks per hour.
 
-Touch the Us last and only with a teacher or [AI explainer](/explain). They take long, dense effort, and many of them are low frequency in the actual paper.
+Same four hours, five times the return. Rank every topic that way and the top eight or so are your eight weeks. Two adjustments: push up anything other topics depend on, because mole calculations, rearranging equations and essay structure leak marks across whole papers; push down anything that has appeared once in five years.
 
-## Week 2-4: past papers, not notes
+## Weeks 2 to 4: papers before notes, with an error log that says why
 
-Re-reading notes feels like studying. It is not. It is recognition, not retrieval. Cognitive science is unambiguous: retrieval practice doubles retention compared to re-reading.
+Do the paper first, then revise what it exposed. Notes-then-test is backwards, because it lets you re-revise what you already knew. Pulling an answer out of an empty head is much harder than recognising it on a page, and the hard version is the one that lasts.
 
-What this means:
+The loop, once or twice a week per subject:
 
-1. Print out a past paper for the subject and board you actually sit
-2. Set a timer for the real exam length
-3. Sit and do it without notes
-4. Mark it ruthlessly
-5. For every mark you lost, write the *reason* (didn't know the term, ran out of time, misread the question, careless arithmetic)
-6. The reasons are your revision plan
+1. Print a real past paper from your board and level.
+2. Set a timer for the actual exam length. No notes, no phone.
+3. Mark it meanly against the mark scheme. If the examiner would not give it, you do not give it.
+4. Next to every lost mark write a reason: did not know the content, knew it but wrote it vaguely, ran out of time, or careless slip.
+5. Total the marks in each category. That total is your revision plan.
 
-Most students never get to step 5. That is why they revise the same way every year and get the same grade every year.
+A real breakdown from one of my papers, 52 out of 80:
 
-## Week 5-6: targeted drilling
+- 11 marks: genuinely did not know the content
+- 7 marks: knew it, wrote it in my own woolly words, no keyword
+- 6 marks: ran out of time, left the last question half-written
+- 4 marks: unit errors and one arithmetic slip
 
-Now you know exactly which topics keep losing you marks. Drill *those* with [the quiz generator](/quiz) — the AI generates similar questions in the same board style — until you stop losing marks on them.
+Only 11 of those 28 marks needed learning. Seventeen were technique, and technique moves in days rather than weeks. Almost nobody reaches step 4, which is why students revise the same way three years running and get the same grade.
 
-For memorisation-heavy subjects (biology, history, chemistry equations), make flashcards from the exact wording mark schemes accept. Not your wording. The mark scheme's wording. Then run them through [/flashcards](/flashcards) with SM-2 spaced repetition.
+## Weeks 5 and 6: drill in the mark scheme's words, not yours
 
-## Week 7: mock under exam conditions
+Examiners award marks for specific wording, so learn the wording. It is the fastest grade jump available in eight weeks and needs almost no new knowledge.
 
-Sit one full mock per subject, full length, no breaks, in a quiet room with no phone. Mark it. This is the most useful data point you will collect all year. Pace problems, panic spots, and what you actually still don't know all show up clearly.
+In biology, "there is more oxygen outside the cell" often scores nothing where "down the concentration gradient" scores the mark. In physics and WASSCE maths, method marks need the formula stated and the substitution shown, so a bare correct answer can score less than a wrong answer with working. A CBSE 3-mark question wants three separate scoring points, not one paragraph with three ideas buried in it. GCSE level-marked responses want linked reasoning and a judgement, not volume. AP free-response points are earned by naming the concept, not implying it.
 
-## Week 8: don't break what works
+So build your cards from mark-scheme phrases, not your own paraphrase, and run them through [flashcards](/flashcards) daily for the rest of the eight weeks. When a definition comes out in the examiner's words automatically, those marks are banked.
 
-The last week is for sleep, rehearsing the morning of the exam, and one light pass through the high-frequency formulas. Stop learning new content. The night before, do one easy past-paper question to remind your brain it can do this. Then close everything.
+## Week 7: one full mock per subject, sat properly
 
-## What to use AI for in the last 8 weeks
+Sit each mock at full length, in one sitting, handwritten if the real paper is handwritten. It only works if conditions are honest: splitting a two-hour paper in half tells you nothing about whether you can still think at minute 95.
 
-- **Explainer for confusing topics** — [/explain](/explain) with your board picked
-- **Marker for free-response questions** — [/grade](/grade) gives you AI-graded feedback with the mark scheme guess
-- **Practice variants** — [the quiz generator](/quiz) gives you fresh questions in the same shape
-- **Mock exams** — [/mock-exam](/mock-exam) generates a paper from your syllabus
-- **Concept maps** — [Explain anything](/explain) shows you which topics link to which
+Work out your pacing number first, by dividing minutes by marks. A 75-mark paper in 90 minutes gives 1.2 minutes per mark, so a 5-mark question gets about 6 minutes and a 12-mark essay about 14. Write that at the top of the page. Past double the allowance, leave a gap and move on: an unattempted 6-mark question at the end costs far more than an imperfect one in the middle.
 
-What NOT to use AI for: replacing real past papers, replacing real sleep, and replacing the act of actually sitting and writing answers by hand. AI is a tutor, not a substitute for your nervous system learning to write under pressure.
+Mark it, log the reasons again, and compare category totals with week 2. If "wrote it vaguely" has not shrunk, your wording drills are not working. Out of real papers? [the mock exam generator](/mock-exam) generates another from your syllabus.
 
-[Start your 8-week plan with a free practice quiz →](/quiz)
+## The last 10 days: taper instead of cram
+
+Cut volume by about a third in the final ten days and stop learning new topics in the last five. What you gain from cramming a new topic on day 3 is smaller than what you lose by arriving tired, and tired students misread questions.
+
+Those ten days hold short daily passes over mark-scheme phrases and formulas, one or two questions from your weakest topic, and full nights of sleep. Rehearse the practical parts too: what time you leave, what is in your bag, which pens, which calculator. The night before, do one question you know you can do, so the last thing your brain remembers is succeeding.
+
+## What AI actually helps with in eight weeks
+
+AI is good for the parts of revision that need a fast second opinion, useless for the parts that need your own nervous system.
+
+- [Mark my answer](/grade) for the "knew it but wrote it vaguely" pile: give it your answer and the question, and it shows you where the answer is thin.
+- [the quiz generator](/quiz) for extra questions on the topic that keeps costing you marks, once the past-paper questions on it are used up.
+
+What it cannot do: sit still for 90 minutes for you, build hand stamina, replace real past papers, or predict what is on this year's paper. Anyone claiming the last one is guessing.
+
+## Test yourself
+
+1. Topic A is worth 12 marks and you score 5. Topic B is worth 12 and you score 11. Which gets your next four hours, and roughly what is the marks-per-hour gap?
+2. Why does splitting lost marks into "did not know" and "knew but wrote badly" change what you do next week?
+3. Your paper is 75 marks in 90 minutes. Roughly how long should a 5-mark question take?
+
+## FAQ
+
+### Is eight weeks enough to fix a subject I have barely studied?
+
+Enough to move it a lot, not enough to master it. Pick the six or seven highest-frequency topics, learn those properly, and accept partial marks elsewhere. Spread eight weeks thinly across an untouched syllabus and you half-answer everything.
+
+### How many past papers should I actually do?
+
+Fewer papers marked properly beat more papers skimmed. One paper fully marked, with a reason next to every lost mark, is worth about three you skim and file away. Four to six analysed papers per subject is plenty.
+
+### What if I fall behind in week 3?
+
+Do not rebuild the timetable. Re-run the week 1 ranking with the time you have left and cut the bottom of the list. A plan amended twice is still a plan; a plan abandoned because it slipped is how people end up revising by vibes.
+
+### Should I keep revising subjects I am already strong in?
+
+Lightly, and mostly on technique. English is my strongest subject, and the marks I still dropped were structural, not knowledge, so one timed essay a week with feedback beat any re-reading.
+
+## In short
+
+Eight weeks is a resource problem, not a willpower problem. Rank topics by marks per hour, do timed papers before notes, write the reason behind every lost mark, learn the examiner's wording instead of your own, sit honest mocks in week 7, then taper and sleep. Cutting hard is not giving up. It is the only version that fits the time you have.
 `,
   },
 
   {
     slug: "ai-revision-timetable-30-days",
-    title: "How to Build an AI-Powered 30-Day Revision Timetable That You'll Actually Stick To",
-    description: "Most revision timetables are abandoned by day 4. Here is the AI-assisted format that survives. Built from research on habit formation and how real students study.",
-    publishedAt: today, readTime: "7 min",
-    tags: ["revision timetable", "30 day study plan", "study schedule", "AI study planner"],
+    title: "How to Make a 30-Day Revision Timetable You'll Actually Follow",
+    description: "How to build a 30-day revision timetable that survives a missed day: count your real hours, split your blocks 40/40/20, and use AI only where it genuinely helps.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["revision timetable","30 day study plan","exam revision","study schedule","AI study planner"],
     body: `
-The reason your last revision timetable failed by day 4 was not laziness. It was bad design. Most timetables are written like an Excel spreadsheet with rows of subjects and times. They look organised and they are dead on arrival.
+**Quick answer:** Build a 30-day revision timetable out of blocks, not fixed clock times. Count your honest available hours, split them 40 percent weak topics, 40 percent past-paper practice and 20 percent review, then leave one empty catch-up day every week. A plan with slack survives a bad day; a rigid hour-by-hour grid collapses the first time you miss it.
 
-Here is what actually survives 30 days.
+I made my first proper timetable in Year 10, before my Cambridge IGCSE mocks. Colour-coded spreadsheet, every hour from 4pm to 9pm filled. I lasted three days. On the Thursday I missed one chemistry hour, Friday was already full, and by Sunday I was four hours behind a plan built for someone who never gets tired. What follows is what I use now. It expects me to fail some days.
 
-## Principle 1: Plan blocks, not days
+## Step 1: Audit your real hours before you name a single subject
 
-Don't write "Monday 4pm — Chemistry". You will miss it once and the whole timetable collapses.
+Work out how many hours you genuinely have, not how many you wish you had. Split the 30 days into three kinds:
 
-Write blocks instead. "Three 90-minute chemistry blocks this week, two physics, one math review." Then you fit the blocks into whichever days actually work. Miss one, slot it elsewhere. The plan survives bad days.
+- **Study days** — school, then revision after. Be honest: for most people that is 2 focused hours, not 5.
+- **Long days** — weekends, holidays, study leave. Four hours is realistic; eight is a fantasy you pay for on Monday.
+- **Catch-up and rest days** — one of each per week, booked in advance with nothing on them.
 
-## Principle 2: Hard topics first, while your brain is fresh
+A normal month gives roughly 20 study days, 4 catch-up days, 4 rest days and 2 spare. If study days average 3 hours once you blend school nights with weekends, that is 60 usable hours. Sixty is the whole budget.
 
-A 90-minute block on your weakest topic at 9am beats a 4-hour evening grind on the same topic. Your prefrontal cortex is most willing to hold a confusing idea in the first 90 minutes after you wake up properly. Burn that window on the topic you hate.
+## Step 2: Rank topics by damage, not by dread
 
-## Principle 3: Mix recent + spaced revision in every block
+Score every topic twice, then multiply. Most of us revise what feels frightening or what feels comfortable, and neither is what actually costs marks.
 
-A 90-minute block should look like:
-- 15 minutes — recall yesterday's topic (no notes)
-- 50 minutes — new material or hardest weak topic
-- 15 minutes — quick flashcards from earlier this week
-- 10 minutes — write three sentences in your own words about what you learned today
+For each topic on your specification:
 
-That last 10 minutes is doing 80% of the work. If you can't write a one-paragraph summary, you didn't actually learn it.
+- A frequency score, 1 to 3 — how often it appears in the last four past papers.
+- A confidence score, 1 to 3 — how well you would do on it cold, no notes.
 
-## Principle 4: AI takes the planning load off you
+Priority = frequency x (4 minus confidence).
 
-This is where it changes. You do not have to design the 30-day map yourself. Run your syllabus through [the quiz generator](/quiz). It generates a personalised plan with focus topics, daily tasks, and an estimated time. You can override anything. The point is you start with structure instead of a blank page.
+Worked through for IGCSE chemistry: electrolysis appears in 3 of the last 4 papers and you would score 1 out of 3 cold, so priority = 3 x 3 = 9. Balancing equations appears in all 4 papers but you are solid: 3 x (4 - 3) = 3. Simple distillation appears once and you are shaky: 1 x 3 = 3.
 
-Then use [the mock exam tool](/mock-exam) to upload your official board syllabus and have it broken into a clean digital outline. Every day's block links straight to the right unit.
+Electrolysis therefore earns three times the blocks of the other two, even though balancing equations is the more common topic. Sort by that number and you have a queue instead of a mood.
 
-## A real 30-day timetable
+## Step 3: Turn hours into blocks, then split them 40/40/20
 
-Here is one of our most-followed templates, generated for an IGCSE student weak in chemistry:
+Sixty hours across four subjects is 15 hours each, which in 45-minute blocks is 20 blocks per subject. Written that way the month stops feeling infinite: 20 attempts each, and you know what to spend them on.
 
-**Days 1-5** — Diagnostic + foundation
-- Sit diagnostic quiz across all subjects
-- Identify 3 weakest topics
-- Daily 90-min block on weakest topic 1
+Split each subject's 20 blocks:
 
-**Days 6-15** — Concept building
-- Two 90-min blocks per day, one weak topic, one revision topic
-- Past-paper questions only from weak topics
-- Flashcards from anything you got wrong
+- 8 blocks (40 percent) on top-priority topics from step 2
+- 8 blocks (40 percent) on past-paper questions and exam technique
+- 4 blocks (20 percent) on spaced review of things you know now but will forget
 
-**Days 16-22** — Cross-topic practice
-- Mock exam every 3 days, full length
-- Mark with [/grade](/grade), feed the missed marks back to flashcards
+That last 20 percent is the first thing everyone deletes, and it is why students who revised everything still go blank in the hall.
 
-**Days 23-28** — High-frequency drill
-- Print 3 years of past papers, identify topics that appear every year
-- Drill only those topics until you can answer in under exam time
+## Step 4: What goes inside one 45-minute block
 
-**Days 29-30** — Light review
-- One easy practice paper per subject to confirm pacing
-- Sleep early
-- Pre-pack your bag
+Every block should end with evidence you can point at.
 
-## What to do when you fall behind
+1. **5 minutes, closed-book recall.** Everything you remember from your last block on this subject. No notes. Embarrassing on day one, fine by day nine.
+2. **25 minutes, the actual topic.** Notes, worked examples, a video, whatever it needs.
+3. **10 minutes, one exam question, timed.** Not reading the answer. Writing it.
+4. **5 minutes, the wrong book.** One line per mistake, in your own words, correction beside it.
 
-You will. Every student does. The trick is what you do on day 12 when you've already missed two blocks.
+Those last 5 minutes are where the marks live. By week 3 the wrong book is your only revision resource that is genuinely personal, and it is ideal material for [flashcards](/flashcards) — every card is something you have proved you get wrong.
 
-- Don't double up the next day (this is the #1 cause of total abandonment)
-- Move the missed block to the buffer day at the end of the week
-- If the buffer is already gone, drop the lowest-priority topic of the week
-- Never punish yourself by adding extra hours. Tired studying barely counts.
+## Step 5: The 30-day map, week by week
 
-## The single trick that doubles compliance
+The ratio of learning to practising should invert across the month.
 
-Set a fixed start time, not a fixed total. "I will start at 4pm" survives. "I will study for 4 hours" doesn't. The hardest moment in any study session is the first 90 seconds, where your brain is fighting to do anything else. Make that moment a habit.
+**Days 1 to 7 — 60 percent relearn, 40 percent practice.** Day 1 is the diagnostic: one past-paper section per subject, untimed, marked honestly. It stings, and it makes step 2 accurate instead of guesswork. Then spend the week on your top two topics per subject.
 
-[Find out where you stand with a quick quiz →](/quiz)
+**Days 8 to 14 — an even split.** Work down the priority list, add one timed section per subject, and re-test your day-1 topics from memory. Anything still weak jumps back up the queue.
+
+**Days 15 to 21 — 30 percent relearn, 70 percent practice.** One full past paper per subject, timed, then self-marked against the official mark scheme. Marking your own script with the scheme open teaches you the wording examiners reward: the "because" clause in biology, or the sentence that turns a history paragraph from description into explanation.
+
+**Days 22 to 28 — almost entirely practice.** Revisit a topic only if a paper proves you still cannot do it. Rewrite your three worst answers in full.
+
+**Days 29 to 30 — taper.** Read the wrong book. Nothing new goes in this late; it will not stick and it will scare you.
+
+## Step 6: Where AI helps, and where it only feels like work
+
+AI is good at generating practice and bad at knowing your life. Use it only for the first.
+
+- [The quiz tool](/quiz) makes practice questions from material you give it. Paste in the chapter or your notes at the end of a block, then answer closed-book.
+- [The mock exam tool](/mock-exam) generates a full practice paper in your board's style. One per subject in weeks 3 and 4, properly timed, beats a week of highlighting.
+- [The grader](/grade) gives feedback on written answers, which matters most in essay subjects where you cannot mark yourself objectively.
+
+What it cannot do is know your specification or how wrecked you are on Wednesdays. Pull the spec from your board directly — AQA, Edexcel and OCR for GCSE, or Cambridge, CBSE, AP and WAEC — and do the hour audit yourself.
+
+Building the timetable is also not revision. Give it 40 minutes, once. If you are still colour-coding on day two, that is procrastination wearing a lanyard.
+
+## Step 7: The missed-day rule that keeps the plan alive
+
+When you miss blocks, move them sideways into that week's catch-up day, never forward onto tomorrow. Tomorrow is already full, and that is how a two-block slip becomes a six-block deficit by Sunday.
+
+If you fall more than one catch-up day behind, stop trying to reclaim it. Delete the lowest-priority blocks instead, anything scoring 3 or below. A plan finished 85 percent complete beats a perfect plan you quit on day 11. Mine has never hit 100 percent, and my grades did not notice.
+
+## Test yourself
+
+1. You have 20 blocks for biology. Using the 40/40/20 split, how many go to past-paper practice?
+2. Topic A appears in 3 of the last 4 papers, confidence 3 out of 3. Topic B appears in 2, confidence 1 out of 3. Which comes first, and why?
+3. You lose two blocks on Wednesday. Where do they go?
+
+Answers: 8 blocks; Topic B, scoring 6 against Topic A's 3; into this week's catch-up day, not Thursday.
+
+## FAQ
+
+### How many hours a day should a 30-day revision timetable have?
+
+Two focused hours on a school day and around four on a free day is a realistic ceiling. Beyond that you are logging hours, not learning. Judge a day by blocks completed, not time served.
+
+### Is 30 days really enough to revise for a full exam?
+
+For a single subject, usually yes, provided you go straight at past papers and your weakest high-frequency topics. It is not enough to learn a two-year course from nothing, which is why people who spend week one re-reading chapter 1 run out of days.
+
+### Can AI just build my whole revision timetable for me?
+
+No. Anything claiming to is guessing at your hours, your specification and your weak spots. AI is strong once you have told it what to focus on, and useless before that.
+
+### What if I take seven subjects rather than four?
+
+Same method, smaller budget each. Sixty hours across seven subjects is roughly 8.5 hours, or 11 blocks each, so the split becomes 4 on weak topics, 4 on past papers and 3 on review. Tight, which is why the ranking matters more, not less.
+
+## In short
+
+Count your honest hours, rank topics by frequency times lack of confidence, convert the total into 45-minute blocks split 40/40/20, and invert the learn-to-practise ratio across the four weeks. Leave one empty day a week so a bad Wednesday cannot kill the plan. The timetable that works is the boring one you are allowed to miss.
 `,
   },
 
   {
     slug: "chemistry-mole-concept-mastery",
-    title: "The Mole Concept, Finally: A Chemistry Foundation That Won't Slip Away",
-    description: "Every chemistry topic from Year 10 onwards depends on the mole. Here is what it actually is, why students keep getting it wrong, and the AI workflow to lock it in.",
-    publishedAt: today, readTime: "8 min",
-    tags: ["mole concept", "chemistry help", "stoichiometry", "IGCSE chemistry", "CBSE chemistry"],
+    title: "How to Calculate Moles in Chemistry (Without Losing Marks)",
+    description: "How to calculate moles in chemistry: the four formulas you need, a full worked example, and why GCSE and IGCSE use 24 dm3 per mole at RTP, not 22.4.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["mole concept","how to calculate moles","stoichiometry","IGCSE chemistry","GCSE chemistry","molar gas volume"],
     body: `
-The mole is the most-failed topic in school chemistry. Not because it's complicated — but because every teacher introduces it with a different sentence that makes a different student confused.
+**Quick answer:** A mole is a counting number — 6.02 x 10^23 particles — and nearly every mole question comes down to four formulas: moles = mass / Mr, moles = volume in dm3 / 24 for a gas at room temperature and pressure, moles = concentration x volume in dm3 for a solution, and number of particles = moles x 6.02 x 10^23.
 
-Here is the version that sticks.
+I do IGCSE and A-Levels, and chemistry is not my strongest subject — English is. The first time I sat a quantitative chemistry paper I dropped four marks on one question, and not one of them was for not knowing the chemistry. I divided a volume by 24 while it was still in cm3. The mole is not a hard idea. It is an idea that punishes sloppy units, which is a completely different problem with a completely different fix.
 
-## What the mole actually is
+## What a mole actually is
 
-A mole is just a counting unit. Like a "dozen" is 12 of something. A mole is 6.022 × 10²³ of something. That's it.
+A mole is a fixed quantity of particles: 6.02 x 10^23 of them, in the same way a dozen is 12 of anything. Avogadro's constant was chosen so the periodic table becomes usable in a lab — the relative atomic mass of any element, written in grams, is one mole of it. So Mr (relative formula mass) and molar mass are the same number wearing different units: water's Mr is 18, so its molar mass is 18 g/mol.
 
-We use it because atoms and molecules are so tiny that counting them in normal numbers gives you absurd quantities. Saying "6.022 × 10²³ water molecules" is annoying. Saying "1 mole of water" is short. They mean exactly the same thing.
+Be strict about one thing: a mole is always a mole *of something*. Before you touch a calculator, write down what the moles are of. This matters most with ions — one mole of MgCl2 contains one mole of Mg2+ and two moles of Cl-, so three moles of ions in total. Examiners love that gap.
 
-## Why students get tripped up
+## The four formulas that cover nearly every question
 
-Three things consistently confuse students. Once you fix these three, the whole topic gets easy.
+Choose your formula from the units the question hands you, not from the chapter title.
 
-### 1. "Moles of what?"
+- Given a mass in grams: moles = mass / Mr
+- Given a volume of gas: moles = volume in dm3 / 24 (at RTP)
+- Given a solution with a concentration in mol/dm3: moles = concentration x volume in dm3
+- Asked for a number of atoms, molecules or ions: number = moles x 6.02 x 10^23
 
-A mole is always *of something*. A mole of atoms, a mole of molecules, a mole of electrons. Never just "a mole." If a question says "calculate the moles", your first move is to write down what the mole is *of*.
+Every reacting-mass question is then the same three-step sandwich. Convert what you are given into moles. Use the balanced equation to swap to moles of the substance you want. Convert those moles back out into grams, dm3 or mol/dm3. The chemistry lives only in the middle step, and that step is worthless if the equation is not balanced first — fix that before you go near mole arithmetic, on the [chemistry hub](/help-in-study/chemistry) if you need it.
 
-### 2. Molar mass vs molecular mass
+## Worked example: 5.0 g of limestone to a volume of gas
 
-These are the same number. The unit changes.
+Calcium carbonate reacts with excess hydrochloric acid:
 
-- Water's *molecular mass* is 18 atomic mass units (amu)
-- Water's *molar mass* is 18 grams per mole
+CaCO3 + 2HCl -> CaCl2 + H2O + CO2
 
-That happens because of how the mole was originally defined. So if you know the formula, you know both. H₂O = (2 × 1) + 16 = 18. Use the number, change the unit.
+Calculate the mass and volume of carbon dioxide made from 5.0 g of CaCO3 at RTP.
 
-### 3. Three different formulas, one idea
+1. Mr of CaCO3 = 40 + 12 + (3 x 16) = 100
+2. Moles of CaCO3 = 5.0 / 100 = 0.050 mol
+3. Ratio from the equation is 1 : 1, so moles of CO2 = 0.050 mol
+4. Mr of CO2 = 12 + 32 = 44, so mass of CO2 = 0.050 x 44 = 2.2 g
+5. Volume of CO2 at RTP = 0.050 x 24 = 1.2 dm3, which is 1200 cm3
 
-Every textbook gives you three formulas:
+The words "excess hydrochloric acid" are doing real work there. They tell you the acid never runs out, so the carbonate controls the answer and you can ignore the acid completely.
 
-- moles = mass / molar mass
-- moles = volume (dm³) / 22.4 (for gases at STP)
-- moles = concentration × volume
+Mark schemes here usually give a mark for the Mr, one for the moles, one for the ratio, and one for the final answer with units. A wrong Mr at step 1 still scores the rest on error carried forward — but only if every line is written down.
 
-These look like different ideas. They aren't. They are all variations of "how do I convert what I can measure into a count of molecules?" Once you know the conversion, the rest is bookkeeping.
+## Gas volumes: use 24 dm3 per mole at RTP
 
-## The decision tree
+For GCSE (AQA, Edexcel, OCR) and Cambridge IGCSE, the molar gas volume is 24 dm3 per mole at room temperature and pressure, roughly 20 degrees C and normal atmospheric pressure. That is also 24 000 cm3 per mole, which is the version worth memorising, because gas volumes in questions are so often printed in cm3.
 
-When you see a mole question, ask in order:
+The 22.4 dm3 per mole you may have seen is the molar volume at STP (0 degrees C), and it is the figure CBSE material quotes most often. AP Chemistry goes further again and expects the ideal gas equation, PV = nRT, for non-standard conditions rather than one fixed number. Check which conditions your own syllabus states before you memorise anything: using 22.4 in a paper that specified RTP loses the accuracy mark even when the method is perfect.
 
-1. What state is the substance in? (solid, liquid, gas, solution)
-2. What do I have a number for? (mass, volume, concentration)
-3. Pick the matching formula
-4. Solve
+The unit trap is the real killer. If a gas volume is in cm3, divide by 1000 first, then divide by 24. Dividing 1200 cm3 straight by 24 gives 50, which is a thousand times too big.
 
-That's it. 90% of mole questions collapse into this tree.
+## Moles in solutions: concentration and titration numbers
 
-## Worked example
+For solutions, moles = concentration (mol/dm3) x volume (dm3), and the volume is nearly always given in cm3.
 
-"Calculate the number of moles in 18 grams of water."
+Worked example: 25.0 cm3 of 0.100 mol/dm3 sodium hydroxide is exactly neutralised by 20.0 cm3 of hydrochloric acid, where NaOH + HCl -> NaCl + H2O.
 
-Step 1 — what state? Liquid.
-Step 2 — what do I have? Mass (18 g).
-Step 3 — formula: moles = mass / molar mass
-Step 4 — molar mass of water = 18 g/mol
-        — moles = 18 / 18 = 1
+1. Volume of NaOH = 25.0 / 1000 = 0.0250 dm3
+2. Moles of NaOH = 0.100 x 0.0250 = 0.00250 mol
+3. Ratio is 1 : 1, so moles of HCl = 0.00250 mol
+4. Volume of HCl = 20.0 / 1000 = 0.0200 dm3
+5. Concentration of HCl = 0.00250 / 0.0200 = 0.125 mol/dm3
 
-One mole of water. Easy.
+One conversion is worth knowing: concentration in g/dm3 = concentration in mol/dm3 x Mr. So that acid is 0.125 x 36.5 = 4.56 g/dm3. Papers swap between the two units deliberately.
 
-## Worked example 2 — stoichiometry
+## When two amounts are given: find the limiting reactant
 
-"How many grams of CO₂ are produced from burning 8 grams of methane?"
+If a question gives quantities for two reactants instead of saying "excess", one runs out first and decides the answer. Work out the moles of both, divide each by its coefficient in the balanced equation, and the smaller result is limiting.
 
-Equation: CH₄ + 2O₂ → CO₂ + 2H₂O
+Say 4.0 g of magnesium is added to 100 cm3 of 1.0 mol/dm3 hydrochloric acid, with Mg + 2HCl -> MgCl2 + H2.
 
-1. Moles of methane = 8 / 16 = 0.5 mol
-2. From the balanced equation, 1 mole of methane gives 1 mole of CO₂
-3. So 0.5 mol of CO₂ is produced
-4. Mass of CO₂ = moles × molar mass = 0.5 × 44 = 22 g
+- Moles of Mg = 4.0 / 24 = 0.167, divided by 1 = 0.167
+- Moles of HCl = 1.0 x 0.100 = 0.100, divided by 2 = 0.050
 
-The mole was the bridge between mass and mass.
+The acid is limiting. Moles of H2 = 0.100 / 2 = 0.050 mol, so the volume of hydrogen at RTP = 0.050 x 24 = 1.2 dm3. Use the magnesium instead and you get 4 dm3 and lose every mark after the first.
 
-## How to lock this in for the exam
+## The mistakes that cost me marks
 
-Run through 15 mole questions in a row. Don't stop to "understand" them — just churn. After 15, the decision tree will feel automatic. Then go back and look at any you got wrong — the only thing wrong was almost certainly which formula you picked, not the math.
+- Not converting cm3 to dm3 first. Every factor-of-1000 error I have made started here.
+- Rounding halfway through. Carry the full calculator value, round only at the end, usually to the significant figures of the data you were given.
+- Assuming a 1 : 1 ratio because most examples are. Read the coefficients every time.
+- Writing a bare number. Moles need "mol", masses need "g", concentrations need "mol/dm3", and units are often a separate mark.
+- Using the Mr of the wrong substance. Label every line with the formula it belongs to.
 
-Generate 15 variant questions at your exact board level with [the quiz generator](/quiz). For stoichiometry visualised, drop your reaction into [Explain anything](/explain) and see the chain laid out. For photo questions from your textbook, use [/math-solver](/math-solver) — it handles balanced equations cleanly.
+To check your working rather than just your answer, paste the whole question into the [step-by-step solver](/math-solver) or ask for the reasoning in [explain mode](/explain), then compare line by line. Where you diverge is the thing you actually need to relearn.
 
-[Practice mole questions in your board's style →](/quiz)
+## Test yourself
+
+1. How many moles are there in 8.0 g of sodium hydroxide, NaOH (Mr = 40)?
+2. What volume, in cm3, does 0.25 mol of carbon dioxide occupy at RTP?
+3. 20.0 cm3 of hydrochloric acid is exactly neutralised by 0.00200 mol of sodium hydroxide in a 1 : 1 reaction. What is its concentration in mol/dm3?
+
+Answers: 0.20 mol; 6000 cm3; 0.100 mol/dm3. For more of these with instant marking, generate a set on the [quiz page](/quiz).
+
+## FAQ
+
+### Is Mr the same thing as molar mass?
+
+Numerically yes. Mr is a plain number with no units, found by adding the relative atomic masses in the formula. Molar mass is that same number in grams per mole. Water: Mr = 18, molar mass = 18 g/mol.
+
+### Do I have to memorise 6.02 x 10^23 and 24 dm3?
+
+Learn 24 dm3 per mole at RTP, because it is not always printed on the paper. Avogadro's constant normally is given, either in the question or in the data booklet.
+
+### Why is my answer always a thousand times out?
+
+Almost certainly cm3 versus dm3. 1 dm3 = 1000 cm3, so divide any cm3 figure by 1000 before it enters a mole formula, and make that a separate written line.
+
+### What is the difference between RTP and STP?
+
+RTP is room temperature and pressure, about 20 degrees C, where one mole of gas occupies 24 dm3. STP is standard temperature and pressure, 0 degrees C, where it occupies 22.4 dm3. Use whichever your syllabus states — GCSE and Cambridge IGCSE use RTP, and 22.4 appears mainly in CBSE material.
+
+In short: the mole is a counting unit, not something to be scared of. Learn the four formulas, always write down what the moles are *of*, convert cm3 to dm3 before anything else, and use 24 dm3 per mole at RTP unless your syllabus says otherwise. Most marks lost in this topic are lost to units, not to chemistry.
 `,
   },
 
   {
     slug: "igcse-coordinated-science-revision",
-    title: "IGCSE Coordinated Science (0654): The Revision Strategy Nobody Teaches You",
-    description: "Coordinated Science covers biology, chemistry and physics in two papers. Most students revise it wrong. Here's the strategy for picking up easy marks fast.",
-    publishedAt: today, readTime: "7 min",
-    tags: ["IGCSE coordinated science", "0654 revision", "Cambridge IGCSE", "GCSE science"],
+    title: "IGCSE Co-ordinated Sciences (0654): How to Revise It Properly",
+    description: "IGCSE Co-ordinated Sciences 0654 revision done right: the real paper structure, a weekly three-science rotation, command words and a worked 4-mark example.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["IGCSE Co-ordinated Sciences","0654 revision","Cambridge IGCSE","science revision","exam technique"],
     body: `
-Coordinated Science (0654) is one of the most-taken Cambridge IGCSE subjects globally. It is also the one where students leave the easiest marks on the table. The format rewards a specific revision strategy that nobody teaches in class.
+**Quick answer:** Revise Cambridge IGCSE Co-ordinated Sciences (0654) by rotating biology, chemistry and physics through every single week instead of blocking one science at a time, and put most of your past-paper time into the structured theory paper (Paper 3 for Core, Paper 4 for Extended, 2 hours) because it carries the largest share of your marks. Multiple choice is Paper 1 or 2, 45 minutes.
 
-## The format trick
+I am an English and history person, so Co-ordinated Sciences was the IGCSE I was most nervous about. An earlier version of this article also had the paper numbers flat-out wrong — I had written "Paper 3 multiple choice, Paper 4 structured", which is not the exam. Getting that wrong wastes a fortnight of planning, so the structure comes first.
 
-The exam is split into two papers. Paper 3 (multiple choice, 45 min) and Paper 4 (structured questions, 1h 15m). The mark distribution is roughly:
+## The paper structure, checked properly
 
-- Biology — 33%
-- Chemistry — 33%
-- Physics — 33%
+0654 is assessed across three papers, not two, and each one comes in a Core version and an Extended version.
 
-That looks balanced. It is not — for *you*. You almost certainly have one weak strand among the three. Identify it now and weight your revision time accordingly.
+- **Paper 1 or Paper 2** — multiple choice, 40 questions, 45 minutes. Paper 1 is the Core version; Paper 2 is Extended.
+- **Paper 3 or Paper 4** — short-answer and structured questions covering all three sciences, 2 hours. Paper 3 is Core; Paper 4 is Extended.
+- **Paper 5 or Paper 6** — the practical assessment. Paper 5 is a practical test done in a lab; Paper 6 is the written alternative to practical. Your school chooses which one you sit, not you.
 
-Run a [the quiz generator](/quiz) across all three before you plan anything.
+Two things follow. First, the 2-hour structured paper is the biggest block of marks you will sit, so a plan built mostly on quick multiple-choice quizzing aims at the smaller target. Second, 0654 is a Double Award: you get two IGCSE grades reported as a pair, so a weak strand is not quietly averaged away the way people assume.
 
-## What changed in the 2025 syllabus
+One question on the alternative-to-practical paper assesses planning, and it can be set on any of the three sciences in a given series — so you cannot revise for it by hoping it lands on your best one.
 
-If you're sitting it in 2026 onwards, you're on the updated 0654 syllabus. The headline changes:
+## Core or Extended changes what you actually revise
 
-- Slightly tightened "core" vs "supplement" topic split — extended candidates have more depth in genetics, organic chemistry, and electromagnetism
-- More explicit practical-skills weighting in Paper 4
-- A few topics moved (energy stores phrasing, ecosystem definitions)
+Find out which tier you are entered for this week, because it changes your syllabus. The Core route is capped: the highest pair available is CC. Extended reaches the top grades and carries extra content on top of everything in Core.
 
-Pull your latest syllabus PDF into [the mock exam tool](/mock-exam) so you're revising the right version.
+Every topic in 0654 has core statements plus supplement statements. Supplement material separates grades on Paper 2 and Paper 4, and it is exactly what generic "IGCSE science summary" notes online leave out. Print the syllabus content list, highlight every supplement statement, and treat that set as your priority list if you are Extended. If you are Core, it is not wasted learning, but it is not where your marks are.
 
-## The 60/30/10 rule
+## The rotation that fixed my forgetting problem
 
-For Coordinated Science, time should split roughly:
+Do not revise one science for three weeks and then move on. I did that with biology, felt brilliant about it, and by the time I finished physics I could not remember what a magnification calculation looked like. Rotate instead. A week that works:
 
-- **60%** — practising past papers from the last 4 years
-- **30%** — drilling weak topics until they stop being weak
-- **10%** — making flashcards from the exact wording mark schemes accept
+1. Monday — one biology topic: 40 minutes recalling it from blank paper, 20 minutes on questions.
+2. Tuesday — one chemistry topic, same split.
+3. Wednesday — one physics topic, same split.
+4. Thursday — 20 mixed multiple-choice questions pulled from a past Paper 1 or 2, timed.
+5. Friday — one full structured question from Paper 3 or 4, marked strictly against the mark scheme.
+6. Weekend — 30 minutes reviewing only what you got wrong that week.
 
-Most students invert this. They spend 60% on re-reading notes, 30% making pretty mind maps, and 10% on past papers. That is why grades stall at C/B.
+Because each science reappears every few days, you re-test old material constantly instead of letting it decay. [The quiz generator](/quiz) will build the mixed-question step from all three sciences at once, and [flashcards](/flashcards) are worth making only from wording mark schemes actually accept, not from your notes.
 
-## Mark-scheme phrases that earn easy marks
+## A worked example: where the four marks actually sit
 
-The mark scheme accepts very specific phrases. If your answer says the same thing in different words, you often lose the mark. Memorise these patterns:
+Take a typical calculation: a metal block has a mass of 54 g and a volume of 20 cm^3. Calculate its density and give your answer in kg/m^3. Four marks.
 
-**Biology** — "active transport requires energy (ATP) and moves substances against a concentration gradient." Not "uses energy to push things up". The phrase "against a concentration gradient" is the mark.
+1. Write the formula: density = mass / volume.
+2. Substitute: 54 / 20 = 2.7 g/cm^3.
+3. Convert: 1 g/cm^3 is 1000 kg/m^3, so 2.7 g/cm^3 becomes 2700 kg/m^3.
+4. Write the unit next to the answer: 2700 kg/m^3.
 
-**Chemistry** — "the reaction is exothermic because the energy released forming bonds in the products is greater than the energy absorbed breaking bonds in the reactants." Skip half this phrase and you lose marks.
+Most people who lose marks here get 2.7 and stop, having skimmed past "in kg/m^3". That is two marks gone on a question they understood completely.
 
-**Physics** — "the resistance increases because as the temperature rises, the metal ions vibrate more and electrons collide with them more often." The collision detail is what scores.
+Set your working out on separate lines like the four steps above. Markers award method marks, and if your arithmetic slips at step 2 you can still be credited for a correct conversion at step 3 — but error carried forward only works if the marker can see your route. Unless told otherwise, match the significant figures in the data you were given.
 
-There are about 30 of these phrases that recur every year. Build flashcards from a marked past paper, not from your notes.
+## Command words decide the mark, not the content
 
-## The high-frequency topic list
+Cambridge questions are precise about what they want, and the command word tells you how many sentences to write.
 
-Looking at the last 5 years of Paper 4, these topics appear nearly every year. Drill them first.
+- **State** or **give** — one short fact. No reasoning, no "because". Do not spend three minutes here.
+- **Describe** — say what happens. You do not need the cause.
+- **Explain** — say what happens *and* why. If your sentence has no "because" or "so", you have written a describe answer.
+- **Suggest** — apply science you know to an unfamiliar situation. The answer is not sitting in the syllabus word for word, and any scientifically sound reasoning can score.
+- **Compare** — both things must appear in the same sentence. "Metal is a good conductor" scores nothing; "metal conducts thermal energy better than wood" scores.
+- **Calculate** or **determine** — show working, always.
 
-**Biology** — diffusion vs osmosis vs active transport, photosynthesis equation + limiting factors, food test colour changes, reflex arc, hormones (insulin, adrenaline, oestrogen, testosterone)
+A two-mark example: explain why a metal spoon feels colder than a wooden spoon at the same temperature. Metal is a better thermal conductor, so it transfers thermal energy away from your hand more quickly. Two linked points, one "so", and anything longer is time you needed elsewhere. Count the marks, make that many distinct points. If you want your practice answers checked against that standard, [the grading tool](/grade) will tell you which point you missed, and [a timed mock](/mock-exam) is the only way to find out whether you can actually do 2 hours of it.
 
-**Chemistry** — separation techniques (filtration, distillation, chromatography), ionic vs covalent bonding, electrolysis of brine + molten lead bromide, rates of reaction (concentration, surface area, temperature), neutralisation
+## Mistakes that cost me marks in mocks
 
-**Physics** — moments and equilibrium, work-energy calculations, transverse vs longitudinal waves, total internal reflection, series vs parallel circuits
+- Leaving the practical paper until the final fortnight. Variables, tables, anomalies and graph-drawing are learnable skills that need weeks, not days.
+- Writing "it goes up" instead of naming the variable. Say which quantity increases.
+- Prefix errors: kJ read as J, cm^3 read as m^3, mA read as A. Underline every unit in the question before you start.
+- Ignoring the data in the stem. If a question hands you a graph or table, the marks usually require you to quote figures from it, with units.
+- Revising by re-reading. If you have not written something down from memory, you have not revised.
 
-If a topic is on this list and you got it wrong in a past paper, that is now your highest-priority revision item.
+## Test yourself
 
-## Common silly-mark losses
+1. Which paper is the 2-hour structured theory paper for an Extended candidate?
+2. A block has a mass of 90 g and a volume of 30 cm^3. What is its density in kg/m^3?
+3. A question begins "Suggest why...". What must your answer do that a "state" answer does not?
 
-These cost students 5-10 marks every paper.
+## FAQ
 
-1. **Forgetting units** — every quantitative answer needs the unit. No unit, no mark.
-2. **Significant figures** — the question often says "to 2 sf" or "to 3 sf". Read carefully.
-3. **Showing working** — even if the final answer is wrong, partial marks are awarded for correct working
-4. **Spelling of key terms** — "mitosis" vs "meiosis" must be exact
-5. **Diagram labels** — labels with leader lines pointing at the right structure
+### Is Co-ordinated Sciences harder than the three separate sciences?
 
-Practise these with [/grade](/grade) — paste a past-paper question and your answer and you'll get AI feedback in the format of the actual mark scheme.
+It covers less depth per science, but all three, so nothing is optional. Separate sciences let you go deep on one subject at a time; 0654 asks you to hold biology, chemistry and physics in your head at once. That is a memory problem more than a difficulty problem, which is why rotation matters.
 
-## Paper 3 (multiple choice) tactics
+### How many hours a week should I revise for 0654?
 
-- Don't skip questions. There's no negative marking. If unsure, eliminate two and guess.
-- Read every option before answering. Cambridge loves "best answer" tricks where two options are technically true.
-- Skim through and answer easy ones first, then come back. Don't burn time on a hard one early.
-- 45 minutes for 40 questions = 67 seconds per question. If you're past 90 seconds, move on and circle back.
+Six focused hours split across the three sciences beats twelve unfocused ones — the week above is roughly five hours plus review. What matters more than the total is whether each session ends with you producing answers rather than reading them.
 
-## Paper 4 (structured questions) tactics
+### Can I use past papers from the older syllabus?
 
-- Read the *entire* question stem before you start writing. Often the last sentence changes what the question is asking.
-- For 4-mark questions, expect to write 4 separate, scoring points. Bullet them.
-- "Explain" needs a *because* in your answer. "Describe" doesn't.
-- Calculate questions: show formula → substitute → final value with units. All three.
+Yes, for technique, but check the content list first — topics move between syllabus versions and you do not want to panic over something no longer examined. Any question type still appearing in the current specimen papers is fair practice.
 
-[Generate a Coordinated Science mock paper →](/mock-exam)
+### What if one science is much weaker than the other two?
+
+Give it the extra session, not the extra week. Keep the other two ticking over at one session each and add a second slot for the weak one. Dropping the strong sciences to fix the weak one is how people end up with three shaky sciences instead of one.
+
+In short: get the paper structure right, find out whether you are Core or Extended, rotate all three sciences through every week, and spend your past-paper time on the 2-hour structured paper where the marks live. The content in 0654 is not the hard part. Remembering three sciences at once, and answering the command word you were actually given, is.
 `,
   },
 
   {
     slug: "cbse-class-10-math-last-minute",
-    title: "CBSE Class 10 Math: The 14-Day Last-Minute Plan That Actually Adds Marks",
-    description: "Two weeks out from your CBSE Class 10 math board exam? Here is the no-nonsense plan to lift your grade without re-reading the entire NCERT textbook.",
-    publishedAt: today, readTime: "7 min",
-    tags: ["CBSE Class 10 math", "Class 10 board prep", "NCERT math", "last minute revision"],
+    title: "CBSE Class 10 Maths Last-Minute Revision: A 14-Day Plan",
+    description: "A CBSE Class 10 maths last-minute revision plan for your final 14 days: where the 80 marks sit, how step marks are awarded, and the mistakes that cost most.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["CBSE Class 10 maths","last minute revision","board exam plan","NCERT maths","exam technique"],
     body: `
-You have two weeks. You are tired. You are not going to re-cover every chapter. That's fine. The students who jump from a 70 to an 85 in fourteen days don't try to cover everything either.
+**Quick answer:** With 14 days left, do not re-read NCERT. Spend the time on Algebra, Geometry and Trigonometry, which together carry 47 of the 80 theory marks, plus three full timed papers. Drill past-paper questions, mark them against the official scheme, and re-do only what you actually lost marks on.
 
-Here is what they do.
+I sit IGCSE and A-Levels, not CBSE. What I have is a cousin in Class 10 who let me sit on video calls through her last fortnight, plus a folder of CBSE sample papers and official marking schemes I read line by line out of curiosity about how another system hands out marks. Two things surprised me: how much of the maths paper is decided by presentation rather than ability, and how many students burn their last week on topics that are no longer in the rationalised syllabus. Both are fixable in fourteen days.
 
-## Day 1: brutal honesty
+## Put the 14 days where the marks actually are
 
-List every CBSE Class 10 math chapter. Mark each as Strong, Wobbly, or Weak.
+The theory paper is 80 marks, with 20 marks of internal assessment already banked. Those 80 marks are split by unit, and the split is nowhere near equal:
 
-The chapters typically are: Real Numbers · Polynomials · Linear Equations in Two Variables · Quadratic Equations · Arithmetic Progressions · Triangles · Coordinate Geometry · Introduction to Trigonometry · Some Applications of Trigonometry · Circles · Areas Related to Circles · Surface Areas and Volumes · Statistics · Probability.
+- Algebra — 20 marks
+- Geometry — 15 marks
+- Trigonometry — 12 marks
+- Statistics and Probability — 11 marks
+- Mensuration — 10 marks
+- Number Systems — 6 marks
+- Coordinate Geometry — 6 marks
 
-For 14 days, you ignore Strongs entirely. You will not revise them. They are done.
+Algebra, Geometry and Trigonometry alone are 47 marks. If you are wobbly in any of the three, that is where your fortnight goes. Number Systems and Coordinate Geometry are 6 marks each. Do not give them three days when Algebra is worth more than three times as much.
 
-You focus everything on:
-- 60% time on Wobbly chapters (these jump the fastest)
-- 30% time on Weak chapters (one or two, not all of them)
-- 10% time on past papers across all topics
+The paper runs to 38 questions in five sections: Section A is 20 one-mark questions (18 multiple choice plus 2 assertion-reason), Section B is five 2-markers, Section C is six 3-markers, Section D is four 5-markers, and Section E is three case-based questions worth 4 marks each. Section A plus Section E is 32 marks, 40 percent of the paper, and both reward accuracy more than difficulty.
 
-## Day 2-4: drill the high-frequency Wobbly chapters
+## Three things to stop revising right now
 
-The CBSE Class 10 math paper has a predictable structure. Roughly:
+This alone saved my cousin four days.
 
-- **Section A** (Multiple Choice + assertion-reasoning) — 20 marks
-- **Section B** (2 marks each, 5 questions) — 10 marks
-- **Section C** (3 marks each, 6 questions) — 18 marks
-- **Section D** (5 marks each, 4 questions) — 20 marks
-- **Section E** (Case-study based, 4 marks each) — 12 marks
+- The frustum of a cone is not in the rationalised NCERT syllabus. If your notes or an old guide tell you to drill it, they are out of date.
+- Constructions were removed too. No compass work is coming.
+- Quadratic Equations does not require completing the square. The syllabus asks for solution by factorisation and by the quadratic formula, plus the discriminant and nature of roots. Learn the formula properly instead.
 
-The 5-mark Section D questions almost always come from: Quadratic Equations, Trigonometry, Coordinate Geometry, Surface Areas & Volumes. If any of those four is in your Wobbly column, that's where you start.
+Segment questions in Areas Related to Circles are restricted to central angles of 60, 90 and 120 degrees, so three practised cases cover the lot. Open your current syllabus document and cross out anything no longer listed before you plan a single day.
 
-For each Wobbly chapter:
-1. Read the NCERT chapter summary (not the full chapter — just the summary box)
-2. Do every example in the chapter, showing all steps
-3. Do the previous year's CBSE board questions for that chapter (search for "CBSE PYQs Class 10 [chapter name]")
-4. Mark them. Anything wrong becomes a flashcard.
+## Days 1 to 14, honestly
 
-Use [/math-solver](/math-solver) when you're stuck — but only AFTER you've tried for 5 minutes. If you get unstuck too fast, you're not learning.
+Day 1 is an audit, not revision. Sit one past paper cold, three hours, and mark it against the official scheme. It is the most useful thing you do all fortnight, because it tells you which of Algebra, Geometry and Trigonometry is actually weak rather than which one feels weak.
 
-## Day 5-8: past papers, full length
+Days 2 to 5: the two weakest of your big three. Per chapter, read only the NCERT summary box, work every solved example with your hand covering the solution, then do previous-year board questions on that chapter and mark them the same day.
 
-Sit a full CBSE Class 10 math paper. Three hours. No phone. No breaks. Mark it ruthlessly. For every mark you lost, write the reason in one of these categories:
+Days 6 to 9: Mensuration, Statistics and Probability. The most recoverable 21 marks on the paper, because the methods are mechanical. Mean by assumed-mean and step-deviation, median of grouped data, surface area and volume of combinations of cylinders, cones and hemispheres, probability as fractions in lowest terms.
 
-- Didn't know the formula → flashcard
-- Knew it but blanked under pressure → more timed practice
-- Made an arithmetic mistake → slow down, double check
-- Misread the question → highlighting practice
-- Ran out of time → pacing strategy needs work
+Days 10 to 12: two more timed papers, one every other day, with the day in between spent only on what you got wrong.
 
-Then sit another paper. And another. By day 8 you should have done at least three full mocks.
+Day 13: one A4 sheet of formulas, handwritten, organised by unit. Writing it is the revision. Day 14: light. Re-read the sheet, redo three questions you know you can do, and sleep.
 
-## Day 9-11: high-frequency drilling
+## A worked 5-marker, with the marks shown
 
-Pull out the topics that have appeared in the last 5 board papers. They will absolutely appear again.
+Section D is where students lose the most and gain the fastest, because five marks are almost never awarded for the answer alone. A standard heights-and-distances question: the angle of elevation of the top of a tower from a point on the ground is 30 degrees; walking 40 m towards the tower, it becomes 60 degrees. Find the height. Take sqrt(3) = 1.73.
 
-**Always-appearing topics** (drill these regardless):
-- Quadratic equation by completing the square or formula
-- Word problem on linear equations (boat-stream, time-work, or ages)
-- Trigonometric identities (sin²θ + cos²θ = 1 type)
-- Heights and Distances word problem (angle of elevation/depression)
-- Mean/median/mode by direct, assumed mean, and step deviation methods
-- Probability of compound events
-- Area of segment/sector
-- Volume of a frustum (cone cut)
+1. Draw and label. Tower AB of height h, foot B, nearer point C, farther point D, with CD = 40 m and BC = x.
+2. From the 60-degree triangle: tan 60 = h/x, so sqrt(3) = h/x, giving x = h/sqrt(3).
+3. From the 30-degree triangle: tan 30 = h/(x + 40), so 1/sqrt(3) = h/(x + 40), giving x + 40 = sqrt(3)h.
+4. Substitute: h/sqrt(3) + 40 = sqrt(3)h. Multiply through by sqrt(3): h + 40 sqrt(3) = 3h, so 2h = 40 sqrt(3) and h = 20 sqrt(3).
+5. h = 20 x 1.73 = 34.6 m.
 
-For each, do at least 5 questions. Use [the quiz generator](/quiz) to generate fresh versions in CBSE board style.
+In the schemes I have read, that is roughly one mark for the labelled figure, one for each correct equation, one for solving to h = 20 sqrt(3), and one for the final value with units. So a student who draws the diagram and writes both equations but panics at the algebra still banks three of five. A student who does it all in their head and writes "34.6" gets one. Write every line.
 
-## Day 12: arrange formulas
+## No calculator, so drill the arithmetic
 
-One A4 sheet. Every formula you need. Handwritten. Organised by chapter. Photocopy it. Stick it on your wall.
+Calculators are not permitted in CBSE board exams. If you have been doing past papers with a calculator on the desk, you have been practising a different exam.
 
-The act of writing it locks it in. Looking at it for the next 48 hours keeps it active.
+Drill squares to 30, cubes to 12, the exact trig ratios at 0, 30, 45, 60 and 90 degrees, and when to use pi = 22/7 rather than 3.14 (use 22/7 when the radius is a multiple of 7, which it usually is, because it cancels). Keep surds as surds until the last line. Converting sqrt(3) to 1.73 early and then multiplying twice is how rounding errors cost you the accuracy mark.
 
-## Day 13: light practice, early sleep
+Ten minutes of mental arithmetic before each session is enough to stop most silly slips. For fresh chapter-specific practice, generate questions in [the quiz tool](/quiz), and check a stuck step in [the math solver](/math-solver) only after trying it yourself for five minutes.
 
-Do one short paper or 10 mixed MCQs. Don't push. Mark it. Look at the formula sheet once. Sleep by 10pm.
+## The five mistakes that cost the most marks
 
-## Day 14 (exam day): basics only
+1. Leaving Section A blank. There is no negative marking, so a blank multiple-choice question is a guaranteed zero and a guess is a one-in-four chance.
+2. No units. "34.6" is not the same answer as "34.6 m" to a marker.
+3. No diagram in geometry and trigonometry questions. Often a mark on its own, and it prevents half of all set-up errors.
+4. Rounding mid-calculation instead of at the end.
+5. No concluding line. Word problems want "Hence the speed of the train is 40 km/h", not a bare number at the bottom of the page.
 
-- Bring two pens, a pencil, eraser, sharpener, scientific calculator (allowed in some boards), water
-- Eat a normal breakfast
-- Reach the centre 30 mins early
-- In the reading time, read the entire paper before writing
-- Start with Section A — easy wins, builds confidence
-- Don't get stuck. If a question is taking more than its mark-time × 2, move on.
-- Leave 15 minutes at the end to check arithmetic
+## Test yourself
 
-## What to do if you panic mid-paper
+1. Which three units carry 47 of the 80 marks, and roughly how much of your remaining time should they get?
+2. In a 5-mark heights-and-distances question, name three things that earn marks before you reach the final number.
+3. Why should you keep sqrt(3) as a surd until the final line of working?
 
-It will happen. Standard pattern:
-1. Put pen down
-2. Three slow breaths
-3. Look at the question fresh
-4. Identify what you actually know from the question
-5. Write *something*, even partial working — partial marks exist for a reason
+## FAQ
 
-Most students who panic write nothing for 10 minutes then write nothing for the rest of the paper. The trick is to keep writing even if you're not sure.
+### Are calculators allowed in the CBSE Class 10 maths exam?
 
-[Sit a CBSE Class 10 math mock exam →](/mock-exam)
+No. Calculators are not permitted, so every past paper you sit in these two weeks should be done without one. Expect your first no-calculator mock to be slower, and build in the mental-arithmetic drills above.
+
+### Is 14 days enough to move from a 60 to an 85?
+
+It is possible if your problem is accuracy rather than missing content. Students who jump that far in a fortnight can usually already do the maths and are losing marks to skipped steps, missing units and blank objective questions. If you have not covered Trigonometry or Mensuration at all, aim for solid rather than spectacular and protect those 47 marks first.
+
+### Is the frustum still in the Class 10 syllabus?
+
+No. The frustum of a cone was removed in the rationalised syllabus, along with Constructions, but plenty of older guides still include both. Check your current syllabus document against your revision list on day 1, not day 12.
+
+### Standard or Basic maths — does the plan change?
+
+Both papers follow the same design and syllabus and differ in difficulty level, so the plan is identical. If you are sitting Basic, lean slightly harder on Sections A, B and E where the marks are most reachable, and still write full working in Section D.
+
+For fresh full-length practice, build a paper in [mock exam](/mock-exam); chapter-by-chapter explanations sit in the [maths hub](/help-in-study/math).
+
+In short: cut what is no longer examinable, put the fortnight into Algebra, Geometry and Trigonometry, sit three timed papers without a calculator, and write every line of working. Most of the marks between 60 and 85 are not hiding in a chapter you never read — they are sitting in the steps you did not bother to write down.
 `,
   },
 
   {
     slug: "a-level-essay-extra-marks",
-    title: "A Level Essays: Where the Last 10 Marks Come From",
-    description: "Going from a B to an A grade essay isn't about more facts. It's about three specific moves that examiners reward heavily. Here is exactly what they are.",
-    publishedAt: today, readTime: "6 min",
-    tags: ["A Level essays", "A Level revision", "essay marks", "Cambridge essay tips"],
+    title: "How to Get Top Band Marks in an A Level Essay",
+    description: "How to get top band marks in an A Level essay: three examiner moves that beat adding more facts, plus a worked mid-band paragraph rewritten to top band.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["A Level essays","essay technique","exam technique","A Level history","English literature"],
     body: `
-A B-grade A Level essay has the right facts. An A-grade essay has the right facts plus three things almost nobody teaches you.
+**Quick answer:** Top band marks in A Level essays come from judgement, not extra facts. Examiners reward three specific moves: a judgement stated in your opening sentence, explicit criteria that explain why one factor outweighs another, and a counter-argument you defeat rather than politely list. Knowledge gets you mid-band. Weighing that knowledge gets you the rest.
 
-Here is what they are.
+I write A Level essays for history and English, and for about a year I was stuck. My essays were long, my facts were right, and my marks were mediocre. The essay that finally taught me why was one where I had roughly twice the detail of a friend's answer and got five marks fewer. Her paragraphs kept saying which factor mattered more and why. Mine kept saying what happened. That was the whole difference, and once I saw it I could not unsee it.
 
-## 1. Counter-arguments that you actually answer
+## Why adding more facts stops working past mid-band
 
-A B essay says "Some historians argue X but actually Y." Then it moves on.
+The reason extra content stops earning marks is that only part of an A Level essay grid is about knowledge at all. Check your own board's assessment grid, but broadly: knowing things gets rewarded once, then the remaining marks all sit in analysis, evaluation and sustained argument. A paragraph that adds a fourth piece of evidence to a point you have already made adds nothing to those columns.
 
-An A essay does this:
-- States the counter-argument
-- Steel-mans it (makes it sound strong)
-- Explains why, despite that, the writer's argument still holds
-- Cites a specific piece of evidence that tips it
+This is why two answers can look completely different on the page and land in the same band. The examiner is not counting your dates. They are asking one question repeatedly as they read: is this student arguing, or reporting? An essay full of accurate reporting sits comfortably in the middle band and refuses to move. The fix is not writing more. Most students who move up write slightly less content and spend the time saved on the three moves below.
 
-The trick is "despite that" must feel earned. The examiner is looking for a paragraph that genuinely wrestled with the opposing view and *then* defeats it, not one that name-checks it and dismisses it in a sentence.
+## Move 1: put your judgement in the first sentence
 
-## 2. A clear thesis in the first paragraph that the entire essay actually supports
+Your opening sentence should state which way you have decided, not announce that a decision is coming. Compare these two openings on a Cambridge International A Level style question about the causes of the Weimar Republic's collapse by 1933.
 
-Most B essays have a thesis like "this essay will discuss the causes of World War I." That is not a thesis. It is a description.
+Weak: "There were many causes of the collapse of the Weimar Republic, including economic problems, political weakness and the rise of the Nazi Party. This essay will examine each."
 
-A thesis is an arguable claim. "The most significant cause of the First World War was the alliance system, because it transformed a regional dispute into a continental war within six weeks."
+Strong: "Economic collapse after 1929 was the decisive cause, because it converted long-standing political weaknesses that Weimar had already survived once into a crisis it could not survive twice."
 
-Then every body paragraph has to point back to that claim. If a paragraph could be deleted and the thesis would still hold, the paragraph is doing nothing for your marks.
+The second version answers, contains a because, which means it has already started arguing, and sets up the rest of the essay as a test of one claim rather than a tour of topics.
 
-## 3. The "so what" sentence
+The same works in English literature. "Shakespeare presents ambition as self-destructive" is a topic. "Shakespeare presents ambition as self-destructive specifically because it isolates the ambitious character from the language of other people" is a judgement, and every quotation you pick afterwards then has a job to do.
 
-Every body paragraph in a top-band essay ends with a "so what" — a sentence linking the evidence back to the thesis and forward to the next paragraph.
+## Move 2: give the criteria that make one factor bigger
 
-Bad:
-"The Schlieffen Plan required Germany to invade Belgium. Britain had pledged to defend Belgium. So Britain declared war on Germany."
+Here is the move almost nobody teaches. When you claim one factor outweighs another, say what you are measuring by. Without a stated measure, "more important" is just an opinion. With one, it becomes evaluation.
 
-Better:
-"The Schlieffen Plan required Germany to invade Belgium, which forced Britain — committed by the 1839 Treaty of London — into a war it had hoped to avoid. This is precisely why the alliance system was the decisive cause: any plan involving Belgium guaranteed British entry, and any war involving British entry was no longer a regional matter."
+Three criteria that work in nearly any essay:
 
-The second version is the same factual content. The "so what" earns 2-3 more marks.
+- Reach in time. Which factor was operating longest, or which one was needed for the others to exist at all?
+- Necessity. Remove this factor: does the outcome still happen? If yes, it was contributing, not causing.
+- Scale of effect. How many people, institutions or events did it actually touch?
 
-## How AI feedback closes the gap
+Now a worked rewrite of a mid-band paragraph.
 
-Most students can write a B essay. They just can't *see* what is missing from it. The three moves above need an external eye. That's where AI grading helps.
+Before: "Unemployment rose sharply after 1929. By early 1933 around six million Germans were out of work. This caused anger at the government and many people turned to extreme parties. The Nazis gained support during this period."
 
-Paste a draft into [/grade](/grade) with the mark scheme attached. The AI returns:
-- A predicted band
-- Specific feedback on whether the thesis is arguable
-- Whether body paragraphs link back to the thesis
-- Where the counter-arguments are weak or missing
-- Suggested "so what" sentences
+That is accurate and worth very little beyond knowledge marks. Now with a criterion applied.
 
-Then rewrite the essay. Do this three times for one essay. You will feel the structural moves becoming automatic.
+After: "Judged by necessity, the economic collapse is the stronger cause. Weimar had already absorbed a putsch, an assassination wave and hyperinflation without falling, which shows political extremism alone was survivable. What changed after 1929 was that unemployment reaching roughly six million removed the moderate parties' one remaining claim, that the republic delivered material stability. Extremism was therefore the mechanism of collapse, but the depression was its precondition: remove the slump and the Nazi vote has no reservoir to draw from."
 
-## The single biggest essay mistake
+Same knowledge, roughly the same length. The difference is the words judged by, which shows, therefore, and the counterfactual remove the slump. Those are the words that move a paragraph up a band. To see the contrast on your own writing, paste a paragraph into [essay coach](/essay-coach) and ask specifically whether it states a criterion.
 
-Trying to fit every fact you know into the essay. Top-band essays are *selective*. They use four pieces of evidence well, not nine pieces of evidence superficially. If a fact doesn't support the thesis, leave it out.
+## Move 3: defeat the counter-argument, do not park it
 
-## Useful workflow for the last 30 days
+Most students include a counter-argument and then abandon it. "Some historians argue political weakness was more significant. However, the economy was also important." Nothing is resolved, so nothing is credited.
 
-1. Identify the three or four essay titles most likely to come up (search past papers)
-2. For each, draft a thesis paragraph (no body)
-3. Get the thesis paragraph graded by [/grade](/grade)
-4. Rewrite the thesis if it's descriptive rather than arguable
-5. Draft full essays for two of them
-6. Get AI feedback and rewrite once
-7. Memorise your strongest argument structure — adapt it to the actual question on the day
+Use a three-step shape instead: concede, limit, outweigh.
 
-[Get AI feedback on your essay draft →](/grade)
+1. Concede honestly. "Political weakness clearly mattered: Article 48 had normalised rule without a majority well before 1930."
+2. Limit it. "But that same mechanism had been used since 1923 without producing collapse, so on its own it lacks explanatory force for the specific timing of 1933."
+3. Outweigh it. "It becomes decisive only once the depression supplies the mass electorate that made a Nazi chancellorship arithmetically possible."
+
+The counter-argument is now doing work for you: it has sharpened your judgement rather than diluted it. Examiners call this sustained evaluation, and it is the most reliable way to look like a top band candidate.
+
+## Decode the band wording before you write
+
+Mark scheme adjectives are instructions in disguise. Three that decide your band:
+
+- Sustained. Not once in the conclusion. The judgement must appear in the introduction, be visible in the first line of every paragraph, and be restated with more precision at the end.
+- Substantiated. Every claim carries specific, precise evidence. A date, a figure, a named policy, an exact quotation. Vague evidence caps you even when the argument is good.
+- Range. You have covered enough of the question. Two brilliant paragraphs on one factor will not reach the top band if the question invited comparison.
+
+Read the examiner report for your paper too, not just the mark scheme. Reports repeat the same complaint about description in plain English, year after year.
+
+## A 45-minute plan for a 25-mark essay
+
+1. Minutes 0 to 5: decide your judgement and write it as one sentence. Then list three factors and rank them with a criterion.
+2. Minutes 5 to 8: introduction, roughly four sentences, ending on your judgement.
+3. Minutes 8 to 38: three paragraphs, ten minutes each. Each opens with a claim, gives precise evidence, applies the criterion, links back.
+4. Minutes 38 to 43: conclusion that adds a condition, not a summary. "Decisive, but only because the political weaknesses were already there to be exploited."
+5. Minutes 43 to 45: check every paragraph's opening line answers the question.
+
+Practise this under real timing with [mock exam](/mock-exam), and for a second opinion on where an answer sits, [grade](/grade) will point at the paragraph that lost the marks.
+
+## Test yourself
+
+1. Rewrite this opening as a judgement: "There were several reasons the Nazis came to power."
+2. Name the three criteria you can use to argue one factor outweighs another.
+3. What are the three steps for handling a counter-argument properly?
+
+## FAQ
+
+### Do I need more historians or critics to reach the top band?
+
+Not usually. Named views help, but only when you take a position on them. One historian's argument that you actively test beats four names listed as decoration. Depth of engagement is what the grid rewards.
+
+### Is a longer essay a better essay at A Level?
+
+No. Past a point, extra length is extra description, which sits in the column you have already maxed out. A tightly argued essay of three developed paragraphs usually outscores a sprawling five.
+
+### How do I make my conclusion worth marks?
+
+Add something. Restating your judgement earns nothing, so use the conclusion to add a condition, a limit, or a note on which factor was necessary versus sufficient. That is new evaluation, and it is creditable.
+
+### Does this apply to English literature as well as history?
+
+Yes. Swap factors for interpretations. Criteria become which reading accounts for more of the text, or survives more scenes. The concede, limit, outweigh shape works identically on a critical view. Subject support sits at [history](/help-in-study/history) and [English](/help-in-study/english).
+
+In short: the last marks are not hiding in content you have not revised yet. They are in the sentences that state a judgement, name a criterion, and finish off a counter-argument. Take an essay you have already written, rewrite three paragraph openings using those three moves, and compare the two versions honestly. That exercise taught me more than another month of notes did.
 `,
   },
 
@@ -711,436 +864,538 @@ Total: 65 minutes a day, sustained for 60 days, beats 4 hours of unfocused readi
 
   {
     slug: "study-music-vs-silence-myth",
-    title: "Study Music vs Silence: What the Research Actually Says",
-    description: "Lo-fi beats, classical, white noise, total silence — what really helps concentration? We synthesise the research and give you a verdict you can act on.",
-    publishedAt: today, readTime: "5 min",
-    tags: ["study music", "concentration tips", "lo-fi study", "study habits"],
+    title: "Is It Better to Study With Music or in Silence?",
+    description: "Is it better to study with music or in silence? I tested lo-fi against silence on real past-paper questions and marked both. Here is the task-by-task verdict.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["study music","concentration","study habits","lo-fi study","exam revision"],
     body: `
-Every student has opinions on study music. Most are wrong. The research is actually pretty clear once you separate two completely different tasks.
+**Quick answer:** For anything made of words — reading, essay writing, memorising quotes or definitions — silence beats music, because lyrics compete for the same verbal working memory you are reading with. For repetitive practice like maths drills or flashcard review, quiet instrumental music is fine and often keeps you in the chair longer.
 
-## The two-task split
+I spent most of my IGCSE year certain that I needed a playlist to study. Then I got a History mock back and my source-analysis marks were noticeably worse than my class work, on content I definitely knew. I could not blame the syllabus, so I started paying attention to what was in my ears. This post is what I found, including the parts where I turned out to be wrong about myself.
 
-Studying is not one activity. Cognitive science separates it into:
+## The one rule that decides it: is your task made of words?
 
-1. **Acquisition** — taking in new information. Reading, watching a lecture, learning a new concept.
-2. **Practice / consolidation** — applying what you know. Doing problems, writing essays, drilling flashcards.
+The rule is this: if the task uses language, background language will cost you. Your brain processes song lyrics through the same verbal channel you use for reading a paragraph, writing a sentence, or holding a definition in your head. Two streams of words, one channel. Something gets dropped, and it is usually the one you were not singing along to.
 
-These two demand different audio environments.
+That is why the same playlist can be harmless at 4pm and harmful at 6pm. Twenty algebra questions barely touch the verbal channel, so music sits beside the work. An unseen prose extract for English sits directly on top of it. It is also why "I always study with music and I do fine" proves less than it sounds — it can be true for your maths and false for your essays, and you would never notice, because nobody marks the version of you who worked in silence.
 
-## For acquisition: silence wins
+## What the research actually says, minus the myths
 
-When you're reading dense content or trying to absorb a new concept, your working memory needs every resource. Anything with lyrics, complex structure, or sudden volume changes competes for that memory. Studies dating back to the late 90s consistently show comprehension drops when music with lyrics plays during reading.
+Three findings are worth knowing, and one popular claim is worth dropping.
 
-The exception: pure ambient sounds (rain, cafe noise at low volume, white noise). These can help if you're in a noisy environment by masking distractions. But preference matters — for some students, even ambient sound reduces comprehension. Test yourself.
+The claim to drop is the Mozart effect. The idea that classical music makes you smarter has not held up: when researchers controlled for mood and alertness, the advantage largely disappeared. Mozart was not doing anything magical; being slightly more awake and happier was. Any music you enjoy does that, and so does a walk.
 
-## For practice: instrumental can help
+The findings that have held up:
 
-When you're doing problems you already know how to do — drilling math, practising flashcards, working through past papers — the situation reverses. The repetition is automated enough that you have spare attention. Music can keep you in the chair longer.
+1. **The irrelevant sound effect.** Background sound you are trying to ignore reliably reduces performance on memory tasks compared with quiet. It has been replicated for decades. Ignoring sound is not free — it costs attention to ignore.
+2. **Lyrics are the worst offender for reading.** Studies comparing silence, instrumental music and lyrical music during reading consistently find lyrical music the most damaging, with instrumental somewhere in the middle.
+3. **People differ, genuinely.** Research linked to arousal theory finds people with naturally higher baseline arousal are hurt more by background music, while others tolerate or even benefit from it. So "test yourself" is not a cop-out here.
 
-Good options here:
-- Lo-fi / hip-hop instrumental
-- Classical (especially baroque — Bach, Vivaldi)
-- Movie soundtracks without dialogue (Hans Zimmer, Joe Hisaishi)
-- Video game soundtracks (genuinely designed to be ignored while you focus)
+The honest caveat: most of these are short lab tasks and the effects are moderate, not dramatic. Music will not tank your grades. It quietly taxes the tasks that carry the most marks.
 
-Bad options:
-- Anything with lyrics, even in a language you don't speak (your brain still processes the singing as language)
-- New music you haven't heard before (novelty pulls attention)
-- High-energy genres (pop, rap, dance — the BPM hijacks your tempo)
+## The two-week test I ran on myself
 
-## The "Mozart effect" is mostly nonsense
+Rather than argue about it, test it. Here is the method, with my real numbers.
 
-The famous 1993 study that suggested listening to Mozart improves IQ has been debunked many times. There's no special magic in classical music. The temporary boost in spatial reasoning came from being mildly aroused (in the alertness sense), not from the music itself. Any music you enjoy a little gives the same effect.
+1. **Pick one task type and hold it constant.** I used 20-mark History source questions and sets of 15 mixed algebra questions.
+2. **Alternate the condition day by day.** Four sessions in silence, four with the same lo-fi playlist. Never both in one session.
+3. **Fix everything else.** Same 25-minute timer, same desk, same time of day, phone in another room in both conditions.
+4. **Mark honestly against the mark scheme,** and record a second number: how many times you broke off to do something else.
 
-## What actually changes outcomes
+My results. History, average out of 20: silence 14.5, lo-fi 12.25. That is over two marks a question, which at A-Level is a grade boundary you can feel. Maths, average out of 15: silence 12.0, lo-fi 12.25, so no real difference. The second number told the better story. With music I completed all four maths sessions; in silence I abandoned one after twelve minutes out of boredom.
 
-Three things matter more than the music choice:
+So music did not make me better at maths. It made me more likely to actually do maths. That distinction is the whole answer, and most articles miss it: music is a compliance tool, not a comprehension tool. To run your own version, generate comparable questions from one topic in [the quiz tool](/quiz) and mark the written ones with [the grader](/grade) so your scoring stays consistent.
 
-1. **Consistency** — using the same playlist for the same task type creates a Pavlovian cue. Your brain learns "this music = focus mode."
+## A task-by-task menu
 
-2. **Volume** — soft. Background-level only. Loud music demands attention; quiet music fades.
+Sort your revision by whether the task is verbal, and the decisions make themselves.
 
-3. **Duration matching** — playlists that match your study block length. A 50-minute Pomodoro session, a 50-minute playlist. When the playlist ends, you take your break. Built-in pacing.
+- **Reading a textbook chapter or a source pack** — silence, or steady non-verbal noise if your house is loud.
+- **Essay planning and writing** — silence, no exceptions. This is the task lyrics damage most.
+- **Memorising quotes, dates, definitions, vocabulary** — silence. It is all verbal.
+- **Maths and physics problem sets** — instrumental is fine, quiet.
+- **Flashcard review** — instrumental is fine, but the cards are verbal, so keep it low. My [flashcards](/flashcards) sessions run fine with something wordless behind them.
+- **Copying up notes, mind maps, organising folders** — music genuinely helps. The task is mechanical and boring, which is where a beat earns its place.
+- **Timed past papers** — silence, always. That is exam conditions, and practising anything else is practising the wrong thing.
 
-## Personal experiment
+## Three mistakes that cost me more than the music did
 
-Spend a week testing your own setup:
+**The playlist tax.** I once spent eleven minutes choosing what to listen to before a forty-minute session. Pick one playlist you have heard a hundred times, press play, do not touch it again. Every skip is a decision, and decisions are where focus leaks out.
 
-- **Day 1-2**: study in total silence
-- **Day 3-4**: study with lo-fi
-- **Day 5-6**: study with classical
-- **Day 7**: study with white noise
+**New music.** Novelty pulls attention by design. A track you have never heard has surprises in it, and your brain will go and look. Familiar and slightly boring is the target.
 
-For each session, rate: focus 1-10, content retained, willingness to continue past 30 min.
+**Volume creep.** If you can pick out the melody, it is too loud — keep it quiet enough that you could not hum it back afterwards. And lyrics in a language you do not speak are not a loophole. They cost less than English lyrics during English reading, but the singing is still speech-shaped sound.
 
-You will see a clear winner for *you*. Pretty much everyone underestimates how much silence helps for true acquisition and overestimates how much music helps overall.
+## Train in the room you will be examined in
 
-## When to use what
+Exam halls are silent apart from coughing and chairs. If every hour of your practice happens inside headphones, that silence arrives on exam day as an unfamiliar environment, and recall is better when the conditions at testing resemble the conditions at learning.
 
-- **Reading new chapter** → silence or very low ambient
-- **Past papers, problem sets** → instrumental of choice
-- **Flashcards** → upbeat instrumental is fine
-- **Writing essays** → silence or wordless ambient
-- **Math drilling** → whatever keeps you in the chair
+Practical version: run every timed paper in silence, and give yourself one full silent week before mocks so the quiet stops feeling strange. Build that week around full papers rather than notes — [a timed mock](/mock-exam) in a quiet room is the closest rehearsal you get.
 
-[Build your study habit with daily practice →](/quiz)
+If home is genuinely noisy, do not force pure silence — mask it. Rain, a fan, brown noise. Steady non-verbal sound works because it does not change, so your brain stops tracking it after a minute. Music has structure, build and surprise, and structure is precisely what recaptures attention.
+
+## Test yourself
+
+1. Why do lyrics damage reading comprehension more than they damage a maths worksheet?
+2. You have a History essay plan and an algebra drill to do tonight. Which one gets silence, and which can take lo-fi?
+3. What is the one change to your audio setup you should make in the week before a mock, and why?
+
+## FAQ
+
+### Does lo-fi actually help you concentrate?
+
+Not directly. Lo-fi works because it is instrumental, repetitive and familiar, so it does not grab attention, and it makes boring sessions more tolerable. That is a motivation benefit, not a comprehension one. Useful for drills and note-copying, not for reading or essays.
+
+### Is classical music better for studying than pop?
+
+Somewhat, but not because it is classical — because most of it has no lyrics and no sudden hooks. A wordless film score or a game soundtrack does the same job. Classical with vocals costs you the same as pop with vocals.
+
+### Does white noise or rain sound count as music?
+
+No, and that is why it is more useful. Steady non-verbal sound has no structure to follow, so it fades out of awareness while masking unpredictable household noise. In a busy house it is the safest option for reading and writing.
+
+### I genuinely study better with music. Am I wrong?
+
+Possibly not — the individual variation in the research is real. But test it with the two-week method above rather than trusting how it feels, because "feels easier" and "scores higher" often point in opposite directions. If your marks hold up in both conditions, keep the music.
+
+**In short:** silence for words, instrumental for repetition, nothing new and nothing loud, and always silence for timed papers. Music is not a study method — it is a way of staying at the desk. Use it where boredom is the enemy, and switch it off where comprehension is.
 `,
   },
 
   {
     slug: "phone-distraction-study-tactics",
-    title: "How to Study with Your Phone in the Room (Without It Eating Your Day)",
-    description: "Locking your phone in a drawer almost never works for more than two days. Here is what does — based on actual behaviour, not willpower fantasies.",
-    publishedAt: today, readTime: "6 min",
-    tags: ["phone distraction", "study tips", "focus", "screen time", "concentration"],
+    title: "How to Stop Phone Distraction While Studying (Tactics That Hold)",
+    description: "How to stop phone distraction while studying: count your real pickups, use the friction ladder instead of willpower, and train focus up to full paper length.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["phone distraction","focus while studying","study tactics","concentration","exam revision"],
     body: `
-The advice "put your phone away" is everywhere. It almost never works. You either get the phone out within 20 minutes anyway, or you study in misery thinking about your phone the whole time. There are better tactics.
+**Quick answer:** To stop phone distraction while studying, change the room instead of relying on willpower. Put the phone in aeroplane mode, screen down, far side of the desk or in another room. But count your interruptions for one session first — most students check 8 to 12 times an hour and lose two minutes of real focus each time.
 
-## Why willpower-based methods fail
+I used to insist I wasn't that bad with my phone. Then in February, halfway through a history essay, I put a sheet of paper beside my laptop and drew a tally mark every time I picked the phone up. Ninety minutes, seventeen marks, and on most of them I hadn't even opened an app. That was the session I stopped trying to be more disciplined and started changing my desk instead. Everything below went through two exam seasons of IGCSE and A-Level revision, and some of it failed for me first.
 
-The phone is not a thing to resist. It is engineered by enormous companies to defeat resistance. Notifications, infinite scrolls, dopamine hits — every detail is optimised to interrupt you.
+## Count your interruptions before you change anything
 
-If you frame your study session as "me vs my phone, using willpower," you have already lost. The phone has won billions of similar fights against people more disciplined than you.
+Measure first, because you cannot tell whether a tactic worked without a before figure.
 
-The trick is to make the *easier* path the focused one.
+1. Put a blank sheet of paper next to your work, not a note on your phone.
+2. Draw a tally mark every time you touch, turn over or glance at the phone, even without unlocking it.
+3. Change nothing else — don't be good for the test, or the data is worthless.
+4. At the end, write the total, the session length, and your screen time from the phone's own report.
 
-## Tactic 1: Aeroplane mode + face down
+Here's my real one. Ninety minutes, 17 pickups, six minutes of screen time. Six out of ninety sounds harmless, which is exactly the trap. The cost isn't the screen time, it's getting back in. Re-reading to find my place took about two minutes each time. So 17 x 2 = 34 minutes of fuzzy re-entry, plus six minutes on screen: roughly 40 of my 90 minutes were not really essay writing.
 
-Not "do not disturb." Aeroplane mode. The difference matters:
+You'll see 23 minutes quoted everywhere as the cost of an interruption. That comes from a workplace study where people did other work in between, so it's far too big for a glance at a lock screen. Two minutes is the honest student number.
 
-- DND silences notifications but messages still arrive
-- Aeroplane mode actually pauses delivery — no FOMO checking
-- Most students will check DND'd messages out of curiosity. Almost nobody opens the phone if they know nothing has arrived.
+## The friction ladder: pick the cheapest rung that works
 
-Place phone face down, screen against the desk, on the far side away from your dominant hand. Adds 4 seconds of friction to checking — that's enough to break most automatic reaches.
+Add friction rather than resolve: reaching for the phone is automatic, and automatic behaviour is beaten by obstacles, not promises. The rungs, by seconds of cost:
 
-## Tactic 2: One app, full screen
+- Rung 1: face down within reach. One second. Useless alone.
+- Rung 2: face down, far side of the desk, away from your writing hand. About four seconds, enough to break the automatic reach because you have to properly move.
+- Rung 3: aeroplane mode, not Do Not Disturb. DND silences the alert but the message still lands, so you know something is waiting. Aeroplane mode means nothing has arrived, so there is genuinely nothing to check.
+- Rung 4: another room. You have to stand up and walk. Twenty seconds or more.
+- Rung 5: handed to someone else, or locked away.
 
-If you must use your phone for studying (Notion, flashcards, the Help in Study app), open ONE app, then turn off notifications for everything else. iOS's Focus modes do this well. Set up a "Study" focus that allows only the study app.
+Start at rung 2 or 3, not rung 5. A drawer on day one feels like punishment, and anything that feels like punishment gets abandoned by Thursday. I tried the drawer three times and it never survived a week.
 
-The key: in the Focus mode, the home screen *visually* hides social/messaging apps. Even icon visibility triggers urges. Hide them.
+## What to do when your phone is the study tool
 
-## Tactic 3: The "phone fast" before you start
+Split sessions into phone-as-tool and phone-as-risk, and never let one session be both. That's the honest gap in most advice: half your revision materials probably live on the phone.
 
-For the 5 minutes before your study block begins, don't touch your phone at all. No scrolling, no "one quick check." Get to your desk, open your notes, sit down, then airplane the phone.
+- Phone-as-tool: flashcards on the bus, a quick definition, a photo of a diagram. One app, hard end time, downloaded so aeroplane mode still works.
+- Phone-as-risk: sustained writing, problem solving, anything timed. The phone leaves the room.
+- If a tool exists on laptop and phone, use the laptop at your desk. Running [flashcards](/flashcards) or a [quiz](/quiz) in a browser tab is safer than the same thing on a device that also holds every group chat you're in.
+- "I need it for the Pomodoro timer" is the commonest way the phone returns to the desk. Use a kitchen timer, the laptop clock, or a watch.
 
-If you start your study block already disregulated from a scroll, your brain stays in that mode for another 20 minutes. The pre-study fast prevents the carry-over.
+## The park-it list, which beat every app I tried
 
-## Tactic 4: Put the phone where you have to physically move
+Don't resist the urge — write it down and keep going.
 
-Across the room. In another room. In a drawer downstairs. The further it is, the less likely you check.
+1. Head a sticky note "Park it".
+2. Every time you want to check something, write three or four words and carry on. "Reply to Sara." "Look up Weimar dates." "Football score."
+3. At the end of the session, read the list and do whatever still matters.
 
-A study found students who placed their phone in a different room scored significantly higher on focus tests than those who placed it in their pocket — even when both groups never actually checked the phone. The mere proximity is a cognitive tax.
+Across one week I averaged nine park-it lines a session, and about two of the nine were still worth doing at the end. Seeing that in your own handwriting beats any lecture. The urge peaks in two to three minutes then dissolves; writing gives it somewhere to go that isn't the device.
 
-## Tactic 5: Replace the urge with a low-cost ritual
+## Match the rule to the task, not to your mood
 
-When you feel the urge to check, do one of these instead:
-- Stand up, stretch for 30 seconds
-- Drink water
-- Look out the window for 20 seconds
-- Write one sentence about what you just learned
-- Do 5 deep breaths
+Different work has different tolerance for interruption, so one blanket rule is either too strict for flashcards or too loose for essays.
 
-The urge to check the phone usually peaks in 2-3 minutes and passes. The ritual gets you through that wave without grabbing the device.
+- Rote memorisation — vocabulary, formulae, dates: highest tolerance. Each item is self-contained, so a check costs little.
+- Problem sets in maths, physics or chemistry: medium. A glance mid-question wipes the working you were holding in your head. Finish the question, then check.
+- Essays and long answers: lowest tolerance. An interrupted paragraph reads interrupted. My history middle paragraphs used to wander because I broke them in half. Run one through [essay coach](/essay-coach) and you can see exactly where the argument loses its thread.
+- Timed past papers: zero tolerance. Another room, every time.
 
-## Tactic 6: Scheduled checks, not random checks
+## Train your unbroken stretch up to the length of your longest paper
 
-Decide in advance: "I will check my phone at 3:00 and 4:30, for 5 minutes each." Then do it. Knowing the check is coming makes the wait easier. You're not denying yourself, you're delaying. Big psychological difference.
+Your longest uninterrupted stretch of work should be at least as long as your longest exam, and for most students it's nowhere close. If your working unit is 12 minutes between checks and your paper runs 1 hour 45, you're asking your brain to do something on exam day it has never once rehearsed.
 
-## Tactic 7: Notification quarantine
+Build it like running distance:
 
-Audit which apps you allow to interrupt your day. Most students have notifications on for 20+ apps. Almost none of them actually need to interrupt anything. Turn off all non-human notifications. Keep messages from real people, maybe calls. That's it. No app updates, no social, no news, no game.
+1. Time your current unbroken stretch, from sitting down to first pickup. Mine was 11 minutes. Be honest — the number is private.
+2. Add about 10 minutes a week. Start at 15 and you're at 45 by week four.
+3. From four weeks out, do one full-length, phone-out-of-room session weekly. Cambridge IGCSE, GCSE papers from AQA, Edexcel and OCR, AP, CBSE and WAEC papers commonly run between one hour and two and a half, so take your longest paper as the target.
+4. Give it a real endpoint. A [mock exam](/mock-exam) is easier to sit through than a bare timer, because you're finishing something rather than enduring silence.
 
-## What apps to actually use during study
+## Roll it out one change a week
 
-- **Forest** — gamifies not checking the phone
-- **Cold Turkey Blocker** (laptop) — site-blocking with hardcore mode
-- **Apple Screen Time / Android Digital Wellbeing** — set hard limits on social apps during study hours
-- **Be Focused / Focus Keeper** — Pomodoro timer with auto-silence
-- **Help in Study** itself — built so it's the ONLY tab open when you study
+Stacking five new rules on a Monday guarantees you keep none by Friday.
 
-## A realistic week
+- Week 1: aeroplane mode, face down, far side of the desk. Nothing else. Tally your pickups on day 1 and day 7 and compare.
+- Week 2: add the five-minute pre-session fast. Arrive at your desk mid-scroll and the first twenty minutes are gone.
+- Week 3: add the park-it list.
+- Week 4: turn off every notification that isn't a human messaging you directly. Most students let 20-plus apps interrupt them; almost none need to.
 
-Week 1 — Just do the aeroplane mode + face down. Don't add anything else.
-Week 2 — Add the 5-minute pre-study fast.
-Week 3 — Move the phone to a different room.
-Week 4 — Audit notifications.
+Only then make "different room" your default. By week five it feels like tidying up rather than punishment, which is why it sticks.
 
-By week 4 you have a system. You're not relying on willpower anymore.
+## Test yourself
 
-[Start a focused 30-minute study block →](/onboarding)
+1. Your screen time during a 90-minute session was only six minutes. Why is six minutes not the real cost?
+2. Why does aeroplane mode beat Do Not Disturb for studying?
+3. Which task type has the lowest tolerance for interruption, and why?
+
+## FAQ
+
+### Does putting the phone in another room really help if I never check it anyway?
+
+It helps, but be careful with the claim. Research on phone proximity suggests the device takes some attention just by being nearby, though the effect is modest and still argued over. The reliable reason is simpler: from another room, checking isn't an option.
+
+### How long does the urge to check actually last?
+
+Usually two to three minutes, then it fades on its own — short enough to ride out. Stand and stretch for thirty seconds, drink water, or write one park-it line and go back to the page. The mistake is treating the urge as a command.
+
+### What if I genuinely need my phone for a revision app?
+
+Use it deliberately. One app, downloaded so it works in aeroplane mode, a hard finish time, never during writing or a timed paper. Where a laptop version exists, use that at your desk.
+
+### Do blocker apps like Forest actually work?
+
+They work as friction, not a lock, so they help at the middle rungs and fail the moment you learn the override, which takes about a fortnight. If you've disabled one twice in a week, stop tuning the app and move the phone.
+
+In short: stop trying to out-discipline a device built to beat discipline. Count your pickups once, take the cheapest rung of friction that holds, park your urges on paper, and train your unbroken stretch up to your longest paper. The phone problem is a room problem, not a character problem.
 `,
   },
 
   {
     slug: "parent-teen-study-conflict",
-    title: "When Parents and Teens Fight About Study: How AI Can Lower the Temperature",
-    description: "If \"are you doing your homework?\" is the main interaction in your household, you are not alone. Here is how families have used AI to step out of the daily fight.",
-    publishedAt: today, readTime: "6 min",
-    tags: ["parent tips", "teen study", "study motivation", "family", "AI parental tools"],
+    title: "How to Get Your Teenager to Study Without the Daily Fight",
+    description: "How to get your teenager to study without a nightly argument: why nagging backfires, the weekly five-minute swap, and what to say when marks come back bad.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["parents and teens","study motivation","revision","exam results","family"],
     body: `
-In most families, the fight isn't really about study. It's about trust. Parents don't know whether the teen is actually doing the work. Teens feel constantly surveilled. Both sides escalate. Marks go down. Voices go up.
+**Quick answer:** Stop asking whether they have studied and start agreeing what will exist by Friday. Once a week, let your teenager name three concrete outputs (a past paper, twenty marked questions, one topic they can teach you out loud), let them choose the slots, then check only the output. Asking in between raises resistance and produces fake studying.
 
-Here is how AI is actually helping families step out of this loop.
+I am the teenager in this article. I am doing IGCSEs and A-Levels, and for most of Year 10 the only conversation I had with my mum after six was about whether I had done my revision. I lied about it constantly. Not big lies, just "yeah, about an hour" when it had been eleven minutes of highlighting and forty of scrolling. Saying yes ended the conversation faster than saying no. What fixed it in our house was not more checking. It was changing what got checked.
 
-## The underlying problem
+## Why "have you studied yet?" makes them study less
 
-A parent typically does not know:
-- What the teen is studying right now
-- Whether they are stuck on something
-- Whether they actually need more time, or just want more time
-- How they are doing relative to where they should be
+The question fails because it cannot be answered honestly or checked afterwards, so it trains your teenager to manage you rather than manage the work. Ninety minutes at a desk with a textbook open counts as studying. Reading the same three pages twice counts as studying. Neither moves a grade, and both produce a truthful yes.
 
-So they ask, repeatedly, in escalating tones. The teen reads the ask as not-trust. They get defensive. The conversation becomes adversarial.
+There is a second cost, easy to miss from the outside. An unprompted check-in gets heard as a request for a status report, and a lot of being fifteen is about not being the person who files status reports. Push there and refusing to work becomes a way of proving a point, which is exactly what I was doing.
 
-The fix is not "trust them more." That is asking parents to do something they cannot fake. The fix is **shared visibility** — both sides seeing the same thing.
+## The Sunday five minutes: a worked example
 
-## What shared visibility looks like
+Replace the nightly questions with one weekly conversation in which the teenager does the talking. Five minutes, same slot each week, before anyone is tired. Three rules make it hold: they name the outputs, they choose when, and you write nothing down yourself.
 
-Help in Study has a [the guide for parents](/blog/parents-help-with-homework) feature designed for exactly this. The student studies. The system tracks (with permission) what topics they touched, what quizzes they took, what they got stuck on. Once a week, the parent gets a single recap:
+Here is my real list from a week in March, IGCSE year:
 
-- "This week your child practised algebra and trigonometry. They struggled with quadratic word problems. They completed 4 mock quizzes with scores 65, 78, 81, 85. Their study time was 4.2 hours."
+1. Cambridge IGCSE Biology Paper 2 from a past series, done in 45 minutes with the mark scheme face down. Tuesday after dinner.
+2. Twenty quadratic questions from the textbook exercise, marked by me, every wrong one redone properly. Wednesday before football.
+3. Explain the causes of the Cold War out loud for four minutes with no notes, to my mum, who knows nothing about it. Saturday morning.
 
-That recap replaces the daily interrogation. The parent has data. They can stop asking "did you study today?" — they already know.
+None of those are "revise biology" or "do two hours". Each one either exists by Friday or it does not, so there is nothing left to argue about. The other thing worth noticing is that I picked them. In the term when my mum chose the topics, I did them badly on purpose, which is what happens when the only power left is over how well you work.
 
-## Ground rules that work
+## Check the output, not the hours
 
-Families who use this well set a few rules at the start:
+Hours are the worst available measure because they are the easiest to fake and the least connected to marks. Ask for evidence instead, small enough that producing it is not a punishment. What counts here:
 
-1. **The recap is the source of truth.** The parent doesn't ask about study during the week — they wait for the recap.
-2. **The teen gets to see the recap too.** It's not a surveillance tool. It's a shared dashboard.
-3. **No punishment for low numbers.** The recap is information, not evidence. If the numbers are low, the conversation is "what got in the way this week?" — not "you're grounded."
-4. **The teen has agency.** They can ask the AI for help when stuck, on their own, without involving the parent.
+- A marked past paper with the score on the front and the lost marks circled.
+- A score out of twenty on questions taken from their own notes rather than chosen by you. Turning a topic into [twenty quick questions](/quiz) takes about a minute, which removes the last excuse.
+- A four-minute out-loud explanation to someone who does not know the subject. Brutal, and the most honest test there is.
 
-Without these rules, the feature becomes another stick. With them, it becomes a release valve.
+All three produce a number or a visible gap, and none need you to know CBSE Class 10 science or AP Chemistry yourself. Your job is to read the number and ask one question about it.
 
-## What changes in 4-6 weeks
+## Four sentences worth swapping out
 
-Families typically report the same arc:
+These four swaps changed the temperature in my house more than anything else.
 
-**Week 1-2** — The teen is suspicious. The parent is over-checking the dashboard. Awkward.
+- Instead of "have you done your revision?" try "what is on the list tonight?" It asks about the plan, not their honesty.
+- Instead of "you are going to fail at this rate" try "which paper do you feel least ready for?" Fear about a distant exam does not produce work. Naming one weak paper does.
+- Instead of "get off your phone and study" try "first slot before dinner or after?" A closed choice keeps the decision with them and still ends with work happening.
+- Instead of "why is this grade so low?" try "how many of those marks were things you did not know, and how many were things you knew but did not write down?" That turns a row into a diagnosis.
 
-**Week 3-4** — Both sides settle. The parent stops asking daily. The teen notices the absence of nagging.
+## When the marks come back bad: the 24-hour rule
 
-**Week 5-6** — Conversations shift from "are you studying" to "what are you finding hard?" — a genuinely different conversation. Some families report their kid voluntarily opening the app in front of them to show progress. That used to be unthinkable.
+Say nothing about a bad result for 24 hours, then sort the lost marks into three piles. The delay is not softness. Someone handed 58 out of 90 already knows it is bad, and anything said in the first hour lands on someone not listening.
 
-## When AI tutoring helps the dynamic
+Here is the sort on a real GCSE chemistry mock, 32 marks lost:
 
-The biggest emotional unlock is when the teen has a non-judgemental place to ask "stupid" questions. The parent doesn't have to explain the same concept four times with rising frustration. The AI explains it ten times, slightly differently each time, without ever sighing.
+- Did not know it: 12 marks, from two topics in the same term. The only pile that needs relearning.
+- Knew it, wrote the wrong thing: 14 marks. An "explain" answer with no because in it, a calculation with no working shown, two answers missing units. AQA, Edexcel, OCR and Cambridge mark schemes award those separately from the science.
+- Ran out of time or careless: 6 marks. The last question was blank.
 
-That changes who the teen turns to when stuck. Instead of avoiding the parent because the conversation gets tense, they go straight to the [/chat](/chat) tutor. Less friction. More learning.
+Twenty of those 32 marks had nothing to do with effort. "You did not work hard enough" is usually the wrong diagnosis, and it is the sentence that starts the fight. A fresh [timed paper with feedback](/mock-exam) tells you more than an argument about attitude.
 
-The parent's role can then become more about checking in emotionally, not academically. Asking "how are you feeling about exams?" lands very differently when it's not the 14th question of the day.
+## When it is avoidance rather than laziness
 
-## What to avoid
+Avoidance looks like laziness and needs the opposite response. The tells are specific: they tidy the desk instead of starting, they only revise the subject they are already good at, the stomach aches arrive on paper days.
 
-- Don't use the weekly recap as ammunition. ("Last week you only studied 2 hours, look I have proof.") This breaks the trust the system is supposed to build.
-- Don't compare to siblings or friends. Comparison is the fastest way to demotivate a teen.
-- Don't dismiss the AI tutoring as cheating. As long as the teen is the one writing the answers, AI-assisted study is no different from having a tutor.
-- Don't take over the dashboard. The teen should own their own learning. The parent is reading the report, not driving the car.
+Shrink the first step until it is almost embarrassing. One question, not one topic. Ten minutes on a timer with permission to stop. Start with something they can already do, because the point of the first ten minutes is to prove the desk is survivable. If it runs for weeks, or sleep and eating change with it, that is a conversation with school.
 
-## A realistic first conversation
+## Where AI takes you out of the firing line
 
-Try this script:
+The main thing AI does for a household like mine is that it is not you. I used to let my dad explain percentages for the fourth time while quietly dying inside, because admitting to my own parent that I still did not get it felt worse than not getting it. Typing it into a box costs nothing.
 
-"I want to stop asking you about homework every day. It's making both of us miserable. There's a tool I'd like to try where you study with an AI helper, and I get a short summary once a week. I won't check it during the week. If the summary is rough one week, I won't punish you — we'll just talk about what happened. Want to try it for a month?"
+So the "I do not understand this" conversations happen without you in the room, and what reaches you is the version where they have already had a go. A plain-English [explanation of a topic](/explain) or a [tutor chat that asks questions back](/chat) does the repetition nobody has patience for at nine at night, and it removes your last reason to hover.
 
-Most teens say yes. The framing of "I'm tired of nagging you too" lands much better than "we need to check on your study."
+## Test yourself
 
-[Read the guide for parents →](/blog/parents-help-with-homework)
+1. Your teenager says "yes, I studied." What question do you ask next that has a checkable answer?
+2. A mock comes back at 58 out of 90. What are the three piles you sort the lost marks into?
+3. It is Tuesday and nothing on the weekly list has been started. What do you say, and what do you not say?
+
+## FAQ
+
+### My teenager refuses to sit down for the weekly five minutes.
+
+Do it walking or in the car, and keep it to the three outputs. Refusal is usually about the format, because a sit-down at the kitchen table looks like a hearing. If they still will not, ask for one output and build up.
+
+### How do I know they are not just using AI to write the answers?
+
+Ask them to explain the answer out loud with the screen shut. Two minutes, and it cannot be faked. Copied work collapses under one follow-up question, and that stops it better than any rule about which sites are allowed.
+
+### Should I take the phone away during study time?
+
+Phone in another room during the agreed slot works, if they agreed to it in the weekly conversation rather than having it confiscated mid-argument. The same act means two different things depending on who decided it.
+
+### They keep saying they will study "later" and later never arrives.
+
+Make the slot a time, not a word. "Later" is not a plan, and it is a comfortable place to live. Ask which slot, get an actual clock time back, then say nothing until that time has passed.
+
+In short: stop auditing effort and start agreeing outputs. Five minutes a week, three things that either exist or do not, their choice of when, and 24 hours of silence before you discuss a bad mark. You lose the daily argument, and you get back a teenager who can tell you the truth about what they do not know.
 `,
   },
 
   {
     slug: "ap-statistics-survival-guide",
-    title: "AP Statistics Survival Guide: The 5 Concepts That Earn 70% of the Marks",
-    description: "AP Stats is concept-heavy and intimidating, but the exam recycles five core ideas. Lock these in and you've got a 4 minimum, with a path to 5.",
-    publishedAt: today, readTime: "8 min",
-    tags: ["AP Statistics", "AP Stats exam", "College Board AP", "statistics help"],
+    title: "AP Statistics Survival Guide: How to Answer FRQs for Full Marks",
+    description: "Knowing how to answer AP Statistics FRQs is where the marks are won. The five recycled ideas, how the E/P/I rubric works, and the exact wording readers reward.",
+    publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["AP Statistics","AP Stats FRQ","AP exam technique","statistics revision","College Board AP"],
     body: `
-AP Statistics has a reputation for being tricky. The reputation is half-deserved. The math is light. The concepts are deep. The exam is fair but it punishes shallow understanding.
+**Quick answer:** AP Statistics free-response questions are scored part by part as essentially correct, partially correct or incorrect, then combined into a 0-4 score. Five recycled ideas carry most of those rubric points: the three distributions, checking conditions, the four-move hypothesis test, error types in context, and scope of inference.
 
-If you fully understand five core ideas, you will get a 4 minimum, and a 5 is reachable.
+Honest disclosure first: I sit IGCSE and A-Levels, not AP, so I have no AP Statistics score of my own to wave around. What I have is a pile of released College Board scoring guidelines and three friends who took the exam and let me compare what they actually wrote against what the rubric wanted. The gap between what they knew and what they scored was almost never mathematical. It was wording.
 
-## Core idea 1: Sampling distribution ≠ population distribution ≠ sample distribution
+## How AP Statistics free-response is actually scored
 
-This trips up more students than anything else. Three distinct things, all with the word "distribution":
+Each FRQ is worth 0 to 4 points, and readers do not tick boxes and add up. They rate each lettered part as essentially correct (1 point), partially correct (half a point) or incorrect (zero), then combine those into a whole-number score, rounding holistically if you land between two.
 
-- **Population distribution** — the distribution of the actual quantity in the whole population. Usually unknown.
-- **Sample distribution** — the distribution of values in your one sample. You can see this.
-- **Sampling distribution** — the distribution of all possible sample statistics (means, proportions) if you took infinite samples of size n. Theoretical, but central to inference.
+The shape of the exam matters. Section I is 40 multiple-choice questions in 90 minutes, half your score. Section II is six free-response questions in 90 minutes, the other half, with the last being the Investigative Task. That is around 15 minutes per FRQ, and the difference between a partial and an essentially correct is usually one sentence of context — not one more calculation.
 
-Almost every "explain your reasoning" question on the exam expects you to use these correctly. Mix them up, lose marks.
+So the honest version of "five concepts that earn most of the marks" is this: these five ideas are what the rubric language keeps asking you to demonstrate. Nobody can promise you a score. But if you cannot do these five in full sentences, you will leak half-points everywhere.
 
-**Drill**: every time you see a stats question, say out loud which of the three you're working with.
+## Idea 1: population, sample and sampling distributions are three different things
 
-## Core idea 2: The Central Limit Theorem (CLT)
+They sound identical and are not. The population distribution is the spread of the real quantity across everyone. The sample distribution is the spread of values in your one actual sample, the thing you can draw a histogram of. The sampling distribution is the spread of a statistic — a mean or proportion — across every possible sample of size n.
 
-The CLT is the engine that makes everything else work. It says:
+That third one is theoretical and it is the one inference runs on. When the Central Limit Theorem says the sampling distribution of the sample mean becomes approximately Normal with standard deviation sigma / sqrt(n), it is saying nothing about the population and nothing about your single sample.
 
-**The Central Limit Theorem:** for a large enough sample size, the sampling distribution of the sample mean is approximately Normal, with mean = population mean, and standard deviation = sigma / sqrt(n).
+The drill: every time you read a stats question, say out loud which of the three it is about. If a question says "describe the shape of the distribution of sample means", writing about the raw data is an incorrect, not a partial. To get the distinction hammered in with fresh examples, throw the phrase at [our explainer](/explain).
 
-That second sentence is the magic. It tells you:
-1. You can use Normal-distribution tools (z-scores, p-values) even if the population isn't Normal, as long as n is big enough (rule of thumb: n ≥ 30).
-2. The standard error shrinks with √n. To halve your error, you need 4x the sample.
+## Idea 2: conditions before calculations, always
 
-Almost every confidence interval and significance test on the exam uses CLT logic. Know it cold.
+State and check the conditions before you compute anything, in writing, with the numbers filled in. Readers award points for the checking, not for knowing the checks exist.
 
-## Core idea 3: Type I vs Type II errors
+Worked example. A random sample of 250 students at a large school is taken, and 160 say they use a calculator app daily. Build a 95 percent confidence interval for the true proportion.
 
-The exam loves this distinction. Memorise it like multiplication tables:
+1. Random: stated in the question — the sample was randomly selected.
+2. Large counts: 250 times 0.64 = 160 successes and 250 times 0.36 = 90 failures, both at least 10.
+3. Independence: 250 students is less than 10 percent of all students at a large school.
+4. p-hat = 160/250 = 0.64. Standard error = sqrt(0.64 times 0.36 / 250) = sqrt(0.0009216) = 0.0304.
+5. Interval = 0.64 plus or minus 1.96 times 0.0304 = 0.64 plus or minus 0.0595, so (0.580, 0.700).
+6. Interpretation: we are 95 percent confident that the interval from 0.580 to 0.700 captures the true proportion of all students at this school who use a calculator app daily.
 
-- **Type I error** — rejecting the null hypothesis when it is actually true. ("False positive.")
-- **Type II error** — failing to reject the null when it is actually false. ("False negative.")
-- **Power** — probability of correctly rejecting a false null. Power = 1 − P(Type II).
+Notice step 6. "There is a 95 percent chance the true proportion is in this interval" is wrong — the parameter is fixed, the interval is what varies. That single swap turns an essentially correct into a partial.
 
-Trigger pattern for the exam:
+## Idea 3: the four-move hypothesis test
 
-- "concluding the drug works when it doesn't" → Type I
-- "missing a real effect" → Type II
-- "we want power to be high" → reduce Type II, often by increasing n
+Every significance test on the paper is the same four moves: hypotheses, conditions, test statistic with p-value, conclusion in context linked back to alpha.
 
-Free-response questions will ask you to interpret these in context. They want a sentence like: "A Type I error in this context would mean concluding the new vaccine is effective when in reality it is not, leading to widespread use of an ineffective drug."
+Worked example. A teacher claims her class revises for more than 90 minutes a night on average. A random sample of 36 students gives a mean of 97.5 minutes with standard deviation 21 minutes. Test at the 5 percent level.
 
-Don't just name it. Contextualise it. That's where marks live.
+1. H0: mu = 90 minutes. Ha: mu is greater than 90 minutes, where mu is the true mean nightly revision time for the population of students.
+2. Conditions: random sample, stated. n = 36 is at least 30, so the sampling distribution of the mean is approximately Normal by the Central Limit Theorem. 36 is under 10 percent of the population.
+3. t = (97.5 - 90) / (21 / sqrt(36)) = 7.5 / 3.5 = 2.14 with 35 degrees of freedom, giving a p-value of about 0.020.
+4. Since 0.020 is less than alpha = 0.05, we reject H0. We have convincing evidence that the true mean nightly revision time for these students is greater than 90 minutes.
 
-## Core idea 4: Conditions for inference
+Move 4 is where marks disappear. "Reject H0" alone is a partial. You need the comparison to alpha, the decision, and a context sentence naming the actual variable. Defining mu in words back in move 1 is another half-point most students skip.
 
-Every confidence interval and significance test has assumptions you must check:
+## Idea 4: Type I, Type II and power, always in context
 
-- **For a proportion**: random sample, n*p̂ ≥ 10 and n*(1−p̂) ≥ 10, independence (10% rule)
-- **For a mean**: random sample, n ≥ 30 OR population approximately Normal, independence
+Naming the error type is worth nothing on its own. The rubric wants the consequence, in the situation described.
 
-The exam will mark you down if you skip the conditions, even if your math is perfect. State each condition, check it, then proceed.
+- Type I error: rejecting a true null. False positive.
+- Type II error: failing to reject a false null. False negative.
+- Power = 1 minus the probability of a Type II error. Power rises when n rises, when alpha rises, and when the true effect is further from the null.
 
-**Habit to build**: never start a calculation until you've written out the conditions for that test. Make it mechanical.
+Contextualised answer for a vaccine trial: "A Type I error would mean concluding the vaccine is effective when in fact it is not, so an ineffective vaccine would be distributed and people would believe they were protected." That is essentially correct. "Rejecting H0 when H0 is true" is a partial, every time. Generate a few scenarios in [the quiz tool](/quiz) and write the consequence sentence for each.
 
-## Core idea 5: Interpretation language
+## Idea 5: scope of inference — sampling versus assignment
 
-AP Stats heavily penalises sloppy interpretation. There are specific phrases that earn marks and specific phrases that lose them.
+The one my friends said they were least ready for, and a two-by-two you can memorise in five minutes.
 
-**Confidence interval interpretation**:
-- ✅ "We are 95% confident that the true mean weight of the population is between 12.4 and 15.7 grams."
-- ❌ "There is a 95% probability the true mean is in this interval." (Wrong — the true mean is fixed, not random.)
-- ❌ "95% of the data falls within this interval." (Wrong — that's a different interval.)
+- Random sample and random assignment: generalise to the population and claim cause and effect.
+- Random sample only: generalise, but no causal claim.
+- Random assignment only: causal claim within the group studied, but no generalising.
+- Neither: no causal claim, no generalising.
 
-**p-value interpretation**:
-- ✅ "Assuming the null hypothesis is true, the probability of observing data as extreme as ours, or more extreme, is 0.03."
-- ❌ "The probability that the null hypothesis is true is 0.03." (Wrong — common but very wrong.)
+Any FRQ asking "can we conclude X causes Y" or "does this apply to all students" is testing this square. Answer both halves separately and name the design feature justifying each.
 
-**Significance interpretation**:
-- ✅ "We have significant evidence to reject H₀ at the α = 0.05 level. There is convincing evidence that..."
-- ❌ "We have proven that..." (Statistics doesn't prove anything.)
+## Test yourself
 
-Memorise the templates. Use them every time. They are essentially free marks.
+1. A 90 percent confidence interval for a mean is (12.4, 15.6). Write the interpretation sentence that a reader would score as essentially correct.
+2. n = 40 and p-hat = 0.15. Do the large-counts conditions hold? Show both numbers.
+3. Researchers randomly assign volunteers who signed up online to two exercise plans. What can and cannot be concluded, and why?
 
-## How to use AI for AP Stats
+## FAQ
 
-- **Concept walkthroughs**: [/explain](/explain) with subject=Statistics, board=AP. Ask "explain the difference between sample distribution and sampling distribution with a worked example."
-- **Past FRQs**: paste a free-response question into [/grade](/grade) along with your answer. Get specific feedback on language and missing conditions.
-- **Mock exams**: [/mock-exam](/mock-exam) generates AP-style multiple choice + FRQs.
-- **Targeted drilling**: [the quiz generator](/quiz) for confidence intervals or hypothesis tests until you can do them in your sleep.
+### Is AP Statistics harder than AP Calculus?
 
-## Final week routine
+Different hard. The arithmetic is much lighter, but the writing load is far heavier — you are marked on explanation quality, not just answers. Students strong at algebra and weak at written justification often find it more frustrating than calculus. If the calculation side worries you, [the math solver](/math-solver) walks through standard-error arithmetic step by step.
 
-- 3-4 full timed FRQ sections (90 min each)
-- 1-2 timed multiple-choice sections (90 min each)
-- One concept-list review per day (one of the five core ideas)
-- Memorise the interpretation templates
-- Sleep early
+### How many free-response questions are on the AP Statistics exam?
 
-The students who get 5s are not smarter. They are more precise with language. The five core ideas + clean templates do the work.
+Six, in 90 minutes, worth half the exam. The sixth is the Investigative Task, which asks you to extend a method you were not taught directly. Budget about 12 minutes each for questions 1 to 5 and leave 25 to 30 minutes for the last one.
 
-[Generate an AP Stats mock paper →](/mock-exam)
+### Do I lose marks for skipping conditions if my calculation is right?
+
+Yes. Conditions are their own rubric component on inference questions, so a perfect interval with unchecked conditions caps that part at partial. Write them out with the actual numbers substituted, not just the names.
+
+### Can I still get the point if my answer is numerically wrong?
+
+Often, yes. Rubrics reward correct method and correct interpretation of your own value, so a wrong number carried consistently through a correct procedure with a contextual conclusion still earns credit. Show every step and never leave a bare number. Timed practice in [the mock exam](/mock-exam) builds the habit fastest.
+
+## In short
+
+AP Statistics rewards students who write like statisticians, not students who calculate fastest. Get the three distributions straight, check conditions in writing, run the four-move test, contextualise your errors, and answer scope questions in two halves. Those five habits are where the rubric points live.
 `,
   },
 
   {
     slug: "gcse-evaluate-questions",
-    title: "How to Answer 'Evaluate' Questions in GCSE (Where the Marks Actually Hide)",
-    description: "Evaluate questions carry the most marks in GCSE — and are where most students lose them. Here's the exact structure examiners want (PEEL + judgement), with a worked example.",
-    publishedAt: "2026-08-02", readTime: "8 min",
-    tags: ["GCSE", "evaluate questions", "exam technique", "AQA", "GCSE revision"],
+    title: "How to Answer Evaluate Questions in GCSE (9-Mark Structure)",
+    description: "How to answer evaluate questions in GCSE: weigh both sides, then judge in context. The 9-mark structure, a fully worked answer, and the timing examiners expect.",
+    publishedAt: "2026-08-02", updatedAt: "2026-08-07", readTime: "7 min",
+    tags: ["GCSE","evaluate questions","exam technique","command words","levels marking"],
     body: `
-If you've ever written a full page for a GCSE "evaluate" question and still walked away with 5 out of 12, you're not alone — I did exactly that in Year 10. The annoying part is that it's almost never because you didn't *know* enough. It's because "evaluate" is a specific kind of question with a specific kind of answer, and most of us are never actually taught its shape. We just write everything we know and hope.
+**Quick answer:** In GCSE, "evaluate" means weigh both sides using specific evidence and then give a clear judgement that answers the question. These questions are levels-marked and usually worth 8, 9 or 12 marks, so the examiner awards a band for the whole answer. Without a supported judgement you are capped mid-band, however much you write.
 
-This is the guide I wish someone had handed me: what "evaluate" really asks for, where the marks are hiding, and a structure you can reuse in every subject that uses these questions — Business, Geography, History, PE, Religious Studies, Economics.
+I do Cambridge IGCSE and A-Levels, and history is my favourite subject, which is exactly where this bit me. In Year 10 I wrote a page and a half for a 12-mark evaluate question, felt quietly smug, and got 5. The comment said plenty of knowledge, little judgement. I had written an "explain" answer to an "evaluate" question. Nothing about my revision was wrong — the shape of my answer was. AQA, Edexcel, OCR and Cambridge IGCSE all define this command word the same way, so fixing it once fixes it in every subject with extended writing.
 
-## What "evaluate" actually means
+## "Evaluate" is a different job from "explain"
 
-Every GCSE answer is controlled by its **command word** — the verb that tells you what kind of thinking to show. "Describe" wants facts. "Explain" wants reasons. But **"evaluate" wants a judgement** — you weigh things up and come down on a side, backed by evidence.
+Evaluate asks you to make a decision, not to prove coverage. The command word family runs roughly like this:
 
-That word *judgement* is the whole game. An "evaluate" question is not "tell me everything about X." It is "here are two or more options, factors or views — decide which matters more, and prove why."
+- Describe — say what happens. No reasons.
+- Explain — say why it happens, as a linked chain of causes.
+- Analyse — break something into parts and show how they connect and what follows.
+- Evaluate — do the analysis, then decide which side is stronger and say why.
 
-If your answer has no clear judgement, you have capped yourself at roughly half marks before the examiner has even finished reading. That is the single most common reason strong students lose marks here.
+So evaluate contains explain. Explain does not contain evaluate. That is why a beautifully explained answer can still sit stuck in the middle band: it did two thirds of the job. The moment you read the word "evaluate", the last third of your answer is already decided for you — a judgement is coming.
 
-## Why these questions are worth caring about
+## How levels marking works, and why writing more does not help
 
-On most GCSE papers — AQA, Edexcel and OCR all do this — the "evaluate" questions are the **big ones: 8, 9 or 12 marks**, and they use a **levels-based mark scheme**. That matters, because levels marking does not add up a point per fact. The examiner reads your whole answer, decides which *level* it belongs in based on the quality of your reasoning and judgement, then picks a mark inside that level.
+Levels-marked questions are graded holistically, on best fit. The examiner reads the whole answer, decides which level the reasoning belongs in, then picks a mark inside that level. Nobody is adding a point per fact.
 
-So two students can write the same facts and land in completely different levels — one because they evaluated throughout, one because they only listed. A big chunk of the marks on the whole paper live in these few questions. Fix the technique once and it pays off across every subject.
+On a typical 9-mark question the marks split across assessment objectives — very roughly 3 for knowledge, 3 for applying it to the context in the question, and 3 for the evaluation itself, though the exact split varies by subject and board. That split is the whole story:
 
-## The structure examiners actually want: PEEL + J
+- Facts only: you are competing for about a third of the marks.
+- Facts applied to the specific case in the question: about two thirds.
+- Facts, applied, then judged: all nine.
 
-The reliable shape for an evaluate answer is **PEEL, plus a real judgement**:
+An extra paragraph of accurate knowledge on an already knowledge-heavy answer adds nothing, because those marks are banked. One good judgement sentence can add three. That is the trade nobody explains.
 
-- **P — Point.** State one factor or argument clearly.
-- **E — Evidence.** Back it with a specific fact, figure, case study or source detail. "Specific" is doing the heavy lifting — a named example beats a vague sentence every time.
-- **E — Explain.** Say *why* that evidence supports the point. This is the reasoning chain, not one sentence.
-- **L — Link.** Connect it straight back to the question.
-- **J — Judgement.** Here is where the marks hide: say how *important* this point is, in context, compared with the other side.
+## The shape that fits the grid
 
-Then do a second PEEL for the other side, and finish with a short conclusion that genuinely decides: "The most important factor is X, because..."
+Use five moves per side, then decide.
 
-## The bit almost everyone skips: judgement *in context*
+1. Point — one factor, stated in a sentence that borrows the question's own words.
+2. Evidence — a named, numbered, specific detail. A figure, a case study, a date.
+3. Chain — two or three sentences of because-therefore reasoning tying that evidence to the point.
+4. Mini-judgement — how much this side actually matters here, before you move on.
+5. Repeat for the other side, then finish with a decision that names your criterion.
 
-Examiner reports say the same thing every single year — the top marks go to a judgement made **in context**, not a generic one.
+Move 5 is the one almost nobody does. A criterion is the standard you are judging against: cost, time, number of people affected, long-term survival, reliability. "Both matter" is fence-sitting. "X matters more if what you care about is long-term protection, because..." is a judgement, because it says what you weighed on.
 
-- Generic (stuck mid-level): "In conclusion, both factors are important."
-- In context (top level): "For a small business with limited cash, keeping costs down matters more than expanding quickly — because running out of cash kills the business before growth can ever help."
+## A worked 9-mark answer
 
-The second one is tied to the specific situation in the question (a small business, limited cash) and gives a *reason* for the ranking. You are not just weighing — you are weighing *for this case*. That is the sentence that lifts you into the top level.
+Question: Evaluate the effectiveness of hard engineering in protecting a coastline you have studied. (9 marks)
 
-## Timing: don't over-write
+Hard engineering can be very effective for the specific stretch it defends. At Mappleton on the Holderness coast, two rock groynes and a rock revetment were installed in 1991 at a cost of around GBP 2 million, holding a coastline that had been retreating at roughly 2 metres a year (point plus specific evidence). Because the groynes trap sediment moving south in longshore drift, the beach in front of the village widened, and a wider beach absorbs more wave energy before it reaches the cliff (chain of reasoning). For the village and the road behind it, that is a clear success (mini-judgement).
 
-More words does not mean more marks on levels-based questions — over-writing just burns time you need elsewhere. A rough guide:
+However, the same groynes starve the coast downdrift. South of the scheme, erosion rates rose sharply, because sediment that once fed those cliffs is now trapped behind the defences (other side, with a mechanism rather than an assertion). The defence did not remove the erosion. It moved it.
 
-- **9-mark evaluate:** one strong, fully-explained point per side plus a clear judgement — around 10 to 12 minutes, not 25.
-- **12-mark evaluate:** two developed points per side and a decisive conclusion.
+Overall, judged on protecting one settlement over a 30-year window, the scheme worked, and the value of the homes and road saved outweighs the 2 million spent. Judged on protecting the coastline as a whole, it failed, because it transferred the problem to unprotected farmland further south. Effectiveness therefore depends on the scale you choose to measure it at (decision, with a named criterion).
 
-For a 9-marker, examiners would far rather see one reason explained brilliantly and judged in context than four reasons listed and left hanging. Depth beats breadth.
+That is about 230 words, and it sits in the top level — not because it holds more facts than a mid-level answer, but because it names a criterion, weighs two mechanisms and decides.
 
-## A worked mini-example (Business, 9 marks)
+## The sentences that move you up a level
 
-*Question: "Evaluate whether a new coffee shop should spend its limited budget on advertising rather than on better ingredients."*
+Keep three stems in your head and you will never freeze at the end of an answer:
 
-Here is a top-level answer, with the technique labelled:
+- "On balance, judged on ..., the more important factor is ..., because ..."
+- "This matters most in this case because the question specifies ..."
+- "X is stronger in the short term, but over ... years Y wins, because ..."
 
-Advertising could bring in new customers who do not yet know the shop exists — vital for a brand-new business with no reputation **(point + link)**. A local social-media campaign, for instance, is cheap and reaches the exact streets the shop serves **(evidence and explain)**. However, for a coffee shop, repeat custom depends on the product itself: if the coffee is only average, advertising just brings people in once **(the other side)**. **On balance, for a brand-new shop with a limited budget, I would spend on ingredients first — word-of-mouth from a genuinely good product is free advertising that lasts, whereas paid ads stop working the moment the money runs out (judgement, in context).**
+Each one contains the word because and a condition. Generic endings like "both are important in different ways" read as a refusal to answer the question. Examiner reports repeat the same finding every year: the strongest answers spot the command word and then visibly do what it asks.
 
-That is the whole answer in four sentences, and it sits near the top of the level — because it weighs both sides and decides for this specific case.
+## Timing: what a 9-marker actually deserves
 
-## Mistakes that quietly cost marks
+Work at roughly 1 to 1.2 minutes per mark, thinking time included.
 
-- **No judgement at all.** Writing a brilliant "explain" answer to an "evaluate" question. Caps you mid-level.
-- **Judgement bolted on at the end.** A one-sided answer, then "in conclusion, X is better." You need to weigh as you go.
-- **Vague evidence.** "Lots of people think..." earns nothing. Name it, number it, cite it.
-- **Fence-sitting.** "Both are important" with no decision. Evaluate means *decide*.
-- **Ignoring the context.** Answering in general when the question handed you a specific business, place or period. The context is exactly where the top marks are.
+- 9 marks: about 10 to 11 minutes, 220 to 280 words, one developed point per side plus the decision.
+- 12 marks: about 14 to 15 minutes, two developed points per side, and a conclusion that ranks them against each other.
 
-## How to actually get good at this
+Spend the first minute writing a four-word plan in the margin — side A, side B, criterion, decision. I lose far more marks to a rushed ending than to a thin opening, and the plan is what fixed that for me.
 
-Reading about technique is one thing — the marks come from *doing it and being told precisely where you dropped a level*. That is the part a textbook cannot do for you.
+## Mistakes that quietly cap you mid-level
 
-- Write a real evaluate answer, then paste it into [Mark my answer](/grade). It marks it the way your board's examiner would and tells you *which* part cost you the level — usually the missing or generic judgement. That feedback loop is the fastest fix I know.
-- Get the underlying content solid first with [Explain anything](/explain), so your "evidence" is actually accurate.
-- Then drill it under time pressure with a [Mock exam](/mock-exam), until PEEL and judgement become automatic.
+- No judgement at all, or one bolted onto the last line with nothing supporting it.
+- Fence-sitting. "Both are important", with no criterion behind it.
+- Vague evidence. "Lots of people" and "a big cost" score nothing. Name it, number it.
+- Ignoring the context you were handed — a specific place, business, period or person. Applying to that context is an entire assessment objective.
+- Writing everything you know. Under levels marking an irrelevant paragraph does not merely fail to add marks, it dilutes the answer the examiner is banding.
 
-Do five evaluate questions this way and mark them honestly, and you will feel the switch flip — you stop writing everything you know, and start writing the handful of sentences that actually score.
+The fastest fix is feedback on your own writing, not more reading about technique. Write one real evaluate answer, then run it through [Mark my answer](/grade) to see which part cost you the level — it is nearly always the judgement. Tighten the argument with [Essay coach](/essay-coach), check the underlying content is accurate with [Explain anything](/explain), then drill it under time pressure in a [Mock exam](/mock-exam).
 
-For how this fits into a sane revision plan, see the [GCSE revision guide](/blog/gcse-revision-guide).
+## Test yourself
 
-**The one thing to remember:** "evaluate" means weigh both sides, then *decide — in context — and say why*. That decision sentence is where the marks hide. Go and take them.
+1. A 9-mark question says evaluate. You have written two sides brilliantly and stopped. Roughly what fraction of the marks is still sitting on the table, and why?
+2. Turn this into a real judgement: "Both advertising and better ingredients are important for a new cafe."
+3. What is a criterion, and why does naming one lift an answer a whole level?
+
+## FAQ
+
+### Do I have to argue both sides?
+
+Yes. An answer that only argues one way is not weighing anything, so it cannot reach the top level even when every fact in it is correct. Give the other side genuine strength first, then defeat it with evidence.
+
+### Should the judgement go at the start or the end?
+
+Either works, and the best answers often do both — a short verdict early, evaluation running through the middle, then a firmer decision at the end. What loses marks is judging nowhere, or judging only in a final sentence that no earlier paragraph supports.
+
+### Is a longer answer a better answer?
+
+No. Levels marking rewards quality of reasoning, not volume. One point explained fully and judged in context beats four points listed and left hanging, and over-writing steals time from the rest of the paper.
+
+### Does this work outside Geography and Business?
+
+Yes. Any subject with extended writing uses the same weigh-then-judge logic — history, PE, religious studies, English literature, and the science papers that set evaluate questions. Only the evidence changes.
+
+## In short
+
+Evaluate means decide. Two sides, specific evidence, a mechanism for each, then a judgement that names what you are judging against and why it points one way. If you are running out of time, write the decision sentence first — it is worth more than another paragraph of everything you know.
 `,
   },
 
