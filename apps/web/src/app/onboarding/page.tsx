@@ -66,7 +66,7 @@ export default function OnboardingPage() {
 
   const [country, setCountry] = useState<CountryCode | "">(existing?.country ?? "");
   const [countryQuery, setCountryQuery] = useState("");
-  const [age, setAge] = useState<number>(existing?.age ?? 14);
+  const [age, setAge] = useState<number>(Math.max(existing?.age ?? 14, 13));
   const [curriculum, setCurriculum] = useState(existing?.curriculum ?? "");
   const [curriculumQuery, setCurriculumQuery] = useState("");
   const [grade, setGrade] = useState(existing?.grade ?? "");
@@ -238,8 +238,10 @@ export default function OnboardingPage() {
         {step === 1 && (
           <>
             <h2 className="text-lg font-semibold mb-2">How old are you?</h2>
-            <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>The AI adapts its tone and reading level to your age.</p>
-            <input type="range" min={6} max={30} value={age} onChange={(e) => setAge(Number(e.target.value))} className="w-full" />
+            <p className="text-sm mb-4" style={{ color: "var(--ash-muted)" }}>The AI adapts its tone and reading level to your age. Help in Study is for ages 13 and over.</p>
+            {/* Floor is 13 to match the privacy policy and our COPPA position —
+                the slider used to start at 6, which invited under-13s to sign up. */}
+            <input type="range" min={13} max={30} value={age} onChange={(e) => setAge(Number(e.target.value))} className="w-full" aria-label="Your age" />
             <div className="text-center text-4xl font-bold mt-2">{age}</div>
             <div className="mt-4 p-4 rounded-2xl text-sm"
               style={{ background: preview.palette.bg, color: preview.palette.text }}>

@@ -87,7 +87,37 @@ function normalizeMarkdown(src: string): string {
   //   \[ … \] -> $$ … $$  (display — do first)   and   \( … \) -> $ … $  (inline)
   s = s.replace(/\\\[([\s\S]*?)\\\]/g, (_m, inner) => `\n\n$$${inner}$$\n\n`);
   s = s.replace(/\\\(([\s\S]*?)\\\)/g, (_m, inner) => `$${inner}$`);
+  s = escapeCurrency(s);
   return s;
+}
+
+/**
+ * Stop money being parsed as maths.
+ *
+ * remark-math treats the text between two dollar signs as inline LaTeX, so
+ * "A pen costs $5 and a book costs $12" renders as italic garbage — which hits
+ * every economics, business and word-problem answer. Escaping the dollar sign
+ * makes it render literally.
+ *
+ * Applied line by line, and only when the line has no LaTeX command and no
+ * display-math fence, so real maths is never touched.
+ */
+function escapeCurrency(src: string): string {
+  return src
+    .split("\n")
+    .map((line) => {
+      if (line.includes("$$") || /\\[a-zA-Z]+/.test(line)) return line; // real maths — leave alone
+      const dollars = (line.match(/(?<!\\)\$/g) ?? []).length;
+      const currencyLike = (line.match(/(?<!\\)\$\s?\d/g) ?? []).length;
+      if (currencyLike < 1) return line;
+      // A single balanced $…$ that merely starts with a digit is real maths
+      // ("Solve $5x + 3 = 0$"), so only treat it as money when there are two or
+      // more amounts, or when the dollars are unbalanced and cannot be a span.
+      const isMoney = currencyLike >= 2 || dollars % 2 === 1;
+      if (!isMoney) return line;
+      return line.replace(/(?<!\\)\$(?=\s?\d)/g, "\\$");
+    })
+    .join("\n");
 }
 
 export function RichOutput({ children, className = "" }: { children: string; className?: string }) {

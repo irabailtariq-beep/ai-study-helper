@@ -43,17 +43,26 @@ export default function MockExamPage() {
     } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   }
 
-  function score(): { right: number; total: number } {
-    if (!quiz) return { right: 0, total: 0 };
+  function score(): { right: number; total: number; selfCheck: number } {
+    if (!quiz) return { right: 0, total: 0, selfCheck: 0 };
+    // Only auto-mark what can be marked objectively. Free-text answers used to be
+    // compared with exact string equality, so "photosynthesis." lost to
+    // "Photosynthesis" and almost every written answer scored zero — students
+    // were shown a confidently wrong mark. Those are now shown for self-checking
+    // against the model answer instead of being counted.
     let right = 0;
+    let autoMarked = 0;
     quiz.items.forEach((item: QuizItem, i: number) => {
       const a = answers[i];
-      if (item.type === "mcq" && a === item.answerIndex) right++;
-      else if (item.type === "tf" && a === item.answer) right++;
-      else if ((item.type === "short" || item.type === "fill") && typeof a === "string" &&
-        a.trim().toLowerCase() === item.answer.trim().toLowerCase()) right++;
+      if (item.type === "mcq") {
+        autoMarked++;
+        if (a === item.answerIndex) right++;
+      } else if (item.type === "tf") {
+        autoMarked++;
+        if (a === item.answer) right++;
+      }
     });
-    return { right, total: quiz.items.length };
+    return { right, total: autoMarked, selfCheck: quiz.items.length - autoMarked };
   }
 
   const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
@@ -111,8 +120,24 @@ export default function MockExamPage() {
 
       {quiz && submitted && (
         <section className="glass-panel p-6 rounded-2xl">
-          <h2 className="text-2xl font-bold mb-2">{score().right} / {score().total}</h2>
-          <p className="text-sm mb-5" style={{ color: "var(--ash-muted)" }}>Tap any question to see the correct answer + why.</p>
+          <h2 className="text-2xl font-bold mb-2">
+            {score().right} / {score().total}
+            <span className="text-sm font-normal ml-2" style={{ color: "var(--ash-muted)" }}>
+              auto-marked
+            </span>
+          </h2>
+          <p className="text-sm mb-5" style={{ color: "var(--ash-muted)" }}>
+            Tap any question to see the correct answer + why.
+            {score().selfCheck > 0 && (
+              <> {score().selfCheck} written {score().selfCheck === 1 ? "answer needs" : "answers need"} marking by you —
+                compare yours with the model answer, or paste it into{" "}
+                <Link href="/grade" className="underline" style={{ color: "var(--ash-primary)" }}>Mark my answer</Link>.
+              </>
+            )}
+          </p>
+          <p className="text-xs mb-5" style={{ color: "var(--ash-muted)" }}>
+            This is practice feedback, not your teacher&apos;s mark.
+          </p>
           {quiz.items.map((item, i) => <ReviewQ key={i} item={item} answers={answers} index={i} />)}
           <button onClick={() => { setQuiz(null); setSubmitted(false); }} className="mt-4 px-5 py-2 rounded-full border">New exam</button>
         </section>

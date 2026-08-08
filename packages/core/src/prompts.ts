@@ -15,6 +15,10 @@ function profileContext(p: UserProfile) {
 export const MATH_FORMAT_RULES = `
 Math / chemistry / science formatting rules — ALWAYS follow these:
 
+MONEY — never write a bare dollar sign before a digit. The renderer reads $…$ as
+maths, so "costs $5 and $12" silently turns into italic nonsense. Write money as
+"5 dollars", "USD 5", or escape it as \\$5. Same for any currency amount.
+
 CHEMISTRY EQUATIONS — prefer the simple readable form:
 - For full chemistry equations (multiple species, an arrow), use a fenced code block tagged "chem". Example:
   \`\`\`chem
