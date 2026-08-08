@@ -43,9 +43,22 @@ export default async function BlogPost({ params }: Props) {
   }
 
   const html = renderMarkdown(p.body);
-  const related = POSTS
-    .filter((q) => q.slug !== p.slug && q.tags.some((t) => p.tags.includes(t)))
-    .slice(0, 3);
+
+  // Rank by how many tags actually overlap, newest first as a tiebreak. The old
+  // version took the first three matches in array order, so the earliest posts
+  // absorbed most of the internal links, 42 posts had no inbound link at all,
+  // and 11 rendered an empty "Related" block. Backfill with recent posts so the
+  // block is never empty — an orphan post is one Google rarely values.
+  const others = POSTS.filter((q) => q.slug !== p.slug);
+  const scored = others
+    .map((q) => ({ q, score: q.tags.filter((t) => p.tags.includes(t)).length }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || (a.q.publishedAt < b.q.publishedAt ? 1 : -1))
+    .map((x) => x.q);
+  const backfill = others
+    .filter((q) => !scored.includes(q))
+    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
+  const related = [...scored, ...backfill].slice(0, 3);
   const faqs = extractFaqs(p.body);
 
   return (

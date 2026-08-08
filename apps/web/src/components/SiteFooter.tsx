@@ -36,6 +36,11 @@ const FOOTER_GROUPS = [
       { href: "/help-in-study/calculus", label: "Calculus help" },
       { href: "/help-in-study/history", label: "History help" },
       { href: "/help-in-study/geography", label: "Geography help" },
+      // These four hubs previously had no inbound link anywhere on the site.
+      { href: "/help-in-study/computer-science", label: "Computer science help" },
+      { href: "/help-in-study/programming", label: "Programming help" },
+      { href: "/help-in-study/economics", label: "Economics help" },
+      { href: "/help-in-study/accounting", label: "Accounting help" },
     ],
   },
   {
@@ -44,6 +49,8 @@ const FOOTER_GROUPS = [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
+      { href: "/progress", label: "My progress" },
+      { href: "/feed.xml", label: "RSS feed" },
     ],
   },
   {

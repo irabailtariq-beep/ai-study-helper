@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { CURRICULA, COUNTRIES } from "@ash/core";
 import { SITE, courseJsonLd, breadcrumbJsonLd } from "@/lib/seo";
 import { findLearnCombo, LEARN_COMBOS } from "@/content/learnPages";
+import { HELP_IN_STUDY_MAP } from "@/content/helpInStudyPages";
 
 const SUBJECT_LABELS: Record<string, string> = {
   "math": "Mathematics",
@@ -47,8 +48,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LearnPage({ params }: Props) {
   const { subject, board } = await params;
   const combo = findLearnCombo(subject, board);
-  // Non-five-board combos are no longer served — 301 to the subject hub.
-  if (!combo) permanentRedirect(`/help-in-study/${subject}`);
+  // Non-five-board combos are no longer served. Redirect to the subject hub only
+  // when that hub actually exists — otherwise we were 301-ing to a 404, which
+  // wastes crawl budget and shows the visitor a dead end.
+  if (!combo) {
+    if (HELP_IN_STUDY_MAP.has(subject)) permanentRedirect(`/help-in-study/${subject}`);
+    notFound();
+  }
 
   const subj = SUBJECT_LABELS[subject];
   const cur = CURRICULA.find((c) => c.id === board);

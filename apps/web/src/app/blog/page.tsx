@@ -20,7 +20,7 @@ export default function BlogIndex() {
       </header>
 
       <ul className="space-y-3">
-        {POSTS.map((p) => (
+        {[...POSTS].sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1)).map((p) => (
           <li key={p.slug}>
             <Link href={`/blog/${p.slug}`} className="block glass-panel rounded-ash p-5 hover:-translate-y-0.5 transition">
               <h2 className="text-lg font-bold">{p.title}</h2>

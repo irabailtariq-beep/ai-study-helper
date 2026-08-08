@@ -20,7 +20,12 @@ export const metadata: Metadata = {
   creator: SITE.founder,
   publisher: SITE.founder,
   appleWebApp: { capable: true, title: SITE.shortName, statusBarStyle: "default" },
-  alternates: { canonical: "/" },
+  // Advertise the RSS feed so readers and feed crawlers can actually find it —
+  // /feed.xml existed but nothing linked to it.
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": [{ url: "/feed.xml", title: `${SITE.name} — blog` }] },
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },

@@ -82,7 +82,10 @@ export function articleJsonLd(args: { title: string; description: string; slug: 
     "@type": "Article",
     headline: args.title,
     description: args.description,
-    image: args.image ?? `${SITE.url}/icons/icon-512.png`,
+    // Google wants Article images at least 1200px wide. The old default was the
+    // 512x512 app icon, so every post shipped an image Google would not use.
+    // /api/og renders a real 1200x630 card from the title.
+    image: args.image ?? `${SITE.url}/api/og?title=${encodeURIComponent(args.title)}&tag=${encodeURIComponent("Blog")}`,
     datePublished: args.published,
     dateModified: args.updated ?? args.published,
     author: { "@type": "Person", name: "Rabail", url: `${SITE.url}/about`, description: "Student and founder of Help in Study" },

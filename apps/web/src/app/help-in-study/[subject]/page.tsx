@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { SITE, breadcrumbJsonLd } from "@/lib/seo";
 import { HELP_IN_STUDY_PAGES, HELP_IN_STUDY_MAP } from "@/content/helpInStudyPages";
+import { LEARN_COMBOS } from "@/content/learnPages";
+import { CURRICULA } from "@ash/core";
 
 type Props = { params: Promise<{ subject: string }> };
 
@@ -35,6 +37,11 @@ export default async function SubjectPage({ params }: Props) {
   const { subject } = await params;
   const s = HELP_IN_STUDY_MAP.get(subject);
   if (!s) notFound();
+
+  // The /learn board guides had no inbound link from anywhere on the site — they
+  // were sitemap-only URLs. Surfacing them here gives them a real path in and
+  // sends this hub's authority to them.
+  const boardGuides = LEARN_COMBOS.filter((c) => c.subject === subject);
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
@@ -133,6 +140,29 @@ export default async function SubjectPage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      {boardGuides.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-xl font-bold mb-3">{s.label} by exam board</h2>
+          <p className="text-sm mb-3" style={{ color: "var(--ash-muted)" }}>
+            Board-specific guides: paper structure, what the mark scheme rewards, and how to revise for it.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {boardGuides.map((c) => (
+              <Link
+                key={`${c.subject}/${c.board}`}
+                href={`/learn/${c.subject}/${c.board}`}
+                className="glass-panel rounded-2xl p-4 hover:-translate-y-0.5 transition block"
+              >
+                <div className="font-semibold">{CURRICULA.find((x) => x.id === c.board)?.name ?? c.board} →</div>
+                <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>
+                  {s.label} for {CURRICULA.find((x) => x.id === c.board)?.name ?? c.board}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="glass-panel rounded-2xl p-6 text-center">
         <h2 className="text-xl font-bold mb-2">Get help in study {s.label.toLowerCase()} now</h2>
