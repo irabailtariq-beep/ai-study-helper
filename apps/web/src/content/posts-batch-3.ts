@@ -2118,5 +2118,273 @@ Nine times out of ten it is degree/radian mode, or a mislabelled triangle where 
 **In short:** no right angle means no SOHCAHTOA — use the sine rule when you have a matching pair, the cosine rule when you do not, and always check the ambiguous case whenever the sine rule hands you an angle.
 `,
   },
+
+  {
+    slug: "rates-of-reaction-collision-theory",
+    title: "Rates of Reaction: Collision Theory Made Simple",
+    description: "Collision theory explained simply — how temperature, concentration, surface area and catalysts change the rate of reaction, with a worked example and required-practical link.",
+    publishedAt: "2026-08-08", readTime: "7 min",
+    tags: ["collision theory","rates of reaction","GCSE chemistry","activation energy","CBSE chemistry"],
+    body: `
+**Quick answer:** Collision theory says a chemical reaction only happens when particles collide with enough energy (at least the activation energy) and in the right orientation. Anything that makes those successful collisions happen more often speeds the reaction up — so the four factors (temperature, concentration or pressure, surface area, and a catalyst) all work by changing either how often particles collide or what fraction of collisions have enough energy.
+
+When I first learned rates of reaction, I memorised the four factors as a list and completely missed the point. In an exam I could write "increasing temperature increases the rate" and still drop marks, because the question wanted the *why* — the collision-theory reason. Once I understood that, I stopped memorising the list at all; I could just reason each factor out on the spot.
+
+That's the whole game here. It works the same across GCSE (AQA, Edexcel, OCR), Cambridge IGCSE, and CBSE Class 12 chemical kinetics — the wording shifts between boards, but the physics is identical.
+
+## The one idea everything hangs on
+
+For a reaction to happen, particles have to do more than just bump into each other. Every collision has to meet these conditions:
+
+1. The particles actually **collide**.
+2. They collide with energy **at least equal to the activation energy** — the minimum energy needed to break the existing bonds and get the reaction going.
+3. (Higher tier and A-Level / CBSE) They collide in the **correct orientation**.
+
+Most collisions do nothing — the particles just bounce off. Only the ones that clear the activation-energy bar are "successful." So here's the sentence to build everything on: the **rate of reaction depends on the number of successful collisions per second**. Make them happen more often, and the reaction goes faster.
+
+## The four factors, each explained by collisions
+
+### Temperature
+
+Higher temperature means particles have more kinetic energy, so they move faster. Two things follow: they collide *more frequently*, and — the bigger effect — a *greater proportion of collisions* now have energy at least equal to the activation energy. In the exam, name both effects, then say the proportion-with-enough-energy is the main reason. Rough rule of thumb: a 10°C rise roughly doubles the rate.
+
+### Concentration (and pressure)
+
+A higher concentration means more particles packed into the same volume, so collisions happen more frequently — more successful collisions per second. For gases, increasing the pressure does exactly the same thing: it squeezes the particles closer together. Unlike temperature, though, this changes only *how often* particles collide, not the fraction that have enough energy.
+
+### Surface area
+
+This one is only for solids. Break a solid lump into smaller pieces, or grind it into a powder, and you increase its surface-area-to-volume ratio. That exposes more of the solid's particles to the other reactant, so collisions become more frequent. A powdered marble chip fizzes away far faster than a single lump of the same mass.
+
+### Catalyst
+
+A catalyst provides an *alternative reaction pathway with a lower activation energy*. That means a greater proportion of the collisions already happening now have enough energy to succeed — and the catalyst isn't used up. It changes the energy bar, not the collision frequency.
+
+Common mistake: writing "a catalyst gives the particles more energy." It doesn't. It *lowers the energy they need*.
+
+## Reading a rate graph
+
+Rate graphs usually plot the amount of product (or reactant used up) on the y-axis against time on the x-axis. What to read off:
+
+- A **steeper gradient means a faster rate**.
+- The line is **steepest at the start**, at time zero — concentration is highest then, so collisions are most frequent.
+- The curve gets **shallower** as reactants are used up.
+- It goes **flat** when a reactant runs out — the reaction has finished.
+
+The **initial rate** is the gradient of the tangent drawn at time zero. The **mean rate** is the total change divided by the total time.
+
+## Worked example: mean rate from gas data
+
+Reaction: calcium carbonate + hydrochloric acid gives calcium chloride, water, and carbon dioxide (CaCO3 + 2HCl -> CaCl2 + H2O + CO2). We collect the carbon dioxide in a gas syringe and record its volume:
+
+- 0 s: 0 cm^3
+- 20 s: 34 cm^3
+- 40 s: 52 cm^3
+- 60 s: 60 cm^3
+- 80 s: 60 cm^3
+
+**Step 1 — write the formula.** Mean rate = amount of product formed / time taken.
+
+**Step 2 — pick the interval.** The volume stops changing after 60 s, so the whole reaction finishes at 60 s.
+
+**Step 3 — read the values.** From 0 to 60 s, the gas volume goes from 0 to 60 cm^3.
+
+**Step 4 — divide.** Mean rate = 60 / 60 = 1.0 cm^3/s.
+
+**Step 5 — interpret it.** Over the first 20 s the rate was 34 / 20 = 1.7 cm^3/s — faster than the mean, because the acid was most concentrated at the start, so collisions were most frequent. After 60 s the line is flat: a reactant has run out and the rate is zero.
+
+## Link to the required practical
+
+GCSE gives you two classic ways to *measure* rate, and knowing which is which is worth easy marks:
+
+1. **Gas volume or mass loss** — magnesium or marble chips with acid. Measure the gas produced in a syringe, or the mass lost on a balance as carbon dioxide escapes. Great for testing surface area and concentration.
+2. **The disappearing cross** — sodium thiosulfate plus hydrochloric acid makes a cloudy precipitate of sulfur. Stand the flask over a pencil cross drawn on paper and time how long until the cross vanishes. A shorter time means a faster rate, so 1 / time is your measure of rate. This is the classic one for temperature and concentration.
+
+CBSE Class 12 chemical kinetics takes this same reasoning further, into rate equations and the Arrhenius idea, but the qualitative "why" is exactly what's above.
+
+Want this in your own board's exact wording? Drop the topic into [Explain](/explain) and ask it to explain collision theory for AQA (or CBSE, or Cambridge) — it gives you the version with the mark-scheme phrases your examiner is actually looking for.
+
+## Test yourself
+
+1. A student uses powdered zinc instead of a single lump of the same mass. Using collision theory, explain why the reaction is faster.
+2. Explain why increasing the temperature increases the rate. Give the two reasons, and say which one matters more.
+3. On a rate graph, why does the line eventually go flat?
+
+*Quick answers: (1) Powder has a larger surface area, so more zinc particles are exposed and collisions are more frequent, giving more successful collisions per second. (2) Particles move faster so they collide more often, AND a greater proportion of collisions have energy at least equal to the activation energy — the second reason is the bigger one. (3) A reactant has been fully used up, so no more product can form and the rate drops to zero.*
+
+Check a full six-marker properly with [Mark my answer](/grade), or fire quick collision-theory questions at yourself with [Quiz](/quiz). If one definition still feels slippery, ask [Explain](/explain) to break it down one line at a time.
+
+## FAQ
+
+**What is activation energy in simple terms?**
+It's the minimum energy a colliding pair of particles needs for the collision to actually cause a reaction. Below it, they just bounce off; at or above it, bonds break and the reaction happens.
+
+**Does a catalyst change how many collisions happen?**
+No — it doesn't change the collision frequency. It lowers the activation energy, so a greater proportion of the collisions that already happen are successful. And it isn't used up, so you get it back at the end.
+
+**Why doesn't concentration appear in the "proportion with enough energy" explanation?**
+Because concentration only packs more particles into the space. That makes collisions more frequent, but each collision still has the same average energy. Only temperature and catalysts change the proportion that clears the activation-energy bar.
+
+**Is "rate of reaction" the same as "amount of product"?**
+No. Amount of product is how much you've made; rate is how *fast* you're making it — the gradient of the graph. Two reactions can make the same total amount of product, one just does it faster with a steeper curve.
+
+**In short:** Every factor that speeds a reaction up does it by making successful collisions happen more often — either more frequent collisions (concentration, pressure, surface area, temperature) or a bigger fraction with enough energy (temperature, catalyst) — so once you reason from collisions, you never have to memorise the list again.
+`,
+  },
+
+  {
+    slug: "electrolysis-explained",
+    title: "Electrolysis Explained: Half-Equations Without the Fear",
+    description: "Electrolysis explained for GCSE/IGCSE: what forms at each electrode, the ion discharge rules, and how to write half-equations, with worked brine and copper examples.",
+    publishedAt: "2026-08-08", readTime: "7 min",
+    tags: ["electrolysis explained","half-equations","GCSE chemistry","IGCSE chemistry","electrolysis of brine"],
+    body: `
+**Quick answer:** Electrolysis uses electricity to split an ionic compound once it is molten or dissolved, so the ions are free to move. Positive ions travel to the negative cathode and gain electrons (reduction); negative ions travel to the positive anode and lose electrons (oxidation). At the cathode, a metal below hydrogen in reactivity is deposited, otherwise hydrogen forms; at the anode, a halide gives a halogen, otherwise oxygen forms.
+
+The first time a half-equation showed up on my IGCSE chemistry paper, I left it completely blank. It looked like a maths puzzle wearing a lab coat. What finally fixed it wasn't memorising twenty equations — it was realising that electrolysis asks you the same two questions in the same order, every single time.
+
+Once you know that order, you can build a half-equation for a compound you have never seen before. Here is the walkthrough I wish someone had handed 15-year-old me.
+
+## What electrolysis actually is
+
+Electrolysis is splitting up an ionic compound using electricity. The catch is that the ions have to be able to move. In a solid they are locked in a lattice and going nowhere, so nothing happens. You have two ways to free them:
+
+- Melt the compound (molten), or
+- Dissolve it in water (aqueous).
+
+Then you dip in two electrodes connected to a power supply, and the ions start migrating. That movement, and the electron swap that happens when they arrive, is the whole of electrolysis.
+
+## The two electrodes (and the only mnemonics you need)
+
+Two words carry this entire topic:
+
+- **PANIC** — Positive is Anode, Negative Is Cathode.
+- **OIL RIG** — Oxidation Is Loss of electrons, Reduction Is Gain.
+
+Add one more line: cations (positive ions) are attracted to the cathode. So:
+
+- The **cathode** is negative. Positive ions arrive and gain electrons. That is reduction.
+- The **anode** is positive. Negative ions arrive and lose electrons. That is oxidation.
+
+Scribble those two words in the margin the second you sit the paper, and you have already secured marks you would otherwise be guessing at.
+
+## Molten vs aqueous: the split that decides everything
+
+This is the part most people skim, and it is exactly where the marks hide.
+
+**Molten** compounds are simple. There are only two ions in the beaker — the metal and the non-metal. Molten lead bromide gives you Pb²⁺ and Br⁻, and that is it. No competition.
+
+**Aqueous** solutions are sneakier, because water itself supplies a small number of H⁺ and OH⁻ ions. So now there are four ions competing to be discharged, not two. That competition is the whole reason aqueous electrolysis needs rules.
+
+## The rules for what actually gets discharged
+
+For a solution, ask these two questions.
+
+**At the cathode (positive ions):**
+- If the metal is more reactive than hydrogen (potassium, sodium, calcium, magnesium, aluminium, zinc, iron...), the metal stays dissolved and hydrogen gas is produced instead.
+- If the metal is less reactive than hydrogen (copper, silver, gold), the metal itself is deposited.
+
+**At the anode (negative ions):**
+- If a halide is present (Cl⁻, Br⁻, I⁻), you get the halogen — chlorine, bromine or iodine.
+- If there is no halide (for example a sulfate or nitrate), you get oxygen from the hydroxide ions.
+
+That is genuinely the whole decision. Everything below is just applying it.
+
+## How to write a half-equation in four steps
+
+1. Write the ion on one side and what it turns into on the other.
+2. Balance the atoms.
+3. Add electrons (e⁻) to balance the charge. At the cathode they go on the left, because ions gain them; at the anode they go on the right, because ions lose them.
+4. Check that the total charge is equal on both sides.
+
+If the electron-balancing step is what trips you up, paste your attempt into the [step-by-step explainer](/explain) and ask it to show the charge check on its own line — that is usually the bit schools rush.
+
+## Worked example 1: molten lead(II) bromide
+
+This is the classic first electrolysis experiment, so examiners lean on it.
+
+Step 1 — It is molten, so only two ions exist: Pb²⁺ and Br⁻.
+
+Step 2 — Cathode (reduction). Lead ions arrive and gain electrons:
+Pb²⁺ + 2e⁻ → Pb
+Silvery molten lead forms at the bottom.
+
+Step 3 — Anode (oxidation). Bromide ions arrive. One bromine atom is Br, but bromine exists as Br₂, so you need two ions:
+2Br⁻ → Br₂ + 2e⁻
+Orange-brown bromine vapour is given off.
+
+Step 4 — Check the charge. Cathode: left side 2+ and 2- cancel to 0, right side is 0. Balanced. Anode: left side 2-, right side is 2- from the two electrons. Balanced. Done.
+
+## Worked example 2: the electrolysis of brine
+
+Brine is concentrated sodium chloride solution, and it is one of the most tested industrial processes on GCSE and IGCSE papers — AQA, Edexcel and Cambridge all use it.
+
+Ions present: Na⁺ and Cl⁻ from the salt, plus H⁺ and OH⁻ from the water. Four ions.
+
+Step 1 — Cathode. Sodium is more reactive than hydrogen, so sodium stays in solution and hydrogen is discharged:
+2H⁺ + 2e⁻ → H₂
+
+Step 2 — Anode. A halide (Cl⁻) is present and concentrated, so chlorine wins over oxygen:
+2Cl⁻ → Cl₂ + 2e⁻
+
+Step 3 — What is left behind? Na⁺ and OH⁻ ions, which means the liquid left in the beaker is sodium hydroxide, NaOH.
+
+So brine gives you three useful products from one salty solution: hydrogen, chlorine and sodium hydroxide — used for margarine, bleach and soap. One exam-trap detail: if the solution were dilute rather than concentrated, the anode would give oxygen instead of chlorine. Concentration matters here, and mark schemes check that you noticed.
+
+## Copper: the disappearing anode
+
+Electrolysing copper(II) sulfate solution has two versions, and mixing them up is a classic dropped mark.
+
+**With inert electrodes (carbon or platinum):**
+- Cathode: copper sits below hydrogen, so copper is deposited — Cu²⁺ + 2e⁻ → Cu. The blue colour fades as Cu²⁺ leaves the solution.
+- Anode: sulfate is not a halide, so oxygen forms — 4OH⁻ → O₂ + 2H₂O + 4e⁻.
+
+**With copper electrodes (how copper is purified):**
+- Cathode: Cu²⁺ + 2e⁻ → Cu. Pure copper plates on, so the cathode gains mass.
+- Anode: the copper electrode itself dissolves — Cu → Cu²⁺ + 2e⁻ — so the anode loses mass.
+
+That second version is the whole principle behind purifying copper and electroplating: impure copper dissolves off the anode and pure copper builds up on the cathode. If any of that felt fast, drop the exact reaction into the [AI explainer](/explain) and ask it to redo the half-equations one line at a time.
+
+## The mistakes that cost real marks
+
+- Forgetting the electrons entirely, or putting them on the wrong side.
+- Writing Cl⁻ → Cl₂ without the 2 in front. Unbalanced atoms lose the mark straight away.
+- Forgetting that water adds H⁺ and OH⁻ in aqueous solutions.
+- Swapping anode and cathode — write PANIC down first.
+- Saying chlorine for a dilute solution when it should be oxygen.
+
+Examiners often give one mark for balanced atoms and a separate mark for balanced charge, so a half-equation that is right except for the electrons still throws away half the marks.
+
+## Test yourself
+
+1. Molten aluminium oxide is electrolysed. Write the cathode half-equation. Aluminium ions are Al³⁺.
+2. In the electrolysis of concentrated potassium bromide solution, what is produced at the anode, and why?
+3. Copper(II) sulfate is electrolysed with carbon electrodes. What forms at the anode?
+
+Quick answers:
+
+1. Al³⁺ + 3e⁻ → Al — three electrons because the ion carries a 3+ charge.
+2. Bromine, because bromide is a halide and it is discharged in preference to oxygen.
+3. Oxygen, because sulfate is not a halide, so the hydroxide ions are discharged instead.
+
+Want a full set marked instantly? Generate a round on this exact topic with the [quiz maker](/quiz), or turn every rule above into revision cards with [flashcards](/flashcards).
+
+## FAQ
+
+**Why does the cathode attract positive ions if it is negative?**
+Opposite charges attract. The cathode is the negative electrode, so positive ions (cations) are pulled toward it, where they gain electrons and are reduced.
+
+**How do I know if hydrogen or the metal forms at the cathode?**
+Check the reactivity series. If the metal is more reactive than hydrogen, hydrogen is produced and the metal stays dissolved. If it is less reactive — copper, silver or gold — the metal is deposited.
+
+**What is the difference between electrolysis of molten and aqueous compounds?**
+Molten compounds contain only two ions, so the products are always just that metal and non-metal. Aqueous solutions also contain H⁺ and OH⁻ from water, so you have to apply the discharge rules to decide the winner.
+
+**Do I need state symbols in half-equations?**
+Usually not for the marks, but they are never wrong to include. Get balanced atoms and balanced charge first — that is what the mark scheme is actually checking.
+
+**In short:** Electrolysis is just two questions — what happens at the cathode, and what happens at the anode — answered with the reactivity series and the halide rule, then balanced with electrons.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
