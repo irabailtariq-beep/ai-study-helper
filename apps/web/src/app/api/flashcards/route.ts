@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { sm2 } from "@/lib/sm2";
 import { generateQuiz } from "@ash/ai-client";
-import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
 import { recordActivity } from "@/lib/activity";
 
 export const runtime = "nodejs";
@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     // This branch calls Gemini, so it needs the same guard as every other AI
     // route — without it anyone could loop it and drain the API quota, which
     // would take all ten tools down.
-    const rl = checkRateLimit(`flashcards:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
+    const rl = await checkRateLimitShared(`flashcards:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
     if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
     if (!body?.profile) return NextResponse.json({ error: "Missing profile" }, { status: 400 });
 

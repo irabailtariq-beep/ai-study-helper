@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { gradeAnswer } from "@ash/ai-client";
-import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
-  const rl = checkRateLimit(`grade:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
+  const rl = await checkRateLimitShared(`grade:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
 
   try {
