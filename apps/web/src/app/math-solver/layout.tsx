@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
+import { ToolPageContent } from "@/components/ToolPageContent";
 
 const title = "Math Solver — step-by-step solutions, photo or text";
 const description = "Snap a math problem or paste it. Get every line of working, the named method, common pitfalls, and a way to check your answer. Free for students of all ages.";
@@ -15,4 +16,11 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title, description },
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) { return <>{children}</>; }
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      {children}
+      <ToolPageContent slug="math-solver" />
+    </>
+  );
+}
