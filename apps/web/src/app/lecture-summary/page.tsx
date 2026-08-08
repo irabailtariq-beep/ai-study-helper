@@ -54,8 +54,8 @@ export default function LectureSummaryPage() {
         <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Paste lecture transcript / notes…"
           className="w-full p-3 rounded-2xl border min-h-[160px]" style={{ borderColor: "var(--ash-border)" }} />
         <div>
-          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>Or upload PDF / slides photo</label>
-          <input type="file" accept="image/*,application/pdf" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
+          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="lecture-summary-or-upload-pdf-slides-photo">Or upload PDF / slides photo</label>
+          <input id="lecture-summary-or-upload-pdf-slides-photo" type="file" accept="image/*,application/pdf" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
           <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>
             Tip: photo / PDF quality must be clear and well-lit — blurry or dark pictures can't be read by the AI.
           </p>

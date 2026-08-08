@@ -56,10 +56,10 @@ export default function MathSolverPage() {
 
       <section className="glass-panel p-5 rounded-ash space-y-3">
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-semibold" style={{ color: "var(--ash-muted)" }}>Problem</label>
+          <label className="text-sm font-semibold" style={{ color: "var(--ash-muted)" }} htmlFor="math-solver-problem">Problem</label>
           <VoiceInput onText={(t) => setText((s) => s ? s + " " + t : t)} />
         </div>
-        <textarea
+        <textarea id="math-solver-problem"
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="e.g. Solve 2x² − 3x − 5 = 0  ·  or paste any word problem"
@@ -67,8 +67,8 @@ export default function MathSolverPage() {
           style={{ borderColor: "var(--ash-border)" }}
         />
         <div>
-          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>Or upload a photo / PDF of the problem</label>
-          <input type="file" accept="image/*,application/pdf" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
+          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="math-solver-or-upload-a-photo-pdf-of-the-pro">Or upload a photo / PDF of the problem</label>
+          <input id="math-solver-or-upload-a-photo-pdf-of-the-pro" type="file" accept="image/*,application/pdf" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
           <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>
             Tip: photo / PDF quality must be clear and well-lit — blurry or dark pictures can't be read by the AI.
           </p>

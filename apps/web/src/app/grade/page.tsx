@@ -41,20 +41,20 @@ export default function GradePage() {
       </p>
 
       <div className="glass-panel p-6 rounded-ash space-y-3">
-        <label className="block text-sm font-semibold">Question</label>
-        <textarea value={question} onChange={(e) => setQuestion(e.target.value)} className="w-full p-3 rounded-ash border min-h-[70px]" placeholder="e.g. Explain photosynthesis (6 marks)" />
+        <label className="block text-sm font-semibold" htmlFor="grade-question">Question</label>
+        <textarea id="grade-question" value={question} onChange={(e) => setQuestion(e.target.value)} className="w-full p-3 rounded-ash border min-h-[70px]" placeholder="e.g. Explain photosynthesis (6 marks)" />
 
         <div className="flex items-center justify-between">
-          <label className="block text-sm font-semibold">Your answer</label>
+          <label className="block text-sm font-semibold" htmlFor="grade-your-answer">Your answer</label>
           <VoiceInput onText={(t) => setStudentAnswer((s) => s ? s + " " + t : t)} />
         </div>
-        <textarea value={studentAnswer} onChange={(e) => setStudentAnswer(e.target.value)} className="w-full p-3 rounded-ash border min-h-[120px]" placeholder="Type your answer here…" />
+        <textarea id="grade-your-answer" value={studentAnswer} onChange={(e) => setStudentAnswer(e.target.value)} className="w-full p-3 rounded-ash border min-h-[120px]" placeholder="Type your answer here…" />
 
-        <label className="block text-sm font-semibold">Rubric (optional)</label>
-        <textarea value={rubric} onChange={(e) => setRubric(e.target.value)} className="w-full p-3 rounded-ash border min-h-[70px]" placeholder="Paste the mark scheme if you have one." />
+        <label className="block text-sm font-semibold" htmlFor="grade-rubric-optional">Rubric (optional)</label>
+        <textarea id="grade-rubric-optional" value={rubric} onChange={(e) => setRubric(e.target.value)} className="w-full p-3 rounded-ash border min-h-[70px]" placeholder="Paste the mark scheme if you have one." />
 
-        <label className="text-sm" style={{ color: "var(--ash-muted)" }}>Max marks: <b>{marks}</b></label>
-        <input type="range" min={1} max={20} value={marks} onChange={(e) => setMarks(Number(e.target.value))} className="w-full" />
+        <label className="text-sm" style={{ color: "var(--ash-muted)" }} htmlFor="grade-max-marks-b-marks-b">Max marks: <b>{marks}</b></label>
+        <input id="grade-max-marks-b-marks-b" type="range" min={1} max={20} value={marks} onChange={(e) => setMarks(Number(e.target.value))} className="w-full" />
 
         <button disabled={busy || !question || !studentAnswer} onClick={grade} className="px-6 py-3 rounded-ash text-white font-semibold disabled:opacity-40"
           style={{ background: "linear-gradient(135deg, var(--ash-primary), #0e9f8e)" }}>

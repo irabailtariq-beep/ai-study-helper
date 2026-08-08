@@ -71,10 +71,10 @@ export default function QuizPage() {
             Tip: photo / PDF quality must be clear and well-lit — blurry or dark pictures can't be read by the AI.
           </p>
           <div>
-            <label className="text-sm" style={{ color: "var(--ash-muted)" }}>
+            <label className="text-sm" style={{ color: "var(--ash-muted)" }} htmlFor="quiz-number-of-questions-b-count-b">
               Number of questions: <b>{count}</b>
             </label>
-            <input
+            <input id="quiz-number-of-questions-b-count-b"
               type="range"
               min={4}
               max={20}
@@ -172,10 +172,10 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
   if (item.type === "short" || item.type === "fill") {
     return (
       <div>
-        <label className="block text-xs mb-1" style={{ color: "var(--ash-muted)" }}>
+        <label className="block text-xs mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="quiz-type-your-answer-below-item-type">
           Type your answer below {item.type === "fill" ? "(fill in the blank)" : "(short answer)"}
         </label>
-        <textarea
+        <textarea id="quiz-type-your-answer-below-item-type"
           value={answers[index] ?? ""}
           onChange={(e) => set(e.target.value)}
           placeholder="Type your answer here…"

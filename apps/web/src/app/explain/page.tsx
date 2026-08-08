@@ -97,10 +97,10 @@ export default function ExplainPage() {
           </div>
         </div>
         <div>
-          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>
+          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="explain-make-it-relevant-to-your-interes">
             Make it relevant to your interests (optional)
           </label>
-          <select
+          <select id="explain-make-it-relevant-to-your-interes"
             value={interestContext}
             onChange={(e) => setInterestContext(e.target.value)}
             className="w-full p-3 rounded-ash border"
@@ -120,8 +120,8 @@ export default function ExplainPage() {
         {/* Format + tone overrides — fall back to profile defaults if blank */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>Format</label>
-            <select value={formatOverride} onChange={(e) => setFormatOverride(e.target.value as any)}
+            <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="explain-format">Format</label>
+            <select id="explain-format" value={formatOverride} onChange={(e) => setFormatOverride(e.target.value as any)}
               className="w-full p-3 rounded-ash border">
               <option value="">My default ({profile.formatPreference ?? "mixed"})</option>
               <option value="mixed">Mixed</option>
@@ -131,8 +131,8 @@ export default function ExplainPage() {
             </select>
           </div>
           <div>
-            <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>Tone</label>
-            <select value={toneOverride} onChange={(e) => setToneOverride(e.target.value as any)}
+            <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="explain-tone">Tone</label>
+            <select id="explain-tone" value={toneOverride} onChange={(e) => setToneOverride(e.target.value as any)}
               className="w-full p-3 rounded-ash border">
               <option value="">My default ({profile.tonePreference ?? "neutral"})</option>
               <option value="neutral">Neutral</option>
@@ -146,10 +146,10 @@ export default function ExplainPage() {
         </div>
 
         <div>
-          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>
+          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="explain-or-upload-a-photo-pdf-photos-are">
             Or upload a photo / PDF (photos are resized automatically; PDFs max 3 MB)
           </label>
-          <input
+          <input id="explain-or-upload-a-photo-pdf-photos-are"
             type="file"
             accept="image/*,application/pdf"
             onChange={(e) => setFile(e.target.files?.[0] ?? null)}

@@ -191,10 +191,10 @@ export default function FlashcardsPage() {
         </p>
         {file && <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>📎 {file.name}</p>}
         <div className="mt-3 flex items-center gap-3">
-          <label className="text-sm" style={{ color: "var(--ash-muted)" }}>
+          <label className="text-sm" style={{ color: "var(--ash-muted)" }} htmlFor="flashcards-how-many-b-count-b">
             How many? <b>{count}</b>
           </label>
-          <input type="range" min={5} max={20} value={count} onChange={(e) => setCount(Number(e.target.value))} className="flex-1" />
+          <input id="flashcards-how-many-b-count-b" type="range" min={5} max={20} value={count} onChange={(e) => setCount(Number(e.target.value))} className="flex-1" />
         </div>
         <button onClick={generate} disabled={busy}
           className="mt-4 px-6 py-3 rounded-full text-white font-semibold disabled:opacity-40"

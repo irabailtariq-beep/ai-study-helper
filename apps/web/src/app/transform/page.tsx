@@ -184,10 +184,10 @@ export default function TransformPage() {
       <section className="glass-panel p-5 rounded-ash mb-4 space-y-3">
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-semibold" style={{ color: "var(--ash-muted)" }}>What do you want to understand?</label>
+            <label className="text-sm font-semibold" style={{ color: "var(--ash-muted)" }} htmlFor="transform-what-do-you-want-to-understand">What do you want to understand?</label>
             <VoiceInput onText={(t) => setText((s) => s ? s + " " + t : t)} />
           </div>
-          <textarea
+          <textarea id="transform-what-do-you-want-to-understand"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="e.g. How do electromagnetic waves work? Or paste a paragraph…"
@@ -196,10 +196,10 @@ export default function TransformPage() {
           />
         </div>
         <div>
-          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }}>
+          <label className="block text-sm mb-1" style={{ color: "var(--ash-muted)" }} htmlFor="transform-or-upload-a-photo-pdf-photos-are">
             Or upload a photo / PDF (photos are resized automatically; PDFs max 3 MB)
           </label>
-          <input
+          <input id="transform-or-upload-a-photo-pdf-photos-are"
             type="file"
             accept="image/*,application/pdf"
             onChange={(e) => setFile(e.target.files?.[0] ?? null)}

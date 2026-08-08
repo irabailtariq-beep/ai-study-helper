@@ -29,6 +29,24 @@ const nextConfig = {
       { source: "/diagnostic",       destination: "/quiz",            permanent: true },
       { source: "/parent",           destination: "/tools",           permanent: true },
       { source: "/personal-explain", destination: "/explain",         permanent: true },
+      // Removed page with no replacement — send it somewhere real rather than 404.
+      { source: "/refund-policy",    destination: "/terms",           permanent: true },
+    ];
+  },
+  async headers() {
+    // The site previously sent only HSTS. These are the standard protections a
+    // site handling student text and logins should carry.
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
+          { key: "X-DNS-Prefetch-Control", value: "on" },
+        ],
+      },
     ];
   },
 };

@@ -249,8 +249,8 @@ export default function OnboardingPage() {
               <div style={{ color: preview.palette.mutedText }}>Tone: {preview.aiTone}</div>
             </div>
             <div className="mt-5">
-              <label className="block text-sm font-semibold mb-2">What should we call you? (optional)</label>
-              <input value={displayName} onChange={(e) => setDisplayName(e.target.value)}
+              <label className="block text-sm font-semibold mb-2" htmlFor="onboarding-what-should-we-call-you-optional">What should we call you? (optional)</label>
+              <input id="onboarding-what-should-we-call-you-optional" value={displayName} onChange={(e) => setDisplayName(e.target.value)}
                 placeholder="First name" className="w-full p-3 rounded-2xl border" maxLength={30} />
             </div>
           </>
@@ -426,8 +426,8 @@ export default function OnboardingPage() {
             </div>
 
             <div className="mt-5">
-              <label className="block text-sm font-semibold mb-2">What's your goal? (optional)</label>
-              <input value={goal} onChange={(e) => setGoal(e.target.value)}
+              <label className="block text-sm font-semibold mb-2" htmlFor="onboarding-what-s-your-goal-optional">What's your goal? (optional)</label>
+              <input id="onboarding-what-s-your-goal-optional" value={goal} onChange={(e) => setGoal(e.target.value)}
                 placeholder="e.g. Get an A in IGCSE Math by June 2026" className="w-full p-3 rounded-2xl border" maxLength={120} />
             </div>
           </>
