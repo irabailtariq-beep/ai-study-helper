@@ -21,7 +21,10 @@ jobs:
 
       - name: Install deps
         working-directory: tools/gsc
-        run: npm install --no-audit --no-fund
+        # npm ci against the committed lockfile: `npm install` with a ^ range
+        # re-resolved googleapis every day, so one bad release could break the
+        # only channel that emails the owner.
+        run: npm ci --no-audit --no-fund
 
       - name: Pull Search Console
         working-directory: tools/gsc

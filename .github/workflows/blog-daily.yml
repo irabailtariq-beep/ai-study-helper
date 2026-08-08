@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: "24"
 
+      # Gate: a malformed queued post would otherwise be injected into
+      # posts-batch-3.ts, break the Vercel build, and stop the site updating
+      # while this job still reported success.
+      - name: Validate the queue before publishing
+        run: node tools/blog-queue/validate-queue.mjs
+
       - name: Publish next queued post
         run: node tools/blog-queue/publish-next.mjs
 
@@ -49,3 +55,30 @@ jobs:
             git pull --rebase origin main || { echo "Rebase failed."; exit 1; }
           done
           echo "ERROR: could not push after 5 attempts."; exit 1
+
+      # A red X in the Actions tab reaches nobody. This is the only path to the
+      # owner's inbox, and it matters most while they are away for weeks.
+      - name: Tell the owner if publishing failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "## ⚠️ The daily blog robot failed"
+            echo ""
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            echo "Most likely causes: the queue is empty or a queued post failed validation,"
+            echo "or the push could not be rebased onto main."
+            echo ""
+            echo "No post was published today. The site is unaffected — it just did not update."
+            echo ""
+            echo "cc @irabailtariq-beep"
+          } > /tmp/blogfail.md
+          TITLE="Blog robot failed"
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$NUM" ]; then
+            gh issue create --title "⚠️ $TITLE" --body-file /tmp/blogfail.md
+          else
+            gh issue comment "$NUM" --body-file /tmp/blogfail.md
+          fi
