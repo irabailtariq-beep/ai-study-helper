@@ -2386,5 +2386,262 @@ Usually not for the marks, but they are never wrong to include. Get balanced ato
 **In short:** Electrolysis is just two questions — what happens at the cathode, and what happens at the anode — answered with the reactivity series and the halide rule, then balanced with electrons.
 `,
   },
+
+  {
+    slug: "osmosis-and-diffusion",
+    title: "Osmosis vs Diffusion: The Difference That Trips Everyone Up",
+    description: "Osmosis vs diffusion and the potato required practical: method, water potential, percentage change in mass, and the exam definitions examiners want.",
+    publishedAt: "2026-08-09", readTime: "7 min",
+    tags: ["GCSE biology","osmosis","diffusion","required practical","active transport"],
+    body: `
+**Quick answer:** Diffusion is the net movement of any particles from a higher to a lower concentration, down a concentration gradient, with no energy needed. Osmosis is a special case of diffusion: the movement of water molecules only, from a dilute solution to a more concentrated one, through a partially permeable membrane. Active transport is the opposite direction — low to high concentration — and it needs energy from respiration.
+
+When I first met these three in Year 10, I could recite all three definitions and still mix them up the moment a question phrased things sideways. The trap is that "concentration" means two things at once in osmosis — the concentration of the solute and the concentration of the water — and examiners love catching you swap them. Once that clicked, the potato required practical stopped feeling like a random lab and started making sense.
+
+Here's the version I wish I'd had: the clean distinctions, the exact wording mark schemes reward, and a walk-through of the required practical with real numbers.
+
+## The three processes, side by side
+
+Diffusion:
+- What moves: any particle, often gases or dissolved solutes — oxygen, carbon dioxide, glucose.
+- Direction: high to low concentration (down the gradient).
+- Energy: none — it's passive.
+- Example: oxygen diffusing from the alveoli in your lungs into the blood.
+
+Osmosis:
+- What moves: water molecules only.
+- Direction: from a dilute solution (lots of water) to a concentrated solution (little water), across a partially permeable membrane.
+- Energy: none — also passive.
+- Example: water moving into a root hair cell from the soil.
+
+Active transport:
+- What moves: particles, often mineral ions or glucose.
+- Direction: low to high concentration — against the gradient.
+- Energy: required, released by respiration.
+- Example: root hair cells absorbing mineral ions from very dilute soil water; the small intestine absorbing the last of the glucose after a meal.
+
+The one line that ties it together: diffusion and osmosis are both passive and go down the gradient, so they cost nothing; active transport swims upstream, so it has to pay in energy from respiration.
+
+## The wording examiners actually want
+
+Marks here are won and lost on precision. Two phrases that must appear:
+
+- For osmosis: "through a partially permeable membrane." Leave it out and you drop the mark, even if the rest is perfect. AQA, Edexcel and OCR all insist on it.
+- For active transport: "against the concentration gradient" and "using energy from respiration." Both halves, every time.
+
+The classic slip is writing "water moves from a high concentration to a low concentration" for osmosis. High concentration of what? If you mean solute, you've said the exact opposite of the truth. Say "from a dilute solution to a concentrated solution," and never leave "concentration" floating on its own. Say your definition out loud, then check it against [Explain anything](/explain) — it will flag the missing phrase before an examiner does.
+
+## Water potential, and which board needs it
+
+Water potential is just a measure of how much water wants to move. Pure water has the highest water potential. Add solute and the water potential drops (it gets more negative). Water always moves from a higher water potential to a lower one — which is the same rule as "dilute to concentrated," only dressed up.
+
+Here's the board-specific bit worth knowing:
+- GCSE (AQA, Edexcel, OCR): stick with "dilute solution to concentrated solution." You do not need the term water potential and shouldn't lean on it.
+- Cambridge A-Level and AP Biology: water potential is expected, and you use it properly with negative values.
+
+Knowing which language your paper wants stops you overcomplicating a GCSE answer or underselling an A-Level one.
+
+## What osmosis does to cells
+
+- An animal cell (no cell wall) in pure water swells and bursts — it can't resist the water rushing in.
+- A plant cell in pure water takes in water until it's firm and turgid; the cell wall stops it bursting. That turgor is what holds a plant upright.
+- A plant cell in a concentrated solution loses water, goes flaccid, and eventually the membrane peels away from the wall — plasmolysis.
+
+That's exactly why the potato practical works: potato cells behave like tiny osmosis detectors.
+
+## The osmosis required practical, step by step
+
+The task: investigate the effect of different sugar (sucrose) concentrations on the mass of potato tissue.
+
+Variables to get right (a near-guaranteed exam question):
+- Independent variable: the concentration of the sugar solution.
+- Dependent variable: the mass of the potato, measured as percentage change.
+- Control variables: same potato, same length and surface area of cylinder, same volume of solution, same temperature, same time in solution.
+
+Method:
+1. Use a cork borer to cut several potato cylinders, then trim them to the same length with a scalpel (say 3 cm).
+2. Blot each cylinder dry and measure its starting mass on a balance. Record it.
+3. Set up a range of sucrose concentrations — for example 0.0, 0.2, 0.4, 0.6, 0.8 and 1.0 mol/dm3 — one tube each, equal volumes.
+4. Put one cylinder in each tube and leave them all for the same time (often 24 hours, or 20 to 30 minutes in a lesson).
+5. Remove each cylinder, blot it dry the same way, and measure its final mass.
+6. Calculate the percentage change in mass for each concentration.
+
+Why blot dry both times? Surface water would add mass that has nothing to do with osmosis, and that would wreck the comparison.
+
+Why percentage change, not just "grams gained"? Because no two cylinders start at exactly the same mass. Percentage change puts them all on the same scale so the concentrations can be compared fairly. That reasoning is itself a mark.
+
+## Worked example: calculating percentage change
+
+A potato cylinder is left in 0.4 mol/dm3 sucrose solution.
+
+1. Note the starting mass: 4.20 g.
+2. Note the final mass after 24 hours: 3.78 g.
+3. Find the change: 3.78 - 4.20 = -0.42 g. It's negative, so the cylinder lost mass.
+4. Divide by the starting mass: -0.42 / 4.20 = -0.10.
+5. Multiply by 100: -0.10 x 100 = -10%.
+
+So the cylinder lost 10% of its mass. Water left the potato cells by osmosis, which tells you the solution outside was more concentrated than the cell contents — a lower water potential outside, so water moved out.
+
+The same maths on a cylinder in distilled water — 4.00 g rising to 4.40 g — gives +10%: it gained water, because the distilled water was more dilute than the cells.
+
+Plot percentage change (y-axis) against concentration (x-axis) and you get a line sloping downwards. Where it crosses zero — no change in mass — the solution's concentration equals the concentration inside the potato cells. That crossing point is how you estimate the internal concentration, and it's a favourite "interpret the graph" question. If any step of that felt shaky, drop the numbers into [Explain anything](/explain) and ask it to show the percentage-change working line by line for your exact board.
+
+## Test yourself
+
+1. A potato cylinder starts at 5.00 g and ends at 4.50 g. What is the percentage change in mass, and what does it tell you?
+2. Give the two phrases an examiner needs to see in a definition of active transport.
+3. A plant cell and an animal cell are both placed in pure water. Describe what happens to each.
+
+Quick answers:
+1. (4.50 - 5.00) / 5.00 x 100 = -10%. The cylinder lost water by osmosis, so the solution was more concentrated than the cell contents.
+2. "Against the concentration gradient" and "using energy from respiration."
+3. The animal cell swells and bursts (no cell wall); the plant cell becomes turgid but does not burst, because the cell wall resists the pressure.
+
+Want more of these, auto-marked? Generate a set on this exact topic with the [quiz maker](/quiz), or turn the definitions into [flashcards](/flashcards) for spaced practice.
+
+## FAQ
+
+Is osmosis a type of diffusion?
+
+Yes. Osmosis is the diffusion of water specifically, across a partially permeable membrane. Both are passive and move particles down a gradient — osmosis is just the water-only, membrane-crossing version.
+
+Does osmosis need energy?
+
+No. Osmosis and diffusion are both passive, so they need no energy from the cell. Only active transport uses energy from respiration, because it moves particles against the gradient.
+
+Why do we calculate percentage change in mass instead of the actual change?
+
+Because the potato cylinders don't all start at the same mass. Percentage change scales every result to its own starting point, so different cylinders can be compared fairly.
+
+What is the difference between "dilute" and "high water potential"?
+
+They describe the same thing. A dilute solution has more water and fewer solute particles, so it has a higher (less negative) water potential. Water moves from dilute to concentrated, which is the same as high water potential to low. GCSE uses the first phrasing; Cambridge A-Level and AP use the second.
+
+**In short:** Diffusion moves any particle down a gradient for free, osmosis moves water across a partially permeable membrane for free, and active transport pushes particles up the gradient using energy — and the potato practical is simply osmosis made measurable through percentage change in mass.
+`,
+  },
+
+  {
+    slug: "le-chateliers-principle",
+    title: "Le Chatelier's Principle: Predicting Which Way Equilibrium Shifts",
+    description: "Le Chatelier's principle explained: predict which way equilibrium shifts with concentration, pressure and temperature, with Haber and Contact examples.",
+    publishedAt: "2026-08-09", readTime: "7 min",
+    tags: ["Le Chatelier's principle","chemical equilibrium","A-Level chemistry","AP chemistry","Haber process"],
+    body: `
+**Quick answer:** Le Chatelier's principle says that when a system at equilibrium is disturbed, the position of equilibrium shifts to *partially oppose* the change. Adding a substance shifts equilibrium away from it; raising the pressure shifts it toward the side with fewer gas moles; raising the temperature shifts it in the endothermic direction. Only a temperature change actually alters the value of Kc or Kp — concentration, pressure and catalysts do not.
+
+When I first met Le Chatelier's principle I treated "shifts to oppose the change" like a magic spell I could chant for marks. It only clicked when I stopped memorising and started asking one question of every disturbance: what did I just do to this system, and which direction would undo a little bit of it? Once you have that, you can predict any shift in seconds.
+
+This topic runs right through A-Level, AP, and Cambridge chemistry, and it's the whole reason the Haber and Contact processes work the way they do. Here's how I actually reason through it, plus the traps that cost me marks in mocks.
+
+## What the principle really says
+
+The full statement: if a system at dynamic equilibrium is subjected to a change in concentration, pressure or temperature, the position of equilibrium moves to counteract that change. The word examiners want is *counteract* or *oppose* — not *cancel*. The system never fully reverses what you did; it just eases it a bit and settles at a new equilibrium.
+
+There are only three things you can change, plus catalysts:
+
+- Concentration of a dissolved or gaseous species
+- Total pressure (only matters for gases)
+- Temperature
+- A catalyst — which, spoiler, does nothing to the position
+
+One rule that saves marks: pure solids and pure liquids don't appear in the equilibrium expression, so they don't count when you're weighing up concentration or gas moles. If you're not sure why a step works, paste the equation into [Explain](/explain) and ask it to walk you through the shift line by line.
+
+## Concentration changes
+
+Add more of a species, and equilibrium shifts away from it to use it up. Remove a species, and it shifts toward that side to replace it. That's the whole rule.
+
+Take the esterification equilibrium:
+
+CH3COOH + C2H5OH ⇌ CH3COOC2H5 + H2O
+
+Add more ethanol (a reactant) and equilibrium shifts right, making more ester. Remove water as it forms and equilibrium also shifts right to replace it. Notice Kc hasn't changed at all here; the ratio of concentrations simply resettles to the same value.
+
+## Pressure changes (gases only)
+
+Increasing the total pressure (by squeezing the volume smaller) shifts equilibrium toward the side with fewer moles of gas, because that side takes up less space and relieves the pressure.
+
+Count the gas moles on each side first — that single habit answers most pressure questions. If both sides have equal moles of gas, pressure has no effect at all. For example:
+
+H2(g) + I2(g) ⇌ 2HI(g)
+
+Two moles of gas on the left, two on the right — so changing the pressure does nothing to the position here. A favourite trap.
+
+The subtle one: adding an inert gas (like argon) at constant volume changes nothing, because the partial pressures of the reacting gases are unchanged.
+
+## Temperature — the only change that alters K
+
+This is the one that separates the A and B grades. To predict a temperature shift, look at the sign of ΔH for the forward reaction:
+
+- Forward reaction exothermic (ΔH negative): raising the temperature shifts equilibrium *backward* (the endothermic direction).
+- Forward reaction endothermic (ΔH positive): raising the temperature shifts equilibrium *forward*.
+
+The logic: adding heat is like adding a "reactant" of energy, so the system shifts in whichever direction absorbs that heat — the endothermic direction. Crucially, a temperature change is the only disturbance that changes the value of Kc or Kp. If a question asks "what happens to K?", the answer is "nothing" for every change except temperature.
+
+## Fully worked example: the Contact process
+
+The industrial equilibrium for making sulfur trioxide (on the way to sulfuric acid) is:
+
+2SO2(g) + O2(g) ⇌ 2SO3(g), ΔH = -197 kJ/mol
+
+Let me predict the effect of four separate changes, step by step.
+
+1. **Count and classify.** Left side: 2 + 1 = 3 moles of gas. Right side: 2 moles of gas. The forward reaction is exothermic (ΔH is negative).
+
+2. **Increase the pressure.** Equilibrium shifts toward fewer gas moles — from 3 on the left to 2 on the right. So it shifts *right*, making more SO3. Higher pressure means higher yield.
+
+3. **Increase the temperature.** Equilibrium shifts in the endothermic direction, which is the *reverse* here. So it shifts *left*, yield of SO3 falls, and Kp decreases. This is why the Contact process runs at a moderate ~450°C, not a very high temperature.
+
+4. **Remove SO3 as it forms.** Equilibrium shifts *right* to replace it — a neat way to keep pushing the reaction forward without touching temperature.
+
+5. **Add a V2O5 catalyst.** No shift at all. Position and yield are unchanged; the catalyst only makes the system *reach* equilibrium faster.
+
+## Catalysts and the industrial compromise
+
+Say it with me: a catalyst does not shift the position of equilibrium. It speeds up the forward and reverse reactions equally, so equilibrium arrives sooner but at exactly the same composition. Marks are routinely lost by writing that a catalyst "increases yield." It doesn't.
+
+This is where the Haber process becomes such a clean exam story:
+
+N2(g) + 3H2(g) ⇌ 2NH3(g), ΔH = -92 kJ/mol
+
+Four moles of gas become two, and the forward reaction is exothermic. Le Chatelier says the best yield of ammonia comes from *high pressure* (favours the two-mole side) and *low temperature* (favours the exothermic direction). But low temperature makes the reaction painfully slow. So industry picks a compromise: about 200 atm, around 450°C, and an iron catalyst to claw back the speed lost by not going colder. That compromise reasoning — yield versus rate — is a guaranteed mark earner. Want it drilled into memory? Turn these conditions into [flashcards](/flashcards).
+
+## The mistakes that cost real marks
+
+- Writing that a catalyst shifts equilibrium or raises yield. It never does.
+- Saying Kc or Kp changes when you alter concentration or pressure. Only temperature changes K.
+- Forgetting to check the moles of gas before answering a pressure question (equal moles = no effect).
+- Getting the temperature direction backward. Always anchor to the sign of ΔH first.
+- Counting solids or pure liquids in the mole comparison. They don't appear in the expression.
+
+## Test yourself
+
+1. For N2(g) + 3H2(g) ⇌ 2NH3(g) (ΔH = -92 kJ/mol), state and explain the effect of *decreasing* the temperature on the yield of ammonia and on Kp.
+
+2. For H2(g) + I2(g) ⇌ 2HI(g), predict what happens to the position of equilibrium when the total pressure is increased. Explain.
+
+3. In the Contact process 2SO2(g) + O2(g) ⇌ 2SO3(g), you add a catalyst. What happens to the equilibrium yield of SO3?
+
+*Quick answers: (1) Lower temperature shifts equilibrium in the exothermic (forward) direction, so the yield of ammonia increases and Kp increases. (2) No change — both sides have two moles of gas, so pressure has no effect on the position. (3) No change to the yield; the catalyst only lets equilibrium be reached faster.*
+
+Stuck on the "explain" part of any of these? Drop the reaction into [Explain](/explain) and ask it to justify the shift the way a mark scheme would, then test yourself again with a fresh set of [quiz](/quiz) questions.
+
+## FAQ
+
+**Does Le Chatelier's principle change the value of the equilibrium constant?**
+Only a temperature change does. Concentration, pressure and catalysts shift the *position* of equilibrium (or the rate) but leave Kc and Kp untouched.
+
+**Why does pressure not always affect equilibrium?**
+Because pressure only shifts equilibrium when the two sides have different numbers of gas moles. If the moles of gas are equal (like H2 + I2 ⇌ 2HI), squeezing the system relieves pressure equally on both sides, so nothing moves.
+
+**Does adding an inert gas shift the equilibrium?**
+At constant volume, no — the partial pressures of the reacting gases don't change, so the position stays put. It only matters if adding gas forces a change in volume (constant pressure), which then shifts equilibrium toward the side with more gas moles.
+
+**Why doesn't a catalyst increase yield?**
+It lowers the activation energy of the forward and reverse reactions by the same amount, so both speed up equally. Equilibrium is reached faster, but the final position — and therefore the yield — is identical.
+
+**In short:** Ask "what did I just change, and which direction eases it?" — shift away from what you add, toward fewer gas moles under pressure, and in the endothermic direction when you heat it, remembering only temperature ever moves K.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
