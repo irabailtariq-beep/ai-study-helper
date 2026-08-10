@@ -2643,5 +2643,227 @@ It lowers the activation energy of the forward and reverse reactions by the same
 **In short:** Ask "what did I just change, and which direction eases it?" — shift away from what you add, toward fewer gas moles under pressure, and in the endothermic direction when you heat it, remembering only temperature ever moves K.
 `,
   },
+
+  {
+    slug: "enzymes-temperature-ph",
+    title: "Enzymes: How Temperature and pH Really Affect Them",
+    description: "Enzymes, temperature and pH for GCSE and IGCSE biology: the optimum, denaturing, the amylase practical, rate = 1/time, and the exam words examiners want.",
+    publishedAt: "2026-08-10", readTime: "7 min",
+    tags: ["enzymes","GCSE biology","IGCSE biology","temperature and pH","required practical"],
+    body: `
+**Quick answer:** Enzymes are biological catalysts that speed up reactions without being used up. Raising the temperature speeds an enzyme up to its optimum (about 37-40°C for human enzymes) because molecules collide more often; go hotter and it denatures, its active site changes shape, and the reaction stops. pH works the same way around an optimum (pepsin likes pH 2, salivary amylase about pH 7), and too acidic or too alkaline also denatures it.
+
+Enzymes look easy until you see how examiners mark them. In my IGCSE mocks I kept writing that heat "kills" the enzyme and kept losing the mark, because enzymes were never alive. Once I learned the exact words the mark scheme wants, this became one of the most reliable questions on the paper.
+
+## What an enzyme actually is (the definition examiners want)
+
+Learn this word for word, because it is a near-guaranteed mark: an enzyme is a biological catalyst that speeds up the rate of a reaction without being used up or permanently changed itself. Two extras every board (GCSE, Cambridge IGCSE, CBSE, AP, WAEC) wants you to add:
+
+- Enzymes are proteins.
+- Each enzyme is specific — it works on one substrate, or one type of reaction, only.
+
+"Not used up" is the phrase people forget: because the enzyme is unchanged, one molecule catalyses the same reaction thousands of times.
+
+## Lock and key: why shape is everything
+
+The substrate is the molecule the enzyme works on. The enzyme has a dent in it called the active site, and that active site is complementary in shape to the substrate — like a key that only fits one lock. The sequence:
+
+1. The substrate fits into the active site, forming an enzyme-substrate complex.
+2. The reaction happens — the substrate is broken down, or two substrates are joined.
+3. The product or products leave.
+4. The enzyme is unchanged and picks up the next substrate.
+
+Hold on to one idea: everything temperature and pH do, they do by changing the shape of that active site.
+
+## Temperature: the climb, the peak, the cliff
+
+Below the optimum, warming an enzyme up speeds the reaction. More heat means more kinetic energy, so enzyme and substrate molecules move faster and collide more often. More frequent successful collisions means more enzyme-substrate complexes per second, which means a faster rate. As a rough rule for Cambridge A-Level, the rate roughly doubles for every 10°C rise up to the optimum (the Q10 effect).
+
+The optimum is the temperature where the rate is highest — about 37°C for most human enzymes.
+
+Above the optimum, the rate does not level off, it falls off a cliff. The heat makes the protein vibrate so much that the bonds holding its 3D (tertiary) shape break. The active site changes shape, is no longer complementary to the substrate, complexes stop forming, and the reaction stops. This is denaturing, and it is permanent — cooling it back down does not fix it.
+
+The mistake that costs marks: writing that heat "kills" the enzyme, or that it "dies". Enzymes are molecules, not organisms. The mark-scheme word is *denatured*. And say the active site *changes shape and is no longer complementary* — just "the shape changes" is often not enough for the full mark.
+
+## pH: the same story, but symmetrical
+
+Every enzyme has an optimum pH too. Move away from it in either direction and the reaction slows; go far enough and it denatures. Extreme H+ or OH- ions interfere with the bonds holding the tertiary structure, the active site changes shape, and it stops working.
+
+The trap examiners love: the optimum pH is not always 7.
+
+- Salivary amylase: about pH 7 (a neutral mouth).
+- Pepsin, a protease in the stomach: about pH 2 — it actually needs the acid.
+- Trypsin and the enzymes of the small intestine: about pH 8 (slightly alkaline).
+
+So an enzyme is not "damaged by acid" as a general rule — it is damaged by the wrong pH *for that enzyme*. Pepsin would denature at pH 7; amylase would denature at pH 2. Note the graph shapes: the pH curve is a symmetrical hump, while the temperature curve is a climb then a cliff.
+
+## Worked example: reading a rate off a practical
+
+A student times how long amylase takes to break down all the starch at three temperatures, using iodine to test. Results: at 20°C it took 120 s, at 40°C it took 40 s, and at 60°C the starch never disappeared.
+
+Step 1 — Turn time into rate. Rate of reaction = 1 / time. A shorter time means a faster rate.
+
+Step 2 — Calculate. At 20°C, rate = 1/120 = 0.0083 per second. At 40°C, rate = 1/40 = 0.025 per second.
+
+Step 3 — Compare. The rate at 40°C is about three times the rate at 20°C.
+
+Step 4 — Explain the increase. At 40°C molecules have more kinetic energy, collide more often, and form more complexes per second, so starch is broken down faster.
+
+Step 5 — Explain the 60°C result. The amylase denatured: its active site changed shape, was no longer complementary to starch, no complexes formed, so there was no reaction.
+
+Step 6 — Conclude. The optimum for this amylase is around 40°C. The full marks come from the words in Steps 4 and 5, not the arithmetic.
+
+## The required practical (amylase, catalase, iodine)
+
+Two experiments come up again and again, and the AQA GCSE required practical on the effect of pH on amylase is one you should assume will be tested.
+
+- Amylase and starch, tested with iodine. Iodine turns blue-black with starch and stays orange-brown without it. Put a drop of the mixture onto iodine on a spotting tile every 10 seconds; when it stays orange-brown, the starch is gone. Time that, changing only temperature or pH.
+- Catalase and hydrogen peroxide. Catalase, from liver or potato, breaks hydrogen peroxide into water and oxygen; measure the volume of oxygen (or the froth height) in a set time.
+
+Examiners reward two things: naming your control variables (same volume and concentration of enzyme and substrate, same total time) and using rate = 1/time to compare fairly. If the method feels shaky, walk through one with the [step-by-step explainer](/explain) — pick your board and it sets out the procedure and controls in order.
+
+## Test yourself
+
+1. Explain why the rate of an enzyme-controlled reaction falls above the optimum temperature.
+2. Pepsin has an optimum pH of 2. Predict and explain what happens to pepsin at pH 7.
+3. In a starch-amylase experiment the reaction took 50 seconds at 30°C and 25 seconds at 40°C. Which temperature gave the faster rate, and by how much?
+
+Quick answers:
+
+1. The enzyme denatures — heat breaks the bonds holding its tertiary structure, so the active site changes shape and is no longer complementary to the substrate, and fewer or no enzyme-substrate complexes form.
+2. At pH 7 pepsin is far from its optimum, so it denatures: the active site changes shape and can no longer bind its substrate, so the rate drops to near zero.
+3. Rate = 1/time, so 40°C (1/25 = 0.04 per second) was faster than 30°C (1/50 = 0.02 per second) — exactly twice as fast.
+
+Want more in your board's style? Generate a set with the [quiz maker](/quiz), or paste an answer into [the explainer](/explain) to see which mark-scheme words you missed.
+
+## FAQ
+
+### Do enzymes get used up in a reaction?
+
+No. An enzyme is a catalyst, so it is unchanged at the end and catalyses the same reaction again — which is why a tiny amount can break down a large amount of substrate.
+
+### Is denaturing the same as being killed?
+
+No, and this exact wording loses marks. Enzymes are protein molecules, not living things, so they cannot be "killed". Denaturing means the active site has changed shape so the substrate no longer fits — write "denatured", never "died".
+
+### Why does very low temperature not denature an enzyme?
+
+Cold slows an enzyme down — molecules collide rarely — but it does not change the active site's shape. Warm it back up and it works again: low temperature is temporary, denaturing is permanent.
+
+### What is the optimum pH for enzymes?
+
+There is no single answer — it depends on the enzyme. Salivary amylase is about pH 7, pepsin about pH 2, trypsin about pH 8. Learn each enzyme with its own optimum, not one number for all. To drill them, drop them into the [flashcard maker](/flashcards).
+
+**In short:** an enzyme is a biological catalyst with an active site shaped to fit one substrate. Heat and pH both speed it up towards an optimum and then denature it by warping that active site — and the single word that separates a full-mark answer from a lost one is "denatured", never "killed". Learn the definition, learn the optimum values, and practise reading rate = 1/time straight off a graph.
+`,
+  },
+
+  {
+    slug: "free-body-diagrams",
+    title: "Free-Body Diagrams: Drawing Forces the Right Way",
+    description: "Free body diagrams explained: draw weight, normal, tension and friction from one point, find the resultant, and stop losing easy exam marks.",
+    publishedAt: "2026-08-10", readTime: "7 min",
+    tags: ["free body diagrams","gcse physics forces","ap physics 1","resultant force","normal contact force"],
+    body: `
+**Quick answer:** A free-body diagram shows every force acting ON one object as a labelled arrow drawn from a single point, with the arrow's length matching the force's size and its direction matching the push or pull. Draw only real forces - weight (mg, always straight down), the normal contact force (perpendicular to the surface), tension, friction and air resistance - never a "force of motion," and never the forces the object exerts on other things.
+
+The first time a Cambridge past paper told me to "draw a free-body diagram," I drew a neat box with six arrows - including one pointing forwards, proudly labelled "movement." Instant lost mark. My teacher's margin note: "there's no engine on a falling apple." A free-body diagram is not a picture of what the object is doing; it is a map of what is being done to it. Once that lands, the arrows almost draw themselves.
+
+## What a free-body diagram actually is
+
+- One object, on its own, mentally "freed" from everything around it.
+- Represent it as a dot or a small box.
+- Every force acting on it is one arrow drawn from that dot.
+- Arrow length shows the force's size, its direction the push or pull; label each with its cause.
+
+What does NOT go on it: velocity, acceleration, the resultant, or any force the object exerts on something else. Those reaction forces belong on the *other* object's diagram - that is Newton's third law.
+
+AP Physics is strict: object as a dot, each force its own labelled vector, and any components drawn on a *separate* diagram. Writing "ma" as an arrow costs you - ma is the result of the forces, not one of them.
+
+## The forces you are allowed to draw
+
+- **Weight (W = mg):** always straight down, toward the Earth's centre. On a 30 degree slope it still points vertically down, not into the slope. AP and A-Level use g = 9.8 N/kg; GCSE and IGCSE usually allow g = 10 N/kg - check your data sheet.
+- **Normal contact force (N or R):** perpendicular to the surface of contact - straight up on flat ground, but leaning on a slope. AQA wants the exact words "normal contact force," not just "reaction."
+- **Tension (T):** along a rope or cable, always pulling away from the object.
+- **Friction (f):** along the surface, opposing motion or the tendency to move; at right angles to the normal.
+- **Air resistance / drag:** opposite to the motion through the air, growing with speed. On a falling object it points up.
+
+If a force has no source - no rope, surface, field or hand touching it - it does not go on the diagram.
+
+## Resultant force is the payoff
+
+Once the arrows are drawn, the resultant (net) force is just their vector sum. Balanced forces give a resultant of zero - constant velocity or rest (Newton's first law). Unbalanced forces give a non-zero resultant, and the object accelerates in that direction, following F = ma (Newton's second law). The diagram is the setup; the resultant is where the marks are cashed in.
+
+## Worked example 1: a box on a slope
+
+A box of mass 4 kg sits on a slope at 30 degrees to the horizontal. Friction acts up the slope with a size of 12 N. Take g = 10 N/kg. Find the acceleration.
+
+1. **Isolate and draw.** One box. Three arrows from its centre: weight straight down, normal perpendicular to the slope, friction up along the slope.
+2. **Find the weight.** W = mg = 4 x 10 = 40 N, straight down.
+3. **Choose smart axes.** Point them along the slope and perpendicular to it - the slope trick that keeps the maths clean.
+4. **Resolve the weight.** Along the slope (down-slope): W sin 30 = 40 x 0.5 = 20 N. Perpendicular: W cos 30 = 40 x 0.866 = 34.6 N.
+5. **Perpendicular direction.** Nothing accelerates into the slope, so the normal force balances the perpendicular part of the weight: N = 34.6 N.
+6. **Along the slope.** Down-slope pull is 20 N, friction up is 12 N. Resultant = 20 - 12 = 8 N down the slope.
+7. **Apply F = ma.** a = F/m = 8 / 4 = 2 m/s^2, directed down the slope.
+
+Notice that the normal force (34.6 N) is not equal to the weight (40 N). On a slope it never is - and that is the single mark most people drop.
+
+## Worked example 2: a lift accelerating
+
+You have a mass of 60 kg and stand on bathroom scales inside a lift. The lift accelerates upward at 2 m/s^2. What do the scales read? Take g = 10 N/kg.
+
+1. **Isolate yourself.** Two forces only: your weight down, and the normal force R pushing up from the scales. The scales read R.
+2. **Find the weight.** W = mg = 60 x 10 = 600 N, down.
+3. **Set up F = ma.** Take up as positive: R - W = ma.
+4. **Solve.** R = m(g + a) = 60 x (10 + 2) = 720 N. The scales read 720 N - you feel heavier.
+5. **Flip it.** If the lift accelerated downward at 2 m/s^2 instead: R = m(g - a) = 60 x (10 - 2) = 480 N - same weight, lighter reading. In free fall (a = 10 down) R = 0, which is weightlessness.
+
+Your actual weight never changed - it stayed 600 N. The reading is the contact force, which is exactly what the free-body diagram tracks.
+
+If any step felt fuzzy, paste the exact question into [our step-by-step explainer](/explain) and ask it to add the forces one at a time - watching them appear in order is what made resolving on a slope click for me.
+
+## The mistakes that cost marks
+
+- **The phantom driving force.** A ball thrown up, a car coasting in neutral, a puck sliding on ice - none gets a forward arrow. Once the hand or engine stops touching it, that push is gone.
+- **Making the normal equal the weight out of habit.** True only on flat ground with nothing else acting vertically - not on a slope, not in an accelerating lift.
+- **Arrows that do not touch the object, or are unlabelled.** Examiners want each arrow starting at the body with a word saying what it is; an unlabelled arrow often scores nothing.
+- **Drawing the Newton's third-law partner.** The ground pushing up on the box goes on the box's diagram; the box pushing down on the ground goes on the ground's, not the box's.
+- **Confusing mass and weight.** Mass is in kilograms; weight is a force in newtons (W = mg).
+
+## Test yourself
+
+1. A skydiver falls at constant terminal velocity. Draw the forces. What is the resultant?
+2. A 2 kg book rests on a flat table. Give the size of the normal contact force. (g = 10 N/kg)
+3. A 5 kg box is pulled along flat ground by a horizontal rope with tension 30 N; friction is 18 N. Find the acceleration.
+
+Quick answers:
+
+1. Two arrows only - weight down and air resistance (drag) up, equal in length. Resultant = 0, because at constant velocity the forces are balanced.
+2. N = weight = mg = 2 x 10 = 20 N, upward.
+3. Resultant = 30 - 18 = 12 N; a = F/m = 12 / 5 = 2.4 m/s^2 in the direction of the pull.
+
+Want more of these, marked instantly? Generate a set with our [physics quiz maker](/quiz), or check your own working on any force problem with the [math solver](/math-solver).
+
+## FAQ
+
+### What is the difference between a free-body diagram and a force diagram?
+
+For GCSE and IGCSE they mean the same thing: the forces on one object shown as arrows. "Free-body" just stresses that you have mentally removed the object from its surroundings and drawn only what acts on it. AP always calls it an FBD.
+
+### Do the arrows have to be drawn to scale?
+
+Not exactly to scale, but relative lengths should make sense - a bigger force gets a longer arrow, and balanced forces get equal-length arrows. Examiners do notice when a clearly larger force is drawn shorter than a smaller one.
+
+### Should I include the resultant force on the diagram?
+
+No - a free-body diagram shows the individual forces only. Work out the resultant separately, as a calculation or a second diagram. On AP papers, adding the net force or "ma" to the FBD can lose you the point.
+
+### Why does a moving object not need a forward force?
+
+Newton's first law: an object keeps moving at constant velocity when there is no net force. Motion does not need a force to continue - only a *change* in motion (speeding up, slowing, turning) does. So a coasting object has no forward arrow, just the forces actually touching or pulling it.
+
+**In short:** isolate one object, draw every real force as a labelled arrow from a single point, keep the weight vertical and the normal perpendicular to the surface, and leave off anything that is not a genuine push or pull. Do that and the resultant - and the marks - follow. Stuck on a particular diagram? [Ask the explainer to build it force by force](/explain).
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
