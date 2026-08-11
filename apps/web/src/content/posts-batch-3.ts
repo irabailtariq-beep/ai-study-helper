@@ -2865,5 +2865,218 @@ Newton's first law: an object keeps moving at constant velocity when there is no
 **In short:** isolate one object, draw every real force as a labelled arrow from a single point, keep the weight vertical and the normal perpendicular to the surface, and leave off anything that is not a genuine push or pull. Do that and the resultant - and the marks - follow. Stuck on a particular diagram? [Ask the explainer to build it force by force](/explain).
 `,
   },
+
+  {
+    slug: "projectile-motion",
+    title: "Projectile Motion: Splitting It Into Horizontal and Vertical (AP & A-Level)",
+    description: "Projectile motion made simple: split it into horizontal (constant velocity) and vertical (g) motion, with worked AP and A-Level examples and range.",
+    publishedAt: "2026-08-11", readTime: "8 min",
+    tags: ["projectile motion","AP physics","A-Level physics","suvat","exam technique"],
+    body: `
+**Quick answer:** Projectile motion splits into two separate problems: horizontal motion at constant velocity (acceleration = 0) and vertical motion with constant downward acceleration g = 9.8 m/s^2. The only thing linking them is time — the same t applies to both directions. So resolve the launch velocity into a horizontal and a vertical component, run the suvat equations separately in each, and never let g touch the horizontal.
+
+The first time projectile motion actually clicked for me was a demo my physics teacher did: she fired a ball horizontally off the bench and dropped a second ball from the same height at the exact same instant. They hit the floor together. That is the whole topic in one demo — moving sideways does not change how fast you fall.
+
+Once I started treating a projectile as two boring straight-line motions stacked together instead of one curvy path, my marks jumped. It is the method AP and Cambridge A-Level examiners want: split, then solve.
+
+## Why horizontal stays constant but vertical speeds up
+
+Gravity only pulls one way: down. The weight of the object, mg, acts vertically, so the only acceleration is vertical.
+
+- Horizontally there is no force (once we ignore air resistance), so by Newton's first law there is no horizontal acceleration. The horizontal velocity you launch with is the horizontal velocity you keep — the whole way.
+- Vertically, gravity gives a constant acceleration of g = 9.8 m/s^2 downwards, whatever the object is doing sideways.
+
+The two directions are independent — the only thing they share is the clock. The same t appears in both, and that shared time is how you cross from one direction to the other.
+
+## Your toolkit: suvat in each direction
+
+The suvat equations (u = initial velocity, v = final velocity, a = acceleration, s = displacement, t = time):
+
+- v = u + at
+- s = ut + (1/2)at^2
+- v^2 = u^2 + 2as
+- s = (1/2)(u + v)t
+
+Set them up in two columns first. Horizontal: a = 0, so it collapses to just s = ut. Vertical: a = g, so you use the full set. Decide which direction is positive and keep it for the whole question.
+
+## Worked example 1 — horizontal launch
+
+A ball leaves the edge of a table 1.25 m high, moving horizontally at 3.0 m/s. How long is it in the air, and how far from the table does it land? Take g = 9.8 m/s^2 and ignore air resistance.
+
+**Step 1 — split the motion.** Horizontal: u = 3.0 m/s, a = 0. Vertical: u = 0 (launched horizontally, so no initial vertical speed), a = 9.8 m/s^2 downward, s = 1.25 m.
+
+**Step 2 — use the vertical direction to find the time.** The fall controls the time, not the sideways speed.
+
+s = ut + (1/2)at^2, so 1.25 = 0 + (1/2)(9.8)t^2, giving 1.25 = 4.9t^2, then t^2 = 0.255 and t = 0.51 s.
+
+**Step 3 — feed that time into the horizontal direction for the range.** s = ut = 3.0 × 0.51 = 1.5 m.
+
+So the ball is airborne about 0.51 s and lands roughly 1.5 m away. Notice the 3.0 m/s never entered the time calculation — a ball simply dropped from 1.25 m would land in the same 0.51 s. That is the two-motions idea in action.
+
+## Worked example 2 — launch at an angle
+
+A projectile is launched at 20 m/s at 30 degrees above the horizontal on level ground. Find the time of flight, the maximum height, and the range. Take g = 9.8 m/s^2.
+
+**Step 1 — resolve into components.** u across = 20 cos30 = 17.3 m/s. u up = 20 sin30 = 10.0 m/s.
+
+**Step 2 — time of flight from the vertical.** At the top the vertical velocity is zero: 0 = 10.0 - 9.8t, so time to the top is 1.02 s. On level ground the way down mirrors the way up, so total time of flight is 2 × 1.02 = 2.04 s.
+
+**Step 3 — maximum height.** v^2 = u^2 - 2gH, so 0 = 10.0^2 - 2(9.8)H, giving H = 100 / 19.6 = 5.1 m.
+
+**Step 4 — range, horizontal distance over the full flight.** s = ut = 17.3 × 2.04 = 35.3 m.
+
+## Time of flight and range: the shortcuts, and when they break
+
+For a projectile that lands at the same height it launched from, you can quote:
+
+- Time of flight: T = 2u sinθ / g
+- Maximum height: H = (u sinθ)^2 / (2g)
+- Range: R = u^2 sin(2θ) / g, largest at θ = 45 degrees
+
+One warning that catches people every year: these only work when the landing height equals the launch height. Fire something off a cliff so it lands lower and R = u^2 sin(2θ) / g is simply wrong — split the motion again and use the vertical suvat with the real displacement (a negative s if it ends below the start). If the algebra gets messy, drop the line into [Math solver](/math-solver) to check each rearrangement.
+
+## Common mistakes that cost marks
+
+1. **Using the whole launch speed instead of its component.** The 20 m/s is not the vertical u — resolve first. Putting the resultant straight into a vertical equation is the single most common error.
+2. **Letting g into the horizontal.** Horizontal acceleration is zero. No g sideways, ever.
+3. **Sign chaos.** Choose up = positive (or down = positive) before you start and keep it. If up is positive, then g = -9.8 and a downward displacement is negative.
+4. **Thinking a horizontal launch has vertical u.** For a ball rolled off a table, the initial vertical velocity is 0.
+5. **Using the range formula at a different landing height.** Only valid for equal launch and landing heights.
+6. **Forgetting to state the model.** Both AP and Cambridge assume you ignore air resistance and treat the object as a particle — a mark can hang on saying so.
+
+## Test yourself
+
+1. (AP) A stone is thrown horizontally at 6.0 m/s from a cliff 20 m high. How long until it lands, and how far from the base? (g = 9.8)
+2. (A-Level) A ball is kicked at 15 m/s at 40 degrees to the horizontal on level ground. Find the maximum height. (g = 9.8)
+3. (Concept) Two balls leave the same height at the same instant — one dropped, one thrown horizontally at 10 m/s. Which lands first?
+
+Quick answers: (1) Vertical: 20 = 4.9t^2, so t = 2.02 s; horizontal: 6.0 × 2.02 = 12.1 m. (2) u up = 15 sin40 = 9.64 m/s, so H = 9.64^2 / 19.6 = 4.7 m. (3) They land together — the vertical motion is identical, and horizontal speed does not change the fall time.
+
+Want your working checked in your board's style? Paste it into [Math solver](/math-solver) and it will flag exactly where a sign or component slipped. To build the intuition first, ask [Explain a concept](/explain) to walk through the two-directions idea, or drill the split on [Quiz me](/quiz) until it is automatic.
+
+## FAQ
+
+**Why does a projectile follow a parabola?**
+Because horizontal position grows steadily with time (distance proportional to t) while vertical position changes with t^2 (the (1/2)at^2 term). Combine a straight-line term with a squared term and the shape you trace is a parabola.
+
+**Does the mass of the projectile affect its path?**
+No, as long as you ignore air resistance. g is the same for every mass, so a heavy and a light object launched identically follow the same path and land together. Mass only matters once air resistance is included.
+
+**What launch angle gives the maximum range?**
+On level ground, 45 degrees. There is a neat symmetry too: angles the same amount above and below 45, such as 30 and 60 degrees, give the same range.
+
+**Should I use g = 9.8 or 9.81?**
+Check your paper. AP typically uses 9.8 m/s^2, while Cambridge A-Level (9702) usually prints g = 9.81 m/s^2 on the data sheet. Use whatever the exam states and stay consistent through the whole question.
+
+**In short:** treat a projectile as two independent motions sharing one clock — constant velocity across, constant acceleration g down. Resolve the launch velocity into components, use the vertical direction for the time, then use that time in the horizontal for the range. Keep g out of the horizontal, keep signs consistent, and only use the range formula when it lands at the height it left. Do that and projectiles become some of the most predictable marks on the paper.
+`,
+  },
+
+  {
+    slug: "standard-form-significant-figures",
+    title: "Standard Form and Significant Figures: Stop Losing Easy Marks",
+    description: "Standard form and significant figures made simple: write a x 10^n, round to the right sig figs, and stop dropping easy GCSE, IGCSE and WAEC marks.",
+    publishedAt: "2026-08-11", readTime: "6 min",
+    tags: ["standard form","significant figures","GCSE maths","IGCSE maths","rounding"],
+    body: `
+**Quick answer:** Standard form writes any number as a x 10^n, where a is at least 1 but less than 10, and n is a whole number. So 4,500,000 becomes 4.5 x 10^6 and 0.00032 becomes 3.2 x 10^-4. Significant figures are counted from the first non-zero digit, and most GCSE, IGCSE, WAEC and Cambridge science answers should be rounded to 2 or 3 significant figures - giving more can actually cost you a mark.
+
+I dropped a mark in a Year 11 physics mock for writing 26.111 m/s when the mark scheme wanted 26 m/s. My working was perfect. My arithmetic was perfect. But I'd handed in six significant figures when the data only justified two, and the examiner took the "appropriate accuracy" mark straight off. Standard form and significant figures feel like fussy admin, but they are some of the cheapest marks in maths and science - and the easiest to throw away. Here's everything I wish someone had drilled into me earlier.
+
+## The one rule of standard form people break
+
+Standard form (your American AP friends call it scientific notation) is just a x 10^n. The rule that catches everyone is the size of a: it must be at least 1 and less than 10. One digit before the decimal point, nothing more.
+
+So 36 x 10^7 is *not* in standard form, even though it equals the right number - a is 36, which is too big. You have to rewrite it as 3.6 x 10^8. Examiners at AQA, Edexcel, OCR and Cambridge all treat "a not between 1 and 10" as wrong, even if the value underneath is correct - so check it on every answer.
+
+## Writing numbers in standard form
+
+For a big number, count how many places the decimal point moves left until one digit sits in front of it. That count is your positive power.
+
+- 4,500,000 becomes 4.5 x 10^6 (the point moved 6 places left)
+- 92,000 becomes 9.2 x 10^4
+
+For a small number, count how many places the point moves right until it sits just after the first non-zero digit. That count is your negative power.
+
+- 0.00032 becomes 3.2 x 10^-4 (moved 4 places right)
+- 0.0000067 becomes 6.7 x 10^-6
+
+The classic slip is the sign of the power. Small numbers (less than 1) always take a negative power; big numbers take a positive one. Write 0.00032 as 3.2 x 10^4 and you've turned a tiny number into 32,000 - a factor of a hundred million out.
+
+## Calculating in standard form
+
+**Multiplying and dividing** is genuinely fast once you see the trick. Deal with the numbers and the powers separately.
+
+- Multiply: multiply the a-values, add the powers. (7.2 x 10^4) x (5.0 x 10^3) = 36 x 10^7. Then renormalise: 3.6 x 10^8.
+- Divide: divide the a-values, subtract the powers. (8.4 x 10^6) divided by (2.0 x 10^2) = 4.2 x 10^4.
+
+Notice the multiply example landed on 36 x 10^7 - not standard form yet. Always do the renormalise step at the end.
+
+**Adding and subtracting** is where people quietly lose marks, because you cannot just add the a-values unless the powers already match. Make the powers equal first.
+
+- (3.0 x 10^5) + (4.0 x 10^4). Rewrite the second as 0.4 x 10^5, then add: 3.4 x 10^5.
+
+If you'd carelessly added 3.0 and 4.0 to get 7.0 x 10^5, you'd be off by nearly double.
+
+## Significant figures vs decimal places
+
+These two get mixed up constantly, and the question always tells you which one it wants - so read it. Significant figures are counted from the first non-zero digit.
+
+- 0.00408 has 3 significant figures (4, 0, 8). Leading zeros never count; the zero *between* the 4 and 8 does.
+- 20.0 has 3 significant figures - trailing zeros after a decimal point count.
+- 4500 is ambiguous (2, 3 or 4 sig figs?), which is exactly why writing it as 4.5 x 10^3 is better: that is unmistakably 2 significant figures.
+
+Decimal places just count digits after the point. 3.14159 to 3 decimal places is 3.142; to 3 significant figures it is 3.14. But for 0.00408, three decimal places gives 0.004 (only 1 sig fig) while 3 significant figures gives 0.00408. Same number, completely different answers - never assume they are interchangeable.
+
+## Worked example: standard form and sig figs together
+
+A car travels 4.7 x 10^3 m in a time of 1.8 x 10^2 s. Find its average speed, giving your answer to 2 significant figures.
+
+- **Step 1 - write the formula.** Average speed = distance divided by time.
+- **Step 2 - divide the numbers.** 4.7 divided by 1.8 = 2.611...
+- **Step 3 - handle the powers.** 10^3 divided by 10^2 = 10^(3-2) = 10^1.
+- **Step 4 - combine.** 2.611... x 10^1 = 26.11... m/s.
+- **Step 5 - round last.** The data is given to 2 significant figures, so the answer is 2 significant figures: 26 m/s.
+
+The key habit lives in step 5: round only at the very end. If you'd rounded 2.611 to 2.6 back in step 2 and carried that through, small errors can push you over a rounding boundary and cost the final mark. Keep the full figure on your calculator until the last line. If you want to check your own steps on a real question, paste it into [the math solver](/math-solver) and it walks through the working in the same order.
+
+## Why exams are strict about significant figures
+
+In Cambridge and AQA physics and chemistry, there is usually a specific mark for giving your answer to an appropriate number of significant figures. The unwritten rule: your answer should carry the same number of sig figs as the least precise piece of data in the question - almost always 2 or 3. Give 1 sig fig and it looks like a guess; give 8 and you are claiming an accuracy your measurements never had. Both get penalised - usually once per paper, but repeatedly across the year if you never fix the habit.
+
+GCSE and IGCSE maths phrase it as "give your answer to an appropriate degree of accuracy" - same idea. WAEC and WASSCE examiner reports repeat it every year too: candidates lose marks for over-rounding mid-calculation and for forgetting to round at the end.
+
+## Common mistakes that cost easy marks
+
+- Leaving a bigger than 10 (36 x 10^7 instead of 3.6 x 10^8).
+- Putting the wrong sign on the power for small numbers.
+- Copying a calculator's "3.2E-4" display literally - write it as 3.2 x 10^-4 in your answer.
+- Rounding halfway through, then rounding again (double rounding).
+- Confusing decimal places with significant figures.
+- Adding or subtracting without matching the powers first.
+
+## Test yourself
+
+1. Write 0.00069 in standard form.
+2. Work out (6.0 x 10^5) x (4.0 x 10^-2), giving your answer in standard form.
+3. The mass of a sample is 0.02058 g. Round it to 3 significant figures.
+
+Quick answers: (1) 6.9 x 10^-4. (2) 24 x 10^3, which renormalises to 2.4 x 10^4. (3) 0.0206 g - the digits are 2, 0, 5, 8; keep the first three (2, 0, 5) and the next digit, 8, rounds the 5 up to 6.
+
+Want more like these at your exact board and level? Generate a set with [the quiz generator](/quiz), or paste a photo of a textbook question into [the math solver](/math-solver) to see every step laid out. To find out precisely where a mark would be lost, run your written answer through [Mark my answer](/grade).
+
+## FAQ
+
+**Do I use significant figures or decimal places in the exam?** Whichever the question specifies. If it only says "give an appropriate degree of accuracy", match the significant figures of the data - usually 2 or 3. In science, sig figs are the default; in money questions, 2 decimal places.
+
+**Can I really lose marks for too many significant figures?** Yes. In Cambridge and AQA science, writing an answer to 6 or 7 sig figs when the data only justifies 2 or 3 loses the appropriate-accuracy mark. More precision is not "safer" - it is simply wrong.
+
+**Is standard form the same as scientific notation?** Yes. "Standard form" is the GCSE and IGCSE term; "scientific notation" is the AP and US term. Both mean a x 10^n with a between 1 and 10.
+
+**When do I round - during the calculation or at the end?** At the very end, once. Keep the full number on your calculator through every step and only round the final answer to the required accuracy. Rounding partway through is the single most common way to drop that last mark.
+
+**In short:** Keep a between 1 and 10, get the sign of the power right, and round only your final answer - to 2 or 3 significant figures unless the question says otherwise. These are among the easiest marks in GCSE, IGCSE, WAEC, CBSE and AP maths and science, so stop handing them back. Check your working step by step with [the math solver](/math-solver) and you will stop losing them for good.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
