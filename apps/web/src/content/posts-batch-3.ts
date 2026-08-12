@@ -3078,5 +3078,209 @@ Want more like these at your exact board and level? Generate a set with [the qui
 **In short:** Keep a between 1 and 10, get the sign of the power right, and round only your final answer - to 2 or 3 significant figures unless the question says otherwise. These are among the easiest marks in GCSE, IGCSE, WAEC, CBSE and AP maths and science, so stop handing them back. Check your working step by step with [the math solver](/math-solver) and you will stop losing them for good.
 `,
   },
+
+  {
+    slug: "simultaneous-equations-methods",
+    title: "Simultaneous Equations: Every Method and When to Use Each",
+    description: "Simultaneous equations methods for GCSE: elimination vs substitution vs graphical, when to use each, plus a line-and-circle solved step by step.",
+    publishedAt: "2026-08-12", readTime: "7 min",
+    tags: ["simultaneous equations methods","gcse maths revision","elimination and substitution","linear and quadratic equations","solving simultaneous equations"],
+    body: `
+**Quick answer:** For GCSE simultaneous equations, use elimination when both equations are in the form ax + by = c (match one variable's coefficients, then add or subtract to cancel it), use substitution when one variable is already the subject or when you have one linear and one quadratic equation, and use the graphical method only when the question tells you to draw graphs or you want a quick estimate. Two straight lines give one solution; a line-and-quadratic pair usually gives two.
+
+I'm sitting Cambridge IGCSE and A-Level maths, and simultaneous equations look scarier than they are - right up until the quadratic ones appear and half my class freezes. You only ever need three methods, and if you read the two equations before you start, the paper basically tells you which one to use. Here's how I choose in about five seconds, plus the slips that quietly cost method marks.
+
+## Pick your method in five seconds
+
+- **Both equations look like ax + by = c** (for example 2x + y = 8 and 3x - 2y = 5): elimination is usually fastest.
+- **One variable is already the subject** (for example y = 2x + 1): substitution - just plug it straight in.
+- **One equation is a quadratic or a circle** (it contains x^2, y^2 or xy): substitution is the only reliable route.
+- **The question says "by drawing graphs" or "estimate":** graphical.
+
+On a GCSE higher paper (AQA, Edexcel or OCR all do this) the linear-and-quadratic version carries the most marks and trips the most people, so I've given it its own worked example below.
+
+## Worked example: one linear pair, solved both ways
+
+Solve 2x + y = 8 and 3x - 2y = 5.
+
+**Method A - elimination**
+
+1. **Match a coefficient.** Multiply the first equation by 2 so the y terms match in size: 4x + 2y = 16.
+2. **Add to cancel y.** The y terms are now +2y and -2y (opposite signs), so add the two equations: (4x + 2y) + (3x - 2y) gives 7x = 21.
+3. **Solve for x.** x = 3.
+4. **Back-substitute.** Put x = 3 into 2x + y = 8: 6 + y = 8, so y = 2.
+5. **Check.** 3(3) - 2(2) = 9 - 4 = 5. Correct. Solution: x = 3, y = 2.
+
+**Method B - substitution**
+
+1. **Make a variable the subject.** From the first equation, y = 8 - 2x.
+2. **Substitute into the other equation.** 3x - 2(8 - 2x) = 5.
+3. **Expand and solve.** 3x - 16 + 4x = 5, so 7x = 21 and x = 3.
+4. **Find the other variable.** y = 8 - 2(3) = 2.
+
+Same answer, x = 3 and y = 2. Notice substitution was clean here only because y had a coefficient of 1. If every coefficient had been a 2 or a 3, substitution would have dragged you into ugly fractions and elimination would have been the calmer choice.
+
+## One linear, one quadratic: substitution wins
+
+This is the higher-tier favourite - very often a straight line meeting a circle.
+
+Solve x^2 + y^2 = 25 and y = x + 1.
+
+1. **Substitute the linear equation into the quadratic.** Replace y with x + 1: x^2 + (x + 1)^2 = 25.
+2. **Expand.** x^2 + x^2 + 2x + 1 = 25.
+3. **Rearrange to equal zero.** 2x^2 + 2x - 24 = 0, then divide every term by 2: x^2 + x - 12 = 0.
+4. **Factorise and solve.** (x + 4)(x - 3) = 0, so x = -4 or x = 3.
+5. **Find each y from the LINEAR equation** (it's easier and safer than the curve): when x = -4, y = -4 + 1 = -3; when x = 3, y = 3 + 1 = 4.
+6. **Write the answers as coordinate pairs.** (-4, -3) and (3, 4). Check one: (-4)^2 + (-3)^2 = 16 + 9 = 25. Correct.
+
+Here's the mark that people throw away: the scheme awards a point specifically for pairing the right y with each x. If you get two x-values and two y-values but scramble which goes with which, you lose it. Always substitute the x-values back into the line, never the curve.
+
+## The graphical method
+
+Plot both equations on the same axes and the solution is wherever they cross - read off both coordinates. Two straight lines cross once; a line and a curve can cross twice.
+
+Use it when the question tells you to draw graphs, or as a quick sanity check. Don't lean on it for exact answers: reading "x is about 2.9" off a graph won't get full marks when the real answer is 3. And if two lines are parallel (same gradient, different intercept) they never meet - the graph is telling you there's no solution.
+
+## Common mistakes that cost marks
+
+- **Sign slips when subtracting equations.** My fix: always scale so the matching terms end up with opposite signs, then add. Adding is far harder to get wrong than subtracting.
+- **Giving only one answer to a quadratic pair.** A line-and-curve question almost always has two solutions - if you found one, go looking for the second.
+- **Forgetting to find the second variable.** x = 3 is half an answer; the examiner wants both x and y.
+- **Substituting back into the harder equation.** Put your x-values into the linear equation - fewer terms, fewer errors.
+- **Not showing your method.** On GCSE you earn method marks even when the arithmetic slips, so write every line rather than jumping to the answer.
+
+Stuck partway through a question, drop the pair into [the math solver](/math-solver) to see every step laid out, or ask [Explain anything](/explain) to reteach substitution at your own pace.
+
+## Test yourself
+
+1. Solve by elimination: 3x + 2y = 12 and x - 2y = 4.
+2. Solve by substitution: y = x - 1 and x^2 + y^2 = 25.
+3. You're given 5x + 3y = 1 and y = 2x - 3. Which method would you pick, and why?
+
+Quick answers: (1) Add the equations to cancel y: 4x = 16, so x = 4; then 4 - 2y = 4 gives y = 0. Solution (4, 0). (2) x^2 + (x - 1)^2 = 25 becomes 2x^2 - 2x - 24 = 0, then x^2 - x - 12 = 0 and (x - 4)(x + 3) = 0, so x = 4 or x = -3; the coordinate pairs are (4, 3) and (-3, -4). (3) Substitution, because y is already the subject - just replace y in the first equation.
+
+Want these marked and endless fresh ones in your board's style? Check any answer step by step on [the math solver](/math-solver) or generate a full practice set on [the mock exam generator](/mock-exam).
+
+## FAQ
+
+**Which method is best for simultaneous equations?** There's no single best one - it depends on the form. If both equations are ax + by = c, use elimination. If one variable is already the subject, or one equation is a quadratic, use substitution. Graphical is for when the question asks for it or you want an estimate.
+
+**How do you solve simultaneous equations with a quadratic?** Make one variable the subject of the linear equation, substitute it into the quadratic, rearrange to equal zero, then factorise or use the quadratic formula. You'll usually get two x-values; find each matching y from the linear equation and write them as coordinate pairs.
+
+**Do you still get marks if the final answer is wrong?** On GCSE, yes - method marks are awarded for a correct method even with an arithmetic slip, which is why you should never skip working. Write out the scaling, the substitution and the rearranging every time.
+
+**What does it mean if there's no solution?** For two straight lines it means they're parallel - same gradient, so they never cross. For a line and a curve it means the line misses the curve entirely (the quadratic you form has no real roots), so there are no crossing points to find.
+
+**In short:** Read the two equations first - matching coefficients point to elimination, a subject-ready variable or a quadratic points to substitution, and "draw the graphs" points to graphical. Show every line so the method marks are yours even when the numbers wobble, and for a line-and-curve pair remember to hand over two coordinate pairs, correctly matched.
+`,
+  },
+
+  {
+    slug: "differentiation-first-principles",
+    title: "Differentiation From First Principles (So It Finally Makes Sense)",
+    description: "Differentiation from first principles explained: the limit definition, worked examples for x^2 and x^3, and the show-that method examiners actually mark.",
+    publishedAt: "2026-08-12", readTime: "7 min",
+    tags: ["A-Level maths","AP Calculus","differentiation","calculus","exam technique"],
+    body: `
+**Quick answer:** Differentiating from first principles means finding a gradient using the limit definition f'(x) = lim(h->0) [f(x+h) - f(x)] / h, instead of the power-rule shortcut. You expand f(x+h), subtract f(x), divide every term by h, then let h -> 0. For f(x) = x^2 this gives 2x; for f(x) = x^3 it gives 3x^2.
+
+When I first met "differentiate from first principles" in A-Level Pure, I could already turn x^2 into 2x in my sleep using the power rule, so it felt like being told to walk to school when I owned a bike. It took me a while to realise first principles isn't the slow way to differentiate — it's the *proof* of why the fast way works. And the moment a board can put "prove" in front of something, it becomes a predictable few marks. This shows up in Edexcel, AQA and OCR A-Level, in Cambridge A-Level (9709), and as the definition of the derivative in AP Calculus.
+
+## The idea: a gradient of a chord that keeps shrinking
+
+- A straight line has one gradient everywhere: rise over run. A curve doesn't — its steepness changes as you move along it.
+- Pick a point on the curve, (x, f(x)). Now pick a second point a short horizontal distance h to the right: (x + h, f(x + h)).
+- The straight line joining those two points is a chord. Its gradient is the change in y over the change in x: [f(x+h) - f(x)] / h.
+- That chord is only an approximation to the steepness at your point. But as you slide the second point closer — as h shrinks towards 0 — the chord swings round until it rests on the curve as the tangent. The gradient of that tangent is the gradient of the curve at x.
+
+"First principles" just means building the gradient from that shrinking chord, using nothing but the definition.
+
+## The definition you must be able to write from memory
+
+f'(x) = lim(h->0) [f(x+h) - f(x)] / h
+
+Some boards and textbooks use δx (delta x) instead of h, so you may also see dy/dx = lim(δx->0) [f(x+δx) - f(x)] / δx. Same idea, different letter. Whatever symbol your board uses, three parts must appear or you lose marks:
+
+- the word lim (or the words "as h -> 0"),
+- the gradient-of-a-chord fraction with f(x+h) on top,
+- h on the bottom.
+
+Miss the limit notation and, in most mark schemes, you drop a whole mark even if your algebra is flawless. More on that below.
+
+## Worked example 1: differentiate f(x) = x^2 from first principles
+
+1. Write the definition: f'(x) = lim(h->0) [f(x+h) - f(x)] / h.
+2. Work out f(x + h) by replacing every x with (x + h): f(x + h) = (x + h)^2 = x^2 + 2xh + h^2.
+3. Subtract f(x): f(x+h) - f(x) = (x^2 + 2xh + h^2) - x^2 = 2xh + h^2.
+4. Divide every term by h: (2xh + h^2) / h = 2x + h.
+5. Take the limit as h -> 0: the "+ h" vanishes, so f'(x) = 2x.
+
+That is the power rule — bring the power down, drop it by one — *proved* for x^2, not assumed.
+
+## Worked example 2: differentiate f(x) = x^3 from first principles
+
+Same five moves; the only harder bit is the expansion.
+
+1. Write the definition: f'(x) = lim(h->0) [f(x+h) - f(x)] / h.
+2. Expand f(x + h) = (x + h)^3 = x^3 + 3x^2h + 3xh^2 + h^3.
+3. Subtract f(x): f(x+h) - f(x) = 3x^2h + 3xh^2 + h^3. (the x^3 terms cancel)
+4. Divide every term by h: (3x^2h + 3xh^2 + h^3) / h = 3x^2 + 3xh + h^2.
+5. Let h -> 0: the 3xh and h^2 terms both disappear, leaving f'(x) = 3x^2.
+
+Notice the pattern: at step 4, every term you are left with still carries an h except the one that survives. That surviving term is your answer. If nothing survives, or everything survives, you have slipped in the expansion.
+
+## The "show that" version — and where the marks live
+
+Boards rarely just say "differentiate x^2." They say "Prove from first principles that the derivative of x^2 is 2x," or "Using differentiation from first principles, show that..." It is the same five steps, but now it is a proof, so your presentation is graded. From a typical 5-mark scheme, the marks are handed out roughly like this:
+
+1. Writing the gradient-of-a-chord expression [f(x+h) - f(x)] / h with the correct f(x+h) — 1 mark.
+2. Expanding the bracket correctly — 1 mark.
+3. Simplifying and dividing through by h — 1 mark.
+4. Stating the limit as h -> 0 — the notation itself, not just the final answer — 1 mark.
+5. Reaching the correct derivative — 1 mark.
+
+The three mistakes that cost real marks every year:
+
+- Setting h = 0 too early. If you put h = 0 before you divide, step 3 becomes 0/0, which is meaningless. Divide by h first, then let h -> 0. Never both at once.
+- Dropping the limit line. Cancelling the h and jumping straight to "= 2x" loses the notation mark. Write the "as h -> 0" line explicitly — it is a free mark sitting right there.
+- Expansion errors on the cubic. (x + h)^3 has four terms, not two. Forgetting the middle 3x^2h and 3xh^2 is the single most common way to throw away the method marks.
+
+If the algebra of the expansion feels shaky, drill it on its own — our step-by-step [math solver](/math-solver) will expand (x + h)^2 and (x + h)^3 line by line, so you can check your own working against it. And if the *why* still feels fuzzy — why a shrinking chord becomes a tangent — the free [explainer tool](/explain) will walk it through at whatever level you ask.
+
+## Test yourself
+
+1. Differentiate f(x) = x^2 + 3x from first principles.
+2. Differentiate f(x) = 2x^2 from first principles.
+3. In the definition f'(x) = lim(h->0) [f(x+h) - f(x)] / h, why can't you simply substitute h = 0 straight away?
+
+Quick answers:
+
+1. f(x+h) = (x+h)^2 + 3(x+h) = x^2 + 2xh + h^2 + 3x + 3h. Subtract f(x): 2xh + h^2 + 3h. Divide by h: 2x + h + 3. Let h -> 0: f'(x) = 2x + 3.
+2. f(x+h) = 2(x+h)^2 = 2x^2 + 4xh + 2h^2. Subtract f(x): 4xh + 2h^2. Divide by h: 4x + 2h. Let h -> 0: f'(x) = 4x.
+3. Because the fraction becomes 0/0, which is undefined. The point of the limit is to simplify first — cancel the h on the bottom — and only then let h approach 0.
+
+Want these marked properly, with the notation checked? Drop your working into the [math solver](/math-solver), or turn the whole method into revision cards with the [flashcards tool](/flashcards).
+
+## FAQ
+
+### Do I really need first principles if I know the power rule?
+
+For the differentiating itself, no — everywhere else in the exam you will use the power rule. But boards set first principles as its own question precisely because it proves the rule, and you cannot answer "prove from first principles" with the shortcut. It is a reliable few marks once you have drilled it.
+
+### Is it h or δx?
+
+Both stand for the same small step in x. Edexcel and AQA usually write h; you will also meet δx (delta x) in Cambridge and in older textbooks. Use whichever your board's mark scheme uses, and stay consistent within a single answer.
+
+### Does AP Calculus test this?
+
+Yes — AP calls it the definition of the derivative, f'(x) = lim(h->0) [f(x+h) - f(x)] / h, with an alternate form f'(a) = lim(x->a) [f(x) - f(a)] / (x - a). AP questions can ask you to set up or use the definition directly, so the same expand-simplify-limit routine applies.
+
+### What is the hardest function they will ask from first principles?
+
+At A-Level it is usually a cubic like x^3, or a quadratic with a coefficient — the algebra is the challenge, not the idea. Cambridge and AP can push to things like 1/x, but the method never changes: form the chord, simplify, take the limit.
+
+**In short:** differentiation from first principles is just the gradient of a chord that you shrink to nothing. Expand f(x+h), subtract f(x), divide by h, then let h -> 0 — and always write that limit line, because in the "show that" version it is a whole mark on its own.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
