@@ -3282,5 +3282,188 @@ At A-Level it is usually a cubic like x^3, or a quadratic with a coefficient —
 **In short:** differentiation from first principles is just the gradient of a chord that you shrink to nothing. Expand f(x+h), subtract f(x), divide by h, then let h -> 0 — and always write that limit line, because in the "show that" version it is a whole mark on its own.
 `,
   },
+
+  {
+    slug: "ap-us-history-dbq",
+    title: "AP US History DBQ: The Structure That Actually Scores",
+    description: "AP US History DBQ structure explained: the 7-point rubric, how to earn each point, a 60-minute plan, and the mistakes that cost students marks.",
+    publishedAt: "2026-08-13", readTime: "7 min",
+    tags: ["AP US History DBQ","DBQ rubric","AP US History","DBQ structure","essay writing"],
+    body: `
+**Quick answer:** The AP US History DBQ is marked out of 7 points across three areas: thesis (1) and contextualization (1), evidence (3 points — using the documents plus one piece of outside evidence), and analysis (2 points — sourcing three documents and one complexity move). You earn each point by treating the rubric as a literal checklist, not by writing beautifully.
+
+I sit Cambridge A-Levels, not AP, so let me be honest up front: I have never walked into an APUSH exam. But I broke this rubric down line by line with a friend who did, because the DBQ is the most *gameable* essay I have ever seen. The reader is not judging your prose — they are holding a checklist with seven boxes and ticking them fast. Once you see the boxes, you stop writing an essay and start assembling one. That shift is worth a full grade.
+
+## The 7 points, and what each one is actually asking
+
+The College Board rubric hides some traps in plain language. Here is what each point really wants.
+
+- **Thesis / claim (1 point).** A historically defensible thesis that responds to the *whole* prompt with a line of reasoning. Restating the prompt gets you nothing. You need a claim plus the categories you will argue through.
+- **Contextualization (1 point).** Describe a broader historical situation relevant to the prompt — usually what was happening *just before* the time frame. This must be several sentences, not a clause tacked onto your thesis.
+- **Evidence from the documents (up to 2 points).** One point for using the content of at least three documents. The second point needs at least six documents, and you must *use* them to support an argument, not just quote them.
+- **Evidence beyond the documents (1 point).** One specific historical fact that is not in any document and is relevant to your argument. A name, act, or event — not a vague trend.
+- **Sourcing (1 point).** For at least three documents, explain how or why the point of view, purpose, historical situation, or intended audience is relevant to your argument. Naming the author is not sourcing.
+- **Complexity (1 point).** Show a nuanced understanding — corroborate, qualify, or modify your argument. This is the point most students never earn.
+
+## A time plan that survives the 60 minutes
+
+You get a 15-minute reading period, then the DBQ shares Section II with the long essay. Budget the DBQ at about 60 minutes total.
+
+1. **0–15 min (reading period):** Read the prompt twice, then all seven documents. In each margin jot a one-word tag and a plus or minus for the side it supports. Sketch a thesis and group the documents into two or three buckets.
+2. **15–22 min:** Write the intro — a full contextualization paragraph, then your thesis.
+3. **22–50 min:** Write two or three body paragraphs, one per bucket. Fold sourcing and outside evidence in as you go.
+4. **50–58 min:** Write a short conclusion that lands the complexity point.
+5. **58–60 min:** Reread only to check you actually used six documents and one outside fact.
+
+## Worked example: a New Deal DBQ, point by point
+
+Take a realistic prompt: *"Evaluate the extent to which the New Deal changed the relationship between the federal government and the American people in the period 1933 to 1941."* Imagine the usual seven documents — a WPA poster, an FDR fireside-chat excerpt, a sharecropper's letter, a critic's cartoon, and so on.
+
+**Step 1 - Decode the prompt.** The task phrase is "evaluate the extent." That means you must argue *how much* it changed and admit what stayed the same. A one-sided answer caps your complexity point before you even start.
+
+**Step 2 - Write contextualization.** Something like: "The 1929 crash triggered the Great Depression, and by 1933 unemployment had reached roughly 25 percent while thousands of banks had collapsed. President Hoover's reliance on voluntary action had failed to stem the crisis, leaving Americans expecting far more from Washington." Two or three sentences of setup before the prompt window earns the point.
+
+**Step 3 - Write the thesis.** "Although the New Deal did not end the Depression or overturn capitalism, it redefined the federal government as a guarantor of economic security through relief programs, new regulation, and permanent institutions like Social Security — forging a lasting bond between ordinary citizens and Washington." Notice the qualification built in; it already sets up complexity.
+
+**Step 4 - Use six documents as evidence.** Do not quote and stop. *Describe and deploy:* "The WPA employment poster shows the government directly hiring workers, a new expectation that Washington, not local charity, would provide jobs." Do that for at least six documents, each attached to a claim.
+
+**Step 5 - Source three documents.** For the WPA poster: "Because the WPA was a federal agency advertising its own success (purpose), the poster likely overstates how smoothly relief reached people — which matters because it shows the government actively shaping public perception of its expanded role." That "which matters because" clause is the whole point.
+
+**Step 6 - Add outside evidence.** Drop in one specific fact not in the documents: the Wagner Act of 1935, which guaranteed workers the right to unionize and shows federal power reaching into private employment. One sentence earns the point.
+
+**Step 7 - Earn complexity.** Qualify across groups: "Yet this new relationship was uneven — the Social Security Act of 1935 excluded agricultural and domestic workers, who were disproportionately Black and female, so the New Deal deepened many citizens' ties to Washington while leaving others outside the safety net entirely." Corroborating *and* qualifying across the whole essay is what secures that seventh point.
+
+If you want a machine to tell you which of those seven boxes you actually hit, paste a real DBQ into the [essay coach](/essay-coach) and ask it to score you against the rubric line by line.
+
+## The five ways students throw away points
+
+- **A thesis that restates the prompt.** "The New Deal changed the relationship a lot" is not a thesis. No categories, no line of reasoning, no point.
+- **Contextualization that is one clause.** Graders want a genuine paragraph of *before*. A phrase glued to your thesis does not count.
+- **Quoting instead of using documents.** A quote with no claim attached is decoration. Every document must prove something.
+- **Stopping at five documents.** Five gets you one evidence point, not two. Count them off as you write.
+- **Fake sourcing.** "Document 3 is by a farmer" is not sourcing. Explain why the farmer's situation or purpose changes how we read the document.
+
+## Test yourself
+
+**Q1.** Which is a real thesis? (a) "The New Deal had many effects on America." (b) "The New Deal redefined the government as a provider of economic security through relief, regulation, and Social Security, though it left some workers excluded."
+
+**Q2.** Turn this into a sourced sentence: "Document 4 is a political cartoon criticising FDR."
+
+**Q3.** Name one piece of outside evidence for a New Deal DBQ.
+
+Quick answers: **Q1** — (b); it has a claim plus categories and a built-in qualification. **Q2** — add why it matters, e.g. "Drawn by a business-aligned critic (point of view), the cartoon exaggerates federal overreach, which reveals the fierce opposition FDR's expanded government provoked." **Q3** — the Wagner Act (1935), the court-packing plan (1937), or the Civilian Conservation Corps all work.
+
+Want more reps? Run a full timed paper in the [mock exam](/mock-exam), then drop your answer into the [essay coach](/essay-coach) to see your rubric score. To pressure-test a single paragraph fast, the [grade](/grade) tool marks it against the criteria in seconds.
+
+## FAQ
+
+**How many documents do I need to use in the AP US History DBQ?** At least six to earn both evidence points, and you must use their content to support an argument — describing what a document shows, not just quoting it. Using three still gets you one point.
+
+**How long should a DBQ be?** There is no length requirement. Most strong responses run four to six paragraphs. Graders reward hitting all seven rubric points, not word count, so a tight essay that ticks every box beats a rambling one.
+
+**Is the complexity point really the hardest?** Yes. It is the point examiners award least often. The reliable route is to build a qualification into your thesis and then sustain it — argue change *and* continuity, or show how one group's experience differed from another's.
+
+**What is the DBQ worth?** The document-based question is 25 percent of your total AP US History exam score — the single most valuable free-response task on the paper.
+
+**In short:** the AP US History DBQ is a seven-box checklist wearing an essay costume — thesis, contextualization, six documents, one outside fact, three sourced documents, and one complexity move. Learn the boxes, plan for the reading period, and practise scoring your own drafts in the [essay coach](/essay-coach) until hitting all seven feels automatic.
+`,
+  },
+
+  {
+    slug: "cbse-class-10-science-diagrams",
+    title: "CBSE Class 10 Science: The Diagram Questions That Always Appear",
+    description: "CBSE Class 10 Science diagram questions carry split marks — the recurring ones (human eye, reflex arc, circuits) and how to draw them for full marks.",
+    publishedAt: "2026-08-13", readTime: "7 min",
+    tags: ["CBSE Class 10 Science","science diagrams","board exam prep","NCERT science","labelled diagrams"],
+    body: `
+**Quick answer:** In CBSE Class 10 Science, labelled-diagram questions are marked in two parts — one share for the drawing, one for the labels — so a neat, correctly labelled diagram scores even when you can't write the explanation. The figures that come back almost every year are the human eye, the reflex arc, the nephron, electric circuit diagrams, and ray diagrams for mirrors and lenses.
+
+I'm Rabail. I sit IGCSE and A-Levels myself, but I mark practice papers for CBSE friends most weekends, and the same thing happens every time. They spend twenty minutes writing a paragraph they half-remember, then draw the diagram in ten careless seconds. That's backwards. The diagram was the safe mark. The paragraph was the gamble.
+
+Here's how CBSE Class 10 Science diagram questions actually work, which ones to drill, and how to draw them so you don't leave marks on the table.
+
+## Why the diagram is the safest mark in the paper
+
+A labelled diagram is the one question type where the examiner isn't judging your English, your handwriting speed, or how well you "understood" a concept. There's a fixed list of correct labels in the marking scheme, and if your label is on it, you get the mark. Full stop.
+
+That's why NCERT packs the textbook with diagrams — the eye, the reflex arc, the nephron, the flower — and why they reappear year after year. The board wants to see that you can reproduce the textbook figure from memory. Not a prettier version. The textbook one.
+
+And the marks are split. A two-mark diagram question is usually one mark for a correct drawing and one for correct labelling. On a three-marker it is often the drawing plus "any four correct labels". This split is the whole reason diagrams deserve priority: even a shaky drawing with the right labels banks most of the marks.
+
+## The diagrams that come back every single year
+
+Keep a running list by chapter and practise these until you can draw each in under two minutes:
+
+- **Human eye and its defects** (The Human Eye and the Colourful World) — the eye labelled with cornea, iris, pupil, ciliary muscles, eye lens, retina and optic nerve; plus ray diagrams for myopia (corrected with a concave lens) and hypermetropia (corrected with a convex lens).
+- **Reflex arc and the neuron** (Control and Coordination) — the pathway through the spinal cord, and a single neuron with dendrite, cell body, axon and nerve ending.
+- **Life processes** (Life Processes) — the nephron, the human heart, the digestive system, and a section showing stomata.
+- **Longitudinal section of a flower** (How Do Organisms Reproduce) — stigma, style, ovary, ovule, anther and filament.
+- **Electric circuits and magnetism** (Electricity; Magnetic Effects of Electric Current) — a circuit with a cell, key, rheostat, resistor, ammeter and voltmeter; magnetic field lines around a bar magnet and a solenoid.
+- **Ray diagrams** (Light — Reflection and Refraction) — image formation by a concave mirror and by a convex lens.
+- **Chemistry apparatus and structures** — the electrolysis of water set-up, and the soap micelle.
+
+If you're shaky on the concept behind any of these, drop the exact figure name into [Explain anything](/explain) and ask it to walk through the diagram label by label.
+
+## How CBSE actually marks a diagram
+
+Three rules from the marking schemes that students never get told:
+
+1. **The drawing and the labels are scored separately.** You can lose the drawing mark and still keep the label marks, and the other way round. So always attempt both — never skip labelling because the drawing came out wrong.
+2. **If a diagram is asked, it must be drawn.** Describing the eye in words earns nothing on a "draw a labelled diagram" question. The examiner looks for a figure. No figure, no marks — however good the prose.
+3. **Neatness and placement count.** Pencil, straight label lines that don't cross each other, and each line touching the exact part. A label line pointing at the wrong structure is a wrong label.
+
+## Worked example: the reflex arc, step by step
+
+"Draw a labelled diagram of a reflex arc" is a three-mark regular. Here's how I'd earn every mark.
+
+**Step 1 — Draw the stimulus and receptor.** Sketch a hand near a flame or a pin. Mark the skin as the receptor.
+
+**Step 2 — Draw the spinal cord.** A vertical cross-section on the other side, showing the inner grey matter (butterfly shape) and the outer white matter.
+
+**Step 3 — Sensory neuron in.** Draw a nerve running from the receptor to the back of the spinal cord. Label it sensory (afferent) neuron.
+
+**Step 4 — Relay neuron.** Inside the grey matter, draw the short relay neuron connecting the incoming and outgoing nerves.
+
+**Step 5 — Motor neuron out.** Draw a nerve from the front of the spinal cord to the muscle. Label it motor (efferent) neuron.
+
+**Step 6 — Effector.** Mark the arm muscle as the effector, and add small arrows showing the direction of the impulse — receptor first, muscle last.
+
+Now map it to the marks: the drawing is one mark; the labelled pathway — receptor, sensory neuron, spinal cord with relay neuron, motor neuron, effector — carries the other two. Notice what the examiner is really checking: the message loops through the spinal cord, not the brain. That is why the response is so fast.
+
+## The three mistakes that cost the most marks
+
+- **Swapping the ammeter and voltmeter.** The ammeter goes in series, in the main circuit; the voltmeter goes in parallel, across the component. Draw them the wrong way round and the circuit is wrong even if every symbol is neat.
+- **Ray diagrams with no arrows or only one ray.** You need at least two rays to locate an image, each with an arrowhead showing direction. One ray locates nothing, and the image mark goes.
+- **Sloppy labels.** Arrowheaded label lines, lines that cross, or misspellings like "cilliary" for ciliary. And watch the volumes in electrolysis of water: hydrogen collects at the cathode in double the volume of the oxygen at the anode, a 2:1 ratio (2H2O → 2H2 + O2). Get that ratio backwards and the label is wrong.
+
+Once you can draw a figure, lock it in with retrieval practice — turn each diagram into a blank-and-fill card in [Flashcards](/flashcards), or generate a set of labelling questions with [the quiz generator](/quiz).
+
+## Test yourself
+
+1. In an electric circuit diagram, which meter is connected in parallel, and across what?
+2. Name the correct sequence of structures in a reflex arc, from stimulus to response.
+3. In the electrolysis of water, which gas is collected in the greater volume, and at which electrode?
+
+**Quick answers:** (1) The voltmeter, connected in parallel across the component whose potential difference you're measuring. (2) Receptor, sensory neuron, relay neuron in the spinal cord, motor neuron, effector. (3) Hydrogen, in double the volume, at the cathode — the electrode joined to the negative terminal.
+
+Want any of these explained diagram-by-diagram before you draw them? Paste the figure name into [Explain anything](/explain) and ask for a labelled walkthrough.
+
+## FAQ
+
+**Do I get marks for a diagram if I can't explain the concept?**
+Yes. The drawing and the labels are marked independently of any explanation, so a correct labelled figure scores on its own. That is exactly why diagram questions are worth drilling.
+
+**Should I draw diagrams in pen or pencil?**
+Pencil. It lets you fix label lines and keeps the figure neat, which the marking scheme rewards. Label in pencil too, or switch to pen only once you're sure.
+
+**How many labels do I need for full marks?**
+It depends on the marks allotted — a three-marker often asks for "any four" correct labels. Add every label you're sure of; there's no penalty for extra correct ones, and each correct label earns its share.
+
+**Which chapters have the most diagram questions?**
+Life Processes, Control and Coordination, and the two light chapters — Light (Reflection and Refraction) and The Human Eye and the Colourful World — between them account for most of the labelled-diagram and ray-diagram marks.
+
+**In short:** treat every CBSE Class 10 Science diagram as split marks you can bank — draw the NCERT figure in pencil, place clean straight label lines on the exact structures, and practise the recurring ones until they are automatic. If a figure still confuses you, get it broken down label by label in [Explain anything](/explain) and drill it with [Flashcards](/flashcards).
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
