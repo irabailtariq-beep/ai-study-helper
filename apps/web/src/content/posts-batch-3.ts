@@ -3666,5 +3666,204 @@ Two habits fixed this for me. I [mark my answer](/grade) on past-paper questions
 **In short:** describe tells the examiner *what* happens; explain tells them *why*, as a chain of linked reasons where every "so" and "because" is a mark — so read the command word first, and give the examiner the one they actually asked for.
 `,
   },
+
+  {
+    slug: "homeostasis-negative-feedback",
+    title: "Homeostasis: Negative Feedback Explained With Real Examples (GCSE, IGCSE & A-Level)",
+    description: "Homeostasis and negative feedback made simple: the receptor-coordinator-effector loop, worked blood glucose and temperature examples, plus the exam phrasing.",
+    publishedAt: "2026-08-15", readTime: "8 min",
+    tags: ["homeostasis","negative feedback","IGCSE biology","GCSE biology","thermoregulation"],
+    body: `
+**Quick answer:** Homeostasis is keeping your internal conditions — like blood glucose and body temperature — steady around a fixed set point. Negative feedback is how it works: a receptor detects a change, a coordinator processes it, and an effector triggers a response that reverses the change and returns the value to the set point. Because the response opposes the original change, it's called "negative."
+
+Homeostasis was the topic where I finally understood why examiners are obsessed with the *order* you write things in. When I first met it in IGCSE Biology it felt like a pile of loose vocabulary — receptor, effector, vasodilation, glycogen — and I dropped marks not because I didn't get it, but because I wrote the loop back to front. Once I wrote the same four-step sequence every time, it turned into some of the most predictable marks on the paper.
+
+## What homeostasis actually is (and why "set point" matters)
+
+Homeostasis is the maintenance of a constant internal environment within narrow limits. Your cells only work in a tight band: enzymes denature if you get too hot, and your brain starves if glucose drops too low. So your body fixes a target value, the set point, and keeps nudging the real value back toward it.
+
+Across the boards the wording shifts but the idea is identical. AQA GCSE calls it the regulation of internal conditions to maintain optimum conditions for function. Cambridge IGCSE says the control of internal conditions within set limits. WAEC and CBSE both frame it as maintaining a constant internal environment. AP Biology bolts it straight onto negative feedback loops. Learn one clean definition and it travels across all five systems: the three examples every syllabus wants are blood glucose concentration, core body temperature, and water and ion balance.
+
+## The negative feedback loop — the sequence that earns marks
+
+Every homeostasis answer is the same four-step story. Write it in this order, always:
+
+1. **Stimulus** — the internal condition moves away from the set point.
+2. **Receptor** — detects the change.
+3. **Coordinator** (control centre) — receives the information and triggers a response. Usually the brain, the hypothalamus, or the pancreas.
+4. **Effector** — a muscle or gland that carries out the response, which *reverses* the change and returns the value to the set point.
+
+"Negative" doesn't mean bad. It means the response opposes the change: if the value went up, the correction brings it down, and the other way around. Mark schemes almost always want two things in one sentence — that the response *counteracts, opposes or reverses* the change, AND that it returns the value to the *set point or normal level*. Miss either half and you drop the mark.
+
+## Worked example 1 — controlling blood glucose, step by step
+
+Say you've just eaten a big plate of rice, so blood glucose rises. Here's the loop, labelled the way an examiner reads it:
+
+- **Step 1 - Stimulus:** blood glucose rises above the set point (around 90 mg/dL, or roughly 4 to 7 mmol per litre).
+- **Step 2 - Receptor and coordinator:** cells in the pancreas — the islets of Langerhans — detect the high glucose. The beta cells respond.
+- **Step 3 - Effector and response:** the pancreas secretes the hormone insulin into the blood.
+- **Step 4 - Effect:** insulin makes liver and muscle cells take up glucose and convert it to glycogen for storage (glycogenesis). Blood glucose falls back to the set point.
+- **Step 5 - The feedback bit:** as glucose drops, the beta cells detect the fall and release less insulin. The correction switches itself off — that's negative feedback closing the loop.
+
+Now the opposite — you've skipped lunch and glucose falls too low:
+
+- The alpha cells of the pancreas detect the drop.
+- The pancreas releases glucagon.
+- Glucagon makes the liver break glycogen back down into glucose (glycogenolysis) and release it into the blood.
+- Glucose climbs back to the set point.
+
+The trap that costs real marks: glucose, glycogen and glucagon are three different words. Glucose is the sugar, glycogen is the stored form, glucagon is the hormone. Mark schemes don't accept "glucogen" or a swapped pair, and I've lost marks for exactly that. So has half my class. Higher-tier GCSE, Cambridge IGCSE and A-Level, and AP all want insulin AND glucagon; foundation-tier AQA sometimes only asks for insulin, so check your spec.
+
+## Worked example 2 — thermoregulation when you overheat
+
+Core body temperature has a set point near 37 degrees Celsius. You go for a run and it starts to climb.
+
+1. **Stimulus:** blood temperature rises above 37 degrees.
+2. **Receptor:** the hypothalamus detects the temperature of the blood, and thermoreceptors in the skin detect the outside temperature.
+3. **Coordinator:** the hypothalamus.
+4. **Effectors and responses:** sweat glands release more sweat, and as it evaporates it transfers heat energy away from the skin; the arterioles supplying the skin capillaries widen (vasodilation), so more warm blood flows near the surface and more heat is radiated away; and the erector muscles relax, so hairs lie flat and don't trap warm air.
+5. **Result:** body temperature falls back to the set point.
+
+Get too cold and every one of these reverses: vasoconstriction, shivering (which releases heat from respiration), hairs standing up to trap insulating air, and less sweat.
+
+The single most common thermoregulation mistake is writing that "blood vessels move to the surface." They don't move at all; it's vasodilation, meaning the arterioles *widen*. And "sweat cools you" is only half the mark: it's the *evaporation* of the water in sweat that removes heat energy. Say the mechanism, not just the outcome. If any of this feels fuzzy, drop the exact phrase into the [AI explainer](/explain) and ask it to break the loop into the receptor, coordinator and effector steps.
+
+## The exam phrasing examiners reward
+
+- "Describe how negative feedback controls X" wants the full four-step sequence, in order, with the receptor and effector named separately.
+- Always name the set point, and use "counteract," "oppose" or "reverse" for what the response does.
+- For temperature, name the effector (sweat gland, arteriole, erector muscle) AND its action.
+
+## Test yourself
+
+1. In two sentences, explain why the control of blood glucose is an example of negative feedback.
+2. Name the receptor, coordinator and effector involved when your body temperature rises too high.
+3. A student writes "when it's cold, blood vessels move deeper into the skin." Correct the biology.
+
+Quick answers: (1) When glucose rises above the set point, the pancreas releases insulin, which lowers glucose back toward normal — the response opposes the change, so it's negative feedback. (2) Receptor: the hypothalamus and skin thermoreceptors; coordinator: the hypothalamus; effectors: sweat glands, skin arterioles and erector muscles. (3) The vessels don't move — the arterioles supplying the skin narrow (vasoconstriction), so less warm blood flows near the surface and less heat is lost.
+
+Want more in your board's exact style? Generate a set with the [quiz maker](/quiz), lock the key terms in with [flashcards](/flashcards), and if a step still won't click, ask the [AI explainer](/explain) to walk the loop one stage at a time.
+
+## FAQ
+
+**What's the difference between negative and positive feedback?**
+Negative feedback reverses a change and returns a value to its set point — it's what keeps you stable, and it's what nearly every homeostasis exam question is about. Positive feedback amplifies a change instead (the surge of contractions in childbirth is the classic example). If a question mentions "maintaining a constant internal environment," it's negative feedback.
+
+**Is the pancreas a receptor or an effector?**
+Both at once, which is exactly why glucose control trips people up. The islet cells detect the glucose level (the receptor role) and secrete the hormone (the effector role). For temperature the jobs are split: the hypothalamus detects, and separate glands and muscles act.
+
+**Do I need to memorise the exact set-point numbers?**
+Know body temperature is about 37 degrees Celsius for all five boards. For blood glucose, knowing it sits "around 90 mg/dL" or "about 4 to 7 mmol per litre" is a nice bonus, but the marks are almost always for the *mechanism*, not the number. Don't lose the sequence marks chasing decimals.
+
+**Why do enzymes make homeostasis so important?**
+Enzymes have an optimum temperature and pH. Stray too far and they denature, so respiration and every other reaction slows or halts. Homeostasis keeps conditions in the narrow band where your enzymes — and therefore your cells — actually work.
+
+**In short:** homeostasis holds your internal conditions at a set point, and negative feedback is the mechanism — the receptor detects the change, the coordinator processes it, and the effector reverses it. Learn the four-step sequence once, name your receptor and effector, always mention the set point, and blood glucose and thermoregulation become two of the most reliable questions you'll ever sit.
+`,
+  },
+
+  {
+    slug: "waves-reflection-refraction",
+    title: "Waves: Reflection, Refraction, and the Rules That Govern Them",
+    description: "Waves reflection and refraction explained for GCSE and CBSE physics: the law of reflection, why light bends, and total internal reflection.",
+    publishedAt: "2026-08-15", readTime: "7 min",
+    tags: ["waves reflection refraction","gcse physics waves","refraction of light","total internal reflection","law of reflection"],
+    body: `
+**Quick answer:** When a wave hits a boundary it either bounces off (reflection) or passes through and bends (refraction). Reflection always obeys one rule - the angle of incidence equals the angle of reflection, both measured from the normal, not the surface. Refraction happens because the wave changes speed in the new material: light entering something denser (air into glass) slows down and bends towards the normal; leaving it, light speeds up and bends away.
+
+I lost marks on this exact topic in a mock - not because it is hard, but because I measured my angles from the glass surface, not the normal. So here are the rules, why they are true, and the traps that quietly cost marks in GCSE, IGCSE and CBSE papers.
+
+## First, the two kinds of wave
+
+Before reflection and refraction make sense, you need to know what is moving.
+
+- **Transverse waves** - the vibration is at 90 degrees to the direction of travel. Think of flicking a rope up and down while the wave moves forward. All light and the rest of the electromagnetic spectrum, water ripples and earthquake S-waves are transverse, and they have crests and troughs.
+- **Longitudinal waves** - the vibration is along the same line the wave travels, making squashed-together compressions and spread-out rarefactions. Sound is the classic example; so are P-waves in a quake.
+
+Both carry energy, not matter - the water in a ripple bobs up and down, it does not travel to the shore. And both can be reflected and refracted. Speed, frequency and wavelength are tied together by wave speed = frequency x wavelength, which explains refraction later.
+
+## Reflection: one rule, measured the right way
+
+Draw a straight line at exactly 90 degrees to the surface where the ray lands - that line is the normal. Everything is measured from it.
+
+- The **angle of incidence (i)** is between the incoming ray and the normal.
+- The **angle of reflection (r)** is between the reflected ray and the normal.
+- **The law of reflection:** i = r. Always.
+
+The mistake that costs marks - and the one I made - is measuring from the mirror instead of the normal. If your incident ray is 30 degrees from the normal, it is 60 degrees from the surface; quote the 60 and you are wrong, even though the reflection itself was fine. In an AQA ray-box practical or a CBSE diagram question, draw the normal as a dashed line first, every time.
+
+One nice consequence: a plane-mirror image sits the same size and upright, as far behind the mirror as the object is in front, and laterally inverted - which is why AMBULANCE is printed back-to-front on the vehicle.
+
+## Refraction: why light bends
+
+Refraction is what happens when a wave crosses from one material into another and changes speed. That speed change is the *cause* of the bending - not the density on its own.
+
+Picture a car driving at an angle off tarmac onto mud: the wheel that hits the mud first slows while the other still grips, so the car slews towards the mud. Light does the same:
+
+- Going into a **denser** medium (air into glass, or air into water), light **slows down** and bends **towards the normal**. The angle of refraction is smaller than the angle of incidence.
+- Coming back out into a **less dense** medium (glass into air), light **speeds up** and bends **away from the normal**. The angle of refraction is larger.
+- If the ray travels along the normal (i = 0 degrees), it does not bend at all - but it still changes speed.
+
+One more trap: the frequency stays the same. It is the speed and the wavelength that change together, because frequency is set by the source.
+
+How strongly a material bends light is its refractive index, n. Two ways to write it:
+
+- n = sin i / sin r (from the angles - this is Snell's law)
+- n = c / v (speed of light in a vacuum divided by its speed in the material)
+
+Glass is about 1.5 and water about 1.33 - numbers worth memorising for CBSE and IGCSE.
+
+## Worked example: a ray entering a glass block
+
+*A ray of light hits a glass block at an angle of incidence of 40 degrees. The refractive index of the glass is 1.5. Find the angle of refraction.*
+
+1. **Write the rule.** n = sin i / sin r.
+2. **Put in what you know.** 1.5 = sin 40 / sin r.
+3. **Rearrange for sin r.** sin r = sin 40 / 1.5.
+4. **Work out the top.** sin 40 = 0.643, so sin r = 0.643 / 1.5 = 0.429.
+5. **Take the inverse sine.** r = arcsin(0.429) = 25.4 degrees.
+6. **Sense-check.** 25.4 is smaller than 40, so the ray bent towards the normal - exactly what should happen going into denser glass. If your answer came out bigger, you divided the wrong way.
+
+Leaving the far side of a parallel-sided block, the ray bends away from the normal by the same amount, so it emerges parallel to the ray that went in, just shifted sideways - a detail examiners love to check. Want it walked through with your own numbers? Paste the question into /explain and it will rebuild each step; for the trig itself, /math-solver handles the arcsin.
+
+## A note on total internal reflection
+
+Push the angle of incidence inside the glass higher and higher and the refracted ray bends further from the normal, until at one special angle - the critical angle - it grazes along the surface (angle of refraction = 90 degrees). Go past that and no light escapes at all: it reflects straight back inside. That is total internal reflection.
+
+Two conditions, and you need both:
+
+1. The light is going from a denser to a less dense medium (for example glass into air).
+2. The angle of incidence is greater than the critical angle.
+
+The critical angle comes from sin c = 1 / n. For glass (n = 1.5), sin c = 0.667, so c = 41.8 degrees. That is why a 45-degree prism reflects light inside binoculars and periscopes, why optical fibres pipe light around bends, and why a cut diamond (n = 2.42, critical angle just 24 degrees) traps light and sparkles.
+
+## Test yourself
+
+1. A ray of light meets a mirror at 25 degrees to the mirror's surface. What is the angle of reflection?
+2. Light passes from water into air. Does it bend towards or away from the normal, and does it speed up or slow down?
+3. The critical angle of a glass is 42 degrees. Light inside the glass hits the boundary with air at 50 degrees. What happens?
+
+Quick answers:
+
+1. **65 degrees.** The 25 is measured from the surface, so the angle of incidence from the normal is 90 - 25 = 65, and reflection equals incidence.
+2. **Away from the normal, and it speeds up** - it is moving into a less dense medium.
+3. **Total internal reflection** - 50 is greater than the 42-degree critical angle, so no light escapes; it all reflects back inside.
+
+Missed one? Drop the idea you are stuck on into /explain for a plain rebuild, then fire a few fresh ray questions at /quiz to lock it in.
+
+## FAQ
+
+**Do reflection and refraction only happen to light?**
+No - every wave does both. Sound echoes off walls (reflection) and bends through air of different temperatures (refraction), and water waves refract as they slow in the shallows. Light is just the easiest one to draw.
+
+**Why does light not bend if it hits the surface straight on?**
+Because there is no leading edge to slow down first. Along the normal the whole wavefront crosses into the new material at the same instant, so it changes speed without changing direction.
+
+**What is the difference between the critical angle and the angle of incidence?**
+The critical angle is a fixed property of the boundary - it depends only on the two materials. The angle of incidence is whatever angle you send the ray in at, and total internal reflection only kicks in once that incidence angle climbs above the critical angle.
+
+**In short:** reflection bounces a wave off a surface with the angle of incidence equal to the angle of reflection, both measured from the normal, while refraction bends it because the wave changes speed crossing into a new material - towards the normal when it slows in something denser, away when it speeds up. Draw the normal first and those two rules carry most of the marks. Stuck on a ray diagram? /explain will talk you through it.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
