@@ -4259,5 +4259,211 @@ No, but they line up. The line of symmetry is a vertical line, x = a number. The
 **In short:** Every parabola sketch comes down to the same five features - shape, y-intercept, roots, line of symmetry and turning point - and completing the square is what pins the turning point down exactly. Find all five, label every coordinate, and draw a smooth curve, and there's no sketch question on a GCSE or IGCSE paper that can catch you out.
 `,
   },
+
+  {
+    slug: "nitrogen-cycle",
+    title: "The Nitrogen Cycle Explained: The Diagram Examiners Love",
+    description: "Nitrogen cycle explained for CBSE, IGCSE and GCSE biology: fixation, nitrification, assimilation, denitrification, the bacteria and the labelled diagram.",
+    publishedAt: "2026-08-18", readTime: "7 min",
+    tags: ["nitrogen cycle","IGCSE biology","GCSE biology","CBSE biology","ecology"],
+    body: `
+**Quick answer:** The nitrogen cycle moves nitrogen between the air, the soil and living things. Four processes do the work: nitrogen fixation (N2 gas into ammonia and nitrates, by nitrogen-fixing bacteria and lightning), nitrification (ammonium into nitrates, by nitrifying bacteria), assimilation (plants take up nitrates to build proteins; animals get theirs by eating), and denitrification (nitrates back into N2 gas, by denitrifying bacteria in waterlogged soil). Decomposers return nitrogen in dead matter to the soil as ammonium.
+
+The nitrogen cycle was the first diagram I genuinely feared — a plate of spaghetti, arrows everywhere and four sorts of bacteria that all blur together. Then a teacher told me examiners don't want the spaghetti; they want four clean moves and the bacteria that drive each one. Once I learned it as a story — nitrogen leaving the air, looping through living things, then going home — the marks stopped hiding.
+
+## Why nitrogen matters
+
+- The air is about 78% nitrogen gas (N2) — more of it above your head than anything else.
+- But N2 is almost unreactive — the two atoms are held by a strong triple bond, so plants and animals cannot use it straight from the air. This one fact is why the whole cycle exists.
+- Living things need nitrogen to make amino acids (which build proteins) and DNA — no usable nitrogen, no growth.
+- Plants can only take nitrogen in as nitrate ions (NO3-) dissolved in soil water, through their roots. Animals can't even do that — we get ours by eating plants or other animals.
+
+## The four processes examiners want
+
+### 1. Nitrogen fixation (air to soil)
+
+Turning unreactive N2 into useful nitrogen compounds (ammonia, then nitrates). Three routes:
+
+- Nitrogen-fixing bacteria. Some live free in the soil; others (Rhizobium, in the CBSE and Cambridge detail) live inside the root nodules of legumes — peas, beans, clover. It's a mutualism: the plant feeds them sugars, they hand back nitrogen compounds. That is why farmers grow clover or beans and plough them in — free fertiliser.
+- Lightning. The energy in a strike makes nitrogen and oxygen react, forming nitrogen oxides that dissolve in rain and reach the soil as nitrates.
+- The Haber process. Factories fix N2 into ammonia for fertiliser.
+
+### 2. Nitrification (ammonium to nitrate)
+
+Nitrifying bacteria convert ammonium ions into nitrates in two oxidation steps: ammonium (NH4+) to nitrite (NO2-) to nitrate (NO3-). Because it is oxidation, these bacteria need oxygen — they only work in well-aerated soil. That is why farmers plough and drain fields: to let air in so nitrification keeps running.
+
+### 3. Assimilation (nitrate to protein)
+
+Plants absorb nitrate ions through their roots and use the nitrogen to build amino acids, then proteins and DNA. When an animal eats the plant, that nitrogen becomes animal protein — the nitrogen has been assimilated into a living body.
+
+### 4. Denitrification (soil back to air)
+
+Denitrifying bacteria convert nitrates back into nitrogen gas, which escapes to the atmosphere. Crucially, they are anaerobic — they thrive when there is no oxygen, meaning waterlogged, compacted soil. For a farmer they are the villain, stripping nitrates and lowering fertility. It is the exact opposite condition to nitrification — a favourite contrast to test.
+
+And the step that keeps the whole thing turning — decomposition. When plants and animals die, the nitrogen is locked in their proteins (and in waste like urea and faeces). Decomposers — bacteria and fungi — break these down and release the nitrogen back into the soil as ammonium. This step (ammonification) refills the soil so nitrification has something to work on.
+
+## The bacteria, sorted (the part people lose marks on)
+
+Keep the four jobs straight:
+
+- Nitrogen-fixing bacteria: N2 gas to ammonia and nitrogen compounds. In legume root nodules, or free in the soil.
+- Decomposers (bacteria and fungi): dead matter and waste to ammonium.
+- Nitrifying bacteria: ammonium to nitrite to nitrate. Need oxygen.
+- Denitrifying bacteria: nitrate to N2 gas. Need NO oxygen — waterlogged soil.
+
+The most common mix-up is thinking nitrogen-fixing and nitrifying bacteria do the same job. Fixing brings nitrogen in from the air; nitrifying only upgrades ammonium already in the soil into nitrate.
+
+How much you memorise depends on your board:
+
+- Cambridge IGCSE and most GCSE (Edexcel, OCR): name the types — nitrogen-fixing, nitrifying, denitrifying bacteria, plus decomposers — and the role of lightning. Genus names are not required.
+- CBSE and Cambridge A-Level: go further, naming Rhizobium (fixing, in nodules) and often the two-step oxidation of nitrification.
+- AQA GCSE leans on decomposition and the carbon cycle rather than the full nitrogen cycle, so check your spec before over-learning it.
+
+Not sure which applies to you? Paste your syllabus point into [Explain anything](/explain) and ask it to pitch the answer at your board.
+
+## Worked example: trace the nitrogen (the classic 6-marker)
+
+Question: "Nitrogen in a dead rabbit ends up as protein in a growing wheat plant. Describe how." Six marks means roughly six mark-bearing steps:
+
+1. Decomposition. Decomposers (bacteria and fungi) break down the proteins in the dead rabbit and release the nitrogen as ammonium ions into the soil. (1 mark)
+2. Nitrification, part one. Nitrifying bacteria oxidise the ammonium into nitrite. (1 mark)
+3. Nitrification, part two. The nitrite is oxidised into nitrate ions, NO3-. (1 mark)
+4. Condition. This needs oxygen, so it happens in well-aerated soil. (1 mark — the condition mark most people skip.)
+5. Absorption. The wheat plant absorbs the nitrate ions from the soil through its roots. (1 mark)
+6. Assimilation. The plant uses the nitrogen from the nitrates to make amino acids, joined together into proteins. (1 mark)
+
+Notice what scores: naming the bacteria, the ions at each stage (ammonium, nitrite, nitrate), and the condition (oxygen). A vague "the nitrogen goes into the soil and the plant takes it up" earns maybe one mark of six. Want your own answer marked against your board's scheme? Drop it into [Explain anything](/explain) for line-by-line grading, or make more like it with the [quiz maker](/quiz).
+
+## Test yourself
+
+1. A field floods and stays waterlogged for weeks. Explain what happens to the amount of nitrate in the soil, and name the type of bacteria responsible.
+2. Why can't a plant use the nitrogen in the air directly, even though the air is 78% nitrogen?
+3. Put these in the right order for nitrogen from a dead leaf to reach a plant as nitrate: nitrification, absorption, decomposition.
+
+Quick answers:
+
+1. The nitrate falls. Waterlogged soil is low in oxygen (anaerobic), which suits denitrifying bacteria; they convert nitrates back into nitrogen gas, lowering soil fertility.
+2. Nitrogen gas (N2) is unreactive because of its strong triple bond, so plants cannot absorb or use it. They can only take it up as nitrate ions from the soil, so fixation must happen first.
+3. Decomposition, then nitrification, then absorption.
+
+Turn the four processes and their bacteria into [flashcards](/flashcards), or sit a timed set on ecology with the [quiz maker](/quiz).
+
+## FAQ
+
+What is the difference between nitrogen fixation and nitrification?
+
+Fixation brings new nitrogen in from the air, turning N2 gas into ammonia and nitrogen compounds. Nitrification happens in the soil, converting ammonium already there into nitrite then nitrate. Different starting materials, different bacteria.
+
+What is the role of decomposers in the nitrogen cycle?
+
+Decomposers (bacteria and fungi) break down proteins in dead organisms and waste, releasing the nitrogen into the soil as ammonium. Without them, nitrogen stays locked in dead matter and the cycle stalls.
+
+Which bacteria need oxygen, and which don't?
+
+Nitrifying bacteria are aerobic — they need oxygen and work in well-aerated soil. Denitrifying bacteria are anaerobic — they thrive without oxygen, which is why waterlogged soil loses its nitrates.
+
+Do I have to memorise names like Rhizobium?
+
+It depends on your board. CBSE and Cambridge A-Level expect genus names; Cambridge IGCSE and most GCSE only want the type of bacteria and its job. If in doubt, learn the job first — a named bacterium on the wrong role scores nothing.
+
+**In short:** The nitrogen cycle solves one problem — getting unreactive N2 out of the air into a form roots can use. Learn it as four moves (fixation, nitrification, assimilation, denitrification) plus decomposers refilling the soil; name the bacteria behind each, and the two conditions that flip it: oxygen for nitrification, none for denitrification.
+`,
+  },
+
+  {
+    slug: "wassce-english-formal-letter",
+    title: "WASSCE English: Writing a Formal Letter That Scores",
+    description: "WASSCE English formal letter format: the six parts, the formal register, and how WAEC marks it out of 50, with a full worked example.",
+    publishedAt: "2026-08-18", readTime: "7 min",
+    tags: ["wassce english formal letter","waec english","formal letter format","wassce essay marking scheme","how to write a formal letter"],
+    body: `
+**Quick answer:** A WASSCE formal letter needs six fixed parts, in order — your address, the date, the recipient's address, the salutation ("Dear Sir,"), an underlined heading, the body, and "Yours faithfully," above your full name. WAEC marks the letter out of 50 across Content (10), Organisation (10), Expression (20) and Mechanical Accuracy (10), so a correct format banks the easy marks while clear, error-free English wins the rest.
+
+I sit Cambridge IGCSE and A-Levels myself, but I've spent months helping a cousin in Lagos through WASSCE English, and I'll say this plainly: the formal letter is the most *winnable* question on the whole paper. The ideas are simple, the format is fixed, and once you drill it you walk into the hall already holding marks before you've written a single sentence of your own.
+
+## The six parts, in the exact order WAEC wants
+
+A formal letter is a machine with six parts. Miss one and you leak format marks, so learn them as a fixed sequence:
+
+1. **Your address** — top right corner, no name above it. For example: *24 Adeola Street, Surulere, Lagos State.* (each line stacked on its own line in the real letter).
+2. **The date** — directly under your address. Write it in full: *15th June, 2026.* Never "15/6/26" in a formal letter.
+3. **The recipient's address** — on the left, a line or two below the date. Their title and where they work: *The Commissioner for Education, Ministry of Education, Ikeja, Lagos State.*
+4. **The salutation** — *Dear Sir,* or *Dear Madam,* with a comma. You rarely know the officer's name, so use the title, not "Dear Mr Bello."
+5. **The heading** — this is the part students from other systems always forget, and in WASSCE it carries marks. One line under the salutation, capitalised and underlined: *POOR STATE OF FACILITIES IN MY SCHOOL.*
+6. **The body, then the close** — end with *Yours faithfully,* (only the Y is capital), leave a space for your signature, then your full name in block letters: *CHIOMA OKAFOR.*
+
+## Register: the WASSCE formal voice
+
+Format gets you in the room; register keeps you there. Formal means impersonal and controlled:
+
+- **No contractions.** Write "I am writing", not "I'm writing"; "do not", not "don't". This one habit alone lifts your tone instantly.
+- **No abbreviations or symbols.** No "etc.", no "&", no "govt". Spell every word out.
+- **No slang, no text-speak, no exclamation-mark drama.** "You people must fix this!" is a fail; "I wish to draw your attention to this matter" is the register they reward.
+- **One idea, one paragraph.** A formal letter is built from tidy paragraphs, never one breathless block.
+
+## How WAEC actually marks it — out of 50
+
+Every WASSCE composition, letter included, is scored on four things, and the weighting changes how you should spend your energy:
+
+- **Content — 10 marks.** Did you cover the points the question asked for, *and* include the letter's features (both addresses, date, salutation, heading, close)?
+- **Organisation — 10 marks.** Logical paragraphing, correct format, and linking words that carry the reader from point to point.
+- **Expression — 20 marks.** The biggest slice by far: vocabulary, sentence variety, grammar and an appropriately formal tone.
+- **Mechanical Accuracy — 10 marks.** Spelling, punctuation, tenses and subject-verb agreement.
+
+Two things fall out of that split. **Expression is worth double everything else**, so the candidate who writes plain, correct sentences beats the one with clever ideas buried in broken grammar. And **Mechanical Accuracy is a gift** — every avoidable spelling slip and missing comma chips away at 10 marks you could simply keep. Aim for about 450 words and three to four developed points; that's the standard WASSCE composition length.
+
+## The body: introduction, development, conclusion
+
+Inside the letter, the body has three moves: a **first paragraph** that says who you are and why you are writing; **two to three development paragraphs**, one clear point each, developed with a reason and an example (this is where "make at least three points" lives); and a **final paragraph** that ends with a courteous call to action.
+
+## A worked formal letter, step by step
+
+*Question: Write a letter to the Commissioner for Education in your state complaining about the inadequate facilities in your school and suggesting how they can be improved.*
+
+1. **Plan the points before writing.** I pick three: overcrowded classrooms, no science laboratory, a leaking roof. One paragraph each. Planning here is what earns the Content and Organisation marks.
+2. **Lay out the format.** Address top right, date under it, the Commissioner's address on the left, then *Dear Sir,* and the underlined heading *POOR STATE OF FACILITIES IN MY SCHOOL.*
+3. **Write the introduction.** *I am a final-year student of Government Secondary School, Ikeja, and I wish to draw your attention to the poor state of facilities in our school, which is affecting our preparation for the coming examinations.*
+4. **Develop point one, with a reason and an example.** *Firstly, our classrooms are severely overcrowded. A room built for forty students now holds over seventy, so many of us stand throughout lessons and cannot concentrate.*
+5. **Develop the remaining points**, each in its own paragraph, chained with linking words: *Secondly... In addition... Finally...* Every point gets a reason and a concrete detail, never a bare complaint.
+6. **Conclude courteously.** *I therefore appeal to you to send inspectors to assess our school and to release funds for these repairs before the new term. I am confident that your timely intervention will restore a proper learning environment.*
+7. **Close correctly.** *Yours faithfully,* — then a space for the signature — then *CHIOMA OKAFOR.*
+
+Notice what that letter does: no contractions, every point developed with an example, linking words steering the reader through. That is Organisation and Expression banked on purpose, not by luck.
+
+## Common mistakes that quietly cost marks
+
+- **"Yours Faithfully" with a capital F.** Only the Y is capital. The same trap catches "Yours sincerely."
+- **Mixing up the close.** Dear Sir / Dear Madam always pairs with *Yours faithfully.* You only use *Yours sincerely* when you opened with the person's actual name — rare in a formal WASSCE letter.
+- **Forgetting the underlined heading**, or writing it in lower case.
+- **Putting your name at the top** above your own address — it belongs only at the very end.
+- **Writing far under 450 words**, so the points stay thin, and thin points cap your Content mark no matter how neat the letter looks.
+
+## Test yourself
+
+1. You open a formal letter with "Dear Madam,". Which close is correct — "Yours sincerely," or "Yours faithfully,"?
+2. Where on the page do your own address and the date go, and does your name appear above them?
+3. A WASSCE prompt says "make at least three points." How many body paragraphs should the development have, and why?
+
+*Quick answers: (1) Yours faithfully — sincerely is only for when you name the person. (2) Top right; the date sits directly under the address, and no, your name never goes above your own address. (3) At least three, one point per paragraph, because separated, developed points are far easier for the examiner to award Content and Organisation marks.*
+
+Want to know whether your letter would actually score? Write one and run it through [Essay Coach](/essay-coach) — it checks your format, register and structure the way a WAEC examiner would and shows you where you're leaking Expression and Mechanical Accuracy marks. Draft, check, redraft: that loop lifted my cousin a full grade. If a grammar rule keeps tripping you, [Essay Coach](/essay-coach) will name it, and you can get the concept broken down in [Explain](/explain) or mark a full practice answer in [Grade my work](/grade).
+
+## FAQ
+
+**Do I need the recipient's address in a WASSCE formal letter?**
+Yes. A formal letter has both addresses — yours in the top right, and the recipient's title and address on the left below the date. An informal letter to a friend needs only your own address.
+
+**Is the underlined heading really necessary?**
+For a formal letter, yes. WASSCE expects a short, capitalised, underlined heading after the salutation, and it forms part of your format and Content marks. Informal letters do not take one.
+
+**How long should the letter be?**
+Aim for about 450 words — the standard WASSCE composition length. That is enough to develop three or four points properly, and padding beyond it just adds chances to lose Mechanical Accuracy marks.
+
+**Can I just use "Yours sincerely" to be safe?**
+No — always match the close to the salutation. Dear Sir / Dear Madam takes *Yours faithfully.* *Yours sincerely* only follows a named salutation like "Dear Mr Bello," which you almost never have in a formal letter.
+
+**In short:** get the six format parts in order, keep the register formal and contraction-free, develop three or four points in their own paragraphs, and guard the easy Mechanical Accuracy marks — because in WAEC's 10/10/20/10 scheme, a clean, correctly laid-out letter is already scoring before your ideas even land.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
