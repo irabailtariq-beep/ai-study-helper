@@ -4465,5 +4465,259 @@ No — always match the close to the salutation. Dear Sir / Dear Madam takes *Yo
 **In short:** get the six format parts in order, keep the register formal and contraction-free, develop three or four points in their own paragraphs, and guard the easy Mechanical Accuracy marks — because in WAEC's 10/10/20/10 scheme, a clean, correctly laid-out letter is already scoring before your ideas even land.
 `,
   },
+
+  {
+    slug: "completing-the-square",
+    title: "Completing the Square: When to Use It and How",
+    description: "Completing the square, step by step: solve quadratics, find the turning point, and get exact surd answers. GCSE and IGCSE worked examples.",
+    publishedAt: "2026-08-19", readTime: "6 min",
+    tags: ["completing the square","quadratic equations","GCSE maths","IGCSE maths","turning point"],
+    body: `
+**Quick answer:** Completing the square rewrites a quadratic like x^2 + 6x + 5 into the form (x + p)^2 + q — here, (x + 3)^2 - 4. You halve the coefficient of x to get p, then subtract p^2 to cancel the extra bit you added. Reach for it whenever you need the turning point, an exact (surd) answer, or the vertex form — not when the quadratic factorises cleanly.
+
+The first time my teacher completed the square on the board, I copied every line down and still had no idea where the "-9" came from. It looked like a magic trick. It isn't. It's one honest move repeated, and once it clicks you get the turning point, exact solutions and even the whole quadratic formula almost for free. Here's how I finally made it stick, plus the exact sign errors that cost me marks in my Year 10 mocks.
+
+## What completing the square actually means
+
+Multiply out (x + p)^2 and you get x^2 + 2px + p^2. Notice the middle term is 2px. So any expression like x^2 + bx is *nearly* a perfect square — it's just missing the p^2 on the end, where 2p = b, which means p = b/2.
+
+The whole method is: add that missing p^2 so the front becomes a perfect square, then subtract the same p^2 straight back so you haven't changed the value. That's it. Everything else is bookkeeping.
+
+## The method when a = 1, step by step
+
+Take x^2 + 6x + 5. This is the classic AQA and Edexcel Higher-tier phrasing: "write x^2 + 6x + 5 in the form (x + a)^2 + b." CBSE Class 10 and Cambridge IGCSE 0580 use the same idea to *solve* by completing the square.
+
+- **Step 1 — halve the x-coefficient.** b = 6, so p = 6/2 = 3. Your bracket is going to be (x + 3).
+- **Step 2 — write the squared bracket.** (x + 3)^2. But this expands to x^2 + 6x + 9, so it has an extra +9 that wasn't in the original.
+- **Step 3 — subtract what you overshot.** Take off that 9: (x + 3)^2 - 9.
+- **Step 4 — bring down the original constant.** The +5 was always there, so add it: (x + 3)^2 - 9 + 5.
+- **Step 5 — tidy the numbers.** -9 + 5 = -4, giving (x + 3)^2 - 4. Done.
+
+To solve x^2 + 6x + 5 = 0 from here: (x + 3)^2 = 4, so x + 3 = ±2, giving x = -1 or x = -5. (Yes, this one also factorises — I'm using easy numbers so the *method* is clear.)
+
+## Reading the turning point straight off
+
+This is the payoff. From (x + 3)^2 - 4, the vertex is at (-3, -4). A squared bracket can never be negative, so the smallest the whole thing can be is when (x + 3)^2 = 0 — that is, at x = -3, where the value drops to -4.
+
+So the graph has a minimum at (-3, -4), and the line of symmetry is x = -3. Watch the sign: the bracket says (x + 3) but the turning point x-value is -3, not +3. That single flip catches people out constantly.
+
+## When a is bigger than 1
+
+If there's a number in front of x^2, factorise it out of the first two terms first. Express 2x^2 - 8x + 5 in the form a(x + p)^2 + q — the exact Cambridge and WAScE Further Maths phrasing.
+
+- **Step 1 — factor the 2 out of the x-terms only.** 2(x^2 - 4x) + 5. Leave the +5 outside.
+- **Step 2 — complete the square inside the bracket.** Half of -4 is -2, so x^2 - 4x = (x - 2)^2 - 4.
+- **Step 3 — put it back in.** 2[(x - 2)^2 - 4] + 5.
+- **Step 4 — multiply the 2 back through.** 2(x - 2)^2 - 8 + 5. The -4 becomes -8 because it's inside the bracket the 2 multiplies — miss this and everything after is wrong.
+- **Step 5 — simplify.** 2(x - 2)^2 - 3. Minimum at (2, -3).
+
+To solve in exact form: 2(x - 2)^2 = 3, so (x - 2)^2 = 3/2, giving x = 2 ± √6/2. If the question says "give your answer in surd form," a calculator decimal loses you the accuracy mark — this is exactly when completing the square is the *intended* route.
+
+## Where the quadratic formula comes from
+
+Complete the square on the general equation and the formula falls out. Doing this once made me stop fearing it.
+
+- Start with ax^2 + bx + c = 0.
+- Divide everything by a: x^2 + (b/a)x + c/a = 0.
+- Move the constant across: x^2 + (b/a)x = -c/a.
+- Complete the square on the left (half of b/a is b/2a): (x + b/2a)^2 - b^2/4a^2 = -c/a.
+- Rearrange: (x + b/2a)^2 = (b^2 - 4ac) / 4a^2.
+- Square-root both sides: x + b/2a = ±√(b^2 - 4ac) / 2a.
+- Subtract b/2a: x = [-b ± √(b^2 - 4ac)] / 2a.
+
+That's the quadratic formula. It's just completing the square done once, in general.
+
+## The sign errors that cost real marks
+
+- **Forgetting to subtract p^2.** Writing (x + 3)^2 + 5 instead of (x + 3)^2 - 9 + 5. The bracket always overshoots — you must take it back off.
+- **Reading the vertex x with the wrong sign.** (x + 3)^2 gives x = -3, not +3.
+- **Not multiplying the subtracted square back by a.** With 2(x - 2)^2, the inner -4 must become -8. Leaving it as -4 is the most common a-greater-than-1 mistake.
+- **Rounding when b is odd.** x^2 + 5x becomes (x + 5/2)^2 - 25/4. Keep the fractions — mark schemes want exact values, not 2.5 turned into a decimal that drifts.
+- **Sign of the bracket following b.** x^2 - 4x gives (x - 2)^2 - 4; the inside sign matches b's sign.
+
+## When to actually use it
+
+Use completing the square when the question:
+
+- says "write in the form (x + a)^2 + b" or "a(x + p)^2 + q" — that's a direct instruction;
+- asks for the turning point, vertex, minimum or maximum value, or line of symmetry;
+- says "solve, giving your answer in surd form" or "exact form";
+- asks you to prove a quadratic has no real roots, or to find the range of a function (Cambridge Additional Maths 0606, AP Precalculus vertex form).
+
+Don't bother when it factorises in a couple of seconds — factorise instead. And if a decimal answer is fine, the quadratic formula is faster.
+
+## Test yourself
+
+1. Write x^2 - 8x + 11 in the form (x + a)^2 + b, and state the turning point.
+2. Solve x^2 + 4x - 6 = 0 by completing the square, giving your answer in surd form.
+3. Express 3x^2 + 12x + 5 in the form a(x + p)^2 + q, and state the minimum value.
+
+Quick answers:
+
+1. (x - 4)^2 - 5, turning point (4, -5).
+2. (x + 2)^2 - 10 = 0, so x = -2 ± √10.
+3. 3(x + 2)^2 - 7, minimum value -7.
+
+Want each line marked the way an examiner would? Paste your working into [Math solver](/math-solver) to check every step, or run a few more through [Mark my answer](/grade) to see where a method mark would slip. Do five and the whole method locks in.
+
+## FAQ
+
+**When should I complete the square instead of factorising?** When the quadratic doesn't factorise with whole numbers, when you need the turning point, or when the paper demands an exact surd answer. If it factorises fast, just factorise.
+
+**How do I complete the square when b is odd?** Halve it and keep the fraction. x^2 + 5x becomes (x + 5/2)^2 - 25/4. Don't round — the mark scheme expects the exact fraction, and rounding early loses accuracy marks.
+
+**How do you find the turning point from completed-square form?** From (x + p)^2 + q, the vertex is at (-p, q). Flip the sign of the number inside the bracket for the x-coordinate; the q is the y-coordinate and the minimum (or maximum) value. Drill this with quick recall cards in [Flashcards](/flashcards).
+
+**Why do we halve the coefficient of x?** Because (x + p)^2 expands to x^2 + 2px. To match the bx in your quadratic you need 2p = b, so p = b/2. Halving isn't a rule to memorise — it's forced by the expansion. Still stuck on a specific line? Drop it into [Math solver](/math-solver) and watch it work through.
+
+**In short:** completing the square turns a quadratic into (x + p)^2 + q by halving b and subtracting p^2. That one form hands you the turning point, exact surd solutions, and even the quadratic formula. Watch the vertex sign flip, and with a in front, multiply the subtracted square back through. Nail those and this becomes some of the most reliable marks on the paper.
+`,
+  },
+
+  {
+    slug: "a-level-trig-identities",
+    title: "Trig Identities You Must Know for A-Level (and How to Use Them)",
+    description: "Trig identities a level students must know: Pythagorean, double-angle and addition formulae, when to use each, worked solve and prove examples, and exam tips.",
+    publishedAt: "2026-08-19", readTime: "7 min",
+    tags: ["A-Level Maths","trigonometry","trig identities","exam technique","revision"],
+    body: `
+**Quick answer:** The trig identities you must know for A-Level are the Pythagorean identity sin^2 x + cos^2 x = 1 (plus its cousins 1 + tan^2 x = sec^2 x and 1 + cot^2 x = cosec^2 x), the quotient identity tan x = sin x / cos x, the double-angle formulae, and the addition formulae. You use them to turn a messy trig equation into one function you can actually solve.
+
+When I first hit trig identities in A-Level I thought the whole thing was just memorising a wall of formulae. It isn't. The exam almost never asks you to recite one. It hides the identity inside a "solve this equation" or "prove that" question, and the real skill is spotting *which* identity unlocks it. Here is the shortlist I actually use, plus how I decide which one to reach for under pressure.
+
+## The identities you genuinely have to know by heart
+
+Pythagorean family:
+
+- sin^2 x + cos^2 x = 1
+- 1 + tan^2 x = sec^2 x
+- 1 + cot^2 x = cosec^2 x
+
+You get the last two for free by dividing the first one by cos^2 x and then by sin^2 x, so if you only remember the top line you can rebuild the other two in the margin.
+
+Quotient identity:
+
+- tan x = sin x / cos x (and cot x = cos x / sin x)
+
+Double-angle formulae:
+
+- sin 2x = 2 sin x cos x
+- cos 2x = cos^2 x - sin^2 x = 2 cos^2 x - 1 = 1 - 2 sin^2 x
+- tan 2x = 2 tan x / (1 - tan^2 x)
+
+Addition formulae:
+
+- sin(A + B) = sin A cos B + cos A sin B
+- cos(A + B) = cos A cos B - sin A sin B
+- tan(A + B) = (tan A + tan B) / (1 - tan A tan B)
+
+Flip the signs for the minus versions. Here is a genuinely useful exam-board detail: on Edexcel, AQA and OCR A-Level, and on Cambridge International A-Level, the addition and double-angle formulae are printed in the formula booklet, but the Pythagorean and quotient identities are *not*. So those two families have to live in your head. AP Precalculus and AP Calculus lean on the same set, so this list travels well.
+
+## How to decide which identity to use
+
+This is the part nobody teaches properly. Match the shape of the question to the tool:
+
+- You see a "2x" sitting next to a plain "x"? Use a double-angle formula so everything is in terms of x.
+- You see sin^2 or cos^2 and want a single function? Reach for sin^2 x + cos^2 x = 1.
+- You see sec, cosec or cot? Rewrite using 1 + tan^2 x = sec^2 x (or its cot version).
+- You see a sin x + b cos x? Use the R formula, a sin x + b cos x = R sin(x + alpha).
+- Proving an identity? Start on the messier side and drive it toward the simpler side. Never work on both sides at once, because the mark scheme wants one continuous chain of equals signs.
+
+For cos 2x specifically, there are three versions. Pick the one that matches the *other* terms in the equation. If the rest of the equation is in sin, use cos 2x = 1 - 2 sin^2 x so everything becomes sin.
+
+## Worked example: solve cos 2x + sin x = 0 for 0 ≤ x ≤ 360°
+
+Step 1. Spot the mismatch. There is a 2x and a plain x, so replace cos 2x. Because the other term is sin x, choose the sin version:
+
+cos 2x = 1 - 2 sin^2 x
+
+Step 2. Substitute:
+
+1 - 2 sin^2 x + sin x = 0
+
+Step 3. Rearrange into a standard quadratic (multiply through by -1 so the squared term is positive):
+
+2 sin^2 x - sin x - 1 = 0
+
+Step 4. Factorise it exactly like 2y^2 - y - 1:
+
+(2 sin x + 1)(sin x - 1) = 0
+
+Step 5. Solve each bracket:
+
+sin x = -1/2  or  sin x = 1
+
+Step 6. Read off every solution in the range. sin x = 1 gives x = 90°. sin x = -1/2 is negative, so x is in the third and fourth quadrants: x = 210° and x = 330°.
+
+Final answer: x = 90°, 210°, 330°.
+
+The classic lost mark here is stopping at sin x = -1/2 and only writing 210°. Always sketch the sin curve or use the CAST diagram to sweep the whole range.
+
+## Worked example: the R formula
+
+Express 3 sin x + 4 cos x in the form R sin(x + alpha), with R greater than 0 and alpha between 0 and 90°.
+
+Step 1. Expand the target form:
+
+R sin(x + alpha) = R sin x cos alpha + R cos x sin alpha
+
+Step 2. Compare coefficients with 3 sin x + 4 cos x:
+
+R cos alpha = 3  and  R sin alpha = 4
+
+Step 3. Find R by using cos^2 + sin^2 = 1, which means R = sqrt(3^2 + 4^2):
+
+R = sqrt(25) = 5
+
+Step 4. Find alpha by dividing the two equations, since sin/cos = tan:
+
+tan alpha = 4/3, so alpha = 53.1° (1 d.p.)
+
+Result: 3 sin x + 4 cos x = 5 sin(x + 53.1°).
+
+The examiner trap is rounding alpha too early and then using it to solve an equation, which drags your final angles off by a degree or two. Keep the unrounded value in your calculator until the very last line.
+
+## Common mistakes examiners flag
+
+- Dividing an equation by sin x or cos x. You lose the solutions where that function equals zero. Factorise instead.
+- Giving only one answer when the range clearly holds more.
+- Choosing the wrong cos 2x version and creating extra algebra.
+- Working on both sides of a "prove" question at once. Pick one side and transform it.
+
+## Test yourself
+
+1. Solve 2 cos^2 x - 1 = sin x for 0 ≤ x ≤ 360°.
+2. Given tan theta = 3/4 and theta is acute, find the exact value of sin 2theta.
+3. Prove that (1 - cos 2x) / sin 2x = tan x.
+
+Quick answers:
+
+1. Use cos 2x = 2 cos^2 x - 1, so the left side is cos 2x = sin x. Rewrite cos 2x = 1 - 2 sin^2 x to get 2 sin^2 x + sin x - 1 = 0, then (2 sin x - 1)(sin x + 1) = 0. Solutions: x = 30°, 150°, 270°.
+2. sin theta = 3/5, cos theta = 4/5, so sin 2theta = 2 sin theta cos theta = 24/25.
+3. Top becomes 1 - (1 - 2 sin^2 x) = 2 sin^2 x. Bottom is 2 sin x cos x. Cancel to sin x / cos x = tan x.
+
+Want each step checked instantly? Paste any of these into the [math solver](/math-solver) and it walks through the working line by line, so you can see exactly where a solution goes missing.
+
+## FAQ
+
+### Which trig identities are given in the A-Level formula booklet?
+
+On Edexcel, AQA, OCR and Cambridge International A-Level, the addition formulae and double-angle formulae are printed. The Pythagorean identities (sin^2 x + cos^2 x = 1 and friends) and the quotient identity tan x = sin x / cos x are not, so memorise those. If in doubt, check your board's most recent formula sheet before the exam.
+
+### How do I know when to use the double-angle formula versus the Pythagorean identity?
+
+Look at the angles. If the equation mixes 2x and x, a double-angle formula makes the angles match. If every angle is already the same but you have a squared term, the Pythagorean identity reduces it to one function. Many questions need both, one after the other.
+
+### What is the fastest way to memorise all of them?
+
+Learn sin^2 x + cos^2 x = 1 and the addition formulae properly, then derive the rest. The double-angle formulae are just the addition formulae with B = A, and the sec and cosec identities come from dividing the Pythagorean line. Turning them into [flashcards](/flashcards) and testing the derivations, not just the results, is what made them stick for me.
+
+### Why do I keep losing marks on "solve" questions even when my algebra is right?
+
+Usually the range. Once you have sin x or cos x equal to a value, find every angle in the given interval using a quick curve sketch or the CAST diagram. A timed [mock exam](/mock-exam) is the fastest way to spot whether you are habitually dropping the second or third solution.
+
+**In short:** memorise the Pythagorean and quotient identities, know how to rebuild the double-angle and addition formulae, and practise matching the *shape* of a question to the right identity. Nail that, and identity questions turn from guesswork into free marks. Check your working step by step in the [math solver](/math-solver) whenever a solution feels off.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
