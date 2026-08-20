@@ -4719,5 +4719,227 @@ Usually the range. Once you have sin x or cos x equal to a value, find every ang
 **In short:** memorise the Pythagorean and quotient identities, know how to rebuild the double-angle and addition formulae, and practise matching the *shape* of a question to the right identity. Nail that, and identity questions turn from guesswork into free marks. Check your working step by step in the [math solver](/math-solver) whenever a solution feels off.
 `,
   },
+
+  {
+    slug: "balancing-chemical-equations",
+    title: "Balancing Chemical Equations (The Fast, No-Guess Method)",
+    description: "Balancing chemical equations the no-guess way: why mass is conserved, a fixed step order, plus worked combustion and displacement examples for GCSE, IGCSE and CBSE.",
+    publishedAt: "2026-08-20", readTime: "7 min",
+    tags: ["balancing chemical equations","conservation of mass","GCSE chemistry","CBSE class 10 science","IGCSE chemistry"],
+    body: `
+**Quick answer:** To balance a chemical equation, change only the big numbers in front of each formula (the coefficients) until every element has the same number of atoms on both sides — never the small subscript numbers, because those change the substance itself. Equations must balance because of conservation of mass: in a reaction atoms are only rearranged, never created or destroyed. Work in a fixed order — balance elements that appear in just one compound on each side first, and leave hydrogen, oxygen and any pure element until last.
+
+In my first IGCSE chemistry mock I "balanced" an equation by quietly changing H₂O into H₂O₂ so the oxygens matched. It looked balanced. It was also completely wrong — I had turned water into hydrogen peroxide, a different chemical, just to win an argument with the atoms. My teacher's red pen had opinions.
+
+Balancing is not a puzzle you crack by luck. It is a fixed procedure, and once you follow the same order every time, even the scary combustion ones fall out in under a minute. Here is the method I actually use in exams.
+
+## Why equations have to balance
+
+A chemical reaction rearranges atoms — it never makes new ones or destroys old ones. That is conservation of mass, and it is the whole reason balancing exists: every atom that goes in has to come out the other side, just bonded differently.
+
+CBSE Class 10 opens its Chemical Reactions and Equations chapter with exactly this: burn a strip of magnesium ribbon and it gains mass. That looks like a broken rule, until you notice the magnesium is grabbing oxygen from the air. Count that oxygen and the books balance again:
+
+2Mg + O₂ → 2MgO
+
+Two magnesium and two oxygen atoms on each side. Mass in equals mass out. An unbalanced equation is really a claim that atoms appeared or vanished, which is why examiners treat it as wrong, not "close".
+
+## The one rule almost everyone breaks
+
+You are allowed to change the coefficient — the big number in front of a formula. You are never allowed to change a subscript, the small number inside a formula.
+
+Why? Because the subscript defines what the substance is. H₂O is water. H₂O₂ is hydrogen peroxide, which bleaches hair. Change the subscript and you have not balanced the equation — you have swapped in a completely different chemical. To get more oxygen atoms you add another whole water molecule (2H₂O), you do not staple an extra atom onto the one you have.
+
+If you remember only one line from this post, make it this: coefficients are fair game, subscripts are locked.
+
+## The no-guess method
+
+Here is the fixed order. It works for every equation on GCSE, IGCSE and CBSE papers.
+
+1. Write every formula correctly first, and do not touch the formulas again.
+2. Tally the atoms of each element on both sides so you can see what is unequal.
+3. Balance any element that appears in only one compound on each side. These have no knock-on effects, so lock them in early.
+4. Balance hydrogen next, then oxygen. They turn up everywhere, so doing them early just forces you to redo them.
+5. Save pure elements (like O₂, or a metal on its own) for last, because you can change their coefficient freely without disturbing anything else.
+6. If you are stuck with an odd number, use a fraction, then multiply the whole equation to clear it.
+7. Re-tally every element. Only stop when both sides match exactly.
+
+If one line refuses to balance, paste the equation into the [step-by-step explainer](/explain) and ask it to show the atom tally underneath each element — seeing the count laid out is usually what unlocks it.
+
+## Worked example 1: combustion
+
+Combustion looks scary because of the oxygen. The trick: oxygen is a pure element, so you balance it last and let it mop up whatever is left. Take propane burning:
+
+C₃H₈ + O₂ → CO₂ + H₂O
+
+Step 1 — Carbon. There are 3 carbons on the left, so put a 3 in front of CO₂.
+
+Step 2 — Hydrogen. There are 8 hydrogens on the left. Water holds 2 each, so put a 4 in front of H₂O (4 × 2 = 8).
+
+Step 3 — Oxygen, last. The right side now has 3 CO₂ (6 oxygens) plus 4 H₂O (4 oxygens), which is 10 oxygens. Oxygen comes as O₂, so you need 5 of them.
+
+C₃H₈ + 5O₂ → 3CO₂ + 4H₂O
+
+Final check: carbon 3 = 3, hydrogen 8 = 8, oxygen 10 = 10. Balanced.
+
+Now the version that catches people out — ethane, where the oxygen comes out odd:
+
+C₂H₆ + O₂ → CO₂ + H₂O
+
+Carbon gives 2CO₂, hydrogen gives 3H₂O. That puts 4 + 3 = 7 oxygens on the right — an odd number, and O₂ only comes in twos. So you use three and a half: 3½ O₂. Fractions are not allowed in a final answer, so double every coefficient:
+
+2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O
+
+That fraction-then-double move is the single most useful combustion habit you can build.
+
+## Worked example 2: displacement, with a polyatomic ion
+
+Displacement reactions look harder because of groups like sulfate (SO₄) and nitrate (NO₃). The rule that saves you: treat the polyatomic ion as one single block and never split it. Aluminium displacing copper:
+
+Al + CuSO₄ → Al₂(SO₄)₃ + Cu
+
+Step 1 — Aluminium. There are 2 aluminiums on the right, so put a 2 in front of Al.
+
+Step 2 — Sulfate blocks. The right side has 3 SO₄ groups, so put a 3 in front of CuSO₄. Count sulfate as one unit, not as sulfur and oxygen separately.
+
+Step 3 — Copper, last. You now have 3 coppers on the left, so put a 3 in front of Cu on the right.
+
+2Al + 3CuSO₄ → Al₂(SO₄)₃ + 3Cu
+
+Check: aluminium 2 = 2, copper 3 = 3, sulfate 3 = 3 (that is sulfur 3 = 3 and oxygen 12 = 12). Balanced, and you never had to think about individual oxygens.
+
+## State symbols: the easy mark people forget
+
+Once the atoms balance, add state symbols if the question asks for them: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Higher-tier GCSE (AQA, Edexcel, OCR), Cambridge IGCSE and CBSE all like them, especially for reactions that form a precipitate.
+
+2Al(s) + 3CuSO₄(aq) → Al₂(SO₄)₃(aq) + 3Cu(s)
+
+The one to watch is (aq) versus (s): a dissolved salt is (aq), but a solid that drops out of solution is (s). When a mark scheme asks for state symbols, they are a separate mark — leave them off and you cap yourself even with perfect balancing.
+
+## The mistakes that cost real marks
+
+- Changing a subscript to force a balance. This is the big one, and it turns your answer into a different chemical.
+- Not re-counting oxygen and hydrogen after you adjust something else.
+- Splitting a polyatomic ion like SO₄ or NO₃ instead of treating it as a block.
+- Leaving a fraction (3½ O₂) in a final answer that asked for whole numbers.
+- Forgetting the seven diatomic elements — H₂, N₂, F₂, O₂, I₂, Cl₂, Br₂. The mnemonic "Have No Fear Of Ice Cold Beer" keeps them straight.
+- Writing state symbols only when you feel like it. If the question wants them, they are marked.
+
+In GCSE and IGCSE a symbol equation is often worth two marks: one for correct formulas, one for correct balancing. Get the formulas wrong and you usually cannot earn the balancing mark either, so slow down on the formulas first.
+
+## Test yourself
+
+1. Balance: Na + H₂O → NaOH + H₂
+2. Balance the combustion of butane: C₄H₁₀ + O₂ → CO₂ + H₂O
+3. Balance and add state symbols (lead iodide is an insoluble yellow solid): Pb(NO₃)₂ + KI → PbI₂ + KNO₃
+
+Quick answers:
+
+1. 2Na + 2H₂O → 2NaOH + H₂
+2. 2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O — do carbon, then hydrogen, then oxygen; the oxygen count comes out odd, which is why you double the whole equation.
+3. Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq) — treat nitrate as one block, and PbI₂ takes (s) because it precipitates out.
+
+Want a full set marked instantly? Spin up a round on this exact skill with the [quiz maker](/quiz), or turn every rule above into revision cards with [flashcards](/flashcards).
+
+## FAQ
+
+**Can I ever change the small subscript numbers?**
+No. Subscripts define the substance, so changing them swaps in a different chemical. Balance only by changing the coefficients in front of each formula.
+
+**What order should I balance elements in?**
+Balance elements that appear in only one compound on each side first, then hydrogen, then oxygen, and leave any pure element (like O₂ or an uncombined metal) until last, because you can adjust it freely.
+
+**Do I always need state symbols?**
+Only when the question asks, but higher-tier GCSE, Cambridge IGCSE and CBSE frequently do — often for precipitation reactions. When they are asked for, they are a separate mark, so missing them costs you.
+
+**Why does magnesium ribbon gain mass when it burns if mass is conserved?**
+Because in an open crucible the magnesium takes in oxygen from the air. Weigh the oxygen too and mass is still conserved — the product MgO is heavier than the magnesium alone. If you are still unsure why, ask the [AI explainer](/explain) to walk through the sealed-versus-open version of the experiment.
+
+**In short:** Balancing is bookkeeping, not luck — keep the formulas fixed, adjust only the coefficients, work single-compound elements first and oxygen last, and the atoms will always come out even.
+`,
+  },
+
+  {
+    slug: "gcse-physics-equations",
+    title: "GCSE Physics Equations: Which Are Given and Which You Must Memorise",
+    description: "GCSE physics equations for AQA: which formulae are on the exam sheet, which you must recall, how to rearrange safely and get the units right.",
+    publishedAt: "2026-08-20", readTime: "7 min",
+    tags: ["gcse physics equations","aqa physics equation sheet","gcse physics revision","rearranging equations","gcse physics formula sheet 2026"],
+    body: `
+**Quick answer:** For the 2025 to 2027 AQA GCSE Physics and Combined Science exams you are actually given a full equation sheet as an insert, so you do not strictly have to memorise the formulae. But the sheet only lists them - it will not tell you which equation to pick, what the letters mean, how to rearrange it, or which units to use, and the arrangement is only confirmed to 2027. So learn the roughly 23 core equations, like V = I R, F = m a and kinetic energy = 0.5 x mass x speed^2, as if they were not given.
+
+I sit Cambridge IGCSE and A-Level, not AQA - but when my GCSE friends found out they would get an equation sheet in the exam, half of them stopped learning equations completely. They still dropped marks. Here is the bit nobody explains: a page full of formulae is close to useless if you do not already know which one the question wants, what each symbol stands for, and how to make the quantity you are asked for the subject. The sheet hands you the tool; it does not tell you the job.
+
+## The rule right now - and why it is a trap
+
+Because of the exam disruption a few years back, AQA confirmed that students sitting exams in 2025, 2026 and 2027 do not need to memorise the physics equations: a Physics Equations Sheet is provided as an insert with both Paper 1 and Paper 2. That is genuinely helpful.
+
+Two catches, though. It is temporary - only confirmed to 2027, with 2028 still being decided, so if you are starting the course now do not assume a sheet will be there on the day. And a sheet cannot do the physics for you: you still have to read a wordy question, spot that it is a current, resistance and potential difference problem, find V = I R, rearrange it and convert your units - only the middle step is printed. Lean on the sheet as an excuse not to learn the equations and you become the student who freezes because they cannot tell which one to reach for.
+
+## The equations you would normally have to recall
+
+In a normal year - and the set to know cold whether or not there is a sheet - AQA expects you to recall about 23 equations. These are the everyday ones, grouped by topic:
+
+- **Forces and motion:** distance = speed x time; acceleration = change in velocity / time; resultant force = mass x acceleration; weight = mass x gravitational field strength; momentum = mass x velocity; force on a spring = spring constant x extension; moment = force x distance to the pivot; pressure = force / area.
+- **Energy and power:** kinetic energy = 0.5 x mass x speed^2; gravitational potential energy = mass x gravitational field strength x height; work done = force x distance; power = energy transferred / time; efficiency = useful output / total input.
+- **Electricity:** charge = current x time; potential difference = current x resistance; power = potential difference x current; power = current^2 x resistance; energy transferred = power x time; energy transferred = charge x potential difference.
+- **Waves and density:** wave speed = frequency x wavelength; density = mass / volume.
+
+Combined Science drops a couple of these, but rebuild that list from memory and you are covered on either course.
+
+## The ones that are given to you
+
+The shorter set - the fiddly, less-common formulae - is what normally sits on the equation sheet:
+
+- (final velocity)^2 - (initial velocity)^2 = 2 x acceleration x distance
+- elastic potential energy = 0.5 x spring constant x extension^2
+- change in thermal energy = mass x specific heat capacity x temperature change
+
+Separate Physics adds a few Combined does not need: specific latent heat, pressure in a column of liquid, the force on a conductor in a magnetic field, and the transformer equation. Notice the pattern - anything with a square, a subtraction, or a constant you would never remember is handed to you; the short, everyday ones are not.
+
+## Rearrange before you substitute - and bin the formula triangle
+
+The formula triangle only works for one shape: an equation where one quantity equals two others multiplied together, like V = I R or distance = speed x time. Cover the letter you want, read off the rest. Fine - until the equation is not that shape, which is most of them. You cannot draw kinetic energy = 0.5 x mass x speed^2 as a triangle: there is a one-half and a square in it. Nor v^2 - u^2 = 2 a s - four quantities and a subtraction. Students who only know the triangle freeze the instant an equation has a square or a minus sign.
+
+The habit that always works is to rearrange with letters first, then put numbers in. Quick one: a 1200 kg car travels at 12 m/s, so kinetic energy = 0.5 x 1200 x 12^2 = 0.5 x 1200 x 144 = 86,400 J, about 86 kJ. Square the speed first, then multiply - do not square the whole thing, and do not lose the one-half. If rearranging scares you, practise a few on [the math solver](/math-solver) and have any equation re-taught, letter by letter, on [Explain anything](/explain).
+
+## Units - where the sheet cannot save you
+
+The sheet gives you the formula but never the units or the conversions, and that is where marks quietly disappear. Everything goes in as SI units before you substitute: grams to kilograms, centimetres to metres, minutes to seconds, milliamps to amps. There is often a mark just for the correct unit on the end - free, if you know potential difference is in volts, energy in joules, power in watts and resistance in ohms.
+
+## Worked example: rearrange, convert, then substitute
+
+Question: a filament lamp has a current of 250 mA through it and a potential difference of 6.0 V across it. Calculate its resistance and give the unit.
+
+1. **Pick the equation.** This links potential difference, current and resistance, so it is V = I R - a recall-list equation, not on the sheet.
+2. **Rearrange first.** Make R the subject while it is still algebra: R = V / I. Moving letters is safer than juggling decimals.
+3. **Convert to SI units.** The current is 250 mA, but the equation needs amps, so divide by 1000: 250 mA = 0.25 A. The potential difference is already in volts.
+4. **Substitute.** R = 6.0 / 0.25 = 24.
+5. **Add the unit.** Resistance is measured in ohms, so R = 24 ohms.
+
+The trap: leave the current as 250 and you get 6.0 / 250 = 0.024 - wrong by a factor of 1000, and no unit mark either. On this style of question, the dropped mark is almost always a prefix that never got converted, not the physics.
+
+## Test yourself
+
+1. Rearrange power = potential difference x current to make current the subject.
+2. A 2.0 kg mass is lifted 1.5 m. Taking gravitational field strength as 9.8 N/kg, calculate the gain in gravitational potential energy.
+3. A current is written as 400 mA. Write it in amps.
+
+Quick answers: (1) current = power / potential difference. (2) gravitational potential energy = mass x gravitational field strength x height = 2.0 x 9.8 x 1.5 = 29.4 J. (3) 400 / 1000 = 0.4 A.
+
+If any felt shaky, drop the exact equation into [Explain anything](/explain) and ask it to rearrange it with you step by step, or turn the whole recall list into a deck on [Flashcards](/flashcards) so the everyday ones come back without thinking.
+
+## FAQ
+
+**Do I have to memorise physics equations for the 2026 AQA GCSE exam?** No - for 2025, 2026 and 2027 you are given a Physics Equations Sheet as an insert, so you are not required to recall them. But you still have to know which equation to use, what the symbols mean, how to rearrange it and which units to use - and learning the common ones anyway saves time.
+
+**Is the equation sheet the full list?** For these years the provided sheet covers the formulae you would normally have to recall, so you should not be caught short. In a normal year only the harder, less-common equations are printed and the roughly 23 everyday ones are not - the situation that may return from 2028.
+
+**Is the sheet the same for Combined Science?** You get a shorter one. Physics-only equations - specific latent heat, pressure in a liquid column, the magnetism and transformer equations - are not on the Combined sheet, because those topics only appear on the separate Physics course.
+
+**Are formula triangles allowed in the exam?** There is no rule against scribbling one in the margin. But they only work for three-quantity "one equals two multiplied" equations, so they are useless for anything with a square or a subtraction, like kinetic energy or v^2 - u^2 = 2 a s. Rearranging with algebra always works.
+
+**In short:** Even though the 2025 to 2027 AQA exams hand you an equation sheet, learn the roughly 23 core equations, know your SI units, and always rearrange with letters before you substitute - because the sheet lists the formula but never does the thinking, and it is only guaranteed to 2027.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
