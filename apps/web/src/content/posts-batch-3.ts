@@ -4941,5 +4941,201 @@ If any felt shaky, drop the exact equation into [Explain anything](/explain) and
 **In short:** Even though the 2025 to 2027 AQA exams hand you an equation sheet, learn the roughly 23 core equations, know your SI units, and always rearrange with letters before you substitute - because the sheet lists the formula but never does the thinking, and it is only guaranteed to 2027.
 `,
   },
+
+  {
+    slug: "integration-by-substitution",
+    title: "Integration by Substitution: A Step-by-Step Guide (A-Level & AP)",
+    description: "Integration by substitution, step by step: how to spot it, choose u, change dx, and change the limits, with worked A-Level and AP examples.",
+    publishedAt: "2026-08-21", readTime: "7 min",
+    tags: ["A-Level maths","AP Calculus","integration by substitution","calculus","exam technique"],
+    body: `
+**Quick answer:** Integration by substitution reverses the chain rule. Spot a function-inside-a-function whose inner derivative is also sitting in the integrand, let u equal that inner function, replace dx using du = (du/dx) dx so nothing in x is left, then integrate in u. For a definite integral, change the limits to u-values too — forgetting that is the single most common lost mark.
+
+When I first met substitution in A-Level Pure, I could do the algebra fine and still drop marks — because I changed the integrand but left the limits exactly as they were. That one habit costs more marks than the actual calculus does. So this is the guide I wish I'd had: how to see when substitution is the move, how to pick u, the dx step everyone rushes, and the limits trap. It's the same method for Cambridge and Edexcel/AQA/OCR A-Level, and for AP Calculus AB and BC.
+
+## When substitution is the right move
+
+The trigger: a composite function — something inside a bracket, root, exponent, or trig function — with the derivative of that inside part also present as a factor, give or take a constant.
+
+Two you'll recognise instantly:
+
+- ∫ x (x^2 + 1)^4 dx — the inside is x^2 + 1, and its derivative 2x is basically the x sitting out front.
+- ∫ cos(x) e^(sin x) dx — inside the exponent is sin x, and its derivative cos x is right there next to it.
+
+If the derivative of the inner function is nowhere in the integrand, substitution usually won't clear the x's and you need a different method (parts, a standard result, and so on). That single check — "is the inner derivative here?" — is how I decide in about five seconds.
+
+## Step 1: choose u
+
+Let u be the inner function — the thing wrapped inside. In ∫ x (x^2 + 1)^4 dx the bracket is raised to a power, so u = x^2 + 1. Pick the messiest inside part; if choosing u kills the awkward bit, you've chosen well.
+
+## Step 2: change dx (the step everyone rushes)
+
+This is where marks leak. Once you have u, differentiate it:
+
+u = x^2 + 1 gives du/dx = 2x, so du = 2x dx.
+
+Now rearrange to swap out dx. You often only have a single x, so isolate exactly what you need: from du = 2x dx you get x dx = du/2. The goal is a new integral with no x anywhere — if an x survives, you haven't finished substituting.
+
+Constants are fine to juggle (that /2), but you can never absorb a variable this way. If the leftover factor is a variable that isn't part of du, substitution as-is won't work.
+
+## Worked example 1 — indefinite integral
+
+*Find ∫ x (x^2 + 1)^4 dx.*
+
+1. **Choose u.** u = x^2 + 1. **(inner function)**
+2. **Differentiate.** du/dx = 2x, so x dx = du/2. **(change dx)**
+3. **Substitute.** ∫ x (x^2 + 1)^4 dx = ∫ (x^2 + 1)^4 · x dx = ∫ u^4 · (du/2) = (1/2) ∫ u^4 du. **(all in u now)**
+4. **Integrate.** (1/2) · u^5/5 = u^5/10. **(one step)**
+5. **Back to x, add C.** = (x^2 + 1)^5 / 10 + C.
+
+Check by differentiating: (1/10) · 5(x^2 + 1)^4 · 2x = x (x^2 + 1)^4. Straight back to where we started, so it's right. Differentiating your answer is a free check — I do it every single time.
+
+## Worked example 2 — definite integral, and the limits trap
+
+*Evaluate ∫ (from 0 to 1) 2x (x^2 + 1)^3 dx.*
+
+1. **Choose u and change dx.** u = x^2 + 1, du = 2x dx — and notice 2x dx is exactly what's already in the integral.
+2. **Change the limits.** This is the step people forget. The 0 and 1 are x-values; once you're in u you need u-values. When x = 0, u = 0^2 + 1 = 1. When x = 1, u = 1^2 + 1 = 2.
+3. **Rewrite fully in u.** ∫ (from u = 1 to u = 2) u^3 du.
+4. **Integrate and evaluate.** [u^4/4] from 1 to 2 = 16/4 - 1/4 = 15/4.
+
+If you had left the limits as 0 and 1 and plugged those into u^4/4, you'd get 1/4 - 0 = 1/4 — completely wrong, and on most A-Level mark schemes that's a lost accuracy mark even though the integration itself was perfect.
+
+There are two safe ways to handle a definite integral, and you must pick one and stay consistent:
+
+- **Change the limits** to u-values (as above) and evaluate straight away — do not convert back to x.
+- **Or keep the x-limits**, integrate, substitute u back to x first, then put in 0 and 1: (x^2 + 1)^4 / 4 from 0 to 1 = 16/4 - 1/4 = 15/4. Same answer.
+
+Mixing them — a u-limit with an x-expression — is the classic disaster. In the exam I always change the limits and write the new ones right next to the integral sign, so there's no temptation to sub back. If you want to see the limit change laid out cleanly, run one through [Math solver](/math-solver) and it shows the du line and the new limits explicitly.
+
+## What the mark scheme is really rewarding
+
+Across Cambridge and Edexcel/AQA/OCR A-Level, a substitution question usually splits into a mark for a correct du (the dx change), a mark for a fully-in-u integrand, a mark for integrating, and — on a definite integral — a mark for the correct new limits or correct back-substitution. AP Calculus AB and BC score u-substitution the same way on free-response: the antiderivative and the correctly-applied bounds each carry points. Everywhere, examiners pay for the process — so write the du line and the limit change out explicitly, even when you could do them in your head.
+
+## Test yourself
+
+Try these, then check your working line by line, not just the final answer:
+
+1. Find ∫ 6x (3x^2 + 5)^3 dx. (indefinite)
+2. Evaluate ∫ (from 0 to 2) x (x^2 + 4)^2 dx. (change the limits!)
+3. Find ∫ cos(x) (sin x)^4 dx. (spot the inner function)
+
+*Quick answers: (1) u = 3x^2 + 5, du = 6x dx, so ∫ u^3 du = u^4/4 = (3x^2 + 5)^4 / 4 + C. (2) u = x^2 + 4, so x dx = du/2; x = 0 gives u = 4 and x = 2 gives u = 8; (1/2) ∫ (from 4 to 8) u^2 du = (1/6)(512 - 64) = 224/3. (3) u = sin x, du = cos x dx, so ∫ u^4 du = (sin x)^5 / 5 + C.*
+
+Want each line marked in your board's style? Paste your working into [Math solver](/math-solver) to check every substitution step, or [mark my answer](/grade) to see exactly where a method mark would drop. To drill the "spot the u" reflex fast, generate a set with the [quiz tool](/quiz). Ten of these and it stops feeling like guesswork.
+
+## FAQ
+
+**How do I know which part to make u?**
+Pick the inner function — whatever sits inside a bracket, root, power, exponent, or trig function — provided its derivative also appears in the integrand. If choosing u removes the ugliest part and the leftover matches du up to a constant, you've chosen right.
+
+**Do I always have to change the limits?**
+Only for definite integrals, and only if you evaluate in terms of u. The alternative is to substitute u back to x first and use the original x-limits. Either works; just never mix a u-limit with an x-expression.
+
+**What if the derivative of my inner function isn't there?**
+Then plain substitution won't clear the x's. Check whether you're only missing a constant (fine — juggle it) or a variable factor (not fine). If a variable is genuinely missing, reach for integration by parts or a standard result instead.
+
+**Is u-substitution (AP) the same as integration by substitution (A-Level)?**
+Yes — different name, identical method. AP Calculus AB and BC call it u-substitution; Cambridge and UK A-Level call it integration by substitution. The steps, and the rule about changing the limits, are exactly the same.
+
+**In short:** substitution is the reverse chain rule — let u be the inner function, use du = (du/dx) dx to replace dx until no x remains, integrate in u, and for a definite integral change the limits to u-values instead of leaving them in x. Nail the dx step and the limits, and these turn into some of the most reliable marks in the whole Pure paper.
+`,
+  },
+
+  {
+    slug: "interpreting-graphs-exams",
+    title: "How to Read a Science Graph in Exams (Without Losing Marks)",
+    description: "Interpreting graphs in exams made simple: read axes and units, describe trends, find gradient and area, and handle anomalies the GCSE and IGCSE way.",
+    publishedAt: "2026-08-21", readTime: "7 min",
+    tags: ["interpreting graphs exams","reading science graphs","gcse science exam technique","gradient and area under graph","describing trends in graphs"],
+    body: `
+**Quick answer:** Interpreting graphs in exams comes down to reading the axes and units first, then describing the trend in precise words - increases, decreases, directly proportional, or plateaus - and quoting figures with units. Where asked, take the gradient from a large triangle on the line (not two data points) for a rate, or the area under the graph for a total, and treat any point clearly off the line of best fit as an anomaly.
+
+I used to throw away graph marks without noticing. In my first IGCSE Physics mock I answered a three-mark "describe the graph" question with "the line goes up, then flattens" - and got one mark. The examiner wanted numbers, units, and the exact shape of the change. The good news: the moves barely change between a biology enzyme graph, a chemistry rates curve, and a physics motion graph - learn them once and reuse them on every paper.
+
+## Read the axes before you read the line
+
+The commonest way to lose graph marks is answering before you have read the axes. Do three things first.
+
+- **Read what is plotted against what.** "Velocity against time" is a different graph from "distance against time," even though both can look like a rising line.
+- **Read the units.** They decide what your gradient and area will mean: a y-axis in m/s over an x-axis in seconds gives a gradient in m/s^2 (an acceleration) and an area in metres (a distance).
+- **Read the scale.** Check what each small square is worth before reading a value off - many "silly" mistakes in Cambridge IGCSE and AQA GCSE papers are misread scales, not bad science.
+
+If a graph is thrown at you cold, paste it into /explain and ask it to walk you through the axes before you answer.
+
+## The exact words examiners reward
+
+"Describe" and "explain" are different command words that want different answers. On AQA, Edexcel, OCR and Cambridge papers, "describe" means state the pattern - no reasons; "explain" means give the reason why. Answer the wrong command word and you score zero even if what you wrote is true.
+
+For describing a trend, use precise language and quote data:
+
+- **Directly proportional** - a straight line through the origin: if x doubles, y doubles. A straight line not through the origin is linear but not proportional, and examiners catch that.
+- **Increases / decreases** - and say how: at a constant rate (straight line), getting steeper, or getting shallower.
+- **Plateaus / levels off** - the line goes flat, like an enzyme rate before it denatures or a reaction that has used up a reactant.
+- **Inversely proportional** - as one goes up the other goes down, giving a curve, like the pressure and volume of a gas.
+
+The mark-scheme trick: top marks usually need a manipulated value, not just a direction - "the velocity increases from 0 to 12 m/s in 4 seconds" scores; "it increases" does not.
+
+## Gradient: what the steepness is telling you
+
+The gradient is a rate - how fast the y quantity changes as x changes. To calculate it properly:
+
+1. Draw the biggest triangle you can along the straight part of the line; that keeps the percentage error small.
+2. Use two points that sit exactly on the line, not two plotted data points - the line of best fit is the true trend; the dots have scatter.
+3. Gradient = change in y / change in x; keep the units: on a velocity-time graph that is an acceleration in m/s^2, on a distance-time graph a speed in m/s.
+
+If the line is a curve the gradient changes at every point, so draw a tangent (a straight line just touching the curve) and take its gradient - that is how you find the initial rate of a reaction, from the tangent at time zero. If tangents throw you, /explain re-teaches them and /math-solver checks the arithmetic.
+
+## Area under the graph: only sometimes, but worth it
+
+Area means nothing on most graphs, but on a few it is a guaranteed mark. On a velocity-time graph the area under the line is the distance travelled - m/s times seconds gives metres, which is why. Find it by splitting the shape into triangles and rectangles, or by counting squares; it means nothing on a distance-time or enzyme graph.
+
+## Anomalies: spot them, name them, exclude them
+
+An anomaly is a point sitting clearly off the smooth pattern the others make. Three rules the mark scheme rewards:
+
+- **Never join the dots.** Draw one smooth straight line or curve of best fit through the middle of the points - dot-to-dot loses the mark.
+- **Circle the anomaly and leave it out.** Your line should ignore it, not bend to reach it.
+- **Exclude it from any mean.** When averaging repeats, drop the anomalous reading first, and say you did.
+
+## Worked example: a velocity-time graph, step by step
+
+A cyclist's motion is plotted. The line rises straight from (0 s, 0 m/s) to (4 s, 12 m/s), then runs flat at 12 m/s until 10 s.
+
+1. **Read the axes.** Time (s) on the x-axis, velocity (m/s) on the y-axis. So the gradient will be an acceleration (m/s^2) and the area a distance (m).
+
+2. **Describe the trend in two parts.** From 0 to 4 s the velocity increases at a constant rate from 0 to 12 m/s; from 4 to 10 s it stays constant at 12 m/s. Those quoted figures with units turn one mark into three.
+
+3. **Gradient for the acceleration.** Take the ends of the straight section, (0 s, 0 m/s) and (4 s, 12 m/s): gradient = (12 - 0) / (4 - 0) = 3 m/s^2.
+
+4. **Area for the distance.** Split the shape under the line into a triangle then a rectangle. Triangle = 0.5 x 4 x 12 = 24 m. Rectangle = 6 x 12 = 72 m. Total distance = 24 + 72 = 96 m.
+
+5. **Check the units.** The gradient is in m/s^2 (acceleration) and the area in m (distance) - both correct for a velocity-time graph.
+
+6. **Answer the exact command word.** "Describe the motion" wants step 2 only; "explain the flat section" wants a reason - the resultant force is zero, so there is no acceleration and the cyclist stays at constant velocity.
+
+## Test yourself
+
+1. On a distance-time graph, what does a straight line with a constant gradient tell you about the speed?
+2. A velocity-time graph rises straight from 0 to 8 m/s in 2 s. Calculate the acceleration.
+3. One point sits well above the smooth curve made by the others. What do you do with it when drawing the line of best fit and calculating a mean?
+
+Quick answers: (1) The speed is constant. (2) Acceleration = (8 - 0) / (2 - 0) = 4 m/s^2. (3) Treat it as an anomaly - ignore it when drawing the line of best fit and exclude it from the mean.
+
+Want these in your board's style? Generate a graph-skills paper on /mock-exam, or type your own "describe the graph" answer into /grade to see which marking points you missed.
+
+## FAQ
+
+**How do I describe a graph in an exam?** State the overall trend in precise words (increases, decreases, proportional, plateaus), then quote one pair of figures with units. For "describe" give no reasons; save the "why" for "explain."
+
+**When do I calculate the gradient versus the area?** Gradient gives a rate - speed, acceleration or reaction rate. Area gives a total, and is really only used on a velocity-time graph, where it is the distance.
+
+**What counts as an anomaly?** A result that clearly does not fit the others, sitting well off a smooth line of best fit. Circle it, leave it out of your line and any average.
+
+**Do all exam boards want the same thing here?** Essentially yes - CBSE, GCSE (AQA, Edexcel, OCR), AP, Cambridge IGCSE and WAEC all reward the same things: correct axes and units, precise trend language, quoted data, and a gradient taken from the line, not the dots. If a board's wording confuses you, put the question into /explain in plain terms.
+
+**In short:** Read the axes and units first, describe the trend in precise words with quoted figures, take the gradient from a big triangle on the line (a rate) or the area under a velocity-time graph (a distance), and never let an anomaly bend your line of best fit.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
