@@ -5137,5 +5137,203 @@ Want these in your board's style? Generate a graph-skills paper on /mock-exam, o
 **In short:** Read the axes and units first, describe the trend in precise words with quoted figures, take the gradient from a big triangle on the line (a rate) or the area under a velocity-time graph (a distance), and never let an anomaly bend your line of best fit.
 `,
   },
+
+  {
+    slug: "ap-chemistry-frq",
+    title: "AP Chemistry FRQ: How to Earn Every Point",
+    description: "AP Chemistry FRQ scoring decoded by a student: show units, justify in terms of particles, nail particulate diagrams, and stop losing easy points.",
+    publishedAt: "2026-08-22", readTime: "7 min",
+    tags: ["AP Chemistry","AP chemistry FRQ","College Board AP","particulate diagrams","exam technique"],
+    body: `
+**Quick answer:** On AP Chemistry free-response, the points live in the working, not the final number. Show your calculation setup with units carried all the way through, justify every claim in terms of particles, forces, or energy (never just restate it), and draw particulate diagrams with the right count and ratio. A correct final answer with no units, no setup, or no particle-level reasoning routinely scores about half.
+
+I sit Cambridge A-Level chemistry, not AP — but I went deep into AP Chemistry FRQs helping a friend prep, and the scoring philosophy turned out to be almost identical to the A-Level mark schemes I already live in. Both boards drill the same lesson: the examiner pays for reasoning, and a bare answer leaves most of it on the table. Here is exactly where the AP Chem free-response points hide.
+
+## How the free-response section is actually built
+
+- Section II is 7 questions in 105 minutes, and it is worth 50% of your score. A calculator and a formula-and-constants sheet are allowed.
+- Three of the questions are long and multi-part; four are short.
+- Because you are handed a periodic table and the constants, nothing here is about memorising numbers. It is about using them correctly and showing that you did.
+
+Each part is scored against a rubric where individual points are tagged to specific things: the setup, the units, the reasoning, the conclusion. Miss the tagged thing and you miss the point, even when your final number is perfect.
+
+## Show the setup, and carry the units
+
+Examiners award "setup" points on their own. For any numeric part, write the relationship, substitute the numbers with units attached, then give the answer with units and sensible significant figures. Two rules quietly bleed marks:
+
+- A numeric answer with no units usually cannot earn its point. Full stop.
+- Significant figures are marked gently — AP accepts answers within one sig fig of the key, and only a couple of points across the whole exam are tied to them. Don't obsess over the last digit, but don't report six figures from two-figure data either.
+
+The habit I lean on: carry units through every line so the final unit falls out by itself. If it isn't kJ/mol, I've slipped somewhere before I even check the number.
+
+## Worked mini-answer: a calorimetry calculation for full marks
+
+Prompt: a student dissolves 2.00 g of NaOH (molar mass 40.0 g/mol) in 100.0 g of water in a coffee-cup calorimeter. The temperature rises from 25.0 °C to 30.2 °C. The specific heat of the solution is 4.18 J/(g·°C). Calculate the enthalpy of dissolution per mole of NaOH, and state whether the process is exothermic or endothermic.
+
+- **Step 1 — decode the command words.** "Calculate" means show the setup; "state whether" means commit to a sign and say why — two separate things to hand in.
+- **Step 2 — moles of NaOH.** n = 2.00 g ÷ 40.0 g/mol = 0.0500 mol.
+- **Step 3 — heat gained by the solution.** Mass of solution = 100.0 g + 2.00 g = 102.0 g. The temperature change (delta T) = 30.2 - 25.0 = 5.2 °C. So q = m x c x (delta T) = (102.0 g)(4.18 J/(g·°C))(5.2 °C) = 2.2 x 10^3 J = 2.2 kJ.
+- **Step 4 — flip the sign for the reaction.** The solution warmed up, so it absorbed heat; the dissolving process released it. So q for the reaction = -2.2 kJ.
+- **Step 5 — put it per mole.** delta H = q(reaction) ÷ n = (-2.2 kJ) ÷ (0.0500 mol) = -44 kJ/mol.
+- **Step 6 — answer the second command.** The temperature rose, so heat was released to the surroundings: the process is exothermic, consistent with the negative sign.
+
+Notice where the marks sit: the substituted setup in Step 3 (with units), the sign logic in Step 4, the units on the answer in Step 5, and the exothermic justification in Step 6. Hand in a lone "-44 kJ/mol" and you would likely score about half of this. Paste your own worked answer into the [AI grader](/grade) to see which points a College Board-style rubric would award — it marks the setup and reasoning, not just the number.
+
+## "Justify" and "explain in terms of..." — the particle rule
+
+This is the single biggest FRQ trap. When the command word is Justify or Explain, restating the claim earns nothing — you have to travel down to particles, forces, or energy.
+
+Model answer for "Explain, in terms of particle behaviour, why the reaction rate increases as temperature rises":
+
+"As the temperature increases, the particles gain kinetic energy and move faster, so they collide more frequently. More importantly, a greater fraction of collisions now have energy greater than or equal to the activation energy, so a greater proportion of collisions are successful. Both effects increase the rate."
+
+Why it scores: it names the mechanism — kinetic energy, collision frequency, activation energy, successful collisions — instead of saying "it's faster because it's hotter." A quick self-check: if your sentence would still make sense with none of those particle words in it, you haven't justified anything yet.
+
+## Particulate diagrams: count, ratio, conserve
+
+The redesigned AP Chemistry course loves "draw a particulate representation," and these are marked strictly. What examiners check:
+
+- The right number and the right ratio of particles — a 2:1 mole ratio has to look 2:1 on the page.
+- Conservation of atoms across a reaction: the same atoms appear before and after, just rearranged into different molecules.
+- Molecules drawn as bonded units, not a loose scatter of separate atoms.
+- The arrangement matching the state — gas spread out and random, solid packed and ordered.
+
+If you are shaky on what a species looks like at particle level, generate a quick explainer with [Explain](/explain) and re-draw it from memory until the picture sticks. That closed-book redraw is what caught my own gaps for A-Level, and it is the same content AP is testing.
+
+## The mistakes that cost the most
+
+- Bare numeric answers with no setup shown or no units attached.
+- "Justifying" by repeating the claim, with no particles, forces, or energy.
+- Particulate diagrams with the wrong ratio or with atoms that appear or vanish.
+- Answering the wrong command word — explaining when it says calculate, or the reverse.
+- The contradiction trap: bolting an extra wrong statement onto a right answer can cancel the point. Answer what was asked, then stop.
+
+## Test yourself
+
+1. A numeric answer reads "0.0250." What two things must you add before it can earn full credit?
+2. "Explain, in terms of particles, why a gas exerts pressure." Give a one-sentence answer that would score.
+3. In a particulate diagram of the reaction 2 H2 + O2 forming 2 H2O, how many of each particle should appear on the product side?
+
+Answers:
+
+1. Units and a sensible significant-figure count — and it should sit underneath a shown setup. A number on its own earns nothing on a calculate-and-justify part.
+2. Gas particles are in constant random motion and collide with the walls of the container; each collision exerts a force, and force spread over the wall area is pressure.
+3. Two water molecules, each drawn as one O bonded to two H, with no leftover H or O atoms — because atoms are conserved across the reaction.
+
+Want these marked the way an examiner would? Generate a fresh set in the [Quiz maker](/quiz), or drop a full written FRQ into the [AI grader](/grade) for point-by-point feedback on the setup and the reasoning, not just the answer.
+
+## FAQ
+
+**How many free-response questions are on the AP Chemistry exam?**
+Seven — three long, multi-part questions and four short ones, done in 105 minutes, and Section II is worth half your total score. You are allowed a calculator and a formula-and-constants sheet.
+
+**Do I lose marks for missing units on AP Chemistry FRQs?**
+Yes. A numeric answer without units generally cannot earn its point. Carry units through the whole setup so the final unit falls out naturally and you never forget to write it.
+
+**How strict are significant figures on AP Chem?**
+Fairly forgiving. Answers within one significant figure of the key are accepted, and only a small number of points across the exam are tied to sig figs. Don't panic over the last digit, but don't report six figures from two-figure data.
+
+**What does "justify in terms of particles" actually want?**
+Reasoning at the level of atoms, ions, and molecules — their motion, the forces between them, or their energy. If your sentence still makes sense with all of those ideas removed, it is not a justification yet.
+
+**In short:** AP Chemistry FRQs pay for reasoning, not just the right number — show the setup with units carried through, justify every claim down at the particle level, and draw particulate diagrams that conserve atoms and keep the ratio. Make those three habits automatic and the "hard" free-response section turns into a checklist you can tick your way to full marks.
+`,
+  },
+
+  {
+    slug: "gcse-english-creative-writing",
+    title: "GCSE English Language Paper 1, Question 5: Creative Writing",
+    description: "How to score AQA GCSE English Language Paper 1 Q5: the AO5/AO6 marks, fast planning, a worked opening, and the mistakes that cap your grade.",
+    publishedAt: "2026-08-22", readTime: "7 min",
+    tags: ["gcse english creative writing","aqa paper 1 question 5","descriptive writing gcse","ao5 ao6 marks","gcse english language"],
+    body: `
+**Quick answer:** AQA GCSE English Language Paper 1, Question 5 is worth 40 marks — 24 for content and organisation (AO5) and 16 for technical accuracy (AO6) — so nearly half your grade rests on spelling, punctuation and vocabulary, not just ideas. Spend five minutes planning, usually choose the description over a plot-heavy story, open on one vivid image, and control your writing instead of cramming a whole action film onto the page.
+
+I sit Cambridge IGCSE and A-Levels, not AQA GCSE — but the descriptive and narrative composition I write for my own English paper is the same muscle Question 5 tests, and the mark schemes reward the same things. When I first read an AQA examiner's report, one line stuck: most students lose marks not because their ideas are thin, but because they try to tell too much story and their punctuation falls apart under time pressure. That is fixable in an afternoon.
+
+Question 5 is the last thing you write in a one-hour-forty-five paper, with maybe 45 minutes left and a tired hand. Knowing the mark scheme before you walk in beats any list of "power words."
+
+## Where the 40 marks actually come from
+
+Section B is a single question worth 40 marks, and it splits into two Assessment Objectives:
+
+- **AO5 — content and organisation (24 marks).** Your ideas, your vocabulary for effect, and the *structure* of the piece — how you order and shape it.
+- **AO6 — technical accuracy (16 marks).** Spelling, punctuation, and a range of sentence forms used correctly.
+
+The part almost nobody plans around: AO6 is 16 out of 40, which is 40% of your writing grade, and vocabulary is judged under it too. "Ambitious vocabulary" only scores if it is spelled right and used correctly. So clever ideas riddled with comma splices and misspelled fancy words can sit a whole band below plainer, accurate writing. Accuracy is not the boring bit — it is nearly half the marks. And since an examiner reads your piece in about two minutes, your opening lines set your band early.
+
+## Description or story — pick the one that protects your marks
+
+Question 5 gives you a choice, usually "Write a description suggested by this picture" or "Write the opening of a story about..." My honest advice, unless you are a confident storyteller under a clock: choose the description.
+
+A story tempts you into plot — a chase, a twist, a body — and plot eats time, invites tense errors, and forces a rushed ending. Description lets you slow down and show off vocabulary, sensory detail and structure, which is exactly what the top AO5 band asks for. If you do take the story, write only the *opening* — you are not expected to finish a plot.
+
+## Plan in five minutes: the camera method
+
+Don't brainstorm ideas — plan *shots*, like a film camera. Down the margin, jot five frames:
+
+1. Wide shot — the whole scene from a distance.
+2. Zoom — one small, specific detail.
+3. A figure or movement — something alive in the frame.
+4. A different sense — a sound, a smell, the temperature.
+5. Pull back — echo the opening image to close the loop.
+
+That shape alone earns AO5 organisation marks and quietly stops you writing a runaway plot. Five bullets, ninety seconds, then write.
+
+## A worked opening, step by step
+
+*Prompt: "Write a description suggested by this picture" — an empty fairground at dusk.*
+
+A weak opening: "The fairground was old and empty. It was creepy. There was a Ferris wheel that didn't work anymore and it was getting dark."
+
+Now the top-band approach, step by step:
+
+1. **Open on one image, in close-up.** Don't announce the scene — drop the reader inside it. "One gondola on the Ferris wheel still swung, creaking, though no wind had touched it for hours."
+2. **Layer a second sense.** Sight is easy; add sound or smell. "The air held the ghost of candyfloss — sugar gone stale and sweet-sour, the way a memory sours."
+3. **Use a semantic field, not random adjectives.** Choose a mood — decay — and let the words belong to it: rust, peeling, silence, forgotten. "Rust bled down the carousel horses; their painted eyes had peeled to a blind white."
+4. **Vary a sentence for effect.** Follow a long, layered sentence with a short one. "Nothing moved. Then, somewhere, a single bulb flickered."
+5. **Close the loop.** End on the opening image, changed. "And still the gondola swung — creaking, patient, waiting for a crowd that would not come."
+
+Read them back. Same picture, but the second has a controlled structure, a consistent mood, precise verbs (*bled*, *peeled*, *swung*) and varied sentence lengths — the jump from mid-band to top-band, with no dramatic plot at all.
+
+Look at the punctuation too, because that is live AO6: the semicolons, the comma before "though," the full stops used to control pace. Ambitious punctuation used *accurately* is exactly what the top AO6 descriptor rewards. If you have written an opening like this, paste it into [Essay Coach](/essay-coach) and let it mark the AO5 and AO6 bands separately — that split is where your real weak spot hides.
+
+## The mistakes that quietly cap your grade
+
+- **Too much plot.** A full story with a twist in 45 minutes almost always rushes the ending. Describe one moment richly instead of racing through five.
+- **Simile spam.** "Like a..." in every line reads like a checklist. One well-chosen metaphor beats five tired similes.
+- **No paragraphs.** A wall of text loses organisation marks on sight. New shot, new paragraph.
+- **Chasing fancy words you can't spell.** A slightly simpler word spelled right protects AO6; a misspelled "ambitious" one costs it.
+- **Drifting off the prompt.** Your writing must clearly connect to the picture or title. Wander off entirely and you can cap your AO5.
+
+## Test yourself
+
+1. Question 5 is worth 40 marks. How many are for technical accuracy (AO6), and what does that objective cover besides spelling and punctuation?
+2. You are offered a description or a story, and you are not a confident storyteller under time pressure. Which is usually the safer choice, and why?
+3. Rewrite this to top-band standard: "The beach was really nice and the sea was blue and calm."
+
+*Quick answers: (1) 16 marks — and AO6 also covers vocabulary and a range of sentence forms, so word choice counts here, not only under ideas. (2) The description — it rewards vocabulary, sensory detail and structure without the time-risk and tense slips of plotting. (3) Something like: "The tide breathed in and out, unhurried; the water lay flat as hammered glass, holding the whole sky." — one sense, precise verbs, varied punctuation.*
+
+Want a real mark and specific fixes on your own opening? Paste it into [Essay Coach](/essay-coach) — it grades against the AO5 and AO6 bands and points to the exact lines holding your grade down.
+
+## FAQ
+
+**How long should my Question 5 answer be?**
+There is no word limit, but aim for about two sides, 350 to 500 words of controlled writing. Quality beats quantity — a tight, well-punctuated single scene outscores a rambling three-page plot.
+
+**Do I have to describe the picture exactly?**
+No. Your response must be clearly *suggested by* the prompt, but a mood or a single detail from it is enough to anchor you. Just don't drift into something unrelated, or you risk your AO5 mark.
+
+**Is the description really easier than the story?**
+Not easier — safer under time pressure. Both can reach full marks, but description removes the plot risk. If you love narrative, write only the opening and let atmosphere carry it, not events.
+
+**How do I pick up AO6 marks fast?**
+Nail the basics first — full stops and capitals used consistently, no comma splices, and a few ambitious words you can actually spell. Then add semicolons, colons and dashes used *deliberately*. Accurate ambitious punctuation is precisely what the top AO6 band is looking for.
+
+Make the moves automatic: turn the techniques into [Flashcards](/flashcards) so "semantic field, structural shift, second sense" come out under pressure, and run a fresh opening through [Essay Coach](/essay-coach) each week until a top-band start feels normal. If a technique still confuses you, ask [Explain anything](/explain) for a plain-English version first.
+
+**In short:** Question 5 rewards control, not chaos — plan five camera shots in five minutes, choose the description if plotting scares you, open on one vivid image, and protect the 16 AO6 marks with accurate punctuation and words you can spell.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
