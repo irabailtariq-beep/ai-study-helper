@@ -25,6 +25,10 @@ jobs:
         run: node tools/blog-queue/validate-queue.mjs
 
       - name: Publish next queued post
+        env:
+          # Slowed from 2/day on 2026-08-24 (owner's call): stretches the queue
+          # to ~18 days and reduces the scaled-content signal on a young site.
+          PUBLISH_COUNT: "1"
         run: node tools/blog-queue/publish-next.mjs
 
       - name: Ping IndexNow (Bing / Yandex / Naver / Seznam)
