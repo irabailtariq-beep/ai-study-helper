@@ -5540,5 +5540,111 @@ Want these marked properly? Drop your full answers into [Explain anything](/expl
 **In short:** aerobic respiration uses oxygen, happens in the mitochondria, breaks glucose down fully to carbon dioxide and water, and releases lots of energy. Anaerobic respiration skips oxygen, releases far less, and gives lactic acid in muscles or ethanol and carbon dioxide in yeast — get the products, the equations and the word "released" right, and this topic is free marks.
 `,
   },
+
+  {
+    slug: "ohms-law",
+    title: "Ohm's Law: Current, Voltage and Resistance Made Clear (GCSE)",
+    description: "Ohms law GCSE explained: V = I x R, rearranging, I-V graphs for resistors, filament lamps and diodes, plus worked examples and the common mistakes.",
+    publishedAt: "2026-08-24", readTime: "6 min read",
+    tags: ["GCSE Physics","Ohm's Law","Electricity","Required Practical","Exam Tips"],
+    body: `
+**Quick answer:** Ohm's law states that for an ohmic conductor at a constant temperature, the current through it is directly proportional to the potential difference across it. The equation is V = I x R (potential difference = current x resistance), measured in volts, amps and ohms. Rearrange it to I = V/R to find current, or R = V/I to find resistance.
+
+When I first met Ohm's law in Year 10, I made the classic mistake: I memorised "V equals I R" like a magic spell and had no idea what any of the letters actually meant. It didn't click until my teacher made us build the circuit for the required practical and watch the numbers change. So this is the explanation I wish I'd had first — what the three quantities really are, how to rearrange the equation without panicking, and how to read those I-V graphs examiners love.
+
+## What current, voltage and resistance actually are
+
+These three get muddled constantly, so let's pin them down.
+
+- **Current (I)** is the rate of flow of charge — how much electric charge passes a point each second. It's measured in amps (A). One amp is one coulomb of charge per second. More current means more charge moving through the wire every second.
+- **Potential difference (V)**, also called voltage, is the energy transferred per unit of charge as it moves between two points. It's measured in volts (V). One volt means one joule of energy is transferred for every coulomb of charge. Think of it as the push that drives the current.
+- **Resistance (R)** is how much a component opposes the flow of current. It's measured in ohms. Higher resistance means it's harder for charge to flow, so for the same voltage you get less current.
+
+A rough analogy that helped me: voltage is how steep a hill is, current is how many cyclists roll down per second, and resistance is a muddy patch slowing them. Useful for intuition, but in the exam use the real definitions above — mark schemes want "rate of flow of charge", not "how much electricity".
+
+## The equation and how to rearrange it
+
+The equation (it's on the AQA and Edexcel equation sheets, but learn it anyway) is:
+
+V = I x R
+
+- To find voltage: V = I x R
+- To find current: I = V / R
+- To find resistance: R = V / I
+
+If rearranging scares you, use the formula triangle: put V in the top, with I and R in the two bottom corners. Cover the one you want. Cover V and you see I x R side by side, so multiply. Cover I and you see V over R, so divide. Cover R and you see V over I. That triangle carried me through dozens of questions before rearranging became automatic.
+
+One habit that saves marks: always write the equation, then substitute the numbers, then give the answer with a unit. Examiners often award a mark for the correct substitution alone, even if you slip on the arithmetic.
+
+## The required practical: I-V graphs
+
+This is where a lot of the marks live. The required practical asks you to investigate the I-V characteristics (current against potential difference) of three components: a fixed resistor at constant temperature, a filament lamp, and a diode.
+
+The circuit is the same each time: the component in series with an ammeter and a variable resistor (to change the current), with a voltmeter connected in parallel across the component. Take several pairs of current and voltage readings, then reverse the connections to the cell to get negative values too, and plot current (I) on the y-axis against potential difference (V) on the x-axis.
+
+### The ohmic conductor (fixed resistor)
+
+At a constant temperature, a fixed resistor gives a straight line through the origin. Current is directly proportional to potential difference — double the voltage, double the current. This is the only one of the three that actually obeys Ohm's law. The gradient of this line equals 1/R, so a steeper line means a smaller resistance.
+
+### The filament lamp
+
+The filament lamp gives an S-shaped curve, not a straight line. As the current increases, the filament heats up. The metal ions vibrate more, get in the way of the flowing electrons more often, so the resistance increases. That's why the curve gets shallower at higher voltages — you need a bigger and bigger voltage rise to get the same increase in current. A filament lamp does not obey Ohm's law.
+
+### The diode
+
+The diode only lets current flow one way (its forward direction). In the forward direction the current stays near zero until about 0.6 V, then rises sharply. In the reverse direction the resistance is extremely high, so almost no current flows — the graph sits flat along the axis. This is exactly why diodes are used to make sure current only flows the intended way round a circuit.
+
+## A fully worked example
+
+Question: A fixed resistor has a current of 250 mA through it when the potential difference across it is 6 V. Calculate its resistance.
+
+- **Step 1 - Write down what you know.** Current I = 250 mA, potential difference V = 6 V, resistance R = ?
+- **Step 2 - Convert units.** Current must be in amps. 250 mA = 250 / 1000 = 0.25 A. This is the step most people skip, and it wrecks the answer.
+- **Step 3 - Choose the rearrangement.** We want resistance, so R = V / I.
+- **Step 4 - Substitute.** R = 6 / 0.25.
+- **Step 5 - Calculate.** R = 24 ohms.
+- **Step 6 - Check it's sensible with a unit.** 24 ohms is a reasonable value and the unit is ohms. Done.
+
+If I'd forgotten step 2 and used 250 instead of 0.25, I'd have got 0.024 ohms — a hundred times too small. Unit conversion is the single biggest silent mark-loser in this topic. To see any of these laid out line by line with your own numbers, our [math solver](/math-solver) shows each rearranging step.
+
+## Common mistakes that cost easy marks
+
+- **Milliamps left as amps.** 250 mA is 0.25 A, not 250 A. Same trap with millivolts and kilo-ohms. Convert first, every time.
+- **Assuming everything obeys Ohm's law.** Only the fixed resistor at constant temperature does. The filament lamp and diode do not — say so if the question asks.
+- **Swapping the ammeter and voltmeter.** The ammeter goes in series (in the main loop); the voltmeter goes in parallel (across the component). Wiring them the wrong way is a classic circuit-diagram error.
+- **Reading resistance off a curve as the gradient.** For a curved I-V graph, resistance at a point is V/I at that point, not the gradient. Only the straight ohmic line has gradient = 1/R.
+- **Dropping the unit.** A number with no unit often scores zero. Always write ohms, amps or volts.
+
+## Test yourself
+
+1. A lamp has a potential difference of 12 V across it and a current of 3 A through it. What is its resistance?
+2. A 4 ohm resistor has a potential difference of 8 V across it. What current flows through it?
+3. Sketch the I-V graph of a filament lamp and explain, in terms of the filament, why it is not a straight line.
+
+Quick answers:
+
+1. R = V / I = 12 / 3 = 4 ohms.
+2. I = V / R = 8 / 4 = 2 A.
+3. An S-shaped curve that flattens at higher voltage. As current rises the filament heats up, the ions vibrate more and collide with electrons more often, so resistance increases and the line curves.
+
+Want more of these worked and checked instantly? Run your numbers through the [math solver](/math-solver), or generate a full round with our [quiz tool](/quiz).
+
+## FAQ
+
+**Is voltage the same as potential difference?**
+At GCSE, yes — treat them as the same thing. "Potential difference" is the more formal term the specification and mark schemes prefer, so use it in written answers to be safe.
+
+**Why doesn't a filament lamp obey Ohm's law?**
+Because its temperature doesn't stay constant. As more current flows the filament heats up and its resistance rises, so current is no longer directly proportional to voltage. Ohm's law only holds at a constant temperature.
+
+**What is an ohmic conductor?**
+A component whose resistance stays constant as long as its temperature doesn't change, so its I-V graph is a straight line through the origin. A fixed resistor, or a metal wire at constant temperature, is the standard example.
+
+**How do I remember whether to multiply or divide?**
+Use the formula triangle with V on top and I and R on the bottom. Cover the quantity you want: if the other two sit side by side you multiply, if one is above the other you divide. If triangles aren't your thing, ask our [explain tool](/explain) to walk you through the rearrangement.
+
+**In short:** Ohm's law is V = I x R for an ohmic conductor at constant temperature — learn what current, voltage and resistance actually mean, convert milliamps to amps before you calculate, and remember that the filament lamp and diode bend the rules. Nail those three things and this becomes one of the easiest mark-earners in GCSE physics.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
