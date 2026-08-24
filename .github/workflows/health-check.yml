@@ -1,9 +1,14 @@
 name: Site health check
 
 # Every 6 hours, prove the site AND the AI still actually work.
-# Without this, an expired/quota-exhausted GEMINI_API_KEY would turn all ten
+# Without this, an expired or quota-exhausted GEMINI_API_KEY would turn all ten
 # tools into 500s while the blog and Search Console robots both stayed green and
 # nobody was told. This is the only alarm that fires when the product is broken.
+#
+# NOTE: keep every line of a `run:` block indented. An earlier version embedded
+# multi-line Python whose `try:` sat at column 0, which terminated the YAML block
+# scalar and made this whole workflow invalid — so GitHub never scheduled it and
+# the site went unmonitored. Validate with a real YAML parser before pushing.
 
 on:
   schedule:
@@ -24,67 +29,55 @@ jobs:
           for p in "" "/tools" "/blog" "/explain" "/math-solver" "/sitemap.xml" "/feed.xml"; do
             CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "https://helpinstudy.com$p" || echo "000")
             echo "  $p -> $CODE"
-            case "$CODE" in 200) ;; *) FAIL="$FAIL $p($CODE)";; esac
+            if [ "$CODE" != "200" ]; then FAIL="$FAIL $p($CODE)"; fi
           done
-          if [ -n "$FAIL" ]; then
-            echo "pages_fail=$FAIL" >> "$GITHUB_OUTPUT"
-          fi
+          if [ -n "$FAIL" ]; then echo "pages_fail=$FAIL" >> "$GITHUB_OUTPUT"; fi
 
       - name: Check the AI actually answers
         id: ai
         run: |
-          # A real end-to-end call: if the Gemini key is dead, out of quota, or the
-          # model was retired, this is what catches it.
           BODY='{"profile":{"country":"GB","age":16,"grade":"Year 11","curriculum":"uk-gcse-aqa","guest":true},"text":"What is photosynthesis? One sentence."}'
-          RESP=$(curl -s --max-time 90 -X POST "https://helpinstudy.com/api/explain" \
-            -H "content-type: application/json" -d "$BODY" || echo '{}')
-          echo "$RESP" | head -c 400
-          # Expect a non-empty explanation field
-          OK=$(printf '%s' "$RESP" | python3 -c "import sys,json;
-try:
-    d=json.load(sys.stdin)
-    t=(d.get('explanation') or d.get('summary') or '')
-    print('yes' if isinstance(t,str) and len(t.strip())>40 else 'no')
-except Exception:
-    print('no')" 2>/dev/null || echo "no")
-          if [ "$OK" != "yes" ]; then
-            echo "ai_fail=1" >> "$GITHUB_OUTPUT"
-            printf '%s' "$RESP" | head -c 500 > /tmp/ai-resp.txt
-          fi
+          RESP=$(curl -s --max-time 90 -X POST "https://helpinstudy.com/api/explain" -H "content-type: application/json" -d "$BODY" || echo '{}')
+          printf '%s' "$RESP" | head -c 300 > /tmp/ai-resp.txt
+          cat /tmp/ai-resp.txt
+          echo ""
+          OK=$(printf '%s' "$RESP" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{let t='';try{t=String(JSON.parse(s).explanation||'')}catch(e){t=''};process.stdout.write(t.trim().length>40?'yes':'no')})")
+          echo "ai_ok=$OK"
+          if [ "$OK" != "yes" ]; then echo "ai_fail=1" >> "$GITHUB_OUTPUT"; fi
 
-      - name: Report a failure (GitHub issue -> your inbox)
+      - name: Report a failure (GitHub issue so it reaches your inbox)
         if: steps.pages.outputs.pages_fail != '' || steps.ai.outputs.ai_fail != ''
         env:
           GH_TOKEN: ${{ github.token }}
+          PAGES_FAIL: ${{ steps.pages.outputs.pages_fail }}
+          AI_FAIL: ${{ steps.ai.outputs.ai_fail }}
         run: |
           {
-            echo "## 🚨 helpinstudy.com health check failed"
+            echo "## helpinstudy.com health check failed"
             echo ""
             echo "Checked at $(date -u '+%Y-%m-%d %H:%M UTC')."
             echo ""
-            if [ -n "${{ steps.pages.outputs.pages_fail }}" ]; then
-              echo "**Pages not returning 200:** ${{ steps.pages.outputs.pages_fail }}"
+            if [ -n "$PAGES_FAIL" ]; then
+              echo "**Pages not returning 200:**$PAGES_FAIL"
               echo ""
             fi
-            if [ -n "${{ steps.ai.outputs.ai_fail }}" ]; then
+            if [ -n "$AI_FAIL" ]; then
               echo "**The AI did not answer.** /api/explain returned no usable explanation."
               echo "Most likely: GEMINI_API_KEY expired, free-tier quota exhausted, or the model was retired."
               echo ""
-              echo '```'
-              cat /tmp/ai-resp.txt 2>/dev/null | head -c 500
+              echo "Response head:"
               echo ""
-              echo '```'
+              sed 's/^/    /' /tmp/ai-resp.txt 2>/dev/null || true
               echo ""
-              echo "Fix: check the key in Vercel → Project → Settings → Environment Variables, then redeploy."
+              echo "Fix: check the key in Vercel, Project, Settings, Environment Variables, then redeploy."
             fi
             echo ""
             echo "cc @irabailtariq-beep"
           } > /tmp/health.md
-
           TITLE="Site health check failed"
           NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
           if [ -z "$NUM" ]; then
-            gh issue create --title "🚨 $TITLE" --body-file /tmp/health.md
+            gh issue create --title "$TITLE" --body-file /tmp/health.md
           else
             gh issue comment "$NUM" --body-file /tmp/health.md
           fi
@@ -98,7 +91,7 @@ except Exception:
           TITLE="Site health check failed"
           NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
           if [ -n "$NUM" ]; then
-            gh issue comment "$NUM" --body "✅ Recovered — pages and the AI are responding normally again."
+            gh issue comment "$NUM" --body "Recovered - pages and the AI are responding normally again."
             gh issue close "$NUM"
           fi
           echo "All healthy."
