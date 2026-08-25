@@ -5646,5 +5646,106 @@ Use the formula triangle with V on top and I and R on the bottom. Cover the quan
 **In short:** Ohm's law is V = I x R for an ohmic conductor at constant temperature — learn what current, voltage and resistance actually mean, convert milliamps to amps before you calculate, and remember that the filament lamp and diode bend the rules. Nail those three things and this becomes one of the easiest mark-earners in GCSE physics.
 `,
   },
+
+  {
+    slug: "radioactivity-half-life",
+    title: "Radioactivity and Half-Life: The Topic Students Overthink",
+    description: "Radioactivity half-life made simple: what alpha, beta and gamma are, how to read half-life from a table, and the background trap that costs marks.",
+    publishedAt: "2026-08-25", readTime: "7 min",
+    tags: ["radioactivity half life","GCSE physics","IGCSE physics","alpha beta gamma","half-life calculations"],
+    body: `
+**Quick answer:** Radioactive decay is random, but half-life makes it predictable in bulk — it is the time for the number of undecayed nuclei (or the count rate) in a sample to halve. Alpha is a helium nucleus (big charge, stopped by paper), beta is a fast electron (stopped by aluminium), and gamma is a high-energy wave (only reduced by thick lead). Get those two ideas straight and the whole topic stops being scary.
+
+I used to think radioactivity was a topic you either "got" or you did not. Most of the confusion comes from overthinking half-life — treating it like a mysterious countdown when it is really just repeated halving. Once you see it as "halve, halve, halve again," the calculations become some of the easiest marks on the paper. Here is how it clicked for me in IGCSE, and what the AQA, Edexcel, OCR and Cambridge mark schemes want.
+
+## The three types: alpha, beta, gamma
+
+Every board tests the same three things about each one: what it *is*, its *charge*, and how far it *penetrates*.
+
+- **Alpha (α)** — a helium nucleus: 2 protons and 2 neutrons, charge +2. Big and slow, so the most ionising but least penetrating: paper, a few centimetres of air, or your skin stops it.
+- **Beta (β)** — a fast electron, charge -1, thrown out when a neutron in the nucleus turns into a proton. Medium ionising, medium penetrating: a few millimetres of aluminium stops it.
+- **Gamma (γ)** — a high-frequency electromagnetic wave, no charge and no mass. Least ionising but most penetrating: thick lead or several metres of concrete only cuts it down, never fully stops it.
+
+Notice the pattern examiners love: penetration and ionising power run in opposite directions — the heavy, charged alpha stops fast, the weightless gamma travels far. In a field, alpha and beta bend opposite ways (their charges are opposite) and gamma does not bend at all.
+
+That set of properties is pure recall, so I turned it into [Flashcards](/flashcards) and drilled it until it was automatic.
+
+### The equations (all boards want these)
+
+- Alpha decay: mass number drops by 4, atomic number drops by 2. Uranium-238 → thorium-234 + an alpha particle.
+- Beta decay: mass number unchanged, atomic number goes *up* by 1, because a neutron has become a proton. Carbon-14 → nitrogen-14 + a beta particle.
+- Gamma: no change to mass or atomic number — the nucleus just loses surplus energy.
+
+The mark-scheme trick: the mass numbers and the atomic numbers must each balance on both sides.
+
+## What half-life actually means
+
+Memorise this sentence, because examiners are fussy: half-life is the time taken for the number of undecayed nuclei in a sample to halve — or, equivalently, the time for the count rate (activity) to halve. Say "the sample halves" and you can lose the mark; they want "undecayed nuclei" or "count rate."
+
+The bit people overthink: individual decay is completely random — you can never predict which nucleus goes next, or when. But with billions of them, the *proportion* that decays in a given time is rock-steady, and that steadiness is the half-life. Activity is measured in becquerel (Bq), where 1 Bq is one decay per second.
+
+This is the fact that unlocks every calculation: after each half-life the amount left halves. After n half-lives, the fraction remaining is (1/2)^n — a half, then a quarter, then an eighth. It never reaches zero, which is exactly why it is "half-life" and not "full-life."
+
+## Worked example: finding half-life from a table
+
+A student measures a sample's count rate with a Geiger counter. Background radiation in the room is 20 counts per minute (cpm). The readings:
+
+- 0 min: measured 660 cpm
+- 10 min: measured 340 cpm
+- 20 min: measured 180 cpm
+- 30 min: measured 100 cpm
+- 40 min: measured 60 cpm
+
+Find the half-life.
+
+- **Step 1 — correct for background.** Radiation is everywhere — rocks, cosmic rays, the building. Subtract 20 from every reading first; this is the step that quietly costs marks when skipped. Corrected: 640, 320, 160, 80, 40 cpm.
+- **Step 2 — pick a starting value.** The corrected count rate at 0 min is 640 cpm.
+- **Step 3 — find when it halves.** Half of 640 is 320, which happens at 10 min. So one half-life is 10 minutes.
+- **Step 4 — check it is consistent.** 320 halves to 160 by 20 min, and 160 to 80 by 30 min — the same 10-minute gap every time, which confirms it.
+- **Step 5 — state the answer.** The half-life is 10 minutes.
+
+A common follow-up: how long until the corrected count rate falls to 40 cpm? That is 640 → 320 → 160 → 80 → 40, four halvings, so 4 × 10 = 40 minutes. (Check with the formula: 40/640 = 1/16 = (1/2)^4, so n = 4.) When the numbers are less friendly, I run my working through the [Math solver](/math-solver), which shows each halving step instead of just the final time.
+
+## Uses and dangers: match the radiation to the job
+
+Exam questions love "why is this type used here?" The answer is always penetration plus half-life.
+
+- **Smoke alarms** use alpha (americium-241): it ionises the air so a current flows, and smoke breaks that current. Alpha cannot travel far, so it is safe on your ceiling.
+- **Medical tracers** use a gamma emitter with a *short* half-life (like technetium-99m). Gamma penetrates out of the body to the detector, and the short half-life means the patient is not radioactive for long.
+- **Thickness gauges** for foil or paper use beta: it is partly absorbed, so the count rate getting through shows how thick the sheet is.
+- **Radiotherapy and sterilising** use high-energy gamma to kill cancer cells or bacteria.
+
+The danger twist students miss: alpha is the *least* harmful outside the body (skin stops it) but the *most* harmful inside it, since it is so ionising. Gamma is the reverse. Protect yourself with shielding, distance, and limiting time near the source.
+
+AQA also loves the irradiation-versus-contamination distinction: *irradiation* is being exposed to rays from a source, so you do not become radioactive. *Contamination* is getting radioactive atoms onto or inside you, so you keep being irradiated from within. Learn that one sentence — it comes up almost every year.
+
+## Test yourself
+
+1. A source has a half-life of 5 days and a starting activity of 800 Bq. What is its activity after 15 days?
+2. Which type of radiation — alpha, beta or gamma — would you use as a medical tracer, and why?
+3. A count rate already corrected for background falls from 1200 cpm to 150 cpm in 24 minutes. What is the half-life?
+
+Quick answers:
+
+1. 15 days is 3 half-lives. 800 → 400 → 200 → 100 Bq. Activity = 100 Bq.
+2. Gamma, because it penetrates out of the body to reach the detector; pair it with a short half-life so it does not linger.
+3. 1200 → 600 → 300 → 150 is 3 halvings in 24 min, so half-life = 24 / 3 = 8 minutes.
+
+Want a fresh set to drill? Run the numbers through the [Math solver](/math-solver), or ask [Explain anything](/explain) to walk you through any step you got stuck on.
+
+## FAQ
+
+**Does anything change an isotope's half-life?**
+No. Unlike a chemical reaction, radioactive decay is not affected by temperature, pressure or what compound the atom is in. Each isotope's half-life is fixed — which is why carbon-14 dating works.
+
+**Why do I have to subtract background radiation?**
+Because your detector also picks up radiation from rocks, soil, cosmic rays and the building, not just your source. If you do not subtract it first, every reading is too high and your half-life comes out wrong.
+
+**What is the difference between irradiation and contamination?**
+Irradiation is being exposed to radiation from an outside source, and you do not become radioactive. Contamination is getting radioactive material onto or inside you, so it keeps irradiating you from within — usually more serious because you cannot simply step away from it.
+
+**In short:** stop overthinking it — half-life is just repeated halving of the undecayed nuclei (or count rate), alpha, beta and gamma differ in charge and penetration, and if you subtract background first and count the halvings, these turn into reliable marks on any GCSE, IGCSE or Cambridge paper.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
