@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { checkGrammar } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
+  if (bodyTooLarge(req, 120000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
   const rl = await checkRateLimitShared(`grammar:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
   try {

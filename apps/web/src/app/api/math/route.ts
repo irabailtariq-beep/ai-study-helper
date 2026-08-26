@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { solveMath, formulaSheet } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -9,6 +9,7 @@ export const maxDuration = 60;
 //  { action: "solve", profile, text?, imageBase64?, pdfBase64? }
 //  { action: "sheet", profile, subject, topic? }
 export async function POST(req: NextRequest) {
+  if (bodyTooLarge(req, 8000000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
   const rl = await checkRateLimitShared(`math:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10) * 2);
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
   try {

@@ -57,7 +57,7 @@ export default function Home() {
         {/* trust strip — the five boards, honest chips */}
         <div className="mt-6 flex flex-wrap gap-2 justify-center text-xs" style={{ color: "var(--ash-muted)" }}>
           <span className="glass-panel px-3 py-1.5 rounded-full">CBSE · GCSE · AP · Cambridge · WAEC</span>
-          <span className="glass-panel px-3 py-1.5 rounded-full">🎓 Ages 6 to 25</span>
+          <span className="glass-panel px-3 py-1.5 rounded-full">🎓 Ages 13+</span>
           <span className="glass-panel px-3 py-1.5 rounded-full">🚫 No ads</span>
           <span className="glass-panel px-3 py-1.5 rounded-full">💸 Free forever</span>
         </div>

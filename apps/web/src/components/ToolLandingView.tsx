@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ToolLanding } from "@/content/toolLandings";
-import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdSafe } from "@/lib/seo";
 
 // The embedded tools are the same client components the /grade, /essay-coach,
 // /math-solver and /quiz routes render — one product, many query-matched doors.
@@ -20,10 +20,10 @@ export function ToolLandingView({ page }: { page: ToolLanding }) {
   const Tool = TOOL_COMPONENT[page.tool];
   return (
     <div>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(breadcrumbJsonLd([
         { name: page.h1, path: `/tools/${page.slug}` },
       ])) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(
         faqJsonLd(page.faqs.map((f) => ({ question: f.q, answer: f.a })))
       ) }} />
 

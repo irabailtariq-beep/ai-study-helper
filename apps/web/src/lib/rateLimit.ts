@@ -75,3 +75,13 @@ export function keyFromRequest(req: Request) {
   const fwd = h("x-forwarded-for").split(",")[0].trim();
   return fwd || h("x-real-ip") || "local";
 }
+
+/**
+ * Cheap flood guard: the rate limiter caps how OFTEN a visitor can call the AI,
+ * this caps how BIG each call can be. Uses Content-Length so oversized bodies
+ * are rejected before we parse or forward anything to the model.
+ */
+export function bodyTooLarge(req: Request, maxBytes: number): boolean {
+  const len = Number(req.headers.get("content-length") ?? 0);
+  return Number.isFinite(len) && len > maxBytes;
+}

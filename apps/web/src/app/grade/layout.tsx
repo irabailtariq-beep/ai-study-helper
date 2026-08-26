@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Free AI Marker for GCSE & IGCSE Answers";
+const title = "AI Answer Marking — Free Mark-Scheme Feedback";
 const description = "Free AI exam marker: paste any GCSE, IGCSE, CBSE, AP or WAEC answer and get mark-scheme-style feedback — the points you hit and the ones you missed. No signup.";
 
 export const metadata: Metadata = {

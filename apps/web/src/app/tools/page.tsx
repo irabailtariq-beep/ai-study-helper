@@ -21,6 +21,15 @@ export const metadata: Metadata = {
 type Category = "Understand" | "Practise & get marked" | "Revise" | "Notes & writing";
 type Tool = { href: string; emoji: string; title: string; body: string; category: Category };
 
+// Board-specific doors into the same tools — these landing pages were
+// previously reachable only via the sitemap, which starves them of link equity.
+const BOARD_TOOLS = [
+  { href: "/tools/gcse-ai-marker", emoji: "🎯", title: "AI marker for GCSE answers", body: "Paste a GCSE/IGCSE answer, get mark-scheme-style feedback." },
+  { href: "/tools/mark-my-english-essay-gcse", emoji: "✍️", title: "GCSE English essay marking", body: "Paper 1 Q5 creative writing and literature essays, marked." },
+  { href: "/tools/cbse-maths-solver", emoji: "🇮🇳", title: "CBSE maths solver", body: "NCERT-style working: Given, Formula, Solution, Answer." },
+  { href: "/tools/wassce-practice-questions", emoji: "🌍", title: "WASSCE practice questions", body: "Original WAEC-format questions, auto-marked, on any phone." },
+];
+
 const TOOLS: Tool[] = [
   { category: "Understand", href: "/explain",   emoji: "📖", title: "Explain anything",          body: "Photo, PDF or paste — explained at your level, in your board's style." },
   { category: "Understand", href: "/chat",      emoji: "💬", title: "AI chat tutor",             body: "Ask anything and keep asking — a tutor that knows your board and grade." },
@@ -65,6 +74,19 @@ export default function ToolsPage() {
           </div>
         </section>
       ))}
+
+      <section className="mb-9">
+        <h2 className="text-sm uppercase font-bold mb-4" style={{ color: "var(--ash-muted)", letterSpacing: "0.08em" }}>For your exam board</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {BOARD_TOOLS.map((t) => (
+            <Link key={t.href} href={t.href} className="glass-panel rounded-2xl p-5 h-full block">
+              <div className="text-2xl mb-2">{t.emoji}</div>
+              <div className="font-semibold">{t.title}</div>
+              <div className="text-sm mt-1" style={{ color: "var(--ash-muted)" }}>{t.body}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

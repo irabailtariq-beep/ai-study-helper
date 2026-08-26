@@ -5031,7 +5031,7 @@ export const BLOG_REDIRECTS: Record<string, string> = {
   "five-minute-revision-trick": "/blog/active-recall-vs-rereading",
   "how-to-use-ai-flashcards": "/blog/spaced-repetition-explained",
   "study-plan-for-exams": "/blog/ai-revision-timetable-30-days",
-  "step-by-step-math-solver": "/blog/ai-study-helper-math",
+  "step-by-step-math-solver": "/help-in-study/math",
   "forces-and-motion-physics": "/blog/newtons-laws-explained",
   "concept-map-study-method": "/blog/mind-maps-for-revision",
   "study-music-vs-silence": "/blog/study-music-vs-silence-myth",

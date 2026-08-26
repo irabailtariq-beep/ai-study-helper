@@ -126,3 +126,11 @@ export function breadcrumbJsonLd(crumbs: { name: string; path: string }[]) {
     })),
   };
 }
+
+/**
+ * Stringify JSON-LD with `<` escaped, so a stray "</script>" inside any
+ * content field can never break out of the script tag.
+ */
+export function jsonLdSafe(o: unknown): string {
+  return JSON.stringify(o).replace(/</g, "\\u003c");
+}

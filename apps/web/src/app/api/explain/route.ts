@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { explain } from "@ash/ai-client";
 import type { ExplainRequest } from "@ash/core";
-import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
 import { supabaseServer } from "@/lib/supabase/server";
 import { recordActivity } from "@/lib/activity";
 
@@ -9,6 +9,7 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
+  if (bodyTooLarge(req, 8000000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
   const key = keyFromRequest(req);
   const limit = Number(process.env.RL_GUEST_PER_DAY ?? 10);
   const rl = await checkRateLimitShared(`explain:${key}`, limit);

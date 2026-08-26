@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { sm2 } from "@/lib/sm2";
 import { generateQuiz } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
 import { recordActivity } from "@/lib/activity";
 
 export const runtime = "nodejs";
@@ -30,6 +30,7 @@ export async function GET(req: NextRequest) {
 //  { action: "generate", profile, sourceText?, pdfBase64?, imageBase64?, count? }
 //  { action: "delete", id }
 export async function POST(req: NextRequest) {
+  if (bodyTooLarge(req, 8000000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
   const body = await req.json();
 
   // ─── GENERATE works for everyone, signed in or not ───

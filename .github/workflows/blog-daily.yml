@@ -7,10 +7,17 @@ on:
 
 permissions:
   contents: write          # commit the newly published post + updated queue
+  issues: write            # the queue-empty/failure alert opens a GitHub issue —
+                           # declaring any permission zeroes the rest, so without
+                           # this line the Sept-1 alert dies with a 403
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      # Job-level so BOTH validate-queue (runway warnings) and publish-next see
+      # the same rate. Slowed from 2/day on 2026-08-24 (owner's call).
+      PUBLISH_COUNT: "1"
     steps:
       - uses: actions/checkout@v4
 
@@ -25,10 +32,6 @@ jobs:
         run: node tools/blog-queue/validate-queue.mjs
 
       - name: Publish next queued post
-        env:
-          # Slowed from 2/day on 2026-08-24 (owner's call): stretches the queue
-          # to ~18 days and reduces the scaled-content signal on a young site.
-          PUBLISH_COUNT: "1"
         run: node tools/blog-queue/publish-next.mjs
 
       - name: Ping IndexNow (Bing / Yandex / Naver / Seznam)

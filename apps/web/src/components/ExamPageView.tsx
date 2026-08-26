@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ExamPage } from "@/content/examPages";
 import { examPagesByBoard } from "@/content/examPages";
-import { breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdSafe } from "@/lib/seo";
 import { quizJsonLd } from "@/lib/quizSchema";
 import { APScoreCalculator } from "@/components/APScoreCalculator";
 
@@ -19,17 +19,18 @@ export function ExamPageView({ page }: { page: ExamPage }) {
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd([
-        { name: BOARD_LABEL[page.board], path: `/${page.board}` },
+      {/* single crumb only: /cbse etc. have no index route yet, and structured
+          data must never reference a 404 */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(breadcrumbJsonLd([
         { name: page.h1, path: `/${page.board}/${page.slug}` },
       ])) }} />
       {page.problems.length > 0 && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(
           quizJsonLd(page.h1, page.problems.map((p) => ({ q: p.question, a: p.answer })))
         ) }} />
       )}
       {page.faqs.length > 0 && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(
           faqJsonLd(page.faqs.map((f) => ({ question: f.q, answer: f.a })))
         ) }} />
       )}
