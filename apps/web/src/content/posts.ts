@@ -1362,6 +1362,8 @@ So build the day off in from October: one full day a week, all year, not negotia
 2. You lost 6 marks writing a vague version of the right idea. Which bucket is that, and what should you drill?
 3. In which month should past papers become your main revision method rather than a final check?
 
+Wondering about the pass mark? See [how many marks pass GCSE maths foundation](/gcse/gcse-maths-pass-mark-foundation).
+
 ## FAQ
 
 ### How many hours a day should I revise for GCSE?
@@ -2979,6 +2981,8 @@ The formula never fails; factorising fails often. In a timed paper, thirty waste
 
 Answers: 1. x = 0.39 or x = -3.89. 2. Discriminant = 0, so one repeated root, x = 5. 3. x = (3 ± sqrt(89)) / 10.
 
+For fully worked exam-style quadratic word problems, see [quadratic word problems solved step by step](/cbse/class-10-maths-quadratic-word-problems).
+
 ## FAQ
 
 ### Do I need to memorise the quadratic formula?
@@ -3082,6 +3086,8 @@ For steps on your own questions, [the math solver](/math-solver) works line by l
 3. Are 9 cm, 12 cm and 15 cm a right-angled triangle? Show why.
 
 Answers: 15 cm, since sqrt(17^2 - 8^2) = sqrt(225). Trigonometry, because an angle is given. Yes, since 9^2 + 12^2 = 225 = 15^2.
+
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
 
 ## FAQ
 
@@ -4967,6 +4973,8 @@ Notice you cannot get 12 percent by combining 28 and 12.5 in your head, because 
 3. A machine worth 9,000 depreciates by 20 percent per year. What is it worth after 3 years?
 
 Answers: 80 pounds (68 / 0.85); 20 percent (480 / 2400); 4,608 (9000 x 0.8^3). If you got the first one wrong, that is exactly the reverse-percentage gap, and it is worth drilling with a short mixed set on [quiz](/quiz) until spotting it becomes automatic.
+
+Work through [profit and loss word problems solved in exam layout](/cbse/class-8-maths-profit-loss-word-problems).
 
 ## FAQ
 

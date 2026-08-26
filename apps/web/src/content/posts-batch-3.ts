@@ -1258,6 +1258,8 @@ Any FRQ asking "can we conclude X causes Y" or "does this apply to all students"
 2. n = 40 and p-hat = 0.15. Do the large-counts conditions hold? Show both numbers.
 3. Researchers randomly assign volunteers who signed up online to two exercise plans. What can and cannot be concluded, and why?
 
+See what your section scores add up to with the [AP Statistics score calculator](/ap/ap-statistics-score-calculator).
+
 ## FAQ
 
 ### Is AP Statistics harder than AP Calculus?
@@ -1374,6 +1376,8 @@ The fastest fix is feedback on your own writing, not more reading about techniqu
 1. A 9-mark question says evaluate. You have written two sides brilliantly and stopped. Roughly what fraction of the marks is still sitting on the table, and why?
 2. Turn this into a real judgement: "Both advertising and better ingredients are important for a new cafe."
 3. What is a criterion, and why does naming one lift an answer a whole level?
+
+For the level-marking system in full, see [how to answer 6-mark science questions](/gcse/gcse-6-mark-questions-science).
 
 ## FAQ
 
@@ -1888,6 +1892,8 @@ Answers:
 
 Get more questions like these, marked instantly, on [/quiz](/quiz).
 
+Practise with [WASSCE-style quadratic questions, fully solved](/waec/waec-maths-quadratic-equations-practice).
+
 ## FAQ
 
 **How is WASSCE Core Mathematics scored across the two papers?**
@@ -1988,6 +1994,8 @@ Answers:
 3. **Converges conditionally.** It passes the alternating series test (the terms decrease to 0), but the absolute version, sum 1/n, is the harmonic series and diverges — so the convergence is conditional, not absolute.
 
 Want a full set marked with the justification checked line by line? Generate practice in the [Quiz maker](/quiz), or paste your working into the [Math solver](/math-solver) for step-by-step feedback.
+
+Check your practice-exam numbers in the [AP Calculus score calculator](/ap/ap-calculus-ab-score-calculator).
 
 ## FAQ
 
@@ -3161,6 +3169,8 @@ Quick answers: (1) Add the equations to cancel y: 4x = 16, so x = 4; then 4 - 2y
 
 Want these marked and endless fresh ones in your board's style? Check any answer step by step on [the math solver](/math-solver) or generate a full practice set on [the mock exam generator](/mock-exam).
 
+Practise with [linear-equation word problems solved step by step](/cbse/class-10-maths-linear-equations-word-problems).
+
 ## FAQ
 
 **Which method is best for simultaneous equations?** There's no single best one - it depends on the form. If both equations are ax + by = c, use elimination. If one variable is already the subject, or one equation is a quadratic, use substitution. Graphical is for when the question asks for it or you want an estimate.
@@ -3354,6 +3364,8 @@ If you want a machine to tell you which of those seven boxes you actually hit, p
 Quick answers: **Q1** — (b); it has a claim plus categories and a built-in qualification. **Q2** — add why it matters, e.g. "Drawn by a business-aligned critic (point of view), the cartoon exaggerates federal overreach, which reveals the fierce opposition FDR's expanded government provoked." **Q3** — the Wagner Act (1935), the court-packing plan (1937), or the Civilian Conservation Corps all work.
 
 Want more reps? Run a full timed paper in the [mock exam](/mock-exam), then drop your answer into the [essay coach](/essay-coach) to see your rubric score. To pressure-test a single paragraph fast, the [grade](/grade) tool marks it against the criteria in seconds.
+
+Run your numbers through the [APUSH score calculator](/ap/ap-us-history-score-calculator).
 
 ## FAQ
 
@@ -3550,6 +3562,8 @@ That is a full-mark answer, and notice you needed almost no memorised biology �
 Answers: (1) Class Insecta, because it has three pairs of legs or a body in three regions (either reason). (2) 8 / 2 = x4. (3) Any two of: streamlined body to cut resistance; fins for movement and balance; gills for gas exchange; scales and mucus for protection; lateral line to detect vibrations.
 
 Want a set of these to drill? Generate specimen-style questions on [the quiz generator](/quiz), and turn the group features into a deck with [Flashcards](/flashcards).
+
+Practise with [WASSCE-style quadratic questions, fully solved](/waec/waec-maths-quadratic-equations-practice).
 
 ## FAQ
 
@@ -4139,6 +4153,8 @@ The fastest fix is to write real answers and have them marked against the rubric
 
 Want yours marked properly? Drop a full answer into [Mark my answer](/grade) and see it scored against the AP-style rubric, point by point.
 
+Estimate where you stand with the [AP Biology score calculator](/ap/ap-biology-score-calculator).
+
 ## FAQ
 
 **How many FRQs are on the AP Biology exam?**
@@ -4241,6 +4257,8 @@ Try these, then check the working - not just the final coordinates.
 *Quick answers: (1) Roots x = 2 and x = 4, so line of symmetry x = 3; turning point (3, -1), a minimum; y-intercept (0, 8). (2) (x + 2)^2 - 3, so turning point (-2, -3). (3) Discriminant = 4 - 20 = -16, negative, so no - it never crosses; completing the square gives (x - 1)^2 + 4, turning point (1, 4), a minimum sitting above the axis.*
 
 Want each step checked in your board's style? Paste a quadratic into [Math solver](/math-solver) and it will walk through the roots, line of symmetry and turning point line by line. Once you've drawn a full sketch, [Mark my answer](/grade) shows which labels an examiner would credit and which you left off. And if a single step still feels fuzzy - say, why completing the square works - drop it into [Explain a topic](/explain), then use [Math solver](/math-solver) again to drill a few more until the pattern sticks.
+
+For fully worked exam-style quadratic word problems, see [quadratic word problems solved step by step](/cbse/class-10-maths-quadratic-word-problems).
 
 ## FAQ
 
@@ -4448,6 +4466,8 @@ Notice what that letter does: no contractions, every point developed with an exa
 
 Want to know whether your letter would actually score? Write one and run it through [Essay Coach](/essay-coach) — it checks your format, register and structure the way a WAEC examiner would and shows you where you're leaking Expression and Mechanical Accuracy marks. Draft, check, redraft: that loop lifted my cousin a full grade. If a grammar rule keeps tripping you, [Essay Coach](/essay-coach) will name it, and you can get the concept broken down in [Explain](/explain) or mark a full practice answer in [Grade my work](/grade).
 
+Practise with [WASSCE-style quadratic questions, fully solved](/waec/waec-maths-quadratic-equations-practice).
+
 ## FAQ
 
 **Do I need the recipient's address in a WASSCE formal letter?**
@@ -4559,6 +4579,8 @@ Quick answers:
 3. 3(x + 2)^2 - 7, minimum value -7.
 
 Want each line marked the way an examiner would? Paste your working into [Math solver](/math-solver) to check every step, or run a few more through [Mark my answer](/grade) to see where a method mark would slip. Do five and the whole method locks in.
+
+For fully worked exam-style quadratic word problems, see [quadratic word problems solved step by step](/cbse/class-10-maths-quadratic-word-problems).
 
 ## FAQ
 
@@ -5024,6 +5046,8 @@ Try these, then check your working line by line, not just the final answer:
 
 Want each line marked in your board's style? Paste your working into [Math solver](/math-solver) to check every substitution step, or [mark my answer](/grade) to see exactly where a method mark would drop. To drill the "spot the u" reflex fast, generate a set with the [quiz tool](/quiz). Ten of these and it stops feeling like guesswork.
 
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
+
 ## FAQ
 
 **How do I know which part to make u?**
@@ -5221,6 +5245,8 @@ Answers:
 3. Two water molecules, each drawn as one O bonded to two H, with no leftover H or O atoms — because atoms are conserved across the reaction.
 
 Want these marked the way an examiner would? Generate a fresh set in the [Quiz maker](/quiz), or drop a full written FRQ into the [AI grader](/grade) for point-by-point feedback on the setup and the reasoning, not just the answer.
+
+Estimate your result with the [AP Chemistry score calculator](/ap/ap-chemistry-score-calculator).
 
 ## FAQ
 
@@ -5527,6 +5553,8 @@ Quick answers:
 
 Want these marked properly? Drop your full answers into [Explain anything](/explain) and ask it to grade them against the mark scheme, then turn anything you missed into a deck with [Flashcards](/flashcards). A few quick rounds on [the quiz generator](/quiz) the night before will tell you fast whether the equations have actually stuck.
 
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
+
 ## FAQ
 
 **Is anaerobic respiration the same as fermentation?** Fermentation is the name for anaerobic respiration in yeast specifically, where the products are ethanol and carbon dioxide. Anaerobic respiration in your muscles produces lactic acid instead, so it's the same idea but not the same reaction.
@@ -5628,6 +5656,8 @@ Quick answers:
 3. An S-shaped curve that flattens at higher voltage. As current rises the filament heats up, the ions vibrate more and collide with electrons more often, so resistance increases and the line curves.
 
 Want more of these worked and checked instantly? Run your numbers through the [math solver](/math-solver), or generate a full round with our [quiz tool](/quiz).
+
+Drill the numbers with [solved electricity numericals](/cbse/class-10-science-electricity-numericals).
 
 ## FAQ
 

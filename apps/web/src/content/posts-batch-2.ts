@@ -104,6 +104,8 @@ To check these have actually stuck, a short mixed set on [quiz](/quiz) beats rer
 2. The opposite side is 5 cm and the hypotenuse is 9 cm. Find the angle to 1 decimal place.
 3. Angle of depression from a cliff top is 24 degrees and the boat is 150 m from the base. How tall is the cliff to 3 significant figures?
 
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
+
 ## FAQ
 
 ### How do I remember which ratio is which under pressure?
@@ -550,6 +552,8 @@ Check the f'(x)/f(x) shape before committing — plenty of questions that look l
 
 Answers: 1. Substitution — the derivative of x^3 + 4 is 3x^2 and an x^2 is present. 2. Split into 2x^2 - 1/x, giving 2x^3/3 - ln mod(x) + C. 3. Partial fractions, but check the log shape first: the denominator expands to x^2 + 2x - 3, whose derivative is 2x + 2.
 
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
+
 ## FAQ
 
 ### How do I know when substitution definitely won't work?
@@ -643,6 +647,8 @@ Then work past-paper diagrams for four days. Cover the answer, write the theorem
 3. The angle at the centre standing on arc XY is 84 degrees, and Z sits on the major arc. What is angle XZY?
 
 Answers: 62 degrees, opposite angles in a cyclic quadrilateral add to 180. 90 degrees, tangent meets radius at a right angle. 42 degrees, angle at the centre is twice the angle at the circumference.
+
+And if you are aiming at a specific grade, see [the GCSE maths pass mark and boundaries](/gcse/gcse-maths-pass-mark-foundation).
 
 ## FAQ
 
@@ -990,6 +996,8 @@ Halve the second difference to get the coefficient of n^2. Here 2/2 = 1, so the 
 3. A geometric sequence has first term 8 and r = 1/4. What is its sum to infinity?
 
 Answers: geometric with r = 1/3; nth term 4n + 2, sum = 15/2 x (12 + 14 x 4) = 7.5 x 68 = 510; sum to infinity = 8/(1 - 0.25) = 32/3, about 10.67.
+
+Try the [arithmetic progression case-study questions, solved](/cbse/class-10-maths-arithmetic-progression-case-study).
 
 ## FAQ
 
@@ -3350,6 +3358,8 @@ Short daily drills beat long sessions here. I keep derivative rules in [Flashcar
 2. A student writes f''(3) = 0, therefore x = 3 is a point of inflection. Why does that earn no credit, and what is missing?
 3. What fraction of the exam is completed without a calculator?
 
+Check your practice-exam numbers in the [AP Calculus score calculator](/ap/ap-calculus-ab-score-calculator).
+
 ## FAQ
 
 ### Is AP Calculus AB harder than A-Level maths?
@@ -3465,6 +3475,8 @@ For the concepts themselves rather than the ranking, the [biology hub](/help-in-
 1. Which two AP Biology units carry the smallest share of the exam, and why should you still learn them?
 2. In a population of 800 beetles, 128 show a recessive phenotype. Find q, p, and the number of heterozygotes.
 3. A drug makes the inner mitochondrial membrane leaky to protons. What happens to oxygen consumption and to ATP production?
+
+Estimate where you stand with the [AP Biology score calculator](/ap/ap-biology-score-calculator).
 
 ## FAQ
 
