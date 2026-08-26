@@ -8,7 +8,7 @@ const today = "2026-05-23";
 export const POSTS_BATCH_3: Post[] = [
   {
     slug: "2026-board-exam-survival-kit",
-    title: "8-Week Board Exam Revision Plan: What Actually Lifts Your Grade",
+    title: "8-Week Board Exam Revision Plan (CBSE Class 10 & 12, GCSE, WAEC)",
     description: "An 8-week board exam revision plan for CBSE, GCSE, AP, Cambridge and WAEC students: rank topics by marks per hour, drill timed past papers, then taper right.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["board exam revision plan","8 week study plan","exam technique","past paper practice","mark scheme wording"],

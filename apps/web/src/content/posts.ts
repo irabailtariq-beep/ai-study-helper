@@ -545,7 +545,7 @@ Use AI for the deliberate-practice slot. Use real conversation for the speaking 
   },
   {
     slug: "ai-french-tutor",
-    title: "Learn French With AI: Verbs, Vocabulary, and a Painless Way to Drill Them",
+    title: "GCSE French Revision: Drill Verbs and Vocab Until They Stick",
     description: "Smart drills for French verb conjugations, idiom translation, and exam writing — all with a free AI study helper that grades in your school's style.",
     publishedAt: today, readTime: "5 min",
     tags: ["AI french tutor", "learn french", "french verbs"],
@@ -575,7 +575,7 @@ Always type the accents. Lose marks every time. Set up your keyboard in advance 
   },
   {
     slug: "ai-spanish-tutor",
-    title: "AI Help for Spanish: From Verb Tables to Real Sentences",
+    title: "GCSE Spanish Revision: From Verb Tables to Real Sentences",
     description: "How to use a free AI tutor for Spanish without becoming dependent on it. Drill, translate, and write better sentences faster.",
     publishedAt: today, readTime: "5 min",
     tags: ["AI spanish tutor", "learn spanish", "spanish verbs"],

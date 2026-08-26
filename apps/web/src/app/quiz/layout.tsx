@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Quiz me — auto-generated practice questions";
+const title = "Free AI Quiz Generator from Notes (GCSE, IGCSE, AP)";
 const description = "Generate quizzes from any material: MCQ, short answer, true/false, fill-in-the-blank. Auto-graded with explanations.";
 
 export const metadata: Metadata = {

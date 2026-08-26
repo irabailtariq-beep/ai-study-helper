@@ -569,7 +569,7 @@ Stop after about ninety seconds and go back to the checklist rather than pushing
   },
   {
     slug: "geometry-circle-theorems",
-    title: "How to Know Which Circle Theorem to Use (8 Rules)",
+    title: "Circle Theorems GCSE: All 8 Rules and When to Use Each",
     description: "Not sure which circle theorem to use? A student guide to spotting all 8 rules from the diagram, with a worked example and the exact reason wording examiners want.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["circle theorems","geometry","GCSE maths","IGCSE maths","exam technique"],
@@ -1914,7 +1914,7 @@ Each tenfold dilution adds 1 to the pH, but you are only removing H+, never addi
   },
   {
     slug: "forces-and-motion-physics",
-    title: "Forces and Motion: The Toolkit That Solves Most Mechanics Questions",
+    title: "How to Solve Forces and Motion Problems (GCSE & AP Physics 1)",
     description: "Most A Level mechanics questions are one of five problem types. Here are all five and the technique for each.",
     publishedAt: today, readTime: "5 min",
     tags: ["forces and motion", "mechanics", "physics A Level"],
@@ -2545,7 +2545,7 @@ Poem analysis is not mystical. It is seven questions asked in a fixed order, wit
   },
   {
     slug: "how-to-write-thesis-statement",
-    title: "How to Write a Thesis Statement for an Essay (Step by Step)",
+    title: "How to Write a Thesis Statement: Formula + Examples",
     description: "How to write a thesis statement for an essay, step by step: make it arguable, specific and provable, with worked examples from English and history questions.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["thesis statement","essay writing","english essay","history essay","exam technique"],
@@ -3035,7 +3035,7 @@ After hiragana comes katakana (another 46 characters, used for foreign words). T
   },
   {
     slug: "german-cases-simplified",
-    title: "German Cases Without Tears: Nominative, Accusative, Dative, Genitive",
+    title: "German Cases Explained for GCSE: Nominative to Genitive",
     description: "Four cases. Each one answers a specific question. Here is the simplest explanation that actually works.",
     publishedAt: today, readTime: "5 min",
     tags: ["german cases", "learn german", "german grammar"],

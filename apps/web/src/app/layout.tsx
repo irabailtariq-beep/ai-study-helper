@@ -9,7 +9,9 @@ import { SITE, organizationJsonLd, websiteJsonLd, softwareJsonLd } from "@/lib/s
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
+    // The homepage inherits this default (it is a client component). Lead with
+    // what students actually type — "study help" — not the brand.
+    default: "Free AI Study Help — CBSE, GCSE, AP, Cambridge & WAEC | Help in Study",
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: "Free AI Study Help — CBSE, GCSE, AP, Cambridge & WAEC | Help in Study",
     description: SITE.description,
     url: SITE.url,
     locale: SITE.locale,

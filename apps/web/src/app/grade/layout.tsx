@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Mark my answer — free AI exam marking";
-const description = "Paste any exam answer and get it marked against the mark scheme. Free AI marking for GCSE, CBSE, AP, Cambridge and WAEC — see the points you hit and the ones you missed.";
+const title = "Free AI Marker for GCSE & IGCSE Answers";
+const description = "Free AI exam marker: paste any GCSE, IGCSE, CBSE, AP or WAEC answer and get mark-scheme-style feedback — the points you hit and the ones you missed. No signup.";
 
 export const metadata: Metadata = {
   title, description,

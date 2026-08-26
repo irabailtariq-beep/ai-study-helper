@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Free mock exam generator — your board, your topics";
-const description = "Generate a full practice paper in your board's style and sit it under timed conditions. Free mock exams for GCSE, CBSE, AP, Cambridge and WAEC, marked instantly.";
+const title = "Free GCSE Mock Exam Generator (AQA, Edexcel, OCR)";
+const description = "Generate a GCSE mock exam free — AQA, Edexcel or OCR style — plus CBSE, AP, Cambridge and WAEC papers. Sit it timed, marked instantly. No signup.";
 
 export const metadata: Metadata = {
   title, description,

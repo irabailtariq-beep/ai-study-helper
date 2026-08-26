@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { subject } = await params;
   const s = HELP_IN_STUDY_MAP.get(subject);
   if (!s) return {};
-  const title = `Help in study ${s.label.toLowerCase()} — free AI study helper`;
+  const title = s.metaTitle;
   const description = `${s.intro.slice(0, 155)}`;
   return {
     title,
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title, description, url: `${SITE.url}/help-in-study/${subject}`,
       images: [{
-        url: `/api/og?title=${encodeURIComponent(`Help in study ${s.label.toLowerCase()}`)}&subtitle=${encodeURIComponent(s.tagline)}&tag=${encodeURIComponent("AI study helper")}`,
+        url: `/api/og?title=${encodeURIComponent(`${s.label} help`)}&subtitle=${encodeURIComponent(s.tagline)}&tag=${encodeURIComponent("AI study helper")}`,
         width: 1200, height: 630,
       }],
     },

@@ -6,6 +6,10 @@
 export type HelpInStudySubject = {
   slug: string;
   label: string;
+  /** <title> tag. Word order matters: students search "history help",
+      not "help in study history" — the old generated titles led with a
+      phrase nobody types and it cost us our best pages' clicks. */
+  metaTitle: string;
   emoji: string;
   tagline: string;
   /** 2-3 sentence intro shown under the H1 */
@@ -28,6 +32,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "math",
+    metaTitle: "Math Help — Free Step-by-Step AI Tutor",
     label: "Math",
     emoji: "🧮",
     tagline: "Math help — step by step, no skipped lines",
@@ -72,6 +77,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "english",
+    metaTitle: "English Help — Essays, Analysis & Exams",
     label: "English",
     emoji: "📚",
     tagline: "English help — comprehension, grammar, essays that score",
@@ -114,6 +120,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "calculus",
+    metaTitle: "Calculus Help — Step-by-Step Solutions",
     label: "Calculus",
     emoji: "∫",
     tagline: "Calculus help — limits, derivatives, integrals, every step shown",
@@ -156,6 +163,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "physics",
+    metaTitle: "Physics Help — Problems Solved Step by Step",
     label: "Physics",
     emoji: "🪐",
     tagline: "Physics help — kinematics, forces, waves, fields",
@@ -198,6 +206,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "chemistry",
+    metaTitle: "Chemistry Help — Equations, Moles & More",
     label: "Chemistry",
     emoji: "⚗️",
     tagline: "Chemistry help — balancing, bonding, mechanisms, mole concept",
@@ -240,6 +249,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "biology",
+    metaTitle: "Biology Help — Diagrams, Processes & Exams",
     label: "Biology",
     emoji: "🧬",
     tagline: "Biology help — cells, genetics, ecosystems, exam answers",
@@ -282,6 +292,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "history",
+    metaTitle: "History Help — Essays, Sources & Exam Answers",
     label: "History",
     emoji: "📜",
     tagline: "History help — sources, essays, exam-ready timelines",
@@ -324,6 +335,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "geography",
+    metaTitle: "Geography Help — Case Studies & Exam Answers",
     label: "Geography",
     emoji: "🌍",
     tagline: "Geography help — climate, urbanisation, case studies",
@@ -366,6 +378,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "computer-science",
+    metaTitle: "Computer Science Help — Code & Theory",
     label: "Computer science",
     emoji: "💻",
     tagline: "Computer science help — algorithms, networks, data structures",
@@ -408,6 +421,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "programming",
+    metaTitle: "Programming Help — Learn to Code with AI",
     label: "Programming",
     emoji: "{ }",
     tagline: "Programming help — Python, Java, JavaScript, debugging",
@@ -450,6 +464,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "accounting",
+    metaTitle: "Accounting Help — Journals, Ratios & More",
     label: "Accounting",
     emoji: "💼",
     tagline: "Accounting help — journals, ledgers, ratios, exam questions",
@@ -492,6 +507,7 @@ export const HELP_IN_STUDY_PAGES: HelpInStudySubject[] = [
 
   {
     slug: "economics",
+    metaTitle: "Economics Help — Diagrams & Evaluation",
     label: "Economics",
     emoji: "📈",
     tagline: "Economics help — micro, macro, diagrams, essay structure",

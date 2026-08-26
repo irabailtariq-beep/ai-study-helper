@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Flashcards — spaced repetition that actually sticks";
+const title = "Flashcard Maker from Notes — Free (GCSE, IGCSE, AP)";
 const description = "Auto-generate flashcards from any material. Built on the SM-2 algorithm so you review at the right interval — research-backed memory boost.";
 
 export const metadata: Metadata = {
