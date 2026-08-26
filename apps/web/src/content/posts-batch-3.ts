@@ -5747,5 +5747,125 @@ Irradiation is being exposed to radiation from an outside source, and you do not
 **In short:** stop overthinking it — half-life is just repeated halving of the undecayed nuclei (or count rate), alpha, beta and gamma differ in charge and penetration, and if you subtract background first and count the halvings, these turn into reliable marks on any GCSE, IGCSE or Cambridge paper.
 `,
   },
+
+  {
+    slug: "reactivity-series",
+    title: "The Reactivity Series (GCSE & IGCSE): Predicting Displacement and Reactions",
+    description: "Reactivity series chemistry made usable: the order of metals, how to predict displacement, write ionic equations, and link position to extraction, with worked GCSE/IGCSE examples.",
+    publishedAt: "2026-08-26", readTime: "8 min",
+    tags: ["reactivity series","displacement reactions","GCSE chemistry","IGCSE chemistry","ionic equations"],
+    body: `
+**Quick answer:** The reactivity series ranks metals from most to least reactive — potassium, sodium, lithium, calcium, magnesium, aluminium, (carbon), zinc, iron, (hydrogen), copper, silver, gold, platinum. A more reactive metal reacts faster with water and acid and will displace a less reactive metal from its compound. Its position also decides extraction: metals above carbon are pulled out by electrolysis, those below carbon by reduction with carbon.
+
+When I first met the reactivity series in Year 10, I tried to just memorise the list and hope the exam only asked me to recite it. It never does. Every real question — displacement, extraction, "which reacts faster with acid", ionic equations — is testing whether you can *use* the order. Once I started treating it as a ruler I line metals up against, rather than a list to recite, the topic clicked. Here is how I think about it.
+
+## The order (and the two non-metals that sneak in)
+
+Standard GCSE and IGCSE list, most reactive first:
+
+- Potassium (K)
+- Sodium (Na)
+- Lithium (Li)
+- Calcium (Ca)
+- Magnesium (Mg)
+- Aluminium (Al)
+- **Carbon (C)** — not a metal, a reference point
+- Zinc (Zn)
+- Iron (Fe)
+- **Hydrogen (H)** — not a metal, a reference point
+- Copper (Cu)
+- Silver (Ag)
+- Gold (Au)
+- Platinum (Pt)
+
+Use whatever nonsense mnemonic sticks — mine is "Please Send Lambs, Cats, Monkeys And Cute Zebras In Houses, Cages, Signed Gold Platers". But learn *why* carbon and hydrogen are in there: carbon decides your extraction method, and hydrogen decides whether a metal reacts with acid. Miss those two and you drop marks you did not need to.
+
+## Reactions with water and acid follow the same order
+
+The higher up a metal sits, the more dramatically it reacts. Same pattern, three tests:
+
+**With cold water** (metal + water -> metal hydroxide + hydrogen): only the top few. Potassium ignites the hydrogen with a lilac flame, sodium whizzes across the surface, calcium fizzes steadily. By magnesium it is basically nothing in cold water.
+
+**With steam** (metal + steam -> metal oxide + hydrogen): magnesium burns brightly, zinc and iron react slowly. Copper and below do nothing.
+
+**With dilute acid** (metal + acid -> salt + hydrogen): everything *above hydrogen* reacts, and the higher the metal, the faster the fizzing. Magnesium gives fast bubbles, zinc slower, iron slower still. Copper, silver and gold sit below hydrogen, so they do not react with dilute hydrochloric or sulfuric acid at all — a favourite "explain why" answer.
+
+Mark-scheme tip I learned the hard way: if a question asks about the gas, "bubbles" is not enough. Name it as hydrogen and give the test — a lit splint gives a squeaky pop.
+
+## Displacement: the reactivity series as a ruler
+
+A more reactive metal displaces a less reactive metal from a solution of its salt. That one sentence answers most displacement questions.
+
+Classic example — an iron nail in blue copper(II) sulfate solution:
+
+iron + copper(II) sulfate -> iron(II) sulfate + copper
+
+Fe(s) + CuSO4(aq) -> FeSO4(aq) + Cu(s)
+
+Observations that earn the marks: the nail gets coated in pink-brown copper, and the solution fades from blue to pale green — iron(II) sulfate is pale green, not colourless, and that precision matters. The mixture warms up too; displacement reactions are exothermic.
+
+### Stripping it to the ionic equation
+
+The sulfate never changes — it is a spectator ion. Cancel it from both sides and you are left with the ionic equation:
+
+Fe(s) + Cu2+(aq) -> Fe2+(aq) + Cu(s)
+
+Iron atoms lose electrons (oxidised); copper ions gain them (reduced). Edexcel and Cambridge both award a mark for correct state symbols here, and they are the first thing tired students forget. Write them every time.
+
+## Extraction: where carbon earns its place
+
+Now carbon pays off. A metal's position decides how we get it out of its ore:
+
+- **Above carbon** (potassium down to aluminium): too reactive to be displaced by carbon, so they are extracted by electrolysis of the molten compound. This is why aluminium extraction is so expensive.
+- **Below carbon** (zinc, iron, copper): carbon is more reactive than them, so it displaces the metal. They are extracted by reduction with carbon, heating the ore with coke in a furnace.
+- **Bottom of the series** (gold, silver, platinum): so unreactive they are found native, as the pure metal, so barely any extraction is needed.
+
+Common trap: students see aluminium as an ordinary everyday metal and assume it is reduced with carbon. It is above carbon, so it is electrolysis. If you are unsure why a specific metal uses a specific method, [get it explained step by step](/explain) rather than guessing on the day.
+
+## Worked example: deduce the order from experiments
+
+This is the question type IGCSE loves — you are handed displacement results and asked to rank the metals. Suppose four metals W, X, Y and Z were each added to solutions of the others' salts, with these results:
+
+- W displaces X, Y and Z
+- X displaces Y and Z, but not W
+- Y displaces Z only
+- Z displaces nothing
+
+Let me work out the order, most reactive first.
+
+1. **Find the one that displaces everything.** W displaces X, Y and Z, so W is the most reactive.
+2. **Find the one that displaces nothing.** Z displaces nothing, so Z is the least reactive — bottom of the list.
+3. **Rank the middle two.** X displaces Y (and Z) but not W, so X sits below W and above Y. Y only displaces Z, so Y is above just Z.
+4. **Assemble the order:** W, then X, then Y, then Z.
+
+Check it back: does W displace X? Yes, and W is above X — consistent. Does Y displace X? No — correct, because Y is below X. When your order survives every line of data, you have it right.
+
+## Test yourself
+
+1. A student adds zinc to copper(II) sulfate solution. Write the ionic equation with state symbols, and give one observation.
+2. Why is potassium extracted by electrolysis but iron by reduction with carbon?
+3. Metal P displaces metal Q from its sulfate. P also displaces silver from silver nitrate, but Q does not displace silver. Put P, Q and silver in order of reactivity, most reactive first.
+
+Quick answers:
+
+1. Zn(s) + Cu2+(aq) -> Zn2+(aq) + Cu(s); the blue solution fades and a reddish-brown copper coating forms on the zinc.
+2. Potassium is above carbon, so carbon cannot displace it — only electrolysis works; iron is below carbon, so carbon reduces it, which is cheaper.
+3. P displaces Q so P is above Q; P displaces silver so P is above silver; Q does not displace silver so silver is above Q. Order: P, silver, Q.
+
+If any of those tripped you up, paste the exact reaction into [our explainer](/explain), turn the whole series into a deck with [flashcards](/flashcards), then retest with a [quick quiz](/quiz).
+
+## FAQ
+
+**Do I need to memorise the whole reactivity series for GCSE?** Yes, carbon and hydrogen included — boards expect you to recall the order and use it. A mnemonic plus a handful of practice questions beats staring at the list.
+
+**Why doesn't copper react with dilute acid?** Copper is below hydrogen in the series, so it cannot displace hydrogen from the acid. No hydrogen displaced means no reaction — that is the full mark-scheme reasoning.
+
+**Is aluminium really that reactive? It seems unreactive.** It is reactive — it sits above carbon — but it forms a tough oxide layer that seals the metal underneath, so in everyday life it looks unreactive. Boards love this "explain the apparent contradiction" question.
+
+**What is the difference between a displacement reaction and a redox reaction?** They are the same event seen two ways: the more reactive metal is oxidised (loses electrons) and the metal ion is reduced (gains electrons). Every metal displacement is a redox reaction.
+
+**In short:** Treat the reactivity series as a ruler, not a list — line two metals up and the more reactive one wins: it reacts faster with water and acid, displaces the other from solution, and its position relative to carbon decides electrolysis versus reduction. Nail the state symbols and the precise observations, and this becomes some of the easiest marks in the paper.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
