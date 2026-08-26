@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { SITE, breadcrumbJsonLd } from "@/lib/seo";
 import { HELP_IN_STUDY_PAGES, HELP_IN_STUDY_MAP } from "@/content/helpInStudyPages";
 import { LEARN_COMBOS } from "@/content/learnPages";
+import { examPagesForHub } from "@/content/examPages";
 import { CURRICULA } from "@ash/core";
 
 type Props = { params: Promise<{ subject: string }> };
@@ -42,6 +43,7 @@ export default async function SubjectPage({ params }: Props) {
   // were sitemap-only URLs. Surfacing them here gives them a real path in and
   // sends this hub's authority to them.
   const boardGuides = LEARN_COMBOS.filter((c) => c.subject === subject);
+  const practice = examPagesForHub(subject);
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
@@ -158,6 +160,20 @@ export default async function SubjectPage({ params }: Props) {
                 <p className="text-xs mt-1" style={{ color: "var(--ash-muted)" }}>
                   {s.label} for {CURRICULA.find((x) => x.id === c.board)?.name ?? c.board}
                 </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {practice.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-xl font-bold mb-3">Practice questions, solved step by step</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {practice.map((p) => (
+              <Link key={`${p.board}/${p.slug}`} href={`/${p.board}/${p.slug}`} className="glass-panel rounded-2xl p-4 hover:-translate-y-0.5 transition block">
+                <div className="text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: "var(--ash-primary)", letterSpacing: "0.2em" }}>{p.board.toUpperCase()}</div>
+                <div className="font-semibold text-sm">{p.h1} →</div>
               </Link>
             ))}
           </div>

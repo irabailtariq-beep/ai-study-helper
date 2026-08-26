@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/seo";
 import { POSTS } from "@/content/posts";
 import { LEARN_COMBOS } from "@/content/learnPages";
+import { EXAM_PAGES } from "@/content/examPages";
+import { TOOL_LANDINGS } from "@/content/toolLandings";
 
 const STATIC_PATHS = [
   "",
@@ -35,6 +37,7 @@ const HELP_IN_STUDY_SUBJECTS = [
 const STATIC_UPDATED = new Date("2026-08-07"); // tool/marketing/legal pages
 const HUBS_UPDATED = new Date("2026-08-07");   // /help-in-study/* subject hubs
 const LEARN_UPDATED = new Date("2026-08-07");  // /learn/* board combos
+const EXAM_UPDATED = new Date("2026-08-26");   // exam-structure + landing pages
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
@@ -65,6 +68,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LEARN_UPDATED,
       changeFrequency: "monthly",
       priority: 0.75,
+    });
+  }
+
+  // Exam-structure pages (question families, practice sets, calculators) —
+  // the highest-priority content per the 2026-08-24 research.
+  for (const p of EXAM_PAGES) {
+    out.push({
+      url: `${base}/${p.board}/${p.slug}`,
+      lastModified: EXAM_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    });
+  }
+
+  // Query-matched tool landing pages
+  for (const p of TOOL_LANDINGS) {
+    out.push({
+      url: `${base}/tools/${p.slug}`,
+      lastModified: EXAM_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
     });
   }
 
