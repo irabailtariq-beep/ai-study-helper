@@ -1574,6 +1574,1332 @@ export const EXAM_PAGES: ExamPage[] = [
       "sourceNote": "Structure per College Board (60 MCQ, 3 FRQs scored 0 to 7 each); Human Geography has one of the toughest curves, so cutoffs follow calculator bands near 74 percent for a 5 and about half the composite for a 3, and official cutoffs change every year."
     }
   },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-basic-terms-practice",
+    "metaTitle": "TS Grewal Class 11 Chapter 2: Basic Terms Practice",
+    "metaDescription": "Original practice questions matched to TS Grewal Class 11 Chapter 2 (Basic Accounting Terms), 2025-26 edition, with full solutions and CBSE marking notes.",
+    "h1": "Basic Accounting Terms: Class 11 Practice in TS Grewal Chapter 2 Style",
+    "quickAnswer": "In the 2025-26 TS Grewal Class 11 book, Chapter 2 is Basic Accounting Terms: assets, liabilities, capital, drawings, expenses, revenue, debtors, creditors and expenditure. Below are original practice questions on those exact terms with full worked answers. They are not copied from the book; they cover the same ground at the same difficulty, free.",
+    "intro": "TS Grewal is the book almost every commerce student uses for Class 11 Accountancy, and its questions are copyrighted, so I have not reproduced them here. What I have done instead is write my own questions that test the same terms Chapter 2 tests, at the same level, and solve each one fully. I sit Cambridge exams myself, not CBSE, so everything on this page comes from the 2025-26 edition's contents and CBSE's own syllabus documents rather than from memory of the paper. Work through the seven questions with a notebook, then try the variant under each solution before you check the bracketed answer.",
+    "sections": [
+      {
+        "heading": "What Chapter 2 actually covers in the 2025-26 edition",
+        "body": "The 2025-26 edition keeps Basic Accounting Terms as Chapter 2, straight after the introduction chapter. The terms it defines and tests: business transaction, capital, drawings, liabilities split into non-current and current, assets split into non-current and current with tangible, intangible and fictitious types, expenditure split into capital and revenue, expense, income, profit, gain, loss, purchases and purchases return, sales and sales return, stock, trade receivables including debtors and bills receivable, trade payables including creditors and bills payable, goods, cost, vouchers, and discount split into trade and cash. That list looks long, but nearly every question is one of three moves: define a term, classify an item into a category, or compute a small figure such as capital or cost of goods sold. The seven questions below cover all three moves."
+      },
+      {
+        "heading": "How CBSE marks these questions",
+        "body": "Class 11 papers are set by schools on the CBSE pattern rather than by the board itself, so the exact split varies, but the format is consistent: terms show up as 1-mark objective items, as 3-mark classify-with-reason questions, and hidden inside longer problems where using the wrong term costs presentation marks. From the sample papers I worked through while writing this page, two habits reliably earn full marks. First, answer classification questions with the category plus a because clause, since the reason usually carries its own mark. Second, when a question involves a rupee figure, state the relationship in words before substituting numbers, the way the solutions below do. Definitions should use the key phrase examiners look for: drawings needs for personal use, capital expenditure needs benefit beyond one accounting year."
+      },
+      {
+        "heading": "The distinctions students actually lose marks on",
+        "body": "Three pairs cause most of the damage. Expense versus expenditure: expenditure is any amount spent or liability incurred, while expense is only the portion consumed in earning this year's revenue; buying a machine is expenditure but not an expense, though its depreciation is. Profit versus gain: profit arises from normal operations, gain from incidental events like selling a fixed asset above book value. Debtor versus creditor: the firm's debtor owes the firm, while the firm's creditor is owed by the firm, and swapping them reverses the whole answer. If you can talk through these three pairs without hesitating, Chapter 2 is essentially banked. Questions 3, 4 and 7 below drill exactly these pairs, and each variant swaps the angle so you cannot answer from memory."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Classify each item as a non-current asset, current asset, non-current liability or current liability: machinery, stock of goods, bank overdraft, a loan repayable after five years, debtors, furniture, creditors and cash in hand.",
+        "steps": [
+          "Ask two questions of every item: does the business own it (asset) or owe it (liability), and will it convert to cash or fall due within one year (current) or after one year (non-current).",
+          "Machinery and furniture are bought to use for years, not to sell, so both are non-current assets.",
+          "Stock, debtors and cash in hand are held to convert into cash within the operating cycle, so all three are current assets.",
+          "A bank overdraft and creditors are repayable within a year, so both are current liabilities.",
+          "The five-year loan falls due after more than a year, so it is a non-current liability."
+        ],
+        "answer": "Non-current assets: machinery, furniture. Current assets: stock, debtors, cash in hand. Current liabilities: bank overdraft, creditors. Non-current liability: the five-year loan.",
+        "markTip": "CBSE classification questions usually award half a mark or one mark per item, and reasons are not needed unless asked, but write the category clearly against each item rather than in a jumbled list.",
+        "variant": "Classify: computer software bought for office use, prepaid insurance, outstanding salaries. (Answer: non-current intangible asset, current asset, current liability)"
+      },
+      {
+        "question": "A firm's position on 31 March 2026 shows total assets of Rs 8,60,000. It owes Rs 1,40,000 to creditors and Rs 2,20,000 on a bank loan. Work out the owner's capital.",
+        "steps": [
+          "Capital is what remains for the owner after outsiders are paid, so rearrange Assets = Liabilities + Capital into Capital = Assets minus External Liabilities.",
+          "External liabilities are creditors Rs 1,40,000 plus bank loan Rs 2,20,000, which is Rs 3,60,000.",
+          "Capital = Rs 8,60,000 minus Rs 3,60,000 = Rs 5,00,000."
+        ],
+        "answer": "Capital is Rs 5,00,000.",
+        "markTip": "Write the equation in words before substituting numbers. In a 3-mark question the stated relationship typically carries a mark on its own, so it is free credit even if the subtraction slips.",
+        "variant": "Total assets are Rs 6,40,000 and capital is Rs 4,10,000. Find the external liabilities. (Answer: Rs 2,30,000)"
+      },
+      {
+        "question": "The owner of a stationery shop takes home goods that cost Rs 12,000 for family use and also pays Rs 8,000 rent for the shop from the till. Which of these is drawings and which is an expense, and why?",
+        "steps": [
+          "Drawings means value taken out of the business by the owner for personal use, whether in cash or in goods.",
+          "The goods worth Rs 12,000 went to the owner's family, not towards earning revenue, so they are drawings and reduce capital.",
+          "The shop rent of Rs 8,000 was paid to keep the business running and earning revenue, so it is an expense of the business."
+        ],
+        "answer": "Goods taken home, Rs 12,000, are drawings; shop rent, Rs 8,000, is an expense.",
+        "markTip": "The reason is worth as much as the label here. Say who received the benefit: the owner personally means drawings, the business means expense.",
+        "variant": "The owner pays her home electricity bill of Rs 3,000 from the business bank account. Drawings or expense? (Answer: drawings, because the benefit is personal)"
+      },
+      {
+        "question": "During April, a trader sells goods on credit worth Rs 45,000 to Mohan and buys goods on credit worth Rs 30,000 from Sohan. State who is a debtor and who is a creditor of the firm, with amounts.",
+        "steps": [
+          "A debtor owes money to the firm because the firm sold to them on credit.",
+          "Mohan received goods worth Rs 45,000 and has not yet paid, so Mohan is a debtor for Rs 45,000.",
+          "A creditor is someone the firm owes money to because the firm bought from them on credit.",
+          "Sohan supplied goods worth Rs 30,000 that remain unpaid, so Sohan is a creditor for Rs 30,000."
+        ],
+        "answer": "Mohan is a debtor for Rs 45,000; Sohan is a creditor for Rs 30,000.",
+        "markTip": "The direction of the debt decides everything. Money owed to the firm makes a debtor; money owed by the firm makes a creditor. Mixing them up usually costs the full mark, not half.",
+        "variant": "The firm borrows Rs 50,000 from Priya and lends Rs 20,000 to Aman. Who is the firm's creditor? (Answer: Priya for Rs 50,000; Aman is a debtor for Rs 20,000)"
+      },
+      {
+        "question": "A courier business buys a delivery van for Rs 3,50,000, spends Rs 6,000 on its routine servicing during the year, and spends Rs 40,000 building a permanent shed for it. Classify each amount as capital expenditure or revenue expenditure.",
+        "steps": [
+          "Capital expenditure buys or improves an asset whose benefit lasts beyond one accounting year; revenue expenditure keeps the business running for the current year only.",
+          "The van, Rs 3,50,000, will be used for several years, so it is capital expenditure.",
+          "The shed, Rs 40,000, is a new lasting structure, so it is also capital expenditure.",
+          "Routine servicing of Rs 6,000 only maintains the van in working order for the current year, so it is revenue expenditure."
+        ],
+        "answer": "Van Rs 3,50,000 and shed Rs 40,000 are capital expenditure; servicing Rs 6,000 is revenue expenditure.",
+        "markTip": "Use the benefit test in your reason: benefit beyond one year means capital, benefit this year only means revenue. Examiners look for that phrase, not just the label.",
+        "variant": "Rs 15,000 spent repainting the shop and Rs 90,000 spent adding a new storeroom. Classify both. (Answer: repainting is revenue expenditure, the storeroom is capital expenditure)"
+      },
+      {
+        "question": "A shop began the year with stock of Rs 40,000, bought goods for Rs 2,10,000 during the year, and counted closing stock of Rs 35,000. What was the cost of goods sold?",
+        "steps": [
+          "Cost of goods sold = opening stock + purchases minus closing stock.",
+          "Goods available for sale were Rs 40,000 plus Rs 2,10,000, which is Rs 2,50,000.",
+          "Of these, Rs 35,000 remained unsold at the year end, so cost of goods sold = Rs 2,50,000 minus Rs 35,000 = Rs 2,15,000."
+        ],
+        "answer": "Cost of goods sold is Rs 2,15,000.",
+        "markTip": "Write the formula line first. If the subtraction slips, the formula and the goods-available subtotal still collect the method marks.",
+        "variant": "Opening stock Rs 25,000, purchases Rs 1,80,000, closing stock Rs 30,000. Find the cost of goods sold. (Answer: Rs 1,75,000)"
+      },
+      {
+        "question": "A furniture dealer sells furniture from its showroom for Rs 60,000 and separately sells an old delivery truck at Rs 9,000 above its book value. Which amount is revenue and which is a gain?",
+        "steps": [
+          "Revenue comes from the normal, recurring operations of the business, which for a furniture dealer means selling furniture.",
+          "So the Rs 60,000 of showroom sales is revenue.",
+          "A gain is an incidental profit arising outside normal operations, such as selling a fixed asset above its book value.",
+          "So the Rs 9,000 made on the truck is a gain, not revenue."
+        ],
+        "answer": "Rs 60,000 is revenue; the Rs 9,000 profit on the truck sale is a gain.",
+        "markTip": "Anchor your reason to the nature of the business. The same truck sale would be revenue for a truck dealer, and an answer that notices this reads as understanding rather than recall.",
+        "variant": "A bakery earns Rs 4,000 interest on a fixed deposit. Is this revenue from operations or other income? (Answer: other income, because it is incidental to baking)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 2 solutions?",
+        "a": "No. TS Grewal is a copyrighted commercial textbook, so its questions cannot be republished here. These are original questions written to cover the same terms at the same difficulty as Chapter 2 of the 2025-26 edition, each with a full solution. Use them as extra practice alongside the book itself."
+      },
+      {
+        "q": "Which chapter is Basic Accounting Terms in the 2025-26 edition?",
+        "a": "Chapter 2, immediately after Chapter 1, Introduction of Accounting. Several solution websites still follow older editions where the numbering differs, so if a site's chapter list looks shifted, match by topic name rather than by chapter number."
+      },
+      {
+        "q": "How many marks do basic terms carry in the CBSE Class 11 exam?",
+        "a": "Class 11 papers are set by individual schools on the CBSE pattern, so there is no fixed allocation. Typically the terms appear as 1-mark objective questions and 3-mark classification questions, and they quietly affect longer answers too, because using the wrong term in a journal or equation question costs presentation marks."
+      },
+      {
+        "q": "What is the quickest way to remember debtor versus creditor?",
+        "a": "Follow the direction of the debt. A debtor owes the firm because the firm sold to them on credit. A creditor is owed by the firm because the firm bought on credit. Fix one concrete example in your head, like Mohan the customer and Sohan the supplier from question 4, and rebuild the rule from it whenever you hesitate."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 solutions chapter 2 basic accounting terms",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-accounting-equation-practice",
+    "metaTitle": "TS Grewal Class 11 Accounting Equation Practice",
+    "metaDescription": "Work the accounting equation the TS Grewal Class 11 way: Chapter 5 style questions with transaction-by-transaction workings and CBSE marking notes.",
+    "h1": "Accounting Equation: Class 11 Practice in TS Grewal Chapter 5 Style",
+    "quickAnswer": "Accounting Equation is Chapter 5 in the 2025-26 TS Grewal Class 11 book. Every transaction must keep Assets = Liabilities + Capital in balance. Below are original equation questions worked transaction by transaction the way CBSE expects, with a running check after each step. They match the book's chapter and difficulty without copying its questions.",
+    "intro": "Accounting equation questions are where Class 11 marks are either banked or bled. The method is completely mechanical once you see it: write the equation, push each transaction through it, and prove both sides agree after every line. I cannot copy TS Grewal's own Chapter 5 questions here because the book is copyrighted, so I wrote fresh ones covering the same transaction types the 2025-26 chapter drills: cash and credit purchases, sales at a profit, drawings, expenses, outstanding items and capital brought in kind. Every running total below has been checked twice. Do each question on paper first, then read the working.",
+    "sections": [
+      {
+        "heading": "How to lay out an equation answer",
+        "body": "TS Grewal style answers use a statement with a column for each asset and each liability plus capital, and one row per transaction. On paper, draw it exactly that way: list the transactions down the side, and after each one write the new balance of every column plus a total for each side. The solutions below say the same thing in sentences because this site publishes plain text, but the sequence is identical: state the effect of the transaction, update the affected items, then prove assets equal liabilities plus capital. Two rules cover ninety percent of entries. Anything the business owns or is owed sits on the asset side; anything it owes sits on the other side along with capital. And every expense, income, profit, loss or drawing lands in the capital column, because the owner absorbs whatever outsiders do not."
+      },
+      {
+        "heading": "The four shapes every transaction takes",
+        "body": "Each transaction does one of four things to the equation. One asset can replace another, like buying goods for cash, and the totals stand still. Both sides can rise together, like a credit purchase or a loan received. Both sides can fall together, like paying a creditor or the owner withdrawing cash. Or the right side can rearrange within itself, like an outstanding salary that raises a liability while lowering capital. When a question asks for the effect of a transaction, name the shape and the specific accounts. When you build a full statement and a line refuses to balance, the fault is nearly always a forgotten capital adjustment: profit not added, or an expense or drawing not subtracted. Question 5 below is pure shape-spotting practice, and the FAQ has a repair checklist."
+      },
+      {
+        "heading": "Where Chapter 5 sits in the book",
+        "body": "In the 2025-26 edition the accounting equation is Chapter 5, following Bases of Accounting and immediately before Accounting Procedures, the rules of debit and credit. That ordering is deliberate. Debit and credit are the equation with names attached: every debit records what the next chapter calls an increase in assets or expenses, every credit an increase in liabilities, capital or income, and the equality you prove line by line here becomes the reason a trial balance must tally in Chapter 14. Some solution websites still number this chapter as 2 or 6 from older editions, so match by topic name if your book looks different. Whenever you get stuck, the fastest repair is to go back to the last line that balanced and push one transaction through at a time."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Show the effect of these transactions on the accounting equation: Ritu starts business with cash Rs 3,00,000; buys goods for cash Rs 80,000; sells goods costing Rs 30,000 for Rs 42,000 cash; pays rent Rs 5,000.",
+        "steps": [
+          "Start: cash Rs 3,00,000 = capital Rs 3,00,000. Assets Rs 3,00,000, liabilities nil.",
+          "Buying goods for cash swaps one asset for another: cash falls to Rs 2,20,000 and stock rises to Rs 80,000. Totals unchanged at Rs 3,00,000.",
+          "The cash sale brings in Rs 42,000 and removes stock of Rs 30,000, so the Rs 12,000 difference is profit added to capital. Now cash Rs 2,62,000 plus stock Rs 50,000 = Rs 3,12,000, and capital is Rs 3,12,000.",
+          "Rent reduces cash by Rs 5,000 and, being an expense, reduces capital by Rs 5,000. Cash Rs 2,57,000 plus stock Rs 50,000 = Rs 3,07,000, and capital is Rs 3,07,000.",
+          "Final check: assets Rs 3,07,000 = liabilities nil + capital Rs 3,07,000. It balances."
+        ],
+        "answer": "Closing equation: cash Rs 2,57,000 + stock Rs 50,000 = capital Rs 3,07,000.",
+        "markTip": "Write the fresh totals after every transaction, not just at the end. In the usual 4 to 6 mark equation question, each correctly updated line carries marks even if a later line slips.",
+        "variant": "Start with cash Rs 1,50,000; buy goods for cash Rs 40,000; sell all of them for Rs 55,000 cash. Find the closing capital. (Answer: Rs 1,65,000)"
+      },
+      {
+        "question": "A business has cash Rs 1,00,000 and capital Rs 1,00,000. Show the equation after it buys goods on credit for Rs 60,000, pays creditors Rs 25,000, and buys furniture for cash Rs 15,000.",
+        "steps": [
+          "The credit purchase raises stock and creates a liability: cash Rs 1,00,000 + stock Rs 60,000 = creditors Rs 60,000 + capital Rs 1,00,000. Both sides Rs 1,60,000.",
+          "Paying creditors Rs 25,000 reduces cash and creditors together: cash Rs 75,000 + stock Rs 60,000 = creditors Rs 35,000 + capital Rs 1,00,000. Both sides Rs 1,35,000.",
+          "Buying furniture swaps cash for furniture: cash Rs 60,000 + stock Rs 60,000 + furniture Rs 15,000 = creditors Rs 35,000 + capital Rs 1,00,000. Both sides still Rs 1,35,000."
+        ],
+        "answer": "Closing equation: cash Rs 60,000 + stock Rs 60,000 + furniture Rs 15,000 = creditors Rs 35,000 + capital Rs 1,00,000.",
+        "markTip": "Notice which transactions change the totals: a payment to creditors shrinks both sides, while an asset swap changes neither. Saying this in a sentence shows the examiner understanding, not just arithmetic.",
+        "variant": "From the closing position above, the firm returns goods costing Rs 5,000 to a creditor. New creditors figure? (Answer: Rs 30,000, with stock falling to Rs 55,000)"
+      },
+      {
+        "question": "On 31 March 2026 a trader has cash Rs 24,000, debtors Rs 56,000, stock Rs 90,000 and machinery Rs 2,30,000. He owes creditors Rs 70,000 and a loan of Rs 50,000. Use the accounting equation to find his capital.",
+        "steps": [
+          "Total the assets: Rs 24,000 + Rs 56,000 + Rs 90,000 + Rs 2,30,000 = Rs 4,00,000.",
+          "Total the external liabilities: Rs 70,000 + Rs 50,000 = Rs 1,20,000.",
+          "Capital = assets minus liabilities = Rs 4,00,000 minus Rs 1,20,000 = Rs 2,80,000."
+        ],
+        "answer": "Capital is Rs 2,80,000.",
+        "markTip": "Label the two subtotals clearly. Examiners award the asset total and the liability total separately before the final figure, so a slip in one does not sink all three marks.",
+        "variant": "Assets are Rs 5,25,000 and capital is Rs 3,45,000. Find the liabilities. (Answer: Rs 1,80,000)"
+      },
+      {
+        "question": "Meera's capital was Rs 2,50,000 on 1 April 2025 and Rs 3,10,000 on 31 March 2026. During the year she withdrew Rs 40,000 and brought in fresh capital of Rs 25,000. Find her profit for the year.",
+        "steps": [
+          "Closing capital already reflects profit, drawings and fresh capital, so unwind them: profit = closing capital + drawings minus fresh capital minus opening capital.",
+          "Substitute: Rs 3,10,000 + Rs 40,000 minus Rs 25,000 minus Rs 2,50,000.",
+          "That is Rs 3,50,000 minus Rs 2,75,000 = Rs 75,000."
+        ],
+        "answer": "Profit for the year is Rs 75,000.",
+        "markTip": "Get the signs by reasoning, not memory: drawings made closing capital smaller, so add them back; fresh capital made it bigger, so take it out. One line of that reasoning protects you if the layout is unfamiliar.",
+        "variant": "Opening capital Rs 1,80,000, closing capital Rs 2,44,000, drawings Rs 20,000, no fresh capital. Find the profit. (Answer: Rs 84,000)"
+      },
+      {
+        "question": "State the effect of each on the accounting equation: (a) received Rs 18,000 from a debtor, (b) salary of Rs 7,000 is outstanding at the year end, (c) depreciation of Rs 4,000 is charged on machinery.",
+        "steps": [
+          "(a) Cash rises by Rs 18,000 and debtors fall by Rs 18,000. One asset replaces another and the totals do not change.",
+          "(b) The outstanding salary creates a liability of Rs 7,000, and being an expense it cuts capital by Rs 7,000. Assets are untouched; the right side rearranges within the same total.",
+          "(c) Depreciation reduces machinery by Rs 4,000 and capital by Rs 4,000, so both sides fall together."
+        ],
+        "answer": "(a) no change in totals; (b) liabilities up Rs 7,000 and capital down Rs 7,000; (c) assets and capital both down Rs 4,000.",
+        "markTip": "These one-line effect questions are quick marks. Always name the specific asset or liability involved, not just the side of the equation.",
+        "variant": "Goods costing Rs 2,000 are given away as charity. Effect? (Answer: stock down Rs 2,000 and capital down Rs 2,000)"
+      },
+      {
+        "question": "Prepare the accounting equation: Manu starts business with cash Rs 2,00,000 and his own furniture worth Rs 50,000; buys goods on credit Rs 40,000; withdraws cash Rs 10,000 for personal use; sells goods costing Rs 25,000 on credit for Rs 35,000.",
+        "steps": [
+          "Start: cash Rs 2,00,000 + furniture Rs 50,000 = capital Rs 2,50,000. Personal assets brought in count as capital just like cash.",
+          "Credit purchase: add stock Rs 40,000 and creditors Rs 40,000. Assets Rs 2,90,000 = creditors Rs 40,000 + capital Rs 2,50,000.",
+          "Drawings: cash falls to Rs 1,90,000 and capital falls to Rs 2,40,000. Both sides now total Rs 2,80,000.",
+          "Credit sale at a profit: debtors rise by Rs 35,000, stock falls by Rs 25,000, and the Rs 10,000 profit lifts capital to Rs 2,50,000.",
+          "Check: cash Rs 1,90,000 + furniture Rs 50,000 + stock Rs 15,000 + debtors Rs 35,000 = Rs 2,90,000, and creditors Rs 40,000 + capital Rs 2,50,000 = Rs 2,90,000."
+        ],
+        "answer": "Closing equation: assets Rs 2,90,000 = creditors Rs 40,000 + capital Rs 2,50,000, made up of cash Rs 1,90,000, furniture Rs 50,000, stock Rs 15,000 and debtors Rs 35,000.",
+        "markTip": "When the owner brings in a personal asset like furniture, it is capital exactly as cash would be. Missing this in the opening line throws every later total off, and examiners mark the opening line first.",
+        "variant": "Same start, but Manu also takes a bank loan of Rs 60,000 received in cash. Opening totals? (Answer: assets Rs 3,10,000 = loan Rs 60,000 + capital Rs 2,50,000)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 5 solutions?",
+        "a": "No. The book is copyrighted, so its questions are not reproduced here. These are original questions built to cover the same transaction types and difficulty as the 2025-26 Chapter 5, each solved in full. Work the book's own questions too; the method shown here transfers directly."
+      },
+      {
+        "q": "Does profit really go into the capital column?",
+        "a": "Yes. Profit, losses, expenses, incomes, drawings and interest on capital all adjust the capital figure, because the owner ultimately absorbs them. If a statement refuses to balance, the missing piece is almost always one of these capital adjustments."
+      },
+      {
+        "q": "My equation does not balance. What do I check first?",
+        "a": "Four things, in order: did you add the profit on any sale (selling price minus cost) to capital; did you subtract drawings from both cash and capital; did you accidentally move cash on a credit transaction; and did every expense reduce capital as well as the asset it was paid from. One of those four fixes it nearly every time."
+      },
+      {
+        "q": "Is the accounting equation Chapter 2 or Chapter 5?",
+        "a": "In the 2025-26 TS Grewal edition it is Chapter 5. Some older editions and several solution websites number it differently, which is why chapter lists online disagree. Match by the topic name, Accounting Equation, and you cannot go wrong."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 accounting equation solutions",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-journal-entries-practice",
+    "metaTitle": "TS Grewal Class 11 Journal Entries Practice and Answers",
+    "metaDescription": "Original journal entry practice matched to TS Grewal Class 11 Chapter 8, 2025-26 edition: compound entries, GST, bad debts, full solutions, marking notes.",
+    "h1": "Journal Entries: Class 11 Practice in TS Grewal Chapter 8 Style",
+    "quickAnswer": "Journal is Chapter 8 in the 2025-26 TS Grewal Class 11 edition. Below are original journalising questions of the kind that chapter drills: simple and compound entries, GST, full settlement discounts, bad debts and drawings, each solved with complete debit and credit lines. They are written in the book's style and difficulty, not copied from it.",
+    "intro": "Journal is the longest-practised chapter of Class 11, Chapter 8 in the 2025-26 TS Grewal edition, and the entries here mirror the types it drills: simple entries, compound entries, full settlement discounts, insolvency of a debtor, CGST and SGST at 6 percent each, drawings in cash and in goods, year-end adjustments, and asset purchases with installation. The questions are my own, written because reproducing the book's copyrighted questions is not allowed, and each is solved with complete debit and credit lines you can compare against your working. If an entry ever refuses to balance, the solution shows exactly where the missing rupees went.",
+    "sections": [
+      {
+        "heading": "What Chapter 8 drills in the 2025-26 edition",
+        "body": "Chapter 8, Journal, is the book's biggest single block of practice, and the question types repeat: simple two-line entries for cash and credit transactions, compound entries where one debit meets several credits or the reverse, opening entries, trade discount netted off before recording, cash discount recorded through Discount Allowed or Discount Received, full settlement payments, insolvency of a debtor with paise in the rupee, drawings in cash and in goods, goods given as samples or charity, basic CGST and SGST entries, year-end adjustments such as outstanding and prepaid items, and asset purchases where installation or cartage is capitalised. The seven questions below cover each of those at the same difficulty as the chapter. Trade discount deserves special mention because it never appears in the books at all: record the net amount and mention the discount only in the narration."
+      },
+      {
+        "heading": "The five-step method for any entry",
+        "body": "Every journal entry yields to the same routine. Identify the accounts involved. Classify each one: asset, liability, capital, expense or income. Apply the rules: increases in assets and expenses are debits, increases in liabilities, capital and income are credits, and decreases reverse. Check that the debits equal the credits in rupees. Then write the narration. Where students actually stumble is classification, not the rules: Purchases means goods for resale only, so a machine bought is Machinery, never Purchases; a supplier of goods on credit becomes a personal account in their own name; GST paid on inputs is an asset waiting to be set off, not a cost. Run this routine slowly for a week and it compresses into a reflex. The solutions below name the classification in every step so you can watch the routine at work."
+      },
+      {
+        "heading": "Format and marking",
+        "body": "A CBSE-pattern journal answer is a dated entry with the debited account first marked Dr, the credited account on the next line preceded by To, amounts in the debit and credit columns, and a narration in brackets beginning with Being. Schools set their own Class 11 papers so weighting varies, but journal questions commonly run 3 to 6 marks with roughly a mark per entry, and format faults are the cheapest marks lost: missing narrations, a missing Dr, or columns that do not total. Because this site publishes plain text, the solutions below write each entry as a sentence, Debit this account, Credit that account, but you should practise in full ruled format on paper. Before leaving any entry, total its debits and credits; the check takes five seconds and catches nearly every slip this chapter produces."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Journalise: (i) Aarav commenced business with cash Rs 5,00,000; (ii) purchased goods for cash Rs 1,20,000; (iii) sold goods for cash Rs 90,000; (iv) purchased goods from Ram on credit Rs 70,000; (v) paid salaries Rs 15,000.",
+        "steps": [
+          "(i) Cash comes in and capital is created: Debit Cash Account Rs 5,00,000; Credit Capital Account Rs 5,00,000.",
+          "(ii) Goods bought for resale always go to Purchases, never to a goods account: Debit Purchases Account Rs 1,20,000; Credit Cash Account Rs 1,20,000.",
+          "(iii) Debit Cash Account Rs 90,000; Credit Sales Account Rs 90,000.",
+          "(iv) A credit purchase creates a personal account for the supplier: Debit Purchases Account Rs 70,000; Credit Ram's Account Rs 70,000.",
+          "(v) Debit Salaries Account Rs 15,000; Credit Cash Account Rs 15,000."
+        ],
+        "answer": "Five entries as above; total debits Rs 7,95,000 equal total credits Rs 7,95,000.",
+        "markTip": "Write a one-line narration under every entry, for example: being goods purchased for cash. CBSE format marks hang on narrations and on the debit line carrying Dr.",
+        "variant": "Journalise: paid rent Rs 8,000 and received commission Rs 3,500. (Answer: Debit Rent Account Rs 8,000, Credit Cash Account Rs 8,000; Debit Cash Account Rs 3,500, Credit Commission Received Account Rs 3,500)"
+      },
+      {
+        "question": "Journalise: purchased goods for Rs 50,000 within the state, paying CGST 6 percent and SGST 6 percent, all by cheque.",
+        "steps": [
+          "Work the tax first: CGST = 6 percent of Rs 50,000 = Rs 3,000, and SGST = Rs 3,000, so the total payment is Rs 56,000.",
+          "Input GST on purchases is an asset because it can be set off against output GST later, so it is debited separately, not added into Purchases.",
+          "Entry: Debit Purchases Account Rs 50,000; Debit Input CGST Account Rs 3,000; Debit Input SGST Account Rs 3,000; Credit Bank Account Rs 56,000."
+        ],
+        "answer": "Debit Purchases Rs 50,000, Input CGST Rs 3,000 and Input SGST Rs 3,000; Credit Bank Rs 56,000.",
+        "markTip": "Keep the tax out of the Purchases figure. Merging GST into Purchases is the most common single-mark loss on this entry, and the examiner checks the Purchases line first.",
+        "variant": "Sold goods for Rs 80,000 within the state plus CGST and SGST at 6 percent each, received in cash. (Answer: Debit Cash Rs 89,600; Credit Sales Rs 80,000, Output CGST Rs 4,800, Output SGST Rs 4,800)"
+      },
+      {
+        "question": "The firm owes Mohan Rs 25,000. It pays him Rs 24,500 by cheque in full settlement. Journalise.",
+        "steps": [
+          "Mohan's account must be closed for the full Rs 25,000 owed, so debit Mohan Rs 25,000.",
+          "The bank paid out only Rs 24,500, so credit Bank Rs 24,500.",
+          "The Rs 500 the firm no longer has to pay is discount received, an income: credit Discount Received Rs 500.",
+          "Entry: Debit Mohan's Account Rs 25,000; Credit Bank Account Rs 24,500; Credit Discount Received Account Rs 500."
+        ],
+        "answer": "Debit Mohan Rs 25,000; Credit Bank Rs 24,500 and Discount Received Rs 500.",
+        "markTip": "The phrase in full settlement always signals a discount entry. Check that the one debit equals the two credits before moving on: Rs 25,000 = Rs 24,500 + Rs 500.",
+        "variant": "Received Rs 19,200 from Neha in full settlement of Rs 20,000. (Answer: Debit Cash Rs 19,200 and Discount Allowed Rs 800; Credit Neha Rs 20,000)"
+      },
+      {
+        "question": "Sudhir, who owed the firm Rs 8,000, is declared insolvent and a final payment of 60 paise in the rupee is received in cash. Journalise.",
+        "steps": [
+          "Cash received = Rs 8,000 x 60/100 = Rs 4,800.",
+          "The remaining Rs 3,200 will never arrive and is written off as bad debts, an expense.",
+          "Entry: Debit Cash Account Rs 4,800; Debit Bad Debts Account Rs 3,200; Credit Sudhir's Account Rs 8,000."
+        ],
+        "answer": "Debit Cash Rs 4,800 and Bad Debts Rs 3,200; Credit Sudhir Rs 8,000.",
+        "markTip": "Show the paise-in-the-rupee calculation as a working note. The examiner needs to see 60 percent of the debt derived, not a mystery figure appearing in the entry.",
+        "variant": "Kiran, owing Rs 12,000, pays 75 paise in the rupee. What is written off as bad debts? (Answer: Rs 3,000, with cash received Rs 9,000)"
+      },
+      {
+        "question": "The proprietor withdraws cash Rs 10,000 and goods costing Rs 6,000 for personal use. Journalise.",
+        "steps": [
+          "Both withdrawals go to a single Drawings account, totalling Rs 16,000.",
+          "Goods withdrawn are recorded at cost and credited to Purchases, because they reduce the goods that were bought for resale.",
+          "Entry: Debit Drawings Account Rs 16,000; Credit Cash Account Rs 10,000; Credit Purchases Account Rs 6,000."
+        ],
+        "answer": "Debit Drawings Rs 16,000; Credit Cash Rs 10,000 and Purchases Rs 6,000.",
+        "markTip": "Credit Purchases, not Sales, for goods withdrawn. The owner is not a customer, so no profit can be recognised on goods taken at cost, and crediting Sales invents one.",
+        "variant": "Goods costing Rs 4,500 are distributed as free samples. (Answer: Debit Advertisement Account Rs 4,500; Credit Purchases Account Rs 4,500)"
+      },
+      {
+        "question": "Pass entries at year end for: (a) depreciation on machinery Rs 9,000, (b) salaries outstanding Rs 12,000, (c) insurance premium paid in advance Rs 3,000.",
+        "steps": [
+          "(a) Debit Depreciation Account Rs 9,000; Credit Machinery Account Rs 9,000.",
+          "(b) The expense belongs to this year but is unpaid: Debit Salaries Account Rs 12,000; Credit Outstanding Salaries Account Rs 12,000.",
+          "(c) Part of the premium belongs to next year: Debit Prepaid Insurance Account Rs 3,000; Credit Insurance Account Rs 3,000.",
+          "Note the pattern: an outstanding item creates a liability account, a prepaid item creates an asset account."
+        ],
+        "answer": "(a) Depreciation debited Rs 9,000 against Machinery; (b) Salaries debited Rs 12,000 against Outstanding Salaries; (c) Prepaid Insurance debited Rs 3,000 against Insurance.",
+        "markTip": "Outstanding Salaries is a liability, so it is credited when created. Writing Credit Salaries instead of Credit Outstanding Salaries reverses the meaning and usually forfeits that whole part.",
+        "variant": "Commission earned but not yet received Rs 2,500. (Answer: Debit Accrued Commission Account Rs 2,500; Credit Commission Account Rs 2,500)"
+      },
+      {
+        "question": "Bought a second-hand packing machine for Rs 85,000 by cheque and paid Rs 5,000 in cash for its installation. Journalise.",
+        "steps": [
+          "Installation cost is spent to make the asset usable, so it is capitalised into Machinery rather than treated as an expense.",
+          "Machinery total = Rs 85,000 + Rs 5,000 = Rs 90,000.",
+          "Entry: Debit Machinery Account Rs 90,000; Credit Bank Account Rs 85,000; Credit Cash Account Rs 5,000."
+        ],
+        "answer": "Debit Machinery Rs 90,000; Credit Bank Rs 85,000 and Cash Rs 5,000.",
+        "markTip": "Any cost up to the point the asset is ready for use is capital: carriage on the machine, installation, first-time fitting. Repairs after use begins are revenue. State this test in a working note.",
+        "variant": "Bought furniture for Rs 30,000 and paid Rs 2,000 cartage to bring it to the shop, all in cash. What figure goes to the Furniture Account? (Answer: Rs 32,000)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 8 solutions?",
+        "a": "No. TS Grewal's questions are copyrighted and cannot be republished, so every question here is original, written to match the entry types and difficulty of Chapter 8 in the 2025-26 edition. Solve the book's questions too; the method in these solutions applies to them unchanged."
+      },
+      {
+        "q": "Do narrations carry marks?",
+        "a": "Yes, in practice. A journal entry without a narration is treated as incomplete under the CBSE format, and since school-set papers usually award about a mark per entry, a run of missing narrations adds up. One short line beginning with Being is enough."
+      },
+      {
+        "q": "How do I treat trade discount versus cash discount?",
+        "a": "Trade discount is never recorded in the books: deduct it and journalise only the net amount, mentioning the discount in the narration. Cash discount is recorded, through Discount Allowed when you receive less from a debtor and Discount Received when you pay less to a creditor."
+      },
+      {
+        "q": "Is GST part of the journal chapter?",
+        "a": "Basic entries with CGST and SGST appear inside journal practice, like question 2 above. The full treatment, including IGST and set-off, has its own chapter, Accounting for Goods and Services Tax, which is Chapter 12 in the 2025-26 edition."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 journal entries solutions",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-ledger-practice",
+    "metaTitle": "TS Grewal Class 11 Ledger Practice and Answers",
+    "metaDescription": "Ledger posting and balancing practice in TS Grewal Class 11 Chapter 9 style: original questions with full account workings and CBSE marking notes.",
+    "h1": "Ledger Posting and Balancing: Class 11 Practice in TS Grewal Chapter 9 Style",
+    "quickAnswer": "Ledger is Chapter 9 of the 2025-26 TS Grewal Class 11 book: posting journal entries into accounts and balancing them. Below are original posting and balancing questions with every account worked line by line, debit side and credit side, and each closing balance checked. Same topics and difficulty as the chapter, none of it copied.",
+    "intro": "Posting to the ledger is where the double entry system stops being theory. Chapter 9 of the 2025-26 TS Grewal edition takes journal entries and turns them into accounts, then balances them, and that is exactly what these questions practise: a cash account, a debtor, a creditor, a nominal account closed by transfer, and balances read for meaning. I wrote every question myself since the book's own questions are under copyright, and I balanced every account by hand before publishing. Set your answers out in proper T-account form on paper, even though the solutions here are written as lines of prose.",
+    "sections": [
+      {
+        "heading": "From journal to ledger: how posting works",
+        "body": "The ledger is the journal re-sorted account by account. For every entry, the account that was debited receives a debit-side posting naming the other account, and the credited account receives the mirror image on its credit side. The convention is To on the debit side and By on the credit side; the words mean nothing by themselves, they are tradition, but examiners expect them. The posting line always names the other account in the transaction, never the account you are writing in. So when cash is received from Hari, the Cash Account shows To Hari's Account on its debit side, and Hari's Account shows By Cash Account on its credit side. Once you see posting as pure re-filing, the chapter becomes clerical rather than conceptual, and speed comes from doing rather than reading."
+      },
+      {
+        "heading": "Balancing, and which accounts you balance",
+        "body": "To balance an account, total both sides, find the difference, and write it on the lighter side as Balance c/d so the totals agree, then bring it down on the opposite side as Balance b/d to start the next period. Real and personal accounts, meaning assets, debtors, creditors and capital, are balanced this way, and their balances flow into the trial balance. Nominal accounts, the expenses and incomes, are not balanced at all: at period end they are closed by transfer to the Trading or Profit and Loss Account, as question 4 below shows. Reading a balance is a skill of its own: a debit balance on a personal account means that person owes the firm, a credit balance means the firm owes them, and cash can only ever balance on the debit side."
+      },
+      {
+        "heading": "Where Chapter 9 sits and how it is tested",
+        "body": "Ledger is Chapter 9 in the 2025-26 edition, directly after Journal; older editions and some solution sites call it Chapter 6, so go by the topic name. Exam questions come in three forms: post a given set of journal entries into one named account and balance it, prepare the personal account of a debtor or creditor from a list of dealings, or prepare an account and state what its balance means. That final meaning sentence is often a dedicated mark, so end written answers with it: Rohan owes the firm Rs 14,000, or the firm owes Meena Traders Rs 11,000. Every question below finishes with exactly that sentence for exactly that reason, and the variants change the figures so you have to rebuild the account rather than pattern-match."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Prepare the Cash Account from these transactions: business started with cash Rs 2,00,000; goods purchased for cash Rs 60,000; goods sold for cash Rs 75,000; rent paid Rs 5,000; Rs 20,000 received from Hari, a debtor.",
+        "steps": [
+          "Cash is a real account: debit what comes in, credit what goes out.",
+          "Debit side: To Capital Account Rs 2,00,000, To Sales Account Rs 75,000, To Hari's Account Rs 20,000. Debit total Rs 2,95,000.",
+          "Credit side: By Purchases Account Rs 60,000, By Rent Account Rs 5,000. Credit total Rs 65,000.",
+          "Balance = Rs 2,95,000 minus Rs 65,000 = Rs 2,30,000, written on the credit side as By Balance c/d and brought down on the debit side as To Balance b/d."
+        ],
+        "answer": "The Cash Account closes with a debit balance of Rs 2,30,000.",
+        "markTip": "Cash can never show a credit balance. If yours does, hunt for a posting on the wrong side before you do anything else; that is nearly always the fault.",
+        "variant": "Same transactions plus wages paid Rs 12,000. New closing balance? (Answer: Rs 2,18,000 debit)"
+      },
+      {
+        "question": "Prepare Rohan's Account in the books of the firm: goods sold to him on credit Rs 48,000; cash received from him Rs 30,000; discount allowed to him Rs 1,000; goods returned by him Rs 3,000. Balance the account.",
+        "steps": [
+          "Rohan is a debtor, so the sale goes on the debit side: To Sales Account Rs 48,000.",
+          "Credit side: By Cash Account Rs 30,000, By Discount Allowed Account Rs 1,000, By Sales Return Account Rs 3,000. Credit total Rs 34,000.",
+          "Balance = Rs 48,000 minus Rs 34,000 = Rs 14,000, a debit balance: By Balance c/d Rs 14,000, brought down as To Balance b/d.",
+          "Read the result: Rohan still owes the firm Rs 14,000."
+        ],
+        "answer": "Rohan's Account shows a debit balance of Rs 14,000, the amount he still owes the firm.",
+        "markTip": "When cash arrives together with a discount, post both on the credit side as separate lines. Netting them into a single figure loses the discount mark.",
+        "variant": "Sold goods to Tara on credit Rs 36,000; received Rs 33,500 from her in full settlement. What discount was allowed? (Answer: Rs 2,500, and her account closes at nil)"
+      },
+      {
+        "question": "Prepare the account of Meena Traders, a supplier: goods bought from them on credit Rs 55,000; paid them Rs 40,000; discount received from them Rs 1,500; goods returned to them Rs 2,500.",
+        "steps": [
+          "Meena Traders is a creditor, so the purchase sits on the credit side: By Purchases Account Rs 55,000.",
+          "Debit side: To Cash Account Rs 40,000, To Discount Received Account Rs 1,500, To Purchases Return Account Rs 2,500. Debit total Rs 44,000.",
+          "Balance = Rs 55,000 minus Rs 44,000 = Rs 11,000, a credit balance: To Balance c/d Rs 11,000, brought down as By Balance b/d.",
+          "Read the result: the firm still owes Meena Traders Rs 11,000."
+        ],
+        "answer": "Meena Traders' Account closes with a credit balance of Rs 11,000, which the firm still owes.",
+        "markTip": "A creditor's account is the mirror of a debtor's. Learn Rohan's account from question 2, swap every side, and you have this one; papers often set one of each to catch students who only drilled one direction.",
+        "variant": "Bought goods from Vikram on credit Rs 28,000 and returned Rs 4,000. Balance owed to him? (Answer: Rs 24,000 credit balance)"
+      },
+      {
+        "question": "Post these into the Purchases Account for July and close it: cash purchases Rs 30,000; credit purchases from Karan Rs 35,000 and from Divya Rs 25,000.",
+        "steps": [
+          "Purchases is a nominal account and collects only goods bought for resale, whatever the mode of payment.",
+          "Debit side: To Cash Account Rs 30,000, To Karan's Account Rs 35,000, To Divya's Account Rs 25,000. Total Rs 90,000.",
+          "A nominal account is not balanced; at period end it is closed by transfer: By Trading Account Rs 90,000."
+        ],
+        "answer": "The Purchases Account totals Rs 90,000 on the debit side and is closed by transfer to the Trading Account.",
+        "markTip": "Balancing a nominal account instead of transferring it is a classic error. Only real and personal accounts carry balances forward to the next period.",
+        "variant": "The Sales Account shows cash sales Rs 52,000 and credit sales Rs 41,000. What is transferred, and where? (Answer: Rs 93,000 to the Trading Account)"
+      },
+      {
+        "question": "State whether each account normally shows a debit or a credit balance: cash, creditors, sales, machinery, rent paid, capital.",
+        "steps": [
+          "Assets and expenses live on the debit side: cash, machinery and rent paid carry debit balances.",
+          "Liabilities, incomes and capital live on the credit side: creditors, sales and capital carry credit balances.",
+          "Sanity check for the trial balance: debit balances are things owned or costs suffered, credit balances are amounts owed or earned."
+        ],
+        "answer": "Debit balances: cash, machinery, rent paid. Credit balances: creditors, sales, capital.",
+        "markTip": "This feeds directly into the trial balance chapter, and examiners test it as one-mark items, so it is cheap revision with a high payoff. Answer with the side and the reason in a phrase.",
+        "variant": "Bank overdraft and drawings: which side does each balance sit on? (Answer: overdraft is a credit balance, drawings a debit balance)"
+      },
+      {
+        "question": "Journalise and post to the Furniture Account: bought furniture for cash Rs 20,000 on 1 August; bought more furniture on credit from Wood Mart for Rs 18,000 on 20 August. Balance the account on 31 August.",
+        "steps": [
+          "Entries: Debit Furniture Account Rs 20,000, Credit Cash Account Rs 20,000; then Debit Furniture Account Rs 18,000, Credit Wood Mart's Account Rs 18,000.",
+          "Posting: the Furniture Account debit side shows To Cash Account Rs 20,000 and To Wood Mart's Account Rs 18,000.",
+          "There are no credit entries, so the balance is Rs 38,000: By Balance c/d Rs 38,000 on 31 August, brought down as To Balance b/d Rs 38,000 on 1 September."
+        ],
+        "answer": "The Furniture Account closes at a debit balance of Rs 38,000.",
+        "markTip": "The posting line names the other account in the entry, never the account you are writing in. A line reading To Furniture inside the Furniture Account is an instant giveaway of guesswork.",
+        "variant": "Same account, but on 30 August furniture costing Rs 6,000 is returned to Wood Mart. Closing balance? (Answer: Rs 32,000 debit)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 9 solutions?",
+        "a": "No. The book is a copyrighted commercial text, so these are original questions written to cover the same posting and balancing skills at the same difficulty as Chapter 9 of the 2025-26 edition. Every account here was balanced by hand before publishing."
+      },
+      {
+        "q": "What do To and By actually mean?",
+        "a": "Nothing by themselves; they are a labelling convention. Entries on the debit side start with To, entries on the credit side start with By. Examiners expect the convention, so use it, but do not look for meaning in the words."
+      },
+      {
+        "q": "Which accounts are balanced and which are transferred?",
+        "a": "Real and personal accounts, assets, debtors, creditors and capital, are balanced with Balance c/d and carried forward. Nominal accounts, meaning expenses and incomes such as purchases, sales, rent and commission, are closed at period end by transfer to the Trading or Profit and Loss Account."
+      },
+      {
+        "q": "Can the Cash Account ever have a credit balance?",
+        "a": "No. You cannot pay out more physical cash than you hold, so cash always balances on the debit side or at nil. A bank account can go credit through an overdraft, which is one reason cash and bank columns must be kept separate in your head."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 ledger solutions",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-trial-balance-practice",
+    "metaTitle": "TS Grewal Class 11 Trial Balance Practice and Answers",
+    "metaDescription": "Trial balance practice in TS Grewal Class 11 style, 2025-26 edition: prepare, balance and error questions with full workings and CBSE marking notes.",
+    "h1": "Trial Balance: Class 11 Practice in TS Grewal Chapter 14 Style",
+    "quickAnswer": "In the 2025-26 TS Grewal Class 11 edition, Trial Balance is Chapter 14. Below are original questions on preparing a trial balance from ledger balances, finding capital as the balancing figure, placing awkward items like overdrafts and returns in the right column, and spotting the errors an agreed trial balance cannot catch, all fully worked.",
+    "intro": "A trial balance question is free marks if your ledger knowledge is solid, and a slow puncture if it is not. In the 2025-26 TS Grewal edition this is Chapter 14, coming after the ledger and the subsidiary books. These original questions cover the whole examinable range: building a trial balance from a list of balances, deriving capital as the balancing figure, placing the trick items like overdrafts and returns, explaining the four errors an agreed trial balance hides, and using the doubling test to trace a difference. Each addition below is shown figure by figure, so check your running totals against mine as you go.",
+    "sections": [
+      {
+        "heading": "Which column each balance belongs in",
+        "body": "Everything in a trial balance follows from the nature of the account. Debit column: assets of every kind, expenses and losses, drawings, and sales returns. Credit column: liabilities including bank overdraft, capital, incomes and gains, purchases returns, and provisions such as provision for doubtful debts. The pairs that reverse student expectations are the returns, which always take the opposite column of their parent account, and the overdraft, which is a bank balance that belongs to the bank. Opening stock sits in the debit column, but closing stock normally stays out of the trial balance entirely, because it is not a ledger balance yet; it is a valuation made after the books close. If you can place all eight items in question 3 below without pausing, the preparation questions become pure addition."
+      },
+      {
+        "heading": "What an agreed trial balance proves, and what it cannot",
+        "body": "Agreement proves one thing only: the total of debit balances equals the total of credit balances, so the arithmetic of posting and balancing is internally consistent. It does not prove the books are correct. Four whole families of error leave the totals untouched: complete omission, where a transaction was never recorded on either side; errors of principle, where an amount sits in the wrong class of account but on the correct side, like repairs debited to Machinery; errors of commission, where the right side of the wrong personal account is used; and compensating errors that cancel each other out. CBSE-pattern papers use this as a 3 or 4 mark theory question, and the route to full marks is naming each error type and then saying explicitly why the two column totals still agree, which is what the model answer in question 4 does."
+      },
+      {
+        "heading": "Tracing a difference fast",
+        "body": "When your columns disagree in an exam, do not re-add everything from scratch. Find the difference first. If it divides by two, halve it and search for a balance of that size sitting in the wrong column, which is the situation in question 5. If it divides by nine, suspect a transposition, such as 2,700 written as 7,200. If it equals a whole balance from the list, an item was probably left out altogether. Check the column additions last, not first. This search order follows from how each error actually distorts the totals, and stating the test you are applying, for example the difference is twice Rs 2,700 so I am looking for a wrongly placed Rs 2,700 balance, earns method marks even before you find the culprit. Practise the order twice and it sticks."
+      }
+    ],
+    "problems": [
+      {
+        "question": "From these balances on 31 March 2026, prepare a trial balance: capital Rs 3,00,000; machinery Rs 1,80,000; furniture Rs 40,000; opening stock Rs 40,000; purchases Rs 2,10,000; sales Rs 3,25,000; debtors Rs 65,000; creditors Rs 45,000; cash Rs 35,000; rent Rs 18,000; salaries Rs 52,000; drawings Rs 30,000.",
+        "steps": [
+          "Sort every balance by nature: assets, expenses and drawings go in the debit column; capital, liabilities and incomes go in the credit column.",
+          "Debit column: machinery Rs 1,80,000, furniture Rs 40,000, opening stock Rs 40,000, purchases Rs 2,10,000, debtors Rs 65,000, cash Rs 35,000, rent Rs 18,000, salaries Rs 52,000, drawings Rs 30,000.",
+          "Add in order: 1,80,000 + 40,000 = 2,20,000; + 40,000 = 2,60,000; + 2,10,000 = 4,70,000; + 65,000 = 5,35,000; + 35,000 = 5,70,000; + 18,000 = 5,88,000; + 52,000 = 6,40,000; + 30,000 = 6,70,000.",
+          "Credit column: capital Rs 3,00,000, sales Rs 3,25,000, creditors Rs 45,000. Total = Rs 6,70,000.",
+          "Both columns agree at Rs 6,70,000, so the trial balance tallies."
+        ],
+        "answer": "The trial balance totals Rs 6,70,000 in each column.",
+        "markTip": "Two slips cost most marks here: drawings placed in the credit column next to capital, and opening stock forgotten because it feels like an old figure. Both belong in the debit column.",
+        "variant": "Add a bank loan of Rs 55,000 and a computer costing Rs 55,000 to the list above. New totals? (Answer: Rs 7,25,000 in both columns)"
+      },
+      {
+        "question": "A trader's ledger shows: plant Rs 2,50,000; stock Rs 60,000; debtors Rs 80,000; cash at bank Rs 45,000; wages Rs 35,000; purchases Rs 1,90,000; sales Rs 2,80,000; creditors Rs 70,000; bank loan Rs 90,000. The capital balance is missing. Prepare the trial balance and find capital.",
+        "steps": [
+          "Total the debit balances: plant, stock, debtors, bank, wages and purchases.",
+          "Running total: 2,50,000 + 60,000 = 3,10,000; + 80,000 = 3,90,000; + 45,000 = 4,35,000; + 35,000 = 4,70,000; + 1,90,000 = 6,60,000.",
+          "Total the known credit balances: sales Rs 2,80,000 + creditors Rs 70,000 + bank loan Rs 90,000 = Rs 4,40,000.",
+          "Capital is whatever makes the credit column equal the debit column: Rs 6,60,000 minus Rs 4,40,000 = Rs 2,20,000."
+        ],
+        "answer": "Capital is Rs 2,20,000, and the trial balance totals Rs 6,60,000 in each column.",
+        "markTip": "Say in words that capital is taken as the balancing figure. The examiner should see that you know it was derived from the totals, not given in the question.",
+        "variant": "Debit balances total Rs 5,10,000, and the only known credits are sales Rs 2,05,000 and creditors Rs 65,000. Find capital. (Answer: Rs 2,40,000)"
+      },
+      {
+        "question": "State the trial balance column for each item: purchases return, sales return, carriage inwards, commission received, bank overdraft, prepaid insurance, outstanding wages, drawings.",
+        "steps": [
+          "Returns take the opposite column of the account they reduce: purchases return goes to the credit column, sales return to the debit column.",
+          "Carriage inwards is an expense, so debit. Commission received is an income, so credit.",
+          "A bank overdraft is money owed to the bank, so credit. Prepaid insurance is an asset, so debit.",
+          "Outstanding wages are a liability, so credit. Drawings reduce capital but carry a debit balance of their own."
+        ],
+        "answer": "Debit column: sales return, carriage inwards, prepaid insurance, drawings. Credit column: purchases return, commission received, bank overdraft, outstanding wages.",
+        "markTip": "The returns pair is the favourite trap. Tie each return to its parent account and take the opposite side, and you will never mix them again.",
+        "variant": "Which column for accrued income, and which for provision for doubtful debts? (Answer: accrued income debit, provision for doubtful debts credit)"
+      },
+      {
+        "question": "A firm's trial balance agrees, yet the books contain all four of these: a credit sale to Asha never recorded anywhere; a machine repair of Rs 7,000 debited to the Machinery Account; Rs 3,000 received from Ravi credited to Kavi; purchases overcast by Rs 500 with sales also overcast by Rs 500. Explain why the trial balance still tallied.",
+        "steps": [
+          "Complete omission: the Asha sale touched neither side of the books, so both columns are equally understated and still agree.",
+          "Error of principle: the Rs 7,000 sits in the wrong class of account, an asset instead of an expense, but on the correct debit side, so the totals are unaffected.",
+          "Error of commission: the credit went to the wrong personal account, Kavi instead of Ravi, but a credit of Rs 3,000 exists either way.",
+          "Compensating errors: the two Rs 500 overcasts fall on opposite sides and cancel each other out.",
+          "Conclusion: an agreed trial balance proves arithmetic equality, not correctness of the books."
+        ],
+        "answer": "All four are errors a trial balance cannot disclose: complete omission, error of principle, error of commission to the wrong account, and compensating errors.",
+        "markTip": "Name the error type, then state which totals it leaves untouched. The naming alone usually earns half the marks; the explanation collects the rest.",
+        "variant": "Wages of Rs 10,000 were posted twice to the debit of the Wages Account. Would the trial balance still agree? (Answer: no, the debit column would exceed the credit column by Rs 10,000)"
+      },
+      {
+        "question": "A trial balance shows a debit total of Rs 4,82,300 and a credit total of Rs 4,87,700. On checking, the rent account's debit balance of Rs 2,700 was found listed in the credit column. Show that correcting this makes the columns agree.",
+        "steps": [
+          "The difference is Rs 4,87,700 minus Rs 4,82,300 = Rs 5,400, which is exactly twice Rs 2,700. A balance on the wrong side always creates a difference of double its amount.",
+          "Remove rent from the credit column: Rs 4,87,700 minus Rs 2,700 = Rs 4,85,000.",
+          "Add rent to the debit column: Rs 4,82,300 + Rs 2,700 = Rs 4,85,000.",
+          "Both columns now read Rs 4,85,000, so the trial balance agrees."
+        ],
+        "answer": "The corrected totals are Rs 4,85,000 in each column.",
+        "markTip": "When a difference is even, halve it and hunt for a balance of that size on the wrong side. Writing the doubling test into your working earns method credit before you even find the culprit.",
+        "variant": "Totals differ by Rs 1,800 because one balance sits on the wrong side. What size of balance do you search the ledger for? (Answer: Rs 900)"
+      },
+      {
+        "question": "From these balances, prepare a trial balance and name the item most often misplaced: cash Rs 22,000; bank overdraft Rs 15,000; capital Rs 1,00,000; purchases Rs 88,000; sales Rs 1,26,000; wages Rs 14,000; furniture Rs 70,000; creditors Rs 18,000; drawings Rs 9,000; sales return Rs 6,000; purchases return Rs 2,000; stock on 1 April Rs 52,000.",
+        "steps": [
+          "Debit column: cash Rs 22,000, purchases Rs 88,000, wages Rs 14,000, furniture Rs 70,000, drawings Rs 9,000, sales return Rs 6,000, opening stock Rs 52,000.",
+          "Running total: 22,000 + 88,000 = 1,10,000; + 14,000 = 1,24,000; + 70,000 = 1,94,000; + 9,000 = 2,03,000; + 6,000 = 2,09,000; + 52,000 = 2,61,000.",
+          "Credit column: bank overdraft Rs 15,000, capital Rs 1,00,000, sales Rs 1,26,000, creditors Rs 18,000, purchases return Rs 2,000. Total = Rs 2,61,000.",
+          "Both sides agree at Rs 2,61,000. The most commonly misplaced item is the bank overdraft, which students list as a debit out of habit because bank balances usually are debits."
+        ],
+        "answer": "The trial balance totals Rs 2,61,000 in each column; the bank overdraft is the classic misplaced item.",
+        "markTip": "An overdraft is the bank's money sitting in your business, so it is a credit balance. Expect at least one twist item like this in any full-length trial balance question.",
+        "variant": "Add machinery Rs 45,000 and a loan from Dev Rs 45,000 to the list. New totals? (Answer: Rs 3,06,000 in both columns)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 14 solutions?",
+        "a": "No. The book's questions are copyrighted, so these are original questions written to test the same skills at the same difficulty as the 2025-26 Chapter 14. The methods shown, especially the running additions and the doubling test, apply to the book's questions unchanged."
+      },
+      {
+        "q": "Is a trial balance an account?",
+        "a": "No. It is a statement, a list of ledger balances drawn up on a particular date to check arithmetical accuracy. It is not part of the double entry system itself, which is why an item can be missing from it without any account being wrong."
+      },
+      {
+        "q": "Does closing stock appear in the trial balance?",
+        "a": "Normally no. Closing stock is a valuation made after the books are closed, so it is not a ledger balance and is given as additional information below the trial balance. It only enters the trial balance in the special case where purchases have been adjusted through a closing stock account."
+      },
+      {
+        "q": "What should I do in an exam if my trial balance refuses to agree?",
+        "a": "Run the ordered tests: difference divisible by two suggests a balance on the wrong side, divisible by nine suggests a transposition, equal to a listed balance suggests an omission, and only then re-add the columns. If time is short, state the difference, show the tests you ran, and move on; the method itself carries marks."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 trial balance solutions",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "cbse",
+    "slug": "class-11-accountancy-depreciation-practice",
+    "metaTitle": "TS Grewal Class 11 Depreciation Practice and Answers",
+    "metaDescription": "Depreciation practice matched to TS Grewal Class 11 Chapter 15: SLM and WDV questions, asset sale workings, every calculation checked, marking notes.",
+    "h1": "Depreciation: Class 11 Practice in TS Grewal Chapter 15 Style",
+    "quickAnswer": "Depreciation is Chapter 15 in the 2025-26 TS Grewal Class 11 edition. It tests the straight line and written down value methods, part-year depreciation, asset accounts run over several years, and profit or loss on sale. Below are original questions on each of those, solved in full, with every calculation checked twice by hand.",
+    "intro": "Depreciation, Chapter 15 in the 2025-26 TS Grewal edition, is the first Class 11 chapter where a single early slip quietly wrecks every later figure, so working discipline matters as much as method. The questions below are original, since the book's questions are copyrighted, but they test the identical skills: straight line and written down value calculations, part-year charges, a machinery account run over three years, and profit or loss on the sale of an asset. I recomputed every figure on this page twice, once forwards and once backwards from the answer, before it went up.",
+    "sections": [
+      {
+        "heading": "The two methods, cleanly separated",
+        "body": "Straight line method: depreciation = cost minus estimated scrap value, divided by useful life, or a fixed percent of original cost, and the charge is identical every year. Cost includes everything spent to make the asset usable: purchase price, freight, installation. Written down value method: a fixed percent applied to the opening book value of each year, so the charge is largest in year one and falls every year after, and the asset never quite reaches zero. The exam tells you which method and which rate to use; your job is to apply it without slipping. The single most valuable habit is a working note that builds the cost figure first, then a year-by-year line showing the base, the rate, the charge and the closing book value. Questions 1 to 3 below model exactly that layout."
+      },
+      {
+        "heading": "Part years, sales, and the machinery account",
+        "body": "Whenever an asset is bought or sold partway through the year, depreciation runs only for the months of ownership: the annual charge times months over twelve. On a sale, the order of operations is fixed and worth memorising: charge depreciation from the start of the year to the date of sale, compute book value as cost minus all depreciation to date, then compare book value with the sale proceeds. Proceeds above book value give a profit on sale; below it, a loss. In the Machinery Account the sale year shows the part-year depreciation, By Bank for the proceeds, and the profit or loss line that closes the asset out. Questions 4 and 5 walk through both situations, and the variant under question 5 flips the loss into a profit so you can test the comparison in both directions."
+      },
+      {
+        "heading": "What Chapter 15 covers in 2025-26",
+        "body": "In the 2025-26 edition, Depreciation is Chapter 15, sitting after Trial Balance. The chapter examines the meaning and causes of depreciation, the straight line and written down value methods with their merits, asset accounts prepared over several years, part-year calculations, the sale or disposal of an asset, and the alternative of keeping the asset at cost while accumulating charges in a Provision for Depreciation Account. The questions on this page use the direct method, crediting the asset itself, because that is where most exam marks sit, but the provision approach is examinable and the FAQ below sketches how it changes the accounts. Some solution sites number this chapter 13 or 14 following older editions, so match by topic name. Theory questions worth around 3 marks on the causes of depreciation or a comparison of the methods appear regularly, so keep one crisp paragraph ready for each."
+      }
+    ],
+    "problems": [
+      {
+        "question": "A machine is bought for Rs 5,00,000 and Rs 20,000 is spent on its installation. Its estimated scrap value after 8 years is Rs 40,000. Compute the annual straight line depreciation and the rate of depreciation on original cost.",
+        "steps": [
+          "Total cost = Rs 5,00,000 + Rs 20,000 = Rs 5,20,000, because installation is capitalised into the asset.",
+          "Depreciable amount = cost minus scrap value = Rs 5,20,000 minus Rs 40,000 = Rs 4,80,000.",
+          "Annual depreciation = Rs 4,80,000 divided by 8 years = Rs 60,000.",
+          "Rate on original cost = 60,000 divided by 5,20,000, times 100 = 11.54 percent, rounded to two decimals."
+        ],
+        "answer": "Annual depreciation is Rs 60,000; the rate is approximately 11.54 percent of original cost.",
+        "markTip": "Forgetting to add installation to cost is the most common error here, and it corrupts both the annual charge and the rate. Show the cost build-up as its own working note.",
+        "variant": "Cost Rs 2,50,000, scrap value Rs 10,000, useful life 6 years. Annual straight line depreciation? (Answer: Rs 40,000)"
+      },
+      {
+        "question": "On 1 April 2023 a firm buys machinery for Rs 3,00,000 and charges depreciation at 10 percent per annum on original cost. Books close on 31 March each year. Show the Machinery Account for three years.",
+        "steps": [
+          "Annual depreciation = 10 percent of Rs 3,00,000 = Rs 30,000, the same every year under the straight line method.",
+          "Year to 31 March 2024: debit side To Bank Rs 3,00,000; credit side By Depreciation Rs 30,000 and By Balance c/d Rs 2,70,000.",
+          "Year to 31 March 2025: opens To Balance b/d Rs 2,70,000; credit side By Depreciation Rs 30,000 and By Balance c/d Rs 2,40,000.",
+          "Year to 31 March 2026: opens at Rs 2,40,000; By Depreciation Rs 30,000 and By Balance c/d Rs 2,10,000.",
+          "Check: three years at Rs 30,000 is Rs 90,000, and Rs 3,00,000 minus Rs 90,000 = Rs 2,10,000."
+        ],
+        "answer": "Closing balances: Rs 2,70,000 on 31 March 2024, Rs 2,40,000 on 31 March 2025, Rs 2,10,000 on 31 March 2026.",
+        "markTip": "Under straight line on original cost the charge never changes. If your year two figure differs from year one, you have drifted into the written down value method without noticing.",
+        "variant": "Same machine depreciated at 15 percent per annum on original cost. Balance after two years? (Answer: Rs 2,10,000)"
+      },
+      {
+        "question": "Equipment costing Rs 4,00,000 is depreciated at 15 percent per annum by the written down value method. Compute the depreciation for each of the first three years and the book value at the end of year three.",
+        "steps": [
+          "Year 1: 15 percent of Rs 4,00,000 = Rs 60,000; closing book value Rs 3,40,000.",
+          "Year 2: 15 percent of Rs 3,40,000 = Rs 51,000; closing book value Rs 2,89,000.",
+          "Year 3: 15 percent of Rs 2,89,000 = Rs 43,350; closing book value Rs 2,45,650.",
+          "Notice the charge falls each year because the base is the shrinking book value, not the original cost."
+        ],
+        "answer": "Depreciation is Rs 60,000, Rs 51,000 and Rs 43,350; the book value at the end of year three is Rs 2,45,650.",
+        "markTip": "Carry the exact book value forward each year. Rounding early is how answers drift by a few rupees and lose the accuracy mark at the final figure.",
+        "variant": "A machine costing Rs 1,00,000 is depreciated at 20 percent written down value. Year 2 depreciation? (Answer: Rs 16,000)"
+      },
+      {
+        "question": "A machine is bought on 1 October 2024 for Rs 2,40,000. Depreciation is 10 percent per annum on original cost and books close on 31 March. Find the depreciation for 2024-25 and 2025-26 and the book value on 31 March 2026.",
+        "steps": [
+          "2024-25 holds the machine for only six months, October to March, so depreciation = Rs 2,40,000 x 10 percent x 6/12 = Rs 12,000.",
+          "Book value on 31 March 2025 = Rs 2,40,000 minus Rs 12,000 = Rs 2,28,000.",
+          "2025-26 is a full year, so depreciation = Rs 24,000.",
+          "Book value on 31 March 2026 = Rs 2,28,000 minus Rs 24,000 = Rs 2,04,000."
+        ],
+        "answer": "Depreciation is Rs 12,000 for 2024-25 and Rs 24,000 for 2025-26; the book value on 31 March 2026 is Rs 2,04,000.",
+        "markTip": "Write the fraction of the year into the calculation line, 6/12 here. Examiners award the time apportionment separately from the arithmetic, so showing it protects the mark.",
+        "variant": "A machine bought on 1 January 2025 for Rs 1,80,000, at 10 percent per annum on cost. Depreciation for 2024-25? (Answer: Rs 4,500, for three months)"
+      },
+      {
+        "question": "A machine bought on 1 April 2023 for Rs 1,60,000 is depreciated at 10 percent per annum on original cost. It is sold on 30 September 2025 for Rs 1,10,000. Find the profit or loss on sale.",
+        "steps": [
+          "Annual depreciation = 10 percent of Rs 1,60,000 = Rs 16,000. Charge it in full for 2023-24 and 2024-25: Rs 32,000.",
+          "In 2025-26 the machine is used for six months up to the sale: Rs 16,000 x 6/12 = Rs 8,000.",
+          "Total depreciation to the date of sale = Rs 40,000, so book value at sale = Rs 1,60,000 minus Rs 40,000 = Rs 1,20,000.",
+          "Sale proceeds of Rs 1,10,000 against a book value of Rs 1,20,000 give a loss on sale of Rs 10,000.",
+          "In the Machinery Account the final year shows By Depreciation Rs 8,000, By Bank Rs 1,10,000 and By Loss on Sale Rs 10,000, which together close the account."
+        ],
+        "answer": "There is a loss on sale of Rs 10,000.",
+        "markTip": "The step everyone skips is depreciation from 1 April to the sale date. Charge it first, then compare book value with the price received; doing the comparison on last year's book value is the classic error.",
+        "variant": "The same machine is sold on the same date for Rs 1,27,000 instead. Result? (Answer: a profit on sale of Rs 7,000)"
+      },
+      {
+        "question": "An asset costs Rs 2,00,000 and the rate of depreciation is 20 percent per annum. Compare the year 2 depreciation under the straight line method and the written down value method.",
+        "steps": [
+          "Straight line: 20 percent of original cost every year, so year 2 = Rs 40,000, identical to year 1.",
+          "Written down value: year 1 = Rs 40,000, leaving a book value of Rs 1,60,000; year 2 = 20 percent of Rs 1,60,000 = Rs 32,000.",
+          "The year 2 difference is Rs 8,000, and the gap widens every year after because the WDV base keeps shrinking."
+        ],
+        "answer": "Year 2 depreciation is Rs 40,000 under the straight line method and Rs 32,000 under the written down value method.",
+        "markTip": "In compare-the-methods questions, one sentence on why the WDV charge falls, the shrinking base, earns the theory mark that pure numbers miss.",
+        "variant": "Same asset: what is the year 3 depreciation under the written down value method? (Answer: Rs 25,600)"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the actual TS Grewal Chapter 15 solutions?",
+        "a": "No. The book's questions are copyrighted, so every question here is original, written to match the calculation types and difficulty of Chapter 15 in the 2025-26 edition. The layouts shown, cost build-up first, then year-by-year lines, work directly on the book's own questions."
+      },
+      {
+        "q": "Which method does CBSE prefer, straight line or written down value?",
+        "a": "Neither. The question always states the method and the rate, and both are examinable. What is worth preparing is one short comparison paragraph, equal charge versus falling charge, and the reason the written down value base shrinks, because that turns up as a 3-mark theory question."
+      },
+      {
+        "q": "What is the provision for depreciation method?",
+        "a": "Instead of crediting the asset each year, the asset stays in the books at original cost and the yearly charge accumulates in a separate Provision for Depreciation Account. On a sale, both the cost and the accumulated provision are transferred to an Asset Disposal Account, which then reveals the profit or loss. It is part of the Class 11 chapter and worth one careful practice run."
+      },
+      {
+        "q": "Why is my written down value answer off by a few rupees?",
+        "a": "Almost always early rounding. Carry the exact book value from year to year, keep paise if they arise, and round only the final answer. If a question gives an awkward rate, the examiner expects the unrounded chain and a sensibly rounded final figure."
+      }
+    ],
+    "targetQuery": "ts grewal class 11 depreciation solutions",
+    "hubSubjects": [
+      "accounting"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-2025-maths-theory-practice",
+    "metaTitle": "WAEC 2025 Mathematics Theory Questions and Solutions",
+    "metaDescription": "Free WASSCE 2025 maths theory practice: what the paper covered, its 13-question structure, how marks are awarded, and original solved questions.",
+    "h1": "WASSCE 2025 Maths Theory: Practice Questions and Solutions",
+    "quickAnswer": "The WASSCE 2025 core mathematics theory paper had 13 questions: five compulsory in Section A worth 40 marks, then five from eight in Section B worth 60 marks, in 2 hours 30 minutes. Candidates reported questions on average speed, simple interest, mensuration, trigonometry and coordinate geometry. Below is that structure explained, plus original practice questions solved in full.",
+    "intro": "I should be upfront: I sit Cambridge exams, not WASSCE, so nothing on this page is exam-hall memory. I built it from what candidates and prep sites reported about the 2025 core mathematics theory paper, then wrote original practice questions matching that style and difficulty. The real past questions belong to WAEC and I do not copy them. What you get instead are questions testing the same topics the 2025 paper is reported to have tested, solved line by line the way an examiner wants to see working. Read the structure notes first, then attempt each question before opening the solution.",
+    "sections": [
+      {
+        "heading": "What the 2025 theory paper reportedly covered",
+        "body": "WAEC does not publish a topic list, so this comes from candidate discussions and prep sites such as Kuulchat that walk through each paper after the sitting. For 2025, the compulsory Section A is reported to have tested an average speed word problem, simple interest on an investment, the volume of a hemisphere, an angle of depression problem, and coordinate geometry using midpoint and distance. Reported Section B questions include ratio with percentage increase, areas and perimeters of triangles, work rates, and a distance question using latitude and longitude. The usual WAEC staples, statistics, probability, bearings and circle geometry, fill out the choice section in most years. One caution: Ghana and Nigeria sit different series of the WASSCE, and first and second series papers differ too, so treat any reported list as a guide rather than a guarantee."
+      },
+      {
+        "heading": "Paper structure, marks and timing",
+        "body": "The theory paper, Paper 2, lasts 2 hours 30 minutes and carries 100 marks. There are 13 questions in two sections. Section A has five shorter compulsory questions worth 40 marks in total, roughly 8 marks each. Section B has eight longer questions of about 12 marks each, and you answer any five of them for 60 marks. So you answer ten questions in 150 minutes. A workable budget is about 10 minutes per Section A question and 18 to 20 minutes per Section B question, which leaves a few minutes to read all of Section B before choosing. Choosing well is a skill: pick the five topics you have actually drilled, not the five questions that look shortest on the page."
+      },
+      {
+        "heading": "How WAEC marks theory answers",
+        "body": "WAEC marking schemes award M marks for method, A marks for accuracy and B marks for independent correct statements. An A mark usually cannot be earned without the M mark before it, which is why a bare answer with no working can score almost nothing even when it is right. The flip side is generous: a wrong final answer with correct method keeps most of the marks, and many schemes allow follow-through, so an early slip is not fatal if your later working stays consistent. Give answers to the accuracy asked for, often three significant figures, use the value of pi the paper tells you to use, and always write units. These are small habits that are worth real marks over ten questions."
+      }
+    ],
+    "problems": [
+      {
+        "question": "A lorry travels the first 100 km of a journey at an average speed of 50 km/h and the remaining 120 km at an average speed of 40 km/h. Calculate the average speed for the whole journey.",
+        "steps": [
+          "Time for the first stage: 100 divided by 50 equals 2 hours.",
+          "Time for the second stage: 120 divided by 40 equals 3 hours.",
+          "Total distance is 100 plus 120 equals 220 km, and total time is 2 plus 3 equals 5 hours.",
+          "Average speed equals total distance over total time: 220 divided by 5 equals 44 km/h."
+        ],
+        "answer": "44 km/h",
+        "markTip": "Section A style, about 8 marks: M1 for each stage time, M1 for total distance over total time, A1 for 44 km/h with units. Averaging the two speeds to get 45 km/h is the classic error and loses the final marks.",
+        "variant": "A cyclist covers 120 km at 40 km/h and then 60 km at 60 km/h. Find the average speed for the whole journey. [Answer: 45 km/h]"
+      },
+      {
+        "question": "Efua invests GHc 8,000 in an account paying simple interest. After 3 years the amount in the account is GHc 9,440. Find (a) the rate of interest per annum, (b) how many years in total the money must stay invested for the amount to reach GHc 10,400 at the same rate.",
+        "steps": [
+          "Interest earned in 3 years: 9,440 minus 8,000 equals GHc 1,440.",
+          "Interest per year: 1,440 divided by 3 equals GHc 480.",
+          "Rate: 480 divided by 8,000, times 100, equals 6 percent per annum.",
+          "For part (b), total interest needed: 10,400 minus 8,000 equals GHc 2,400.",
+          "Time: 2,400 divided by 480 equals 5 years."
+        ],
+        "answer": "(a) 6 percent per annum (b) 5 years",
+        "markTip": "M1 for finding the interest, M1 for the rate formula, A1 for 6 percent; then M1 A1 for the time. If you misread amount as interest, the follow-through rule usually protects your part (b) method marks.",
+        "variant": "N50,000 invested at simple interest amounts to N59,000 in 4 years. Find the rate per annum. [Answer: 4.5 percent]"
+      },
+      {
+        "question": "The volume of a solid hemisphere is 2,425.5 cm^3. Taking pi as 22/7, calculate (a) the radius of the hemisphere, (b) its total surface area.",
+        "steps": [
+          "Volume of a hemisphere is (2/3) pi r^3, so (2/3) times (22/7) times r^3 equals 2,425.5.",
+          "Rearrange: r^3 equals 2,425.5 times 21 divided by 44 equals 1,157.625.",
+          "Cube root: r equals 10.5 cm.",
+          "Total surface area of a solid hemisphere is the curved surface plus the flat circular face: 2 pi r^2 plus pi r^2 equals 3 pi r^2.",
+          "Substitute: 3 times (22/7) times 10.5^2 equals 3 times (22/7) times 110.25 equals 1,039.5 cm^2."
+        ],
+        "answer": "(a) 10.5 cm (b) 1,039.5 cm^2",
+        "markTip": "M1 for the volume formula, M1 for isolating r^3, A1 for 10.5 cm; then M1 for 3 pi r^2 and A1. Forgetting the flat face and giving 2 pi r^2 is the most common way to lose the last two marks.",
+        "variant": "A solid hemisphere has radius 7 cm. Taking pi as 22/7, find its volume. [Answer: approximately 718.7 cm^3]"
+      },
+      {
+        "question": "From the top of a vertical cliff 60 m high, the angle of depression of a boat at sea is 35 degrees. The boat sails on a straight line towards the foot of the cliff until the angle of depression becomes 55 degrees. Calculate, correct to three significant figures, the distance the boat sailed.",
+        "steps": [
+          "The angle of depression from the top equals the angle of elevation from the boat, so each position forms a right triangle with the 60 m cliff.",
+          "First distance from the cliff: 60 divided by tan 35 equals 60 divided by 0.7002 equals 85.7 m.",
+          "Second distance: 60 divided by tan 55 equals 60 divided by 1.4281 equals 42.0 m.",
+          "Distance sailed: 85.7 minus 42.0 equals 43.7 m."
+        ],
+        "answer": "43.7 m (3 s.f.)",
+        "markTip": "B1 for a correct diagram with both angles marked at the boat positions, M1 A1 for each distance, A1 for the subtraction. Mixing up which distance is larger, or putting the angle at the top of the triangle, costs heavily, so draw first.",
+        "variant": "From the top of a tower 45 m high, the angle of depression of a car is 40 degrees. How far is the car from the foot of the tower, to three significant figures? [Answer: 53.6 m]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are these the real WAEC 2025 theory questions?",
+        "a": "No. WAEC past questions are copyrighted, so this site never reproduces them. These are original questions written in the same format and difficulty, based on the topics the 2025 paper is reported to have covered. For the official questions, use WAEC's own past question booklets or platforms."
+      },
+      {
+        "q": "How many questions do I answer in the WASSCE core maths theory paper?",
+        "a": "Ten out of 13: all five compulsory questions in Section A, worth 40 marks, and any five of the eight questions in Section B, worth 60 marks. The paper lasts 2 hours 30 minutes and carries 100 marks."
+      },
+      {
+        "q": "Does WAEC give marks for working even if the final answer is wrong?",
+        "a": "Yes. Marking schemes award M marks for correct method and A marks for accuracy, and many parts allow follow-through from an earlier slip. Showing every step protects most of the marks; a correct answer with no working can score very little."
+      },
+      {
+        "q": "Which topics should I revise first for the theory paper?",
+        "a": "The recurring ones: algebra, mensuration, statistics, probability, bearings with trigonometry, and circle geometry. This site has a solved practice page for each of those topics written in the same WASSCE style as this one."
+      }
+    ],
+    "targetQuery": "waec 2025 mathematics theory questions and solutions",
+    "hubSubjects": [
+      "math"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-maths-algebra-practice",
+    "metaTitle": "WAEC Past Questions on Algebra: Solved WASSCE Practice",
+    "metaDescription": "Original WAEC algebra practice: simultaneous equations, quadratics, variation and change of subject, solved step by step with WASSCE marking notes.",
+    "h1": "WAEC Algebra Practice Questions, Solved in WASSCE Style",
+    "quickAnswer": "WAEC algebra theory questions usually test simultaneous linear equations, quadratic equations by factorisation, change of subject, variation, and word problems about prices or ages that turn into equations. This page gives five original questions in that exact WASSCE style, each solved step by step with notes on how the method and accuracy marks are shared.",
+    "intro": "Algebra is the most predictable part of the WASSCE core maths theory paper, which is exactly why it is worth drilling. Simultaneous equations, quadratics and change of subject appear in some form nearly every year, either directly or hidden inside a word problem about prices, ages or a journey. The five questions below are my own, written in WASSCE style at WASSCE difficulty, not copied from any past paper. Each is solved in full, with a note on where the method marks sit, because in a WAEC theory paper the working earns more than the final answer does.",
+    "sections": [
+      {
+        "heading": "How algebra shows up in the theory paper",
+        "body": "Algebra rarely gets a whole Section B question to itself; instead it is spread through the paper. A Section A question might ask you to solve a pair of simultaneous equations or make a variable the subject of a formula. A Section B question often opens with a word problem, two unknowns and two conditions, that you must translate into equations before solving. Quadratics appear both as solve-this equations and inside area or number problems. Variation, y varies directly as x and inversely as z squared, is a WAEC favourite because it tests whether you can find the constant first. If you can translate words into equations quickly, algebra becomes the most reliable marks on the paper."
+      },
+      {
+        "heading": "Showing working the way examiners want",
+        "body": "For simultaneous equations, state your method, elimination or substitution, and show the step where one variable disappears; that line usually carries an M mark. For quadratics, show the factorised form before writing the roots, because the factorisation is where the method mark lives. When changing the subject, write one manipulation per line rather than jumping three steps at once; a skipped step that goes wrong loses both the M and the A mark. Finally, substitute your answers back into an original equation when you have a spare minute. WAEC does not award marks for checking, but it catches the sign slips that otherwise cost accuracy marks silently."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Solve the simultaneous equations 3x + 2y = 12 and 2x - y = 1.",
+        "steps": [
+          "From the second equation, y equals 2x minus 1.",
+          "Substitute into the first: 3x plus 2(2x minus 1) equals 12.",
+          "Expand: 3x plus 4x minus 2 equals 12, so 7x equals 14 and x equals 2.",
+          "Then y equals 2(2) minus 1 equals 3.",
+          "Check in the first equation: 3(2) plus 2(3) equals 12. Correct."
+        ],
+        "answer": "x = 2, y = 3",
+        "markTip": "M1 for a correct substitution or elimination step, A1 for x, A1 for y. Writing only the answers with no visible method can score just one mark out of three or four.",
+        "variant": "Solve 2x + y = 7 and 3x - y = 8. [Answer: x = 3, y = 1]"
+      },
+      {
+        "question": "Solve the equation 2x^2 - 5x - 3 = 0.",
+        "steps": [
+          "Look for two numbers that multiply to 2 times negative 3, which is negative 6, and add to negative 5: they are negative 6 and 1.",
+          "Rewrite: 2x^2 minus 6x plus x minus 3 equals 0.",
+          "Factor in pairs: 2x(x minus 3) plus 1(x minus 3) equals 0, so (2x plus 1)(x minus 3) equals 0.",
+          "Set each factor to zero: x equals negative 1/2 or x equals 3."
+        ],
+        "answer": "x = -1/2 or x = 3",
+        "markTip": "M1 for a correct factorisation or correct use of the quadratic formula, A1 for each root. Unless the question says by factorisation, the formula is equally acceptable, but show the substitution line.",
+        "variant": "Solve 3x^2 + x - 2 = 0. [Answer: x = 2/3 or x = -1]"
+      },
+      {
+        "question": "Make x the subject of the formula y = (2x + 3)/(x - 5).",
+        "steps": [
+          "Multiply both sides by (x minus 5): y(x minus 5) equals 2x plus 3.",
+          "Expand: xy minus 5y equals 2x plus 3.",
+          "Collect x terms on one side: xy minus 2x equals 5y plus 3.",
+          "Factor out x: x(y minus 2) equals 5y plus 3.",
+          "Divide: x equals (5y plus 3)/(y minus 2)."
+        ],
+        "answer": "x = (5y + 3)/(y - 2)",
+        "markTip": "M1 for clearing the fraction, M1 for collecting the x terms together, A1 for the final form. The mark scheme wants x isolated once, so leaving an x on both sides scores no A mark.",
+        "variant": "Make t the subject of s = (3t - 1)/(t + 2). [Answer: t = (2s + 1)/(3 - s)]"
+      },
+      {
+        "question": "y varies directly as x and inversely as the square of z. When x = 4 and z = 1, y = 8. Find (a) the equation connecting x, y and z, (b) the value of y when x = 27 and z = 3.",
+        "steps": [
+          "Write the relationship with a constant: y equals kx/z^2.",
+          "Substitute the given values: 8 equals k times 4 divided by 1, so k equals 2.",
+          "The equation is y equals 2x/z^2.",
+          "For part (b): y equals 2 times 27 divided by 3^2 equals 54 divided by 9 equals 6."
+        ],
+        "answer": "(a) y = 2x/z^2 (b) y = 6",
+        "markTip": "B1 for the correct relationship with k, M1 A1 for finding k, M1 A1 for part (b). Skipping straight to numbers without ever writing y = kx/z^2 forfeits the first mark.",
+        "variant": "y varies directly as x^2 and inversely as z. When x = 2 and z = 1, y = 12. Find y when x = 4 and z = 6. [Answer: y = 8]"
+      },
+      {
+        "question": "Four pens and three exercise books cost N1,100. Two pens and five exercise books cost N900. Find the cost of one pen and of one exercise book.",
+        "steps": [
+          "Let a pen cost p naira and a book cost b naira: 4p plus 3b equals 1,100 and 2p plus 5b equals 900.",
+          "Multiply the second equation by 2: 4p plus 10b equals 1,800.",
+          "Subtract the first equation: 7b equals 700, so b equals 100.",
+          "Substitute back: 4p plus 300 equals 1,100, so 4p equals 800 and p equals 200."
+        ],
+        "answer": "A pen costs N200 and an exercise book costs N100",
+        "markTip": "B1 for defining variables and forming both equations, that step alone often carries two marks, then M1 for elimination, A1 for each value. Always answer in words with units at the end.",
+        "variant": "Three oranges and two mangoes cost GHc 13, while one orange and four mangoes cost GHc 11. Find the cost of each fruit. [Answer: orange GHc 3, mango GHc 2]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can I use the quadratic formula instead of factorising?",
+        "a": "Yes, unless the question explicitly says by factorisation or by completing the square. Write the formula, show the substitution line, then simplify. The method mark attaches to that substitution, not to the memorised formula."
+      },
+      {
+        "q": "How many marks is a typical WAEC algebra question worth?",
+        "a": "A Section A algebra question is usually around 8 marks; inside Section B, algebra is often one part of a 12 or 13 mark question. Forming the equations from a word problem typically carries two or three marks before you solve anything."
+      },
+      {
+        "q": "Are these real WAEC past questions on algebra?",
+        "a": "No. They are original questions I wrote in the WASSCE format at the same difficulty, because real past papers are WAEC copyright. The topics and mark structure mirror what the theory paper tests year after year."
+      }
+    ],
+    "targetQuery": "waec past questions on algebra",
+    "hubSubjects": [
+      "math"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-maths-geometry-circle-practice",
+    "metaTitle": "WAEC Questions on Circle Geometry: Solved Practice",
+    "metaDescription": "Circle geometry practice in WASSCE style: angle at centre, cyclic quadrilaterals, tangents and chords, all solved step by step with marking notes.",
+    "h1": "WAEC Circle Geometry Practice Questions, Fully Solved",
+    "quickAnswer": "WAEC circle geometry questions test a small set of theorems: the angle at the centre is twice the angle at the circumference, angles in the same segment are equal, opposite angles of a cyclic quadrilateral sum to 180 degrees, the angle in a semicircle is 90 degrees, and tangent properties. Here are five original questions in WASSCE style, solved with reasons stated the way examiners expect.",
+    "intro": "Circle geometry frightens people because the diagrams look busy, but the theory behind a WAEC circle question is a short list of theorems that never changes. Once you can name which theorem a diagram is using, the marks come quickly, and WAEC actually awards marks for stating the reason, not just the number. The five questions below are original, written in the WASSCE style rather than copied from past papers. I sit Cambridge exams myself, and circle theorems are one of the few topics that are almost identical across both systems, so this is familiar ground.",
+    "sections": [
+      {
+        "heading": "The circle theorems WAEC actually tests",
+        "body": "Five theorems cover nearly every WASSCE circle question. First, the angle a chord subtends at the centre is twice the angle it subtends at the circumference on the same arc. Second, angles in the same segment, standing on the same chord, are equal. Third, opposite angles of a cyclic quadrilateral add up to 180 degrees. Fourth, the angle in a semicircle is a right angle. Fifth, tangent facts: a tangent is perpendicular to the radius at the point of contact, and the angle between a tangent and a chord equals the angle in the alternate segment. Add the isosceles triangle formed by two radii and you can unlock almost any diagram WAEC draws."
+      },
+      {
+        "heading": "How to earn the marks, not just the answer",
+        "body": "WAEC circle questions usually say give reasons for your answers, and the mark scheme splits marks between the value and the reason. So write angle ACB equals 64 degrees, angle at centre is twice angle at circumference, on one line. The exact wording is flexible but there must be a recognisable theorem, not just because of the circle. Second habit: diagrams in the paper are not drawn to scale, so never measure with a protractor; an answer that only a measurement could produce scores zero. Third, when a diagram has two radii to points on the circle, mark the isosceles triangle immediately. That one observation is the hidden step in a large share of these questions."
+      }
+    ],
+    "problems": [
+      {
+        "question": "A, B and C are points on a circle with centre O, with C on the major arc AB. Angle AOB = 128 degrees. Find, with reasons, (a) angle ACB, (b) angle OAB.",
+        "steps": [
+          "Part (a): the angle at the centre is twice the angle at the circumference standing on the same arc AB.",
+          "So angle ACB equals 128 divided by 2 equals 64 degrees.",
+          "Part (b): OA and OB are radii, so triangle OAB is isosceles with angle OAB equal to angle OBA.",
+          "Angles in a triangle sum to 180: angle OAB equals (180 minus 128) divided by 2 equals 26 degrees."
+        ],
+        "answer": "(a) angle ACB = 64 degrees (b) angle OAB = 26 degrees",
+        "markTip": "Each part is typically value plus reason: A1 for 64 with B1 for naming the centre theorem, then M1 for the isosceles observation and A1 for 26. Reasons left out can cost half the marks.",
+        "variant": "With the same setup, angle AOB = 146 degrees. Find angle ACB. [Answer: 73 degrees]"
+      },
+      {
+        "question": "PQRS is a cyclic quadrilateral. Angle QPS = 74 degrees and angle PQR = 112 degrees. Find, with reasons, angle QRS and angle PSR.",
+        "steps": [
+          "Opposite angles of a cyclic quadrilateral are supplementary, they add to 180 degrees.",
+          "Angle QRS is opposite angle QPS: 180 minus 74 equals 106 degrees.",
+          "Angle PSR is opposite angle PQR: 180 minus 112 equals 68 degrees.",
+          "Check: 74 plus 112 plus 106 plus 68 equals 360, the angle sum of a quadrilateral. Correct."
+        ],
+        "answer": "angle QRS = 106 degrees, angle PSR = 68 degrees",
+        "markTip": "A1 plus reason for each angle. The quickest self-check is that all four angles must total 360 degrees; if they do not, one of your opposite pairs is wrong.",
+        "variant": "In cyclic quadrilateral ABCD, angle A = 81 degrees and angle B = 95 degrees. Find angles C and D. [Answer: angle C = 99 degrees, angle D = 85 degrees]"
+      },
+      {
+        "question": "TA is a tangent to a circle at A, and AB is a chord. C is a point on the major arc AB, and O is the centre. Angle TAB = 58 degrees. Find, with reasons, (a) angle ACB, (b) angle AOB.",
+        "steps": [
+          "Part (a): the angle between a tangent and a chord equals the angle in the alternate segment.",
+          "So angle ACB equals angle TAB equals 58 degrees.",
+          "Part (b): the angle at the centre is twice the angle at the circumference on the same arc.",
+          "So angle AOB equals 2 times 58 equals 116 degrees."
+        ],
+        "answer": "(a) angle ACB = 58 degrees (b) angle AOB = 116 degrees",
+        "markTip": "The alternate segment theorem is the least-known theorem on the list, and examiners reward naming it. A1 plus B1 for each part; quoting tangent perpendicular to radius here is the wrong reason and loses the reason mark.",
+        "variant": "A tangent at P makes an angle of 47 degrees with chord PQ. Find the angle in the alternate segment. [Answer: 47 degrees]"
+      },
+      {
+        "question": "AB is a diameter of a circle and C is a point on the circle. Angle CAB = 37 degrees. Find, with reasons, angle CBA.",
+        "steps": [
+          "The angle in a semicircle is a right angle, so angle ACB equals 90 degrees.",
+          "Angles in a triangle sum to 180 degrees.",
+          "Angle CBA equals 180 minus 90 minus 37 equals 53 degrees."
+        ],
+        "answer": "angle CBA = 53 degrees",
+        "markTip": "B1 for stating angle ACB is 90 with the semicircle reason, then A1 for 53. The word diameter in a question is almost always a signal to use this theorem first.",
+        "variant": "AB is a diameter and angle CAB = 29 degrees. Find angle CBA. [Answer: 61 degrees]"
+      },
+      {
+        "question": "A chord of a circle is 16 cm long and its distance from the centre is 6 cm. Calculate (a) the radius of the circle, (b) the circumference, taking pi = 3.142, correct to one decimal place.",
+        "steps": [
+          "The perpendicular from the centre bisects the chord, giving half-length 8 cm.",
+          "The radius, half-chord and distance form a right triangle: r^2 equals 8^2 plus 6^2 equals 64 plus 36 equals 100.",
+          "So r equals 10 cm.",
+          "Circumference equals 2 pi r equals 2 times 3.142 times 10 equals 62.84, which is 62.8 cm to one decimal place."
+        ],
+        "answer": "(a) 10 cm (b) 62.8 cm",
+        "markTip": "B1 for the bisected chord, M1 A1 for Pythagoras, M1 A1 for the circumference. Using 16 instead of 8 in Pythagoras is the standard error and it kills both accuracy marks.",
+        "variant": "A chord 24 cm long is 5 cm from the centre. Find the radius. [Answer: 13 cm]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I have to quote circle theorems word for word?",
+        "a": "No, but you must give a recognisable reason for each angle when the question says with reasons. Something like angle at centre is twice angle at circumference is enough; a bare number is not."
+      },
+      {
+        "q": "Can I measure angles from the diagram in the exam?",
+        "a": "No. WAEC diagrams are not drawn to scale, and the mark scheme only credits values obtained by reasoning. If your answer could only come from measuring, it scores nothing."
+      },
+      {
+        "q": "Are these actual WAEC circle geometry past questions?",
+        "a": "No, they are original questions in the WASSCE format and difficulty. WAEC owns its past papers, so I write fresh questions that exercise exactly the same theorems the real paper uses."
+      }
+    ],
+    "targetQuery": "waec questions on circle geometry",
+    "hubSubjects": [
+      "math"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-maths-statistics-practice",
+    "metaTitle": "WAEC Past Questions on Statistics: Solved Practice",
+    "metaDescription": "Statistics practice in WASSCE style: mean, median and mode, frequency tables, grouped data, cumulative frequency and pie charts, all fully solved.",
+    "h1": "WAEC Statistics Practice Questions, Solved Step by Step",
+    "quickAnswer": "WAEC statistics theory questions ask for the mean, median and mode from raw data or frequency tables, means of grouped data using midpoints, medians and quartiles from cumulative frequency, and pie chart calculations. This page works through five original questions in WASSCE style with every table and formula shown in full.",
+    "intro": "Statistics is the closest thing the WASSCE theory paper has to guaranteed marks, because the methods are procedures: build the table, apply the formula, state the answer with units. Almost every year Section B carries a statistics question worth around 12 marks, often with a cumulative frequency curve or a grouped frequency table. The five questions below are original, written to match that style and difficulty rather than copied from any WAEC paper. I have laid out every table in words so you can rebuild it on paper, which is honestly how you should practise, since the table itself carries marks.",
+    "sections": [
+      {
+        "heading": "What WAEC statistics questions look like",
+        "body": "The progression is predictable. Easiest: a list of raw numbers, find the mean, median and mode. Next: an ungrouped frequency table, where the mean is the sum of fx divided by the sum of f, and the median needs cumulative counting. Then grouped data: you take class midpoints, multiply by frequencies and divide, and the median or quartiles come from an interpolation formula or from reading a cumulative frequency curve drawn at upper class boundaries. Pie charts appear regularly too, converting sector angles to amounts and back. A full Section B question often chains these: complete a table, calculate the mean, draw the ogive, then read off the median and interquartile range."
+      },
+      {
+        "heading": "Table marks and boundary traps",
+        "body": "In a WAEC statistics question the table is not scratch work, it is marked. Columns for midpoint, fx and cumulative frequency each attract B marks, so draw them neatly and total them visibly. The classic trap is class boundaries: for classes like 21 to 30, the true boundaries are 20.5 and 30.5, and both the interpolation formula and the ogive must use them. Plotting an ogive against upper class limits instead of upper boundaries loses marks even when the shape looks right. Give means to the accuracy demanded, usually one or two decimal places, keep units like marks or kg on final answers, and remember the median position for grouped work is n over 2, not n plus 1 over 2."
+      }
+    ],
+    "problems": [
+      {
+        "question": "The marks of ten students in a test are 4, 6, 5, 8, 6, 7, 6, 9, 5 and 4. Find (a) the mean, (b) the median, (c) the mode.",
+        "steps": [
+          "Sum the marks: 4 plus 6 plus 5 plus 8 plus 6 plus 7 plus 6 plus 9 plus 5 plus 4 equals 60.",
+          "Mean equals 60 divided by 10 equals 6.",
+          "Arrange in order: 4, 4, 5, 5, 6, 6, 6, 7, 8, 9. With ten values the median is the average of the 5th and 6th: (6 plus 6) divided by 2 equals 6.",
+          "The mode is the most frequent value: 6 appears three times."
+        ],
+        "answer": "(a) mean = 6 (b) median = 6 (c) mode = 6",
+        "markTip": "M1 A1 for the mean, B1 for ordering before finding the median, A1 for the median, B1 for the mode. Forgetting to reorder the data before taking the middle is the classic dropped mark.",
+        "variant": "Find the mean, median and mode of 2, 3, 7, 3, 5, 3, 7, 2, 8, 5. [Answer: mean 4.5, median 4, mode 3]"
+      },
+      {
+        "question": "The table shows the scores of 20 students: score 1 with frequency 3, score 2 with frequency 5, score 3 with frequency 6, score 4 with frequency 4, score 5 with frequency 2. Calculate (a) the mean score, (b) the median, (c) the mode.",
+        "steps": [
+          "Compute fx for each row: 3, 10, 18, 16 and 10. The sum of fx is 57 and the sum of f is 20.",
+          "Mean equals 57 divided by 20 equals 2.85.",
+          "Cumulative frequencies are 3, 8, 14, 18, 20. The median is the average of the 10th and 11th values, and both fall where the cumulative frequency first reaches 14, at score 3.",
+          "So the median is 3, and the mode is the score with the largest frequency, which is 3."
+        ],
+        "answer": "(a) mean = 2.85 (b) median = 3 (c) mode = 3",
+        "markTip": "B1 for a correct fx column, M1 A1 for the mean, M1 A1 for locating the median by cumulative frequency. Dividing 57 by 5, the number of rows, instead of 20 is the error the question is designed to catch.",
+        "variant": "Scores 0 to 4 have frequencies 2, 4, 7, 5 and 2. Find the mean. [Answer: 2.05]"
+      },
+      {
+        "question": "The masses, in kg, of 30 students are grouped as: 40 to 44 with frequency 4, 45 to 49 with frequency 8, 50 to 54 with frequency 10, 55 to 59 with frequency 6, 60 to 64 with frequency 2. Calculate the mean mass.",
+        "steps": [
+          "Take class midpoints: 42, 47, 52, 57 and 62.",
+          "Multiply by frequencies to get fx: 168, 376, 520, 342 and 124.",
+          "Sum of fx equals 1,530 and sum of f equals 30.",
+          "Mean equals 1,530 divided by 30 equals 51 kg."
+        ],
+        "answer": "51 kg",
+        "markTip": "B1 for correct midpoints, B1 for the fx column, M1 for sum fx over sum f, A1 for 51 kg with units. A wrong midpoint like 42.5 shifts every product, so check midpoints before multiplying anything.",
+        "variant": "Classes 10 to 14, 15 to 19, 20 to 24 and 25 to 29 have frequencies 3, 7, 8 and 2. Find the mean. [Answer: 19.25]"
+      },
+      {
+        "question": "The marks of 40 students are grouped as: 1 to 10 with frequency 5, 11 to 20 with frequency 9, 21 to 30 with frequency 12, 31 to 40 with frequency 8, 41 to 50 with frequency 6. Using the interpolation method, estimate (a) the median, (b) the lower quartile, (c) the interquartile range, correct to one decimal place.",
+        "steps": [
+          "Cumulative frequencies: 5, 14, 26, 34, 40.",
+          "Median position is n over 2 equals 20, which falls in the class 21 to 30 with lower boundary 20.5, frequency 12 and cumulative frequency before it of 14.",
+          "Median equals 20.5 plus ((20 minus 14) divided by 12) times 10 equals 20.5 plus 5 equals 25.5.",
+          "Lower quartile position is n over 4 equals 10, in class 11 to 20: 10.5 plus ((10 minus 5) divided by 9) times 10 equals 16.1 to one decimal place.",
+          "Upper quartile position is 30, in class 31 to 40: 30.5 plus ((30 minus 26) divided by 8) times 10 equals 35.5.",
+          "Interquartile range equals 35.5 minus 16.1 equals 19.4."
+        ],
+        "answer": "(a) median = 25.5 marks (b) lower quartile = 16.1 marks (c) interquartile range = 19.4 marks",
+        "markTip": "B1 for the cumulative frequency column, then M1 A1 per measure. The whole question hinges on class boundaries: using 21 instead of 20.5 as the lower boundary loses the accuracy mark in every part.",
+        "variant": "For 30 students with classes 1 to 10, 11 to 20, 21 to 30, 31 to 40 and frequencies 4, 8, 10, 8, estimate the median. [Answer: 23.5]"
+      },
+      {
+        "question": "A family's monthly income of GHc 5,400 is shown on a pie chart. The sectors are food 150 degrees, rent 90 degrees, school fees 70 degrees and savings x degrees. Find (a) the value of x, (b) the amount spent on food, (c) the amount saved.",
+        "steps": [
+          "Angles in a pie chart sum to 360 degrees: x equals 360 minus (150 plus 90 plus 70) equals 50 degrees.",
+          "Each degree represents 5,400 divided by 360 equals GHc 15.",
+          "Food: 150 times 15 equals GHc 2,250.",
+          "Savings: 50 times 15 equals GHc 750."
+        ],
+        "answer": "(a) x = 50 degrees (b) GHc 2,250 (c) GHc 750",
+        "markTip": "M1 A1 for x, then M1 for the fraction of 360 method and A1 for each amount. Writing the value per degree, GHc 15, as its own line is the cleanest way to secure the method mark.",
+        "variant": "In a pie chart of N18,000, the transport sector is 80 degrees. How much goes on transport? [Answer: N4,000]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I have to draw the cumulative frequency curve, or can I just interpolate?",
+        "a": "Do what the question asks. If it says draw a cumulative frequency curve and use it, the graph itself carries marks, scales, plotted points at upper class boundaries, and a smooth curve. If it says calculate or estimate, interpolation is fine."
+      },
+      {
+        "q": "What accuracy should statistics answers be given to?",
+        "a": "Follow the instruction in the question, commonly one or two decimal places for means and quartiles. If no accuracy is stated, one decimal place is a safe habit, and exact values like 51 kg should be left exact."
+      },
+      {
+        "q": "Are these genuine WAEC past questions on statistics?",
+        "a": "No. They are original questions built in the WASSCE format, same table styles, same mark weighting, because real past questions are WAEC copyright. Practising these prepares you for the real ones without copying them."
+      }
+    ],
+    "targetQuery": "waec past questions on statistics",
+    "hubSubjects": [
+      "math"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-maths-trigonometry-practice",
+    "metaTitle": "WAEC Questions on Bearings and Trigonometry Solved",
+    "metaDescription": "Bearings and trigonometry practice in WASSCE style: back bearings, sine and cosine rule, elevation and depression, every question solved step by step.",
+    "h1": "WAEC Bearings and Trigonometry Practice Questions, Solved",
+    "quickAnswer": "WAEC bearings questions use three-figure bearings measured clockwise from north, and usually combine a journey diagram with Pythagoras, the sine rule or the cosine rule. Angles of elevation and depression appear almost every year too. Below are five original questions in WASSCE style, each solved with the diagram described in words and the marking explained.",
+    "intro": "Bearings and trigonometry make up one of the most reliable Section B questions on the WASSCE core maths paper, and also one of the most failed, usually because candidates skip the diagram. Every solution below starts by describing the diagram you should draw, because in WAEC marking the sketch itself often carries a mark and a wrong sketch poisons everything after it. These five questions are original, written in the WASSCE style at exam difficulty, not reproduced from past papers. Work each one with a pencil, ruler and calculator, drawing north lines at every point before touching any formula.",
+    "sections": [
+      {
+        "heading": "What WAEC asks on bearings and trigonometry",
+        "body": "Bearings questions follow a pattern: a journey with two or three legs, each on a stated bearing, then find the distance and bearing of the finish from the start. If the legs meet at a right angle you use Pythagoras and basic tan; if not, the cosine rule finds the distance and the sine rule finds the angle for the bearing. Separately, the paper loves angles of elevation and depression, a mast, a cliff, a boat, which are single right triangles once drawn. Pure triangle questions also appear: given two sides and the included angle, find the third side and the area using half ab sin C. The trigonometry itself is never deep; the marks are for setting up the right triangle."
+      },
+      {
+        "heading": "Diagrams first, three figures always",
+        "body": "Write every bearing with three figures: 065 degrees, not 65 degrees. Draw a north arrow at each point of the journey, because the back bearing rule, add 180 degrees if the bearing is under 180, subtract 180 if it is over, only makes sense on a diagram with parallel north lines. When a question mixes bearings with the cosine rule, the hardest step is finding the angle inside the triangle from the two bearings; do it on the diagram with alternate angles rather than in your head. For elevation and depression, remember the angle of depression from the top equals the angle of elevation from the bottom. Check answers for sense: a bearing must be between 000 and 360 and a distance can never be negative."
+      }
+    ],
+    "problems": [
+      {
+        "question": "The bearing of Q from P is 065 degrees and the bearing of R from P is 158 degrees. Find (a) the bearing of P from Q, (b) the bearing of P from R, (c) the angle QPR.",
+        "steps": [
+          "Back bearing rule: if a bearing is less than 180 degrees, add 180; if more, subtract 180.",
+          "Bearing of P from Q: 065 plus 180 equals 245 degrees.",
+          "Bearing of P from R: 158 plus 180 equals 338 degrees.",
+          "Angle QPR is the angle between the two directions at P: 158 minus 65 equals 93 degrees."
+        ],
+        "answer": "(a) 245 degrees (b) 338 degrees (c) 93 degrees",
+        "markTip": "A1 for each back bearing, M1 A1 for the angle between the bearings. Writing 65 instead of 065 is untidy rather than fatal, but a bearing over 360 shows the rule was applied twice and scores zero.",
+        "variant": "The bearing of B from A is 132 degrees. Find the bearing of A from B. [Answer: 312 degrees]"
+      },
+      {
+        "question": "A man walks 5 km due east from A to B, then 12 km due north from B to C. Calculate (a) the distance AC, (b) the bearing of C from A, correct to the nearest degree.",
+        "steps": [
+          "The path forms a right angle at B, with AC as the hypotenuse.",
+          "AC equals sqrt(5^2 plus 12^2) equals sqrt(25 plus 144) equals sqrt(169) equals 13 km.",
+          "From A, C lies 5 km east and 12 km north. The angle from north satisfies tan of the angle equals 5 divided by 12 equals 0.4167.",
+          "The angle is 22.6 degrees, so the bearing of C from A is 023 degrees to the nearest degree."
+        ],
+        "answer": "(a) 13 km (b) 023 degrees",
+        "markTip": "B1 for the sketch, M1 A1 for Pythagoras, M1 A1 for the bearing. The trap is using tan as 12 over 5, which gives the angle from east, not from north; the bearing must be measured from north, clockwise.",
+        "variant": "A woman walks 9 km east then 12 km north. Find how far she is from her start and the bearing of her position from it. [Answer: 15 km, approximately 037 degrees]"
+      },
+      {
+        "question": "In triangle PQR, angle P = 52 degrees, angle Q = 68 degrees and PR = 14 cm. Calculate (a) angle R, (b) the length QR, correct to three significant figures.",
+        "steps": [
+          "Angles in a triangle sum to 180: angle R equals 180 minus 52 minus 68 equals 60 degrees.",
+          "Side PR is opposite angle Q, and side QR is opposite angle P.",
+          "By the sine rule: QR divided by sin 52 equals 14 divided by sin 68.",
+          "QR equals 14 times sin 52 divided by sin 68 equals 14 times 0.7880 divided by 0.9272 equals 11.9 cm."
+        ],
+        "answer": "(a) 60 degrees (b) 11.9 cm (3 s.f.)",
+        "markTip": "A1 for angle R, M1 for a correctly paired sine rule statement, A1 for 11.9. Pairing a side with the wrong opposite angle is the whole danger of the sine rule; label opposite pairs on your sketch first.",
+        "variant": "In triangle PQR, angle P = 40 degrees, angle Q = 75 degrees and PR = 10 cm. Find QR. [Answer: approximately 6.7 cm]"
+      },
+      {
+        "question": "In triangle XYZ, XY = 8 cm, XZ = 5 cm and angle X = 60 degrees. Calculate (a) the length YZ, (b) the area of the triangle, correct to three significant figures.",
+        "steps": [
+          "YZ is opposite the known angle X, so use the cosine rule.",
+          "YZ^2 equals 8^2 plus 5^2 minus 2 times 8 times 5 times cos 60 equals 64 plus 25 minus 80 times 0.5 equals 49.",
+          "YZ equals 7 cm.",
+          "Area equals half times 8 times 5 times sin 60 equals 20 times 0.8660 equals 17.3 cm^2."
+        ],
+        "answer": "(a) 7 cm (b) 17.3 cm^2 (3 s.f.)",
+        "markTip": "M1 for the cosine rule with correct substitution, A1 for 7, then M1 A1 for the area formula half ab sin C. The commonest slip is adding the 80 cos 60 term instead of subtracting; a distance longer than 13 cm should ring alarm bells.",
+        "variant": "Two sides of a triangle are 6 cm and 10 cm with an included angle of 60 degrees. Find the third side. [Answer: approximately 8.7 cm]"
+      },
+      {
+        "question": "From a point A on level ground, 24 m from the foot of a vertical mast, the angle of elevation of the top of the mast is 30 degrees. B is a point between A and the foot of the mast, on the same straight line, where the angle of elevation is 60 degrees. Calculate (a) the height of the mast, (b) the distance AB, each correct to three significant figures where necessary.",
+        "steps": [
+          "Height: h equals 24 times tan 30 equals 24 times 0.5774 equals 13.9 m to three significant figures.",
+          "From B: the horizontal distance is h divided by tan 60 equals 13.856 divided by 1.7321 equals 8.00 m.",
+          "AB equals 24 minus 8.00 equals 16.0 m."
+        ],
+        "answer": "(a) 13.9 m (b) 16.0 m",
+        "markTip": "B1 for a single diagram carrying both angles, M1 A1 for the height, M1 A1 for AB. Keep the unrounded height, 13.856, in your calculator for part (b); rounding early is exactly how accuracy marks leak away.",
+        "variant": "From a point 20 m from the foot of a tower, the angle of elevation of the top is 45 degrees. Find the height of the tower. [Answer: 20 m]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Must bearings always be written with three figures?",
+        "a": "Yes, that is the convention WAEC expects: 065 degrees, not 65 degrees. Bearings are measured clockwise from north and run from 000 to 360 degrees."
+      },
+      {
+        "q": "When do I use the sine rule and when the cosine rule?",
+        "a": "Cosine rule when you know two sides and the included angle, or all three sides. Sine rule when you have a matching pair, a side and its opposite angle, plus one more piece. In bearings journeys, the cosine rule usually finds the distance and the sine rule the angle for the bearing."
+      },
+      {
+        "q": "Are these real WAEC bearings past questions?",
+        "a": "No, they are original questions in the WASSCE style and difficulty. The real papers are WAEC copyright, so I write fresh questions that use the same setups the exam repeats: journeys, back bearings, elevation and depression, and triangle rules."
+      }
+    ],
+    "targetQuery": "waec questions on bearings and trigonometry",
+    "hubSubjects": [
+      "math"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "wassce-maths-probability-practice",
+    "metaTitle": "WAEC Past Questions on Probability: Solved Practice",
+    "metaDescription": "Probability practice in WASSCE style: dice, balls without replacement, independent events and primes, each question solved with WAEC marking notes.",
+    "h1": "WAEC Probability Practice Questions, Solved Step by Step",
+    "quickAnswer": "WAEC probability questions stay close to a few setups: picking balls from a bag with or without replacement, throwing two dice, independent events like two students passing an exam, and choosing numbers with a property such as prime. This page solves five original questions in that style, with answers left as fractions the way WAEC expects.",
+    "intro": "Probability on the WASSCE theory paper is narrower than the textbook chapter suggests. The same handful of situations rotate through the years: a bag of coloured balls, two dice, two independent people passing or failing, numbers picked from a range. The arithmetic is short, so the marks really test whether you can classify the situation, with replacement or without, independent or not, and or or. The five questions below are original, written in WASSCE style at the exam's difficulty. I have kept every answer as a fraction, which is the safest form in a WAEC paper unless the question asks for a decimal.",
+    "sections": [
+      {
+        "heading": "The probability setups WAEC repeats",
+        "body": "Learn four templates and you have covered most papers. One: a single draw from a bag, probability is favourable outcomes over total outcomes. Two: two dice or a die thrown twice, where the 36-outcome sample space answers everything, and questions ask for a sum or at least conditions. Three: two draws without replacement, where the denominator drops by one on the second draw and you must add the branches that satisfy the event. Four: independent events, two candidates passing an exam, where you multiply along and add across, and the phrase exactly one means two products added. A fifth, smaller template hides algebra inside: a bag holds x red balls, the probability of red is given, find x."
+      },
+      {
+        "heading": "Presenting answers so the marks stick",
+        "body": "Write the sample space size before any fraction; for two dice, state that there are 36 equally likely outcomes, because that line often carries a mark on its own. For without replacement questions, a tree diagram is the cheapest insurance available: each correctly labelled branch pair earns method credit even if a final addition slips. Leave answers as fractions, simplified if easy, though WAEC generally accepts unsimplified correct fractions. Two checks cost nothing: every probability must sit between 0 and 1, and where your cases cover all possibilities, both pass, exactly one passes, neither passes, the total must be exactly 1. If it is not, one branch is wrong, and the check tells you before the examiner does."
+      }
+    ],
+    "problems": [
+      {
+        "question": "A bag contains 5 red, 3 blue and 4 green balls. A ball is picked at random. Find the probability that it is (a) red, (b) not green.",
+        "steps": [
+          "Total number of balls: 5 plus 3 plus 4 equals 12.",
+          "P(red) equals 5/12.",
+          "Balls that are not green: 5 plus 3 equals 8, so P(not green) equals 8/12 equals 2/3.",
+          "Check: P(green) equals 4/12 equals 1/3, and 1 minus 1/3 equals 2/3. Consistent."
+        ],
+        "answer": "(a) 5/12 (b) 2/3",
+        "markTip": "B1 for the total of 12, A1 for each probability. The complement route, 1 minus P(green), earns the same marks and is faster; either way, show the total before the fraction.",
+        "variant": "A bag has 6 red, 4 blue and 2 white balls. Find the probability of picking a blue ball. [Answer: 1/3]"
+      },
+      {
+        "question": "Two fair dice are thrown once. Find the probability that (a) the sum of the scores is 8, (b) the sum is at least 10.",
+        "steps": [
+          "There are 6 times 6 equals 36 equally likely outcomes.",
+          "Sums of 8: (2,6), (3,5), (4,4), (5,3), (6,2), which is 5 outcomes, so P equals 5/36.",
+          "Sums of at least 10: (4,6), (5,5), (6,4), (5,6), (6,5), (6,6), which is 6 outcomes.",
+          "P(at least 10) equals 6/36 equals 1/6."
+        ],
+        "answer": "(a) 5/36 (b) 1/6",
+        "markTip": "B1 for the 36-outcome sample space, then M1 A1 per part for listing or counting outcomes. Forgetting that (3,5) and (5,3) are different outcomes is the error this question exists to punish.",
+        "variant": "Two fair dice are thrown once. Find the probability that the sum is 7. [Answer: 1/6]"
+      },
+      {
+        "question": "A box contains 4 white and 6 black identical balls. Two balls are drawn one after the other without replacement. Find the probability that (a) both are black, (b) they are of different colours.",
+        "steps": [
+          "First draw black: 6/10. Second draw black, with one black gone: 5/9.",
+          "P(both black) equals 6/10 times 5/9 equals 30/90 equals 1/3.",
+          "Different colours happens two ways: white then black is 4/10 times 6/9 equals 24/90, and black then white is 6/10 times 4/9 equals 24/90.",
+          "P(different colours) equals 24/90 plus 24/90 equals 48/90 equals 8/15."
+        ],
+        "answer": "(a) 1/3 (b) 8/15",
+        "markTip": "M1 for reducing both numerator and denominator on the second draw, A1 for 1/3; then M1 for adding both orders and A1 for 8/15. Counting white-black but not black-white halves the answer and loses the A mark.",
+        "variant": "A bag has 3 white and 5 black balls. Two are drawn without replacement. Find the probability that both are black. [Answer: 5/14]"
+      },
+      {
+        "question": "The probability that Kofi passes an examination is 3/4 and the probability that Ama passes the same examination is 2/3. Their results are independent. Find the probability that (a) both pass, (b) exactly one of them passes, (c) neither passes.",
+        "steps": [
+          "P(both pass) equals 3/4 times 2/3 equals 6/12 equals 1/2.",
+          "Exactly one passes: Kofi passes and Ama fails, 3/4 times 1/3 equals 3/12, or Kofi fails and Ama passes, 1/4 times 2/3 equals 2/12.",
+          "P(exactly one) equals 3/12 plus 2/12 equals 5/12.",
+          "P(neither) equals 1/4 times 1/3 equals 1/12.",
+          "Check: 1/2 plus 5/12 plus 1/12 equals 12/12 equals 1. Consistent."
+        ],
+        "answer": "(a) 1/2 (b) 5/12 (c) 1/12",
+        "markTip": "M1 A1 for each part, with the failing probabilities 1/4 and 1/3 shown explicitly. The three cases must total 1, and writing that check line can rescue you if a branch is wrong.",
+        "variant": "P(A passes) = 2/5 and P(B passes) = 1/2, independently. Find the probability that both pass. [Answer: 1/5]"
+      },
+      {
+        "question": "A number is chosen at random from the integers 10 to 30 inclusive. Find the probability that the number is (a) a prime number, (b) a multiple of 4.",
+        "steps": [
+          "Count the integers from 10 to 30 inclusive: 30 minus 10 plus 1 equals 21.",
+          "Primes in the range: 11, 13, 17, 19, 23, 29, which is 6 numbers.",
+          "P(prime) equals 6/21 equals 2/7.",
+          "Multiples of 4 in the range: 12, 16, 20, 24, 28, which is 5 numbers, so P equals 5/21."
+        ],
+        "answer": "(a) 2/7 (b) 5/21",
+        "markTip": "B1 for the count of 21, then A1 per part with the lists shown. The inclusive count is the trap: writing 20 instead of 21 shifts every answer, and listing the primes visibly protects your method credit.",
+        "variant": "A number is picked at random from the integers 1 to 20 inclusive. Find the probability that it is a multiple of 3. [Answer: 3/10]"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Should probability answers be fractions or decimals?",
+        "a": "Either is accepted unless the question specifies, but fractions are safer because they are exact. If you give a decimal, use at least the accuracy the question asks for elsewhere, and never round a probability to something above 1 or below 0."
+      },
+      {
+        "q": "What is the difference between with replacement and without replacement?",
+        "a": "With replacement, the first ball goes back, so the second draw has the same probabilities. Without replacement, both the numerator for that colour and the total drop by one on the second draw. Misreading this one phrase is the single biggest source of lost marks on these questions."
+      },
+      {
+        "q": "Are these actual WAEC probability past questions?",
+        "a": "No. They are original questions written in the WASSCE format at matching difficulty, because WAEC's own past papers are copyrighted. The setups, bags, dice, independent candidates, number ranges, are the same families the real paper draws from."
+      }
+    ],
+    "targetQuery": "waec past questions on probability",
+    "hubSubjects": [
+      "math"
+    ]
+  },
   // @@EXAM_PAGES_INSERT@@
 ];
 
