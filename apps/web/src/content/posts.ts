@@ -4999,15 +4999,23 @@ POSTS_ALL.push(...POSTS_BATCH_2, ...POSTS_BATCH_3);
 // dead-feature ads, IB (not one of the five), or merged duplicates. Kept in
 // source for reference; each 301-redirects to the mapped target below.
 export const BLOG_REDIRECTS: Record<string, string> = {
+  // 2026-08-26 cleanup: near-duplicate posts merged into the page that should
+  // own the query (Google treats a 301 as "count this page's history toward
+  // the target"), plus two generic posts retired.
+  "ai-study-helper-math": "/help-in-study/math",
+  "best-study-habits-students": "/blog/how-to-study-for-exams",
+  "how-to-take-good-notes": "/blog/cornell-notes-step-by-step",
+  "stress-management-students": "/blog/test-anxiety",
+  "how-to-write-introduction-paragraph": "/blog/how-to-write-thesis-statement",
+  "how-to-write-strong-conclusion": "/blog/how-to-write-thesis-statement",
+  "notion-for-studying-guide": "/blog",
+  "how-to-read-faster-students": "/blog",
   // off-topic foreign-language posts → English hub
   "ai-arabic-tutor": "/help-in-study/english",
   "ai-tutor-arabic-dialects": "/help-in-study/english",
-  "ai-french-tutor": "/help-in-study/english",
-  "ai-spanish-tutor": "/help-in-study/english",
   "spanish-ser-vs-estar": "/help-in-study/english",
   "mandarin-tones-for-beginners": "/help-in-study/english",
   "japanese-hiragana-memorisation": "/help-in-study/english",
-  "german-cases-simplified": "/help-in-study/english",
   "ielts-writing-band-9-tips": "/help-in-study/english",
   // non-five exams (civil service, Pakistan boards) → study-skills / seasonal pillar
   "upsc-prep-beginner-guide": "/blog/how-to-study-for-exams",
