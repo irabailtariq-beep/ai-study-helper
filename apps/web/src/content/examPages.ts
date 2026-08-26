@@ -28,7 +28,7 @@ export type ApCalcData = {
 };
 
 export type ExamPage = {
-  board: "cbse" | "gcse" | "waec" | "ap";
+  board: "cbse" | "gcse" | "waec" | "ap" | "cambridge";
   slug: string;
   metaTitle: string;
   metaDescription: string;

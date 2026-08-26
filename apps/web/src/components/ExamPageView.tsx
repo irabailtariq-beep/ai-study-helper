@@ -6,7 +6,7 @@ import { quizJsonLd } from "@/lib/quizSchema";
 import { APScoreCalculator } from "@/components/APScoreCalculator";
 
 const BOARD_LABEL: Record<ExamPage["board"], string> = {
-  cbse: "CBSE", gcse: "GCSE", waec: "WAEC / WASSCE", ap: "AP",
+  cbse: "CBSE", gcse: "GCSE", waec: "WAEC / WASSCE", ap: "AP", cambridge: "Cambridge IGCSE / A-Level",
 };
 
 /**
@@ -19,9 +19,8 @@ export function ExamPageView({ page }: { page: ExamPage }) {
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
-      {/* single crumb only: /cbse etc. have no index route yet, and structured
-          data must never reference a 404 */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdSafe(breadcrumbJsonLd([
+        { name: BOARD_LABEL[page.board], path: `/${page.board}` },
         { name: page.h1, path: `/${page.board}/${page.slug}` },
       ])) }} />
       {page.problems.length > 0 && (

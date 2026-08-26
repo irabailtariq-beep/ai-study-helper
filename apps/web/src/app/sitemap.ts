@@ -71,6 +71,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // Board hub index pages
+  for (const b of ["cbse", "gcse", "waec", "ap", "cambridge"]) {
+    out.push({ url: `${base}/${b}`, lastModified: EXAM_UPDATED, changeFrequency: "weekly", priority: 0.85 });
+  }
+
   // Exam-structure pages (question families, practice sets, calculators) —
   // the highest-priority content per the 2026-08-24 research.
   for (const p of EXAM_PAGES) {
