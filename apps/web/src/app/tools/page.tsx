@@ -24,6 +24,7 @@ type Tool = { href: string; emoji: string; title: string; body: string; category
 // Board-specific doors into the same tools — these landing pages were
 // previously reachable only via the sitemap, which starves them of link equity.
 const BOARD_TOOLS = [
+  { href: "/tools/ai-homework-helper", emoji: "📚", title: "AI homework helper", body: "Photo or paste any homework question — explained step by step." },
   { href: "/tools/gcse-ai-marker", emoji: "🎯", title: "AI marker for GCSE answers", body: "Paste a GCSE/IGCSE answer, get mark-scheme-style feedback." },
   { href: "/tools/mark-my-english-essay-gcse", emoji: "✍️", title: "GCSE English essay marking", body: "Paper 1 Q5 creative writing and literature essays, marked." },
   { href: "/tools/cbse-maths-solver", emoji: "🇮🇳", title: "CBSE maths solver", body: "NCERT-style working: Given, Formula, Solution, Answer." },

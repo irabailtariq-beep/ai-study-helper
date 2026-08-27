@@ -21,7 +21,7 @@ export type ToolContent = {
 export const TOOL_CONTENT: Record<string, ToolContent> = {
   "explain": {
     slug: "explain",
-    intro: "Stuck on something? Paste the question, or upload a photo of the textbook page or a PDF, and ask the AI to explain any topic the way your syllabus teaches it. You get the explanation at your level, in your exam board's style, plus key points and follow-up questions. Free, no account needed.",
+    intro: "Stuck on homework? Paste the question, or upload a photo of the textbook page or a PDF, and ask the AI to explain any topic the way your syllabus teaches it. You get the explanation at your level, in your exam board's style, plus key points and follow-up questions. Free, no account needed.",
     howItWorks: [
       { step: "Give it the question", text: "Paste the text, or upload a clear photo of the page or a PDF under 3 MB. Photos are resized automatically, so a normal phone picture is fine." },
       { step: "Set your level once", text: "Tell it your country, year group and exam board in onboarding or settings. Every explanation after that is written for that syllabus and that grade." },
@@ -48,7 +48,7 @@ export const TOOL_CONTENT: Record<string, ToolContent> = {
   },
   "math-solver": {
     slug: "math-solver",
-    intro: "Paste a maths problem or snap a photo of it, and this free step by step math solver writes out every line of working, names the method it used, and flags the mistakes students usually make on that question type. No sign-up, no ads. It shows the working so you can follow it, not copy it.",
+    intro: "Paste a maths problem from your homework or snap a photo of it, and this free step by step math solver writes out every line of working, names the method it used, and flags the mistakes students usually make on that question type. No sign-up, no ads. It shows the working so you can follow it, not copy it.",
     howItWorks: [
       { step: "Give it the problem", text: "Type or paste the question, or upload a photo or PDF of it. Photos need to be in focus and well lit, because a dark or blurry shot gets misread." },
       { step: "Check the restatement line", text: "The solver repeats your problem back in one line before it solves anything. If that line does not match your question, the reading was wrong, so correct it and run it again." },

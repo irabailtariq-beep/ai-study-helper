@@ -4,7 +4,7 @@
 
 export type ToolLanding = {
   slug: string;
-  tool: "grade" | "essay-coach" | "math-solver" | "quiz";
+  tool: "grade" | "essay-coach" | "math-solver" | "quiz" | "explain";
   metaTitle: string;
   metaDescription: string;
   h1: string;
@@ -17,6 +17,56 @@ export type ToolLanding = {
 };
 
 export const TOOL_LANDINGS: ToolLanding[] = [
+  {
+    "slug": "ai-homework-helper",
+    "tool": "explain",
+    "metaTitle": "AI Homework Helper — Free, Explains Step by Step",
+    "metaDescription": "Free AI homework helper: photo or paste any homework question and get it explained step by step, in your exam board's style. No signup, no ads.",
+    "h1": "Free AI Homework Helper",
+    "subhead": "Photo or paste any homework question and get it explained step by step — so you actually understand it, not just copy an answer.",
+    "quickAnswer": "Yes, this homework helper is genuinely free with no signup. Take a photo of the question, upload the page, or just type it, and the AI explains it step by step at your level — maths with full working, science with the reasoning, essays with structure. It teaches you the method; it will not do your assignment for you.",
+    "sections": [
+      {
+        "heading": "How it helps with homework",
+        "body": "Type the question, or photograph the textbook page or worksheet — photos are resized automatically, so a normal phone picture works. The helper explains the answer the way a patient tutor would: what the question is really asking, the method, then each step with the reason behind it. For maths you get every line of working; for science, the cause-and-effect chain; for languages and humanities, how to structure the answer. Set your country and exam board once and every explanation matches your syllabus — CBSE, GCSE, AP, Cambridge or WAEC — so the working looks like what your teacher expects, not a random internet version."
+      },
+      {
+        "heading": "Understanding beats copying",
+        "body": "Copying an answer gets tonight's homework done and fails next month's exam. That is why this helper is built to explain rather than to just hand over answers: it shows the method, flags the step where students usually slip, and you can ask follow-up questions until it clicks. If you only want the final answer to check your own work, that is there too — but the value is in the steps. Teachers can usually tell copied work anyway; they can never fault you for learning the method and doing it yourself."
+      },
+      {
+        "heading": "Works for every subject and board",
+        "body": "Maths and physics get step-by-step working with units. Chemistry gets equations formatted properly. Biology, history and geography get exam-style points rather than essays of waffle. English gets structure and technique. The same helper adapts to whichever exam system you set — including the exact command words and marking style your board uses. On any phone browser, no app download, no account, no ads, no daily paywall trick."
+      }
+    ],
+    "example": {
+      "title": "A real homework question, explained",
+      "body": "A student photographs this from their maths homework: solve 3x + 7 = 22. The helper does not just say x = 5. It explains: the goal is to get x alone; subtract 7 from both sides because addition is undone by subtraction, giving 3x = 15; divide both sides by 3, giving x = 5; then check by substituting back, 3(5) + 7 = 22, correct. Then it offers a similar practice question to make sure the method stuck. That check-and-practise loop is the difference between finishing homework and actually learning from it."
+    },
+    "faqs": [
+      {
+        "q": "Is this homework helper really free?",
+        "a": "Yes — no signup, no trial, no ads, no paid tier. There is a daily limit per person so the site can stay free for everyone, and it resets every day."
+      },
+      {
+        "q": "Will it just give me the answers?",
+        "a": "It gives the answer with the full method, because the method is what exams test. It will not write essays or complete assignments for you — it explains so you can do it yourself. That is deliberate."
+      },
+      {
+        "q": "Can it read a photo of my homework?",
+        "a": "Yes. Photograph the question in decent light and upload it — photos are resized automatically so normal phone pictures work. Blurry or dark photos are the main reason a question gets misread."
+      },
+      {
+        "q": "Is using an AI homework helper cheating?",
+        "a": "Using it to understand the method is studying — the same as asking a tutor or reading a worked example. Copying answers into work you submit as your own is cheating, and this tool is built to make the first easy and the second pointless."
+      },
+      {
+        "q": "Which subjects and exams does it cover?",
+        "a": "Any school subject — maths, sciences, English, history, geography, economics and more — and it adapts its answers to CBSE, GCSE (AQA, Edexcel, OCR), AP, Cambridge IGCSE/A-Level and WAEC once you set your board."
+      }
+    ],
+    "targetQuery": "ai homework helper free"
+  },
   {
     "slug": "gcse-ai-marker",
     "tool": "grade",

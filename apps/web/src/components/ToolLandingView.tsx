@@ -8,12 +8,14 @@ import GradePage from "@/app/grade/page";
 import EssayCoachPage from "@/app/essay-coach/page";
 import MathSolverPage from "@/app/math-solver/page";
 import QuizPage from "@/app/quiz/page";
+import ExplainPage from "@/app/explain/page";
 
 const TOOL_COMPONENT = {
   "grade": GradePage,
   "essay-coach": EssayCoachPage,
   "math-solver": MathSolverPage,
   "quiz": QuizPage,
+  "explain": ExplainPage,
 } as const;
 
 export function ToolLandingView({ page }: { page: ToolLanding }) {
