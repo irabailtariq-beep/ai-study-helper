@@ -2,7 +2,7 @@ name: Daily blog auto-publish
 
 on:
   schedule:
-    - cron: "30 9 * * *"   # 09:30 UTC = 2:30 PM Pakistan (PKT). Cron can drift ~5-30 min.
+    - cron: "47 9 * * *"  # 09:47 UTC = 2:47 PM Pakistan. Off-peak minute to dodge GitHub cron congestion.
   workflow_dispatch: {}    # lets you publish the next one manually too
 
 permissions:

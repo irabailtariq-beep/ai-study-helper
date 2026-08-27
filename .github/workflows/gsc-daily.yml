@@ -2,7 +2,7 @@ name: Daily Search Console check
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # 09:00 UTC = 2:00 PM Pakistan (PKT). Cron can drift ~5-30 min.
+    - cron: "13 9 * * *"  # 09:13 UTC = 2:13 PM Pakistan. Off-peak minute: GitHub skips congested :00/:30 slots (it skipped us twice).
   workflow_dispatch: {}    # lets you run it manually from the Actions tab
 
 permissions:
