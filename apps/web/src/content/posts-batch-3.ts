@@ -5897,5 +5897,104 @@ If any of those tripped you up, paste the exact reaction into [our explainer](/e
 **In short:** Treat the reactivity series as a ruler, not a list — line two metals up and the more reactive one wins: it reacts faster with water and acid, displaces the other from solution, and its position relative to carbon decides electrolysis versus reduction. Nail the state symbols and the precise observations, and this becomes some of the easiest marks in the paper.
 `,
   },
+
+  {
+    slug: "punnett-squares-genetics",
+    title: "Punnett Squares and the Monohybrid Cross: A GCSE and IGCSE Genetics Guide",
+    description: "Punnett squares and the monohybrid cross made simple for GCSE and IGCSE biology: alleles, genotype vs phenotype, and how to predict 3:1 and 1:1 ratios.",
+    publishedAt: "2026-08-28", readTime: "6 min",
+    tags: ["monohybrid cross","Punnett squares","GCSE biology genetics","IGCSE biology","genetics revision"],
+    body: `
+**Quick answer:** A monohybrid cross follows one gene, with two alleles, through a single generation. You write each parent's genotype, split it into gametes, and combine them in a Punnett square (a 2x2 grid). Crossing two heterozygotes (like Tt x Tt) gives a 3:1 phenotype ratio; crossing a heterozygote with a homozygous recessive (Tt x tt) gives 1:1.
+
+Genetics was the topic where I nearly gave up on biology. It looked like someone had spilled a bag of capital and lowercase letters across the page and called it science. Then a tutor showed me that a Punnett square is basically a tiny multiplication grid, and the whole thing clicked in about ten minutes. If the letters are scaring you, stay with me. By the end of this you'll be reading a 3:1 ratio off a grid without thinking.
+
+## The vocabulary you actually need
+
+Every genetics question is built from about eight words. Get these solid first, because examiners award marks for using them precisely.
+
+- A gene is a section of DNA that codes for a characteristic. An allele is a version of that gene. You inherit two alleles for most genes, one from each parent.
+- Dominant alleles are written as a capital letter and only need one copy to show up. Recessive alleles use the lowercase of the same letter and need two copies to show.
+- Genotype is the pair of letters an organism has (for example Tt). Phenotype is the characteristic you can actually see (for example, tall).
+- Homozygous means two identical alleles (TT or tt). Heterozygous means two different alleles (Tt). A heterozygous organism carries a recessive allele without showing it, which makes it a carrier.
+
+The distinction that trips everyone up: genotype is the code, phenotype is the result. If a question asks for phenotype and you write Tt, you've answered the wrong question. Once these terms are solid, turn them into a deck with [Flashcards](/flashcards) and review them until the words are automatic.
+
+## What a Punnett square really is
+
+A Punnett square is a grid that shows every way the parents' alleles can combine. Parent one's gametes go across the top, parent two's go down the side, and each box is one possible offspring. Because each parent passes on only one allele (gametes are haploid), a gene with two alleles gives a 2x2 grid, so four boxes.
+
+The four steps never change:
+
+1. Assign the letters and write both parents' genotypes.
+2. Split each genotype into its two gametes.
+3. Put one parent's gametes along the top, the other's down the side, and combine them box by box.
+4. Count the offspring genotypes, translate them into phenotypes, and write the ratio.
+
+If any single step feels shaky, paste your exact cross into [Explain anything](/explain) and ask it to narrate each box. Seeing it done on your own letters is what makes it stick.
+
+## Worked example: Tt x Tt, step by step
+
+In pea plants, tall (T) is dominant to short (t). Two heterozygous tall plants are crossed. What ratio of offspring do you expect?
+
+Step 1 - Assign and write genotypes. T = tall, t = short. Both parents are Tt.
+
+Step 2 - Work out the gametes. Each Tt parent makes two kinds of gamete: T and t.
+
+Step 3 - Build the grid. Across the top: T and t. Down the side: T and t. Combine each pair:
+
+- T (top) with T (side) gives TT
+- t (top) with T (side) gives Tt
+- T (top) with t (side) gives Tt
+- t (top) with t (side) gives tt
+
+Step 4 - Read the genotypes. You get 1 TT : 2 Tt : 1 tt.
+
+Step 5 - Translate to phenotypes. TT is tall, Tt is tall (T is dominant), tt is short. So three plants are tall and one is short.
+
+Step 6 - Write the ratio: 3 tall : 1 short. That 3:1 is the signature result of crossing two heterozygotes, and examiners expect you to recognise it on sight.
+
+## The other ratio: the test cross (1:1)
+
+Now cross a heterozygous tall plant with a short plant: Tt x tt.
+
+- Parent one gametes: T and t.
+- Parent two gametes: t and t.
+- Boxes: Tt, tt, Tt, tt.
+
+That gives 2 Tt : 2 tt, which is 2 tall : 2 short, or 1:1. This is called a test cross, because breeding an unknown tall plant (is it TT or Tt?) with a short one reveals the hidden genotype. If any short offspring appear, the tall parent must have been Tt. For exams, just remember: heterozygote x homozygous recessive gives 1:1.
+
+## The mistakes that cost marks
+
+I lost easy marks on all of these before I learned to slow down:
+
+- Choosing a letter whose capital and lowercase look identical (S and s, C and c, W and w). In handwriting the examiner cannot tell them apart. AQA literally advises picking a letter with a clearly different upper and lower case, so T and t, or B and b, are safe.
+- Writing a whole genotype as a gamete. A gamete carries one allele, so it is T or t, never Tt.
+- Giving the genotype ratio when the question wants phenotypes, or the other way round. Read the command word.
+- Treating the ratio as a promise. A 3:1 ratio is a probability. In a family of four children it will not always come out exactly three to one, because each birth is an independent 3-in-4 or 1-in-4 chance.
+
+## Test yourself
+
+1. In mice, black fur (B) is dominant to brown (b). Cross a heterozygous black mouse with a brown mouse. What is the phenotype ratio?
+2. A pea plant with genotype Tt is self-pollinated (Tt x Tt). What is the probability that a single offspring is short?
+3. Two brown-eyed parents have a blue-eyed child (blue is recessive, b). What must both parents' genotypes be?
+
+Answers: (1) Bb x bb gives Bb, Bb, bb, bb, which is 1 black : 1 brown, so 1:1. (2) The tt box is 1 out of 4, so 1/4 or 25 percent. (3) Both parents must be Bb (heterozygous), because a bb child needs one recessive allele from each parent, so both were carrying a hidden b.
+
+Want a set of these tuned to your board? Generate fresh genetics questions with [the quiz generator](/quiz), and if a particular cross keeps catching you out, walk through it slowly on [Explain anything](/explain).
+
+## FAQ
+
+**What is the difference between a monohybrid and a dihybrid cross?** A monohybrid cross follows one gene (like height), so you use a 2x2 grid. A dihybrid cross follows two genes at once and needs a 4x4 grid. GCSE and Cambridge IGCSE only require monohybrid crosses; dihybrid is A-Level.
+
+**Do I have to draw the Punnett square, or can I just write the answer?** Draw it. On AQA, Edexcel, OCR and Cambridge IGCSE, the genetic diagram itself carries marks. The gametes and offspring genotypes are separate marking points, so a bare ratio can lose you half the question even when it is correct.
+
+**Why is the ratio 3:1 and not exactly three tall to one short every time?** Because it is a probability, not a headcount. Over hundreds of offspring it settles close to 3:1, but any small family can differ, just like flipping a coin four times will not always give two heads.
+
+**How do I show gametes properly?** Circle each single allele, or list them clearly separated. Each gamete gets one allele from the pair, so a Tt parent produces a T gamete and a t gamete. Writing them as circled single letters is the convention examiners look for.
+
+**In short:** A monohybrid cross is just one gene, two gametes from each parent, and a four-box grid. Heterozygote x heterozygote gives 3:1, heterozygote x homozygous recessive gives 1:1, and the marks live in the genotypes and gametes you show, not only in the final ratio.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
