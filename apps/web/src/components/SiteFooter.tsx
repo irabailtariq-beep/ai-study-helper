@@ -62,6 +62,7 @@ const FOOTER_GROUPS = [
       { href: "/about", label: "About" },
       { href: "/blog", label: "Blog" },
       { href: "/contact", label: "Contact" },
+      { href: "https://www.instagram.com/helpinstudy_/", label: "Instagram" },
       { href: "/progress", label: "My progress" },
       { href: "/feed.xml", label: "RSS feed" },
     ],
