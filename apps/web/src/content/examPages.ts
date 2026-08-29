@@ -3792,6 +3792,285 @@ export const EXAM_PAGES: ExamPage[] = [
       "sourceNote": "Verified Aug 2026 on College Board's AP Central and AP Students exam pages: Section I is now 42 MCQs (29 no-calculator + 13 calculator; up from the original 40-question format) at 62.5 percent and Section II is 4 FRQs at 37.5 percent scored 6 points each (24 raw) per the official 2025 scoring guidelines, with cutoffs set as conservative estimates slightly above published calculator benchmarks (67/54/42/31) since College Board releases no official conversion."
     }
   },
+  {
+    "board": "waec",
+    "slug": "waec-gce-2026-second-series-timetable",
+    "metaTitle": "WAEC GCE Timetable 2026: Second Series Dates and CBT Format",
+    "metaDescription": "The WAEC GCE 2026 second series timetable is out: exams run 4 Sept to 28 Oct 2026. Real dates, CBT format, NGN 37,000 fee, and free computer-based practice.",
+    "h1": "WAEC GCE 2026 Second Series: Timetable, Dates and CBT Format",
+    "quickAnswer": "The WAEC GCE 2026 second series timetable is officially out: WAEC's registration portal hosts the final timetable, and exams run from Friday 4 September to Wednesday 28 October 2026. Practical planning sessions open the window on 4 September, orals and practicals run 14 to 25 September at individually arranged times, and the main written papers start on Tuesday 22 September with Further Mathematics. WAEC has described the series as computer-based, with objective papers reportedly answered fully on screen and essays following a hybrid format of on-screen questions and handwritten answers. Registration is still open; the portal currently states it closes Thursday 10 September 2026, and the fee is NGN 37,000. Download the official timetable from registration.waecdirect.org rather than trusting aggregator dates, some of which are still showing 2025 information.",
+    "intro": "If you typed waec gce timetable 2026 into a search box this week, you got a mess: one site says the exams start in late October, another insists the timetable is not out yet, and the official portal quietly hosts the real document. This page sorts it out. The timetable for the 2026 WASSCE for Private Candidates second series is officially released, exams run from 4 September to 28 October 2026, and registration is still open for a few more days. Below: what the second series actually is, the real dates and the fake ones still circulating, what computer-based WASSCE means once you are sitting in front of the machine, what it costs, and how to rehearse for a screen-based exam for free.",
+    "sections": [
+      {
+        "heading": "What the second series is, and why this one matters",
+        "body": "The WASSCE for Private Candidates, which most people still call WAEC GCE, is the exam you sit outside the school system. No principal signs you up: you register yourself, choose your subjects, and sit at a centre WAEC assigns. It runs twice a year, and this second series matters more than usual because of what happened on 5 August. WAEC released the school candidates' results that day: of the 1,950,726 candidates who sat, 1,200,514 obtained credits in at least five subjects including English Language and Mathematics. That is 61.54 percent, which sounds respectable until you flip it around. Roughly 750,000 students missed the five-credits benchmark that university admission depends on. On top of that, Vanguard reported that 167,486 results were withheld over suspected malpractice. If you are in either group, the second series is your fastest route to fixing things, because as a private candidate you can enter just the subjects you need to improve rather than repeating the whole slate, and the results should land in time to be useful for the next admission cycle. It is also the standard route for anyone who left school years ago and needs a WASSCE certificate now, whether for admission, work, or professional registration. Same certificate, same standard, different door."
+      },
+      {
+        "heading": "The real timetable and dates, and the wrong ones still circulating",
+        "body": "This needs saying clearly, because sources openly conflict. WAEC's official registration portal hosts a document titled the final timetable for the 2026 second series, internally dated August 2026, and it is the only version to trust. According to that document, the window runs from Friday 4 September to Wednesday 28 October 2026. The first entry, on 4 September, is the practical planning session for Foods and Nutrition 3 and Home Management 3. Orals and practicals run from 14 to 25 September, at times WAEC arranges individually and communicates to candidates directly. The main written papers start on Tuesday 22 September with Further Mathematics and finish on Wednesday 28 October. Meanwhile, at least one popular timetable site still claims the series runs from 25 October to 20 December and that no timetable has been released. That page itself admits its subject schedule is the 2025 edition shown for reference; it was simply overtaken when WAEC published the real document in late August. Two useful notes from the official timetable: where a question paper states a different duration from the timetable, the question paper wins, and candidates with special needs get one and a half times the allotted time. Download your own copy from registration.waecdirect.org, check each of your subjects against it, and confirm anything unclear with WAEC rather than with aggregator sites, including this one."
+      },
+      {
+        "heading": "Registration is still open, and what it costs",
+        "body": "Registration has been a moving target this year, so here is the state of play as of 30 August. It opened on 4 May 2026 and was originally meant to close on 31 July. WAEC extended it to 28 August, and the portal now states that registration ends Thursday 10 September 2026; myschool.ng reports the same, with PIN generation and biometric registration closing at 11:59pm that day. Notice the odd wrinkle: registration closes six days after the first practical planning session on 4 September, so if your subjects include Foods and Nutrition or Home Management, register now rather than at the deadline. The fee is NGN 37,000, as WAEC announced in May 2026. Some reports quote NGN 37,500 in total, which is consistent with a NGN 500 bank or agent commission on top, so budget for that. If you see NGN 27,000 anywhere, that is last cycle's figure and it is stale. There are also reports of walk-in registration up to 24 hours before a paper at a higher fee, around NGN 45,000, but that amount is not verified, so treat it as a rumour with a price tag and confirm on the portal before you rely on it. Register at registration.waecdirect.org or through the WAECKONNECT app, and note for later that results are checked at waecdirect.org."
+      },
+      {
+        "heading": "What the computer-based exam looks like on the day",
+        "body": "WAEC has described this series as fully computer-based, and both myschool.ng and myschoolgist call the released document the CBT timetable, so plan for screens. Based on how WAEC has run its computer-based WASSCE since late 2025, the format reportedly splits by paper type: objective papers are answered entirely on screen, clicking through multiple-choice questions, while essay and practical papers are hybrid, with questions displayed on screen and answers written by hand in physical answer booklets. The official timetable document does not spell out the mode itself, so treat those details as reported rather than guaranteed, and expect your centre to brief you before your first paper. Practically, this changes how you should approach exam day. Arrive early, because computer-based sessions involve identity verification before you get a seat, and a queue at check-in is harder to absorb than at a paper exam. Bring your registration details and whatever identification your centre asks for, plus good pens, because the hybrid essay format still lives or dies on handwriting. Expect the software to let you move between objective questions and change answers before submitting, but do not assume any specific feature until you have seen the centre's own demonstration. One more detail from the official timetable worth knowing: Visual Art 3B question papers are given to candidates two weeks before the paper, so if you entered for it, ask your centre about collection."
+      },
+      {
+        "heading": "How to prepare for an exam you sit at a screen",
+        "body": "Most candidates prepare on paper and then meet the exam on a screen, and that mismatch costs marks. Reading a passage on a monitor is slower than on paper until you have practised it, and clicking through fifty objective questions has its own rhythm: answer what you know, flag what you doubt, come back at the end. So build screen practice into your revision instead of only drilling past topics in a notebook. The free mock exam generator on this site will build you a timed, WASSCE-style paper for any subject, and sitting it at a computer under the clock is close rehearsal for the objective papers without paying for a CBT centre session. The quiz tool suits shorter daily drills, ten or twenty objective questions clicked through the way you will click through the real thing. For essay papers, remember the hybrid format: you read on screen but write by hand, so practise handwritten answers under time, then run them through the AI marking tool to see where the marks leak. For mathematics, the math solver checks your working line by line, which matters because WAEC marking rewards method, not just final answers. A little over three weeks separate 30 August from the first written papers on 22 September, though the full window runs to the last paper on 28 October, about eight and a half weeks away. One full mock a week plus a daily quiz still fits that runway, so long as your first mocks cover the subjects that come earliest."
+      }
+    ],
+    "problems": [],
+    "faqs": [
+      {
+        "q": "Is the WAEC GCE timetable for 2026 out?",
+        "a": "Yes. WAEC's official registration portal at registration.waecdirect.org hosts the final timetable for the 2026 second series, internally dated August 2026. Sites still saying it has not been released are running stale 2025 information. Download the document yourself from the portal rather than relying on any aggregator, including this page."
+      },
+      {
+        "q": "When does the WAEC GCE 2026 second series start?",
+        "a": "The window runs from Friday 4 September to Wednesday 28 October 2026. The 4 September entry is a practical planning session for Foods and Nutrition and Home Management, orals and practicals run 14 to 25 September at times WAEC arranges individually, and the main written papers start Tuesday 22 September with Further Mathematics."
+      },
+      {
+        "q": "Is the exam fully computer-based?",
+        "a": "WAEC has described the series as computer-based, and reports consistently describe objective papers answered entirely on screen while essay and practical papers are hybrid: questions on screen, answers handwritten in booklets. The official timetable does not state the mode itself, so confirm the exact arrangements with your centre before your first paper."
+      },
+      {
+        "q": "How much is registration, and can I still register?",
+        "a": "The fee is NGN 37,000, as announced by WAEC in May 2026, and some reports quote NGN 37,500 including bank commission. As of 30 August the portal states registration ends Thursday 10 September 2026, after two extensions. Walk-in registration at a higher fee, reported around NGN 45,000, appears in some summaries but is unverified, so confirm on registration.waecdirect.org."
+      },
+      {
+        "q": "When will the second series results come out?",
+        "a": "Going by recent computer-based series, expect roughly six to nine weeks after the last paper. The 2026 first series results came 41 days after the final exam and the school series took 47 days, though the 2025 second series took 62. With papers ending 28 October, that points to roughly December 2026 to January 2027. Check waecdirect.org, and treat any promised date from unofficial sites with suspicion."
+      }
+    ],
+    "targetQuery": "waec gce timetable 2026",
+    "hubSubjects": [
+      "math",
+      "english"
+    ]
+  },
+  {
+    "board": "waec",
+    "slug": "how-to-pass-waec-gce-english-and-maths",
+    "metaTitle": "How to Pass WAEC GCE English and Maths (2026 Second Series)",
+    "metaDescription": "A two-month plan to pass WAEC GCE English and Maths: paper structure, high-frequency topics, command words and free computer-based practice.",
+    "h1": "How to Pass WAEC GCE English and Maths (2026 Second Series)",
+    "quickAnswer": "Diagnose your weak topics in the first week, then spend the runway before the 4 September to 28 October exam window drilling the places you actually lose marks. In English, that means daily objective practice plus at least two marked essays and two summaries a week; in Maths, it means full-working practice on high-frequency topics like algebra, mensuration, trigonometry and statistics. Because WAEC has described this series as computer-based, do a large share of your practice on a computer, not just on paper. Learn WAEC's command words so you answer exactly what is asked. There is no shortcut, but two focused months of targeted practice can realistically move you from a fail to a credit in both subjects.",
+    "intro": "Five credits including English Language and Mathematics is the line that unlocks university admission, and those two subjects are exactly where most private candidates fall. In the 2025 second series, only 42.17 percent of candidates got five credits including English and Maths, against 61.54 percent in the 2026 school exam. The gap is not talent; school candidates simply get more structured practice and more feedback. With the 2026 second series written papers running from 22 September to 28 October, you have roughly two months, which is enough to change your result if you spend it on diagnosis, high-frequency topics and computer-based practice rather than passive rereading. This guide lays out what actually moves marks in each subject, plus two practice tasks you can start on today.",
+    "sections": [
+      {
+        "heading": "Count your runway, then diagnose before you study",
+        "body": "The main written papers for the 2026 second series run from Tuesday 22 September to Wednesday 28 October, with orals and practicals slotted in from 14 September, so from the end of August you have roughly three working weeks before written papers begin and about eight until the window closes. That is enough time to move a grade in English and Maths, but only if you spend the first three days finding out exactly where you lose marks. Take a full-length practice paper in each subject under timed conditions, or use the free quiz tool on this site to test yourself topic by topic and let the results show you the pattern. Most candidates who miss a credit do not fail everywhere; they fail in two or three recurring places, such as summary writing in English or geometry in Maths. Write those weak topics down and build your plan around them, not around a generic syllabus checklist. If you have not yet registered, the official portal currently states that registration ends Thursday 10 September 2026, with the fee fixed at NGN 37,000, so sort that out this week and download the official final timetable from registration.waecdirect.org while you are there, because your paper dates decide which subject gets priority in your final fortnight."
+      },
+      {
+        "heading": "Learn WAEC's command words before anything else",
+        "body": "WAEC marks what you were asked to do, not what you know. Every question is built on a command word, and each one demands a different depth of answer. State and list want short, direct points with no explanation. Mention is similar: name the point and move on. Explain and describe want developed sentences that show how or why something works. Calculate, evaluate and simplify in Maths want full working, not just a final figure. Compare wants both similarities and differences, handled in pairs. Illustrate usually wants an example or a diagram. Candidates throw away marks in two directions: writing three-line explanations where state would earn full marks in ten words, and writing one-word answers where explain needed a because. Before the exam, go through your notes and practice questions and label each one with its command word, then check whether your answer actually matches the instruction. When you practise with the free mock exam generator on this site, read the command word twice before you write anything. It is the cheapest habit in exam technique, and in a two-month runway, cheap habits are the ones worth building first because they pay out in every single paper you sit."
+      },
+      {
+        "heading": "English: where the marks actually sit in each section",
+        "body": "The English Language paper follows a structure WAEC has kept stable for years: an objective paper testing lexis, structure and oral forms, and a written paper made up of an essay, a comprehension passage and a summary. Treat them as four different games. The objectives reward vocabulary in context and grammar patterns, and they respond quickly to daily drilling; twenty questions a day for six weeks beats two hundred in the last week. The essay is marked for content, organisation, expression and mechanics, which means a clean, well-paragraphed letter or article with few grammar slips beats an ambitious essay full of errors. Pick two formats you can execute well, usually the formal letter and the argumentative essay, and rehearse those rather than trying to master every type. Comprehension is about answering from the passage, in your own words, at the length the question asks for. Summary is the section that decides most borderline grades: examiners want the required number of points, one sentence each, in your own words, with no examples, no illustrations and no lifting of whole phrases from the passage. Write at least two practice essays and two summaries every week and run them through the AI marking tool on this site so you get feedback the same day instead of guessing whether your expression is costing you marks."
+      },
+      {
+        "heading": "Maths: drill the high-frequency topics first",
+        "body": "You do not need the whole syllabus to reach a credit in Maths; you need reliable marks in the topics that appear year after year. Across recent WASSCE papers the heavy hitters are number bases, indices and logarithms, sets and Venn diagrams, simple and compound interest, ratio and variation, algebraic simplification, linear and quadratic equations, mensuration of circles, cylinders and cones, trigonometry with bearings, statistics with mean, median and mode, and probability. Geometry theorems and construction appear too, but if you are weak there, secure the algebra and statistics marks first because they are more predictable. Work topic by topic: study one worked example, then do five questions of the same type without looking, showing full working every time, because WAEC awards method marks even when the final answer slips. When you get stuck, put the question into the math solver on this site and study the steps rather than copying the answer; the point is to see where your method diverged. Keep a single sheet of formulas you personally keep forgetting, such as the cosine rule or the volume of a cone, and rewrite it from memory every few days. Two focused hours a day on high-frequency topics for eight weeks is a realistic route from an F9 or E8 to a credit."
+      },
+      {
+        "heading": "Practise on a computer, because WAEC says the exam is on one",
+        "body": "WAEC has said the second series runs in computer-based format, and press reports describe objective papers as fully on screen with essay papers hybrid, meaning questions appear on screen while you write answers in a physical booklet. Confirm the details for your own subjects with your exam centre, but plan for one certainty: you will be reading questions on a monitor under time pressure, and that is a skill in itself. Candidates who have only ever practised on paper consistently misread on-screen questions, lose their place in long passages and burn time moving between items. The fix is simply to do a serious share of your practice on a computer. The mock exam generator and the quiz tool on this site are free and run in the browser, so you can rehearse the exact experience of reading, deciding and answering on screen, including skipping hard questions and returning to them. For English, practise reading a full-length comprehension passage on screen while making point notes on paper, since that split is what the hybrid format demands of you. Ten computer-based practice sessions between now and your first paper will do more for your speed and accuracy than any amount of extra passive reading, and they cost you nothing."
+      },
+      {
+        "heading": "A week-by-week shape for the two months",
+        "body": "Here is a shape that fits the runway between now and the written papers. Week one, ending early September: diagnose both subjects, register or confirm your registration before the portal's stated 10 September deadline, and download the official timetable so you know your exact paper dates. Weeks two and three: alternate days between English and Maths, with each day split into one hour learning a weak topic and one hour of timed questions on it, while the daily twenty English objectives keep running in the background. Weeks four and five: shift toward full sections, a complete summary plus essay one day, a full Maths theory section the next, marked honestly against the AI marking tool or your own checklist. From week six, move to full timed mocks on a computer, one per subject per week, and spend the day after each mock re-doing every question you missed, which is where the real learning happens. Protect sleep in the final week; a tired candidate misreads command words. Two months is genuinely enough. In the 2026 school WASSCE, 61.54 percent of candidates got five credits including English and Maths, while the 2025 private second series managed 42.17 percent, and that gap is mostly preparation and technique, not ability. Your job is to be on the right side of it."
+      }
+    ],
+    "problems": [
+      {
+        "question": "Maths practice (sets and Venn diagrams). In a class of 50 students, 30 offer Economics, 25 offer Government, and 7 offer neither subject. (a) How many students offer both subjects? (b) How many offer Economics only?",
+        "steps": [
+          "Find how many students offer at least one subject: 50 - 7 = 43.",
+          "Let n be the number offering both. Use the rule n(at least one) = n(Economics) + n(Government) - n(both), so 43 = 30 + 25 - n.",
+          "Solve: n = 55 - 43 = 12, so 12 students offer both subjects.",
+          "Economics only = all Economics students minus those doing both: 30 - 12 = 18.",
+          "Check the totals: Economics only 18 + Government only 13 + both 12 + neither 7 = 50, which matches the class size, so the answer is consistent."
+        ],
+        "answer": "(a) 12 students offer both subjects. (b) 18 students offer Economics only.",
+        "markTip": "Draw the Venn diagram even when the question does not demand one; examiners award method marks for the set-up 30 + 25 - n = 43, and part (b) usually carries a follow-through mark, so a slip in (a) does not have to sink (b) as long as your working is visible.",
+        "variant": "In a market survey of 60 traders, 35 sell yams, 40 sell beans, and 5 sell neither. Find how many sell both, and how many sell beans only. (Answers: 20 sell both; 20 sell beans only.)"
+      },
+      {
+        "question": "English practice (summary writing). Read this passage, then answer in your own words. Passage: Many students treat sleep as wasted time, but the hours you spend asleep are when your brain does its filing. During deep sleep, the day's lessons are moved from short-term storage into long-term memory, which is why a topic revised before a good night's rest is remembered better than one crammed at dawn. Sleep also restores concentration, so a rested candidate reads questions more carefully and makes fewer careless slips. Finally, regular sleep steadies mood: anxious, exhausted students panic in exam halls, while rested ones stay calm enough to think. Task: In three sentences, one for each, state three benefits of adequate sleep that the writer mentions.",
+        "steps": [
+          "Read the task before the passage so you know you are hunting for exactly three benefits and nothing else.",
+          "Read the passage once straight through, then again slowly, ticking each sentence that states a benefit rather than an example or an explanation of one.",
+          "Identify the three ideas: memory, concentration, and steadier mood. The lines about filing, careless slips and panicking are illustrations, so leave them out.",
+          "Write one complete sentence per benefit in your own words, for example: Adequate sleep helps students store what they have learned in lasting memory.",
+          "Check each sentence for lifting: if four or more consecutive words match the passage, rephrase before you move on."
+        ],
+        "answer": "A strong response: (1) Adequate sleep helps the brain transfer what a student has learned into lasting memory. (2) It restores concentration, so candidates read and answer questions more accurately. (3) It keeps students emotionally steady, helping them stay calm during examinations.",
+        "markTip": "Summary marks are split between content and expression: each correct point scores fully only as a complete sentence in your own words, so lifting whole phrases from the passage or padding with examples costs you the expression marks even when the point itself is right.",
+        "variant": "Do the same drill with any newspaper editorial: in one sentence each, state three problems the writer identifies and three solutions the writer proposes, without copying more than three consecutive words from the text."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is two months really enough to pass WAEC GCE English and Maths?",
+        "a": "Yes, if you spend it on targeted practice rather than rereading notes. The written papers run 22 September to 28 October 2026, so a candidate starting at the end of August has time for a diagnosis week, five to six weeks of topic work, and full mocks before each paper. Candidates who miss a credit usually lose marks in a handful of recurring areas, not everywhere, and those are fixable in weeks."
+      },
+      {
+        "q": "What mark do I need for a credit in English or Maths?",
+        "a": "WAEC does not publish the raw-mark boundaries behind its grades, and they can shift between sittings, so nobody can honestly tell you that a specific percentage guarantees a C6. The practical approach is to attempt every question, show full working in Maths for method marks, and hit the required number of points in the English summary. Chasing every available mark beats guessing at a target."
+      },
+      {
+        "q": "Is the GCE second series harder than the school WASSCE?",
+        "a": "The syllabus and paper format are the same, but private-candidate pass rates have historically been lower: 42.17 percent of 2025 second-series candidates got five credits including English and Maths, against 61.54 percent in the 2026 school exam, and press reports put the 2026 first private series at around 33 percent. The likeliest explanation is preparation, since private candidates often study alone, which is exactly what a structured plan fixes."
+      },
+      {
+        "q": "When exactly are the English and Maths papers?",
+        "a": "The main written papers for the 2026 second series run from Tuesday 22 September to Wednesday 28 October 2026. Exact dates and times for each subject are on the official final timetable, which you can download from registration.waecdirect.org, and it is worth rechecking close to the exam in case of updates. Note WAEC's own rule that where a question paper's stated duration differs from the timetable, the question paper prevails."
+      },
+      {
+        "q": "Can I still register for the 2026 second series?",
+        "a": "As of late August 2026, yes: the official portal states registration ends Thursday 10 September 2026, after earlier deadlines were extended. The fee was fixed at NGN 37,000, with some reports quoting NGN 37,500 including bank commission, and aggregator sites also report walk-in registration at a higher fee of around NGN 45,000, though that figure is unverified. Confirm everything on registration.waecdirect.org before paying anyone."
+      },
+      {
+        "q": "When will the results come out?",
+        "a": "WAEC has not announced a results date, but recent computer-based series have been released roughly six to nine weeks after the final paper: about 41 days for the 2026 first private series and 62 days for the 2025 second series. With papers ending 28 October, that points to sometime between December 2026 and January 2027. Check waecdirect.org with your examination number once WAEC announces the release."
+      }
+    ],
+    "targetQuery": "how to pass waec gce english and maths",
+    "hubSubjects": [
+      "English Language",
+      "Mathematics"
+    ]
+  },
+  {
+    "board": "gcse",
+    "slug": "gcse-november-2026-resits",
+    "metaTitle": "GCSE Resit November 2026: Dates, Entry Deadline and Costs",
+    "metaDescription": "GCSE resit November 2026: Maths and English Language dates (3-9 Nov), the 4 October entry deadline, costs, results day and an 8-week revision plan.",
+    "h1": "GCSE November 2026 Resits: Dates, Deadlines, Costs and the 8-Week Plan",
+    "quickAnswer": "The GCSE resit series in November 2026 covers two subjects only at AQA, Edexcel and OCR: English Language and Mathematics. English papers are on 3 and 5 November, maths papers on 4, 6 and 9 November 2026, all morning sessions. The JCQ final entry date is 4 October 2026, but your school, college or exam centre will set an earlier internal deadline, so speak to your exams officer in early September. Entry is post-16 only — you must be 16 or over on 31 August 2026. Results reach students on Thursday 14 January 2027.",
+    "intro": "A grade 3 in August does not have to mean a whole extra year of waiting. The November 2026 series gives post-16 students a second attempt at GCSE English Language and Maths roughly ten weeks after enrolment, with results in mid-January — early enough to update a university application or stop resit classes before spring. This page pulls everything into one place: who is allowed to enter, how and when entries happen (the real deadline is earlier than the official one), the exact paper dates for AQA, Edexcel and OCR, what it costs if you are a private candidate, and an eight-week revision plan weighted towards the topics that carry the most marks. Dates below come from the boards' published final timetables and the JCQ key-dates document, but always confirm your own entry and timetable with your exams officer, because every centre sets its own internal cut-offs.",
+    "sections": [
+      {
+        "heading": "Who actually sits GCSEs in November",
+        "body": "The November series is a resit window, not a second chance at everything. AQA's timetable states it is only open to students aged 16 or over on 31 August 2026, so Year 11s cannot use it — it exists for people who have already had a summer attempt. The biggest group is students covered by the 16-19 condition of funding: if you started a sixth form or college course without a grade 4 in English or maths, government rules say you must keep studying the subject. A full-time student holding a grade 3 has to work towards the GCSE itself, while a student on grade 2 or below can take Functional Skills Level 2 instead. One nuance worth knowing: the funding rule requires continued study, not automatic November entry. Your college decides whether you are ready to improve your grade now or better off waiting for summer 2027, so if you want the November sitting, make your case to your teacher early and back it up with evidence. The other group is private candidates — adults fixing a grade for a job or a university offer, home-educated students, and anyone no longer enrolled anywhere. Many exam centres accept external entries for the November series, but you arrange it yourself, and popular centres fill up well before the official deadline."
+      },
+      {
+        "heading": "Only two subjects, and the entry clock is already ticking",
+        "body": "For AQA, Edexcel and OCR — the three England boards — the November 2026 timetables contain exactly two GCSE subjects: English Language and Mathematics. Nothing else. If you need to resit science, history or anything else, that happens in summer 2027. Entries go through an exam centre, never directly to the board. If you are enrolled at a sixth form or college, your exams officer makes the entry — normally funded by the institution, so free to you, but ask rather than assume. The JCQ final entry date for the November 2026 series is 4 October 2026. Two warnings about that date. First, it falls on a Sunday, so every school and college sets an internal deadline days or weeks earlier — one London centre reportedly closes its November bookings as early as 8 September. Second, boards charge steep late-entry surcharges once the deadline passes; tutoring-industry reports suggest late fees can double the cost or worse. So treat the first week of September as your real deadline: talk to your exams officer or phone private-candidate centres this week, not in October. If you are entering privately, get written confirmation that the centre will accept your entry, because acceptance policies and cut-off dates genuinely vary from centre to centre."
+      },
+      {
+        "heading": "The paper dates, board by board",
+        "body": "Every English Language and Maths paper falls between 3 and 9 November 2026, all morning sessions, and the dates are identical across AQA, Edexcel and OCR. English Language: Paper 1 on Tuesday 3 November, Paper 2 on Thursday 5 November. Maths: papers on Wednesday 4 November, Friday 6 November and Monday 9 November, each 1 hour 30 minutes. The two subjects never clash, so if you are resitting both you simply alternate days from the 3rd to the 9th. The details that differ by board matter for planning. English durations: AQA papers are 1 hour 45 each, Edexcel's Paper 2 runs 2 hours 5 minutes, and OCR's papers are 2 hours each. In maths, AQA and Edexcel run the non-calculator paper first, on 4 November, with calculator papers on 6 and 9 November. OCR is the reverse: calculator papers on 4 and 9 November, non-calculator on 6 November. That changes what you drill in the final week, so find out which board your centre enters you with before building a timetable. The dates above come from the boards' published final timetables and the JCQ key-dates document at jcq.org.uk, but the statement of entry your centre gives you is the version that counts — check it as soon as it arrives."
+      },
+      {
+        "heading": "Results day, and what a November resit costs",
+        "body": "Results go to schools and colleges on Wednesday 13 January 2027 under restricted release, then to students on Thursday 14 January 2027. That January date is the whole point of the November series: pass, and resit classes stop months before summer, and university applicants can show the grade before decisions are made. If a result looks wrong, the deadline for reviews of marking is 18 February 2027, requested through your centre. Costs depend entirely on who you are. Enrolled 16-18 students under the condition of funding normally pay nothing — the college makes and funds the entry — though you should confirm with your exams officer. Private candidates pay the board fee plus the centre's charges, and the centre's charges are the bigger number. AQA's published entry fee is around GBP 51 per subject, but according to published exam-centre price lists for November 2026, one London centre charges GBP 230 for English Language and GBP 250 for Maths, a booking agency charges over GBP 350 per subject, and admin fees of roughly GBP 25-75 on top of board fees are common elsewhere. A realistic range is about GBP 150-350 per subject, and there is no standard price. Get a written quote from two or three centres before you book, and book before late-entry surcharges begin."
+      },
+      {
+        "heading": "An 8-week revision plan that respects the November clock",
+        "body": "Count back from 3 November and you have roughly eight full weeks from the start of September, so do not spread them evenly across the specification — put them where the marks are. In Foundation maths, number, ratio and proportion carry a large share of the paper, and a grade 4 has typically sat somewhere near half marks in recent series (boundaries move every year, so treat that as a working target, not a promise). Weeks 1-2: sit one full timed paper per subject to find your gaps — the free mock exam generator on this site builds timed papers in your board's style, so you are not burning real past papers this early. Weeks 3-6: two focused sessions per weak topic, using the quiz tool for quick retrieval practice and the math solver whenever a worked step refuses to make sense. In English Language, give most of this block to the writing questions, which typically carry around half the marks on each paper (check your own board's split), and put every practice answer through the AI marking tool so you get band-by-band feedback instead of guessing how you did. Weeks 7-8: one full timed paper every three days, alternating subjects the way the real week will, with non-calculator practice positioned to match your board's paper order. Marks come from rehearsing the exam, not re-reading notes."
+      }
+    ],
+    "problems": [],
+    "faqs": [
+      {
+        "q": "Can I resit only maths in November 2026?",
+        "a": "Yes. English Language and Maths are separate entries, and you can enter either one on its own or both together. The two subjects never share a day — English on 3 and 5 November, maths on 4, 6 and 9 November — so sitting both is manageable if you need to. Remember the November series offers nothing else at AQA, Edexcel and OCR: any other subject has to wait for summer 2027."
+      },
+      {
+        "q": "What grade do I need to pass a November resit?",
+        "a": "Grade 4 is the standard pass and grade 5 the strong pass, in the government's own terminology. Reaching grade 4 or above ends the requirement to keep studying English and maths post-16, which makes it the target for almost every November resitter. Some next steps ask for more — nursing, teaching and certain apprenticeships often want specific grades — so check what your course or employer actually requires before deciding whether a 4 is enough."
+      },
+      {
+        "q": "What happens if I fail again in November?",
+        "a": "Nothing is lost — your best grade is the one that counts, and a lower resit result does not overwrite a higher one. You would carry on studying under the condition of funding and enter again for the summer 2027 series, and getting your result in mid-January gives you a four-month head start on targeted revision. Many colleges deliberately hold candidates back for summer anyway, because November entry is a readiness judgement rather than an automatic right."
+      },
+      {
+        "q": "Do universities care that I resat GCSE English or maths?",
+        "a": "In almost all cases they care that you have the grade, not how many sittings it took. Entry requirements are usually written as a minimum grade in English and maths, and a November 2026 pass appears on your record like any other GCSE grade — usefully, before most university decisions are finalised. A small number of highly competitive courses, such as medicine at certain universities, do look at resit history, so check each course's entry page if that applies to you."
+      },
+      {
+        "q": "Can Year 11 students enter the November 2026 series?",
+        "a": "No. AQA's timetable states the November series is only available to students aged 16 or over on 31 August 2026, and across the boards it is restricted to post-16 resitters. A current Year 11 student takes GCSEs in summer 2027 as normal. The November window exists for college students, school leavers, adults and private candidates who have already had at least one attempt at the exam."
+      }
+    ],
+    "targetQuery": "gcse resit november 2026",
+    "hubSubjects": [
+      "math",
+      "english"
+    ]
+  },
+  {
+    "board": "gcse",
+    "slug": "gcse-resit-results-day-january-2027",
+    "metaTitle": "GCSE Resit Results Day January 2027: Date, Time, Next Steps",
+    "metaDescription": "GCSE resit results day is Thursday 14 January 2027. When results come out, how to collect them, what grade 4 means, and what to do if you miss it again.",
+    "h1": "GCSE Resit Results Day: Thursday 14 January 2027",
+    "quickAnswer": "GCSE resit results for the November 2026 series come out on Thursday 14 January 2027. Exam boards release grades to schools and colleges a day earlier, on Wednesday 13 January, under restricted release, and centres pass them to students the following morning — many from around 8.00am, though each school or college sets its own time. Results normally reach you through the centre where you sat the exams, in person, by email or through its portal; AQA and OCR have no student results portal, and Edexcel students can only view grades online through the ResultsPlus Direct service if their exams officer has registered them for it. Grade 4 is the standard pass, and it is the number that ends the post-16 requirement to keep studying English or maths.",
+    "intro": "If you sat GCSE English Language or maths this November, the wait for results is mercifully short compared with the summer — but January still feels a long way off when a college place, an apprenticeship or a funding requirement hangs on a grade 4. Here is exactly when results come out, how you will get them, and what to do next whichever number is on the paper.",
+    "sections": [
+      {
+        "heading": "The date is settled: 13 January for centres, 14 January for you",
+        "body": "The exam boards release November 2026 results to schools and colleges on Wednesday 13 January 2027 under what is called restricted release — staff can see your grades, but they are not allowed to share them with you yet. Students get their results the next day, Thursday 14 January 2027. Both dates come straight from the JCQ key dates document for the series and AQA's own timetable, so the date itself is settled; the time is the local variable. Most centres hand out results in the morning, and many open their doors or send emails from around 8.00am, but there is no national rule — one college might email at 8, another might ask you to collect from reception at 10. Ask your exams officer before Christmas exactly how and when your centre releases results, so you are not refreshing your inbox at dawn for a message that was never coming before mid-morning. If you sat both English Language and maths in November, both grades arrive together on the same morning — there is no separate results day per subject."
+      },
+      {
+        "heading": "How you actually get your grades",
+        "body": "Results normally reach you through the exam centre where you sat the papers. AQA and OCR have no student results portal, and Edexcel students can only use the ResultsPlus Direct online service to view their grades if their exams officer has registered them for it — so ask your centre in advance how you will get your grades. If you are enrolled at a school, sixth form or college, you will either collect a printed statement of results in person or receive it by email or through the centre's own portal, depending on how they run the day. If you entered as a private candidate, the centre you booked through is responsible for passing your result on — agree with them in advance whether that happens by email, post or collection, because practice varies a lot between centres. The statement of results is the piece of paper (or PDF) that matters on the day: it lists each subject and the grade awarded. Your formal certificate follows months later through the same centre, so keep your contact details up to date with them, especially if you have left the course or moved. If nothing has arrived by mid-morning on 14 January, phone the exams office rather than the board — the board will only redirect you back to the centre anyway."
+      },
+      {
+        "heading": "Grades 9 to 1, and why grade 4 is the number that matters",
+        "body": "GCSEs are graded 9 to 1, with 9 the highest and U for ungraded. Two grades carry official labels: grade 4 is the standard pass and grade 5 is the strong pass — that is the government's own wording, and it appears on the exam boards' grading pages too. For a resit student, 4 is the number that matters. Under the 16 to 19 condition of funding, reaching grade 4 or above in English or maths ends the requirement to keep studying that subject — the government's 2026-27 guidance is explicit about this. Most employers, apprenticeships and university courses that ask for GCSE English and maths also ask for grade 4, not 5. One tier note for maths: Foundation tier papers award grades 1 to 5 at most, while Higher tier covers roughly 4 to 9. Most resit candidates sit Foundation because it is the most accessible route to a grade 4 — a sensible call, not a lesser one. And the subjects are judged separately: a grade 4 in maths ends the maths requirement even if English needs another attempt, and the other way round."
+      },
+      {
+        "heading": "Under a grade 4 again? Here is the honest plan",
+        "body": "First, breathe — the November series exists precisely because plenty of people need more than one attempt, and a near-miss in January is a very different starting point from a near-miss last summer. The next opportunity is the summer 2027 series in May and June, and entries go through your school or college in the spring, so raise it with your teacher or exams officer soon after results day rather than waiting to be asked. If you are 16 to 18 (or up to 25 with an EHC plan) and on a study programme or T Level, the condition of funding means you continue studying the subject until you reach grade 4: a full-time student holding a grade 3 stays on the GCSE route, while grade 2 or below can switch to Functional Skills Level 2, which also satisfies the requirement — worth an honest conversation with your college about which path fits you. Then get diagnostic. Go through your performance with a teacher and find the specific marks that got away. The free mock exam generator on this site can rebuild your weakest paper as many times as you need, and the AI marking tool will show you where answers leak marks — four focused months to summer is genuinely enough to move a grade 3 to a 4."
+      },
+      {
+        "heading": "Think your mark is wrong? Reviews of marking",
+        "body": "If a grade lands well below what your mocks and teacher predictions suggested, you can ask for a review of marking — but you apply through your exam centre, not the board directly. For the November 2026 series, JCQ's deadline for reviews of marking and other post-results services is 18 February 2027, and centres need time to process requests, so do not sit on the decision for weeks. Two things to weigh before you apply. First, grades can go down as well as up in a review — if you are sitting comfortably inside a grade, a review carries real risk for little gain, so it makes most sense when you are likely within a mark or two of a boundary. A teacher can help you judge that. Second, there is usually a fee, set by the board and passed on by the centre, and it is commonly refunded only if your grade changes — ask your exams officer for the current amount rather than trusting any figure you read online. It is also worth asking about getting a copy of your marked paper: even if you decide not to challenge the grade, seeing exactly where the marks went missing is excellent intelligence for a summer resit."
+      },
+      {
+        "heading": "Nine weeks of waiting — use them well",
+        "body": "The last November paper is sat on 9 November 2026 and results arrive on 14 January 2027 — about nine weeks, with Christmas in the middle. How to use them depends on how the exams felt. If you walked out reasonably confident, park it: give your energy to your main course and let January bring what it brings. If you are genuinely unsure, do not grind through full revision for a grade you may already have — but do not go completely cold either, because if a summer resit turns out to be needed, the students who restart in January beat the ones who restart in April every time. Twenty minutes a few times a week is plenty: the quiz tool is built for exactly this kind of light topic check, and the math solver will walk you through any problem step by step so the methods stay fresh without a full textbook session. For English, read something — anything — and occasionally summarise it in a paragraph from memory. Then sort the logistics: put the 18 February 2027 review deadline in your phone, and if you entered privately, make sure your centre has your current email address before everyone disappears for the holidays."
+      }
+    ],
+    "problems": [],
+    "faqs": [
+      {
+        "q": "What time do GCSE resit results come out on 14 January 2027?",
+        "a": "There is no single national release time for students. Boards release grades to centres on Wednesday 13 January under restricted release, and centres share them with students on the morning of Thursday 14 January — many from around 8.00am, but the exact time and method (collection, email or portal) is your school or college's decision, so ask your exams officer in advance."
+      },
+      {
+        "q": "Can I check my November GCSE results online?",
+        "a": "It depends on your board and your centre. AQA and OCR have no student results portal, so results normally reach you through the centre where you sat the exams. Edexcel students can view results online through the ResultsPlus Direct service, but only if their exams officer has registered them for it. Your school, college or exam centre may also email results or use its own portal — so confirm the arrangement with your exams office before results day."
+      },
+      {
+        "q": "I got a grade 4 in one subject but not the other — what happens?",
+        "a": "The subjects are treated separately. A grade 4 or above in maths ends the requirement to keep studying maths, even if English still needs another attempt, and vice versa. You would carry on with only the subject still below grade 4, with the summer 2027 series as the next sitting."
+      },
+      {
+        "q": "When is the next chance to resit if I miss grade 4 again?",
+        "a": "The summer 2027 series, in May and June — entries go through your school or college in the spring. There is normally also a November series each year for English Language and maths, but confirm next year's arrangements with your exams officer nearer the time."
+      },
+      {
+        "q": "How do I challenge a grade I think is wrong?",
+        "a": "Ask your exam centre to submit a review of marking — you cannot apply to the board yourself. The JCQ deadline for post-results services for this series is 18 February 2027. Grades can go down as well as up, and there is usually a fee unless the grade changes, so talk it through with a teacher first."
+      },
+      {
+        "q": "Do private candidates get results the same day?",
+        "a": "Yes — 14 January 2027 applies to everyone, but your result comes via the centre where you entered, so agree in advance how they will send it. If nothing has arrived by mid-morning, contact that centre's exams office; the board will only refer you back to them."
+      }
+    ],
+    "targetQuery": "gcse resit results day 2027",
+    "hubSubjects": [
+      "Maths",
+      "English Language"
+    ]
+  },
   // @@EXAM_PAGES_INSERT@@
 ];
 

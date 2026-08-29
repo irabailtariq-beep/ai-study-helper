@@ -37,7 +37,7 @@ const HELP_IN_STUDY_SUBJECTS = [
 const STATIC_UPDATED = new Date("2026-08-07"); // tool/marketing/legal pages
 const HUBS_UPDATED = new Date("2026-08-07");   // /help-in-study/* subject hubs
 const LEARN_UPDATED = new Date("2026-08-07");  // /learn/* board combos
-const EXAM_UPDATED = new Date("2026-08-26");   // exam-structure + landing pages
+const EXAM_UPDATED = new Date("2026-08-30");   // exam-structure + landing pages
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
