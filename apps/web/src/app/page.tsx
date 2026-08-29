@@ -125,7 +125,9 @@ export default function Home() {
           {CURRICULA_SUBJECTS.map((c) => (
             <div key={c.name} className="glass-panel rounded-2xl p-6">
               <div className="flex items-baseline justify-between gap-2 mb-4">
-                <h3 className="text-xl font-extrabold" style={{ color: "var(--ash-primary)" }}>{c.name}</h3>
+                <h3 className="text-xl font-extrabold" style={{ color: "var(--ash-primary)" }}>
+                  <Link href={c.hub} className="hover:underline">{c.name}</Link>
+                </h3>
                 <span className="text-[11px] text-right" style={{ color: "var(--ash-muted)" }}>{c.tagline}</span>
               </div>
               <div className="space-y-2.5">
@@ -135,6 +137,11 @@ export default function Home() {
                     <div className="text-sm leading-snug" style={{ color: "var(--ash-text)" }}>{subs}</div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-4">
+                <Link href={c.hub} className="text-sm font-semibold hover:underline" style={{ color: "var(--ash-primary)" }}>
+                  {c.name} exam guides &amp; practice →
+                </Link>
               </div>
             </div>
           ))}
@@ -240,9 +247,9 @@ function Step({ n, title, body }: { n: number; title: string; body: string }) {
 }
 
 // The five curricula and the subjects their students actually take (researched per board).
-const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, string][] }[] = [
+const CURRICULA_SUBJECTS: { name: string; hub: string; tagline: string; groups: [string, string][] }[] = [
   {
-    name: "CBSE", tagline: "India · Class 9–12",
+    name: "CBSE", hub: "/cbse", tagline: "India · Class 9–12",
     groups: [
       ["Maths", "Mathematics · Applied Mathematics"],
       ["Sciences", "Physics · Chemistry · Biology · Science"],
@@ -253,7 +260,7 @@ const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, stri
     ],
   },
   {
-    name: "GCSE", tagline: "United Kingdom · Year 10–11",
+    name: "GCSE", hub: "/gcse", tagline: "United Kingdom · Year 10–11",
     groups: [
       ["Maths", "Mathematics · Statistics"],
       ["Sciences", "Combined Science · Biology · Chemistry · Physics"],
@@ -264,7 +271,7 @@ const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, stri
     ],
   },
   {
-    name: "AP", tagline: "United States · College Board",
+    name: "AP", hub: "/ap", tagline: "United States · College Board",
     groups: [
       ["Maths", "Precalculus · Calculus AB · Calculus BC · Statistics"],
       ["Sciences", "Biology · Chemistry · Physics 1 · Environmental Science"],
@@ -275,7 +282,7 @@ const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, stri
     ],
   },
   {
-    name: "Cambridge", tagline: "International · IGCSE & A-Level",
+    name: "Cambridge", hub: "/cambridge", tagline: "International · IGCSE & A-Level",
     groups: [
       ["Maths", "Mathematics · Additional Mathematics · Further Mathematics"],
       ["Sciences", "Biology · Chemistry · Physics · Combined Science"],
@@ -286,7 +293,7 @@ const CURRICULA_SUBJECTS: { name: string; tagline: string; groups: [string, stri
     ],
   },
   {
-    name: "WAEC", tagline: "West Africa · SS1–SS3",
+    name: "WAEC", hub: "/waec", tagline: "West Africa · SS1–SS3",
     groups: [
       ["Maths", "Mathematics · Further Mathematics"],
       ["Sciences", "Physics · Chemistry · Biology · Agricultural Science"],

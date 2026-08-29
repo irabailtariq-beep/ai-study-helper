@@ -44,6 +44,19 @@ const FOOTER_GROUPS = [
     ],
   },
   {
+    // Board hubs previously had ZERO inbound links anywhere on the site — the
+    // 2026-08-30 audit found Google literally could not crawl to them or the
+    // 45 exam pages they link. The footer makes every one depth-2 from home.
+    title: "Exam boards",
+    links: [
+      { href: "/cbse", label: "CBSE" },
+      { href: "/gcse", label: "GCSE (AQA, Edexcel, OCR)" },
+      { href: "/ap", label: "AP" },
+      { href: "/cambridge", label: "Cambridge IGCSE & A-Level" },
+      { href: "/waec", label: "WAEC / WASSCE" },
+    ],
+  },
+  {
     title: "Company",
     links: [
       { href: "/about", label: "About" },
@@ -91,7 +104,7 @@ export function SiteFooter() {
         </div>
 
         {/* Desktop link grid */}
-        <div className="hidden sm:grid grid-cols-2 md:grid-cols-5 gap-6 text-sm">
+        <div className="hidden sm:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-sm">
           {FOOTER_GROUPS.map((g) => (
             <div key={g.title}>
               <h3 className="font-semibold mb-3">{g.title}</h3>

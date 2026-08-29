@@ -159,7 +159,7 @@ export const TOOL_LANDINGS: ToolLanding[] = [
       },
       {
         "q": "Which exam boards does it cover?",
-        "a": "AQA, Edexcel Eduqas, OCR and Cambridge IGCSE. The core skills — methods analysis, structure, answering the actual question — are the same everywhere, but tell it your board and paper, because objective weightings and question styles differ and the feedback adjusts to match."
+        "a": "AQA, Edexcel, OCR and Cambridge IGCSE. The core skills — methods analysis, structure, answering the actual question — are the same everywhere, but tell it your board and paper, because objective weightings and question styles differ and the feedback adjusts to match."
       },
       {
         "q": "Can it tell me what grade my essay is?",

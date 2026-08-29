@@ -296,7 +296,7 @@ Try it. Open a problem and read it out loud as a sentence. The fear shrinks fast
 ## How to drill it
 
 1. [Math Solver](/math-solver) for one problem from each new technique. Read the steps.
-2. [Problem Variants](/problem-variants) for ten more like it. Do them by hand.
+2. [Problem Variants](/quiz) for ten more like it. Do them by hand.
 3. Make flashcards for the *triggers* — "if you see x², the derivative is 2x".
 4. After three weeks, do a [Mock Exam](/mock-exam) on derivatives only.
 
@@ -342,7 +342,7 @@ For each topic write:
 - The one classic trap question
 - A worked example
 
-[Formula Sheet](/formula-sheet) generates this for your board. Print it. Tape it to your desk.
+[Formula Sheet](/math-solver) generates this for your board. Print it. Tape it to your desk.
 
 ## Past papers, every weekend
 
@@ -388,7 +388,7 @@ Once you know what each group *wants*, you can predict almost any reaction witho
 
 ## Tools that help
 
-- [Concept Map](/concept-map) for organising a chapter into a graph
+- [Concept Map](/tools) for organising a chapter into a graph
 - [Math Solver](/math-solver) for stoichiometry calculations
 - [Past Papers](/mock-exam) for pattern drills
 - [Flashcards](/flashcards) for functional groups (perfect spaced repetition material)
@@ -419,11 +419,11 @@ That paragraph is more useful than ten flashcards because it answers *why* each 
 
 ## Diagrams from textbooks
 
-Use [Whiteboard to Notes](/whiteboard) to convert any textbook diagram into clean notes. The AI describes what is shown and labels the important arrows.
+Use [Whiteboard to Notes](/lecture-summary) to convert any textbook diagram into clean notes. The AI describes what is shown and labels the important arrows.
 
 ## Three weeks before the exam
 
-1. Build a [Concept Map](/concept-map) of the syllabus
+1. Build a [Concept Map](/tools) of the syllabus
 2. Tag the topics you can teach without notes
 3. Tag the topics where you freeze
 4. Drill only the freeze topics
@@ -530,8 +530,8 @@ A free AI tutor closes the gap for daily practice.
 
 ## What to use it for
 
-1. **Vocabulary** — paste a word into [Vocabulary Builder](/vocab) and get root, meaning, three example sentences, and a memory tip.
-2. **Translation with intact technical terms** — use [Translation Mode](/translate) to translate a textbook page from Arabic to English while keeping scientific terms in Arabic so you do not lose them.
+1. **Vocabulary** — paste a word into [Vocabulary Builder](/explain) and get root, meaning, three example sentences, and a memory tip.
+2. **Translation with intact technical terms** — use [Translation Mode](/explain) to translate a textbook page from Arabic to English while keeping scientific terms in Arabic so you do not lose them.
 3. **Dialect awareness** — explain a phrase in MSA, then ask the AI to render it in Egyptian / Levantine / Gulf so you can hear how speakers would actually say it.
 
 ## What it cannot replace
@@ -562,7 +562,7 @@ French verbs eat up half your study time and earn most of your marks. The trick 
 
 ## Vocabulary that sticks
 
-Use [Vocab Builder](/vocab) and pick "French". You get the meaning, three example sentences, synonyms, and a memory tip in one tap. Add the words that surprised you to flashcards.
+Use [Vocab Builder](/explain) and pick "French". You get the meaning, three example sentences, synonyms, and a memory tip in one tap. Add the words that surprised you to flashcards.
 
 ## Writing the exam essay
 
@@ -931,7 +931,7 @@ The reason most study plans fail is that they are built backwards. Students star
 
 ## Step 1 — diagnose
 
-Take a 10-question [Diagnostic quiz](/diagnostic). It gives you a ranked list of your weak topics in 5 minutes. This is the only thing you need to plan around.
+Take a 10-question [Diagnostic quiz](/quiz). It gives you a ranked list of your weak topics in 5 minutes. This is the only thing you need to plan around.
 
 ## Step 2 — pick a realistic time budget
 
@@ -1518,9 +1518,9 @@ The IB is harder than most curricula because the assessment is spread over two y
 ## Tools
 
 - [Mark My Answer](/grade) — gives feedback in IB criterion language
-- [Concept Map](/concept-map) — for HL biology and HL history especially
+- [Concept Map](/tools) — for HL biology and HL history especially
 - [Past Papers](/mock-exam) — IB papers are scarce; generate similar-style practice
-- [Diagnostic + plan](/diagnostic) — useful before mock exams
+- [Diagnostic + plan](/quiz) — useful before mock exams
 
 ## The TOK secret
 
@@ -1686,7 +1686,7 @@ JEE Mains is a math-physics-chemistry paper that rewards speed *and* accuracy. Y
 - Two timed sectional papers a week
 - One full mock paper a fortnight
 - Drill the questions where you waste time
-- Use [Problem Variants](/problem-variants) on your weakest chapters
+- Use [Problem Variants](/quiz) on your weakest chapters
 - Aim for 90% accuracy at full pace before moving on
 
 ## Months 9–12: tactics
@@ -1790,7 +1790,7 @@ The AI usually gets this right but check.
 
 - Concepts you don't understand yet — they reinforce understanding, not create it
 - Long answers — make a summary instead
-- Practice questions that need working out — those go in [Problem Variants](/problem-variants)
+- Practice questions that need working out — those go in [Problem Variants](/quiz)
 
 [Generate your first deck →](/flashcards)
 `,
@@ -1932,7 +1932,7 @@ That is enough to revise from for an entire chapter.
 3. Put them on a wall and start drawing arrows
 4. Take a photo for revision
 
-Or use [Concept Map](/concept-map). Paste the chapter, get a graph back in 30 seconds.
+Or use [Concept Map](/tools). Paste the chapter, get a graph back in 30 seconds.
 
 ## When concept maps work best
 
@@ -1946,7 +1946,7 @@ Or use [Concept Map](/concept-map). Paste the chapter, get a graph back in 30 se
 - Vocabulary (use flashcards instead)
 - Anything you don't understand yet
 
-[Build a concept map →](/concept-map)
+[Build a concept map →](/tools)
 `,
   },
   {
@@ -1968,7 +1968,7 @@ The right way is different. Solver as a tutor, not a calculator.
 4. Redo the problem from scratch on paper.
 5. Check the result.
 6. If you still don't get it, use [Explain](/explain) on the technique itself.
-7. Generate three more problems with [Problem Variants](/problem-variants) and drill them.
+7. Generate three more problems with [Problem Variants](/quiz) and drill them.
 
 ## What the solver does well
 
@@ -2011,7 +2011,7 @@ Five fields. Every formula. Done.
 
 ## Build it once per topic
 
-[Formula Sheet builder](/formula-sheet) outputs this format for your subject and grade. Pick your topic, hit generate, paste into a notebook.
+[Formula Sheet builder](/math-solver) outputs this format for your subject and grade. Pick your topic, hit generate, paste into a notebook.
 
 ## How to revise from it
 
@@ -2355,7 +2355,7 @@ Most students study what feels easy. That is the worst possible use of time. You
 
 ## The five-minute fix
 
-[Diagnostic + plan](/diagnostic) gives you 10 questions across the curriculum. Five minutes later you have a ranked list of weak topics and a 7-day plan with daily tasks.
+[Diagnostic + plan](/quiz) gives you 10 questions across the curriculum. Five minutes later you have a ranked list of weak topics and a 7-day plan with daily tasks.
 
 ## Why it works
 
@@ -2611,7 +2611,7 @@ You don't need to remember high school chemistry to support your child's studies
 
 ## The routine
 
-1. **Sunday night, 5 minutes.** Open the [Parent dashboard](/parent).
+1. **Sunday night, 5 minutes.** Open the [Parent dashboard](/tools).
 2. Read the AI-written recap. It tells you what your child worked on, what they got stuck on, and one suggestion for next week.
 3. Pick *one* of the three dinner-table questions the recap suggests. Ask it during dinner this week. That is it.
 
@@ -2651,7 +2651,7 @@ When you connect Classroom to a study helper, three things happen automatically:
 
 ## How to connect
 
-[Open the Classroom integration page](/classroom) and click Connect. Sign in with the Google account you use for school. We only ever ask for read access — we cannot submit work, edit assignments, or post on your behalf.
+[Open the Classroom integration page](/tools) and click Connect. Sign in with the Google account you use for school. We only ever ask for read access — we cannot submit work, edit assignments, or post on your behalf.
 
 ## Privacy
 
@@ -2671,11 +2671,11 @@ The biggest unlock is psychological. Anxiety about school comes mostly from "I d
     publishedAt: today, readTime: "4 min",
     tags: ["Microsoft Teams Education", "Teams AI", "school AI"],
     body: `
-Many schools have switched from Google to Microsoft over the last few years. Teams Education is the dominant LMS in UK private schools and many European institutions. The integration with [Help in Study](/teams) is identical to Google Classroom — read access only, AI study coach, one-tap help.
+Many schools have switched from Google to Microsoft over the last few years. Teams Education is the dominant LMS in UK private schools and many European institutions. The integration with [Help in Study](/tools) is identical to Google Classroom — read access only, AI study coach, one-tap help.
 
 ## Setup in 60 seconds
 
-1. Open [the Teams page](/teams)
+1. Open [the Teams page](/tools)
 2. Click Connect Microsoft Teams
 3. Sign in with your school Microsoft 365 account
 4. Confirm read access on the consent screen
@@ -2774,7 +2774,7 @@ You don't need to take all of them. Take the SAT or ACT once or twice. Take AP e
 
 - **Daily class help:** [Explain](/explain) and [Math Solver](/math-solver) for homework
 - **AP prep:** [Past Papers](/mock-exam) and [Mock Exam](/mock-exam) — the AP-style synthesis is good practice
-- **SAT prep:** [Mock Exam](/mock-exam) for timed practice; [Vocab Builder](/vocab) for the reading section
+- **SAT prep:** [Mock Exam](/mock-exam) for timed practice; [Vocab Builder](/explain) for the reading section
 - **Essay writing:** [Essay Coach](/essay-coach) for any AP essay or college application essay
 
 ## The college essay is not on this list
@@ -4505,8 +4505,8 @@ Do MSA on weekdays, dialect listening on weekends.
 
 ## How AI tools help
 
-- [Vocab Builder](/vocab) — pick Arabic, get word in MSA. Then ask follow-up "how would this be said in Egyptian?" via [Chat](/chat).
-- [Translation Mode](/translate) — translates MSA to English while keeping technical terms.
+- [Vocab Builder](/explain) — pick Arabic, get word in MSA. Then ask follow-up "how would this be said in Egyptian?" via [Chat](/chat).
+- [Translation Mode](/explain) — translates MSA to English while keeping technical terms.
 - [Explain](/explain) — for grammar concepts in plain English.
 
 ## What AI cannot replace
@@ -4653,7 +4653,7 @@ Google Translate is fine for ordering coffee in another country. It is bad for l
 - Gives example sentences in both directions
 - Flags vocabulary the student should add to flashcards
 
-[Translation Mode](/translate) does the second one. It's built specifically for studying.
+[Translation Mode](/explain) does the second one. It's built specifically for studying.
 
 ## The example that shows the difference
 

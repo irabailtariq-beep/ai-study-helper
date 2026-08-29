@@ -15,7 +15,14 @@ const BOARD_LABEL: Record<ExamPage["board"], string> = {
  * marking detail the incumbents (forum threads, PDF dumps) never include.
  */
 export function ExamPageView({ page }: { page: ExamPage }) {
-  const related = examPagesByBoard(page.board).filter((p) => p.slug !== page.slug).slice(0, 4);
+  // Rotate the related list by this page's registry position so the 4 links
+  // differ per page and every page in the board receives inbound links — a
+  // fixed slice(0, 4) left every later-added page permanently orphaned.
+  const boardPages = examPagesByBoard(page.board);
+  const idx = Math.max(0, boardPages.findIndex((p) => p.slug === page.slug));
+  const others = boardPages.filter((p) => p.slug !== page.slug);
+  const start = others.length > 0 ? idx % others.length : 0;
+  const related = others.slice(start).concat(others.slice(0, start)).slice(0, 4);
 
   return (
     <main className="min-h-screen px-6 py-10 max-w-3xl mx-auto">
@@ -35,7 +42,7 @@ export function ExamPageView({ page }: { page: ExamPage }) {
       )}
 
       <p className="uppercase tracking-widest text-xs font-semibold" style={{ color: "var(--ash-primary)", letterSpacing: "0.25em" }}>
-        {BOARD_LABEL[page.board]}
+        <Link href={`/${page.board}`} className="hover:underline">{BOARD_LABEL[page.board]}</Link>
       </p>
       <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2">{page.h1}</h1>
 

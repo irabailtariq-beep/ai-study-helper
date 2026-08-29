@@ -2968,7 +2968,7 @@ When two 3rd tones come together, the first becomes a 2nd tone. So nǐ hǎo is a
 
 - Pleco for dictionary lookups with audio
 - Hello Chinese / Duolingo for daily drilling
-- [Vocabulary Builder](/vocab) for individual word lookups
+- [Vocabulary Builder](/explain) for individual word lookups
 - Native YouTube channels (slow speed, subtitles on)
 
 ## What native speakers care about
@@ -2981,7 +2981,7 @@ You won't be perfect on tones. You don't have to be. Native speakers can usually
 - Confusing 2nd and 3rd tones (the dip in 3rd is sharper)
 - Speaking flat (treating Mandarin like English)
 
-[Look up a Mandarin word with tones →](/vocab)
+[Look up a Mandarin word with tones →](/explain)
 `,
   },
   {
@@ -3038,7 +3038,7 @@ Don't wait. Add five cards a day. Spaced repetition handles the rest.
 
 After hiragana comes katakana (another 46 characters, used for foreign words). Then kanji, which is the long road. But hiragana is the foundation.
 
-[Learn a Japanese word →](/vocab)
+[Learn a Japanese word →](/explain)
 `,
   },
   {
@@ -3092,7 +3092,7 @@ Ich gebe dem Mann das Buch. (I give the man the book.)
 
 The key insight: don't memorise the cases. Memorise the questions they answer.
 
-[Look up a German word →](/vocab)
+[Look up a German word →](/explain)
 `,
   },
   {
@@ -3162,7 +3162,7 @@ If you can say "right now" before the sentence and it still makes sense, use est
 "I am tall right now" sounds weird → ser.
 "I am tired right now" sounds fine → estar.
 
-[Look up a Spanish word →](/vocab)
+[Look up a Spanish word →](/explain)
 `,
   },
   {
@@ -3828,7 +3828,7 @@ Most NTS tests have negative marking. The rule of thumb:
 
 ## Common pitfalls
 
-- Memorising vocabulary without context (use [Vocabulary Builder](/vocab))
+- Memorising vocabulary without context (use [Vocabulary Builder](/explain))
 - Skipping practice tests until the last week
 - Not reviewing wrong answers
 - Cramming in the final week instead of mock testing
