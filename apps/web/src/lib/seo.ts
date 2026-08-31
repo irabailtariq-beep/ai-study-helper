@@ -36,13 +36,13 @@ export function websiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SITE.name,
+    // What Google may show instead of the domain in results. Now that titles no
+    // longer carry a brand suffix, this markup is the only thing naming us.
+    alternateName: ["HelpInStudy", "helpinstudy.com"],
     url: SITE.url,
     description: SITE.description,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE.url}/explain?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
+    // NOTE: the sitelinks search box (potentialAction/SearchAction) was retired by
+    // Google — the markup produces nothing, so it is deliberately not emitted.
   };
 }
 

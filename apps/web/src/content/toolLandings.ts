@@ -3,6 +3,9 @@
 // Populated by tools/exam-pages/* from reviewed agent output.
 
 export type ToolLanding = {
+  /** ISO date of the last significant content change; feeds sitemap lastmod.
+   *  Omit it and the page falls back to its group date in sitemap.ts. */
+  updatedAt?: string;
   slug: string;
   tool: "grade" | "essay-coach" | "math-solver" | "quiz" | "explain";
   metaTitle: string;

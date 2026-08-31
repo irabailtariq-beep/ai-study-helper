@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TOOL_CONTENT } from "@/content/toolPages";
-import { faqJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, jsonLdSafe } from "@/lib/seo";
 
 /**
  * Server-rendered explainer that sits below each tool's UI.
@@ -10,16 +10,43 @@ import { faqJsonLd } from "@/lib/seo";
  * This is a server component on purpose: the copy must be in the initial HTML,
  * not painted in by React afterwards.
  */
+// Breadcrumb labels for the 10 tools. ToolContent has no title field, and the
+// visible <h1> lives in each tool's own client component, so the trail names
+// them explicitly rather than prettifying the slug.
+const TOOL_LABEL: Record<string, string> = {
+  "explain": "Explain anything",
+  "math-solver": "Math solver",
+  "quiz": "Quiz maker",
+  "grade": "Mark my answer",
+  "mock-exam": "Mock exam generator",
+  "flashcards": "Flashcards",
+  "chat": "AI tutor chat",
+  "essay-coach": "Essay coach",
+  "lecture-summary": "Lecture summary",
+  "transform": "Learn through your interests",
+};
+
 export function ToolPageContent({ slug }: { slug: string }) {
   const c = TOOL_CONTENT[slug];
   if (!c) return null;
 
   return (
     <section className="mt-16 mb-4 px-6 max-w-3xl mx-auto" aria-labelledby={`about-${slug}`}>
+      {/* Breadcrumbs are the one rich result in this family that Google still
+          renders, and the 11 tool pages were the only template emitting none. */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd(c.faqs.map((f) => ({ question: f.q, answer: f.a })))),
+          __html: jsonLdSafe(breadcrumbJsonLd([
+            { name: "Tools", path: "/tools" },
+            { name: TOOL_LABEL[slug] ?? slug, path: `/${slug}` },
+          ])),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdSafe(faqJsonLd(c.faqs.map((f) => ({ question: f.q, answer: f.a })))),
         }}
       />
 

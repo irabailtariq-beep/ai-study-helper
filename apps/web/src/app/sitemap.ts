@@ -29,23 +29,33 @@ const HELP_IN_STUDY_SUBJECTS = [
   "accounting", "economics",
 ];
 
-// Stable last-modified dates for pages whose content does NOT change on every
-// deploy. Using `new Date()` here was actively harmful: the blog robot deploys
-// twice a day, so every one of these URLs claimed "modified today" on every
-// crawl. Google treats a sitemap whose lastmod is always "now" as untrustworthy
-// and stops relying on it. Bump these by hand when the content really changes.
-const STATIC_UPDATED = new Date("2026-08-07"); // tool/marketing/legal pages
+// Last-modified dates.
+//
+// Using `new Date()` here was actively harmful: the blog robot deploys daily, so
+// every URL claimed "modified today" on every crawl, and Google stops trusting a
+// lastmod that is always now. The previous fix — four hand-set constants — was
+// correct in principle but drifted in practice: content shipped on 31 Aug while
+// the constants still said 7 and 30 Aug, so real content changes went unsignalled.
+//
+// So each record now carries its own `updatedAt`, exactly as POSTS already did,
+// and these constants are only the fallback for records that have never declared
+// one. Google uses lastmod to schedule RECRAWLS of URLs it already knows; it is
+// not a discovery or ranking signal, so accuracy matters more than freshness.
+// Bump a record's own updatedAt when its main content really changes.
+const STATIC_UPDATED = new Date("2026-08-31"); // tool/marketing/legal pages
 const HUBS_UPDATED = new Date("2026-08-07");   // /help-in-study/* subject hubs
-const LEARN_UPDATED = new Date("2026-08-07");  // /learn/* board combos
-const EXAM_UPDATED = new Date("2026-08-30");   // exam-structure + landing pages
+const LEARN_UPDATED = new Date("2026-08-31");  // /learn/* board combos
+const EXAM_UPDATED = new Date("2026-08-31");   // exam-structure + landing pages
+
+/** A record's own updatedAt when it declares one, else the group fallback. */
+const modified = (updatedAt: string | undefined, fallback: Date) =>
+  updatedAt ? new Date(updatedAt) : fallback;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
   const out: MetadataRoute.Sitemap = STATIC_PATHS.map((p) => ({
     url: `${base}${p || "/"}`,
     lastModified: STATIC_UPDATED,
-    changeFrequency: "weekly",
-    priority: p === "" ? 1.0 : 0.7,
   }));
 
   // Subject-targeted /help-in-study/<subject> pages (high-priority — unique content per subject)
@@ -53,8 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     out.push({
       url: `${base}/help-in-study/${subject}`,
       lastModified: HUBS_UPDATED,
-      changeFrequency: "weekly",
-      priority: 0.85,
     });
   }
 
@@ -65,15 +73,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const combo of LEARN_COMBOS) {
     out.push({
       url: `${base}/learn/${combo.subject}/${combo.board}`,
-      lastModified: LEARN_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.75,
+      lastModified: modified(combo.updatedAt, LEARN_UPDATED),
     });
   }
 
   // Board hub index pages
   for (const b of ["cbse", "gcse", "waec", "ap", "cambridge"]) {
-    out.push({ url: `${base}/${b}`, lastModified: EXAM_UPDATED, changeFrequency: "weekly", priority: 0.85 });
+    out.push({ url: `${base}/${b}`, lastModified: EXAM_UPDATED });
   }
 
   // Exam-structure pages (question families, practice sets, calculators) —
@@ -81,9 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const p of EXAM_PAGES) {
     out.push({
       url: `${base}/${p.board}/${p.slug}`,
-      lastModified: EXAM_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.85,
+      lastModified: modified(p.updatedAt, EXAM_UPDATED),
     });
   }
 
@@ -91,9 +95,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const p of TOOL_LANDINGS) {
     out.push({
       url: `${base}/tools/${p.slug}`,
-      lastModified: EXAM_UPDATED,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      lastModified: modified(p.updatedAt, EXAM_UPDATED),
     });
   }
 
@@ -102,8 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     out.push({
       url: `${base}/blog/${p.slug}`,
       lastModified: new Date(p.updatedAt ?? p.publishedAt),
-      changeFrequency: "monthly",
-      priority: 0.7,
     });
   }
 

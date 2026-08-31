@@ -8,6 +8,9 @@
 // Any combo NOT in this list returns notFound() from the page route.
 
 export type LearnCombo = {
+  /** ISO date of the last significant content change; feeds sitemap lastmod.
+   *  Omit it and the page falls back to its group date in sitemap.ts. */
+  updatedAt?: string;
   subject: string;          // "math" | "biology" | ...
   board: string;            // curriculum id from packages/core/src/curricula.ts
   /** SEO title — overrides the generic auto-title */

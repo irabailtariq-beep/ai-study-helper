@@ -38,6 +38,9 @@ export type ExamPage = {
   sections: { heading: string; body: string }[];
   problems: ExamProblem[];
   faqs: { q: string; a: string }[];
+  /** ISO date of the last significant content change; feeds sitemap lastmod.
+   *  Omit it and the page falls back to its group date in sitemap.ts. */
+  updatedAt?: string;
   targetQuery: string;
   hubSubjects: string[];
   calculator?: ApCalcData;

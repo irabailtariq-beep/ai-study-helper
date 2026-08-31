@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -117,12 +118,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteFooter />
         </ThemeProvider>
 
+        {/* Vercel Web Analytics: cookieless (visitors are identified by a hash of
+            the request, discarded after 24h), so it needs no consent banner, and
+            the Hobby tier covers 50,000 events a month — far beyond our traffic.
+            This is the number that answers "how many people visited". */}
+        <Analytics />
+
         {/* Google Analytics 4 — only loads when GA ID is set */}
         {gaId && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
             <Script id="ga-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}',{anonymize_ip:true});`}
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}');`}
             </Script>
           </>
         )}

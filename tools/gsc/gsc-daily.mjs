@@ -50,6 +50,30 @@ hist.push(snap);
 hist.sort((a, b) => (a.ranOn < b.ranOn ? -1 : 1));
 fs.writeFileSync(HIST, JSON.stringify(hist, null, 2) + "\n");
 
+
+// ── Extra dimensions for the dashboard ────────────────────────────────────────
+// Same settled 14-day window as above. Search Analytics quota is 1,200 QPD, so
+// three more calls a day is nothing.
+const q = async (dimensions, rowLimit) => {
+  try {
+    return (await wm.searchanalytics.query({
+      siteUrl: SITE, requestBody: { startDate, endDate, dimensions, rowLimit },
+    })).data.rows || [];
+  } catch (e) {
+    console.error(`(dashboard) ${dimensions.join("+")} query failed: ${e.message}`);
+    return [];
+  }
+};
+const topPages = (await q(["page"], 25))
+  // Drop our own site: lookups — they are the owner checking the site, not students.
+  .filter((r) => r.impressions > 0)
+  .sort((a, b) => b.impressions - a.impressions).slice(0, 5);
+const topQueries = (await q(["query"], 50))
+  .filter((r) => !/^site:/i.test(r.keys[0]))
+  .sort((a, b) => b.impressions - a.impressions).slice(0, 5);
+const totalsRow = (await q([], 1))[0] || {};
+const avgPosition = totalsRow.position ? totalsRow.position.toFixed(1) : "n/a";
+
 const prevRead = hist.length >= 2 ? hist[hist.length - 2] : null;
 const wowClicks = snap.prev7Clicks ? Math.round((100 * (snap.last7Clicks - snap.prev7Clicks)) / snap.prev7Clicks) : 0;
 const wowImpr = snap.prev7Impressions ? Math.round((100 * (snap.last7Impressions - snap.prev7Impressions)) / snap.prev7Impressions) : 0;
@@ -84,3 +108,77 @@ const summary = `## 📊 Search Console — ${snap.ranOn}
 fs.writeFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), "summary.md"), summary);
 console.log(summary);
 console.log(`(history entries: ${hist.length})`);
+
+// ── One-page dashboard the owner can bookmark ─────────────────────────────────
+// Static HTML committed by the daily Action and served from apps/web/public, so
+// there is no server route to break the build and no credentials in Vercel env.
+// noindex: this is an internal page, and it is deliberately absent from sitemap.ts.
+const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const short = (u) => esc(String(u).replace("https://helpinstudy.com", "") || "/");
+const arrow = (n) => (n > 0 ? `<span class="up">▲ +${n}%</span>` : n < 0 ? `<span class="down">▼ ${n}%</span>` : `<span class="flat">▬ 0%</span>`);
+const rowsOr = (rows, render, empty) =>
+  rows.length ? rows.map(render).join("") : `<tr><td colspan="3" class="empty">${empty}</td></tr>`;
+
+const dashboard = `<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Help in Study — how the site is doing</title>
+<style>
+:root{--bg:#f4efe3;--card:#fff;--ink:#1a2530;--muted:#6b7785;--teal:#0a6357;--line:#e4ddcc}
+*{box-sizing:border-box}
+body{margin:0;padding:20px;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:22px;margin:0 0 4px}
+.when{color:var(--muted);font-size:13px;margin-bottom:18px}
+.verdict{background:var(--card);border-left:5px solid var(--teal);border-radius:12px;padding:16px 18px;font-size:17px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.stat{background:var(--card);border-radius:12px;padding:16px;text-align:center}
+.stat .n{font-size:32px;font-weight:800;color:var(--teal);line-height:1.1}
+.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+.stat .d{font-size:13px;margin-top:6px}
+.up{color:#0a7d3f;font-weight:700}.down{color:#b3402f;font-weight:700}.flat{color:var(--muted)}
+.card{background:var(--card);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px}
+.empty{color:var(--muted);font-style:italic}
+.note{color:var(--muted);font-size:13px;line-height:1.55}
+a{color:var(--teal)}
+</style></head><body><div class="wrap">
+<h1>How the site is doing</h1>
+<div class="when">Search Console data for ${startDate} to ${endDate} · updated ${snap.ranOn}. Google's data always runs about 3 days behind.</div>
+
+<div class="verdict">${verdict}</div>
+
+<div class="grid">
+  <div class="stat"><div class="n">${snap.last7Clicks}</div><div class="l">Clicks · 7 days</div><div class="d">${arrow(wowClicks)}</div></div>
+  <div class="stat"><div class="n">${snap.last7Impressions}</div><div class="l">Times shown</div><div class="d">${arrow(wowImpr)}</div></div>
+  <div class="stat"><div class="n">${avgPosition}</div><div class="l">Average position</div><div class="d">lower is better</div></div>
+</div>
+
+<div class="card">
+  <h2>Pages people saw most</h2>
+  <table>${rowsOr(topPages, (r) => `<tr><td>${short(r.keys[0])}</td><td class="n">${r.impressions} shown · ${r.clicks} click${r.clicks === 1 ? "" : "s"}</td></tr>`, "No pages shown in search yet.")}</table>
+</div>
+
+<div class="card">
+  <h2>What people searched to find us</h2>
+  <table>${rowsOr(topQueries, (r) => `<tr><td>${esc(r.keys[0])}</td><td class="n">${r.impressions} shown · position ${r.position.toFixed(0)}</td></tr>`, "No searches recorded yet.")}</table>
+</div>
+
+<div class="card">
+  <h2>What these numbers mean</h2>
+  <p class="note"><b>Times shown</b> is how often a page of ours appeared in someone's Google results. <b>Clicks</b> is how many of them actually came to the site. <b>Average position</b> is where we sit in the results: 1 to 10 is the first page, and anything above 20 means almost nobody scrolls that far. Early on, position is the number that moves first — clicks follow much later.</p>
+  <p class="note">This page only covers Google. Visitor numbers from every source live in the Vercel dashboard under Analytics.</p>
+</div>
+</div></body></html>
+`;
+const here = path.dirname(fileURLToPath(import.meta.url));
+fs.writeFileSync(path.join(here, "dashboard.html"), dashboard);
+// Served copy — apps/web/public is deployed as-is, so it lands at /dashboard.html
+const publicDir = path.join(here, "..", "..", "apps", "web", "public");
+if (fs.existsSync(publicDir)) fs.writeFileSync(path.join(publicDir, "dashboard.html"), dashboard);
+console.log("dashboard.html written");

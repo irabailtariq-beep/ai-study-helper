@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/", disallow: ["/api/", "/settings"] },
     ],
     sitemap: `${base}/sitemap.xml`,
-    host: base,
+    // No `host:` — Google has never supported it (it was a Yandex directive) and it
+    // is ignored; canonicalisation is handled by our redirects + canonical tags.
   };
 }
