@@ -133,9 +133,9 @@ const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
 const weeksWithAClick = hist.slice(-21).filter((h) => h.last7Clicks > 0).length;
 let verdictLine;
 if (snap.last7Impressions === 0) {
-  verdictLine = "Google has not shown the site to anyone this week. That is normal for a site this new — the job right now is getting pages indexed.";
+  verdictLine = "Nobody saw our site in Google this week. That is normal for a site this new — right now the job is simply getting Google to read our pages.";
 } else if (snap.last7Clicks === 0) {
-  verdictLine = `Google showed the site ${plural(snap.last7Impressions, "time")} this week, but nobody clicked — we are still ranking too low to be seen. Position is the number that moves first.`;
+  verdictLine = `Our pages appeared in Google ${plural(snap.last7Impressions, "time")} this week, but nobody clicked. That is because we come up around page 8 of the results, and almost nobody scrolls that far. Climbing up the list is what has to happen next.`;
 } else {
   const diff = snap.last7Clicks - snap.prev7Clicks;
   const cmp = diff > 0 ? `${plural(diff, "more visit")} than last week`
@@ -222,66 +222,66 @@ td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px;fo
 b{font-weight:700}
 </style></head><body><div class="wrap">
 
-<div class="pill">Updated ${snap.ranOn} · Google's numbers run to ${endDate} (it publishes ~3 days late)</div>
+<div class="pill">Checked ${snap.ranOn} · Google's numbers only go up to ${endDate}, because it always reports about 3 days late</div>
 
 <div class="verdict">${verdictLine}</div>
 
 ${alerts.join("")}
 
 <div class="funnel">
-  <div class="stage"><div class="n">${totalPages ?? "–"}</div><div class="l">Pages published</div><div class="s">everything we've built</div></div>
-  <div class="stage"><div class="n">${indexedNow ?? "–"}</div><div class="l">Google has indexed</div><div class="s">${indexedDelta > 0 ? `+${indexedDelta} since last check` : "can be found in search"}</div></div>
-  <div class="stage"><div class="n">${snap.last7Impressions}</div><div class="l">Times shown · 7 days</div><div class="s">appeared in results</div></div>
-  <div class="stage"><div class="n">${snap.last7Clicks}</div><div class="l">Visits · 7 days</div><div class="s">actually clicked through</div></div>
+  <div class="stage"><div class="n">${totalPages ?? "–"}</div><div class="l">Pages we built</div><div class="s">the whole website</div></div>
+  <div class="stage"><div class="n">${indexedNow ?? "–"}</div><div class="l">Google has read</div><div class="s">${indexedDelta > 0 ? `+${indexedDelta} since yesterday` : "the rest are invisible"}</div></div>
+  <div class="stage"><div class="n">${snap.last7Impressions}</div><div class="l">Showed up in Google</div><div class="s">this week, in someone's search</div></div>
+  <div class="stage"><div class="n">${snap.last7Clicks}</div><div class="l">People who came</div><div class="s">this week, clicked and visited</div></div>
 </div>
 
 <div class="card">
-  <h2>The bottleneck</h2>
+  <h2>What is holding us back</h2>
   <div class="bar"><i style="width:${indexedPct}%"></i></div>
-  <div style="font-size:15px"><b>${indexedNow ?? "–"} of ${totalPages ?? "–"} pages</b> are in Google (${indexedPct}%).</div>
-  <p class="note">Pages Google has not indexed cannot be found by anyone, however good they are. This is the number to move — and the list below is how.</p>
+  <div style="font-size:15px"><b>Google has only read ${indexedNow ?? "–"} of our ${totalPages ?? "–"} pages</b> (${indexedPct}%).</div>
+  <p class="note">Google has to read a page before it can ever show it to anyone. The other ${(totalPages ?? 0) - (indexedNow ?? 0)} pages might as well not exist yet — nobody can find them, no matter how good they are. Getting this number up is the single most useful thing we can do right now.</p>
 </div>
 
 <div class="card">
-  <h2>Today's 10 — request indexing for these</h2>
+  <h2>Your job today — 10 pages to submit</h2>
   <ol>${worklistHtml}</ol>
-  <p class="note">Search Console → paste in the top search bar → Request indexing. Google allows about 10 a day. Ordered by what is most worth your clicks: anything genuinely broken first (there is none today), then pages Google knows about but has never crawled.</p>
+  <p class="note">This is asking Google to come and read these pages. Open Search Console, paste one link into the search bar at the very top, press enter, then click <b>Request indexing</b>. Repeat for each. Google only allows about 10 a day, and this list is already sorted so the most useful ones are first.</p>
 </div>
 
 <div class="card">
-  <h2>Times shown, day by day (last ${daily.length} days)</h2>
+  <h2>Showing up in Google, day by day</h2>
   <svg width="100%" viewBox="0 0 ${sparkW} ${sparkH}" preserveAspectRatio="none" style="display:block;height:52px">
     <polyline fill="none" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round" points="${points}"/>
   </svg>
-  <p class="note">Peak day: ${maxImpr}. Zero is the bottom of the chart, so a flat line low down really is flat.</p>
+  <p class="note">Each point is one day. It counts how many times one of our pages appeared in front of someone searching Google — whether or not they clicked. Best day so far: ${maxImpr}. The bottom of the chart is zero, so a low flat line really does mean nothing happened.</p>
 </div>
 
 <div class="card">
-  <h2>Every visit from Google (one dot = one day)</h2>
+  <h2>Days someone actually visited</h2>
   <div class="dots">${clickDots}</div>
-  <p class="note">Filled dots are days someone clicked through. Best week so far: ${plural(lifetimeClicks, "visit")}.</p>
+  <p class="note">One dot per day. A dark dot means at least one person clicked through to the site that day. Most days are still empty — that is normal this early. Best week so far: ${plural(lifetimeClicks, "visitor")}.</p>
 </div>
 
 <div class="card">
-  <h2>Pages Google showed most</h2>
+  <h2>Which of our pages Google showed</h2>
   <table>${rowsOr(topPages, (r) => `<tr><td>${short(r.keys[0])}</td><td class="n">${r.impressions} shown · ${plural(r.clicks, "click")}</td></tr>`, "Nothing shown in search yet.")}</table>
 </div>
 
 <div class="card">
-  <h2>What people searched</h2>
+  <h2>What people typed into Google</h2>
   <table>${rowsOr(topQueries, (r) => `<tr><td>${esc(r.keys[0])}</td><td class="n">${r.impressions} shown · position ${r.position.toFixed(0)}</td></tr>`, "No searches recorded yet.")}</table>
-  <p class="note">Google hides the search words behind rare visits to protect people's privacy, so this list is always shorter than the real one — right now most of our visits have no search word attached at all. It fills in on its own as traffic grows.</p>
+  <p class="note">These are real things people typed into Google that our site showed up for. <b>Position</b> means where we appeared: 1 to 10 is the first page of results, and 80 means page eight, where nobody looks. Google hides the words behind rare visits to protect people, so this list is always shorter than reality — it fills in by itself as we grow.</p>
 </div>
 
 <div class="card">
-  <h2>Links from other websites</h2>
+  <h2>Other websites linking to us</h2>
   <div style="font-size:15px"><b>${idx ? idx.externalLinks.length : "–"} found.</b></div>
-  <p class="note">Links from other sites are the main thing telling Google we are worth trusting, and the main reason pages sit unindexed. This counts every external page Google says links to us — including junk auto-generated ones, which do not help.</p>
+  <p class="note">When another website links to ours, Google treats it as a vote that we are trustworthy — and trust is exactly what decides whether it bothers reading our pages. This is the reason most of our pages are still unread. Note: the one we have is an automatic spam page, so it counts for nothing real.</p>
 </div>
 
 <div class="card">
-  <h2>What these numbers mean</h2>
-  <p class="note"><b>Times shown</b> = we appeared in someone's Google results. <b>Visits</b> = they actually clicked. The order is always the same: publish a page → Google indexes it → it starts being shown → eventually someone clicks. Each arrow takes longer than the one before, so early on the only numbers that move are the first two — and those are the ones you control.</p>
+  <h2>How this all works</h2>
+  <p class="note">It always happens in this order, and you cannot skip a step:<br><br><b>1. We build a page.</b> Instant — we control this.<br><b>2. Google reads it.</b> Days to months. We push this along by submitting the 10 links above.<br><b>3. It starts showing up</b> when someone searches. Weeks after that.<br><b>4. Someone clicks</b> and visits. This is last, and slowest, because it only happens once we climb high enough in the results to be seen.<br><br>So early on, the first two numbers are the ones that move — and they are the two you can actually control. The last one is the reward for the other three.</p>
 </div>
 
 </div></body></html>
