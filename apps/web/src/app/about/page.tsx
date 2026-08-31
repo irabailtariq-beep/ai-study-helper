@@ -46,8 +46,10 @@ export default function AboutPage() {
 
         <h2 className="text-2xl font-bold mt-8">Who writes Help in Study</h2>
         <p className="text-base leading-relaxed">
-          Hi — I'm <b>Rabail</b>, the founder of Help in Study, and I write and check every study guide on it
-          myself. I'm a current student, working through my own IGCSE and A-Level exams — so this comes from
+          Hi — I'm <b>Rabail</b>, the founder of Help in Study. Every guide here is drafted with AI and then
+          checked by me, line by line, against the exam board's own specification — I do not publish
+          anything I have not read. That is how one student can cover five exam systems honestly;
+          pretending I typed all of it myself would be the lie. I'm a current student, working through my own IGCSE and A-Level exams — so this comes from
           someone actually sitting these papers, not a faceless content team. English is my strongest subject,
           history is my favourite, and I focus on plain-English explanations and exam technique for students
           across CBSE, GCSE, AP, Cambridge and WAEC.

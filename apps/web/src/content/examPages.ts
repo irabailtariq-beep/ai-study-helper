@@ -1060,7 +1060,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Biology exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 36 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board (60 MCQ, 2 long FRQs scored 8-10 points treated as 10 here, 4 short FRQs at 4 points); cutoffs are a conservative middle of Albert, PrepScholar and num8ers estimates built on released curves, and official cutoffs change every year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 36 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1113,7 +1113,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Chemistry exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 7 questions totalling 46 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board (60 MCQ, 3 long FRQs at 10 points, 4 short FRQs at 4 points); cutoffs follow the widely cited prep-site estimate of roughly 72 percent for a 5 and 42 percent for a 3, and official cutoffs are re-equated each year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 7 questions totalling 46 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1166,7 +1166,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Calculus AB exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 54 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board's current hybrid digital format (42 MCQ, 6 FRQs at 9 points each); cutoffs are conservative middles of Albert and Test Ninjas estimates based on released curves, and the official conversion shifts slightly each year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 54 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1220,7 +1220,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Calculus BC exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 54 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board's current hybrid digital format (42 MCQ, 6 FRQs at 9 points each); BC has one of the most generous curves, with prep-site estimates putting a 5 near 57 to 63 percent, and official cutoffs vary by year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 54 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1274,7 +1274,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Physics 1 exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 4 questions totalling 40 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board's revised 2025 format (40 MCQ, 4 FRQs worth 10, 12, 10 and 8 points for 40 total); cutoffs are a slightly conservative version of calculator estimates near 69 percent for a 5, and official cutoffs are re-equated each year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 4 questions totalling 40 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1327,7 +1327,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP US History exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 40 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 60 percent across 5 questions totalling 22 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board (55 MCQ at 40 percent, 3 SAQs at 3 points each for 20 percent, a 7 point DBQ for 25 percent and a 6 point LEQ for 15 percent); cutoffs are conservative middles of Albert and num8ers 150 point composite estimates, and official curves vary yearly."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 40 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 60 percent across 5 questions totalling 22 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1380,7 +1380,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Psychology exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 66.7 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 33.3 percent across 2 questions totalling 14 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board's revised 2025 format (75 MCQ, then a 7 point Article Analysis Question and a 7 point Evidence Based Question); cutoffs blend the old released curve near 75 percent for a 5 with higher new-format calculator estimates, and College Board does not publish exact yearly cut points."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 66.7 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 33.3 percent across 2 questions totalling 14 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1431,7 +1431,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Statistics exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 24 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board (40 MCQ, 5 short FRQs plus 1 Investigative Task each scored 0 to 4, with the task officially weighted at a quarter of the section); cutoffs use the commonly cited released-curve line of 70, 57, 44 and 33 percent, and official cutoffs shift each year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 24 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1484,7 +1484,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP English Language exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 45 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 55 percent across 3 questions totalling 18 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board's fully digital format (45 MCQ at 45 percent, 3 essays scored 0 to 6 for 55 percent); cutoffs are a conservative middle of prep-site estimates anchored to the released curve of roughly 69 percent for a 5, and official conversions vary yearly."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 45 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 55 percent across 3 questions totalling 18 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -1537,7 +1537,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Human Geography exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 3 questions totalling 21 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper. Structure per College Board (60 MCQ, 3 FRQs scored 0 to 7 each); Human Geography has one of the toughest curves, so cutoffs follow calculator bands near 74 percent for a 5 and about half the composite for a 3, and official cutoffs change every year."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 3 questions totalling 21 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
@@ -3977,7 +3977,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "heading": "An 8-week revision plan that respects the November clock",
-        "body": "Count back from 3 November and you have roughly eight full weeks from the start of September, so do not spread them evenly across the specification — put them where the marks are. In Foundation maths, number, ratio and proportion carry a large share of the paper, and a grade 4 has typically sat somewhere near half marks in recent series (boundaries move every year, so treat that as a working target, not a promise). Weeks 1-2: sit one full timed paper per subject to find your gaps — the free mock exam generator on this site builds timed papers in your board's style, so you are not burning real past papers this early. Weeks 3-6: two focused sessions per weak topic, using the quiz tool for quick retrieval practice and the math solver whenever a worked step refuses to make sense. In English Language, give most of this block to the writing questions, which typically carry around half the marks on each paper (check your own board's split), and put every practice answer through the AI marking tool so you get band-by-band feedback instead of guessing how you did. Weeks 7-8: one full timed paper every three days, alternating subjects the way the real week will, with non-calculator practice positioned to match your board's paper order. Marks come from rehearsing the exam, not re-reading notes."
+        "body": "Count back from 3 November and you have roughly eight full weeks from the start of September, so do not spread them evenly across the specification — put them where the marks are. In Foundation maths, number, ratio and proportion carry a large share of the paper, and a grade 4 is nearer two thirds of the paper than half with AQA and Edexcel (154 and 151 out of 240 in June 2026) though only about 44 percent with OCR (133 out of 300) (boundaries move every year, so treat that as a working target, not a promise). Weeks 1-2: sit one full timed paper per subject to find your gaps — the free mock exam generator on this site builds timed papers in your board's style, so you are not burning real past papers this early. Weeks 3-6: two focused sessions per weak topic, using the quiz tool for quick retrieval practice and the math solver whenever a worked step refuses to make sense. In English Language, give most of this block to the writing questions, which typically carry around half the marks on each paper (check your own board's split), and put every practice answer through the AI marking tool so you get band-by-band feedback instead of guessing how you did. Weeks 7-8: one full timed paper every three days, alternating subjects the way the real week will, with non-calculator practice positioned to match your board's paper order. Marks come from rehearsing the exam, not re-reading notes."
       }
     ],
     "problems": [],
@@ -4111,7 +4111,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "q": "Is 60 percent a good GCSE grade?",
-        "a": "There is no fixed answer, and this is the most common misunderstanding about GCSE. Boundaries are set as raw marks after the exam, not as percentages, and they are usually well below what people expect. In June 2026, 60 percent of the marks on Higher tier maths was comfortably above a grade 6 with every board, while on Foundation tier the same percentage was around a grade 4. Always compare your mark to the published boundary for your exact paper."
+        "a": "There is no fixed answer, and this is the most common misunderstanding about GCSE. Boundaries are set as raw marks after the exam, not as percentages, and they are usually well below what people expect. In June 2026, 60 percent of the marks on Higher tier maths was above a grade 6 with every board. On Foundation tier the same percentage was only a grade 3 with AQA and Edexcel, where a grade 4 needed 154 and 151 marks out of 240 — and a grade 4 with OCR, whose Foundation grade 4 sat at 133 out of 300. Always compare your mark to the published boundary for your exact paper."
       },
       {
         "q": "Can I get a grade 9 on Foundation tier?",

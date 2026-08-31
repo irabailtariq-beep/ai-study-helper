@@ -81,7 +81,7 @@ queue.forEach((p, i) => {
 // how the blog quietly stops for weeks.
 const daysLeft = Math.floor(queue.length / Math.max(PER_DAY, 1));
 if (queue.length === 0) {
-  problems.push("QUEUE IS EMPTY — nothing left to publish. Add posts to tools/blog-queue/queue.json.");
+  warnings.push("Queue is empty — nothing to publish. That is the intended state since the daily publisher was stopped on 2026-09-01; add a post to queue.json only when there is a real reason to publish one.");
 } else if (daysLeft < LOW_QUEUE_DAYS) {
   warnings.push(`Only ${queue.length} posts left (~${daysLeft} days at ${PER_DAY}/day). Top the queue up.`);
 }

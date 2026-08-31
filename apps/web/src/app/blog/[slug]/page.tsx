@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: p.description,
     alternates: { canonical: `/blog/${p.slug}` },
     openGraph: {
+      images: [{ url: `/api/og?title=${encodeURIComponent(p.title)}&tag=${encodeURIComponent("Blog")}`, width: 1200, height: 630 }],
       type: "article",
       title: p.title,
       description: p.description,

@@ -565,7 +565,7 @@ French verbs eat up half your study time and earn most of your marks. The trick 
 
 ## Vocabulary that sticks
 
-Use [Vocab Builder](/explain) and pick "French". You get the meaning, three example sentences, synonyms, and a memory tip in one tap. Add the words that surprised you to flashcards.
+Paste the French word or phrase into [Explain](/explain) and ask for the meaning plus two example sentences. Set your board first and the examples come back in the register your paper expects. Add the words that surprised you to flashcards.
 
 ## Writing the exam essay
 
@@ -591,7 +591,7 @@ AI is good at the deliberate-practice push.
 
 1. **One sentence a day, written by you, then reviewed.** Use [Essay Coach](/essay-coach) → "Improve my draft" with your single sentence. The AI suggests sharper vocabulary or a better tense.
 2. **Ten flashcards a week from your reading.** Use [Flashcards](/flashcards). Spanish vocabulary is huge but the high-frequency 2,000 words cover most of what you read.
-3. **Subjunctive practice every Sunday.** It is the topic that separates B from A grades. Drill it in [Mock Exam](/mock-exam) until the triggers are automatic.
+3. **Subjunctive practice every Sunday.** It is the topic that separates a grade 6 from a grade 8. Drill it in [Mock Exam](/mock-exam) until the triggers are automatic.
 
 ## The "ser" vs "estar" trap
 
@@ -1412,7 +1412,7 @@ Three differences to plan around:
 
 - **Marks live in the reasoning step.** A correct final answer with no working, or a correct opinion with no evidence, is often worth half the marks or fewer.
 - **Questions are unfamiliar on purpose.** AQA, Edexcel, OCR and Cambridge International A Level papers all recombine topics you learned separately, so memorised past answers transfer badly.
-- **The A to A* boundary is narrow.** It is usually a handful of marks across a whole paper, so precision on questions you can already half-do is worth more than starting a brand new topic.
+- **The A to A-star boundary is narrow.** It is usually a handful of marks across a whole paper, so precision on questions you can already half-do is worth more than starting a brand new topic.
 
 ## The weekly rotation for three subjects, with real numbers
 

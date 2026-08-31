@@ -15,7 +15,7 @@ export default function TermsPage() {
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-3xl font-bold my-4">Terms of Use</h1>
-      <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Effective: {new Date().getFullYear()}</p>
+      <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Last updated: 1 September 2026</p>
 
       <section className="space-y-4 mt-6">
         <p>By using Help in Study you agree to these terms.</p>

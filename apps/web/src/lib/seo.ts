@@ -14,7 +14,7 @@ export const SITE = {
   // Add languages once you ship localisation
   languages: ["en"],
   // Used in JSON-LD organization schema
-  founder: "Help in Study",
+  founder: "Rabail",
   logo: "/icons/icon-512.png",
 } as const;
 

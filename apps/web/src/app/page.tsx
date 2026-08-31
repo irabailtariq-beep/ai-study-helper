@@ -50,7 +50,7 @@ export default function Home() {
         <div className="mt-7 flex justify-center">
           <Link href="/about" className="inline-flex items-center gap-2 text-xs sm:text-sm px-4 py-2 rounded-full glass-panel" style={{ color: "var(--ash-muted)" }}>
             <span className="inline-flex items-center justify-center rounded-full text-white font-bold" style={{ width: 22, height: 22, fontSize: 11, background: "var(--ash-primary)" }}>R</span>
-            Written &amp; checked by Rabail, a real student — not a content farm.
+            Drafted with AI, checked by Rabail — a real student, not a content farm.
           </Link>
         </div>
 
@@ -308,7 +308,7 @@ const CURRICULA_SUBJECTS: { name: string; hub: string; tagline: string; groups: 
 const FAQ = [
   { q: "What is Help in Study?", a: "Help in Study is a free AI study helper. You upload a photo, PDF, or just ask a question — our AI explains it in plain words at your level. It's built for five major exam systems: CBSE (India), GCSE (UK), AP (USA), Cambridge IGCSE & A-Level, and WAEC (West Africa)." },
   { q: "Is the AI study helper really free?", a: "Yes — completely. No card, no time limit, no hidden trial, and no paid plans. Every tool is free for every student, forever." },
-  { q: "How is this different from ChatGPT?", a: "ChatGPT doesn't know your country, your board, or your grade — so its terminology and exam style are often wrong. Help in Study builds those four signals into every AI reply. Plus we generate quizzes, flashcards, mock exams, and examiner-style marking from any material — ChatGPT doesn't." },
+  { q: "How is this different from ChatGPT?", a: "ChatGPT doesn't know your country, your board, or your grade — so its terminology and exam style are often wrong. Help in Study builds those four signals into every AI reply. It also turns any material into quizzes, flashcards, mock exams and examiner-style marking in one click, already set to your board and grade, instead of you having to describe your syllabus every time." },
   { q: "Will it help with math homework?", a: "Yes. The Math Solver shows every line of working, names the method (\"using the quadratic formula\"), flags common pitfalls, and gives you a way to check your answer. It works on photos, PDFs, or text." },
   { q: "Which subjects can I get help in study with?", a: "Every school subject — math, English, physics, chemistry, biology, economics, accounting, computer science, and more. Pick yours on the homepage to start." },
   { q: "Is my child's data safe?", a: "We collect only what's needed: profile, content you upload, usage counts. We use privacy-friendly, anonymized analytics, show no ads, and never sell student data. One-click data export and account delete from Settings." },

@@ -266,7 +266,7 @@ export const TOOL_LANDINGS: ToolLanding[] = [
     "faqs": [
       {
         "q": "Is it really free, or free until you pay to unlock subjects?",
-        "a": "Really free — every subject, every topic, no unlock, no daily cap, no registration. It stays free because it generates questions with AI on demand instead of licensing question banks. There is no plan to charge, and there are no ads either."
+        "a": "Really free — every subject, every topic, no unlock, no registration. There is a daily limit on how many sets one person can generate, so the site stays free for everyone, and it resets each day. It stays free because it generates questions with AI on demand instead of licensing question banks. There is no plan to charge, and there are no ads either."
       },
       {
         "q": "Are these actual WAEC past questions?",

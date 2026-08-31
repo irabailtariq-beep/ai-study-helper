@@ -70,3 +70,32 @@ jobs:
             git pull --rebase origin main || { echo "Rebase failed."; exit 1; }
           done
           echo "ERROR: could not push after 5 attempts."; exit 1
+
+      # Without this, a broken Search Console robot is silent: the report just
+      # stops arriving and nothing says why. The blog robot has had this since
+      # August; this one never did.
+      - name: Tell the owner if the Search Console robot failed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "## ⚠️ The Search Console robot failed"
+            echo ""
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            echo "Most likely: the GSC_SA_JSON service-account key expired or was rotated,"
+            echo "or Search Console was briefly unreachable."
+            echo ""
+            echo "What it means for you: no daily numbers today, and helpinstudy.com/dashboard.html"
+            echo "is still showing the last successful run rather than today."
+            echo ""
+            echo "cc @irabailtariq-beep"
+          } > /tmp/gscfail.md
+          TITLE="Search Console robot failed"
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -z "$NUM" ]; then
+            gh issue create --title "⚠️ $TITLE" --body-file /tmp/gscfail.md
+          else
+            gh issue comment "$NUM" --body-file /tmp/gscfail.md
+          fi

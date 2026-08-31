@@ -272,7 +272,7 @@ details.card summary b{color:var(--ink)}
 b{font-weight:700}
 </style></head><body><div class="wrap">
 
-<div class="pill">Checked ${snap.ranOn} · Google's numbers only go up to ${endDate}, because it always reports about 3 days late</div>
+<div class="pill">Checked ${snap.ranOn} · page counts last checked ${idx?.ranOn ?? "never"} · Google's numbers only go up to ${endDate}, because it always reports about 3 days late</div>
 
 <div class="verdict">${verdictLine}</div>
 

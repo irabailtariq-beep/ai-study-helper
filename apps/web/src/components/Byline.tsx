@@ -32,7 +32,7 @@ export function Byline() {
         R
       </span>
       <span>
-        Written &amp; checked by{" "}
+        Drafted with AI, then checked line by line by{" "}
         <a href="/about" style={{ color: "var(--ash-text)", fontWeight: 600, textDecoration: "underline" }}>
           Rabail
         </a>

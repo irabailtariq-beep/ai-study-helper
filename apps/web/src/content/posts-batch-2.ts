@@ -3063,12 +3063,14 @@ That's the whole idea. Each case has its own articles (der/die/das changes), but
 
 ## The articles (the part everyone fears)
 
-| | Masculine | Feminine | Neuter | Plural |
-|---|---|---|---|---|
-| Nom | der | die | das | die |
-| Acc | den | die | das | die |
-| Dat | dem | der | dem | den |
-| Gen | des | der | des | der |
+Each line is masculine, feminine, neuter, plural — in that order:
+
+- **Nominative** — der, die, das, die
+- **Accusative** — den, die, das, die
+- **Dative** — dem, der, dem, den
+- **Genitive** — des, der, des, der
+
+Read down the first column and only one word changes across all four cases: der, den, dem, des. That is the masculine column, and it is the one that does almost all the work.
 
 Memorise this table. It pays off forever.
 

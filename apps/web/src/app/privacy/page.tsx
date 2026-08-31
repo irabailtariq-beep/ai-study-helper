@@ -15,7 +15,7 @@ export default function PrivacyPage() {
     <main className="min-h-screen p-6 max-w-3xl mx-auto">
       <Link href="/" className="text-sm" style={{ color: "var(--ash-primary)" }}>← Home</Link>
       <h1 className="text-3xl font-bold my-4">Privacy Policy</h1>
-      <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Effective: {new Date().getFullYear()}</p>
+      <p className="text-sm" style={{ color: "var(--ash-muted)" }}>Last updated: 1 September 2026</p>
 
       <section className="prose mt-6 space-y-4">
         <p>Help in Study (<b>helpinstudy.com</b>) is a free study tool. We take your privacy seriously. This policy explains what we collect, how we use it, and the choices you have.</p>
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         <h2 className="text-xl font-semibold">What we collect</h2>
         <ul className="list-disc pl-5">
           <li><b>Profile</b>: your country, age, grade and curriculum. Stored on your device by default; synced to our database only if you sign in.</li>
-          <li><b>Content you send us</b>: text you type, and any photos/PDFs you upload. Sent to Google Gemini for processing. We do not sell it or share it with any other third party.</li>
+          <li><b>Content you send us</b>: text you type, and any photos/PDFs you upload. Sent to our AI providers — Google Gemini, and for some text requests a Llama model via Groq — to produce the answer. We do not sell it, and we share it with nobody else.</li>
           <li><b>Usage counts</b>: number of explanations, quizzes, chats and flashcard reviews per day. Used to show your streaks.</li>
           <li><b>Authentication</b> (only if you choose to sign in): email address and a secure session cookie, managed by Supabase.</li>
         </ul>

@@ -16,7 +16,7 @@ export const BOARD_HUBS: BoardHubConfig[] = [
   },
   {
     board: "gcse", label: "GCSE",
-    title: "GCSE Practice & Grade Boundaries — Free, All Boards",
+    title: "GCSE Practice & Grade Boundaries — AQA, Edexcel, OCR",
     description: "GCSE exam technique and data: pass marks, grade percentages, 6-mark question method and worked practice for AQA, Edexcel and OCR. Free, no signup.",
     h1: "GCSE practice, pass marks and exam technique",
     intro: "Real boundary numbers from the latest series, the level-marking system explained, and worked questions in the style your board actually uses — AQA, Edexcel and OCR.",
@@ -42,8 +42,8 @@ export const BOARD_HUBS: BoardHubConfig[] = [
   },
   {
     board: "ap", label: "AP",
-    title: "AP Score Calculators — Every Subject, Free (2027)",
-    description: "Free AP score calculators for Biology, Chemistry, Calculus, Physics 1, APUSH, Psychology, Statistics, English Language and more — real 2026 exam structures.",
+    title: "AP Score Calculators — 11 Subjects, Free (2027)",
+    description: "Free AP score calculators for Biology, Chemistry, Calculus, Physics 1, APUSH, Psychology, Statistics, English Language and more — real 2027 exam structures.",
     h1: "AP score calculators and exam practice",
     intro: "Slide in your practice-exam section scores and see your estimated AP score instantly. Each calculator uses the real current exam structure, with honest cut-point estimates — the College Board moves the real boundaries every year.",
     tools: [

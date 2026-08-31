@@ -1793,7 +1793,7 @@ Want more of these? Generate a set of Paper 6 style questions with [/quiz](/quiz
 
 ## FAQ
 
-**How long is Paper 6 and how many marks?** It is 1 hour long and worth 40 marks, usually about 10 percent of your final IGCSE Biology grade.
+**How long is Paper 6 and how many marks?** It is 1 hour long and worth 40 marks, which is 20 percent of your final IGCSE Biology grade. The full split is 30 percent multiple choice, 50 percent theory and 20 percent for this paper, so it is worth twice what most students assume.
 
 **Is Paper 6 easier than the practical?** Not easier, just different. Paper 5 rewards lab handling; Paper 6 rewards knowing the rules of recording, graphing and describing, which many students find the more predictable of the two.
 
@@ -4502,7 +4502,7 @@ For a formal letter, yes. WASSCE expects a short, capitalised, underlined headin
 Aim for about 450 words — the standard WASSCE composition length. That is enough to develop three or four points properly, and padding beyond it just adds chances to lose Mechanical Accuracy marks.
 
 **Can I just use "Yours sincerely" to be safe?**
-No — always match the close to the salutation. Dear Sir / Dear Madam takes *Yours faithfully.* *Yours sincerely* only follows a named salutation like "Dear Mr Bello," which you almost never have in a formal letter.
+No — always match the close to the salutation. Dear Sir / Dear Madam takes *Yours faithfully*. By contrast, *Yours sincerely* only follows a named salutation like "Dear Mr Bello," which you almost never have in a formal letter.
 
 **In short:** get the six format parts in order, keep the register formal and contraction-free, develop three or four points in their own paragraphs, and guard the easy Mechanical Accuracy marks — because in WAEC's 10/10/20/10 scheme, a clean, correctly laid-out letter is already scoring before your ideas even land.
 `,
@@ -5601,7 +5601,7 @@ And if you are aiming at a specific grade, see [the GCSE maths pass mark and bou
     title: "Ohm's Law: Current, Voltage and Resistance Made Clear (GCSE)",
     metaTitle: "Ohm's Law: Current, Voltage and Resistance (GCSE)",
     description: "Ohms law GCSE explained: V = I x R, rearranging, I-V graphs for resistors, filament lamps and diodes, plus worked examples and the common mistakes.",
-    publishedAt: "2026-08-24", readTime: "6 min read",
+    publishedAt: "2026-08-24", readTime: "6 min",
     tags: ["GCSE Physics","Ohm's Law","Electricity","Required Practical","Exam Tips"],
     body: `
 **Quick answer:** Ohm's law states that for an ohmic conductor at a constant temperature, the current through it is directly proportional to the potential difference across it. The equation is V = I x R (potential difference = current x resistance), measured in volts, amps and ohms. Rearrange it to I = V/R to find current, or R = V/I to find resistance.
