@@ -109,76 +109,184 @@ fs.writeFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), "summar
 console.log(summary);
 console.log(`(history entries: ${hist.length})`);
 
-// ── One-page dashboard the owner can bookmark ─────────────────────────────────
-// Static HTML committed by the daily Action and served from apps/web/public, so
-// there is no server route to break the build and no credentials in Vercel env.
-// noindex: this is an internal page, and it is deliberately absent from sitemap.ts.
+
+// ── One-page dashboard the owner can bookmark ────────────────────────────────
+// Design follows the 2026-08-31 research: a FUNNEL, not a metric wall, because
+// the funnel is honest (every figure is a real count), never empty (pages
+// published is non-zero on the worst day), and diagnostic — it names which
+// stage is stuck. Deliberately banned here, all of which the first version
+// shipped: percentage change on counts under ~30 ("+100%" on 1→2 clicks), a
+// verdict emoji that flips on ±1 click, average position as a headline (an
+// inverted scale computed over ~34 impressions), CTR, auto-scaled click charts,
+// and a live "visitors now" counter that would read 0 all day.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const readJson = (f, fallback) => {
+  try { return JSON.parse(fs.readFileSync(path.join(HERE, f), "utf8")); } catch { return fallback; }
+};
+const idx = readJson("index-state.json", null);
+
 const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const short = (u) => esc(String(u).replace("https://helpinstudy.com", "") || "/");
-const arrow = (n) => (n > 0 ? `<span class="up">▲ +${n}%</span>` : n < 0 ? `<span class="down">▼ ${n}%</span>` : `<span class="flat">▬ 0%</span>`);
-const rowsOr = (rows, render, empty) =>
-  rows.length ? rows.map(render).join("") : `<tr><td colspan="3" class="empty">${empty}</td></tr>`;
+const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+
+// Verdict: one plain sentence, no percentages, no emoji that flips on ±1.
+const weeksWithAClick = hist.slice(-21).filter((h) => h.last7Clicks > 0).length;
+let verdictLine;
+if (snap.last7Impressions === 0) {
+  verdictLine = "Google has not shown the site to anyone this week. That is normal for a site this new — the job right now is getting pages indexed.";
+} else if (snap.last7Clicks === 0) {
+  verdictLine = `Google showed the site ${plural(snap.last7Impressions, "time")} this week, but nobody clicked — we are still ranking too low to be seen. Position is the number that moves first.`;
+} else {
+  const diff = snap.last7Clicks - snap.prev7Clicks;
+  const cmp = diff > 0 ? `${plural(diff, "more visit")} than last week`
+    : diff < 0 ? `${plural(-diff, "fewer visit")} than last week` : "the same as last week";
+  const who = snap.last7Clicks === 1 ? "One person" : `${snap.last7Clicks} people`;
+  verdictLine = `${who} came from Google this week — ${cmp}.`;
+}
+
+// True per-day impressions for the sparkline. history.json stores a ROLLING
+// 7-day window, and plotting a moving average as a time series makes one busy
+// day look like a week-long plateau — so the sparkline uses the daily rows
+// pulled above instead.
+const daily = rows.map((r) => ({ date: r.keys[0], impressions: r.impressions || 0, clicks: r.clicks || 0 }));
+const maxImpr = Math.max(1, ...daily.map((d) => d.impressions));
+const sparkW = 320, sparkH = 44;
+const points = daily.map((d, i) => {
+  const x = daily.length > 1 ? (i / (daily.length - 1)) * sparkW : 0;
+  const y = sparkH - (d.impressions / maxImpr) * (sparkH - 4) - 2; // y-axis pinned to 0
+  return `${x.toFixed(1)},${y.toFixed(1)}`;
+}).join(" ");
+// One dot per real click — no axis, no interpolation between events that did
+// not happen.
+const clickDots = daily.map((d) =>
+  `<span class="dot ${d.clicks ? "on" : ""}" title="${d.date}: ${plural(d.clicks, "click")}"></span>`).join("");
+const lifetimeClicks = hist.reduce((m, h) => Math.max(m, h.last7Clicks), 0);
+
+const indexedNow = idx ? idx.indexed : null;
+const totalPages = idx ? idx.total : null;
+const indexedPct = idx && idx.total ? Math.round((idx.indexed / idx.total) * 100) : 0;
+const indexedDelta = idx && idx.prevIndexed != null ? idx.indexed - idx.prevIndexed : null;
+
+const worklistHtml = idx && idx.worklist?.length
+  ? idx.worklist.map((w, i) => `<li><span class="i">${i + 1}</span><code>${short(w.url)}</code></li>`).join("")
+  : `<li class="empty">Nothing waiting — every page Google knows about is either indexed or already crawled.</li>`;
+
+const alerts = [];
+if (idx?.lost?.length) alerts.push(`<div class="alert bad"><b>${plural(idx.lost.length, "page")} dropped out of Google since the last check.</b> ${idx.lost.map(short).join(", ")}</div>`);
+if (idx?.brokenUrls?.length) alerts.push(`<div class="alert bad"><b>${plural(idx.brokenUrls.length, "page")} Google could not fetch or is blocked from indexing.</b> ${idx.brokenUrls.slice(0, 5).map((b) => short(b.url)).join(", ")}</div>`);
+if (idx && indexedDelta > 0) alerts.push(`<div class="alert good"><b>${plural(indexedDelta, "new page")} got indexed since the last check.</b></div>`);
+
+const rowsOr = (arr, render, empty) =>
+  arr.length ? arr.map(render).join("") : `<tr><td class="empty">${empty}</td></tr>`;
 
 const dashboard = `<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0a6357">
 <title>Help in Study — how the site is doing</title>
 <style>
-:root{--bg:#f4efe3;--card:#fff;--ink:#1a2530;--muted:#6b7785;--teal:#0a6357;--line:#e4ddcc}
+:root{--bg:#f4efe3;--card:#fff;--ink:#1a2530;--muted:#6b7785;--teal:#0a6357;--line:#e8e1d2;--good:#0a7d3f;--bad:#b3402f}
+@media(prefers-color-scheme:dark){:root{--bg:#161b1e;--card:#1f262a;--ink:#eef2f4;--muted:#9aa7b0;--line:#2c353a}}
 *{box-sizing:border-box}
-body{margin:0;padding:20px;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:720px;margin:0 auto}
-h1{font-size:22px;margin:0 0 4px}
-.when{color:var(--muted);font-size:13px;margin-bottom:18px}
-.verdict{background:var(--card);border-left:5px solid var(--teal);border-radius:12px;padding:16px 18px;font-size:17px;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
-.stat{background:var(--card);border-radius:12px;padding:16px;text-align:center}
-.stat .n{font-size:32px;font-weight:800;color:var(--teal);line-height:1.1}
-.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
-.stat .d{font-size:13px;margin-top:6px}
-.up{color:#0a7d3f;font-weight:700}.down{color:#b3402f;font-weight:700}.flat{color:var(--muted)}
-.card{background:var(--card);border-radius:12px;padding:16px 18px;margin-bottom:16px}
-.card h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
+body{margin:0;padding:14px;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:560px;margin:0 auto}
+.pill{display:inline-block;font-size:12px;color:var(--muted);background:var(--card);border-radius:20px;padding:5px 12px;margin-bottom:12px}
+.verdict{background:var(--card);border-left:5px solid var(--teal);border-radius:12px;padding:15px 17px;font-size:17px;line-height:1.45;margin-bottom:14px}
+.funnel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.stage{background:var(--card);border-radius:12px;padding:14px;text-align:center;position:relative}
+.stage .n{font-size:30px;font-weight:800;color:var(--teal);line-height:1.1}
+.stage .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:5px;line-height:1.3}
+.stage .s{font-size:12px;color:var(--muted);margin-top:5px}
+.card{background:var(--card);border-radius:12px;padding:15px 17px;margin-bottom:12px}
+.card h2{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 11px;font-weight:700}
+.bar{height:12px;background:var(--line);border-radius:6px;overflow:hidden;margin:8px 0 6px}
+.bar i{display:block;height:100%;background:var(--teal)}
+.alert{border-radius:10px;padding:12px 14px;margin-bottom:10px;font-size:14px;line-height:1.45}
+.alert.good{background:rgba(10,125,63,.1);border-left:4px solid var(--good)}
+.alert.bad{background:rgba(179,64,47,.1);border-left:4px solid var(--bad)}
+ol{margin:0;padding:0;list-style:none}
+ol li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+ol li:last-child{border-bottom:0}
+ol .i{flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+code{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
 table{width:100%;border-collapse:collapse;font-size:14px}
 td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:0}
-td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px}
-.empty{color:var(--muted);font-style:italic}
-.note{color:var(--muted);font-size:13px;line-height:1.55}
-a{color:var(--teal)}
+td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px;font-size:13px}
+.dots{line-height:1;word-break:break-all}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--line);margin:2px}
+.dot.on{background:var(--teal);width:9px;height:9px}
+.note{color:var(--muted);font-size:13px;line-height:1.55;margin:8px 0 0}
+.empty{color:var(--muted);font-style:italic;font-size:14px}
+b{font-weight:700}
 </style></head><body><div class="wrap">
-<h1>How the site is doing</h1>
-<div class="when">Search Console data for ${startDate} to ${endDate} · updated ${snap.ranOn}. Google's data always runs about 3 days behind.</div>
 
-<div class="verdict">${verdict}</div>
+<div class="pill">Updated ${snap.ranOn} · Google's numbers run to ${endDate} (it publishes ~3 days late)</div>
 
-<div class="grid">
-  <div class="stat"><div class="n">${snap.last7Clicks}</div><div class="l">Clicks · 7 days</div><div class="d">${arrow(wowClicks)}</div></div>
-  <div class="stat"><div class="n">${snap.last7Impressions}</div><div class="l">Times shown</div><div class="d">${arrow(wowImpr)}</div></div>
-  <div class="stat"><div class="n">${avgPosition}</div><div class="l">Average position</div><div class="d">lower is better</div></div>
+<div class="verdict">${verdictLine}</div>
+
+${alerts.join("")}
+
+<div class="funnel">
+  <div class="stage"><div class="n">${totalPages ?? "–"}</div><div class="l">Pages published</div><div class="s">everything we've built</div></div>
+  <div class="stage"><div class="n">${indexedNow ?? "–"}</div><div class="l">Google has indexed</div><div class="s">${indexedDelta > 0 ? `+${indexedDelta} since last check` : "can be found in search"}</div></div>
+  <div class="stage"><div class="n">${snap.last7Impressions}</div><div class="l">Times shown · 7 days</div><div class="s">appeared in results</div></div>
+  <div class="stage"><div class="n">${snap.last7Clicks}</div><div class="l">Visits · 7 days</div><div class="s">actually clicked through</div></div>
 </div>
 
 <div class="card">
-  <h2>Pages people saw most</h2>
-  <table>${rowsOr(topPages, (r) => `<tr><td>${short(r.keys[0])}</td><td class="n">${r.impressions} shown · ${r.clicks} click${r.clicks === 1 ? "" : "s"}</td></tr>`, "No pages shown in search yet.")}</table>
+  <h2>The bottleneck</h2>
+  <div class="bar"><i style="width:${indexedPct}%"></i></div>
+  <div style="font-size:15px"><b>${indexedNow ?? "–"} of ${totalPages ?? "–"} pages</b> are in Google (${indexedPct}%).</div>
+  <p class="note">Pages Google has not indexed cannot be found by anyone, however good they are. This is the number to move — and the list below is how.</p>
 </div>
 
 <div class="card">
-  <h2>What people searched to find us</h2>
+  <h2>Today's 10 — request indexing for these</h2>
+  <ol>${worklistHtml}</ol>
+  <p class="note">Search Console → paste in the top search bar → Request indexing. Google allows about 10 a day. Ordered by what is most worth your clicks: anything genuinely broken first (there is none today), then pages Google knows about but has never crawled.</p>
+</div>
+
+<div class="card">
+  <h2>Times shown, day by day (last ${daily.length} days)</h2>
+  <svg width="100%" viewBox="0 0 ${sparkW} ${sparkH}" preserveAspectRatio="none" style="display:block;height:52px">
+    <polyline fill="none" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round" points="${points}"/>
+  </svg>
+  <p class="note">Peak day: ${maxImpr}. Zero is the bottom of the chart, so a flat line low down really is flat.</p>
+</div>
+
+<div class="card">
+  <h2>Every visit from Google (one dot = one day)</h2>
+  <div class="dots">${clickDots}</div>
+  <p class="note">Filled dots are days someone clicked through. Best week so far: ${plural(lifetimeClicks, "visit")}.</p>
+</div>
+
+<div class="card">
+  <h2>Pages Google showed most</h2>
+  <table>${rowsOr(topPages, (r) => `<tr><td>${short(r.keys[0])}</td><td class="n">${r.impressions} shown · ${plural(r.clicks, "click")}</td></tr>`, "Nothing shown in search yet.")}</table>
+</div>
+
+<div class="card">
+  <h2>What people searched</h2>
   <table>${rowsOr(topQueries, (r) => `<tr><td>${esc(r.keys[0])}</td><td class="n">${r.impressions} shown · position ${r.position.toFixed(0)}</td></tr>`, "No searches recorded yet.")}</table>
+  <p class="note">Google hides the search words behind rare visits to protect people's privacy, so this list is always shorter than the real one — right now most of our visits have no search word attached at all. It fills in on its own as traffic grows.</p>
+</div>
+
+<div class="card">
+  <h2>Links from other websites</h2>
+  <div style="font-size:15px"><b>${idx ? idx.externalLinks.length : "–"} found.</b></div>
+  <p class="note">Links from other sites are the main thing telling Google we are worth trusting, and the main reason pages sit unindexed. This counts every external page Google says links to us — including junk auto-generated ones, which do not help.</p>
 </div>
 
 <div class="card">
   <h2>What these numbers mean</h2>
-  <p class="note"><b>Times shown</b> is how often a page of ours appeared in someone's Google results. <b>Clicks</b> is how many of them actually came to the site. <b>Average position</b> is where we sit in the results: 1 to 10 is the first page, and anything above 20 means almost nobody scrolls that far. Early on, position is the number that moves first — clicks follow much later.</p>
-  <p class="note">This page only covers Google. Visitor numbers from every source live in the Vercel dashboard under Analytics.</p>
+  <p class="note"><b>Times shown</b> = we appeared in someone's Google results. <b>Visits</b> = they actually clicked. The order is always the same: publish a page → Google indexes it → it starts being shown → eventually someone clicks. Each arrow takes longer than the one before, so early on the only numbers that move are the first two — and those are the ones you control.</p>
 </div>
+
 </div></body></html>
 `;
-const here = path.dirname(fileURLToPath(import.meta.url));
-fs.writeFileSync(path.join(here, "dashboard.html"), dashboard);
-// Served copy — apps/web/public is deployed as-is, so it lands at /dashboard.html
-const publicDir = path.join(here, "..", "..", "apps", "web", "public");
+fs.writeFileSync(path.join(HERE, "dashboard.html"), dashboard);
+const publicDir = path.join(HERE, "..", "..", "apps", "web", "public");
 if (fs.existsSync(publicDir)) fs.writeFileSync(path.join(publicDir, "dashboard.html"), dashboard);
 console.log("dashboard.html written");

@@ -26,6 +26,16 @@ jobs:
         # only channel that emails the owner.
         run: npm ci --no-audit --no-fund
 
+      # Sweep first: the dashboard's funnel and its "today's 10" worklist both
+      # read index-state.json, so this has to produce it before the render.
+      # Non-fatal on purpose — a Search Console blip should still leave us with
+      # the search-performance half of the dashboard rather than no dashboard.
+      - name: Sweep index status of every page
+        working-directory: tools/gsc
+        env:
+          GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
+        run: node index-sweep.mjs || echo "index sweep failed — dashboard will render without the funnel"
+
       - name: Pull Search Console
         working-directory: tools/gsc
         env:
@@ -50,7 +60,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           # dashboard.html is regenerated every run; the copy under
           # apps/web/public is what serves helpinstudy.com/dashboard.html
-          git add tools/gsc/history.json tools/gsc/dashboard.html apps/web/public/dashboard.html
+          git add tools/gsc/history.json tools/gsc/dashboard.html tools/gsc/index-state.json apps/web/public/dashboard.html
           if git diff --cached --quiet; then echo "no changes to commit"; exit 0; fi
           git commit -m "chore: daily Search Console snapshot + dashboard"
           # Rebase-and-retry so a concurrent blog-bot / owner push can't drop this snapshot.
