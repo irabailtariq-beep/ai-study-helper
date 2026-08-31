@@ -33,6 +33,49 @@ jobs:
           done
           if [ -n "$FAIL" ]; then echo "pages_fail=$FAIL" >> "$GITHUB_OUTPUT"; fi
 
+      # The catastrophic-and-silent failure: one bad edit to a shared layout can
+      # hide the whole site from Google, and nothing else here would notice —
+      # pages still return 200, the sitemap still lists them, and the tools still
+      # answer. It would take weeks to spot by watching traffic that is already
+      # near zero. These three assertions close that hole.
+      - name: Check nothing is accidentally hidden from Google
+        id: seo
+        run: |
+          FAIL=""
+
+          ROBOTS=$(curl -s --max-time 30 "https://helpinstudy.com/robots.txt" || echo "")
+          if [ -z "$ROBOTS" ]; then
+            FAIL="$FAIL robots.txt(empty)"
+          elif printf '%s' "$ROBOTS" | grep -qE '^[[:space:]]*Disallow:[[:space:]]*/[[:space:]]*$'; then
+            FAIL="$FAIL robots.txt(DISALLOW-ALL)"
+          fi
+
+          for p in "" "/tools" "/explain" "/blog" "/gcse/gcse-grade-calculator" "/help-in-study/math"; do
+            HTML=$(curl -s --max-time 30 "https://helpinstudy.com$p" || echo "")
+            HDRS=$(curl -s -I --max-time 30 "https://helpinstudy.com$p" || echo "")
+            LABEL="${p:-/}"
+
+            # noindex in the page or in an X-Robots-Tag header
+            if printf '%s' "$HTML" | grep -qi 'name="robots"[^>]*noindex'; then FAIL="$FAIL $LABEL(noindex-meta)"; fi
+            if printf '%s' "$HDRS" | grep -qi '^x-robots-tag:.*noindex'; then FAIL="$FAIL $LABEL(noindex-header)"; fi
+
+            # a canonical must exist and must point at helpinstudy.com — a canonical
+            # aimed at another domain silently hands the page away
+            CANON=$(printf '%s' "$HTML" | grep -oE '<link rel="canonical" href="[^"]*"' | head -1 | sed 's/.*href="//; s/"$//')
+            if [ -z "$CANON" ]; then FAIL="$FAIL $LABEL(no-canonical)"; fi
+            case "$CANON" in
+              ""|https://helpinstudy.com*) ;;
+              *) FAIL="$FAIL $LABEL(canonical->$CANON)" ;;
+            esac
+          done
+
+          if [ -n "$FAIL" ]; then
+            echo "seo_fail=$FAIL" >> "$GITHUB_OUTPUT"
+            echo "PROBLEMS:$FAIL"
+          else
+            echo "  all pages indexable, canonicals correct, robots.txt sane"
+          fi
+
       # Canary: exercise the AI endpoints a student actually uses. At two
       # visitors a week nobody will ever report that a tool broke, so this is
       # the only thing that will ever tell us. Each probe asserts on a field the
@@ -81,7 +124,7 @@ jobs:
           fi
 
       - name: Report a failure (GitHub issue so it reaches your inbox)
-        if: steps.pages.outputs.pages_fail != '' || steps.ai.outputs.ai_fail != ''
+        if: steps.pages.outputs.pages_fail != '' || steps.ai.outputs.ai_fail != '' || steps.seo.outputs.seo_fail != ''
         env:
           GH_TOKEN: ${{ github.token }}
           # No checkout step in this job, so gh has no local repo context —
@@ -89,6 +132,7 @@ jobs:
           # repo", which both silenced real alerts and failed healthy runs.
           GH_REPO: ${{ github.repository }}
           PAGES_FAIL: ${{ steps.pages.outputs.pages_fail }}
+          SEO_FAIL: ${{ steps.seo.outputs.seo_fail }}
           AI_FAIL: ${{ steps.ai.outputs.ai_fail }}
           AI_BROKEN: ${{ steps.ai.outputs.ai_broken }}
         run: |
@@ -99,6 +143,12 @@ jobs:
             echo ""
             if [ -n "$PAGES_FAIL" ]; then
               echo "**Pages not returning 200:**$PAGES_FAIL"
+              echo ""
+            fi
+            if [ -n "$SEO_FAIL" ]; then
+              echo "**URGENT — the site may be hidden from Google:**$SEO_FAIL"
+              echo ""
+              echo "A page is telling Google not to index it, or points its canonical somewhere else, or robots.txt is blocking everything. This removes pages from search with no other visible symptom. Check the most recent deploy."
               echo ""
             fi
             if [ -n "$AI_FAIL" ]; then
@@ -124,7 +174,7 @@ jobs:
           exit 1
 
       - name: Close the alert if everything is healthy again
-        if: steps.pages.outputs.pages_fail == '' && steps.ai.outputs.ai_fail == ''
+        if: steps.pages.outputs.pages_fail == '' && steps.ai.outputs.ai_fail == '' && steps.seo.outputs.seo_fail == ''
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

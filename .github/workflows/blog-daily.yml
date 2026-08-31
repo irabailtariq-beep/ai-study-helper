@@ -1,9 +1,19 @@
 name: Daily blog auto-publish
 
+# STOPPED 2026-09-01. The daily schedule is deliberately commented out, not
+# deleted, so it can be restored in one line if the evidence ever changes.
+#
+# Why: Google states publishing frequency is not a ranking signal, and 199 of
+# our 234 pages were already unindexed — Google is declining to crawl what we
+# have, so post 235 joins a queue it is ignoring. Generating pages at a fixed
+# daily rate is also the exact pattern Google's scaled-content-abuse policy
+# describes, and that policy explicitly does not care whether a human or a
+# machine wrote them. Publishing now happens only when there is a real question
+# the site cannot answer — run this manually from the Actions tab for that.
 on:
-  schedule:
-    - cron: "47 9 * * *"  # 09:47 UTC = 2:47 PM Pakistan. Off-peak minute to dodge GitHub cron congestion.
-  workflow_dispatch: {}    # lets you publish the next one manually too
+  # schedule:
+  #   - cron: "47 9 * * *"
+  workflow_dispatch: {}    # manual publishing only
 
 permissions:
   contents: write          # commit the newly published post + updated queue

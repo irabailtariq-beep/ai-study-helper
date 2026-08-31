@@ -91,15 +91,25 @@ const isIndexed = (p) => /submitted and indexed|indexed, not submitted/i.test(p.
 const FETCH_OK = new Set(["SUCCESSFUL", "PAGE_FETCH_STATE_UNSPECIFIED", ""]);
 const INDEXING_OK = new Set(["INDEXING_ALLOWED", "INDEXING_STATE_UNSPECIFIED", ""]);
 const isBroken = (p) => !FETCH_OK.has(p.fetch || "") || !INDEXING_OK.has(p.indexing || "");
-const rank = (p) => {
+// Pages that exist for humans, not for search. Submitting these wastes the
+// owner's daily quota — the first worklist we generated led with /about,
+// /contact and /terms.
+const NOT_WORTH_SUBMITTING = /\/(about|contact|terms|privacy|settings|signin|progress|onboarding|dashboard)/;
+
+// Ordering follows Google's own guidance rather than intuition. Its docs say a
+// page in "Discovered - currently not indexed" has ALREADY been scheduled and
+// "there's no need to resubmit" it — so those are excluded entirely, which is
+// most of our unindexed pages. Only URLs Google has genuinely never seen are
+// worth a manual submission, and only once each.
+const rank = (p, url) => {
+  if (NOT_WORTH_SUBMITTING.test(url)) return 9;
   if (isBroken(p)) return 0;                                            // a real, named failure
-  if (/discovered/i.test(p.coverage)) return 1;                         // known, never crawled
-  if (/unknown/i.test(p.coverage)) return 2;                            // not even discovered
-  return 9;                                                             // indexed or crawled-not-indexed
+  if (/unknown/i.test(p.coverage)) return 1;                            // Google has never seen it
+  return 9;                                                             // already discovered, indexed, or judged
 };
 const worklist = Object.entries(pages)
-  .filter(([, p]) => rank(p) < 9)
-  .sort((a, b) => rank(a[1]) - rank(b[1]) || String(a[1].firstSeen).localeCompare(String(b[1].firstSeen)))
+  .filter(([url, p]) => rank(p, url) < 9)
+  .sort((a, b) => rank(a[1], a[0]) - rank(b[1], b[0]) || String(a[1].firstSeen).localeCompare(String(b[1].firstSeen)))
   .slice(0, 10)
   .map(([url, p]) => ({ url, why: isBroken(p) ? `BROKEN: ${p.fetch || p.indexing}` : p.coverage }));
 
@@ -124,6 +134,9 @@ const state = {
   lost,
   externalLinks: [...externalLinks].sort(),
   worklist,
+  // How many URLs remain that are actually worth submitting. When this hits 0
+  // the owner's daily submission task is finished for good.
+  submittableLeft: Object.entries(pages).filter(([url, p]) => rank(p, url) < 9).length,
   pages,
 };
 fs.writeFileSync(STATE, JSON.stringify(state, null, 2) + "\n");
@@ -134,5 +147,6 @@ if (lost.length) console.log(`\n⚠️ DEINDEXED since last run: ${lost.join(", 
 if (broken.length) console.log(`\n⚠️ broken: ${broken.length} page(s)`);
 console.log(`\nexternal links known to Google: ${externalLinks.size}`);
 for (const l of externalLinks) console.log(`  ${l}`);
+console.log(`\nworth submitting in total: ${state.submittableLeft}`);
 console.log(`\ntomorrow's 10:`);
 worklist.forEach((w, i) => console.log(`  ${i + 1}. ${w.url}  [${w.why}]`));
