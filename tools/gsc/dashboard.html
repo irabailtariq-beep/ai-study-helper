@@ -38,6 +38,10 @@ td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px;fo
 .dot.on{background:var(--teal);width:9px;height:9px}
 .note{color:var(--muted);font-size:13px;line-height:1.55;margin:8px 0 0}
 .empty{color:var(--muted);font-style:italic;font-size:14px}
+.action{border-left:5px solid var(--teal)}
+.action .verb{font-size:22px;font-weight:800;color:var(--teal);line-height:1.25}
+details.card summary{cursor:pointer;font-size:14px;color:var(--muted)}
+details.card summary b{color:var(--ink)}
 b{font-weight:700}
 </style></head><body><div class="wrap">
 
@@ -55,17 +59,35 @@ b{font-weight:700}
 </div>
 
 <div class="card">
-  <h2>What is holding us back</h2>
-  <div class="bar"><i style="width:15%"></i></div>
-  <div style="font-size:15px"><b>Google has only read 35 of our 234 pages</b> (15%).</div>
-  <p class="note">Google has to read a page before it can ever show it to anyone. The other 199 pages might as well not exist yet — nobody can find them, no matter how good they are. Getting this number up is the single most useful thing we can do right now.</p>
+  <h2>Is this normal for a 4-month-old site?</h2>
+  <p style="font-size:15px;margin:0 0 8px"><b>Yes.</b> Across the whole web, 96.55% of pages get <b>zero</b> traffic from Google, and only 1.74% of new pages reach the first page of results within a year. Nearly three quarters of the pages sitting in Google's top 10 are over three years old.</p>
+  <p class="note">So 2 visitors a week at 4 months is an ordinary starting point, not a broken site. The real verdict comes on the date below — not from any single week on this page.</p>
 </div>
 
 <div class="card">
-  <h2>Your job today — 10 pages to submit</h2>
-  <ol><li><span class="i">1</span><code>/transform</code></li><li><span class="i">2</span><code>/about</code></li><li><span class="i">3</span><code>/help-in-study/calculus</code></li><li><span class="i">4</span><code>/help-in-study/computer-science</code></li><li><span class="i">5</span><code>/help-in-study/programming</code></li><li><span class="i">6</span><code>/help-in-study/economics</code></li><li><span class="i">7</span><code>/learn/chemistry/in-cbse</code></li><li><span class="i">8</span><code>/learn/accounting/in-cbse</code></li><li><span class="i">9</span><code>/learn/economics/in-cbse</code></li><li><span class="i">10</span><code>/learn/biology/uk-gcse-aqa</code></li></ol>
-  <p class="note">This is asking Google to come and read these pages. Open Search Console, paste one link into the search bar at the very top, press enter, then click <b>Request indexing</b>. Repeat for each. Google only allows about 10 a day, and this list is already sorted so the most useful ones are first.</p>
+  <h2>What is holding us back</h2>
+  <div class="bar"><i style="width:15%"></i></div>
+  <div style="font-size:15px"><b>Google has only read 35 of our 234 pages</b> (15%).</div>
+  <p class="note">Google has to read a page before it can ever show it to anyone, so the other 199 pages might as well not exist yet. But this is <b>not</b> fixed by editing those pages: we checked, and on our own site neither length nor internal links makes any difference to whether Google reads a page (pages with 9+ internal links are indexed 0% of the time; pages with one link, 6%). Google is judging the whole site, and what changes that judgement is other websites linking to us — which is why the job below is emails, not editing.</p>
 </div>
+
+<div class="card action">
+  <h2>Do this today</h2>
+  <div class="verb">Send 3 outreach emails</div>
+  <p style="margin:6px 0 12px;font-size:15px">This is the highest-value hour you have. Everything else is downstream of it.</p>
+  <ol><li><span class="i">1</span><span>Open emails-to-send.txt on your Desktop</span></li><li><span class="i">2</span><span>Send the next 3 that are not ticked</span></li><li><span class="i">3</span><span>Tick them off</span></li></ol>
+  <p class="note"><b>Why this and not something else:</b> We have 0 real links from other websites. Google decides whether to read a site based largely on whether other sites vouch for it — and on our own data, nothing about an individual page (length, internal links) predicts whether it gets indexed. Links are the lever.</p>
+  <p class="note">Checking back on: <b>2026-09-07</b> — if nothing has moved by then, this page will tell you and suggest something different.</p>
+</div>
+
+<details class="card">
+  <summary><b>Optional: submit pages to Google</b> — lower value than it looks</summary>
+  <p class="note" style="margin-top:10px">Google's own help page says a page marked "Discovered" has <b>already been scheduled</b> for crawling and does not need resubmitting — and that is what most of our unindexed pages are. Do this only if you have spare time after the emails.</p>
+  <ol style="margin-top:8px"><li><span class="i">1</span><code>/about</code></li><li><span class="i">2</span><code>/contact</code></li><li><span class="i">3</span><code>/terms</code></li><li><span class="i">4</span><code>/help-in-study/calculus</code></li><li><span class="i">5</span><code>/help-in-study/geography</code></li><li><span class="i">6</span><code>/help-in-study/computer-science</code></li><li><span class="i">7</span><code>/help-in-study/programming</code></li><li><span class="i">8</span><code>/learn/biology/in-cbse</code></li><li><span class="i">9</span><code>/learn/chemistry/in-cbse</code></li><li><span class="i">10</span><code>/learn/english/in-cbse</code></li></ol>
+  <p class="note">Search Console → paste a link in the top search bar → Request indexing.</p>
+</details>
+
+
 
 <div class="card">
   <h2>Showing up in Google, day by day</h2>
@@ -96,6 +118,17 @@ b{font-weight:700}
   <h2>Other websites linking to us</h2>
   <div style="font-size:15px"><b>1 found.</b></div>
   <p class="note">When another website links to ours, Google treats it as a vote that we are trustworthy — and trust is exactly what decides whether it bothers reading our pages. This is the reason most of our pages are still unread. Note: the one we have is an automatic spam page, so it counts for nothing real.</p>
+</div>
+
+<div class="card">
+  <h2>Decision date: 15 November 2026</h2>
+  <p style="font-size:15px;margin:0 0 10px">On that day, these are the questions. They are written now so the answer cannot move later.</p>
+  <table>
+    <tr><td>At least 5 real links from other websites</td><td class="n">0 / 5</td></tr>
+    <tr><td>At least 1 search (not our own name) where we are in the top 20</td><td class="n">0 / 1</td></tr>
+    <tr><td>At least 80 of our pages read by Google</td><td class="n">35 / 80</td></tr>
+  </table>
+  <p class="note">If all three are met: keep going, the approach works. If none are: the approach is not working and we change it rather than repeating another six months. If it is mixed: we keep the part that moved and drop the part that did not. Deciding on a fixed date, against numbers agreed in advance, is the only way to avoid drifting for years on hope.</p>
 </div>
 
 <div class="card">

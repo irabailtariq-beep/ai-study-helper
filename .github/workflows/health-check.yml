@@ -33,17 +33,52 @@ jobs:
           done
           if [ -n "$FAIL" ]; then echo "pages_fail=$FAIL" >> "$GITHUB_OUTPUT"; fi
 
-      - name: Check the AI actually answers
+      # Canary: exercise the AI endpoints a student actually uses. At two
+      # visitors a week nobody will ever report that a tool broke, so this is
+      # the only thing that will ever tell us. Each probe asserts on a field the
+      # real UI needs, not just HTTP 200 — a route can return 200 with an error
+      # body. Requests carry a marker so these hits are recognisable as our own.
+      - name: Check the AI tools actually work
         id: ai
         run: |
-          BODY='{"profile":{"country":"GB","age":16,"grade":"Year 11","curriculum":"uk-gcse-aqa","guest":true},"text":"What is photosynthesis? One sentence."}'
-          RESP=$(curl -s --max-time 90 -X POST "https://helpinstudy.com/api/explain" -H "content-type: application/json" -d "$BODY" || echo '{}')
-          printf '%s' "$RESP" | head -c 300 > /tmp/ai-resp.txt
-          cat /tmp/ai-resp.txt
-          echo ""
-          OK=$(printf '%s' "$RESP" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{let t='';try{t=String(JSON.parse(s).explanation||'')}catch(e){t=''};process.stdout.write(t.trim().length>40?'yes':'no')})")
-          echo "ai_ok=$OK"
-          if [ "$OK" != "yes" ]; then echo "ai_fail=1" >> "$GITHUB_OUTPUT"; fi
+          PROFILE='{"country":"GB","age":16,"grade":"Year 11","curriculum":"uk-gcse-aqa","guest":true}'
+          FAIL=""
+          : > /tmp/ai-resp.txt
+
+          probe () {           # probe <name> <path> <json-body> <required-field>
+            NAME="$1"; PATHX="$2"; BODY="$3"; FIELD="$4"
+            RESP=$(curl -s --max-time 90 -X POST "https://helpinstudy.com$PATHX" \
+              -H "content-type: application/json" \
+              -H "user-agent: helpinstudy-canary (health check)" \
+              -d "$BODY" || echo '{}')
+            OK=$(FIELD="$FIELD" printf '%s' "$RESP" | node -e "
+              let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{
+                let ok='no';
+                try{
+                  const j=JSON.parse(s);
+                  const v=process.env.FIELD.split('.').reduce((a,k)=>a==null?a:a[k], j);
+                  const len = Array.isArray(v) ? v.length : String(v ?? '').trim().length;
+                  ok = len > (Array.isArray(v) ? 0 : 20) ? 'yes' : 'no';
+                }catch(e){}
+                process.stdout.write(ok);
+              })")
+            echo "  $NAME -> $OK"
+            if [ "$OK" != "yes" ]; then
+              FAIL="$FAIL $NAME"
+              { echo "--- $NAME ($PATHX) ---"; printf '%s' "$RESP" | head -c 220; echo ""; } >> /tmp/ai-resp.txt
+            fi
+          }
+
+          probe "explain"     "/api/explain"     "{\"profile\":$PROFILE,\"text\":\"What is photosynthesis? One sentence.\"}"                       "explanation"
+          probe "math-solver" "/api/math"        "{\"profile\":$PROFILE,\"action\":\"solve\",\"text\":\"Solve 3x + 7 = 22\"}"                                            "steps"
+          probe "quiz"        "/api/quiz"        "{\"profile\":$PROFILE,\"sourceText\":\"Photosynthesis converts light energy into glucose in chloroplasts.\",\"count\":2}" "items"
+          probe "grade"       "/api/grade"       "{\"profile\":$PROFILE,\"question\":\"Describe photosynthesis (2 marks)\",\"studentAnswer\":\"Plants use light to make glucose from carbon dioxide and water.\",\"marks\":2}" "feedback"
+          probe "chat"        "/api/chat"        "{\"profile\":$PROFILE,\"history\":[{\"role\":\"user\",\"content\":\"Explain osmosis in one sentence.\"}]}" "reply"
+
+          if [ -n "$FAIL" ]; then
+            echo "ai_fail=1" >> "$GITHUB_OUTPUT"
+            echo "ai_broken=$FAIL" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Report a failure (GitHub issue so it reaches your inbox)
         if: steps.pages.outputs.pages_fail != '' || steps.ai.outputs.ai_fail != ''
@@ -55,6 +90,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           PAGES_FAIL: ${{ steps.pages.outputs.pages_fail }}
           AI_FAIL: ${{ steps.ai.outputs.ai_fail }}
+          AI_BROKEN: ${{ steps.ai.outputs.ai_broken }}
         run: |
           {
             echo "## helpinstudy.com health check failed"
@@ -66,7 +102,7 @@ jobs:
               echo ""
             fi
             if [ -n "$AI_FAIL" ]; then
-              echo "**The AI did not answer.** /api/explain returned no usable explanation."
+              echo "**These AI tools failed:**$AI_BROKEN"
               echo "Most likely: GEMINI_API_KEY expired, free-tier quota exhausted, or the model was retired."
               echo ""
               echo "Response head:"

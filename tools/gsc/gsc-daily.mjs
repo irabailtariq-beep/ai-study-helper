@@ -167,6 +167,52 @@ const totalPages = idx ? idx.total : null;
 const indexedPct = idx && idx.total ? Math.round((idx.indexed / idx.total) * 100) : 0;
 const indexedDelta = idx && idx.prevIndexed != null ? idx.indexed - idx.prevIndexed : null;
 
+
+// ── One action, chosen by the data ───────────────────────────────────────────
+// Research verdict (2026-08-31): the daily 10-URL submission ritual has the
+// weakest evidence of anything the owner does. Google's own docs say a page in
+// "Discovered" state has already been rescheduled and "there's no need to
+// resubmit" it. And on OUR data neither internal links nor word count predicts
+// indexing (pages with 9+ inlinks: 0% indexed; 1 inlink: 6.1%; indexed pages
+// average 1762 words vs 1728 unindexed), which means indexing is being decided
+// at site level — leaving external links as the only lever. So the card leads
+// with outreach, and submission is demoted to a secondary line.
+// Clinical decision-support research is blunt about why this must be ONE card:
+// when alerts multiply, override rates run 46-96%. Volume kills compliance.
+const backlinks = idx ? idx.externalLinks.length : 0;
+const realBacklinks = idx ? idx.externalLinks.filter((l) => !/seo\.am\.in/.test(l)).length : 0;
+const checkOn = new Date(Date.now() + 7 * 864e5).toISOString().slice(0, 10);
+
+let action;
+if (idx && idx.lost && idx.lost.length) {
+  action = { verb: "Fix this first", body: `${plural(idx.lost.length, "page")} dropped out of Google since yesterday. That is the only urgent thing on this page.`, items: idx.lost.slice(0, 5).map(short), why: "A page that was indexed and now is not usually means something broke in a deploy.", check: "tomorrow" };
+} else if (realBacklinks < 5) {
+  action = {
+    verb: "Send 3 outreach emails",
+    body: "This is the highest-value hour you have. Everything else is downstream of it.",
+    items: ["Open emails-to-send.txt on your Desktop", "Send the next 3 that are not ticked", "Tick them off"],
+    why: `We have ${realBacklinks} real links from other websites. Google decides whether to read a site based largely on whether other sites vouch for it — and on our own data, nothing about an individual page (length, internal links) predicts whether it gets indexed. Links are the lever.`,
+    check: checkOn,
+  };
+} else {
+  action = {
+    verb: "Keep publishing",
+    body: "Links are coming in. The bottleneck has moved to having pages worth ranking.",
+    items: ["Check the robot published today", "Pick tomorrow's exam page topic"],
+    why: `${realBacklinks} real links now. Indexing should follow.`,
+    check: checkOn,
+  };
+}
+
+// ── "Normal for month 3" reference points ────────────────────────────────────
+// Ahrefs 2025 (1M URLs, published 2025-05-15): only 1.74% of new pages reach
+// the top 10 within a year; 72.9% of current top-10 pages are 3+ years old.
+// Ahrefs search-traffic study (~14B pages): 96.55% get zero Google traffic.
+// These describe PAGES ranking, not sites succeeding — an order-of-magnitude
+// anchor so a normal month stops reading as a failing one, nothing more.
+const launched = new Date("2026-05-01");
+const monthsOld = Math.max(1, Math.round((Date.now() - launched.getTime()) / 2592e6));
+
 const worklistHtml = idx && idx.worklist?.length
   ? idx.worklist.map((w, i) => `<li><span class="i">${i + 1}</span><code>${short(w.url)}</code></li>`).join("")
   : `<li class="empty">Nothing waiting — every page Google knows about is either indexed or already crawled.</li>`;
@@ -219,6 +265,10 @@ td.n{text-align:right;white-space:nowrap;color:var(--muted);padding-left:10px;fo
 .dot.on{background:var(--teal);width:9px;height:9px}
 .note{color:var(--muted);font-size:13px;line-height:1.55;margin:8px 0 0}
 .empty{color:var(--muted);font-style:italic;font-size:14px}
+.action{border-left:5px solid var(--teal)}
+.action .verb{font-size:22px;font-weight:800;color:var(--teal);line-height:1.25}
+details.card summary{cursor:pointer;font-size:14px;color:var(--muted)}
+details.card summary b{color:var(--ink)}
 b{font-weight:700}
 </style></head><body><div class="wrap">
 
@@ -236,17 +286,35 @@ ${alerts.join("")}
 </div>
 
 <div class="card">
-  <h2>What is holding us back</h2>
-  <div class="bar"><i style="width:${indexedPct}%"></i></div>
-  <div style="font-size:15px"><b>Google has only read ${indexedNow ?? "–"} of our ${totalPages ?? "–"} pages</b> (${indexedPct}%).</div>
-  <p class="note">Google has to read a page before it can ever show it to anyone. The other ${(totalPages ?? 0) - (indexedNow ?? 0)} pages might as well not exist yet — nobody can find them, no matter how good they are. Getting this number up is the single most useful thing we can do right now.</p>
+  <h2>Is this normal for a ${monthsOld}-month-old site?</h2>
+  <p style="font-size:15px;margin:0 0 8px"><b>Yes.</b> Across the whole web, 96.55% of pages get <b>zero</b> traffic from Google, and only 1.74% of new pages reach the first page of results within a year. Nearly three quarters of the pages sitting in Google's top 10 are over three years old.</p>
+  <p class="note">So 2 visitors a week at ${monthsOld} months is an ordinary starting point, not a broken site. The real verdict comes on the date below — not from any single week on this page.</p>
 </div>
 
 <div class="card">
-  <h2>Your job today — 10 pages to submit</h2>
-  <ol>${worklistHtml}</ol>
-  <p class="note">This is asking Google to come and read these pages. Open Search Console, paste one link into the search bar at the very top, press enter, then click <b>Request indexing</b>. Repeat for each. Google only allows about 10 a day, and this list is already sorted so the most useful ones are first.</p>
+  <h2>What is holding us back</h2>
+  <div class="bar"><i style="width:${indexedPct}%"></i></div>
+  <div style="font-size:15px"><b>Google has only read ${indexedNow ?? "–"} of our ${totalPages ?? "–"} pages</b> (${indexedPct}%).</div>
+  <p class="note">Google has to read a page before it can ever show it to anyone, so the other ${(totalPages ?? 0) - (indexedNow ?? 0)} pages might as well not exist yet. But this is <b>not</b> fixed by editing those pages: we checked, and on our own site neither length nor internal links makes any difference to whether Google reads a page (pages with 9+ internal links are indexed 0% of the time; pages with one link, 6%). Google is judging the whole site, and what changes that judgement is other websites linking to us — which is why the job below is emails, not editing.</p>
 </div>
+
+<div class="card action">
+  <h2>Do this today</h2>
+  <div class="verb">${action.verb}</div>
+  <p style="margin:6px 0 12px;font-size:15px">${action.body}</p>
+  <ol>${action.items.map((it, i) => `<li><span class="i">${i + 1}</span><span>${esc(it)}</span></li>`).join("")}</ol>
+  <p class="note"><b>Why this and not something else:</b> ${action.why}</p>
+  <p class="note">Checking back on: <b>${action.check}</b> — if nothing has moved by then, this page will tell you and suggest something different.</p>
+</div>
+
+<details class="card">
+  <summary><b>Optional: submit pages to Google</b> — lower value than it looks</summary>
+  <p class="note" style="margin-top:10px">Google's own help page says a page marked "Discovered" has <b>already been scheduled</b> for crawling and does not need resubmitting — and that is what most of our unindexed pages are. Do this only if you have spare time after the emails.</p>
+  <ol style="margin-top:8px">${worklistHtml}</ol>
+  <p class="note">Search Console → paste a link in the top search bar → Request indexing.</p>
+</details>
+
+
 
 <div class="card">
   <h2>Showing up in Google, day by day</h2>
@@ -277,6 +345,17 @@ ${alerts.join("")}
   <h2>Other websites linking to us</h2>
   <div style="font-size:15px"><b>${idx ? idx.externalLinks.length : "–"} found.</b></div>
   <p class="note">When another website links to ours, Google treats it as a vote that we are trustworthy — and trust is exactly what decides whether it bothers reading our pages. This is the reason most of our pages are still unread. Note: the one we have is an automatic spam page, so it counts for nothing real.</p>
+</div>
+
+<div class="card">
+  <h2>Decision date: 15 November 2026</h2>
+  <p style="font-size:15px;margin:0 0 10px">On that day, these are the questions. They are written now so the answer cannot move later.</p>
+  <table>
+    <tr><td>At least 5 real links from other websites</td><td class="n">${realBacklinks} / 5</td></tr>
+    <tr><td>At least 1 search (not our own name) where we are in the top 20</td><td class="n">${topQueries.filter((q) => q.position <= 20).length} / 1</td></tr>
+    <tr><td>At least 80 of our pages read by Google</td><td class="n">${indexedNow ?? "–"} / 80</td></tr>
+  </table>
+  <p class="note">If all three are met: keep going, the approach works. If none are: the approach is not working and we change it rather than repeating another six months. If it is mixed: we keep the part that moved and drop the part that did not. Deciding on a fixed date, against numbers agreed in advance, is the only way to avoid drifting for years on hope.</p>
 </div>
 
 <div class="card">
