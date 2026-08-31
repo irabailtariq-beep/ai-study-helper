@@ -7,19 +7,11 @@ import {
   themeForAge,
   type CountryCode,
   type OutputFormat,
-  type ToneStyle,
-} from "@ash/core";
+  type ToneStyle, SUPPORTED_CURRICULA } from "@ash/core";
 import { useProfile } from "@/lib/profileStore";
 
 // We support FIVE exam systems only. The onboarding picker offers just these
 // (with their sub-boards) — never any other curriculum.
-const FIVE_CURRICULUM_IDS = [
-  "in-cbse",                                                                        // CBSE (India)
-  "uk-gcse-aqa", "uk-gcse-edexcel", "uk-gcse-ocr",                                  // GCSE (UK)
-  "us-ap",                                                                          // AP (USA)
-  "intl-cambridge-igcse", "intl-cambridge-alevel",                                  // Cambridge
-  "ng-waec", "gh-wassce",                                                           // WAEC / WASSCE (West Africa)
-];
 
 const COMMON_SUBJECTS = [
   "Mathematics", "English", "Physics", "Chemistry", "Biology", "Computer Science",
@@ -91,7 +83,7 @@ export default function OnboardingPage() {
   }, [countryQuery]);
 
   const curricula = useMemo(() => {
-    const five = CURRICULA.filter((c) => FIVE_CURRICULUM_IDS.includes(c.id));
+    const five = SUPPORTED_CURRICULA;
     const q = curriculumQuery.trim().toLowerCase();
     if (!q) return five;
     return five.filter(

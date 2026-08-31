@@ -4417,7 +4417,7 @@ It depends on your board. CBSE and Cambridge A-Level expect genus names; Cambrid
     publishedAt: "2026-08-18", readTime: "7 min",
     tags: ["wassce english formal letter","waec english","formal letter format","wassce essay marking scheme","how to write a formal letter"],
     body: `
-**Quick answer:** A WASSCE formal letter needs six fixed parts, in order — your address, the date, the recipient's address, the salutation ("Dear Sir,"), an underlined heading, the body, and "Yours faithfully," above your full name. WAEC marks the letter out of 50 across Content (10), Organisation (10), Expression (20) and Mechanical Accuracy (10), so a correct format banks the easy marks while clear, error-free English wins the rest.
+**Quick answer:** A WASSCE formal letter needs six fixed parts, in order — your address, the date, the recipient's address, the salutation ("Dear Sir,"), an underlined heading, and the body followed by "Yours faithfully," above your full name. WAEC marks the letter out of 50 across Content (10), Organisation (10), Expression (20) and Mechanical Accuracy (10), so a correct format banks the easy marks while clear, error-free English wins the rest.
 
 I sit Cambridge IGCSE and A-Levels myself, but I've spent months helping a cousin in Lagos through WASSCE English, and I'll say this plainly: the formal letter is the most *winnable* question on the whole paper. The ideas are simple, the format is fixed, and once you drill it you walk into the hall already holding marks before you've written a single sentence of your own.
 
@@ -4911,15 +4911,15 @@ Because in an open crucible the magnesium takes in oxygen from the air. Weigh th
     publishedAt: "2026-08-20", readTime: "7 min",
     tags: ["gcse physics equations","aqa physics equation sheet","gcse physics revision","rearranging equations","gcse physics formula sheet 2026"],
     body: `
-**Quick answer:** For the 2025 to 2027 AQA GCSE Physics and Combined Science exams you are actually given a full equation sheet as an insert, so you do not strictly have to memorise the formulae. But the sheet only lists them - it will not tell you which equation to pick, what the letters mean, how to rearrange it, or which units to use, and the arrangement is only confirmed to 2027. So learn the roughly 23 core equations, like V = I R, F = m a and kinetic energy = 0.5 x mass x speed^2, as if they were not given.
+**Quick answer:** For the 2025 to 2027 AQA GCSE Physics and Combined Science exams you are actually given a full equation sheet as an insert, so you do not strictly have to memorise the formulae. But the sheet only lists them - it will not tell you which equation to pick, what the letters mean, how to rearrange it, or which units to use, and you still have to pick the right one. So learn the roughly 23 core equations, like V = I R, F = m a and kinetic energy = 0.5 x mass x speed^2, as if they were not given.
 
 I sit Cambridge IGCSE and A-Level, not AQA - but when my GCSE friends found out they would get an equation sheet in the exam, half of them stopped learning equations completely. They still dropped marks. Here is the bit nobody explains: a page full of formulae is close to useless if you do not already know which one the question wants, what each symbol stands for, and how to make the quantity you are asked for the subject. The sheet hands you the tool; it does not tell you the job.
 
 ## The rule right now - and why it is a trap
 
-Because of the exam disruption a few years back, AQA confirmed that students sitting exams in 2025, 2026 and 2027 do not need to memorise the physics equations: a Physics Equations Sheet is provided as an insert with both Paper 1 and Paper 2. That is genuinely helpful.
+You are given a Physics Equations Sheet as an insert with both Paper 1 and Paper 2, so you are not required to recall the formulae. This is settled rather than a temporary concession: after a public consultation, Ofqual confirmed on 5 May 2026 that exam boards must keep providing formulae and equations sheets for the remaining lifetime of the current specifications, covering exams from 2028 onwards including resits. Earlier exams were already covered by a 2024 decision, so the two run without a gap. AQA, Edexcel and OCR are all bound by the same rule.
 
-Two catches, though. It is temporary - only confirmed to 2027, with 2028 still being decided, so if you are starting the course now do not assume a sheet will be there on the day. And a sheet cannot do the physics for you: you still have to read a wordy question, spot that it is a current, resistance and potential difference problem, find V = I R, rearrange it and convert your units - only the middle step is printed. Lean on the sheet as an excuse not to learn the equations and you become the student who freezes because they cannot tell which one to reach for.
+One catch, though. A sheet cannot do the physics for you: you still have to read a wordy question, spot that it is a current, resistance and potential difference problem, find V = I R, rearrange it and convert your units - only the middle step is printed. Lean on the sheet as an excuse not to learn the equations and you become the student who freezes because they cannot tell which one to reach for.
 
 ## The equations you would normally have to recall
 
@@ -4976,15 +4976,15 @@ If any felt shaky, drop the exact equation into [Explain anything](/explain) and
 
 ## FAQ
 
-**Do I have to memorise physics equations for the 2026 AQA GCSE exam?** No - for 2025, 2026 and 2027 you are given a Physics Equations Sheet as an insert, so you are not required to recall them. But you still have to know which equation to use, what the symbols mean, how to rearrange it and which units to use - and learning the common ones anyway saves time.
+**Do I have to memorise physics equations for the AQA GCSE exam?** No - you are given a Physics Equations Sheet as an insert, so you are not required to recall them, and Ofqual has confirmed the sheets continue for the lifetime of the current specifications. But you still have to know which equation to use, what the symbols mean, how to rearrange it and which units to use - and learning the common ones anyway saves time.
 
-**Is the equation sheet the full list?** For these years the provided sheet covers the formulae you would normally have to recall, so you should not be caught short. In a normal year only the harder, less-common equations are printed and the roughly 23 everyday ones are not - the situation that may return from 2028.
+**Is the equation sheet the full list?** The provided sheet covers the formulae you would normally have to recall, so you should not be caught short. Ofqual also requires that no question can be answered just by copying a formula off the sheet, so you still have to choose the right equation, rearrange it and handle the units. Each board publishes its own version by 1 September of the year before your exams - use your own board's.
 
 **Is the sheet the same for Combined Science?** You get a shorter one. Physics-only equations - specific latent heat, pressure in a liquid column, the magnetism and transformer equations - are not on the Combined sheet, because those topics only appear on the separate Physics course.
 
 **Are formula triangles allowed in the exam?** There is no rule against scribbling one in the margin. But they only work for three-quantity "one equals two multiplied" equations, so they are useless for anything with a square or a subtraction, like kinetic energy or v^2 - u^2 = 2 a s. Rearranging with algebra always works.
 
-**In short:** Even though the 2025 to 2027 AQA exams hand you an equation sheet, learn the roughly 23 core equations, know your SI units, and always rearrange with letters before you substitute - because the sheet lists the formula but never does the thinking, and it is only guaranteed to 2027.
+**In short:** Even though the exam hands you an equation sheet, learn the roughly 23 core equations, know your SI units, and always rearrange with letters before you substitute - because the sheet lists the formula but never does the thinking.
 `,
   },
 

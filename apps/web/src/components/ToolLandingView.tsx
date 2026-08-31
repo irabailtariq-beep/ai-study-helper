@@ -29,6 +29,11 @@ export function ToolLandingView({ page }: { page: ToolLanding }) {
         faqJsonLd(page.faqs.map((f) => ({ question: f.q, answer: f.a })))
       ) }} />
 
+      {/* The embedded tool component renders its own <h1> (it is also a
+          standalone page), which left every landing page with two competing
+          main headings. Demote the inner one to look and read as a section
+          heading; the standalone /quiz, /grade etc. routes are untouched. */}
+      <style>{`.embedded-tool h1 { font-size: 1.25rem; font-weight: 700; }`}</style>
       <header className="px-6 pt-10 pb-2 max-w-3xl mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">{page.h1}</h1>
         <p className="mt-3 text-base" style={{ color: "var(--ash-muted)" }}>{page.subhead}</p>
@@ -41,7 +46,7 @@ export function ToolLandingView({ page }: { page: ToolLanding }) {
       </header>
 
       {/* the actual tool */}
-      <Tool />
+      <div className="embedded-tool"><Tool /></div>
 
       <section className="px-6 pb-14 max-w-3xl mx-auto">
         {page.sections.map((s) => (

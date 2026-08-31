@@ -1583,14 +1583,14 @@ export const EXAM_PAGES: ExamPage[] = [
     "board": "cbse",
     "slug": "class-11-accountancy-basic-terms-practice",
     "metaTitle": "TS Grewal Class 11 Chapter 2: Basic Terms Practice",
-    "metaDescription": "Original practice questions matched to TS Grewal Class 11 Chapter 2 (Basic Accounting Terms), 2025-26 edition, with full solutions and CBSE marking notes.",
+    "metaDescription": "Original practice questions matched to TS Grewal Class 11 Chapter 2 (Basic Accounting Terms), current edition, with full solutions and CBSE marking notes.",
     "h1": "Basic Accounting Terms: Class 11 Practice in TS Grewal Chapter 2 Style",
     "quickAnswer": "In the 2025-26 TS Grewal Class 11 book, Chapter 2 is Basic Accounting Terms: assets, liabilities, capital, drawings, expenses, revenue, debtors, creditors and expenditure. Below are original practice questions on those exact terms with full worked answers. They are not copied from the book; they cover the same ground at the same difficulty, free.",
-    "intro": "TS Grewal is the book almost every commerce student uses for Class 11 Accountancy, and its questions are copyrighted, so I have not reproduced them here. What I have done instead is write my own questions that test the same terms Chapter 2 tests, at the same level, and solve each one fully. I sit Cambridge exams myself, not CBSE, so everything on this page comes from the 2025-26 edition's contents and CBSE's own syllabus documents rather than from memory of the paper. Work through the seven questions with a notebook, then try the variant under each solution before you check the bracketed answer.",
+    "intro": "TS Grewal is the book almost every commerce student uses for Class 11 Accountancy, and its questions are copyrighted, so I have not reproduced them here. What I have done instead is write my own questions that test the same terms Chapter 2 tests, at the same level, and solve each one fully. I sit Cambridge exams myself, not CBSE, so everything on this page comes from the current edition's contents and CBSE's own syllabus documents rather than from memory of the paper. Work through the seven questions with a notebook, then try the variant under each solution before you check the bracketed answer.",
     "sections": [
       {
-        "heading": "What Chapter 2 actually covers in the 2025-26 edition",
-        "body": "The 2025-26 edition keeps Basic Accounting Terms as Chapter 2, straight after the introduction chapter. The terms it defines and tests: business transaction, capital, drawings, liabilities split into non-current and current, assets split into non-current and current with tangible, intangible and fictitious types, expenditure split into capital and revenue, expense, income, profit, gain, loss, purchases and purchases return, sales and sales return, stock, trade receivables including debtors and bills receivable, trade payables including creditors and bills payable, goods, cost, vouchers, and discount split into trade and cash. That list looks long, but nearly every question is one of three moves: define a term, classify an item into a category, or compute a small figure such as capital or cost of goods sold. The seven questions below cover all three moves."
+        "heading": "What Chapter 2 actually covers in the current edition",
+        "body": "The current edition keeps Basic Accounting Terms as Chapter 2, straight after the introduction chapter. The terms it defines and tests: business transaction, capital, drawings, liabilities split into non-current and current, assets split into non-current and current with tangible, intangible and fictitious types, expenditure split into capital and revenue, expense, income, profit, gain, loss, purchases and purchases return, sales and sales return, stock, trade receivables including debtors and bills receivable, trade payables including creditors and bills payable, goods, cost, vouchers, and discount split into trade and cash. That list looks long, but nearly every question is one of three moves: define a term, classify an item into a category, or compute a small figure such as capital or cost of goods sold. The seven questions below cover all three moves."
       },
       {
         "heading": "How CBSE marks these questions",
@@ -1688,10 +1688,10 @@ export const EXAM_PAGES: ExamPage[] = [
     "faqs": [
       {
         "q": "Are these the actual TS Grewal Chapter 2 solutions?",
-        "a": "No. TS Grewal is a copyrighted commercial textbook, so its questions cannot be republished here. These are original questions written to cover the same terms at the same difficulty as Chapter 2 of the 2025-26 edition, each with a full solution. Use them as extra practice alongside the book itself."
+        "a": "No. TS Grewal is a copyrighted commercial textbook, so its questions cannot be republished here. These are original questions written to cover the same terms at the same difficulty as Chapter 2 of the current edition, each with a full solution. Use them as extra practice alongside the book itself."
       },
       {
-        "q": "Which chapter is Basic Accounting Terms in the 2025-26 edition?",
+        "q": "Which chapter is Basic Accounting Terms in the current edition?",
         "a": "Chapter 2, immediately after Chapter 1, Introduction of Accounting. Several solution websites still follow older editions where the numbering differs, so if a site's chapter list looks shifted, match by topic name rather than by chapter number."
       },
       {
@@ -1727,7 +1727,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "heading": "Where Chapter 5 sits in the book",
-        "body": "In the 2025-26 edition the accounting equation is Chapter 5, following Bases of Accounting and immediately before Accounting Procedures, the rules of debit and credit. That ordering is deliberate. Debit and credit are the equation with names attached: every debit records what the next chapter calls an increase in assets or expenses, every credit an increase in liabilities, capital or income, and the equality you prove line by line here becomes the reason a trial balance must tally in Chapter 14. Some solution websites still number this chapter as 2 or 6 from older editions, so match by topic name if your book looks different. Whenever you get stuck, the fastest repair is to go back to the last line that balanced and push one transaction through at a time."
+        "body": "In the current edition the accounting equation is Chapter 5, following Bases of Accounting and immediately before Accounting Procedures, the rules of debit and credit. That ordering is deliberate. Debit and credit are the equation with names attached: every debit records what the next chapter calls an increase in assets or expenses, every credit an increase in liabilities, capital or income, and the equality you prove line by line here becomes the reason a trial balance must tally in Chapter 14. Some solution websites still number this chapter as 2 or 6 from older editions, so match by topic name if your book looks different. Whenever you get stuck, the fastest repair is to go back to the last line that balanced and push one transaction through at a time."
       }
     ],
     "problems": [
@@ -1829,13 +1829,13 @@ export const EXAM_PAGES: ExamPage[] = [
     "board": "cbse",
     "slug": "class-11-accountancy-journal-entries-practice",
     "metaTitle": "TS Grewal Class 11 Journal Entries Practice and Answers",
-    "metaDescription": "Original journal entry practice matched to TS Grewal Class 11 Chapter 8, 2025-26 edition: compound entries, GST, bad debts, full solutions, marking notes.",
+    "metaDescription": "Original journal entry practice matched to TS Grewal Class 11 Chapter 8, current edition: compound entries, GST, bad debts, full solutions, marking notes.",
     "h1": "Journal Entries: Class 11 Practice in TS Grewal Chapter 8 Style",
     "quickAnswer": "Journal is Chapter 8 in the 2025-26 TS Grewal Class 11 edition. Below are original journalising questions of the kind that chapter drills: simple and compound entries, GST, full settlement discounts, bad debts and drawings, each solved with complete debit and credit lines. They are written in the book's style and difficulty, not copied from it.",
     "intro": "Journal is the longest-practised chapter of Class 11, Chapter 8 in the 2025-26 TS Grewal edition, and the entries here mirror the types it drills: simple entries, compound entries, full settlement discounts, insolvency of a debtor, CGST and SGST at 6 percent each, drawings in cash and in goods, year-end adjustments, and asset purchases with installation. The questions are my own, written because reproducing the book's copyrighted questions is not allowed, and each is solved with complete debit and credit lines you can compare against your working. If an entry ever refuses to balance, the solution shows exactly where the missing rupees went.",
     "sections": [
       {
-        "heading": "What Chapter 8 drills in the 2025-26 edition",
+        "heading": "What Chapter 8 drills in the current edition",
         "body": "Chapter 8, Journal, is the book's biggest single block of practice, and the question types repeat: simple two-line entries for cash and credit transactions, compound entries where one debit meets several credits or the reverse, opening entries, trade discount netted off before recording, cash discount recorded through Discount Allowed or Discount Received, full settlement payments, insolvency of a debtor with paise in the rupee, drawings in cash and in goods, goods given as samples or charity, basic CGST and SGST entries, year-end adjustments such as outstanding and prepaid items, and asset purchases where installation or cartage is capitalised. The seven questions below cover each of those at the same difficulty as the chapter. Trade discount deserves special mention because it never appears in the books at all: record the net amount and mention the discount only in the narration."
       },
       {
@@ -1933,7 +1933,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "faqs": [
       {
         "q": "Are these the actual TS Grewal Chapter 8 solutions?",
-        "a": "No. TS Grewal's questions are copyrighted and cannot be republished, so every question here is original, written to match the entry types and difficulty of Chapter 8 in the 2025-26 edition. Solve the book's questions too; the method in these solutions applies to them unchanged."
+        "a": "No. TS Grewal's questions are copyrighted and cannot be republished, so every question here is original, written to match the entry types and difficulty of Chapter 8 in the current edition. Solve the book's questions too; the method in these solutions applies to them unchanged."
       },
       {
         "q": "Do narrations carry marks?",
@@ -1945,7 +1945,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "q": "Is GST part of the journal chapter?",
-        "a": "Basic entries with CGST and SGST appear inside journal practice, like question 2 above. The full treatment, including IGST and set-off, has its own chapter, Accounting for Goods and Services Tax, which is Chapter 12 in the 2025-26 edition."
+        "a": "Basic entries with CGST and SGST appear inside journal practice, like question 2 above. The full treatment, including IGST and set-off, has its own chapter, Accounting for Goods and Services Tax, which is Chapter 12 in the current edition."
       }
     ],
     "targetQuery": "ts grewal class 11 journal entries solutions",
@@ -1972,7 +1972,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "heading": "Where Chapter 9 sits and how it is tested",
-        "body": "Ledger is Chapter 9 in the 2025-26 edition, directly after Journal; older editions and some solution sites call it Chapter 6, so go by the topic name. Exam questions come in three forms: post a given set of journal entries into one named account and balance it, prepare the personal account of a debtor or creditor from a list of dealings, or prepare an account and state what its balance means. That final meaning sentence is often a dedicated mark, so end written answers with it: Rohan owes the firm Rs 14,000, or the firm owes Meena Traders Rs 11,000. Every question below finishes with exactly that sentence for exactly that reason, and the variants change the figures so you have to rebuild the account rather than pattern-match."
+        "body": "Ledger is Chapter 9 in the current edition, directly after Journal; older editions and some solution sites call it Chapter 6, so go by the topic name. Exam questions come in three forms: post a given set of journal entries into one named account and balance it, prepare the personal account of a debtor or creditor from a list of dealings, or prepare an account and state what its balance means. That final meaning sentence is often a dedicated mark, so end written answers with it: Rohan owes the firm Rs 14,000, or the firm owes Meena Traders Rs 11,000. Every question below finishes with exactly that sentence for exactly that reason, and the variants change the figures so you have to rebuild the account rather than pattern-match."
       }
     ],
     "problems": [
@@ -2049,7 +2049,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "faqs": [
       {
         "q": "Are these the actual TS Grewal Chapter 9 solutions?",
-        "a": "No. The book is a copyrighted commercial text, so these are original questions written to cover the same posting and balancing skills at the same difficulty as Chapter 9 of the 2025-26 edition. Every account here was balanced by hand before publishing."
+        "a": "No. The book is a copyrighted commercial text, so these are original questions written to cover the same posting and balancing skills at the same difficulty as Chapter 9 of the current edition. Every account here was balanced by hand before publishing."
       },
       {
         "q": "What do To and By actually mean?",
@@ -2073,7 +2073,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "board": "cbse",
     "slug": "class-11-accountancy-trial-balance-practice",
     "metaTitle": "TS Grewal Class 11 Trial Balance Practice and Answers",
-    "metaDescription": "Trial balance practice in TS Grewal Class 11 style, 2025-26 edition: prepare, balance and error questions with full workings and CBSE marking notes.",
+    "metaDescription": "Trial balance practice in TS Grewal Class 11 style, current edition: prepare, balance and error questions with full workings and CBSE marking notes.",
     "h1": "Trial Balance: Class 11 Practice in TS Grewal Chapter 14 Style",
     "quickAnswer": "In the 2025-26 TS Grewal Class 11 edition, Trial Balance is Chapter 14. Below are original questions on preparing a trial balance from ledger balances, finding capital as the balancing figure, placing awkward items like overdrafts and returns in the right column, and spotting the errors an agreed trial balance cannot catch, all fully worked.",
     "intro": "A trial balance question is free marks if your ledger knowledge is solid, and a slow puncture if it is not. In the 2025-26 TS Grewal edition this is Chapter 14, coming after the ledger and the subsidiary books. These original questions cover the whole examinable range: building a trial balance from a list of balances, deriving capital as the balancing figure, placing the trick items like overdrafts and returns, explaining the four errors an agreed trial balance hides, and using the doubling test to trace a difference. Each addition below is shown figure by figure, so check your running totals against mine as you go.",
@@ -2209,7 +2209,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "heading": "What Chapter 15 covers in 2025-26",
-        "body": "In the 2025-26 edition, Depreciation is Chapter 15, sitting after Trial Balance. The chapter examines the meaning and causes of depreciation, the straight line and written down value methods with their merits, asset accounts prepared over several years, part-year calculations, the sale or disposal of an asset, and the alternative of keeping the asset at cost while accumulating charges in a Provision for Depreciation Account. The questions on this page use the direct method, crediting the asset itself, because that is where most exam marks sit, but the provision approach is examinable and the FAQ below sketches how it changes the accounts. Some solution sites number this chapter 13 or 14 following older editions, so match by topic name. Theory questions worth around 3 marks on the causes of depreciation or a comparison of the methods appear regularly, so keep one crisp paragraph ready for each."
+        "body": "In the current edition, Depreciation is Chapter 15, sitting after Trial Balance. The chapter examines the meaning and causes of depreciation, the straight line and written down value methods with their merits, asset accounts prepared over several years, part-year calculations, the sale or disposal of an asset, and the alternative of keeping the asset at cost while accumulating charges in a Provision for Depreciation Account. The questions on this page use the direct method, crediting the asset itself, because that is where most exam marks sit, but the provision approach is examinable and the FAQ below sketches how it changes the accounts. Some solution sites number this chapter 13 or 14 following older editions, so match by topic name. Theory questions worth around 3 marks on the causes of depreciation or a comparison of the methods appear regularly, so keep one crisp paragraph ready for each."
       }
     ],
     "problems": [
@@ -2290,7 +2290,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "faqs": [
       {
         "q": "Are these the actual TS Grewal Chapter 15 solutions?",
-        "a": "No. The book's questions are copyrighted, so every question here is original, written to match the calculation types and difficulty of Chapter 15 in the 2025-26 edition. The layouts shown, cost build-up first, then year-by-year lines, work directly on the book's own questions."
+        "a": "No. The book's questions are copyrighted, so every question here is original, written to match the calculation types and difficulty of Chapter 15 in the current edition. The layouts shown, cost build-up first, then year-by-year lines, work directly on the book's own questions."
       },
       {
         "q": "Which method does CBSE prefer, straight line or written down value?",
@@ -3280,7 +3280,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaTitle": "0500 Directed Writing Model Answer: IGCSE Paper 2",
     "metaDescription": "0500 directed writing model answer for IGCSE Paper 2: a full original letter, the 15 and 25 mark split, examiner criteria and speech, letter, article tips.",
     "h1": "IGCSE English 0500 Directed Writing: A Full Model Answer and How It Is Marked",
-    "quickAnswer": "In 0500 Paper 2 Section A, you write 250 to 350 words as a speech, letter or article, responding to one or two short texts. It is worth 40 marks: 15 for reading, which means using, developing and evaluating the ideas in the texts, and 25 for writing. A full original model answer is below.",
+    "quickAnswer": "Check your exam year first, because Cambridge changed this task from the 2027 exams. If you sit in 2026, including the November 2026 series, Section A is one compulsory question worth 40 marks: you read one or two texts totalling 650 to 750 words and write about 250 to 350 words as a speech, letter or article, with 25 marks for writing and 15 for reading. From the 2027 exams the task is split into two parts, 1(a) and 1(b). The guidance below teaches the 2026 format; the skills carry over, but confirm the format for your own series in the syllabus for your exam year. A full original model answer is below.",
     "intro": "Directed writing is the strangest task on the 0500 papers, because it is a writing question where a large share of the marks are reading marks. I sit Cambridge exams myself, and my directed writing scores only moved when I stopped treating it as a persuasive writing exercise and started treating it as an evaluation of the texts wearing a costume: the costume being a speech, a letter or an article. This page breaks down the task and the three forms, shows a complete original model answer written to the 250 to 350 word limit, and lists what examiners actually reward at each level.",
     "sections": [
       {
@@ -3816,7 +3816,7 @@ export const EXAM_PAGES: ExamPage[] = [
       },
       {
         "heading": "Registration is still open, and what it costs",
-        "body": "Registration has been a moving target this year, so here is the state of play as of 30 August. It opened on 4 May 2026 and was originally meant to close on 31 July. WAEC extended it to 28 August, and the portal now states that registration ends Thursday 10 September 2026; myschool.ng reports the same, with PIN generation and biometric registration closing at 11:59pm that day. Notice the odd wrinkle: registration closes six days after the first practical planning session on 4 September, so if your subjects include Foods and Nutrition or Home Management, register now rather than at the deadline. The fee is NGN 37,000, as WAEC announced in May 2026. Some reports quote NGN 37,500 in total, which is consistent with a NGN 500 bank or agent commission on top, so budget for that. If you see NGN 27,000 anywhere, that is last cycle's figure and it is stale. There are also reports of walk-in registration up to 24 hours before a paper at a higher fee, around NGN 45,000, but that amount is not verified, so treat it as a rumour with a price tag and confirm on the portal before you rely on it. Register at registration.waecdirect.org or through the WAECKONNECT app, and note for later that results are checked at waecdirect.org."
+        "body": "Registration has been a moving target this year, so check the portal before you rely on any date, including this one. Last checked 1 September 2026: registration opened on 4 May, was originally meant to close on 31 July, was extended to 28 August, and WAEC's own portals now give Thursday 10 September 2026 — waecdirect.org states that PIN generation closes that day, and registration.waecdirect.org shows the same date, with biometrics and online registration due by 11:59pm. Several news reports are still quoting the older 28 August deadline; the portal is the one that counts. Be careful with the subject dates circulating on timetable websites: WAEC had not published the subject-by-subject timetable for this series when we last checked, and some of those sites are showing last year's schedule. Notice too the odd wrinkle: registration closes six days after the first practical planning session on 4 September, so if your subjects include Foods and Nutrition or Home Management, register now rather than at the deadline. The fee is NGN 37,000, as WAEC announced in May 2026. Some reports quote NGN 37,500 in total, which is consistent with a NGN 500 bank or agent commission on top, so budget for that. If you see NGN 27,000 anywhere, that is last cycle's figure and it is stale. There are also reports of walk-in registration up to 24 hours before a paper at a higher fee, around NGN 45,000, but that amount is not verified, so treat it as a rumour with a price tag and confirm on the portal before you rely on it. Register at registration.waecdirect.org or through the WAECKONNECT app, and note for later that results are checked at waecdirect.org."
       },
       {
         "heading": "What the computer-based exam looks like on the day",

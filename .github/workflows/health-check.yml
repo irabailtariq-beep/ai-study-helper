@@ -1,6 +1,9 @@
 name: Site health check
 
-# Every 6 hours, prove the site AND the AI still actually work.
+# Roughly 2-4 times a day, prove the site AND the AI still actually work.
+# The cron asks for every 6 hours, but GitHub drops scheduled runs under load —
+# measured gaps of up to 13 hours in late August 2026 — so do not rely on it
+# catching an outage within 6 hours.
 # Without this, an expired or quota-exhausted GEMINI_API_KEY would turn all ten
 # tools into 500s while the blog and Search Console robots both stayed green and
 # nobody was told. This is the only alarm that fires when the product is broken.

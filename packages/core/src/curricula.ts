@@ -176,6 +176,29 @@ export const CURRICULA: Curriculum[] = [
 ];
 
 // Country list — kept ISO-2 where practical. CountryCode in types.ts is open ("OTHER" allowed for international).
+
+/**
+ * The five exam systems this product actually supports.
+ *
+ * CURRICULA below is deliberately larger: it is the historical list, and a
+ * profile saved months ago may still carry an id that is no longer offered, so
+ * deleting entries would break those profiles. Nothing user-facing may offer a
+ * curriculum that is not in this list — the 2026-09-01 audit found the web
+ * onboarding screen keeping its own private copy of it, which is exactly how
+ * a forbidden board ends up back in a dropdown.
+ */
+export const SUPPORTED_CURRICULUM_IDS = [
+  "in-cbse",                                                    // CBSE (India)
+  "uk-gcse-aqa", "uk-gcse-edexcel", "uk-gcse-ocr",              // GCSE (AQA, Edexcel, OCR only)
+  "us-ap",                                                      // AP (USA)
+  "intl-cambridge-igcse", "intl-cambridge-alevel",              // Cambridge
+  "ng-waec", "gh-wassce",                                       // WAEC / WASSCE
+] as const;
+
+/** The curricula we offer, in display order. Use this, not CURRICULA. */
+export const SUPPORTED_CURRICULA: Curriculum[] =
+  CURRICULA.filter((c) => (SUPPORTED_CURRICULUM_IDS as readonly string[]).includes(c.id));
+
 export const COUNTRIES: { code: CountryCode; name: string; flag: string }[] = [
   { code: "PK", name: "Pakistan",        flag: "🇵🇰" },
   { code: "IN", name: "India",           flag: "🇮🇳" },

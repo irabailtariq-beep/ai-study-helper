@@ -550,7 +550,7 @@ Use AI for the deliberate-practice slot. Use real conversation for the speaking 
     slug: "ai-french-tutor",
     title: "GCSE French Revision: Drill Verbs and Vocab Until They Stick",
     description: "Smart drills for French verb conjugations, idiom translation, and exam writing — all with a free AI study helper that grades in your school's style.",
-    publishedAt: today, readTime: "5 min",
+    publishedAt: today, readTime: "1 min",
     tags: ["AI french tutor", "learn french", "french verbs"],
     body: `
 French verbs eat up half your study time and earn most of your marks. The trick is to drill them as triggers, not lists.
@@ -580,7 +580,7 @@ Always type the accents. Lose marks every time. Set up your keyboard in advance 
     slug: "ai-spanish-tutor",
     title: "GCSE Spanish Revision: From Verb Tables to Real Sentences",
     description: "How to use a free AI tutor for Spanish without becoming dependent on it. Drill, translate, and write better sentences faster.",
-    publishedAt: today, readTime: "5 min",
+    publishedAt: today, readTime: "1 min",
     tags: ["AI spanish tutor", "learn spanish", "spanish verbs"],
     body: `
 Spanish is a forgiving language. You can be slightly wrong and still be understood. That is exactly why students plateau — they speak well enough to function but never push for the next level.

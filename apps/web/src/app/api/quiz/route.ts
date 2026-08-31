@@ -9,7 +9,7 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
-  if (bodyTooLarge(req, 8000000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
+  if (bodyTooLarge(req, 4000000)) return NextResponse.json({ error: "Request too large." }, { status: 413 });
   const rl = await checkRateLimitShared(`quiz:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
 

@@ -11,7 +11,9 @@ const JPEG_QUALITY = 0.85;
 /** Hard ceiling on what we send to the API, after any downscaling. */
 export const MAX_UPLOAD_BYTES = 3 * 1024 * 1024;
 /** What the user may pick. Images above this are shrunk; PDFs are rejected. */
-export const MAX_FILE_BYTES = 20 * 1024 * 1024;
+// 4MB: the platform rejects the request above roughly this size, so a higher
+// cap here just meant the student saw a raw platform error instead of ours.
+export const MAX_FILE_BYTES = 4_000_000;
 
 const IMAGE_TYPES = ["image/png", "image/jpeg", "image/jpg", "image/webp", "image/heic"];
 
@@ -66,6 +68,6 @@ export function checkFile(file: File): string | null {
   if (file.type === "application/pdf" && file.size > MAX_UPLOAD_BYTES) {
     return "PDF too big (max 3 MB). Try uploading just the page you need, or a photo of it.";
   }
-  if (file.size > MAX_FILE_BYTES) return "File too big (max 20 MB).";
+  if (file.size > MAX_FILE_BYTES) return "File too big (max 4 MB). Try a photo of one page rather than the whole document.";
   return null;
 }

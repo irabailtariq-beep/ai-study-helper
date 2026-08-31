@@ -3047,7 +3047,7 @@ After hiragana comes katakana (another 46 characters, used for foreign words). T
     slug: "german-cases-simplified",
     title: "German Cases Explained for GCSE: Nominative to Genitive",
     description: "Four cases. Each one answers a specific question. Here is the simplest explanation that actually works.",
-    publishedAt: today, readTime: "5 min",
+    publishedAt: today, readTime: "2 min",
     tags: ["german cases", "learn german", "german grammar"],
     body: `
 German cases scare students because the textbooks bury the simple idea under terminology. Each case answers one question.
