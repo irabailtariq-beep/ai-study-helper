@@ -143,3 +143,6 @@ vite.config.ts.timestamp-*
 .DS_Store
 **/.DS_Store
 .env*
+
+# Outreach kit contains real people's email addresses — kept off the public repo
+OUTREACH-KIT.md
