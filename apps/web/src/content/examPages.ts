@@ -41,6 +41,8 @@ export type ExamPage = {
   targetQuery: string;
   hubSubjects: string[];
   calculator?: ApCalcData;
+  /** Renders the GCSE grade-boundary lookup (data in gcseBoundaries.ts). */
+  gradeCalculator?: "gcse";
 };
 
 export const EXAM_PAGES: ExamPage[] = [
@@ -4069,6 +4071,62 @@ export const EXAM_PAGES: ExamPage[] = [
     "hubSubjects": [
       "Maths",
       "English Language"
+    ]
+  },
+  {
+    "board": "gcse",
+    "slug": "gcse-grade-calculator",
+    "gradeCalculator": "gcse",
+    "metaTitle": "GCSE Grade Calculator (AQA, Edexcel, OCR)",
+    "metaDescription": "Free GCSE grade calculator using the real June 2026 boundaries for AQA, Edexcel and OCR maths and combined science. Enter your mark, see your grade.",
+    "h1": "GCSE Grade Calculator: Maths and Combined Science",
+    "quickAnswer": "Enter your total raw mark for the whole subject, pick your board and tier, and this calculator reads your grade straight off the published June 2026 grade boundaries for AQA, Edexcel or OCR. It does not estimate or interpolate. Remember that boundaries move every exam series, because they are set after examiners see how hard the papers turned out, so treat any grade you get here as where that mark would have landed in June 2026, not a prediction of your result next summer.",
+    "intro": "The number on the front of your mock paper means nothing on its own. A mark of 146 is a grade 7 on Edexcel Higher maths and a grade 6 on OCR Higher maths, because the two papers are out of different totals and were sat by different cohorts. That is what grade boundaries are for, and it is why guessing a percentage is the fastest way to scare yourself for no reason. Pick your board, your course and your tier below, slide your total mark, and see the grade the June 2026 boundaries actually give it, plus how many marks sat between you and the next grade up.",
+    "sections": [
+      {
+        "heading": "Why boundaries change every single year",
+        "body": "Boundaries are not decided in advance. Exam boards write the papers, students sit them, and only then do senior examiners look at how the cohort performed and set the mark needed for each grade. If a paper turned out harder than intended, the boundaries drop so that students are not punished for the paper being tough. If it was easier, they rise. That is the whole mechanism, and it is why your teacher cannot tell you in September what mark you will need in June. It also means a boundary from one series is a reasonable guide and a terrible promise. Use the June 2026 numbers here to understand where a mock mark sits, to see which grade is within reach, and to work out how many marks a grade is actually worth in your subject. Do not use them to conclude that a specific mark next summer guarantees a specific grade, because nobody knows that number yet, including your exam board."
+      },
+      {
+        "heading": "What each tier can actually award",
+        "body": "Tiering is the part students most often get wrong, and it matters more than any boundary. Foundation tier tops out at grade 5, or 5-5 in combined science. It is not possible to get a 6 or above on a Foundation paper no matter how well you do, so a full-mark Foundation script and a mark just over the top boundary both come out as a 5. Higher tier runs from 9 down to 4, with one narrow safety net grade 3 (4-3 in combined science) just below the grade 4 boundary for students who fall slightly short. There is no grade 2 or 1 on Higher tier. Below that safety net the result is U. This is why the tier decision is a real strategic choice rather than a formality: sitting Higher when a 4 is realistic risks a U for a few marks, and sitting Foundation when a 6 is realistic makes a 6 impossible. The calculator only ever offers the grades that are genuinely printed for the tier you pick."
+      },
+      {
+        "heading": "How to use this on a mock paper properly",
+        "body": "Add up your raw marks across every paper in the subject, not one paper on its own. Boundaries are published for the whole qualification, so a single paper mark compared against a subject boundary is meaningless. Once you have the total, enter it here and note two numbers: the marks you are above your current grade boundary, and the marks you need for the next grade. That second number is the one to write at the top of your revision list, because it converts a vague feeling into a target. Six marks from a grade 5 is a very different revision plan from forty marks away. Then work backwards into topics: find the questions where you dropped marks, and check whether they were knowledge gaps, method slips or misread commands, because those three problems have three completely different fixes. If you want the marking done for you, paste your answer into the free marking tool on this site and it will tell you which mark scheme points you hit and which you missed."
+      },
+      {
+        "heading": "Where these numbers come from",
+        "body": "Every boundary in this calculator was taken from the awarding body's own published grade boundary document for the June 2026 series, then independently re-checked against those same documents before it went live. Grade boundaries are published facts, so quoting them is both legal and useful, but there is no substitute for the original: AQA, Pearson Edexcel and OCR each publish a full boundary document for every series on their own websites, covering every subject rather than the two we hold here. This page covers GCSE maths and GCSE combined science for AQA, Edexcel and OCR, including both of AQA's combined science courses and both of OCR's, because those are the qualifications the largest number of students sit. If your subject or series is not here, go to your board's published document rather than borrowing a number from a different paper, since boundaries are never transferable between subjects, boards, tiers or series."
+      }
+    ],
+    "problems": [],
+    "faqs": [
+      {
+        "q": "What mark do I need to pass GCSE?",
+        "a": "A grade 4 is a standard pass and a grade 5 is a strong pass. In raw marks that varies enormously by subject and board: in June 2026 a grade 4 on Higher tier maths needed 63 marks at AQA, 50 at Edexcel and 57 at OCR out of their different totals. That is why you have to check your own board rather than trusting a percentage."
+      },
+      {
+        "q": "Is 60 percent a good GCSE grade?",
+        "a": "There is no fixed answer, and this is the most common misunderstanding about GCSE. Boundaries are set as raw marks after the exam, not as percentages, and they are usually well below what people expect. In June 2026, 60 percent of the marks on Higher tier maths was comfortably above a grade 6 with every board, while on Foundation tier the same percentage was around a grade 4. Always compare your mark to the published boundary for your exact paper."
+      },
+      {
+        "q": "Can I get a grade 9 on Foundation tier?",
+        "a": "No. Foundation tier awards grades 5 down to 1, or 5-5 down to 1-1 in combined science, and nothing above that. If you are aiming for a 6 or higher you must be entered for Higher tier. This is one of the few things about GCSE grading that is completely fixed and does not change between series."
+      },
+      {
+        "q": "Will these boundaries be the same in 2027?",
+        "a": "Almost certainly not, and no honest calculator can tell you the 2027 numbers before the exams are sat. Boundaries are set each series after examiners judge how the papers performed. They usually move by a handful of marks in either direction, so use these to plan and to understand the scale, then check the real ones on results day."
+      },
+      {
+        "q": "What happens if I miss the grade 4 boundary on Higher tier?",
+        "a": "There is a narrow safety net grade 3, shown as 4-3 in combined science, set a little below the grade 4 boundary. If you fall below even that, the result is U, because Higher tier does not award grades 2 or 1. That gap is exactly why tier entry deserves a real conversation with your teacher rather than being left to habit."
+      }
+    ],
+    "targetQuery": "gcse grade calculator",
+    "hubSubjects": [
+      "Maths",
+      "Combined Science"
     ]
   },
   // @@EXAM_PAGES_INSERT@@

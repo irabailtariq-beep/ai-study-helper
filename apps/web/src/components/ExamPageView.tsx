@@ -4,6 +4,7 @@ import { examPagesByBoard } from "@/content/examPages";
 import { breadcrumbJsonLd, faqJsonLd, jsonLdSafe } from "@/lib/seo";
 import { quizJsonLd } from "@/lib/quizSchema";
 import { APScoreCalculator } from "@/components/APScoreCalculator";
+import { GcseGradeCalculator } from "@/components/GcseGradeCalculator";
 
 const BOARD_LABEL: Record<ExamPage["board"], string> = {
   cbse: "CBSE", gcse: "GCSE", waec: "WAEC / WASSCE", ap: "AP", cambridge: "Cambridge IGCSE / A-Level",
@@ -56,6 +57,7 @@ export function ExamPageView({ page }: { page: ExamPage }) {
       <p className="mt-6 text-base leading-relaxed" style={{ color: "var(--ash-text)" }}>{page.intro}</p>
 
       {page.calculator && <APScoreCalculator data={page.calculator} />}
+      {page.gradeCalculator === "gcse" && <GcseGradeCalculator />}
 
       {page.sections.map((s) => (
         <section key={s.heading} className="mt-10">
