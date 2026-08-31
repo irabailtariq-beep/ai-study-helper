@@ -6208,5 +6208,129 @@ No. a^m × a^n = a^(m+n) needs the *same* base. You cannot combine 2^3 × 5^2 in
 **In short:** add powers to multiply, subtract to divide, multiply for a power of a power; then zero gives 1, a negative index flips it into a fraction, and a fractional index is a root over a power. Same base every time, root before power, and always finish the sum when it says "evaluate". Make [flashcards](/flashcards) of the five laws, drill them in [Math Solver](/math-solver), and they become the easiest marks on the paper.
 `,
   },
+
+  {
+    slug: "transformations-maths",
+    title: "Transformations in Maths: Translation, Rotation, Reflection and Enlargement (GCSE and IGCSE)",
+    description: "The four maths transformations for GCSE and IGCSE — how to describe translation, rotation, reflection and enlargement fully, with column vectors, centres, mirror lines and worked examples.",
+    publishedAt: "2026-08-31", readTime: "8 min",
+    tags: ["transformations maths gcse","rotation reflection translation","enlargement scale factor","IGCSE maths","describe fully transformation"],
+    body: `
+**Quick answer:** There are four transformations in GCSE and IGCSE maths — translation, rotation, reflection and enlargement — and each one must be described with specific information. A translation needs a column vector; a rotation needs the angle, direction and centre; a reflection needs the equation of the mirror line; an enlargement needs the scale factor and the centre. In a "describe fully" question you must name exactly one transformation and give every piece of information it needs, or you drop the marks.
+
+The transformations question turns up on basically every GCSE and IGCSE paper, foundation and higher. It should be free marks — you're just moving a shape around a grid. But I lost marks on it for two years, and not because I couldn't move the shape. I'd forget to write "clockwise", or I'd say a shape was reflected "in the x-axis" when the mark scheme wanted "y = 0". This is a checklist topic. Learn the checklist and it becomes one of the safest questions on the paper.
+
+## The golden rule: "describe fully" means tick every box
+
+"Describe fully the single transformation..." is the command phrase, and every word of it matters.
+
+**Single** means one transformation only. If you write "it's been translated and reflected", you score zero — even if that's technically what happened. The examiner wants the one transformation that maps the object straight onto the image. Name two and you've failed the instruction.
+
+**Fully** means all the required information for that transformation. Here's the whole checklist for the four:
+
+- **Translation** — a column vector
+- **Rotation** — angle, direction, and centre of rotation
+- **Reflection** — the equation of the mirror line
+- **Enlargement** — scale factor and centre of enlargement
+
+Miss one item and you typically get one mark instead of two or three. So before you write anything, ask: which transformation, and what does it need?
+
+## Translation — it lives in the column vector
+
+A translation slides the shape without turning or resizing it. You describe it with a column vector: two numbers stacked. I'll write it here as (top, bottom).
+
+- The **top** number is horizontal: positive is right, negative is left.
+- The **bottom** number is vertical: positive is up, negative is down.
+
+So the vector (3, -2) means "3 right and 2 down". The single most common mistake is swapping the two numbers, or getting the sign of the vertical move wrong.
+
+To *find* the vector when you're describing a translation, pick one vertex on the object and the matching vertex on the image, then count: how far across, then how far up or down. Do it for one point only — every point moves by the same vector.
+
+## Rotation — angle, direction, and centre (all three)
+
+A rotation turns the shape about a fixed point. You must state three things: the angle (usually 90 or 180 degrees), the direction, and the centre of rotation as a coordinate.
+
+Direction only matters for 90 degrees — clockwise and anticlockwise land in different places. For 180 degrees the direction is the same either way, so you don't strictly need it (though writing it does no harm). For 90 degrees, leaving out "clockwise" or "anticlockwise" is an instant lost mark.
+
+For rotations about the origin, these coordinate rules are worth memorising:
+
+- 90 degrees clockwise: (x, y) -> (y, -x)
+- 90 degrees anticlockwise: (x, y) -> (-y, x)
+- 180 degrees: (x, y) -> (-x, -y)
+
+In the exam, use tracing paper. Trace the object, hold your pencil tip on the centre, and turn the paper by the angle. To *find* an unknown centre of rotation, trace the object, then try a point — if the trace lands exactly on the image when you turn it, that's your centre. Guess-and-check with tracing paper is completely legitimate and examiners expect it.
+
+## Reflection — give the line as an equation
+
+A reflection flips the shape over a mirror line. The one thing the mark scheme wants is the **equation** of that line.
+
+The lines that come up again and again:
+
+- the x-axis is y = 0
+- the y-axis is x = 0
+- the diagonal going up is y = x
+- the diagonal going down is y = -x
+- vertical lines like x = 2
+- horizontal lines like y = -1
+
+Writing "reflected in the x-axis" is risky — some boards accept it, but the safe answer that always scores is "reflection in the line y = 0". Get into the habit of always giving the equation. A trick I use: pick any point and its image, and the mirror line sits exactly halfway between them, at right angles to the line joining them.
+
+## Enlargement — scale factor and centre, including the nasty ones
+
+An enlargement resizes the shape from a fixed point called the centre of enlargement. You state the scale factor and the centre.
+
+Two things trip everyone up:
+
+- A **fractional** scale factor (between 0 and 1) makes the shape *smaller* — but it's still called an enlargement, not a reduction.
+- A **negative** scale factor puts the image on the *opposite* side of the centre and turns it upside down.
+
+To find the centre and scale factor from a diagram, use the **ray method**: draw straight lines through matching corners of object and image. Where those rays cross is the centre. The scale factor is the image length divided by the object length (negative if the image is on the far side of the centre).
+
+## Worked example: enlargement, scale factor -2, centre (1, 1)
+
+This is the hardest version — negative scale factor — and it's worth the most marks. Say triangle PQR has vertices P(2, 3), Q(2, 1) and R(4, 1). Enlarge it by scale factor -2 about the centre (1, 1).
+
+The reliable method is vectors from the centre. For each vertex:
+
+1. **Find the vector from the centre to the vertex.** For P(2, 3): (2 - 1, 3 - 1) = (1, 2).
+2. **Multiply that vector by the scale factor.** (1, 2) times -2 = (-2, -4).
+3. **Add it back onto the centre.** (1 + (-2), 1 + (-4)) = (-1, -3). So P maps to P'(-1, -3).
+
+Now repeat for the other two vertices:
+
+4. **Vertex Q(2, 1):** vector from centre = (1, 0); times -2 = (-2, 0); add to centre = (-1, 1). So Q'(-1, 1).
+5. **Vertex R(4, 1):** vector from centre = (3, 0); times -2 = (-6, 0); add to centre = (-5, 1). So R'(-5, 1).
+
+The image is triangle (-1, -3), (-1, 1), (-5, 1) — twice the size, on the opposite side of (1, 1), and rotated 180 degrees, which is exactly what a negative scale factor does. If you want the same working checked line by line on your own numbers, drop the problem into [the math solver](/math-solver) and it'll show each vector step.
+
+## Test yourself
+
+Try these, then check the *method*, not just the final coordinates.
+
+1. Shape A has a vertex at (1, 4); its image has the matching vertex at (5, 1). Describe fully the translation.
+2. Rotate the point (3, 2) by 180 degrees about the origin. Where does it land?
+3. Enlarge the point (4, 6) by scale factor 1/2, centre the origin. Where does it land?
+
+*Quick answers: (1) Translation by the column vector (4, -3) — 4 right, 3 down. (2) 180 degrees about the origin sends (x, y) to (-x, -y), so (3, 2) -> (-3, -2). (3) Multiply each coordinate by 1/2: (4, 6) -> (2, 3), a smaller image.*
+
+Want a full past-paper question marked in your board's style? Paste your working into [the math solver](/math-solver) to check every line, or use [Mark my answer](/grade) to see exactly where you'd drop a "describe fully" mark. A few of these and the checklist becomes automatic. When it does, test it under time with a [the quiz generator](/quiz).
+
+## FAQ
+
+**How do I remember what to say for each transformation?**
+Memorise the checklist as a rhyme of counts: translation = 1 thing (vector), reflection = 1 thing (line equation), rotation = 3 things (angle, direction, centre), enlargement = 2 things (scale factor, centre). If you can rattle those off, you'll never leave out the "clockwise" or the centre again.
+
+**Do I always have to state the direction for a rotation?**
+Only for 90 degrees, where clockwise and anticlockwise give different images. For 180 degrees the result is identical either way, so direction isn't required — but writing it costs nothing and keeps you safe.
+
+**Is a negative or fractional scale factor still an enlargement?**
+Yes. However the shape changes — smaller with a fraction, flipped and on the far side with a negative — the transformation is still called an enlargement. Never call it a "reduction" in an answer; that word isn't on the mark scheme.
+
+**What if the shape has been transformed twice?**
+Then it's a combined transformation, and the question will usually ask you to do them in order (transform, then transform the result). But a single "describe fully" answer must still name only one transformation, so read the command word carefully before you decide.
+
+**In short:** the four transformations each have a fixed checklist — translation wants a column vector, rotation wants angle, direction and centre, reflection wants the mirror line's equation, and enlargement wants a scale factor and centre. Name one transformation, tick every box it needs, and this becomes one of the most reliable questions on the whole paper.
+`,
+  },
   // @@BLOG_QUEUE_INSERT@@
 ];
