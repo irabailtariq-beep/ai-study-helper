@@ -704,6 +704,7 @@ Make them once, briefly, while you are learning the topic for the first time. Af
   {
     slug: "spaced-repetition-explained",
     title: "Spaced Repetition Schedule for Exam Revision: 1, 3, 7, 14, 30",
+    metaTitle: "Spaced Repetition Schedule: 1, 3, 7, 14, 30 Days",
     description: "The exact spaced repetition schedule for exam revision: review on days 1, 3, 7, 14 and 30, with a worked example, the real daily time cost, and a paper version.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["spaced repetition","revision schedule","flashcards","active recall","exam revision","memory"],
@@ -1171,6 +1172,7 @@ Top students are not more disciplined than you on any given day. They have arran
   {
     slug: "study-with-adhd",
     title: "How to Study With ADHD: A Revision System That Actually Sticks",
+    metaTitle: "How to Study With ADHD: A Revision System That Sticks",
     description: "How to study with ADHD without fighting your brain: a start ritual that beats task freeze, working-memory offloading, a worked 40-minute block, and exam tactics.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["ADHD study","how to study with ADHD","ADHD revision","focus","study techniques"],
@@ -1292,6 +1294,7 @@ In short: stop trying to want it more. Make the first action physical and specif
   {
     slug: "gcse-revision-guide",
     title: "How to Revise for GCSE Without Burning Out (AQA, Edexcel, OCR)",
+    metaTitle: "GCSE Revision Guide: How to Revise Without Burnout",
     description: "How to revise for GCSE without wrecking your sleep: when to start, the hours arithmetic for nine subjects, past-paper timing, and AQA, Edexcel and OCR tips.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["GCSE revision","how to revise for GCSE","AQA","Edexcel","OCR","revision timetable"],
@@ -2888,6 +2891,7 @@ In short: the equation is the entry ticket, not the exam. Marks come from conver
   {
     slug: "quadratic-formula-step-by-step",
     title: "How to Use the Quadratic Formula Step by Step (Worked Examples)",
+    metaTitle: "Quadratic Formula: Step by Step Worked Examples",
     description: "How to use the quadratic formula step by step: worked examples with negative coefficients, the discriminant, sign-error fixes, and surd vs decimal answers.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["quadratic formula","algebra","discriminant","step by step maths","exam technique"],

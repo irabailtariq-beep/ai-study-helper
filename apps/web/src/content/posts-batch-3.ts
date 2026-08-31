@@ -9,6 +9,7 @@ export const POSTS_BATCH_3: Post[] = [
   {
     slug: "2026-board-exam-survival-kit",
     title: "8-Week Board Exam Revision Plan (CBSE Class 10 & 12, GCSE, WAEC)",
+    metaTitle: "8-Week Board Exam Revision Plan (CBSE, GCSE, WAEC)",
     description: "An 8-week board exam revision plan for CBSE, GCSE, AP, Cambridge and WAEC students: rank topics by marks per hour, drill timed past papers, then taper right.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["board exam revision plan","8 week study plan","exam technique","past paper practice","mark scheme wording"],
@@ -115,6 +116,7 @@ Eight weeks is a resource problem, not a willpower problem. Rank topics by marks
   {
     slug: "ai-revision-timetable-30-days",
     title: "How to Make a 30-Day Revision Timetable You'll Actually Follow",
+    metaTitle: "30-Day Revision Timetable: How to Make One That Works",
     description: "How to build a 30-day revision timetable that survives a missed day: count your real hours, split your blocks 40/40/20, and use AI only where it genuinely helps.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["revision timetable","30 day study plan","exam revision","study schedule","AI study planner"],
@@ -357,6 +359,7 @@ In short: the mole is a counting unit, not something to be scared of. Learn the 
   {
     slug: "igcse-coordinated-science-revision",
     title: "IGCSE Co-ordinated Sciences (0654): How to Revise It Properly",
+    metaTitle: "IGCSE Co-ordinated Sciences 0654: How to Revise",
     description: "IGCSE Co-ordinated Sciences 0654 revision done right: the real paper structure, a weekly three-science rotation, command words and a worked 4-mark example.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["IGCSE Co-ordinated Sciences","0654 revision","Cambridge IGCSE","science revision","exam technique"],
@@ -965,6 +968,7 @@ Possibly not — the individual variation in the research is real. But test it w
   {
     slug: "phone-distraction-study-tactics",
     title: "How to Stop Phone Distraction While Studying (Tactics That Hold)",
+    metaTitle: "How to Stop Phone Distraction While Studying",
     description: "How to stop phone distraction while studying: count your real pickups, use the friction ladder instead of willpower, and train focus up to full paper length.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["phone distraction","focus while studying","study tactics","concentration","exam revision"],
@@ -1179,6 +1183,7 @@ In short: stop auditing effort and start agreeing outputs. Five minutes a week, 
   {
     slug: "ap-statistics-survival-guide",
     title: "AP Statistics Survival Guide: How to Answer FRQs for Full Marks",
+    metaTitle: "AP Statistics: How to Answer FRQs for Full Marks",
     description: "Knowing how to answer AP Statistics FRQs is where the marks are won. The five recycled ideas, how the E/P/I rubric works, and the exact wording readers reward.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["AP Statistics","AP Stats FRQ","AP exam technique","statistics revision","College Board AP"],
@@ -1406,6 +1411,7 @@ Evaluate means decide. Two sides, specific evidence, a mechanism for each, then 
   {
     slug: "show-that-questions-maths",
     title: "'Show That' Questions in Maths: How to Get the Full Marks (GCSE & A-Level)",
+    metaTitle: "Show That Questions in Maths: GCSE and A-Level Guide",
     description: "'Show that' questions hand you the answer — so the marks are all in the working. Here's the method examiners want, with worked GCSE and A-Level examples.",
     publishedAt: "2026-08-02", readTime: "7 min",
     tags: ["GCSE maths", "A-Level maths", "show that", "exam technique", "maths proof"],
@@ -1496,6 +1502,7 @@ No. "Verify" lets you substitute a value in and check it works. "Show that" want
   {
     slug: "aqa-gcse-required-practicals",
     title: "AQA GCSE Required Practicals: The Ones You Have to Memorise (and How)",
+    metaTitle: "AQA GCSE Required Practicals: What You Must Memorise",
     description: "AQA GCSE required practicals explained: all 21 (28 for triple), why they are 15% of your marks, and exactly what to memorise for each one.",
     publishedAt: "2026-08-05", readTime: "8 min",
     tags: ["aqa gcse required practicals","gcse science revision","combined science","required practical variables","gcse biology practicals"],
@@ -1583,6 +1590,7 @@ Want a full set in your board's style? Generate a practicals paper on [/mock-exa
   {
     slug: "cbse-class-12-answer-writing",
     title: "CBSE Class 12 Answer Writing: How to Hit the Mark-Bearing Sentences",
+    metaTitle: "CBSE Class 12 Answer Writing: Hit the Marking Points",
     description: "CBSE Class 12 answer writing decoded: how examiners mark in value points, and how to structure 3 and 5 mark answers to hit the NCERT keywords.",
     publishedAt: "2026-08-05", readTime: "7 min",
     tags: ["CBSE","CBSE Class 12","answer writing","exam technique","board exam tips"],
@@ -1689,6 +1697,7 @@ Get the content solid first with [Explain anything](/explain), turn the exact te
   {
     slug: "igcse-biology-paper-6",
     title: "Cambridge IGCSE Biology Paper 6: The Alternative-to-Practical Guide",
+    metaTitle: "IGCSE Biology Paper 6: Alternative to Practical Guide",
     description: "IGCSE Biology Paper 6 (0610) made simple: how to score on the Alternative to Practical - variables, tables, graphs, drawings, food tests and osmosis.",
     publishedAt: "2026-08-06", readTime: "7 min",
     tags: ["IGCSE Biology Paper 6","Alternative to Practical","Cambridge IGCSE 0610","IGCSE biology practical","exam technique"],
@@ -1915,6 +1924,7 @@ No. Section A's ten questions are all compulsory, but in Section B you choose fi
   {
     slug: "ap-calculus-bc-series-tests",
     title: "AP Calculus BC Series Tests: Which Convergence Test to Use (Decision Guide)",
+    metaTitle: "AP Calculus BC: Which Series Convergence Test to Use",
     description: "AP Calculus BC series tests, decoded: a decision flow for picking the right convergence test fast — and the FRQ justification trap that quietly costs marks.",
     publishedAt: "2026-08-07", readTime: "8 min",
     tags: ["AP Calculus BC","series convergence tests","ratio test","College Board AP","AP exam FRQ"],
@@ -2018,6 +2028,7 @@ Almost always because you didn't name the test or verify its conditions. On FRQs
   {
     slug: "sine-and-cosine-rule",
     title: "The Sine and Cosine Rule: When Right-Angle Trig Isn't Enough",
+    metaTitle: "Sine Rule and Cosine Rule: Which One to Use and When",
     description: "Sine and cosine rule made simple: when to use each on non-right-angled triangles, plus the area rule, the ambiguous case and worked GCSE/IGCSE examples.",
     publishedAt: "2026-08-07", readTime: "8 min",
     tags: ["sine rule","cosine rule","GCSE maths","IGCSE trigonometry","exam technique"],
@@ -2532,6 +2543,7 @@ They describe the same thing. A dilute solution has more water and fewer solute 
   {
     slug: "le-chateliers-principle",
     title: "Le Chatelier's Principle: Predicting Which Way Equilibrium Shifts",
+    metaTitle: "Le Chatelier's Principle: Which Way Equilibrium Shifts",
     description: "Le Chatelier's principle explained: predict which way equilibrium shifts with concentration, pressure and temperature, with Haber and Contact examples.",
     publishedAt: "2026-08-09", readTime: "7 min",
     tags: ["Le Chatelier's principle","chemical equilibrium","A-Level chemistry","AP chemistry","Haber process"],
@@ -2877,6 +2889,7 @@ Newton's first law: an object keeps moving at constant velocity when there is no
   {
     slug: "projectile-motion",
     title: "Projectile Motion: Splitting It Into Horizontal and Vertical (AP & A-Level)",
+    metaTitle: "Projectile Motion: Horizontal and Vertical Components",
     description: "Projectile motion made simple: split it into horizontal (constant velocity) and vertical (g) motion, with worked AP and A-Level examples and range.",
     publishedAt: "2026-08-11", readTime: "8 min",
     tags: ["projectile motion","AP physics","A-Level physics","suvat","exam technique"],
@@ -2983,6 +2996,7 @@ Check your paper. AP typically uses 9.8 m/s^2, while Cambridge A-Level (9702) us
   {
     slug: "standard-form-significant-figures",
     title: "Standard Form and Significant Figures: Stop Losing Easy Marks",
+    metaTitle: "Standard Form and Significant Figures Explained",
     description: "Standard form and significant figures made simple: write a x 10^n, round to the right sig figs, and stop dropping easy GCSE, IGCSE and WAEC marks.",
     publishedAt: "2026-08-11", readTime: "6 min",
     tags: ["standard form","significant figures","GCSE maths","IGCSE maths","rounding"],
@@ -3188,6 +3202,7 @@ Practise with [linear-equation word problems solved step by step](/cbse/class-10
   {
     slug: "differentiation-first-principles",
     title: "Differentiation From First Principles (So It Finally Makes Sense)",
+    metaTitle: "Differentiation From First Principles Explained Simply",
     description: "Differentiation from first principles explained: the limit definition, worked examples for x^2 and x^3, and the show-that method examiners actually mark.",
     publishedAt: "2026-08-12", readTime: "7 min",
     tags: ["A-Level maths","AP Calculus","differentiation","calculus","exam technique"],
@@ -3384,6 +3399,7 @@ Run your numbers through the [APUSH score calculator](/ap/ap-us-history-score-ca
   {
     slug: "cbse-class-10-science-diagrams",
     title: "CBSE Class 10 Science: The Diagram Questions That Always Appear",
+    metaTitle: "CBSE Class 10 Science Diagrams That Always Come Up",
     description: "CBSE Class 10 Science diagram questions carry split marks — the recurring ones (human eye, reflex arc, circuits) and how to draw them for full marks.",
     publishedAt: "2026-08-13", readTime: "7 min",
     tags: ["CBSE Class 10 Science","science diagrams","board exam prep","NCERT science","labelled diagrams"],
@@ -3582,6 +3598,7 @@ Practise with [WASSCE-style quadratic questions, fully solved](/waec/waec-maths-
   {
     slug: "explain-vs-describe-gcse",
     title: "'Explain' vs 'Describe' in GCSE Science (They Are Not the Same)",
+    metaTitle: "Explain vs Describe in GCSE Science (Command Words)",
     description: "Describe vs explain in GCSE science: describe says what happens, explain gives linked reasons where each link is a mark. Worked example plus command-word guide.",
     publishedAt: "2026-08-14", readTime: "7 min",
     tags: ["explain vs describe gcse","gcse science command words","gcse exam technique","mark scheme tips","how to answer explain questions"],
@@ -3684,6 +3701,7 @@ Two habits fixed this for me. I [mark my answer](/grade) on past-paper questions
   {
     slug: "homeostasis-negative-feedback",
     title: "Homeostasis: Negative Feedback Explained With Real Examples (GCSE, IGCSE & A-Level)",
+    metaTitle: "Homeostasis and Negative Feedback (GCSE, IGCSE, A-Level)",
     description: "Homeostasis and negative feedback made simple: the receptor-coordinator-effector loop, worked blood glucose and temperature examples, plus the exam phrasing.",
     publishedAt: "2026-08-15", readTime: "8 min",
     tags: ["homeostasis","negative feedback","IGCSE biology","GCSE biology","thermoregulation"],
@@ -3779,6 +3797,7 @@ Enzymes have an optimum temperature and pH. Stray too far and they denature, so 
   {
     slug: "waves-reflection-refraction",
     title: "Waves: Reflection, Refraction, and the Rules That Govern Them",
+    metaTitle: "Waves: Reflection and Refraction Explained (GCSE, CBSE)",
     description: "Waves reflection and refraction explained for GCSE and CBSE physics: the law of reflection, why light bends, and total internal reflection.",
     publishedAt: "2026-08-15", readTime: "7 min",
     tags: ["waves reflection refraction","gcse physics waves","refraction of light","total internal reflection","law of reflection"],
@@ -3981,6 +4000,7 @@ Yes - the dot (scalar) product, the cross product, and 3D vectors written (x, y,
   {
     slug: "igcse-english-directed-writing",
     title: "Cambridge IGCSE English: How to Nail the Directed Writing Task",
+    metaTitle: "IGCSE English Directed Writing: Structure and Tips",
     description: "IGCSE English directed writing, decoded: the two mark strands (15 reading, 25 writing), how to match form and register, and a worked opening.",
     publishedAt: "2026-08-16", readTime: "7 min",
     tags: ["igcse english directed writing","cambridge igcse english","directed writing paper 2","igcse english 0500","directed writing mark scheme"],
@@ -4069,6 +4089,7 @@ Only if the form genuinely uses them: a report can have headings; a formal lette
   {
     slug: "ap-biology-frq",
     title: "AP Biology FRQs: How to \"Justify\" and \"Predict\" for Full Marks",
+    metaTitle: "AP Biology FRQ: How to Answer Justify and Predict",
     description: "AP Biology FRQ marking decoded: what identify, describe, explain, justify and predict each demand, how points are earned, plus a worked answer.",
     publishedAt: "2026-08-17", readTime: "7 min",
     tags: ["ap biology frq","AP Biology","free response questions","AP exam tips","College Board"],
@@ -4176,6 +4197,7 @@ You can, and for identify or describe it's efficient. But for explain, justify a
   {
     slug: "quadratic-graphs-turning-points",
     title: "Quadratic Graphs: Turning Points, Roots, and the Line of Symmetry",
+    metaTitle: "Quadratic Graphs: Turning Points, Roots and Symmetry",
     description: "Sketch quadratic graphs and find turning points: the roots, line of symmetry and vertex by completing the square, plus a full worked GCSE/IGCSE example.",
     publishedAt: "2026-08-17", readTime: "7 min",
     tags: ["quadratic graphs turning points","sketching parabolas","completing the square","line of symmetry","gcse igcse maths"],
@@ -4599,6 +4621,7 @@ For fully worked exam-style quadratic word problems, see [quadratic word problem
   {
     slug: "a-level-trig-identities",
     title: "Trig Identities You Must Know for A-Level (and How to Use Them)",
+    metaTitle: "Trig Identities You Must Know for A-Level Maths",
     description: "Trig identities a level students must know: Pythagorean, double-angle and addition formulae, when to use each, worked solve and prove examples, and exam tips.",
     publishedAt: "2026-08-19", readTime: "7 min",
     tags: ["A-Level Maths","trigonometry","trig identities","exam technique","revision"],
@@ -4883,6 +4906,7 @@ Because in an open crucible the magnesium takes in oxygen from the air. Weigh th
   {
     slug: "gcse-physics-equations",
     title: "GCSE Physics Equations: Which Are Given and Which You Must Memorise",
+    metaTitle: "GCSE Physics Equations: Which Ones You Must Memorise",
     description: "GCSE physics equations for AQA: which formulae are on the exam sheet, which you must recall, how to rearrange safely and get the units right.",
     publishedAt: "2026-08-20", readTime: "7 min",
     tags: ["gcse physics equations","aqa physics equation sheet","gcse physics revision","rearranging equations","gcse physics formula sheet 2026"],
@@ -4967,6 +4991,7 @@ If any felt shaky, drop the exact equation into [Explain anything](/explain) and
   {
     slug: "integration-by-substitution",
     title: "Integration by Substitution: A Step-by-Step Guide (A-Level & AP)",
+    metaTitle: "Integration by Substitution: Step by Step (A-Level, AP)",
     description: "Integration by substitution, step by step: how to spot it, choose u, change dx, and change the limits, with worked A-Level and AP examples.",
     publishedAt: "2026-08-21", readTime: "7 min",
     tags: ["A-Level maths","AP Calculus","integration by substitution","calculus","exam technique"],
@@ -5365,6 +5390,7 @@ Make the moves automatic: turn the techniques into [Flashcards](/flashcards) so 
   {
     slug: "the-heart-circulatory-system",
     title: "The Heart and Circulatory System: Diagram and Explain Questions Sorted",
+    metaTitle: "The Heart and Circulatory System: Diagram Questions",
     description: "Heart and circulatory system for GCSE/IGCSE biology: chambers, valves, vessels, double circulation, vessel adaptations and the explain questions examiners want.",
     publishedAt: "2026-08-23", readTime: "8 min",
     tags: ["heart circulatory system","GCSE biology","IGCSE biology","double circulation","blood vessels"],
@@ -5467,6 +5493,7 @@ They prevent blood flowing backwards. The atrioventricular valves (tricuspid on 
   {
     slug: "aerobic-anaerobic-respiration",
     title: "Aerobic vs Anaerobic Respiration: The Difference Exams Actually Test",
+    metaTitle: "Aerobic vs Anaerobic Respiration: The Key Differences",
     description: "Aerobic anaerobic respiration for GCSE and IGCSE biology: word equations, products, oxygen debt, lactic acid, and the exact wording examiners reward.",
     publishedAt: "2026-08-23", readTime: "7 min",
     tags: ["GCSE biology","aerobic respiration","anaerobic respiration","oxygen debt","IGCSE biology"],
@@ -5572,6 +5599,7 @@ And if you are aiming at a specific grade, see [the GCSE maths pass mark and bou
   {
     slug: "ohms-law",
     title: "Ohm's Law: Current, Voltage and Resistance Made Clear (GCSE)",
+    metaTitle: "Ohm's Law: Current, Voltage and Resistance (GCSE)",
     description: "Ohms law GCSE explained: V = I x R, rearranging, I-V graphs for resistors, filament lamps and diodes, plus worked examples and the common mistakes.",
     publishedAt: "2026-08-24", readTime: "6 min read",
     tags: ["GCSE Physics","Ohm's Law","Electricity","Required Practical","Exam Tips"],
@@ -5781,6 +5809,7 @@ Irradiation is being exposed to radiation from an outside source, and you do not
   {
     slug: "reactivity-series",
     title: "The Reactivity Series (GCSE & IGCSE): Predicting Displacement and Reactions",
+    metaTitle: "Reactivity Series and Displacement (GCSE and IGCSE)",
     description: "The reactivity series made usable: the order of metals, predicting displacement, ionic equations, and worked GCSE and IGCSE examples.",
     publishedAt: "2026-08-26", readTime: "8 min",
     tags: ["reactivity series","displacement reactions","GCSE chemistry","IGCSE chemistry","ionic equations"],
@@ -5901,6 +5930,7 @@ If any of those tripped you up, paste the exact reaction into [our explainer](/e
   {
     slug: "punnett-squares-genetics",
     title: "Punnett Squares and the Monohybrid Cross: A GCSE and IGCSE Genetics Guide",
+    metaTitle: "Punnett Squares and Monohybrid Crosses (GCSE and IGCSE)",
     description: "Punnett squares and the monohybrid cross made simple for GCSE and IGCSE biology: alleles, genotype vs phenotype, and how to predict 3:1 and 1:1 ratios.",
     publishedAt: "2026-08-28", readTime: "6 min",
     tags: ["monohybrid cross","Punnett squares","GCSE biology genetics","IGCSE biology","genetics revision"],

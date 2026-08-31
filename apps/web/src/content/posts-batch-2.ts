@@ -1241,6 +1241,7 @@ First law tells you what happens when the resultant force is zero. Second law te
   {
     slug: "electromagnetism-basics",
     title: "Electromagnetism Basics: Motor Effect and Induction Explained",
+    metaTitle: "Electromagnetism: Motor Effect and Induction Basics",
     description: "Electromagnetism basics made clear: how a current makes a magnetic field, the motor effect and F = BIL, Fleming's two hand rules, induction and Lenz's law.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["electromagnetism","physics help","motor effect","electromagnetic induction","GCSE physics"],
@@ -1802,6 +1803,7 @@ The bond is the attraction between one pair of oppositely charged ions. The latt
   {
     slug: "acids-bases-ph-scale",
     title: "pH Scale Explained: How to Calculate pH from H+ Concentration",
+    metaTitle: "pH Scale: How to Calculate pH from H+ Concentration",
     description: "How to calculate pH from hydrogen ion concentration, with worked examples: strong vs weak acids, the log scale, Kw for alkalis and choosing an indicator.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["pH scale","how to calculate pH","acids and bases","strong and weak acids","IGCSE chemistry","AP chemistry"],
@@ -4498,6 +4500,7 @@ Exam stress is mostly an arithmetic problem wearing an emotional costume. Count 
   {
     slug: "how-to-motivate-yourself-study",
     title: "How to Motivate Yourself to Study When You Don't Feel Like It",
+    metaTitle: "How to Motivate Yourself to Study When You Don't Want To",
     description: "How to motivate yourself to study: the tiny-first-task rule, if-then plans made the night before, and a daily minimum that survives bad days.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["motivation","study habits","procrastination","revision","student wellbeing"],
