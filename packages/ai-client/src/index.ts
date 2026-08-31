@@ -34,6 +34,35 @@ import {
 } from "@ash/core";
 
 const MODEL = "gemini-2.5-flash";
+// Same family, far more generous free allowance: flash gets ~250 requests a day
+// and 10 a minute, flash-lite ~1,000 and 15. On 2026-09-01 every tool on the
+// site was dead because flash alone ran dry, so a throttled call retries once on
+// lite — a slightly smaller model beats no answer at all.
+const FALLBACK_MODEL = "gemini-2.5-flash-lite";
+
+/** True for the provider's "out of quota / slow down" responses. */
+function isQuotaError(e: unknown): boolean {
+  const raw = String((e as { message?: string })?.message ?? e ?? "");
+  return /\b429\b|quota|rate.?limit|RESOURCE_EXHAUSTED|too many requests/i.test(raw);
+}
+
+/**
+ * Every Gemini call goes through here so all thirteen inherit the fallback.
+ *
+ * NOTE: an earlier attempt monkey-patched ai.models.generateContent inside
+ * getClient(). That broke every tool in production — do not do that again. A
+ * plain wrapper function leaves the SDK untouched.
+ */
+async function generateWithFallback(args: Parameters<GoogleGenAI["models"]["generateContent"]>[0]) {
+  const ai = getClient();
+  try {
+    return await ai.models.generateContent(args);
+  } catch (e) {
+    if (!isQuotaError(e) || (args as { model?: string }).model === FALLBACK_MODEL) throw e;
+    console.warn(`[ai] flash throttled — retrying on ${FALLBACK_MODEL}`);
+    return await generateWithFallback({ ...args, model: FALLBACK_MODEL });
+  }
+}
 
 function getClient() {
   const key = process.env.GEMINI_API_KEY;
@@ -85,7 +114,7 @@ export async function explain(req: ExplainRequest): Promise<ExplainResponse> {
   // was removed here because it routinely corrupts JSON-string LaTeX backslashes
   // (\frac -> \f, \times -> \t, \sqrt makes JSON.parse throw), which broke formulas.
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: partsForRequest(req) }],
     config: {
@@ -125,7 +154,7 @@ export async function generateQuiz(opts: {
   }
   if (!parts.length) throw new Error("Quiz needs source material");
 
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -171,7 +200,7 @@ export async function chat(opts: {
     role: t.role === "assistant" ? "model" : "user",
     parts: [{ text: t.content }],
   }));
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents,
     config: { systemInstruction: system, safetySettings: SAFETY, temperature: 0.7 },
@@ -202,7 +231,7 @@ export async function generatePastPapers(opts: {
   }
   if (!parts.length) throw new Error("Past paper generator needs a source paper");
 
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -237,7 +266,7 @@ export async function extractSyllabus(opts: {
   }
   if (!parts.length) throw new Error("Syllabus extractor needs source material");
 
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -274,7 +303,7 @@ export async function generateTopicPapers(req: PastPaperRequest) {
   }
   if (!parts.length) parts.push({ text: `Generate practice papers based on the specified topic and era.` });
 
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -300,7 +329,7 @@ export async function generateDiagnosticPlan(opts: {
   results: { question: string; studentAnswer: string; correctAnswer: string; topic?: string }[];
 }): Promise<StudyPlan> {
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: [{ text: JSON.stringify(opts.results) }] }],
     config: {
@@ -326,7 +355,7 @@ export async function gradeAnswer(opts: {
   // Grade goes through Gemini's JSON mode; the free LLM path was removed because it
   // corrupts LaTeX backslashes inside JSON (same reason as explain()).
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: [{ text: payload }] }],
     config: {
@@ -343,7 +372,7 @@ export async function checkGrammar(opts: { profile: UserProfile; text: string })
   const system = systemPromptGrammar(opts.profile);
   // Gemini JSON mode (free path skipped — same JSON-escaping reliability reason as explain/grade).
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: [{ text: opts.text }] }],
     config: { systemInstruction: system, safetySettings: SAFETY, responseMimeType: "application/json", temperature: 0.2 },
@@ -372,7 +401,7 @@ export async function buildConceptMap(opts: {
     parts.push({ inlineData: { mimeType, data: data ?? opts.pdfBase64 } });
   }
   if (!parts.length) throw new Error("Concept map needs source material");
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -387,7 +416,7 @@ export async function buildConceptMap(opts: {
 
 export async function parentRecap(opts: { profile: UserProfile; stats: any }): Promise<string> {
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: [{ text: "Please write the recap now." }] }],
     config: {
@@ -419,7 +448,7 @@ export async function solveMath(opts: {
     parts.push({ inlineData: { mimeType, data: data ?? opts.pdfBase64 } });
   }
   if (!parts.length) throw new Error("Math solver needs a problem");
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts }],
     config: {
@@ -438,7 +467,7 @@ export async function formulaSheet(opts: {
   topic?: string;
 }): Promise<FormulaSheet> {
   const ai = getClient();
-  const resp = await ai.models.generateContent({
+  const resp = await generateWithFallback({
     model: MODEL,
     contents: [{ role: "user", parts: [{ text: `Subject: ${opts.subject}${opts.topic ? `, topic: ${opts.topic}` : ""}` }] }],
     config: {
