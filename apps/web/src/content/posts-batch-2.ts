@@ -4498,7 +4498,7 @@ Exam stress is mostly an arithmetic problem wearing an emotional costume. Count 
   {
     slug: "how-to-motivate-yourself-study",
     title: "How to Motivate Yourself to Study When You Don't Feel Like It",
-    description: "How to motivate yourself to study when you don't feel like it: the tiny-first-task rule, if-then plans decided the night before, and a daily minimum that survives bad days.",
+    description: "How to motivate yourself to study: the tiny-first-task rule, if-then plans made the night before, and a daily minimum that survives bad days.",
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["motivation","study habits","procrastination","revision","student wellbeing"],
     body: `

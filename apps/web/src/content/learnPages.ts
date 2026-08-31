@@ -39,7 +39,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
   {
     subject: "math",
     board: "pk-federal",
-    metaTitle: "FBISE Mathematics Help — Class 9, 10, 11, 12 (Federal Board)",
+    metaTitle: "FBISE Maths Help — Class 9-12 (Federal Board)",
     metaDescription: "Free AI math tutor for FBISE Federal Board students. Step-by-step working in Pakistani Matric and FSc style, past-paper practice, and board-aligned chapter notes.",
     intro: "If you're sitting Federal Board (FBISE) Matric or Inter mathematics, the difference between a B and an A is rarely intelligence — it's knowing what FBISE markers actually reward. Our AI is configured to answer in FBISE style: PTB textbook chapter order, the working steps the marking scheme expects, and the specific terminology your teacher uses.",
     examFormat: "FBISE Mathematics is split into two annual board papers. Section A is short-answer (typically 12 marks of MCQs and 18-24 marks of one-line answers). Section B is long answer — 5 questions of 5 marks each in SSC, more in HSSC. Time: 3 hours per paper. The objective MCQ paper is sat first and is short (around 30 minutes for 15 MCQs).",
@@ -258,7 +258,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
   {
     subject: "accounting",
     board: "pk-federal",
-    metaTitle: "FBISE Accounting — ICom Part 1 & 2 (Principles of Accounting)",
+    metaTitle: "FBISE Accounting Help — ICom Part 1 & 2",
     metaDescription: "Free AI accounting tutor for FBISE ICom. Trial balance, journals, ledgers, final accounts, ratio analysis, exam-style problems.",
     intro: "FBISE Principles of Accounting (ICom Part 1 and 2) follows a remarkably consistent question pattern: every paper has one full set of final accounts (Trading + P&L + Balance Sheet), one journalising problem, and one bank reconciliation. The students who do well are those who can do these three in their sleep.",
     examFormat: "Objective + Subjective. The Subjective paper has ~3 'major' questions each worth 15-20 marks (one being final accounts). Allow 60+ minutes for the final accounts question.",
@@ -287,7 +287,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
   {
     subject: "math",
     board: "in-cbse",
-    metaTitle: "CBSE Mathematics — Class 10 & 12 board help (NCERT-aligned)",
+    metaTitle: "CBSE Maths Help — Class 10 & 12 (NCERT-Aligned)",
     metaDescription: "Free AI math tutor for CBSE Class 10 and Class 12 boards. NCERT chapter-by-chapter help, PYQ practice, step-by-step working in board style.",
     intro: "CBSE math papers follow NCERT religiously. The students who get 95+ aren't smarter — they've solved every NCERT exercise + every example + the last 5 years of CBSE PYQs. Our AI knows the NCERT chapter order, the exact theorem statements CBSE expects, and the specific question patterns the Class 10 and 12 boards re-use.",
     examFormat: "CBSE Class 10 Math: 80 marks across 5 sections (Section A: 20 marks of MCQ + Assertion/Reasoning; Section B: 2-mark questions; Section C: 3-mark; Section D: 5-mark; Section E: 4-mark case studies). 3 hours. Class 12 Math: same 80-mark structure but with deeper sections.",
@@ -550,7 +550,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
   {
     subject: "economics",
     board: "in-cbse",
-    metaTitle: "CBSE Economics — Class 11 & 12 (Macro + Micro + Indian Economic Dev)",
+    metaTitle: "CBSE Economics Help — Class 11 & 12 (Macro + Micro)",
     metaDescription: "Free AI economics tutor for CBSE Class 11 and 12. Macro, Micro, Statistics, Indian Economic Development. Diagrams, numericals, and conceptual depth.",
     intro: "CBSE Economics rewards diagrams. Every long answer that involves a curve (demand, supply, AD-AS, IS-LM-like) needs a labelled diagram. Without it, you lose 40% of the marks regardless of how good your prose is.",
     examFormat: "Class 12 Economics: 80-mark paper, 3 hours. Part A: Macroeconomics (40 marks). Part B: Indian Economic Development (40 marks). MCQ + short + long answer structure.",

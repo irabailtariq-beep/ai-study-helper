@@ -4,7 +4,7 @@ export const SITE = {
   shortName: "HelpInStudy",
   tagline: "Your free AI study helper",
   description:
-    "Free AI study helper for any subject — math, English, science, history. Get help with homework, quizzes, flashcards, and exam prep. Upload a photo or PDF and our AI explains it in plain words. Built for students of every age and curriculum.",
+    "Free AI study help for any subject. Snap a photo or paste your homework and get it explained step by step, in your exam board's style. No signup.",
   // Default URL — overridden in metadata via NEXT_PUBLIC_SITE_URL once you connect a domain.
   // .trim() guards against env var values that include trailing whitespace / newlines
   // (which `echo "..." | vercel env add` would otherwise inject and break canonicals + sitemap).

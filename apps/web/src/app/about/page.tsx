@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SITE } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "About Help in Study — a free AI study helper for every subject",
+  title: "About Help in Study — Free AI Study Helper",
   description: "Help in Study is a free AI study helper that adapts to your age, your school's curriculum, and what you actually like. Built for students worldwide.",
   alternates: { canonical: "/about" },
   openGraph: { title: "About Help in Study", description: "Free AI study helper for every subject and curriculum.", url: `${SITE.url}/about` },

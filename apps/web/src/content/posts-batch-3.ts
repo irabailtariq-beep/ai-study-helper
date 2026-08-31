@@ -2130,7 +2130,7 @@ Nine times out of ten it is degree/radian mode, or a mislabelled triangle where 
   {
     slug: "rates-of-reaction-collision-theory",
     title: "Rates of Reaction: Collision Theory Made Simple",
-    description: "Collision theory explained simply — how temperature, concentration, surface area and catalysts change the rate of reaction, with a worked example and required-practical link.",
+    description: "Collision theory explained simply: how temperature, concentration, surface area and catalysts change the rate, with a worked example.",
     publishedAt: "2026-08-08", readTime: "7 min",
     tags: ["collision theory","rates of reaction","GCSE chemistry","activation energy","CBSE chemistry"],
     body: `
@@ -5781,7 +5781,7 @@ Irradiation is being exposed to radiation from an outside source, and you do not
   {
     slug: "reactivity-series",
     title: "The Reactivity Series (GCSE & IGCSE): Predicting Displacement and Reactions",
-    description: "Reactivity series chemistry made usable: the order of metals, how to predict displacement, write ionic equations, and link position to extraction, with worked GCSE/IGCSE examples.",
+    description: "The reactivity series made usable: the order of metals, predicting displacement, ionic equations, and worked GCSE and IGCSE examples.",
     publishedAt: "2026-08-26", readTime: "8 min",
     tags: ["reactivity series","displacement reactions","GCSE chemistry","IGCSE chemistry","ionic equations"],
     body: `
@@ -6000,7 +6000,7 @@ Want a set of these tuned to your board? Generate fresh genetics questions with 
   {
     slug: "natural-selection-evolution",
     title: "Natural Selection and Evolution: How to Explain It for Marks",
-    description: "How to explain natural selection and evolution for full marks: the exam mark-scheme chain, a worked antibiotic-resistance answer, evidence, and the misconceptions that lose marks.",
+    description: "Explain natural selection for full marks: the mark-scheme chain, a worked antibiotic-resistance answer, and the mistakes that lose marks.",
     publishedAt: "2026-08-29", readTime: "7 min",
     tags: ["natural selection","evolution","GCSE biology","IGCSE biology","AP Biology"],
     body: `

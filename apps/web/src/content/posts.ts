@@ -7,6 +7,9 @@ import { POSTS_BATCH_3 } from "./posts-batch-3";
 export type Post = {
   slug: string;
   title: string;
+  /** Short SERP title (<=57 chars) when `title` would be truncated by Google.
+   *  The visible H1 still uses `title`. */
+  metaTitle?: string;
   description: string;
   publishedAt: string;
   updatedAt?: string;

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { SITE } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Free AI study tools — explain, math solver, quiz, flashcards & more",
+  title: "Free AI Study Tools — Solver, Quiz, Marking & More",
   description:
-    "Every Help in Study tool in one place: AI tutor chat, step-by-step math solver, quiz maker, mock exams, flashcards, summariser and a writing coach. Free for CBSE, GCSE, AP, Cambridge & WAEC.",
+    "Ten free study tools in one place: AI tutor chat, math solver, quiz maker, mock exams, flashcards and a writing coach. No signup, no cost.",
   alternates: { canonical: "/tools" },
   openGraph: {
     title: "Free AI study tools — Help in Study",

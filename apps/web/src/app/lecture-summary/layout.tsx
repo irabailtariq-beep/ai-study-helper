@@ -3,7 +3,7 @@ import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
 const title = "Lecture summary — turn any lesson into notes";
-const description = "Paste a lecture, transcript or long set of notes and get clean revision notes back, free. Key points, definitions and the bits worth memorising for GCSE, CBSE, AP, Cambridge and WAEC.";
+const description = "Paste a lecture, transcript or long notes and get clean revision notes back free: key points, definitions and what is worth memorising.";
 
 export const metadata: Metadata = {
   title, description,

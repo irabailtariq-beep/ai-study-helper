@@ -11,8 +11,14 @@ export const metadata: Metadata = {
   title: {
     // The homepage inherits this default (it is a client component). Lead with
     // what students actually type — "study help" — not the brand.
-    default: "Free AI Study Help — CBSE, GCSE, AP, Cambridge & WAEC | Help in Study",
-    template: `%s · ${SITE.name}`,
+    default: "Free AI Study Help — CBSE, GCSE, AP, Cambridge, WAEC",
+    // No brand suffix. Google truncates titles at roughly 600px (~55-60 chars)
+    // and shows the site name separately in results anyway, so appending
+    // " · Help in Study" cost 16 characters on all 232 pages and pushed 145 of
+    // them past the cut — the keywords students search got dropped while the
+    // brand nobody searches for yet survived. Pages that want the brand can
+    // put it in their own title.
+    template: "%s",
   },
   description: SITE.description,
   applicationName: SITE.name,
@@ -46,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: "Free AI Study Help — CBSE, GCSE, AP, Cambridge & WAEC | Help in Study",
+    title: "Free AI Study Help — CBSE, GCSE, AP, Cambridge, WAEC",
     description: SITE.description,
     url: SITE.url,
     locale: SITE.locale,

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
-const title = "Make it about your interests — AI tutor that reframes any topic";
+const title = "AI Tutor That Explains Any Topic Your Way";
 const description =
   "Pick an interest, drop in a topic. Electromagnetic waves through cooking. Trigonometry through cricket. Photosynthesis through Minecraft. Free.";
 
