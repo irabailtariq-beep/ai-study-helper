@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { checkGrammar } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge, refundRateLimit } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -17,6 +18,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(result);
   } catch (e: any) {
     console.error("/api/grammar", e);
-    return NextResponse.json({ error: e?.message ?? "Failed" }, { status: 500 });
+    const fe = friendlyError(e);
+    await refundRateLimit(`grammar:${keyFromRequest(req)}`);
+    return NextResponse.json({ error: fe.error }, { status: fe.status });
   }
 }

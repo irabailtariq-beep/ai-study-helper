@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { gradeAnswer } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge, refundRateLimit } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -19,6 +20,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(result);
   } catch (e: any) {
     console.error("/api/grade", e);
-    return NextResponse.json({ error: e?.message ?? "Failed" }, { status: 500 });
+    const fe = friendlyError(e);
+    await refundRateLimit(`grade:${keyFromRequest(req)}`);
+    return NextResponse.json({ error: fe.error }, { status: fe.status });
   }
 }

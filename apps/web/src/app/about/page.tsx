@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <section className="prose-content space-y-4">
         <p className="text-base leading-relaxed">
-          Help in Study (<b>helpinstudy.com</b>) is a free AI study helper for students aged 6–25.
+          Help in Study (<b>helpinstudy.com</b>) is a free AI study helper for students aged 13 and over.
           We started with a simple question: why does generic AI feel useless when a kid actually has homework?
         </p>
         <p className="text-base leading-relaxed">

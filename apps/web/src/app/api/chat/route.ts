@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { chat } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge, refundRateLimit } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 import { supabaseServer } from "@/lib/supabase/server";
 import { recordActivity } from "@/lib/activity";
 
@@ -82,6 +83,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ reply, sessionId });
   } catch (e: any) {
     console.error("/api/chat", e);
-    return NextResponse.json({ error: e?.message ?? "Chat failed" }, { status: 500 });
+    const fe = friendlyError(e);
+    await refundRateLimit(`chat:${keyFromRequest(req)}`);
+    return NextResponse.json({ error: fe.error }, { status: fe.status });
   }
 }

@@ -112,11 +112,18 @@ jobs:
             fi
           }
 
-          probe "explain"     "/api/explain"     "{\"profile\":$PROFILE,\"text\":\"What is photosynthesis? One sentence.\"}"                       "explanation"
-          probe "math-solver" "/api/math"        "{\"profile\":$PROFILE,\"action\":\"solve\",\"text\":\"Solve 3x + 7 = 22\"}"                                            "steps"
-          probe "quiz"        "/api/quiz"        "{\"profile\":$PROFILE,\"sourceText\":\"Photosynthesis converts light energy into glucose in chloroplasts.\",\"count\":2}" "items"
-          probe "grade"       "/api/grade"       "{\"profile\":$PROFILE,\"question\":\"Describe photosynthesis (2 marks)\",\"studentAnswer\":\"Plants use light to make glucose from carbon dioxide and water.\",\"marks\":2}" "feedback"
-          probe "chat"        "/api/chat"        "{\"profile\":$PROFILE,\"history\":[{\"role\":\"user\",\"content\":\"Explain osmosis in one sentence.\"}]}" "reply"
+          # ROTATE, do not run all five. The 2026-09-01 audit found this canary
+          # was spending 5 AI calls per run against the same free daily quota the
+          # students use — so the robot could exhaust the tools before a single
+          # student arrived. One tool per run, chosen by the hour, still covers
+          # all five every day at four runs a day.
+          case $(( ($(date -u +%j) * 24 + $(date -u +%-H)) % 5 )) in
+            0) probe "explain"     "/api/explain"  "{\"profile\":$PROFILE,\"text\":\"What is photosynthesis? One sentence.\"}"                                             "explanation" ;;
+            1) probe "math-solver" "/api/math"     "{\"profile\":$PROFILE,\"action\":\"solve\",\"text\":\"Solve 3x + 7 = 22\"}"                                        "steps" ;;
+            2) probe "quiz"        "/api/quiz"     "{\"profile\":$PROFILE,\"sourceText\":\"Photosynthesis converts light energy into glucose in chloroplasts.\",\"count\":2}" "items" ;;
+            3) probe "grade"       "/api/grade"    "{\"profile\":$PROFILE,\"question\":\"Describe photosynthesis (2 marks)\",\"studentAnswer\":\"Plants use light to make glucose from carbon dioxide and water.\",\"marks\":2}" "feedback" ;;
+            4) probe "chat"        "/api/chat"     "{\"profile\":$PROFILE,\"history\":[{\"role\":\"user\",\"content\":\"Explain osmosis in one sentence.\"}]}"        "reply" ;;
+          esac
 
           if [ -n "$FAIL" ]; then
             echo "ai_fail=1" >> "$GITHUB_OUTPUT"

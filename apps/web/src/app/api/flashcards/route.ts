@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { sm2 } from "@/lib/sm2";
 import { generateQuiz } from "@ash/ai-client";
-import { checkRateLimitShared, keyFromRequest, bodyTooLarge } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, bodyTooLarge, refundRateLimit } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 import { recordActivity } from "@/lib/activity";
 
 export const runtime = "nodejs";
@@ -81,7 +82,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ cards, created: cards.length });
     } catch (e: any) {
       console.error("/api/flashcards generate", e);
-      return NextResponse.json({ error: e?.message ?? "Generation failed" }, { status: 500 });
+      const fe = friendlyError(e);
+    await refundRateLimit(`flashcards:${keyFromRequest(req)}`);
+    return NextResponse.json({ error: fe.error }, { status: fe.status });
     }
   }
 

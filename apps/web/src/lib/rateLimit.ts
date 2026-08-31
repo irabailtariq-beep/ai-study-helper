@@ -85,3 +85,28 @@ export function bodyTooLarge(req: Request, maxBytes: number): boolean {
   const len = Number(req.headers.get("content-length") ?? 0);
   return Number.isFinite(len) && len > maxBytes;
 }
+
+/**
+ * Give a request's allowance back when the failure was OURS, not the student's.
+ *
+ * Found by the 2026-09-01 audit: when the AI provider's quota ran out, every
+ * failed attempt still burned one of the student's ten daily tries. A student
+ * could tap Explain ten times, see ten errors, and then be told they had used
+ * their allowance for the day. Fails silently — a refund that does not happen
+ * is a minor unfairness; an exception here would be a real outage.
+ */
+export async function refundRateLimit(key: string): Promise<void> {
+  if (!rateLimitIsShared) {
+    const b = buckets.get(key);
+    if (b && b.count > 0) b.count -= 1;
+    return;
+  }
+  try {
+    await fetch(`${REDIS_URL}/decr/${encodeURIComponent(key)}`, {
+      headers: { Authorization: `Bearer ${REDIS_TOKEN}` },
+      cache: "no-store",
+    });
+  } catch {
+    /* ignore — the counter expires within the day anyway */
+  }
+}

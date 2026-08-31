@@ -10,7 +10,7 @@ export function GET() {
 
 > ${SITE.description}
 
-Help in Study is a free, multimodal AI tutor for students aged 6–25.
+Help in Study is a free, multimodal AI tutor for students aged 13 and over.
 It focuses on five exam systems: CBSE (India), GCSE (UK), AP (USA), Cambridge IGCSE & A-Level, and WAEC (West Africa).
 Every answer is written in the student's own board's mark-scheme style, and can be reframed
 through the student's chosen interest (cricket, cooking, gaming, etc.). It produces age-appropriate
