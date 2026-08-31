@@ -34,11 +34,39 @@ import {
 } from "@ash/core";
 
 const MODEL = "gemini-2.5-flash";
+// Same family, far more generous free allowance: flash gets 250 requests a day
+// against flash-lite's 1,000. On 2026-09-01 every tool on the site was dead
+// because flash alone ran dry, so a throttled call now retries on lite rather
+// than failing the student — a slightly smaller model beats no answer at all.
+const FALLBACK_MODEL = "gemini-2.5-flash-lite";
 
+/** True for the provider's "out of quota / slow down" responses. */
+function isQuotaError(e: unknown): boolean {
+  const raw = String((e as { message?: string })?.message ?? e ?? "");
+  return /\b429\b|quota|rate.?limit|RESOURCE_EXHAUSTED|too many requests/i.test(raw);
+}
+
+/**
+ * Gemini client with the model fallback built in.
+ *
+ * Wrapping generateContent here rather than at each of the thirteen call sites
+ * means every tool inherits it, and no future tool can forget to.
+ */
 function getClient() {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error("GEMINI_API_KEY not set");
-  return new GoogleGenAI({ apiKey: key });
+  const ai = new GoogleGenAI({ apiKey: key });
+  const generateContent = ai.models.generateContent.bind(ai.models);
+  ai.models.generateContent = (async (args: any) => {
+    try {
+      return await generateContent(args);
+    } catch (e) {
+      if (!isQuotaError(e) || args?.model === FALLBACK_MODEL) throw e;
+      console.warn(`[ai] ${args?.model} throttled — retrying on ${FALLBACK_MODEL}`);
+      return await generateContent({ ...args, model: FALLBACK_MODEL });
+    }
+  }) as typeof ai.models.generateContent;
+  return ai;
 }
 
 const SAFETY = [
