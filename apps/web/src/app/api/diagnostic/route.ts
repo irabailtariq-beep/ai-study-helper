@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateQuiz, generateDiagnosticPlan } from "@ash/ai-client";
 import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -47,6 +48,6 @@ export async function POST(req: NextRequest) {
     if (/503|overload|unavail|quota|rate.?limit/i.test(msg)) {
       return NextResponse.json({ error: "Our AI provider is briefly overloaded. Wait 10 seconds and try again." }, { status: 503 });
     }
-    return NextResponse.json({ error: msg || "Failed" }, { status: 500 });
+    return NextResponse.json({ error: friendlyError(e).error }, { status: friendlyError(e).status });
   }
 }

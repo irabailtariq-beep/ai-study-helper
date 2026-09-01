@@ -57,10 +57,19 @@ async function generateWithFallback(args: Parameters<GoogleGenAI["models"]["gene
   const ai = getClient();
   try {
     return await ai.models.generateContent(args);
-  } catch (e) {
-    if (!isQuotaError(e) || (args as { model?: string }).model === FALLBACK_MODEL) throw e;
-    console.warn(`[ai] flash throttled — retrying on ${FALLBACK_MODEL}`);
-    return await generateWithFallback({ ...args, model: FALLBACK_MODEL });
+  } catch (primaryError) {
+    if (!isQuotaError(primaryError) || (args as { model?: string }).model === FALLBACK_MODEL) throw primaryError;
+    try {
+      console.warn(`[ai] primary model throttled — retrying on ${FALLBACK_MODEL}`);
+      return await ai.models.generateContent({ ...args, model: FALLBACK_MODEL });
+    } catch (fallbackError) {
+      // FAIL-SAFE: if the retry fails for any reason — a wrong model name, a
+      // model retired tomorrow — rethrow the ORIGINAL error, so a broken
+      // fallback can never be worse than no fallback at all. Both of today's
+      // outages came from a "safety net" that was worse than the problem.
+      console.warn(`[ai] fallback ${FALLBACK_MODEL} also failed:`, String((fallbackError as Error)?.message).slice(0, 200));
+      throw primaryError;
+    }
   }
 }
 

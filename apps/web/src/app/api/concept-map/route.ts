@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { buildConceptMap } from "@ash/ai-client";
 import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -15,6 +16,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(map);
   } catch (e: any) {
     console.error("/api/concept-map", e);
-    return NextResponse.json({ error: e?.message ?? "Failed" }, { status: 500 });
+    return NextResponse.json({ error: friendlyError(e).error }, { status: friendlyError(e).status });
   }
 }

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { extractSyllabus } from "@ash/ai-client";
 import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
 import { supabaseServer } from "@/lib/supabase/server";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -39,7 +40,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ...syllabus, saved: false });
   } catch (e: any) {
     console.error("/api/syllabus POST", e);
-    return NextResponse.json({ error: e?.message ?? "Failed" }, { status: 500 });
+    return NextResponse.json({ error: friendlyError(e).error }, { status: friendlyError(e).status });
   }
 }
 

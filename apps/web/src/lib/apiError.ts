@@ -4,8 +4,9 @@
  * The 2026-09-01 audit caught the tools returning Google's raw error JSON
  * straight to the page — quota messages, internal metric names, billing links
  * and all. That is confusing for a student, makes a working site look broken,
- * and leaks how the thing is built. Every AI route now maps errors through
- * here, and the real error still goes to the server logs for us.
+ * and leaks how the thing is built. The seven routes the UI actually calls map errors through here, and the four
+ * unlinked legacy routes (syllabus, concept-map, diagnostic, parent-recap) now do
+ * too. The real error still goes to the server logs for us.
  */
 export type FriendlyError = { error: string; status: number };
 
@@ -23,7 +24,7 @@ export function friendlyError(e: unknown): FriendlyError {
   }
 
   // Credentials, permissions, or a retired model: broken on our side.
-  if (/\b40[13]\b|api.?key|PERMISSION_DENIED|UNAUTHENTICATED|not found for API version|is not supported/i.test(raw)) {
+  if (/\b40[134]\b|api.?key|PERMISSION_DENIED|UNAUTHENTICATED|NOT_FOUND|not found for API version|is not supported|no longer available/i.test(raw)) {
     return {
       error: "Something is broken on our side. We have been alerted — please try again later.",
       status: 503,

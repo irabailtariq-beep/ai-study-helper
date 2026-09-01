@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { parentRecap } from "@ash/ai-client";
 import { supabaseServer } from "@/lib/supabase/server";
+import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
 
@@ -55,7 +56,8 @@ export async function GET() {
     try {
       letter = await parentRecap({ profile: profile as any, stats });
     } catch (e: any) {
-      letter = `(Recap service temporarily unavailable: ${e.message})`;
+      // never put a provider error inside a letter shown to a parent
+      letter = "(The recap could not be generated just now. Please try again shortly.)";
     }
   }
 

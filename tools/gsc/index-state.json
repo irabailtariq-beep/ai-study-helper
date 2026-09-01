@@ -16,44 +16,44 @@
   ],
   "worklist": [
     {
-      "url": "https://helpinstudy.com/about",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/transform",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/contact",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/lecture-summary",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/terms",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/help-in-study/economics",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/help-in-study/calculus",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/accounting/in-cbse",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/help-in-study/geography",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/economics/in-cbse",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/help-in-study/computer-science",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/math/uk-gcse-aqa",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/help-in-study/programming",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/math/uk-gcse-edexcel",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/biology/in-cbse",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/biology/uk-gcse-aqa",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/chemistry/in-cbse",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/chemistry/uk-gcse-aqa",
+      "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/english/in-cbse",
-      "why": "Discovered - currently not indexed"
+      "url": "https://helpinstudy.com/learn/physics/uk-gcse-aqa",
+      "why": "URL is unknown to Google"
     }
   ],
   "pages": {
@@ -2397,5 +2397,6 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     }
-  }
+  },
+  "submittableLeft": 70
 }

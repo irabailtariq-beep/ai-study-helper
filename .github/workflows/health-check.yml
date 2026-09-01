@@ -97,7 +97,7 @@ jobs:
               -H "content-type: application/json" \
               -H "user-agent: helpinstudy-canary (health check)" \
               -d "$BODY" || echo '{}')
-            OK=$(FIELD="$FIELD" printf '%s' "$RESP" | node -e "
+            OK=$(printf '%s' "$RESP" | FIELD="$FIELD" node -e "
               let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{
                 let ok='no';
                 try{
@@ -119,8 +119,9 @@ jobs:
           # was spending 5 AI calls per run against the same free daily quota the
           # students use — so the robot could exhaust the tools before a single
           # student arrived. One tool per run, chosen by the hour, still covers
-          # all five every day at four runs a day.
-          case $(( ($(date -u +%j) * 24 + $(date -u +%-H)) % 5 )) in
+          # all five across roughly a day and a quarter. (An earlier version advanced by
+          # hour, which silently skipped one tool every day because 24 mod 5 = 4.)
+          case $(( ($(date -u +%j) * 4 + $(date -u +%-H) / 6) % 5 )) in
             0) probe "explain"     "/api/explain"  "{\"profile\":$PROFILE,\"text\":\"What is photosynthesis? One sentence.\"}"                                             "explanation" ;;
             1) probe "math-solver" "/api/math"     "{\"profile\":$PROFILE,\"action\":\"solve\",\"text\":\"Solve 3x + 7 = 22\"}"                                        "steps" ;;
             2) probe "quiz"        "/api/quiz"     "{\"profile\":$PROFILE,\"sourceText\":\"Photosynthesis converts light energy into glucose in chloroplasts.\",\"count\":2}" "items" ;;
