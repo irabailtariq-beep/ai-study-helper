@@ -1162,7 +1162,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaDescription": "Free AP Calculus AB score calculator: move the sliders for your MCQ and FRQ marks to see your estimated 1-5 score.",
     "h1": "AP Calculus AB Score Calculator (2027)",
     "quickAnswer": "Slide in your AP Calculus AB section scores below and the calculator estimates your AP score instantly. As a rough guide, about 65 percent of the total composite has been enough for a 5 in recent estimates, 50 percent for a 4, and 39 percent for a 3 — but the College Board moves the real cut points every year.",
-    "intro": "The AP Calculus AB exam has 45 multiple-choice questions worth 50 percent of your score and 6 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Each FRQ is scored out of 9, and method points are earned even when the final number is wrong — set up the integral and you collect.",
+    "intro": "The AP Calculus AB exam has 42 multiple-choice questions worth 50 percent of your score and 6 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Each FRQ is scored out of 9, and method points are earned even when the final number is wrong — set up the integral and you collect.",
     "sections": [
       {
         "heading": "How the AP Calculus AB exam is actually scored",
@@ -1195,7 +1195,7 @@ export const EXAM_PAGES: ExamPage[] = [
     ],
     "calculator": {
       "name": "AP Calculus AB",
-      "mcqCount": 45,
+      "mcqCount": 42,
       "mcqWeightPercent": 50,
       "frqCount": 6,
       "frqWeightPercent": 50,
@@ -1216,7 +1216,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaDescription": "Free AP Calculus BC score calculator: move the sliders for your MCQ and FRQ marks to see your estimated 1-5 score.",
     "h1": "AP Calculus BC Score Calculator (2027)",
     "quickAnswer": "Slide in your AP Calculus BC section scores below and the calculator estimates your AP score instantly. As a rough guide, about 60 percent of the total composite has been enough for a 5 in recent estimates, 48 percent for a 4, and 36 percent for a 3 — but the College Board moves the real cut points every year.",
-    "intro": "The AP Calculus BC exam has 45 multiple-choice questions worth 50 percent of your score and 6 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. BC also reports an AB subscore, so a rough series day does not erase your AB-level work.",
+    "intro": "The AP Calculus BC exam has 42 multiple-choice questions worth 50 percent of your score and 6 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. BC also reports an AB subscore, so a rough series day does not erase your AB-level work.",
     "sections": [
       {
         "heading": "How the AP Calculus BC exam is actually scored",
@@ -1249,7 +1249,7 @@ export const EXAM_PAGES: ExamPage[] = [
     ],
     "calculator": {
       "name": "AP Calculus BC",
-      "mcqCount": 45,
+      "mcqCount": 42,
       "mcqWeightPercent": 50,
       "frqCount": 6,
       "frqWeightPercent": 50,
@@ -1270,7 +1270,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaDescription": "Free AP Physics 1 score calculator: move the sliders for your MCQ and FRQ marks to see your estimated 1-5 score.",
     "h1": "AP Physics 1 Score Calculator (2027)",
     "quickAnswer": "Slide in your AP Physics 1 section scores below and the calculator estimates your AP score instantly. As a rough guide, about 70 percent of the total composite has been enough for a 5 in recent estimates, 54 percent for a 4, and 40 percent for a 3 — but the College Board moves the real cut points every year.",
-    "intro": "The AP Physics 1 exam has 40 multiple-choice questions worth 50 percent of your score and 4 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Physics 1 has the lowest 5-rate of the sciences most years, so the cutoffs sit lower than students expect.",
+    "intro": "The AP Physics 1 exam has 42 multiple-choice questions worth 50 percent of your score and 4 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Physics 1 has the lowest 5-rate of the sciences most years, so the cutoffs sit lower than students expect.",
     "sections": [
       {
         "heading": "How the AP Physics 1 exam is actually scored",
@@ -1302,7 +1302,7 @@ export const EXAM_PAGES: ExamPage[] = [
     ],
     "calculator": {
       "name": "AP Physics 1",
-      "mcqCount": 40,
+      "mcqCount": 42,
       "mcqWeightPercent": 50,
       "frqCount": 4,
       "frqWeightPercent": 50,
@@ -1313,7 +1313,7 @@ export const EXAM_PAGES: ExamPage[] = [
         "three": 40,
         "two": 27
       },
-      "sourceNote": "Structure per College Board's revised 2025 format (40 MCQ, 4 FRQs worth 10, 12, 10 and 8 points for 40 total); cutoffs are a slightly conservative version of calculator estimates near 69 percent for a 5, and official cutoffs are re-equated each year."
+      "sourceNote": "Structure per College Board for the May 2027 exam (42 MCQ, 4 FRQs totalling 40 points), verified against AP Central and the Course and Exam Description; the exam was revised effective the 2026-27 school year, so older sources still show 40 MCQ. Cutoffs are a slightly conservative version of calculator estimates near 69 percent for a 5, and official cutoffs are re-equated each year."
     }
   },
   {
@@ -1427,7 +1427,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaDescription": "Free AP Statistics score calculator: move the sliders for your MCQ and FRQ marks to see your estimated 1-5 score.",
     "h1": "AP Statistics Score Calculator (2027)",
     "quickAnswer": "Slide in your AP Statistics section scores below and the calculator estimates your AP score instantly. As a rough guide, about 70 percent of the total composite has been enough for a 5 in recent estimates, 57 percent for a 4, and 44 percent for a 3 — but the College Board moves the real cut points every year.",
-    "intro": "The AP Statistics exam has 40 multiple-choice questions worth 50 percent of your score and 6 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Every FRQ is scored 0 to 4 on completeness of communication, not just the calculation, so writing in context pays.",
+    "intro": "The AP Statistics exam has 42 multiple-choice questions worth 50 percent of your score and 4 free-response questions worth 50 percent. This calculator combines both sections the same way the composite score does, then maps the result onto conservative cut-point estimates drawn from released curves and prep-community data. Each FRQ is scored out of 10 on completeness of communication, not just the calculation, so writing in context pays.",
     "sections": [
       {
         "heading": "How the AP Statistics exam is actually scored",
@@ -1459,18 +1459,18 @@ export const EXAM_PAGES: ExamPage[] = [
     ],
     "calculator": {
       "name": "AP Statistics",
-      "mcqCount": 40,
+      "mcqCount": 42,
       "mcqWeightPercent": 50,
-      "frqCount": 6,
+      "frqCount": 4,
       "frqWeightPercent": 50,
-      "frqMaxPoints": 24,
+      "frqMaxPoints": 40,
       "cutoffs": {
         "five": 70,
         "four": 57,
         "three": 44,
         "two": 33
       },
-      "sourceNote": "Structure per College Board (40 MCQ, 5 short FRQs plus 1 Investigative Task each scored 0 to 4, with the task officially weighted at a quarter of the section); cutoffs use the commonly cited released-curve line of 70, 57, 44 and 33 percent, and official cutoffs shift each year."
+      "sourceNote": "Structure per College Board for the May 2027 exam (42 MCQ, 4 FRQs at 10 points each for 40 total), verified against AP Central and the Course and Exam Description; the exam was revised effective the 2026-27 school year, replacing the old 40 MCQ and six-question free-response section, so older sources disagree. Cutoffs use the commonly cited released-curve line of 70, 57, 44 and 33 percent, and official cutoffs shift each year."
     }
   },
   {
@@ -3751,7 +3751,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "metaDescription": "Free AP Precalculus score calculator: slide your multiple-choice and free-response marks and see your estimated AP score for 2027. Real 2026 exam structure.",
     "h1": "AP Precalculus Score Calculator (2027)",
     "quickAnswer": "Slide in your AP Precalculus section scores below for an instant estimate. As a rough guide, about 70 percent of the weighted composite has been enough for a 5 in recent estimates, 58 percent for a 4 and 46 percent for a 3 — the College Board resets the real cut points every year.",
-    "intro": "The AP Precalculus exam has 40 multiple-choice questions worth 62.5 percent of your score and 4 free-response questions worth 37.5 percent. As one of the newest AP courses, its score distributions are still settling, so the cut-point estimates here are deliberately conservative. Each FRQ rewards shown work: setting up the function model correctly earns points even when the final value slips.",
+    "intro": "The AP Precalculus exam has 42 multiple-choice questions worth 62.5 percent of your score and 4 free-response questions worth 37.5 percent. As one of the newest AP courses, its score distributions are still settling, so the cut-point estimates here are deliberately conservative. Each FRQ rewards shown work: setting up the function model correctly earns points even when the final value slips.",
     "sections": [
       {
         "heading": "How the AP Precalculus exam is scored",
@@ -3783,7 +3783,7 @@ export const EXAM_PAGES: ExamPage[] = [
     ],
     "calculator": {
       "name": "AP Precalculus",
-      "mcqCount": 40,
+      "mcqCount": 42,
       "mcqWeightPercent": 62.5,
       "frqCount": 4,
       "frqWeightPercent": 37.5,
