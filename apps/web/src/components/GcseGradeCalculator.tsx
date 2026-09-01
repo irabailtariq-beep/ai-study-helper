@@ -33,9 +33,15 @@ export function GcseGradeCalculator() {
 
   const chosen = specs[Math.min(specIdx, specs.length - 1)];
   const row = chosen ? findBoundaryRow(board, chosen.spec, tier) : undefined;
+  // Never silently rewrite the student's own number. If their mark does not fit
+  // the paper they have now selected (switching board changes the total), say so
+  // and show no grade, rather than clamping and reporting a grade they did not
+  // earn. Clamping is what made 250/300 on OCR read as "240 out of 240" on AQA.
+  const overMax = row ? mark > row.maxMark : false;
   const capped = row ? Math.max(0, Math.min(row.maxMark, mark)) : mark;
+  const showResult = Boolean(row) && !overMax && Number.isFinite(mark);
 
-  const grade = row ? gradeForMark(row, capped) : "";
+  const grade = row && showResult ? gradeForMark(row, capped) : "";
   const awarded = row ? row.grades.find((g) => g.grade === grade) : undefined;
   // Next grade up: the printed grade immediately above the one awarded. When the
   // result is U there is no awarded boundary, so the target is the LOWEST printed
@@ -102,15 +108,29 @@ export function GcseGradeCalculator() {
             <div className="text-xs uppercase tracking-widest font-semibold" style={{ color: "var(--ash-muted)", letterSpacing: "0.2em" }}>
               {BOUNDARY_SERIES} boundaries
             </div>
-            <div className="text-5xl font-extrabold mt-2" style={{ color: "var(--ash-primary)" }}>{grade}</div>
-            <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
-              {capped} out of {row.maxMark} on {board} {chosen?.specName} ({chosen?.spec}), {tier} tier
-            </p>
-            <p className="text-sm mt-3">
-              {awarded && <>You are {capped - awarded.boundary} mark{capped - awarded.boundary === 1 ? "" : "s"} above the grade {awarded.grade} boundary. </>}
-              {nextUp && capped < nextUp.boundary && <>Grade {nextUp.grade} needed {nextUp.boundary - capped} more.</>}
-              {!nextUp && <>That is the highest grade this tier awards.</>}
-            </p>
+            {showResult ? (
+              <>
+                <div className="text-5xl font-extrabold mt-2" style={{ color: "var(--ash-primary)" }}>{grade}</div>
+                <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>
+                  {capped} out of {row.maxMark} on {board} {chosen?.specName} ({chosen?.spec}), {tier} tier
+                </p>
+                <p className="text-sm mt-3">
+                  {awarded && (
+                    capped === awarded.boundary
+                      ? <>You are exactly on the grade {awarded.grade} boundary. </>
+                      : <>You are {capped - awarded.boundary} mark{capped - awarded.boundary === 1 ? "" : "s"} above the grade {awarded.grade} boundary. </>
+                  )}
+                  {nextUp && capped < nextUp.boundary && <>Grade {nextUp.grade} needed {nextUp.boundary - capped} more.</>}
+                  {!nextUp && <>That is the highest grade this tier awards.</>}
+                </p>
+              </>
+            ) : (
+              <p className="text-base mt-3">
+                {overMax
+                  ? <>Your mark of {mark} is more than this paper&apos;s total of {row.maxMark}. Enter your mark for {board} {chosen?.specName} to see the grade.</>
+                  : <>Enter your total mark to see the grade.</>}
+              </p>
+            )}
           </div>
 
           <details className="mt-4">

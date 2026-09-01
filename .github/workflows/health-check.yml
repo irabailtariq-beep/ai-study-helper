@@ -93,6 +93,7 @@ jobs:
 
           probe () {           # probe <name> <path> <json-body> <required-field>
             NAME="$1"; PATHX="$2"; BODY="$3"; FIELD="$4"
+            PROBED_NAME="$NAME"
             RESP=$(curl -s --max-time 90 -X POST "https://helpinstudy.com$PATHX" \
               -H "content-type: application/json" \
               -H "user-agent: helpinstudy-canary (health check)" \
@@ -121,7 +122,7 @@ jobs:
           # student arrived. One tool per run, chosen by the hour, still covers
           # all five across roughly a day and a quarter. (An earlier version advanced by
           # hour, which silently skipped one tool every day because 24 mod 5 = 4.)
-          case $(( ($(date -u +%j) * 4 + $(date -u +%-H) / 6) % 5 )) in
+          case $(( (10#$(date -u +%j) * 4 + $(date -u +%-H) / 6) % 5 )) in
             0) probe "explain"     "/api/explain"  "{\"profile\":$PROFILE,\"text\":\"What is photosynthesis? One sentence.\"}"                                             "explanation" ;;
             1) probe "math-solver" "/api/math"     "{\"profile\":$PROFILE,\"action\":\"solve\",\"text\":\"Solve 3x + 7 = 22\"}"                                        "steps" ;;
             2) probe "quiz"        "/api/quiz"     "{\"profile\":$PROFILE,\"sourceText\":\"Photosynthesis converts light energy into glucose in chloroplasts.\",\"count\":2}" "items" ;;
@@ -129,6 +130,7 @@ jobs:
             4) probe "chat"        "/api/chat"     "{\"profile\":$PROFILE,\"history\":[{\"role\":\"user\",\"content\":\"Explain osmosis in one sentence.\"}]}"        "reply" ;;
           esac
 
+          echo "probed=$(printf '%s' "$PROBED_NAME" | tr -d ' ')" >> "$GITHUB_OUTPUT"
           if [ -n "$FAIL" ]; then
             echo "ai_fail=1" >> "$GITHUB_OUTPUT"
             echo "ai_broken=$FAIL" >> "$GITHUB_OUTPUT"
@@ -164,6 +166,8 @@ jobs:
             fi
             if [ -n "$AI_FAIL" ]; then
               echo "**These AI tools failed:**$AI_BROKEN"
+              echo ""
+              echo "FAILED_PROBE:$AI_BROKEN"
               echo "Most likely: GEMINI_API_KEY expired, free-tier quota exhausted, or the model was retired."
               echo ""
               echo "Response head:"
@@ -189,11 +193,26 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          PROBED: ${{ steps.ai.outputs.probed }}
         run: |
           TITLE="Site health check failed"
           NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
-          if [ -n "$NUM" ]; then
-            gh issue comment "$NUM" --body "Recovered - pages and the AI are responding normally again."
+          if [ -z "$NUM" ]; then echo "All healthy; no open alert."; exit 0; fi
+
+          # The canary probes ONE tool per run. Closing the alert on any healthy
+          # run meant a passing quiz could clear an alarm raised by a broken chat,
+          # which is worse than no alarm — it actively says the problem is gone.
+          # Only close when the tool that failed is the one that just passed.
+          FAILED=$(gh issue view "$NUM" --json comments --jq '[.comments[].body] | map(select(test("FAILED_PROBE:"))) | last // ""' | grep -oE 'FAILED_PROBE:.*' | sed 's/FAILED_PROBE://' | tr -d ' ' || true)
+          if [ -z "$FAILED" ]; then
+            gh issue comment "$NUM" --body "Recovered - pages, indexability and the probed tool are responding normally again."
             gh issue close "$NUM"
+            echo "Closed (no specific tool recorded)."
+          elif printf '%s' "$FAILED" | grep -qF "$PROBED"; then
+            gh issue comment "$NUM" --body "Recovered - **$PROBED** was the tool that failed and it is answering again."
+            gh issue close "$NUM"
+            echo "Closed (the failing tool $PROBED passed)."
+          else
+            gh issue comment "$NUM" --body "Note: **$PROBED** passed this run, but the recorded failure was **$FAILED**, which has not been re-tested yet. Leaving this open."
+            echo "Left open: $FAILED not yet re-tested (this run probed $PROBED)."
           fi
-          echo "All healthy."

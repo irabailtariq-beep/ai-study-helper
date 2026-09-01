@@ -41,7 +41,10 @@ ${esc(post.body)}
 \`,
   },
 ${MARKER}`;
-  src = src.replace(MARKER, obj);
+  // Replacer FUNCTION, not a string: a string replacement treats $&, $` and
+  // $' as substitution patterns, so a post containing them would corrupt the
+  // content file. Verified: "costs $5 and $& more" re-inserted the marker.
+  src = src.replace(MARKER, () => obj);
   published.push(post.slug);
 }
 
