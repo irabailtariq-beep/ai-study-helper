@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateQuiz, generateDiagnosticPlan } from "@ash/ai-client";
-import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, refundRateLimit } from "@/lib/rateLimit";
 import { friendlyError } from "@/lib/apiError";
 
 export const runtime = "nodejs";
@@ -11,7 +11,7 @@ export const maxDuration = 60;
 //  { action: "plan", profile, subject?, days?, results: [{question, studentAnswer, correctAnswer, topic}] }
 //    → returns a StudyPlan
 export async function POST(req: NextRequest) {
-  const rl = checkRateLimit(`diag:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
+  const rl = await checkRateLimitShared(`diag:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
 
   try {
@@ -48,6 +48,7 @@ export async function POST(req: NextRequest) {
     if (/503|overload|unavail|quota|rate.?limit/i.test(msg)) {
       return NextResponse.json({ error: "Our AI provider is briefly overloaded. Wait 10 seconds and try again." }, { status: 503 });
     }
+    await refundRateLimit(`diag:${keyFromRequest(req)}`);
     return NextResponse.json({ error: friendlyError(e).error }, { status: friendlyError(e).status });
   }
 }

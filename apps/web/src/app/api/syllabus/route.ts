@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { extractSyllabus } from "@ash/ai-client";
-import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
+import { checkRateLimitShared, keyFromRequest, refundRateLimit } from "@/lib/rateLimit";
 import { supabaseServer } from "@/lib/supabase/server";
 import { friendlyError } from "@/lib/apiError";
 
@@ -9,7 +9,7 @@ export const maxDuration = 60;
 
 // POST: extract syllabus from upload, optionally save if signed in.
 export async function POST(req: NextRequest) {
-  const rl = checkRateLimit(`syllabus:${keyFromRequest(req)}`, Number(process.env.RL_UPLOAD_PER_DAY ?? 5));
+  const rl = await checkRateLimitShared(`syllabus:${keyFromRequest(req)}`, Number(process.env.RL_UPLOAD_PER_DAY ?? 5));
   if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached." }, { status: 429 });
 
   try {
@@ -40,6 +40,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ...syllabus, saved: false });
   } catch (e: any) {
     console.error("/api/syllabus POST", e);
+    await refundRateLimit(`syllabus:${keyFromRequest(req)}`);
     return NextResponse.json({ error: friendlyError(e).error }, { status: friendlyError(e).status });
   }
 }
