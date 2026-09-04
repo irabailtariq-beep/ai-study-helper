@@ -42,13 +42,38 @@ export default function FlashcardsPage() {
   const [count, setCount] = useState(10);
   const [busy, setBusy] = useState(false);
 
-  // Load on mount
+  // Load on mount: local first so the page is instant, then merge in anything
+  // saved to the account. Without this second step signing in synced nothing —
+  // the API existed and was never called, while /signin and the settings page
+  // both promised "sync your flashcards across devices".
   useEffect(() => {
-    const all = loadCards();
-    setCards(all);
+    const local = loadCards();
+    setCards(local);
     const today = new Date().toISOString().slice(0, 10);
-    const due = all.filter((c) => c.due_at <= today);
-    setCurrent(due[0] ?? all[0] ?? null);
+    setCurrent(local.filter((c) => c.due_at <= today)[0] ?? local[0] ?? null);
+
+    let cancelled = false;
+    (async () => {
+      try {
+        const r = await fetch("/api/flashcards");
+        if (!r.ok) return;
+        const { cards: remote } = (await r.json()) as { cards?: Card[] };
+        if (cancelled || !remote?.length) return;
+        // Merge by content, not by id: a card made offline and the same card
+        // saved to the account are the same card to the student. The server row
+        // wins because it carries the real review schedule.
+        const key = (c: Card) => `${c.front}\u0000${c.back}`;
+        const merged = [...remote];
+        const seen = new Set(remote.map(key));
+        for (const c of local) if (!seen.has(key(c))) merged.push(c);
+        saveCards(merged);
+        setCards(merged);
+        setCurrent(merged.filter((c) => c.due_at <= today)[0] ?? merged[0] ?? null);
+      } catch {
+        /* offline or signed out — the local deck is already showing */
+      }
+    })();
+    return () => { cancelled = true; };
   }, []);
 
   function persist(next: Card[]) {

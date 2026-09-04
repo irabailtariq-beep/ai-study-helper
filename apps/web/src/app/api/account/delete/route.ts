@@ -21,11 +21,27 @@ export async function POST() {
     await sb.from("quizzes").delete().eq("user_id", user.id);
     await sb.from("quiz_attempts").delete().eq("user_id", user.id);
     await sb.from("activity").delete().eq("user_id", user.id);
+    // These two were missing from the wipe. classroom_links holds Google access
+    // and refresh TOKENS — leaving those behind after someone asks us to delete
+    // their account is the worst thing on this list, not a tidiness issue.
+    await sb.from("classroom_links").delete().eq("user_id", user.id);
+    await sb.from("syllabi").delete().eq("user_id", user.id);
     await sb.auth.signOut();
-    return NextResponse.json({ ok: true, note: "Data wiped. Auth user row remains until SUPABASE_SERVICE_ROLE_KEY is set." });
+    // Tell the truth: without the service-role key we cannot remove the account
+    // row itself, so the email address stays. Do not report a clean delete.
+    return NextResponse.json({
+      ok: true,
+      complete: false,
+      note: "Your study data has been deleted. Your account record (email address) could not be removed automatically — email raistudyhelper@gmail.com and it will be deleted manually.",
+    });
   }
   const admin = createClient(url, service, { auth: { autoRefreshToken: false, persistSession: false } });
+  // Belt and braces: delete the rows first in case any table lacks an ON DELETE
+  // CASCADE foreign key to auth.users, then remove the account itself.
+  for (const t of ["profiles", "chat_messages", "chat_sessions", "flashcards", "quizzes", "quiz_attempts", "activity", "classroom_links", "syllabi"]) {
+    await sb.from(t).delete().eq(t === "profiles" ? "id" : "user_id", user.id);
+  }
   const { error } = await admin.auth.admin.deleteUser(user.id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, complete: true });
 }

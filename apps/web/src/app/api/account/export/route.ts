@@ -7,12 +7,14 @@ export async function GET() {
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return NextResponse.json({ error: "Not signed in" }, { status: 401 });
 
-  const [profile, sessions, messages, quizzes, attempts, cards, activity] = await Promise.all([
+  const [profile, sessions, messages, quizzes, attempts, classroom, syllabi, cards, activity] = await Promise.all([
     sb.from("profiles").select("*").eq("id", user.id),
     sb.from("chat_sessions").select("*").eq("user_id", user.id),
     sb.from("chat_messages").select("*").eq("user_id", user.id),
     sb.from("quizzes").select("*").eq("user_id", user.id),
     sb.from("quiz_attempts").select("*").eq("user_id", user.id),
+    sb.from("classroom_links").select("*").eq("user_id", user.id),
+    sb.from("syllabi").select("*").eq("user_id", user.id),
     sb.from("flashcards").select("*").eq("user_id", user.id),
     sb.from("activity").select("*").eq("user_id", user.id),
   ]);
@@ -27,6 +29,8 @@ export async function GET() {
     attempts: attempts.data,
     flashcards: cards.data,
     activity: activity.data,
+    classroomLinks: classroom.data,
+    syllabi: syllabi.data,
   };
 
   return new NextResponse(JSON.stringify(payload, null, 2), {
