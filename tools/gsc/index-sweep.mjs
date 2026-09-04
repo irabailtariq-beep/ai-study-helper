@@ -122,8 +122,17 @@ const lost = Object.entries(pages)
   .filter(([url, p]) => prev.pages?.[url] && isIndexed(prev.pages[url]) && !isIndexed(p))
   .map(([url]) => url);
 
+// If a large share of inspections failed, this run did not really happen: keep
+// the previous numbers and say so, rather than stamping today's date on stale
+// counts and reporting a false "nothing was lost".
+const failureRate = urls.length ? failed / urls.length : 0;
+const incomplete = failureRate > 0.2;
+
 const state = {
-  ranOn: new Date().toISOString().slice(0, 10),
+  ranOn: incomplete ? (prev.ranOn ?? null) : new Date().toISOString().slice(0, 10),
+  attemptedOn: new Date().toISOString().slice(0, 10),
+  failed,
+  incomplete,
   total: urls.length,
   indexed,
   prevIndexed: prev.indexed ?? null,
@@ -131,7 +140,8 @@ const state = {
     const k = p.coverage || "unknown"; acc[k] = (acc[k] || 0) + 1; return acc;
   }, {}),
   brokenUrls: broken.map(([url, p]) => ({ url, fetch: p.fetch, indexing: p.indexing })),
-  lost,
+  // A failed sweep cannot distinguish "deindexed" from "not checked".
+  lost: incomplete ? [] : lost,
   externalLinks: [...externalLinks].sort(),
   worklist,
   // How many URLs remain that are actually worth submitting. When this hits 0
@@ -145,8 +155,15 @@ console.log(`\nindexed: ${indexed}/${urls.length}${prev.indexed != null ? ` (was
 for (const [k, v] of Object.entries(state.counts).sort((a, b) => b[1] - a[1])) console.log(`  ${String(v).padStart(4)}  ${k}`);
 if (lost.length) console.log(`\n⚠️ DEINDEXED since last run: ${lost.join(", ")}`);
 if (broken.length) console.log(`\n⚠️ broken: ${broken.length} page(s)`);
+if (incomplete) {
+  console.error(`\n⚠️ SWEEP INCOMPLETE: ${failed} of ${urls.length} inspections failed. Keeping the previous counts; the dashboard will show this run as incomplete.`);
+}
 console.log(`\nexternal links known to Google: ${externalLinks.size}`);
 for (const l of externalLinks) console.log(`  ${l}`);
 console.log(`\nworth submitting in total: ${state.submittableLeft}`);
 console.log(`\ntomorrow's 10:`);
 worklist.forEach((w, i) => console.log(`  ${i + 1}. ${w.url}  [${w.why}]`));
+
+// Exit non-zero on a broken run so the workflow step fails visibly instead of
+// the dashboard quietly showing yesterday's numbers under today's date.
+if (incomplete) process.exit(1);

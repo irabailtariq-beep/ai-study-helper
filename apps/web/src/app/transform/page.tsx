@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useEffectiveProfile } from "@/lib/profileStore";
 import { ProfileNudge } from "@/components/ProfileNudge";
@@ -42,20 +42,28 @@ export default function TransformPage() {
   const profile = useEffectiveProfile();
 
   // Onboarding step 7 collects interests and tells the student they are "used by
-  // the make it about my interests feature". This page then ignored them and
-  // always defaulted to cooking, so the promise made two screens earlier was
-  // quietly unkept — and a student who typed a custom interest never saw it here.
-  const saved = profile.interests?.[0];
-  const savedPreset = saved
-    ? INTEREST_PRESETS.find(
-        (p) => p.id === saved.toLowerCase() || p.label.toLowerCase() === saved.toLowerCase(),
-      )
-    : undefined;
-  // A non-empty customInterest already overrides the chips (see finalInterest
-  // below), so a saved interest that is not one of the presets simply goes in
-  // that box — no fake "custom" chip id needed.
-  const [interest, setInterest] = useState<string>(savedPreset?.id ?? "cooking");
-  const [customInterest, setCustomInterest] = useState(savedPreset ? "" : (saved ?? ""));
+  // the make it about my interests feature", so this page must start there.
+  //
+  // It cannot be done in a useState initialiser: those run on first render,
+  // before zustand-persist has rehydrated the profile from localStorage, so the
+  // saved interest is not there yet and the default sticks. That is exactly how
+  // an earlier attempt at this fix shipped and did nothing.
+  const [interest, setInterest] = useState<string>("cooking");
+  const [customInterest, setCustomInterest] = useState("");
+  const [seededInterest, setSeededInterest] = useState(false);
+  useEffect(() => {
+    if (seededInterest) return;
+    const saved = profile.interests?.[0];
+    if (!saved) return;
+    const preset = INTEREST_PRESETS.find(
+      (p) => p.id === saved.toLowerCase() || p.label.toLowerCase() === saved.toLowerCase(),
+    );
+    // A non-empty customInterest already overrides the chips (see finalInterest),
+    // so anything that is not a preset simply goes in that box.
+    if (preset) setInterest(preset.id);
+    else setCustomInterest(saved);
+    setSeededInterest(true);
+  }, [profile.interests, seededInterest]);
   const [intensity, setIntensity] = useState<TransformIntensity>("heavy");
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);

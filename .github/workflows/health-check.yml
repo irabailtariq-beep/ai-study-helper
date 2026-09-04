@@ -203,7 +203,11 @@ jobs:
           # run meant a passing quiz could clear an alarm raised by a broken chat,
           # which is worse than no alarm — it actively says the problem is gone.
           # Only close when the tool that failed is the one that just passed.
-          FAILED=$(gh issue view "$NUM" --json comments --jq '[.comments[].body] | map(select(test("FAILED_PROBE:"))) | last // ""' | grep -oE 'FAILED_PROBE:.*' | sed 's/FAILED_PROBE://' | tr -d ' ' || true)
+          # Read the issue BODY as well as its comments: a NEW alert writes
+          # FAILED_PROBE into the body via --body-file, and only a repeat failure
+          # writes a comment. Reading comments alone meant a fresh alert had no
+          # recorded probe and was closed by the first tool that passed.
+          FAILED=$(gh issue view "$NUM" --json body,comments --jq '([.body] + [.comments[].body]) | map(select(test("FAILED_PROBE:"))) | last // ""' | grep -oE 'FAILED_PROBE:.*' | sed 's/FAILED_PROBE://' | tr -d ' ' || true)
           if [ -z "$FAILED" ]; then
             gh issue comment "$NUM" --body "Recovered - pages, indexability and the probed tool are responding normally again."
             gh issue close "$NUM"

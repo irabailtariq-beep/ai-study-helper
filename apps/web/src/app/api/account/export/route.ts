@@ -29,7 +29,14 @@ export async function GET() {
     attempts: attempts.data,
     flashcards: cards.data,
     activity: activity.data,
-    classroomLinks: classroom.data,
+    // Deliberately redacted: this table holds Google access and refresh TOKENS.
+    // Telling the student the connection exists is right; handing them live
+    // credentials in a downloadable file is not.
+    classroomLinks: (classroom.data ?? []).map((l: Record<string, unknown>) => ({
+      provider: l.provider,
+      created_at: l.created_at,
+      tokens: "[redacted — credentials are never exported]",
+    })),
     syllabi: syllabi.data,
   };
 

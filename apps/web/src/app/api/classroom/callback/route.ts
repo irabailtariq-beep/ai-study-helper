@@ -2,9 +2,24 @@ import { NextRequest, NextResponse } from "next/server";
 import { exchangeCode } from "@/lib/classroom";
 import { supabaseServer } from "@/lib/supabase/server";
 
+// DISABLED 2026-09-04. This Google Classroom integration is not linked from any
+// page, is not mentioned anywhere in the privacy policy, and stores Google
+// access and refresh tokens for students aged 13+. An undisclosed OAuth
+// integration holding minors' credentials is a liability, not a feature.
+// The code is intact: set CLASSROOM_ENABLED=1 to turn it back on, after adding
+// it to the privacy policy and linking it from the UI.
+const CLASSROOM_ENABLED = process.env.CLASSROOM_ENABLED === "1";
+const classroomDisabled = () =>
+  NextResponse.json(
+    { error: "The Google Classroom connection is not available." },
+    { status: 404 },
+  );
+
+
 export const runtime = "nodejs";
 
 export async function GET(req: NextRequest) {
+  if (!CLASSROOM_ENABLED) return classroomDisabled();
   const url = new URL(req.url);
   const code = url.searchParams.get("code");
   const state = url.searchParams.get("state"); // user id

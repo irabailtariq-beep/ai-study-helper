@@ -20,6 +20,24 @@ type Card = {
 };
 
 const STORAGE_KEY = "ash-flashcards-v1";
+// Cards the student deleted here. Reviews and deletions are never sent to the
+// server, so without this list every sync resurrects everything they removed.
+const DELETED_KEY = "ash-flashcards-deleted-v1";
+
+/** Cards are matched by content, not id: the same card made offline and saved
+ *  to the account is one card to the student. */
+const cardKey = (c: { front: string; back: string }) => `${c.front}\u0000${c.back}`;
+
+function loadDeleted(): string[] {
+  if (typeof window === "undefined") return [];
+  try { return JSON.parse(localStorage.getItem(DELETED_KEY) ?? "[]"); }
+  catch { return []; }
+}
+function rememberDeleted(key: string) {
+  if (typeof window === "undefined") return;
+  const all = loadDeleted();
+  if (!all.includes(key)) localStorage.setItem(DELETED_KEY, JSON.stringify([...all, key].slice(-500)));
+}
 
 function loadCards(): Card[] {
   if (typeof window === "undefined") return [];
@@ -42,10 +60,15 @@ export default function FlashcardsPage() {
   const [count, setCount] = useState(10);
   const [busy, setBusy] = useState(false);
 
-  // Load on mount: local first so the page is instant, then merge in anything
-  // saved to the account. Without this second step signing in synced nothing —
-  // the API existed and was never called, while /signin and the settings page
-  // both promised "sync your flashcards across devices".
+  // Load on mount: local first so the page is instant, then add anything saved
+  // to the account that is not already here.
+  //
+  // LOCAL WINS on a content collision, and that is deliberate. Reviews and
+  // deletions are never sent to the server (those API branches exist but nothing
+  // calls them), so a server row carries schema defaults — reps 0, due today.
+  // An earlier version of this merge let the server row win, which silently
+  // reset the student's real review schedule and resurrected deleted cards. The
+  // sync is only allowed to ADD cards it has never seen.
   useEffect(() => {
     const local = loadCards();
     setCards(local);
@@ -59,16 +82,19 @@ export default function FlashcardsPage() {
         if (!r.ok) return;
         const { cards: remote } = (await r.json()) as { cards?: Card[] };
         if (cancelled || !remote?.length) return;
-        // Merge by content, not by id: a card made offline and the same card
-        // saved to the account are the same card to the student. The server row
-        // wins because it carries the real review schedule.
-        const key = (c: Card) => `${c.front}\u0000${c.back}`;
-        const merged = [...remote];
-        const seen = new Set(remote.map(key));
-        for (const c of local) if (!seen.has(key(c))) merged.push(c);
-        saveCards(merged);
-        setCards(merged);
-        setCurrent(merged.filter((c) => c.due_at <= today)[0] ?? merged[0] ?? null);
+        const deleted = new Set(loadDeleted());
+        // Merge against LIVE state, not the snapshot captured before the fetch:
+        // a review or a generate finishing mid-flight was being overwritten.
+        setCards((prev) => {
+          const have = new Set(prev.map(cardKey));
+          const additions = remote.filter((c) => !have.has(cardKey(c)) && !deleted.has(cardKey(c)));
+          if (!additions.length) return prev;
+          const merged = [...prev, ...additions];
+          saveCards(merged);
+          // Only choose a card if the student is not already working through one.
+          setCurrent((cur) => cur ?? merged.filter((c) => c.due_at <= today)[0] ?? merged[0] ?? null);
+          return merged;
+        });
       } catch {
         /* offline or signed out — the local deck is already showing */
       }
@@ -129,6 +155,7 @@ export default function FlashcardsPage() {
   function deleteCurrent() {
     if (!current) return;
     if (!confirm("Delete this card?")) return;
+    rememberDeleted(cardKey(current));
     const next = cards.filter((c) => c.id !== current.id);
     persist(next);
     const today = new Date().toISOString().slice(0, 10);

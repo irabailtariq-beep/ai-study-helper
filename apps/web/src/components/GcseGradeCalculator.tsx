@@ -20,7 +20,9 @@ export function GcseGradeCalculator() {
   const [board, setBoard] = useState<(typeof BOARDS)[number]>("AQA");
   const [tier, setTier] = useState<(typeof TIERS)[number]>("Higher");
   const [specIdx, setSpecIdx] = useState(0);
-  const [mark, setMark] = useState(120);
+  // Holds "" while the box is empty. Number("") is 0, so coercing here told
+  // students they had scored U on a mark they had just cleared.
+  const [mark, setMark] = useState<number | "">(120);
 
   // Specs this board publishes for this subject (AQA Combined has two, OCR too).
   const specs = useMemo(() => {
@@ -37,9 +39,13 @@ export function GcseGradeCalculator() {
   // the paper they have now selected (switching board changes the total), say so
   // and show no grade, rather than clamping and reporting a grade they did not
   // earn. Clamping is what made 250/300 on OCR read as "240 out of 240" on AQA.
-  const overMax = row ? mark > row.maxMark : false;
-  const capped = row ? Math.max(0, Math.min(row.maxMark, mark)) : mark;
-  const showResult = Boolean(row) && !overMax && Number.isFinite(mark);
+  const empty = mark === "";
+  const overMax = row && !empty ? mark > row.maxMark : false;
+  // Only used to position the slider thumb. The visible number input shows the
+  // student's own value so it can never disagree with the message below it.
+  const sliderValue = row && !empty ? Math.max(0, Math.min(row.maxMark, mark)) : 0;
+  const capped = empty ? 0 : (mark as number);
+  const showResult = Boolean(row) && !empty && !overMax;
 
   const grade = row && showResult ? gradeForMark(row, capped) : "";
   const awarded = row ? row.grades.find((g) => g.grade === grade) : undefined;
@@ -96,10 +102,10 @@ export function GcseGradeCalculator() {
             <label htmlFor="g-mark" className="block text-sm font-semibold">
               Your total mark across all papers (0–{row.maxMark})
             </label>
-            <input id="g-mark" type="range" min={0} max={row.maxMark} value={capped}
+            <input id="g-mark" type="range" min={0} max={row.maxMark} value={sliderValue}
               onChange={(e) => setMark(Number(e.target.value))} className="w-full mt-2" />
-            <input type="number" min={0} max={row.maxMark} value={capped}
-              onChange={(e) => setMark(Number(e.target.value))}
+            <input type="number" min={0} max={row.maxMark} value={mark}
+              onChange={(e) => { const v = e.target.value; setMark(v === "" ? "" : Number(v)); }}
               className="mt-1 w-28 rounded-lg border px-3 py-2 text-center text-lg font-bold"
               style={selStyle} aria-label="Total mark" />
           </div>

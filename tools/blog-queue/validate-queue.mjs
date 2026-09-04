@@ -71,7 +71,11 @@ queue.forEach((p, i) => {
   // Eduqas is WJEC's England brand and SQA/National 5/Higher are Scotland's —
   // all outside the five systems this site covers, and all were missing.
   const FORBIDDEN = /\b(IB Diploma|NEET|JEE|FBISE|ICSE|WJEC|Eduqas|CCEA|SQA|National 5|Advanced Higher|UPSC|MDCAT|Common Core)\b/i;
-  const hit = body.match(FORBIDDEN) || String(p?.title ?? "").match(FORBIDDEN);
+  // description and tags are published verbatim into meta tags, OpenGraph and
+  // JSON-LD, so a forbidden board there is just as public as one in the body.
+  const searchable = [body, p?.title, p?.description, ...(Array.isArray(p?.tags) ? p.tags : [])]
+    .map((x) => String(x ?? "")).join("\n");
+  const hit = searchable.match(FORBIDDEN);
   if (hit) problems.push(`${at}: mentions forbidden exam board "${hit[0]}"`);
 
   const words = body.trim().split(/\s+/).filter(Boolean).length;

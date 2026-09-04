@@ -34,7 +34,11 @@ jobs:
         working-directory: tools/gsc
         env:
           GSC_SA_JSON: ${{ secrets.GSC_SA_JSON }}
-        run: node index-sweep.mjs || echo "index sweep failed — dashboard will render without the funnel"
+        run: |
+          if ! node index-sweep.mjs; then
+            echo "SWEEP_FAILED=1" >> "$GITHUB_ENV"
+            echo "::warning::Index sweep did not complete — the dashboard will show the previous page counts and say so."
+          fi
 
       - name: Pull Search Console
         working-directory: tools/gsc

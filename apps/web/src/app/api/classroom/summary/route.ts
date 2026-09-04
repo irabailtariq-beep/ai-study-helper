@@ -3,6 +3,20 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { listCourses, listCourseWork, listSubmissions, refreshToken } from "@/lib/classroom";
 import { GoogleGenAI } from "@google/genai";
 
+// DISABLED 2026-09-04. This Google Classroom integration is not linked from any
+// page, is not mentioned anywhere in the privacy policy, and stores Google
+// access and refresh tokens for students aged 13+. An undisclosed OAuth
+// integration holding minors' credentials is a liability, not a feature.
+// The code is intact: set CLASSROOM_ENABLED=1 to turn it back on, after adding
+// it to the privacy policy and linking it from the UI.
+const CLASSROOM_ENABLED = process.env.CLASSROOM_ENABLED === "1";
+const classroomDisabled = () =>
+  NextResponse.json(
+    { error: "The Google Classroom connection is not available." },
+    { status: 404 },
+  );
+
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -27,6 +41,7 @@ async function getToken(userId: string) {
 }
 
 export async function GET() {
+  if (!CLASSROOM_ENABLED) return classroomDisabled();
   const sb = await supabaseServer();
   if (!sb) return NextResponse.json({ error: "Sign in required." }, { status: 400 });
   const { data: { user } } = await sb.auth.getUser();
