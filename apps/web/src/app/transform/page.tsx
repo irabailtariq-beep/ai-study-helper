@@ -41,8 +41,21 @@ const INTENSITY_LABELS: Record<TransformIntensity, { name: string; sub: string }
 export default function TransformPage() {
   const profile = useEffectiveProfile();
 
-  const [interest, setInterest] = useState<string>("cooking");
-  const [customInterest, setCustomInterest] = useState("");
+  // Onboarding step 7 collects interests and tells the student they are "used by
+  // the make it about my interests feature". This page then ignored them and
+  // always defaulted to cooking, so the promise made two screens earlier was
+  // quietly unkept — and a student who typed a custom interest never saw it here.
+  const saved = profile.interests?.[0];
+  const savedPreset = saved
+    ? INTEREST_PRESETS.find(
+        (p) => p.id === saved.toLowerCase() || p.label.toLowerCase() === saved.toLowerCase(),
+      )
+    : undefined;
+  // A non-empty customInterest already overrides the chips (see finalInterest
+  // below), so a saved interest that is not one of the presets simply goes in
+  // that box — no fake "custom" chip id needed.
+  const [interest, setInterest] = useState<string>(savedPreset?.id ?? "cooking");
+  const [customInterest, setCustomInterest] = useState(savedPreset ? "" : (saved ?? ""));
   const [intensity, setIntensity] = useState<TransformIntensity>("heavy");
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);

@@ -54,7 +54,9 @@ export function softwareJsonLd() {
     description: SITE.description,
     url: SITE.url,
     applicationCategory: "EducationalApplication",
-    operatingSystem: "Web, iOS, Android",
+    // Web only. There is no iOS or Android app — claiming them in schema told
+    // Google about products that do not exist.
+    operatingSystem: "Web",
     offers: {
       "@type": "Offer",
       price: "0",

@@ -49,7 +49,7 @@ export const TOOL_LANDINGS: ToolLanding[] = [
     "faqs": [
       {
         "q": "Is this homework helper really free?",
-        "a": "Yes — no signup, no trial, no ads, no paid tier. There is a daily limit per person so the site can stay free for everyone, and it resets every day."
+        "a": "Yes — no signup, no trial, no ads, no paid tier. There is a daily limit on how much AI one connection can use, so the site can stay free for everyone; it resets every day. Note it counts per internet connection, so a school or library network shares one allowance."
       },
       {
         "q": "Will it just give me the answers?",
@@ -248,7 +248,7 @@ export const TOOL_LANDINGS: ToolLanding[] = [
       },
       {
         "heading": "These are not past questions — on purpose",
-        "body": "Let me be straight about this, because plenty of apps are not: these are original questions written in WASSCE style, not reproduced past papers. For genuine past questions, WAEC publishes official materials, and those are worth using. What generated questions give you that past papers cannot: unlimited fresh practice on exactly the topic you are weak in, with no answer-memorisation. Heavily circulated past papers have a known problem — students recognise questions and recall answers without understanding, which feels like progress and is not. The strongest preparation is both: past papers to learn the exam itself, generated questions to fix the topics the past papers expose."
+        "body": "Let me be straight about this, because plenty of apps are not: these are original questions written in WASSCE style, not reproduced past papers. For genuine past questions, WAEC publishes official materials, and those are worth using. What generated questions give you that past papers cannot: fresh practice on exactly the topic you are weak in, as many sets as your daily limit allows, with no answer-memorisation. Heavily circulated past papers have a known problem — students recognise questions and recall answers without understanding, which feels like progress and is not. The strongest preparation is both: past papers to learn the exam itself, generated questions to fix the topics the past papers expose."
       },
       {
         "heading": "Any phone browser. Nothing to install, nothing to pay.",
@@ -270,7 +270,7 @@ export const TOOL_LANDINGS: ToolLanding[] = [
       },
       {
         "q": "Are these actual WAEC past questions?",
-        "a": "No, and I will not pretend they are. They are original questions generated in WASSCE format — same objective style, same theory structure. For real past questions, use WAEC's official publications. Generated questions are for unlimited topic drilling, which past papers alone cannot give you."
+        "a": "No, and I will not pretend they are. They are original questions generated in WASSCE format — same objective style, same theory structure. For real past questions, use WAEC's official publications. Generated questions are for drilling a specific topic as many times as you need, within the daily limit, which past papers alone cannot give you."
       },
       {
         "q": "Which subjects can it generate?",

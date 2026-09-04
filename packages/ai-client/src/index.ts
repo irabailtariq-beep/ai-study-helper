@@ -148,7 +148,9 @@ export async function generateQuiz(opts: {
 }): Promise<Quiz> {
   const ai = getClient();
   const types = opts.types ?? ["mcq", "short", "tf", "fill"];
-  const count = opts.count ?? 8;
+  // Clamp here, not in the routes: this number goes into the prompt, and an
+  // unbounded value from the request body is a free way to burn the AI quota.
+  const count = Math.min(Math.max(Number(opts.count) || 8, 1), 20);
   const parts: any[] = [];
   if (opts.sourceText) parts.push({ text: opts.sourceText });
   if (opts.imageBase64) {
@@ -225,7 +227,7 @@ export async function generatePastPapers(opts: {
   count?: number;
 }) {
   const ai = getClient();
-  const count = opts.count ?? 3;
+  const count = Math.min(Math.max(Number(opts.count) || 3, 1), 10);
   const parts: any[] = [];
   if (opts.sourceText) parts.push({ text: opts.sourceText });
   if (opts.imageBase64) {

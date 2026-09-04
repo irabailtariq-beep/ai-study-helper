@@ -2,10 +2,15 @@ import { NextResponse } from "next/server";
 import { parentRecap } from "@ash/ai-client";
 import { supabaseServer } from "@/lib/supabase/server";
 import { friendlyError } from "@/lib/apiError";
+import { checkRateLimitShared, keyFromRequest } from "@/lib/rateLimit";
 
 export const runtime = "nodejs";
 
-export async function GET() {
+export async function GET(req: Request) {
+  // This calls the AI, so it needs the same shared cap as every other AI
+  // route — sign-in alone does not stop a loop draining the daily quota.
+  const rl = await checkRateLimitShared(`parent-recap:${keyFromRequest(req)}`, Number(process.env.RL_GUEST_PER_DAY ?? 10));
+  if (!rl.allowed) return NextResponse.json({ error: "Daily limit reached. Try again tomorrow." }, { status: 429 });
   const sb = await supabaseServer();
   if (!sb) return NextResponse.json({ error: "Sign in required." }, { status: 400 });
   const { data: { user } } = await sb.auth.getUser();

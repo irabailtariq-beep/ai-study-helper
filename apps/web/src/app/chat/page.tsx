@@ -15,6 +15,10 @@ export default function ChatPage() {
   const [input, setInput] = useState("");
   const [answerLength, setAnswerLength] = useState<"short" | "long">("long");
   const [loading, setLoading] = useState(false);
+  // Errors are NOT conversation. Writing them into `history` meant the student's
+  // saved chat filled up with fake tutor turns that were persisted, replayed to
+  // the model as if the tutor had said them, and offered a "Listen" button.
+  const [sendError, setSendError] = useState<string | null>(null);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,11 +36,13 @@ export default function ChatPage() {
 
   async function send() {
     if (!input.trim() || loading) return;
-    const newTurn: ChatTurn = { role: "user", content: input.trim() };
+    const asked = input.trim();
+    const newTurn: ChatTurn = { role: "user", content: asked };
     const next = [...history, newTurn];
     setHistory(next);
     setInput("");
     setLoading(true);
+    setSendError(null);
     try {
       // Summary memory: last 20 turns verbatim + a short summary of older
       const recent = next.slice(-20);
@@ -51,7 +57,11 @@ export default function ChatPage() {
       if (!res.ok) throw new Error(data.error ?? "Chat failed");
       setHistory([...next, { role: "assistant", content: data.reply }]);
     } catch (e: any) {
-      setHistory([...next, { role: "assistant", content: `⚠️ ${e.message}` }]);
+      // Roll the unanswered question back out of the conversation and hand it
+      // back to the student so they can simply press send again.
+      setHistory(history);
+      setInput(asked);
+      setSendError(e?.message ?? "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -86,6 +96,15 @@ export default function ChatPage() {
           </div>
         ))}
         {loading && <div className="text-sm" style={{ color: "var(--ash-muted)" }}>Thinking…</div>}
+        {sendError && (
+          <div
+            role="status"
+            className="text-sm rounded-ash p-3"
+            style={{ background: "rgba(179,64,47,0.10)", color: "var(--ash-text)", border: "1px solid rgba(179,64,47,0.35)" }}
+          >
+            {sendError} Your question is back in the box — press send to try again.
+          </div>
+        )}
         <div ref={endRef} />
       </div>
 
