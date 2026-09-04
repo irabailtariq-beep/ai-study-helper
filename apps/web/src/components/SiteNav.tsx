@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useProfile } from "@/lib/profileStore";
+import { supabaseBrowser } from "@/lib/supabase/browser";
 import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
@@ -18,6 +19,18 @@ export function SiteNav() {
   // document.body does not exist during server rendering
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+
+  // The nav said "Log in" whether or not you were, so a signed-in student had no
+  // way to tell — and no way to reach their account except by guessing /settings.
+  const [signedIn, setSignedIn] = useState(false);
+  useEffect(() => {
+    const sb = supabaseBrowser();
+    if (!sb) return;
+    let alive = true;
+    sb.auth.getUser().then(({ data }) => { if (alive) setSignedIn(Boolean(data.user)); }).catch(() => {});
+    const { data: sub } = sb.auth.onAuthStateChange((_e, session) => setSignedIn(Boolean(session?.user)));
+    return () => { alive = false; sub.subscription.unsubscribe(); };
+  }, []);
 
   // Close drawer on route change (hamburger pattern)
   useEffect(() => {
@@ -54,8 +67,8 @@ export function SiteNav() {
               {l.label}
             </Link>
           ))}
-          <Link href="/signin" className="hover:text-[color:var(--ash-primary)] font-medium">
-            Log in
+          <Link href={signedIn ? "/settings" : "/signin"} className="hover:text-[color:var(--ash-primary)] font-medium">
+            {signedIn ? "My account" : "Log in"}
           </Link>
           {profile ? (
             <Link
@@ -147,7 +160,7 @@ export function SiteNav() {
               ))}
               <div className="my-3 h-px" style={{ background: "var(--ash-border)" }} />
               <Link href="/onboarding" onClick={() => setOpen(false)} className="px-3 py-3 rounded-lg">Onboarding</Link>
-              <Link href="/signin" onClick={() => setOpen(false)} className="px-3 py-3 rounded-lg">Sign in</Link>
+              <Link href={signedIn ? "/settings" : "/signin"} onClick={() => setOpen(false)} className="px-3 py-3 rounded-lg">{signedIn ? "My account" : "Sign in"}</Link>
               <Link href="/settings" onClick={() => setOpen(false)} className="px-3 py-3 rounded-lg">Settings</Link>
               <Link
                 href={profile ? "/transform" : "/onboarding"}

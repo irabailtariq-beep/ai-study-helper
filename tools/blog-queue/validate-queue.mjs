@@ -68,7 +68,9 @@ queue.forEach((p, i) => {
   }
 
   // Forbidden exam boards — the site covers five systems only.
-  const FORBIDDEN = /\b(IB Diploma|NEET|JEE|FBISE|ICSE|WJEC|CCEA|UPSC|MDCAT|Common Core)\b/;
+  // Eduqas is WJEC's England brand and SQA/National 5/Higher are Scotland's —
+  // all outside the five systems this site covers, and all were missing.
+  const FORBIDDEN = /\b(IB Diploma|NEET|JEE|FBISE|ICSE|WJEC|Eduqas|CCEA|SQA|National 5|Advanced Higher|UPSC|MDCAT|Common Core)\b/i;
   const hit = body.match(FORBIDDEN) || String(p?.title ?? "").match(FORBIDDEN);
   if (hit) problems.push(`${at}: mentions forbidden exam board "${hit[0]}"`);
 

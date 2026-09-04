@@ -26,6 +26,24 @@ export default function SettingsPage() {
     } finally { setBusy(false); }
   }
 
+  async function downloadData() {
+    setMsg(null);
+    try {
+      const r = await fetch("/api/account/export");
+      if (r.status === 401) { setMsg("Sign in first — there is nothing to download for a signed-out visitor. Everything you have used so far is stored only in this browser."); return; }
+      if (!r.ok) { setMsg("Could not prepare your download just now. Please try again shortly."); return; }
+      const blob = await r.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "helpinstudy-my-data.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch {
+      setMsg("Could not prepare your download just now. Please try again shortly.");
+    }
+  }
+
   async function signOut() {
     const sb = supabaseBrowser();
     await sb?.auth.signOut();
@@ -60,7 +78,7 @@ export default function SettingsPage() {
       <section className="glass-panel p-6 rounded-ash mb-4 space-y-2">
         <h2 className="font-semibold">Your data</h2>
         <div className="flex flex-wrap gap-2">
-          <a href="/api/account/export" className="px-4 py-2 rounded-ash border">Download my data (JSON)</a>
+          <button onClick={downloadData} className="px-4 py-2 rounded-ash border">Download my data (JSON)</button>
           <button onClick={signOut} className="px-4 py-2 rounded-ash border">Sign out</button>
           <button onClick={wipeLocal} className="px-4 py-2 rounded-ash border">Wipe local data</button>
           <button onClick={deleteAccount} disabled={busy} className="px-4 py-2 rounded-ash text-white" style={{ background: "#dc2626" }}>
