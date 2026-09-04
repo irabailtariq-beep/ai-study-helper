@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useProfile } from "@/lib/profileStore";
 import { Logo } from "@/components/Logo";
 
@@ -14,6 +15,9 @@ const NAV_LINKS = [
 export function SiteNav() {
   const profile = useProfile((s) => s.profile);
   const [open, setOpen] = useState(false);
+  // document.body does not exist during server rendering
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   // Close drawer on route change (hamburger pattern)
   useEffect(() => {
@@ -99,8 +103,15 @@ export function SiteNav() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
-      {open && (
+      {/* Mobile drawer.
+          Rendered through a portal into <body> on purpose. This <nav> uses
+          backdrop-blur, and an ancestor with a backdrop-filter becomes the
+          containing block for position:fixed descendants — so "fixed inset-0"
+          resolved against the 63px-tall nav instead of the screen, and the
+          drawer opened as a thin strip with all eight links clipped out of
+          sight. Measuring the links said they were fine; the screenshot showed
+          they were not. Keep this portal. */}
+      {open && mounted && (createPortal((
         <div
           className="sm:hidden fixed inset-0 z-50"
           onClick={() => setOpen(false)}
@@ -149,7 +160,7 @@ export function SiteNav() {
             </div>
           </div>
         </div>
-      )}
+      ), document.body) as React.ReactNode)}
     </nav>
   );
 }

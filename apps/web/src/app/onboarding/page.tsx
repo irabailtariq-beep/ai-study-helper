@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   COUNTRIES,
@@ -53,6 +53,7 @@ const STEP_LABELS = ["Country","Age","Curriculum","Grade","Subjects","Struggle",
 export default function OnboardingPage() {
   const router = useRouter();
   const existing = useProfile((s) => s.profile);
+  const hydrated = useProfile((s) => s.hydrated);
   const setProfile = useProfile((s) => s.setProfile);
   const [step, setStep] = useState(0);
 
@@ -72,6 +73,27 @@ export default function OnboardingPage() {
   const [goal, setGoal] = useState(existing?.goal ?? "");
   const [formatPref, setFormatPref] = useState<OutputFormat>(existing?.formatPreference ?? "mixed");
   const [tonePref, setTonePref] = useState<ToneStyle>(existing?.tonePreference ?? "neutral");
+
+  // The useState initialisers above run on first render, BEFORE zustand has read
+  // the saved profile back from localStorage — so on the Settings "Change" path
+  // they were all empty and finish() then wrote those blanks over everything the
+  // student had entered. Seed once, when the real profile actually arrives.
+  const [seeded, setSeeded] = useState(false);
+  useEffect(() => {
+    if (seeded || !hydrated || !existing) return;
+    setCountry(existing.country ?? "");
+    setAge(Math.max(existing.age ?? 14, 13));
+    setCurriculum(existing.curriculum ?? "");
+    setGrade(existing.grade ?? "");
+    setDisplayName(existing.displayName ?? "");
+    setSubjects(existing.subjects ?? []);
+    setStruggling(existing.struggling ?? []);
+    setInterests(existing.interests ?? []);
+    setGoal(existing.goal ?? "");
+    setFormatPref(existing.formatPreference ?? "mixed");
+    setTonePref(existing.tonePreference ?? "neutral");
+    setSeeded(true);
+  }, [hydrated, existing, seeded]);
 
   const [finishing, setFinishing] = useState(false);
   const [finishError, setFinishError] = useState<string | null>(null);
@@ -109,6 +131,7 @@ export default function OnboardingPage() {
     if (!grade)      { setStep(3); setFinishError("Please pick a class / grade."); return; }
     setFinishing(true);
     setProfile({
+      ...(existing ?? {}),
       country, age, grade, curriculum,
       displayName: displayName.trim() || undefined,
       subjects: subjects.length ? subjects : undefined,

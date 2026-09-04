@@ -6,6 +6,15 @@ import type { UserProfile } from "@ash/core";
 type Store = {
   profile: UserProfile | null;
   setProfile: (p: UserProfile | null) => void;
+  /**
+   * False until the persisted profile has been read back from localStorage.
+   *
+   * Without this, a screen that seeds form state from `profile` on first render
+   * reads null — rehydration happens after mount — and then saves those empty
+   * defaults over the real profile. That is exactly how "Change" in Settings was
+   * wiping a student's name, subjects, weak topics and interests.
+   */
+  hydrated: boolean;
 };
 
 export const useProfile = create<Store>()(
@@ -13,10 +22,16 @@ export const useProfile = create<Store>()(
     (set) => ({
       profile: null,
       setProfile: (profile) => set({ profile }),
+      hydrated: false,
     }),
     {
       name: "ash-profile",
       storage: createJSONStorage(() => (typeof window !== "undefined" ? localStorage : (undefined as any))),
+      onRehydrateStorage: () => (state) => {
+        // Runs once the stored value has been applied (or failed to load).
+        useProfile.setState({ hydrated: true });
+        void state;
+      },
     }
   )
 );
