@@ -3,7 +3,7 @@ import { SITE } from "@/lib/seo";
 import { ToolPageContent } from "@/components/ToolPageContent";
 
 const title = "Math Solver — step-by-step solutions, photo or text";
-const description = "Snap a math problem or paste it. Get every line of working, the named method, common pitfalls, and a way to check your answer. Free for students of all ages.";
+const description = "Snap a math problem or paste it. Get every line of working, the named method, common pitfalls, and a way to check your answer. Free for students 13 and over.";
 
 export const metadata: Metadata = {
   title, description,

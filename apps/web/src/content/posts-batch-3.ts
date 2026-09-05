@@ -1188,15 +1188,15 @@ In short: stop auditing effort and start agreeing outputs. Five minutes a week, 
     publishedAt: today, updatedAt: "2026-08-07", readTime: "7 min",
     tags: ["AP Statistics","AP Stats FRQ","AP exam technique","statistics revision","College Board AP"],
     body: `
-**Quick answer:** AP Statistics free-response questions are scored part by part as essentially correct, partially correct or incorrect, then combined into a 0-4 score. Five recycled ideas carry most of those rubric points: the three distributions, checking conditions, the four-move hypothesis test, error types in context, and scope of inference.
+**Quick answer:** From the May 2027 exam, each AP Statistics free-response question is worth 10 points on an analytic scale — the reader works down ten numbered criteria, awarding 1 or 0 for each. Five recycled ideas carry most of those points: the three distributions, checking conditions, the four-move hypothesis test, error types in context, and scope of inference.
 
 Honest disclosure first: I sit IGCSE and A-Levels, not AP, so I have no AP Statistics score of my own to wave around. What I have is a pile of released College Board scoring guidelines and three friends who took the exam and let me compare what they actually wrote against what the rubric wanted. The gap between what they knew and what they scored was almost never mathematical. It was wording.
 
 ## How AP Statistics free-response is actually scored
 
-Each FRQ is worth 0 to 4 points, and readers do not tick boxes and add up. They rate each lettered part as essentially correct (1 point), partially correct (half a point) or incorrect (zero), then combine those into a whole-number score, rounding holistically if you land between two.
+Each FRQ is worth 10 points, and since the 2026-27 revision readers do tick boxes and add up: the published scoring guidelines list ten numbered criteria per question, each tied to a lettered part and each worth 1 point or 0. That replaced the old holistic scheme, in which parts were rated essentially correct, partially correct or incorrect and combined into a 0-4 score. Any practice paper or mark scheme from 2026 or earlier still uses the old system.
 
-The shape of the exam matters. Section I is 40 multiple-choice questions in 90 minutes, half your score. Section II is six free-response questions in 90 minutes, the other half, with the last being the Investigative Task. That is around 15 minutes per FRQ, and the difference between a partial and an essentially correct is usually one sentence of context — not one more calculation.
+The shape of the exam matters. From the May 2027 exam, Section I is 42 multiple-choice questions in 90 minutes, half your score. Section II is four free-response questions in 90 minutes, the other half — the Investigative Task was dropped in the 2026-27 revision. That is around 22 minutes per FRQ, and the difference between a partial and an essentially correct is usually one sentence of context — not one more calculation.
 
 So the honest version of "five concepts that earn most of the marks" is this: these five ideas are what the rubric language keeps asking you to demonstrate. Nobody can promise you a score. But if you cannot do these five in full sentences, you will leak half-points everywhere.
 
@@ -1273,7 +1273,7 @@ Different hard. The arithmetic is much lighter, but the writing load is far heav
 
 ### How many free-response questions are on the AP Statistics exam?
 
-Six, in 90 minutes, worth half the exam. The sixth is the Investigative Task, which asks you to extend a method you were not taught directly. Budget about 12 minutes each for questions 1 to 5 and leave 25 to 30 minutes for the last one.
+Four, in 90 minutes, worth half the exam. The exam was revised for the 2026-27 school year and the Investigative Task was removed. Each question is worth 10 points, so budget about 22 minutes each and keep a few minutes at the end to re-read your context sentences.
 
 ### Do I lose marks for skipping conditions if my calculation is right?
 

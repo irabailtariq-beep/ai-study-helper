@@ -941,7 +941,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
     metaTitle: "AP Calculus AB & BC + Precalc + Stats — College Board help",
     metaDescription: "Free AI tutor for AP Math (Calc AB, Calc BC, Precalc, Statistics). FRQ practice, MCQ drills, scoring rubrics, exam-day strategy.",
     intro: "AP Math exams (Calc AB, Calc BC, Precalc, Stats) reward two things: a deep grasp of a small set of concepts, and the ability to communicate clearly on Free Response Questions (FRQs). College Board scoring rubrics are very specific — knowing what each rubric point actually asks for is the difference between a 4 and a 5.",
-    examFormat: "AP Calc AB: 45 MCQs + 6 FRQs, 3h 15m, scored 1-5. AP Calc BC: same structure with extra topics (series, polar/parametric). AP Stats: 40 MCQ + 6 FRQs (one Investigative Task), 3h, scored 1-5.",
+    examFormat: "From the May 2027 exams: AP Calc AB and BC are 3h 10m — 42 MCQs (29 no-calculator in 62 min, 13 calculator in 38 min; 50%) + 6 FRQs (2 calculator in 30 min, 4 no-calculator in 60 min; 50%); BC adds series and polar/parametric. AP Precalculus is 2h 55m — 42 MCQs + four 6-point FRQs. AP Stats is 3h — 42 MCQs (90 min, 50%) + four 10-point FRQs (90 min, 50%); the Investigative Task was removed in the 2026-27 revision. All scored 1-5.",
     highYieldTopics: [
       "Calc: definite + indefinite integrals (FRQ standard)",
       "Calc: Mean Value Theorem + Intermediate Value Theorem statements",
@@ -1095,7 +1095,7 @@ const ALL_LEARN_COMBOS: LearnCombo[] = [
     metaTitle: "AP Physics 1 + 2 + C — College Board help",
     metaDescription: "Free AI tutor for AP Physics 1, 2, C: Mechanics and C: E&M. Algebra-based and calculus-based, FRQs, labs.",
     intro: "AP Physics splits into algebra-based (Physics 1 + 2) and calculus-based (Physics C: Mechanics + E&M). Physics 1 is the most-failed AP exam — partly because students underestimate it. C: E&M is the hardest by far but the curve is generous.",
-    examFormat: "Physics 1 & 2: 50 MCQ + 5 FRQs, 3h. Physics C: Mech: 35 MCQ + 3 FRQs, 1h 30. Physics C: E&M: same. All scored 1-5.",
+    examFormat: "From the May 2027 exams all four AP Physics exams share one shape: 3 hours — 42 MCQs (85 min, 50%) + 4 FRQs (95 min, 50%). That applies to Physics 1, Physics 2, Physics C: Mechanics and Physics C: E&M; Physics C is no longer the short 90-minute paper it used to be. All scored 1-5.",
     highYieldTopics: [
       "Kinematics (1D and 2D motion, projectiles)",
       "Newton's laws + free body diagrams",

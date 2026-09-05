@@ -4,9 +4,12 @@
  * The 2026-09-01 audit caught the tools returning Google's raw error JSON
  * straight to the page — quota messages, internal metric names, billing links
  * and all. That is confusing for a student, makes a working site look broken,
- * and leaks how the thing is built. The seven routes the UI actually calls map errors through here, and the four
- * unlinked legacy routes (syllabus, concept-map, diagnostic, parent-recap) now do
- * too. The real error still goes to the server logs for us.
+ * and leaks how the thing is built. Every route the UI calls maps errors through
+ * here. The four unlinked legacy routes that also used it — syllabus,
+ * concept-map, diagnostic and parent-recap — were deleted on 2026-09-05 along
+ * with /api/sessions: nothing in the app had called any of them, and each was a
+ * public endpoint drawing on the same free AI quota the ten real tools share.
+ * The real error still goes to the server logs for us.
  */
 export type FriendlyError = { error: string; status: number };
 

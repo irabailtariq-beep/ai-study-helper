@@ -3292,9 +3292,9 @@ I should be upfront: I sit IGCSEs and A-Levels, not APs. But when a friend in th
 
 ## How AP Calculus AB is actually scored
 
-The exam is two equal halves, and knowing the point maths changes how you revise. Section I is 45 multiple-choice questions worth 50 percent: 30 without a calculator in 60 minutes, then 15 with one in 45 minutes. Section II is 6 free-response questions worth the other 50 percent: 2 with a calculator in 30 minutes, then 4 without in 60 minutes.
+The exam is two equal halves, and knowing the point maths changes how you revise. Section I is 42 multiple-choice questions worth 50 percent: 29 without a calculator in 62 minutes, then 13 with one in 38 minutes. Section II is 6 free-response questions worth the other 50 percent: 2 with a calculator in 30 minutes, then 4 without in 60 minutes.
 
-Every free-response question is marked out of 9 by a trained reader, so Section II is 54 raw points. Two things follow. First, one free-response question is worth about as much as six multiple-choice questions, so leaving a whole FRQ blank costs you far more than missing a few MCQs — always write the setup even when you cannot finish. Second, two-thirds of the paper is no-calculator: 30 of the 45 MCQs and 4 of the 6 FRQs. Most people revise the opposite way round.
+Every free-response question is marked out of 9 by a trained reader, so Section II is 54 raw points. Two things follow. First, one free-response question is worth about as much as seven multiple-choice questions, so leaving a whole FRQ blank costs you far more than missing a few MCQs — always write the setup even when you cannot finish. Second, most of the paper is no-calculator: 29 of the 42 MCQs and 4 of the 6 FRQs. Most people revise the opposite way round.
 
 ## The unit weightings, ranked by marks per hour
 

@@ -95,7 +95,7 @@ export function SiteFooter() {
               <Logo size={36} />
             </Link>
             <p className="mt-3 text-sm max-w-md" style={{ color: "var(--ash-muted)" }}>
-              A free AI study helper for any subject and any age. Snap a photo, paste a question,
+              A free AI study helper for any subject, for students 13 and over. Snap a photo, paste a question,
               upload a PDF — get help in plain words, in your board's style.
             </p>
           </div>

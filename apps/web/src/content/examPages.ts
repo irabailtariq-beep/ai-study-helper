@@ -1431,7 +1431,7 @@ export const EXAM_PAGES: ExamPage[] = [
     "sections": [
       {
         "heading": "How the AP Statistics exam is actually scored",
-        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 6 questions totalling 24 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
+        "body": "Your raw marks are combined into a weighted composite: multiple choice contributes 50 percent (there is no penalty for wrong answers, so never leave blanks) and the free-response section contributes 50 percent across 4 questions totalling 40 raw points. The College Board then converts the composite to the 1-5 scale using cut points set after each administration, which is why no calculator can be exact: the real boundaries shift with the difficulty of that year's paper."
       },
       {
         "heading": "What score should you aim for in practice?",
