@@ -38,7 +38,13 @@ const MODEL = "gemini-2.5-flash";
 // and 10 a minute, flash-lite ~1,000 and 15. On 2026-09-01 every tool on the
 // site was dead because flash alone ran dry, so a throttled call retries once on
 // lite — a slightly smaller model beats no answer at all.
-const FALLBACK_MODEL = "gemini-2.5-flash-lite";
+//
+// Must be 3.5, NOT 2.5. Probed live on 2026-09-05 with the production key:
+// models/gemini-2.5-flash-lite returns HTTP 404 "no longer available to new
+// users". While this pointed at 2.5 the fallback could never fire — a quota
+// error turned into a 404 and the student saw a generic failure instead of an
+// answer. If you change this line, curl the model first and check it is not 404.
+const FALLBACK_MODEL = "gemini-3.5-flash-lite";
 
 /** True for the provider's "out of quota / slow down" responses. */
 function isQuotaError(e: unknown): boolean {

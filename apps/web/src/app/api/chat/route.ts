@@ -21,20 +21,13 @@ export async function POST(req: NextRequest) {
     const { data: userData } = sb ? await sb.auth.getUser() : { data: { user: null } };
     const user = userData?.user;
 
-    let memory: string | undefined = body.memory;
-    let sessionId: string | null = body.sessionId ?? null;
+    // Chat memory is deliberately client-side only: the browser sends the recent
+    // turns plus its own short summary (see chat/page.tsx). We do NOT keep a
+    // server-side copy of a student's conversation. These are children; /privacy
+    // tells them their messages are sent to the AI provider to produce an answer
+    // and nothing more, and this route keeps that promise.
+    const memory: string | undefined = body.memory;
     const answerLength = body.answerLength;
-
-    // If signed in and a sessionId provided, pull the session's rolling summary
-    if (sb && user && sessionId) {
-      const { data: sess } = await sb
-        .from("chat_sessions")
-        .select("summary")
-        .eq("id", sessionId)
-        .eq("user_id", user.id)
-        .maybeSingle();
-      if (sess?.summary) memory = sess.summary;
-    }
 
     const reply = await chat({
       profile: body.profile,
@@ -45,42 +38,13 @@ export async function POST(req: NextRequest) {
       toneOverride: body.toneOverride,
     });
 
-    // Persist messages if user is authenticated
+    // A signed-in student gets a streak count only: a number, never the words.
+    // Storing the conversation itself would need a privacy-policy change first.
     if (sb && user) {
-      if (!sessionId) {
-        const { data: newSess } = await sb
-          .from("chat_sessions")
-          .insert({ user_id: user.id, title: body.profile.grade + " tutor" })
-          .select()
-          .single();
-        sessionId = newSess?.id ?? null;
-      }
-      if (sessionId) {
-        const last = body.history[body.history.length - 1];
-        await sb.from("chat_messages").insert([
-          { session_id: sessionId, user_id: user.id, role: last.role, content: last.content },
-          { session_id: sessionId, user_id: user.id, role: "assistant", content: reply },
-        ]);
-        // Every 10 messages, asynchronously update the rolling summary
-        const { count } = await sb
-          .from("chat_messages")
-          .select("*", { count: "exact", head: true })
-          .eq("session_id", sessionId);
-        if ((count ?? 0) % 10 === 0) {
-          const { data: msgs } = await sb
-            .from("chat_messages")
-            .select("role,content")
-            .eq("session_id", sessionId)
-            .order("created_at", { ascending: true });
-          const joined = (msgs ?? []).map((m: any) => `${m.role}: ${m.content}`).join("\n");
-          const summary = `Previously: ${joined.slice(-1500)}`;
-          await sb.from("chat_sessions").update({ summary }).eq("id", sessionId);
-        }
-      }
       recordActivity(user.id, "chats").catch(() => {});
     }
 
-    return NextResponse.json({ reply, sessionId });
+    return NextResponse.json({ reply });
   } catch (e: any) {
     console.error("/api/chat", e);
     const fe = friendlyError(e);

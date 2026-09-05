@@ -7,7 +7,7 @@ export function Logo({ size = 30, showText = true }: { size?: number; showText?:
       <svg width={size} height={size} viewBox="0 0 34 34" aria-hidden="true" style={{ display: "block", flex: "none" }}>
         <path
           d="M6 15c0-5 4.4-8 11-8s11 3 11 8-4.4 8-11 8c-1.2 0-2.4-.1-3.5-.35L8.5 26l1-4.2C7.3 20.3 6 17.9 6 15z"
-          fill="var(--ash-primary, #0b7d6f)"
+          fill="var(--ash-primary, #0a6357)"
         />
         <path
           d="M17 9.8l2.1 4.3 4.7.6-3.5 3.3.9 4.7-4.2-2.3-4.2 2.3.9-4.7-3.5-3.3 4.7-.6z"
