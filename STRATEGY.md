@@ -2,7 +2,9 @@
 
 _Last updated: 2026-05-08_
 
-This is the master plan for everything non-code: features, monetization, SEO, content, and the path from "free Vercel side-project" to "real product students pay for."
+> **Status: superseded, kept for history.** This document was written on 2026-05-08, before the 2026-08-01 pivot. Help in Study is free — every tool, for every student, with no paid plans and no ads. That is a settled decision, not a launch phase. The paid-tier plan this document once contained has been abandoned and removed; see Part 3 below. Anything else in here that assumes a Free/Pro/Family ladder is out of date.
+
+This is the master plan for everything non-code: features, SEO, content, and how a free study site reaches the students who need it.
 
 ---
 
@@ -30,7 +32,7 @@ A mountain of research and parent/teacher reporting agrees on the same top-five 
 
 ## Part 2 — The full feature pyramid
 
-Each feature is tagged with where it lives on the **Free / Pro / Family** ladder.
+Every feature below is free. The Free/Pro/Family tags in an earlier draft of this table are gone — see Part 3a.
 
 ### Tier 0 — Already shipped (in production now)
 
@@ -75,7 +77,7 @@ Each feature is tagged with where it lives on the **Free / Pro / Family** ladder
 | Feature | Tier | One-liner |
 |---|---|---|
 | **Handwritten math recognition** | Pro | Upload a photo of handwritten work → AI checks each step |
-| **Voice-only homework mode** | Pro | Hands-free Q&A while doing chores or commuting |
+| **Voice-only homework mode** | Free | Hands-free Q&A while doing chores or commuting |
 | **Group study rooms** | Pro/Family | 2-4 students share a session, AI moderates |
 | **Teacher mode** | (school plan) | Auto-generate worksheets + answer keys + grading |
 | **Dyslexia / ADHD mode** | Free | Dyslexia-friendly font, chunked text, focus timer |
@@ -93,39 +95,18 @@ Each feature is tagged with where it lives on the **Free / Pro / Family** ladder
 
 ## Part 3 — Monetization
 
-### 3a) Subscription tiers (already coded in `lib/plans.ts`)
+### 3a) Subscription tiers — considered in May 2026, rejected
 
-| | Free | **Pro** | Family |
-|---|---|---|---|
-| Price | $0 forever | $4.99/mo or $39/yr | $9.99/mo or $79/yr |
-| Daily explanations | 10 | 200 | 500 |
-| Daily chats | 50 | 1,000 | 2,000 |
-| PDF size | 5 MB / 20 pp | 20 MB / 50 pp | 20 MB / 50 pp |
-| Ads | Yes | **No** | No |
-| Concept map | — | ✅ | ✅ |
-| AI past-paper grading | — | ✅ | ✅ |
-| Diagnostic + study plan | basic | ✅ full | ✅ full |
-| Voice tutor (high-quality) | basic | ✅ | ✅ |
-| Cross-device sync | — | ✅ | ✅ |
-| Priority speed | — | ✅ | ✅ |
-| Student profiles | 1 | 1 | **5** |
-| Parent dashboard | — | — | ✅ |
+An earlier draft of this document proposed a paid Pro and Family tier and an ads-supported free tier. **That plan was rejected and is not happening.** It was removed on 2026-09-05 so nobody reading this repo mistakes an abandoned option for a roadmap.
 
-**Why this split works**:
-- Free is generous enough to be genuinely useful (kids actually finish their homework with it)
-- Pro is the "I'm serious about this exam" upsell — past-paper grading is the killer Pro feature
-- Family is the only tier with the parent dashboard — converts the parent who pays from a child user
+What is true instead:
 
-**Pricing rationale**:
-- Below $5 is a "credit-card-statement-no-question" zone for parents
-- Yearly discount (~35%) trains conversion to annual = stickier
-- Free → Pro target: 4–6% monthly conversion (industry standard for freemium ed-tech)
+- There is one tier and it is free. There is no plans or pricing module in the codebase at all: `apps/web/src/lib/plans.ts` was the last trace of the tier idea and was deleted on 2026-09-05, unused by any page.
+- The daily caps in `apps/web/src/lib/rateLimit.ts` are anti-abuse limits on a free API budget, counted per IP address, not a paywall — no feature is withheld to sell it back.
+- There is no Stripe account, no billing code, no `subscriptions` table and no `/pricing` page. `/pricing` redirects to the homepage.
+- The site tells students "no card, no trial, no paid plans, no upgrade prompts" and "no ads". Those promises are the constraint this document works within, not a launch tactic.
 
-**Implementation notes** (next phase):
-- Use **Stripe Checkout** + Stripe Customer Portal (no custom billing UI)
-- Webhook updates a `subscriptions` table in Supabase
-- Add `getActivePlan(userId)` middleware that gates premium features
-- Pricing page already live at `/pricing`
+If money is ever needed to keep the servers on, the honest options are donations or a clearly-labelled sponsor — decided in the open, never by quietly gating something students already rely on.
 
 ### 3b) Google AdSense
 
@@ -144,7 +125,7 @@ Each feature is tagged with where it lives on the **Free / Pro / Family** ladder
    - `/blog/[slug]` — 1 ad after intro, 1 at the end
    - `/learn/[subject]/[board]` — 1 ad mid-page
    - Result page on `/explain` — only after 3+ free uses
-6. **NEVER** show ads to users on Pro/Family plans, or to under-13 in kids mode (Apple/Google will pull the listing if you do)
+6. **NEVER** show ads to under-13 users in kids mode (Apple/Google will pull the listing if you do)
 
 **Realistic AdSense earnings (education niche)**:
 - US/UK/AU traffic: ~$8–25 RPM (revenue per 1000 page views)
@@ -271,7 +252,7 @@ Apple Developer ($99/yr) + Google Play ($25 one-time) are the only blockers.
 | 3 | Set up GA4, add `NEXT_PUBLIC_GA_ID` to Vercel |
 | 4-7 | Write 4 more SEO articles (10 total) |
 | 7 | Apply for AdSense |
-| 14 | Set up Stripe account, build the Pro paywall (1 day's coding) |
+| 14 | (dropped — no paid tier; see Part 3a) |
 | 21 | First Reddit post (helpful answer, not promotion) |
 | 28 | If AdSense approved, place ad slots |
 | 30 | Review GA4 traffic, decide which 5 boards to push hardest |
@@ -293,7 +274,7 @@ Apple Developer ($99/yr) + Google Play ($25 one-time) are the only blockers.
 ## Part 8 — Decisions we should make this week
 
 1. **Domain name** — what is it? I need it to wire up Vercel's custom domain + redirect www → apex + update SITE.url
-2. **Monetization launch order** — AdSense first (no $$ collection complexity) or Stripe first (higher LTV)?
+2. **Monetization** — ads only, and not yet. No paid tier, now or later. (Answered: see Part 3a.)
 3. **Primary geographic target** — push hardest in Pakistan? India? UK? US? Decide where to spend your first $200 of Google Ads when you're ready to test paid acquisition
 4. **Brand colours** — keep current indigo/violet/cyan or align with your domain branding?
 

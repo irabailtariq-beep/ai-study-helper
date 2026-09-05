@@ -48,6 +48,37 @@ export async function exchangeCode(code: string) {
   };
 }
 
+/**
+ * Hand the grant back to Google.
+ *
+ * Deleting our row does NOT end Google's side of the arrangement: the refresh
+ * token keeps working and the student still sees Help in Study listed under
+ * their Google account with access to their Classroom data. Until 2026-09-05
+ * both "Disconnect" and "Delete my account" only dropped the row, so a student
+ * who disconnected stayed connected where it counted.
+ *
+ * Revoking a refresh token also revokes every access token derived from it.
+ * Deliberately never throws: this runs on the path where someone is deleting
+ * their account, and that must not fail because Google is having a bad minute.
+ * Returns true only on a confirmed revoke, so callers can log the difference.
+ */
+export async function revokeGoogleToken(token: string): Promise<boolean> {
+  if (!token) return false;
+  try {
+    const res = await fetch("https://oauth2.googleapis.com/revoke", {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ token }),
+      cache: "no-store",
+    });
+    // 200 = revoked. 400 usually means it was already invalid, which is the
+    // outcome we wanted anyway, so treat it as done rather than retrying.
+    return res.ok || res.status === 400;
+  } catch {
+    return false;
+  }
+}
+
 export async function refreshToken(refresh_token: string) {
   const body = new URLSearchParams({
     refresh_token,

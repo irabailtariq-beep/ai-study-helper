@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { createClient } from "@supabase/supabase-js";
+import { revokeGoogleToken } from "@/lib/classroom";
 
 // Cascade delete: RLS + foreign keys cascade when we delete the auth.user.
 // To delete the auth user we need the service role key (admin API).
@@ -9,6 +10,26 @@ export async function POST() {
   if (!sb) return NextResponse.json({ error: "Auth not configured" }, { status: 400 });
   const { data: { user } } = await sb.auth.getUser();
   if (!user) return NextResponse.json({ error: "Not signed in" }, { status: 401 });
+
+  // Hand any Google Classroom grant back to Google BEFORE deleting rows.
+  // Dropping classroom_links destroys our copy of the refresh token, and that
+  // token is the only thing that can revoke the grant — so deleting first would
+  // leave Help in Study permanently authorised on the account of someone who
+  // just asked us to erase them. Never blocks the delete: if Google is down the
+  // account still goes, and the response says the revoke was not confirmed.
+  let classroomRevoked: boolean | null = null;
+  {
+    const { data: link } = await sb
+      .from("classroom_links")
+      .select("refresh_token, access_token")
+      .eq("user_id", user.id)
+      .maybeSingle();
+    const token = link?.refresh_token ?? link?.access_token;
+    if (token) classroomRevoked = await revokeGoogleToken(token);
+  }
+  const revokeNote = classroomRevoked === false
+    ? { classroomRevoked: false, classroomNote: "Your Google Classroom link was deleted here, but Google did not confirm it was switched off at their end. Remove Help in Study at myaccount.google.com/permissions to be certain." }
+    : {};
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const service = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -32,6 +53,7 @@ export async function POST() {
     return NextResponse.json({
       ok: true,
       complete: false,
+      ...revokeNote,
       note: "Your study data has been deleted. Your account record (email address) could not be removed automatically — email raistudyhelper@gmail.com and it will be deleted manually.",
     });
   }
@@ -43,5 +65,5 @@ export async function POST() {
   }
   const { error } = await admin.auth.admin.deleteUser(user.id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
-  return NextResponse.json({ ok: true, complete: true });
+  return NextResponse.json({ ok: true, complete: true, ...revokeNote });
 }

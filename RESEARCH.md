@@ -141,7 +141,7 @@ Ranked by **impact / build cost** ratio. Tier 1 = ship next; Tier 2 = high impac
 |---|---|---|
 | **India** | Largest single student market. CBSE search volume + huge JEE/NEET coaching industry. | CBSE + JEE/NEET prep + Hindi-English toggle. |
 | **Pakistan** | Founder market. Federal/Punjab boards + Cambridge co-existence. | Past-paper drills for FBISE/Punjab + Cambridge. |
-| **USA** | Highest per-user willingness to pay later (when we add Pro). AP and SAT prep. | AP, SAT, Common Core. |
+| **USA** | Highest ad RPM of any market. AP and SAT prep. | AP, SAT, Common Core. |
 | **UK** | GCSE / A-Level past-paper culture is massive — kids actively buy past papers. | Board-specific past-paper synthesis. |
 | **GCC** | Affluent + multi-curriculum (CBSE/Cambridge/American/MoE). | Multi-curriculum support is the moat. |
 | **Brazil** | ENEM is the single national exam — focus everything there. | ENEM-style question generator. |
