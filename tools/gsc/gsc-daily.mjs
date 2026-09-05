@@ -149,7 +149,12 @@ if (snap.last7Impressions === 0) {
 // day look like a week-long plateau — so the sparkline uses the daily rows
 // pulled above instead.
 const daily = rows.map((r) => ({ date: r.keys[0], impressions: r.impressions || 0, clicks: r.clicks || 0 }));
-const maxImpr = Math.max(1, ...daily.map((d) => d.impressions));
+// Two values on purpose. peakImpr is the real observed maximum and is the only
+// one shown to a reader. maxImpr carries a floor of 1 solely so the sparkline
+// below does not divide by zero — printing that floor as a number would claim a
+// 1-impression day that never happened.
+const peakImpr = daily.length ? Math.max(...daily.map((d) => d.impressions)) : 0;
+const maxImpr = Math.max(1, peakImpr);
 const sparkW = 320, sparkH = 44;
 const points = daily.map((d, i) => {
   const x = daily.length > 1 ? (i / (daily.length - 1)) * sparkW : 0;
@@ -181,7 +186,15 @@ const indexedDelta = idx && idx.prevIndexed != null ? idx.indexed - idx.prevInde
 // when alerts multiply, override rates run 46-96%. Volume kills compliance.
 const backlinks = idx ? idx.externalLinks.length : 0;
 const realBacklinks = idx ? idx.externalLinks.filter((l) => !/seo\.am\.in/.test(l)).length : 0;
-const checkOn = new Date(Date.now() + 7 * 864e5).toISOString().slice(0, 10);
+// A fixed weekly checkpoint, not "seven days from whenever this last ran".
+// today+7 recomputed on every daily run, so the date receded one day per day and
+// never arrived: the 2026-09-03 build said 2026-09-10, the 2026-09-05 build said
+// 2026-09-12. Anchoring to the next Monday holds the same date all week.
+const checkOn = (() => {
+  const d = new Date();
+  d.setUTCDate(d.getUTCDate() + ((8 - d.getUTCDay()) % 7 || 7));
+  return d.toISOString().slice(0, 10);
+})();
 
 let action;
 if (idx && idx.lost && idx.lost.length) {
@@ -288,7 +301,7 @@ ${alerts.join("")}
 <div class="card">
   <h2>Is this normal for a ${monthsOld}-month-old site?</h2>
   <p style="font-size:15px;margin:0 0 8px"><b>Yes.</b> Across the whole web, 96.55% of pages get <b>zero</b> traffic from Google, and only 1.74% of new pages reach the first page of results within a year. Nearly three quarters of the pages sitting in Google's top 10 are over three years old.</p>
-  <p class="note">So 2 visitors a week at ${monthsOld} months is an ordinary starting point, not a broken site. The real verdict comes on the date below — not from any single week on this page.</p>
+  <p class="note">So ${plural(snap.last7Clicks, "visitor")} a week at ${monthsOld} months is an ordinary starting point, not a broken site. The real verdict comes on the date below — not from any single week on this page.</p>
 </div>
 
 <div class="card">
@@ -304,7 +317,7 @@ ${alerts.join("")}
   <p style="margin:6px 0 12px;font-size:15px">${action.body}</p>
   <ol>${action.items.map((it, i) => `<li><span class="i">${i + 1}</span><span>${esc(it)}</span></li>`).join("")}</ol>
   <p class="note"><b>Why this and not something else:</b> ${action.why}</p>
-  <p class="note">Checking back on: <b>${action.check}</b> — if nothing has moved by then, this page will tell you and suggest something different.</p>
+  <p class="note">Next review: <b>${action.check}</b> — the same date all week, so it is a real checkpoint rather than one that moves every day. This page does not compare against it for you; the advice above changes when the numbers change, not on a date.</p>
 </div>
 
 <details class="card">
@@ -321,13 +334,13 @@ ${alerts.join("")}
   <svg width="100%" viewBox="0 0 ${sparkW} ${sparkH}" preserveAspectRatio="none" style="display:block;height:52px">
     <polyline fill="none" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round" points="${points}"/>
   </svg>
-  <p class="note">Each point is one day. It counts how many times one of our pages appeared in front of someone searching Google — whether or not they clicked. Best day so far: ${maxImpr}. The bottom of the chart is zero, so a low flat line really does mean nothing happened.</p>
+  <p class="note">Each point is one day. It counts how many times one of our pages appeared in front of someone searching Google — whether or not they clicked. Busiest day on this chart: ${peakImpr} — the chart covers ${startDate} to ${endDate} only, and we do not keep day-by-day figures older than that, so this is not an all-time record. The bottom of the chart is zero, so a low flat line really does mean nothing happened.</p>
 </div>
 
 <div class="card">
   <h2>Days someone actually visited</h2>
   <div class="dots">${clickDots}</div>
-  <p class="note">One dot per day. A dark dot means at least one person clicked through to the site that day. Most days are still empty — that is normal this early. Best week so far: ${plural(lifetimeClicks, "visitor")}.</p>
+  <p class="note">One dot per day. A dark dot means at least one person clicked through to the site that day. Most days are still empty — that is normal this early. Best week since we started recording on ${hist[0]?.ranOn ?? "—"}: ${plural(lifetimeClicks, "visit")}.</p>
 </div>
 
 <div class="card">
@@ -344,7 +357,7 @@ ${alerts.join("")}
 <div class="card">
   <h2>Other websites linking to us</h2>
   <div style="font-size:15px"><b>${idx ? idx.externalLinks.length : "–"} found.</b></div>
-  <p class="note">When another website links to ours, Google treats it as a vote that we are trustworthy — and trust is exactly what decides whether it bothers reading our pages. This is the reason most of our pages are still unread. Note: the one we have is an automatic spam page, so it counts for nothing real.</p>
+  <p class="note">When another website links to ours, Google treats it as a vote that we are trustworthy — and trust is exactly what decides whether it bothers reading our pages. This is the reason most of our pages are still unread. Of those found, ${plural(realBacklinks, "link")} ${realBacklinks === 1 ? "looks" : "look"} real; the rest are automatic spam directory pages and count for nothing.</p>
 </div>
 
 <div class="card">
