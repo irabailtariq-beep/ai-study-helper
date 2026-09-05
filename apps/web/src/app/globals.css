@@ -71,3 +71,36 @@ a {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
+
+/* iOS Safari zooms the whole viewport in when a student taps a form control
+   that renders below 16px, and it does NOT zoom back out on blur — so one tap
+   on a 14px field leaves the rest of the page magnified until they pinch out
+   by hand. Mid-quiz, that is genuinely disruptive.
+
+   max(16px, 1em) is a floor, not a fixed size: 1em resolves against the
+   PARENT's computed size, which is what Tailwind preflight's `font-size: 100%`
+   already gives these controls, so a control never renders below 16px.
+
+   A literal 16px is required here — 1rem would NOT do. The root font size is
+   not 16px: ThemeProvider writes --ash-font-base as an INLINE style on <html>
+   (components/ThemeProvider.tsx:11-14 via packages/core/src/theme.ts:111), and
+   an inline style beats this stylesheet. It ranges 14px-20px by age and is
+   15.5px for a visitor with no profile, so measured live before this rule every
+   plain input on the site was 15.5px and every text-sm select was 13.56px.
+   The rule also discards a control's own text-* utility: at the age-6 theme
+   (20px base) a text-sm select goes 17.5px -> 20px, and a text-lg control
+   drops to 16px.
+
+   The :not() chains are not decoration: they lift specificity above Tailwind's
+   .text-sm / .text-xs utilities (0,1,0), which is the entire point. Excluded
+   types cannot trigger the zoom (they never focus a text field) and their
+   sizing should not be disturbed.
+
+   Do NOT "fix" this with maximum-scale=1 or user-scalable=no in the viewport
+   meta. That fails W3C ACT rule b4f0c3 (maximum-scale must not be under 2),
+   breaks pinch-zoom for low-vision students, and iOS 10+ ignores it anyway. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
+textarea:not([hidden]),
+select:not([hidden]) {
+  font-size: max(16px, 1em);
+}

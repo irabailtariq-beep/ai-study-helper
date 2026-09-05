@@ -181,7 +181,7 @@ function QuizItemUI({ item, index, answers, setAnswers, revealed }: {
           placeholder="Type your answer here…"
           rows={item.type === "fill" ? 1 : 2}
           className="w-full p-3 rounded-2xl border"
-          style={{ borderColor: "var(--ash-border)", background: "white", fontSize: "15px" }}
+          style={{ borderColor: "var(--ash-border)", background: "white" }}
         />
         {revealed && (
           <p className="text-sm mt-2" style={{ color: "var(--ash-muted)" }}>

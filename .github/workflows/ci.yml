@@ -1,0 +1,71 @@
+name: Check the app still builds
+
+# WHAT THIS IS FOR — and what it is NOT for.
+#
+# Vercel already typechecks: apps/web/next.config.mjs sets neither
+# typescript.ignoreBuildErrors nor eslint.ignoreDuringBuilds, and Next defaults
+# both to false, so `next build` runs the type pass and exits 1 on failure.
+# A broken commit therefore never reaches students — Vercel's build just fails.
+#
+# The problem is that it fails QUIETLY. The site stays on the previous version
+# and nothing says so. Two robots push straight to main on their own
+# (blog-daily.yml and gsc-daily.yml), so a bad push can sit there unnoticed.
+# This job exists to turn that silence into a red X and an email.
+#
+# It is NOT a safety net for production. If this ever goes red, fix the code —
+# never "fix" it by adding typescript.ignoreBuildErrors to next.config.mjs,
+# which would remove the check that is actually protecting the site.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Only the newest run per branch matters; cancel older ones so the daily robot
+# pushes do not queue up behind each other.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Skip the paths that cannot break the build. The GSC robot rewrites
+    # dashboard.html and index-state.json every single day; running a full
+    # install and build for a JSON snapshot would burn Actions minutes and
+    # teach us to ignore this job.
+    if: >-
+      github.event_name != 'push' ||
+      !contains(github.event.head_commit.message, 'daily Search Console snapshot')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: pnpm
+
+      # --frozen-lockfile is the point: if package.json and pnpm-lock.yaml ever
+      # drift apart this fails loudly here rather than silently re-resolving.
+      - run: pnpm install --frozen-lockfile
+
+      # Web only. apps/mobile is an abandoned React Native app that ships to
+      # nobody and is never built by Vercel; including it would mean a dead
+      # project's dependency bump could turn this job red for no real reason.
+      - name: Typecheck
+        run: pnpm --filter @ash/web typecheck
+
+      # No secrets are provided on purpose. Verified on 2026-09-05 that the
+      # build completes with no env vars at all (266/266 static pages), so a
+      # missing key can never be the reason this job is red.
+      - name: Build
+        run: pnpm --filter @ash/web build

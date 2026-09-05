@@ -21,6 +21,11 @@ type AgeAnchor = {
   aiTone: string;
 };
 
+// `palette.primary` MUST stay in sync with --ash-primary in apps/web/src/app/globals.css.
+// ThemeProvider writes these values as inline custom properties on <html>, and an inline
+// style beats the :root rule in the stylesheet — so a contrast fix made only in globals.css
+// is silently reverted on every page load. #0a6357 is 6.24:1 on the #f4efe3 page background;
+// the old #0b7d6f was 4.38:1 and failed WCAG 2.2 SC 1.4.3 AA (4.5:1).
 const ANCHORS: AgeAnchor[] = [
   {
     age: 6,

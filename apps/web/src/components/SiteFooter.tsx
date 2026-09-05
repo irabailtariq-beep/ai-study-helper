@@ -135,7 +135,7 @@ export function SiteFooter() {
                   <span aria-hidden>{open ? "−" : "+"}</span>
                 </button>
                 {open && (
-                  <ul className="pb-3 space-y-2 text-sm" style={{ color: "var(--ash-muted)" }}>
+                  <ul className="pt-2 pb-3 space-y-2 text-sm" style={{ color: "var(--ash-muted)" }}>
                     {g.links.map((l) => (
                       <li key={l.href}>
                         <Link href={l.href}>{l.label}</Link>

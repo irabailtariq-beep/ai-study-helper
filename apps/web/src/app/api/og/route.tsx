@@ -1,12 +1,33 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { checkRateLimit, keyFromRequest } from "@/lib/rateLimit";
 
 export const runtime = "edge";
+
+// Flood guard. Every DISTINCT query string is a CDN cache MISS and therefore a
+// fresh Satori render (~0.2-0.4s of Active CPU each), and Hobby only includes
+// 4 CPU-hours a month across every function on the project — including all the
+// AI tool routes. Unthrottled, one script exhausts that in under half an hour
+// and Vercel then pauses functions for up to 30 days.
+// This counter is per-isolate and best-effort, the same honest caveat as the
+// AI routes; the real enforcement is the Vercel WAF rate-limit rule on /api/og
+// (free on Hobby, 1 rule per project). Legitimate callers are crawlers fetching
+// one card per page, so 60/min/IP is generous.
+const OG_RENDERS_PER_MINUTE = 60;
 
 // Generate a 1200×630 OG image dynamically.
 // Satori (the engine behind next/og) only supports a subset of CSS — keep it flat.
 // Usage: /api/og?title=Math%20Solver&subtitle=Step-by-step%20solutions&tag=Math
 export async function GET(req: NextRequest) {
+  if (!checkRateLimit(`og:${keyFromRequest(req)}`, OG_RENDERS_PER_MINUTE, 60_000).allowed) {
+    // no-store is deliberate: a cached 429 would be served from the CDN to
+    // everyone who asks for that URL, including crawlers, for a whole minute.
+    return new Response(null, {
+      status: 429,
+      headers: { "cache-control": "no-store", "retry-after": "60" },
+    });
+  }
+
   const { searchParams } = new URL(req.url);
   const title = (searchParams.get("title") ?? "AI Study Helper").slice(0, 100);
   const subtitle = (searchParams.get("subtitle") ?? "Snap it. Understand it. Ace it.").slice(0, 140);

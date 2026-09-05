@@ -106,8 +106,8 @@ export function GcseGradeCalculator() {
               onChange={(e) => setMark(Number(e.target.value))} className="w-full mt-2" />
             <input type="number" min={0} max={row.maxMark} value={mark}
               onChange={(e) => { const v = e.target.value; setMark(v === "" ? "" : Number(v)); }}
-              className="mt-1 w-28 rounded-lg border px-3 py-2 text-center text-lg font-bold"
-              style={selStyle} aria-label="Total mark" />
+              className="mt-1 w-28 rounded-lg border px-3 py-2 text-center font-bold leading-7"
+              style={{ ...selStyle, fontSize: "max(18px, 1.125em)" }} aria-label="Total mark" />
           </div>
 
           <div className="mt-6 rounded-xl p-5 text-center" style={{ background: "var(--ash-bg)" }}>
