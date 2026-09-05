@@ -2,6 +2,11 @@
 const nextConfig = {
   transpilePackages: ["@ash/core", "@ash/ai-client"],
   experimental: {
+    // Currently inert: there is not one "use server" directive in the build, so
+    // no Server Action exists for this limit to apply to. Left in place because
+    // it records the intended ceiling for photo/PDF uploads if one is ever
+    // added — but note that adding a Server Action is what would make several
+    // Next advisories live, so upgrade before you register the first one.
     serverActions: { bodySizeLimit: "25mb" },
   },
   async redirects() {
