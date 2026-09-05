@@ -1,15 +1,15 @@
 {
-  "ranOn": "2026-09-04",
-  "attemptedOn": "2026-09-04",
+  "ranOn": "2026-09-05",
+  "attemptedOn": "2026-09-05",
   "failed": 0,
   "incomplete": false,
   "total": 235,
   "indexed": 35,
   "prevIndexed": 35,
   "counts": {
-    "URL is unknown to Google": 31,
     "Submitted and indexed": 35,
-    "Discovered - currently not indexed": 165,
+    "Discovered - currently not indexed": 161,
+    "URL is unknown to Google": 35,
     "Crawled - currently not indexed": 4
   },
   "brokenUrls": [],
@@ -19,56 +19,66 @@
   ],
   "worklist": [
     {
-      "url": "https://helpinstudy.com/transform",
+      "url": "https://helpinstudy.com/learn/chemistry/uk-gcse-aqa",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/help-in-study/calculus",
+      "url": "https://helpinstudy.com/cbse/class-8-maths-profit-loss-word-problems",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/math/uk-gcse-aqa",
+      "url": "https://helpinstudy.com/ap/ap-biology-score-calculator",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/biology/uk-gcse-aqa",
+      "url": "https://helpinstudy.com/ap/ap-statistics-score-calculator",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/physics/uk-gcse-aqa",
+      "url": "https://helpinstudy.com/cbse/class-11-accountancy-trial-balance-practice",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/biology/us-ap",
+      "url": "https://helpinstudy.com/waec/wassce-maths-geometry-circle-practice",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/chemistry/us-ap",
+      "url": "https://helpinstudy.com/waec/wassce-maths-probability-practice",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/learn/physics/us-ap",
+      "url": "https://helpinstudy.com/cambridge/igcse-chemistry-0620-paper-4",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/waec/waec-maths-quadratic-equations-practice",
+      "url": "https://helpinstudy.com/cambridge/igcse-english-0500-directed-writing",
       "why": "URL is unknown to Google"
     },
     {
-      "url": "https://helpinstudy.com/cbse/class-11-accountancy-accounting-equation-practice",
+      "url": "https://helpinstudy.com/gcse/gcse-evaluate-questions-how-to-answer",
       "why": "URL is unknown to Google"
     }
   ],
-  "submittableLeft": 30,
+  "submittableLeft": 32,
   "pages": {
+    "https://helpinstudy.com/chat": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-08-31",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
     "https://helpinstudy.com/transform": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
+      "refs": 1,
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/explain": {
@@ -81,16 +91,6 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/chat": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-08-31",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
@@ -101,10 +101,20 @@
       "refs": 7,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/quiz": {
+    "https://helpinstudy.com/mock-exam": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawl": "2026-07-18",
+      "lastCrawl": "2026-08-31",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/grade": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-08-31",
       "fetch": "SUCCESSFUL",
       "indexing": "INDEXING_ALLOWED",
       "robots": "ALLOWED",
@@ -121,30 +131,10 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/grade": {
+    "https://helpinstudy.com/quiz": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
-      "lastCrawl": "2026-08-31",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
-      "refs": 1,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/mock-exam": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-08-31",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/flashcards": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-08-29",
+      "lastCrawl": "2026-07-18",
       "fetch": "SUCCESSFUL",
       "indexing": "INDEXING_ALLOWED",
       "robots": "ALLOWED",
@@ -159,6 +149,16 @@
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/flashcards": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-08-29",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
+      "refs": 1,
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/essay-coach": {
@@ -191,8 +191,8 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/contact": {
-      "coverage": "Discovered - currently not indexed",
+    "https://helpinstudy.com/about": {
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -201,7 +201,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/about": {
+    "https://helpinstudy.com/contact": {
       "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -221,13 +221,13 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/terms": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+    "https://helpinstudy.com/help-in-study/english": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-08-29",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
@@ -241,17 +241,7 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/help-in-study/english": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-08-29",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
-      "refs": 1,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/help-in-study/calculus": {
+    "https://helpinstudy.com/terms": {
       "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -261,17 +251,17 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/help-in-study/physics": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-08-29",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
+    "https://helpinstudy.com/help-in-study/calculus": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/help-in-study/chemistry": {
+    "https://helpinstudy.com/help-in-study/physics": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
       "lastCrawl": "2026-08-29",
@@ -291,6 +281,16 @@
       "refs": 2,
       "firstSeen": "2026-08-31"
     },
+    "https://helpinstudy.com/help-in-study/chemistry": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-08-29",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
+      "refs": 1,
+      "firstSeen": "2026-08-31"
+    },
     "https://helpinstudy.com/help-in-study/history": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
@@ -301,7 +301,7 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/help-in-study/computer-science": {
+    "https://helpinstudy.com/help-in-study/geography": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -311,7 +311,7 @@
       "refs": 1,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/help-in-study/geography": {
+    "https://helpinstudy.com/help-in-study/computer-science": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -401,16 +401,6 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/learn/economics/in-cbse": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/learn/accounting/in-cbse": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
@@ -421,8 +411,18 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
+    "https://helpinstudy.com/learn/economics/in-cbse": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
     "https://helpinstudy.com/learn/math/uk-gcse-aqa": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -441,7 +441,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/learn/chemistry/uk-gcse-aqa": {
+    "https://helpinstudy.com/learn/biology/uk-gcse-aqa": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -451,7 +451,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/learn/biology/uk-gcse-aqa": {
+    "https://helpinstudy.com/learn/chemistry/uk-gcse-aqa": {
       "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -462,7 +462,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/learn/physics/uk-gcse-aqa": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -492,7 +492,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/learn/biology/us-ap": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -502,7 +502,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/learn/chemistry/us-ap": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -512,7 +512,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/learn/physics/us-ap": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -551,7 +551,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/waec": {
+    "https://helpinstudy.com/gcse": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
       "lastCrawl": "2026-08-29",
@@ -561,7 +561,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/gcse": {
+    "https://helpinstudy.com/waec": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
       "lastCrawl": "2026-08-29",
@@ -592,7 +592,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cbse/class-8-maths-profit-loss-word-problems": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -631,7 +631,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/cbse/class-10-maths-arithmetic-progression-case-study": {
+    "https://helpinstudy.com/gcse/gcse-maths-pass-mark-foundation": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -641,7 +641,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/gcse/gcse-maths-pass-mark-foundation": {
+    "https://helpinstudy.com/cbse/class-10-maths-arithmetic-progression-case-study": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -672,7 +672,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/waec/waec-maths-quadratic-equations-practice": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -692,6 +692,16 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/ap/ap-biology-score-calculator": {
+      "coverage": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/ap/ap-chemistry-score-calculator": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -702,16 +712,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/ap/ap-calculus-ab-score-calculator": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/ap/ap-chemistry-score-calculator": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -741,16 +741,6 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/ap/ap-psychology-score-calculator": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/ap/ap-us-history-score-calculator": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
@@ -761,8 +751,18 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/ap/ap-statistics-score-calculator": {
+    "https://helpinstudy.com/ap/ap-psychology-score-calculator": {
       "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/ap/ap-statistics-score-calculator": {
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -801,8 +801,8 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/cbse/class-11-accountancy-accounting-equation-practice": {
-      "coverage": "URL is unknown to Google",
+    "https://helpinstudy.com/cbse/class-11-accountancy-journal-entries-practice": {
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -811,7 +811,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/cbse/class-11-accountancy-journal-entries-practice": {
+    "https://helpinstudy.com/cbse/class-11-accountancy-accounting-equation-practice": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -832,6 +832,16 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cbse/class-11-accountancy-trial-balance-practice": {
+      "coverage": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/waec/wassce-2025-maths-theory-practice": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -842,16 +852,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cbse/class-11-accountancy-depreciation-practice": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/waec/wassce-2025-maths-theory-practice": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -902,6 +902,16 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/waec/wassce-maths-probability-practice": {
+      "coverage": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/cambridge/igcse-biology-0610-paper-4": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -912,7 +922,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cambridge/igcse-chemistry-0620-paper-4": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -922,16 +932,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cambridge/igcse-physics-0625-paper-4": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/cambridge/igcse-biology-0610-paper-4": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -952,17 +952,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/cambridge/igcse-english-0500-directed-writing": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/gcse/gcse-evaluate-questions-how-to-answer": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -981,7 +971,37 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
+    "https://helpinstudy.com/gcse/gcse-evaluate-questions-how-to-answer": {
+      "coverage": "URL is unknown to Google",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
     "https://helpinstudy.com/gcse/aqa-english-paper-1-question-5": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/gcse/gcse-compare-questions-technique": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/gcse/aqa-gcse-science-grade-boundaries": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1001,28 +1021,8 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/gcse/gcse-compare-questions-technique": {
-      "coverage": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/gcse/aqa-gcse-science-grade-boundaries": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/gcse/what-grade-is-60-percent-gcse": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1032,7 +1032,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/ap/ap-precalculus-score-calculator": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1061,16 +1061,6 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/gcse/gcse-grade-calculator": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/gcse/gcse-november-2026-resits": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
@@ -1088,6 +1078,16 @@
       "fetch": "SUCCESSFUL",
       "indexing": "INDEXING_ALLOWED",
       "robots": "ALLOWED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/gcse/gcse-grade-calculator": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
@@ -1132,7 +1132,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/tools/wassce-practice-questions": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1172,7 +1172,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/how-to-study-for-exams": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1202,7 +1202,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/test-anxiety": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1212,7 +1212,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/study-with-adhd": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1271,16 +1271,6 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/past-papers-practice": {
-      "coverage": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
     "https://helpinstudy.com/blog/ai-marking-feedback": {
       "coverage": "Submitted and indexed",
       "verdict": "PASS",
@@ -1288,6 +1278,16 @@
       "fetch": "SUCCESSFUL",
       "indexing": "INDEXING_ALLOWED",
       "robots": "ALLOWED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/blog/past-papers-practice": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
@@ -1302,16 +1302,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/screen-time-and-study": {
-      "coverage": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/blog/photosynthesis-explained-simply": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1331,8 +1321,18 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
+    "https://helpinstudy.com/blog/photosynthesis-explained-simply": {
+      "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
     "https://helpinstudy.com/blog/pythagoras-theorem-when-to-use": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1382,7 +1382,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/ai-and-cheating": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1392,7 +1392,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/how-much-sleep-students": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1418,6 +1418,16 @@
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/blog/help-in-study-psychology": {
+      "coverage": "Submitted and indexed",
+      "verdict": "PASS",
+      "lastCrawl": "2026-06-11",
+      "fetch": "SUCCESSFUL",
+      "indexing": "INDEXING_ALLOWED",
+      "robots": "ALLOWED",
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
@@ -1448,16 +1458,6 @@
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/blog/help-in-study-psychology": {
-      "coverage": "Submitted and indexed",
-      "verdict": "PASS",
-      "lastCrawl": "2026-06-11",
-      "fetch": "SUCCESSFUL",
-      "indexing": "INDEXING_ALLOWED",
-      "robots": "ALLOWED",
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
@@ -1551,7 +1551,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/sets-and-venn-diagrams": {
+    "https://helpinstudy.com/blog/algebra-factoring-tricks": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1561,8 +1561,8 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/algebra-factoring-tricks": {
-      "coverage": "Discovered - currently not indexed",
+    "https://helpinstudy.com/blog/sets-and-venn-diagrams": {
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1692,7 +1692,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/how-to-analyse-a-poem": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1762,7 +1762,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/anki-vs-other-flashcards": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1772,7 +1772,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/pomodoro-for-adhd-students": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1801,7 +1801,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/how-to-motivate-yourself-study": {
+    "https://helpinstudy.com/blog/dealing-with-exam-failure": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1811,7 +1811,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/dealing-with-exam-failure": {
+    "https://helpinstudy.com/blog/how-to-motivate-yourself-study": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1852,7 +1852,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/ai-revision-timetable-30-days": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1881,7 +1881,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/cbse-class-10-math-last-minute": {
+    "https://helpinstudy.com/blog/a-level-essay-extra-marks": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1891,7 +1891,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/a-level-essay-extra-marks": {
+    "https://helpinstudy.com/blog/cbse-class-10-math-last-minute": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -1912,7 +1912,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/phone-distraction-study-tactics": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1952,7 +1952,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/show-that-questions-maths": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1982,7 +1982,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/igcse-biology-paper-6": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -1992,7 +1992,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/wassce-maths-core-topics": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2042,7 +2042,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/osmosis-and-diffusion": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2062,7 +2062,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/enzymes-temperature-ph": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2102,7 +2102,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/simultaneous-equations-methods": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2182,16 +2182,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/vectors-basics": {
-      "coverage": "Discovered - currently not indexed",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/blog/igcse-english-directed-writing": {
       "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -2203,6 +2193,16 @@
     },
     "https://helpinstudy.com/blog/ap-biology-frq": {
       "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/blog/igcse-english-directed-writing": {
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2232,7 +2232,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/wassce-english-formal-letter": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2242,7 +2242,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/completing-the-square": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2302,7 +2302,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/ap-chemistry-frq": {
-      "coverage": "URL is unknown to Google",
+      "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2342,16 +2342,6 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/ohms-law": {
-      "coverage": "URL is unknown to Google",
-      "verdict": "NEUTRAL",
-      "lastCrawl": null,
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
-      "indexing": "INDEXING_STATE_UNSPECIFIED",
-      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
-      "refs": 0,
-      "firstSeen": "2026-08-31"
-    },
-    "https://helpinstudy.com/blog/radioactivity-half-life": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -2361,7 +2351,7 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/punnett-squares-genetics": {
+    "https://helpinstudy.com/blog/radioactivity-half-life": {
       "coverage": "Discovered - currently not indexed",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
@@ -2381,8 +2371,18 @@
       "refs": 0,
       "firstSeen": "2026-08-31"
     },
-    "https://helpinstudy.com/blog/natural-selection-evolution": {
+    "https://helpinstudy.com/blog/punnett-squares-genetics": {
       "coverage": "Discovered - currently not indexed",
+      "verdict": "NEUTRAL",
+      "lastCrawl": null,
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "refs": 0,
+      "firstSeen": "2026-08-31"
+    },
+    "https://helpinstudy.com/blog/natural-selection-evolution": {
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
@@ -2402,7 +2402,7 @@
       "firstSeen": "2026-08-31"
     },
     "https://helpinstudy.com/blog/transformations-maths": {
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "verdict": "NEUTRAL",
       "lastCrawl": null,
       "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
